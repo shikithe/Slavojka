@@ -16,59 +16,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Validate and record manual decision
+      - name: Validate and record manual batch
         env:
           ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
-        run: |
-          python3 - <<'PY'
-          import json,os,re
-          from pathlib import Path
-          body=os.environ['ISSUE_BODY']
-          assert body.startswith('KVOTER_MANUAL_DECISION_V1'), 'Invalid confirmation'
-          m=re.search(r'```json\s*(\{.*?\})\s*```',body,re.S)
-          assert m,'Missing decision payload'
-          row=json.loads(m.group(1))
-          required=('fixture_id','event_id','league','collector_home','collector_away','odds_home','odds_away','decision')
-          assert all(isinstance(row.get(k),str) and 0<len(row[k])<=250 for k in required),'Invalid fields'
-          assert row['decision'] in ('matched','rejected'),'Invalid decision'
-          assert re.fullmatch(r'[a-z]{2,5}\.\d+',row['league']),'Invalid league'
-          queue_path=Path('shared/kvoter/manual-candidates.json')
-          assert queue_path.exists(),'Current manual candidate queue is missing'
-          queue=json.loads(queue_path.read_text())
-          eligible=any(
-              f.get('fixture_id')==row['fixture_id']
-              and f.get('league')==row['league']
-              and f.get('home')==row['collector_home']
-              and f.get('away')==row['collector_away']
-              and any(c.get('event_id')==row['event_id']
-                      and c.get('home')==row['odds_home']
-                      and c.get('away')==row['odds_away']
-                      for c in f.get('candidates',[]))
-              for f in queue.get('fixtures',[]))
-          assert eligible,'Candidate does not match current ListaSix queue'
-          from kvoter.manual_aliases import approve
-          path=Path('kvoter/manual/decisions.json')
-          data=json.loads(path.read_text())
-          old=data.setdefault('decisions',[])
-          key=(row['fixture_id'],row['event_id'])
-          assert not any((d.get('fixture_id'),d.get('event_id'))==key and d.get('decision')!=row['decision'] for d in old),'Conflicting decision'
-          if row['decision']=='matched':
-              assert not any(d.get('decision')=='matched' and
-                  (d.get('fixture_id')==row['fixture_id'] and d.get('event_id')!=row['event_id']
-                   or d.get('event_id')==row['event_id'] and d.get('fixture_id')!=row['fixture_id'])
-                  for d in old),'Fixture or OddsAPI event already matched to a different partner'
-          if not any((d.get('fixture_id'),d.get('event_id'))==key for d in old):
-              row['issue_number']=int(os.environ['ISSUE_NUMBER'])
-              if row['decision']=='matched':
-                  db_path=Path('kvoter/team-database.json')
-                  db=json.loads(db_path.read_text())
-                  approve(db,row,'github-issue-'+os.environ['ISSUE_NUMBER'])
-                  db_path.write_text(json.dumps(db,ensure_ascii=False,indent=2)+'\\n')
-              old.append(row)
-              path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\\n')
-          print('DECISION_VALIDATED',key,row['decision'])
-          PY
+        run: python3 -m kvoter.manual.batch_confirm
       - name: Commit confirmed decision
         run: |
           git config user.name "github-actions[bot]"
