@@ -8,7 +8,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: listasix-daily
+  group: listasix-daily-and-expiry
   cancel-in-progress: false
 jobs:
   collector:
