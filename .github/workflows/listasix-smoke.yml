@@ -29,6 +29,21 @@ jobs:
           assert 'python3 -m kvoter.reconcile' in manual
           print("LISTASIX_NOON_WIRING_OFFLINE_OK")
           PY
+      - name: Test mobile text publication from Kvoter fixtures schema offline
+        run: |
+          python3 - <<'PY'
+          import json,tempfile
+          from pathlib import Path
+          from lista.publish import publish
+          with tempfile.TemporaryDirectory() as d:
+              root=Path(d);feed=root/"feed.json";matches=root/"matched.json"
+              feed.write_text(json.dumps({"date":"2026-11-01","football_candidates":[{"fixture_id":"m1"}]}))
+              matches.write_text(json.dumps({"fixtures":[{"fixture_id":"m1","home":"Alpha","away":"Beta","start_utc":"2026-11-01T15:00:00Z","odds_offers":[{"bookmaker":"test","markets":{"1X2":{"home":2.0}}}]}]}))
+              assert publish(feed,matches,None,root/"shared",root/"docs")==1
+              assert "Alpha - Beta" in (root/"docs/kvoter-ponuda.txt").read_text()
+              assert json.loads((root/"docs/active-list.json").read_text())["fixtures"][0]["match"]=="Alpha - Beta"
+          print("LISTASIX_MOBILE_TEXT_PUBLICATION_OK")
+          PY
       - name: Validate timezone window and expiration
         run: |
           python3 - <<'PY'
