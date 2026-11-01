@@ -30,6 +30,7 @@ jobs:
           assert all(isinstance(row.get(k),str) and 0<len(row[k])<=250 for k in required),'Invalid fields'
           assert row['decision'] in ('matched','rejected'),'Invalid decision'
           assert re.fullmatch(r'[a-z]{2,5}\.\d+',row['league']),'Invalid league'
+          from kvoter.manual_aliases import approve
           path=Path('kvoter/manual/decisions.json')
           data=json.loads(path.read_text())
           old=data.setdefault('decisions',[])
@@ -45,7 +46,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add kvoter/manual/decisions.json
+          git add kvoter/manual/decisions.json kvoter/team-database.json
           if ! git diff --cached --quiet; then
             git commit -m "kvoter: record confirmed manual decision"
             git pull --rebase origin main
