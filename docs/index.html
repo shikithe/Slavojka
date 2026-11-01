@@ -1,1 +1,17 @@
-<!doctype html><html lang="bs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ListaSix</title><style>body{font:16px system-ui;background:#101a2b;color:#f2f6ff;margin:0;padding:24px}main{max-width:760px;margin:40px auto}section{background:#1d2c43;border-radius:16px;padding:24px}small{color:#bac7d9}</style></head><body><main><h1>ListaSix</h1><section><h2>Dnevna sportska ponuda</h2><p>Priprema sistema je u toku.</p><small>Stvarne kvote biće prikazane tek nakon uspješnog Collector → Agent → Kvoter ciklusa. Nema izmišljenih parova ni kvota.</small></section></main></body></html>
+<!doctype html><html lang="bs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ListaSix</title><style>body{font:16px system-ui;background:#101a2b;color:#f2f6ff;margin:0;padding:24px}main{max-width:900px;margin:40px auto}section{background:#1d2c43;border-radius:16px;padding:24px}small{color:#bac7d9}table{border-collapse:collapse;width:100%}th,td{padding:9px;border-bottom:1px solid #40506a;text-align:left}div.scroll{overflow:auto}</style></head><body><main><h1>ListaSix</h1><section><h2>Dnevna sportska ponuda</h2><p id="status">Provjera aktivne liste…</p><div class="scroll" id="offer"></div><small>Objavljuju se samo potvrđeni parovi i stvarne kvote nakon završetka Kvotera. Lista ističe narednog dana u 09:59 (Sarajevo).</small></section></main><script>
+const status=document.getElementById('status'), offer=document.getElementById('offer');
+async function refresh(){
+try{
+const response=await fetch('./active-list.json?t='+Date.now(),{cache:'no-store'});
+if(!response.ok)throw Error('not available');
+const data=await response.json();
+if(!data.expires_at||Date.now()>=Date.parse(data.expires_at))throw Error('expired');
+if(data.publication_allowed!==true||!Array.isArray(data.fixtures)||!data.fixtures.length)throw Error('not published');
+const cols=['Br.','Datum/sat','Utakmica','1','X','2','3+','Kladionica'];
+const table=document.createElement('table'),head=document.createElement('tr');
+cols.forEach(c=>{const th=document.createElement('th');th.textContent=c;head.append(th)});table.append(head);
+data.fixtures.forEach((f,i)=>{const tr=document.createElement('tr');[i+1,f.datetime||'',f.match||'',f.home_odds??'',f.draw_odds??'',f.away_odds??'',f.over25_odds??'',f.bookmaker||''].forEach(v=>{const td=document.createElement('td');td.textContent=String(v);tr.append(td)});table.append(tr)});
+offer.replaceChildren(table);status.textContent='Aktuelna ponuda';
+}catch(e){offer.replaceChildren();status.textContent='Čeka se nova ponuda';}}
+refresh();setInterval(refresh,30000);
+</script></body></html>
