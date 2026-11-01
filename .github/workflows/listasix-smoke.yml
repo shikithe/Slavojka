@@ -13,6 +13,22 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate imported Python syntax
         run: python3 -m compileall -q lista collector kvoter agent collector.py
+      - name: Validate noon production wiring offline without external requests
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          daily=Path(".github/workflows/listasix-daily.yml").read_text()
+          manual=Path(".github/workflows/listasix-manual-confirm.yml").read_text()
+          assert 'cron: \'0 10,11 * * *\'' in daily
+          assert 'TZ=Europe/Sarajevo date +%H' in daily
+          assert 'python3 -m lista.pipeline' in daily
+          assert 'python3 -m agent.five_matches' in daily
+          assert 'python3 -m kvoter.the_odds_api' in daily
+          assert 'secrets.THE_ODDS_API_KEY' in daily
+          assert 'python3 -m kvoter.manual_candidates' in daily
+          assert 'python3 -m kvoter.reconcile' in manual
+          print("LISTASIX_NOON_WIRING_OFFLINE_OK")
+          PY
       - name: Validate timezone window and expiration
         run: |
           python3 - <<'PY'
