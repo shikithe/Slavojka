@@ -17,7 +17,7 @@ def expire(now=None):
         if expires.tzinfo is None:
             raise ValueError("Expiry must have timezone")
         if now >= expires.astimezone(TZ):
-            PUBLIC.unlink()
+            for target in (PUBLIC, Path("docs/kvoter-ponuda.txt"), Path("shared/active-list.json"), Path("shared/kvoter-ponuda.txt")):\n                target.unlink(missing_ok=True)
             print("EXPIRED_PUBLIC_LIST_DELETED")
             return True
     except (ValueError,KeyError,TypeError,json.JSONDecodeError) as e:
