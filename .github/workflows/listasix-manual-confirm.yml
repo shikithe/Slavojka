@@ -1,0 +1,53 @@
+name: ListaSix Kvoter Manual confirmation
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  issues: write
+jobs:
+  record:
+    if: startsWith(github.event.issue.title, 'Kvoter Manual: ') && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Validate and record manual decision
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          python3 - <<'PY'
+          import json,os,re
+          from pathlib import Path
+          body=os.environ['ISSUE_BODY']
+          assert body.startswith('KVOTER_MANUAL_DECISION_V1'), 'Invalid confirmation'
+          m=re.search(r'```json\s*(\{.*?\})\s*```',body,re.S)
+          assert m,'Missing decision payload'
+          row=json.loads(m.group(1))
+          required=('fixture_id','event_id','league','collector_home','collector_away','odds_home','odds_away','decision')
+          assert all(isinstance(row.get(k),str) and 0<len(row[k])<=250 for k in required),'Invalid fields'
+          assert row['decision'] in ('matched','rejected'),'Invalid decision'
+          assert re.fullmatch(r'[a-z]{2,5}\.\d+',row['league']),'Invalid league'
+          path=Path('kvoter/manual/decisions.json')
+          data=json.loads(path.read_text())
+          old=data.setdefault('decisions',[])
+          key=(row['fixture_id'],row['event_id'])
+          assert not any((d.get('fixture_id'),d.get('event_id'))==key and d.get('decision')!=row['decision'] for d in old),'Conflicting decision'
+          if not any((d.get('fixture_id'),d.get('event_id'))==key for d in old):
+              row['issue_number']=int(os.environ['ISSUE_NUMBER'])
+              old.append(row)
+              path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+          print('DECISION_VALIDATED',key,row['decision'])
+          PY
+      - name: Commit confirmed decision
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add kvoter/manual/decisions.json
+          if ! git diff --cached --quiet; then
+            git commit -m "kvoter: record confirmed manual decision"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
