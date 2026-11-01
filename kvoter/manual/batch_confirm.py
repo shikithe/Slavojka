@@ -7,16 +7,39 @@ from kvoter.manual_aliases import approve
 
 def process(body, issue_number):
     marker = "KVOTER_MANUAL_BATCH_V1"
-    if not body.startswith(marker):
+    compact = body.startswith("KVOTER_MANUAL_COMPACT_V1")
+    if not compact and not body.startswith(marker):
         raise ValueError("Incorrect batch marker")
     match = re.search(r"```json\s*(\{.*?\})\s*```", body, re.S)
     if not match:
         raise ValueError("Missing JSON payload")
     payload = json.loads(match.group(1))
-    rows = payload.get("decisions")
+    queue = json.loads(Path("shared/kvoter/manual-candidates.json").read_text())
+    if compact:
+        if payload.get("version") != queue.get("generated_at_utc"):
+            raise ValueError("Candidate queue has changed since user selections")
+        choices=payload.get("choices")
+        if not isinstance(choices,list) or not 1<=len(choices)<=500:
+            raise ValueError("Invalid compact batch")
+        rows=[]
+        for item in choices:
+            if not isinstance(item,list) or len(item)!=3 or any(type(v) is not int for v in item):
+                raise ValueError("Invalid choice indexes")
+            i,j,value=item
+            if not (0<=i<len(queue["fixtures"]) and value in (0,1)):
+                raise ValueError("Invalid fixture index")
+            fixture=queue["fixtures"][i]
+            if not 0<=j<len(fixture["candidates"]):
+                raise ValueError("Invalid candidate index")
+            candidate=fixture["candidates"][j]
+            rows.append(dict(fixture_id=fixture["fixture_id"],event_id=candidate["event_id"],
+                league=fixture["league"],collector_home=fixture["home"],collector_away=fixture["away"],
+                odds_home=candidate["home"],odds_away=candidate["away"],
+                decision="matched" if value else "rejected"))
+    else:
+        rows = payload.get("decisions")
     if not isinstance(rows, list) or not 1 <= len(rows) <= 500:
         raise ValueError("Invalid batch size")
-    queue = json.loads(Path("shared/kvoter/manual-candidates.json").read_text())
     fixtures = {f["fixture_id"]: f for f in queue["fixtures"]}
     decisions_path = Path("kvoter/manual/decisions.json")
     db_path = Path("kvoter/team-database.json")
