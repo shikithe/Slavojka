@@ -1,0 +1,36 @@
+name: listasix
+services:
+  collector:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes:
+      - ./:/app:ro
+      - listasix_shared:/shared
+    environment:
+      LISTASIX_SHARED: /shared
+      PYTHONPATH: /app
+    command: ["python3", "-m", "lista.pipeline"]
+    profiles: ["jobs"]
+  agent:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes:
+      - ./:/app:ro
+      - listasix_shared:/shared
+    environment:
+      PYTHONPATH: /app
+    command: ["python3", "-c", "print('Agent entrypoint not yet integrated')"]
+    profiles: ["jobs"]
+  kvoter:
+    image: python:3.12-slim
+    working_dir: /app
+    volumes:
+      - ./:/app:ro
+      - listasix_shared:/shared
+    environment:
+      PYTHONPATH: /app:/app/kvoter
+    command: ["python3", "-c", "print('Kvoter entrypoint not yet integrated')"]
+    profiles: ["jobs"]
+volumes:
+  listasix_shared:
+    name: listasix_shared
