@@ -4,8 +4,14 @@ import argparse
 import json
 from datetime import datetime,timezone
 from pathlib import Path
-from team_identity import same_team
-from category_filter import excluded
+try:
+    from kvoter.team_identity import same_team
+except ImportError:
+    from team_identity import same_team
+try:
+    from kvoter.category_filter import excluded
+except ImportError:
+    from category_filter import excluded
 
 def utc(value):
     try: return datetime.fromisoformat(str(value).replace("Z","+00:00")).astimezone(timezone.utc)
