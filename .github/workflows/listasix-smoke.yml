@@ -48,3 +48,5 @@ jobs:
               assert "fixture1" in (p/"docs/kvoter-ponuda.txt").read_text() or "Home - Away" in (p/"docs/kvoter-ponuda.txt").read_text()
               print("PRIMARY_MANUAL_MERGE_OK")
           PY
+
+# rerun after syntax fixes
