@@ -52,6 +52,39 @@ jobs:
           print("KVOTER_LIFECYCLE_OK")
           PY
 
+      - name: Simulate manual alias confirmation for guest with suffix 07
+        run: |
+          python3 - <<'PY'
+          import json,tempfile
+          from pathlib import Path
+          from kvoter.reconcile import reconcile
+          from kvoter.manual_aliases import approve
+          from kvoter.reconcile_trigger import run_once
+          from kvoter.manual_candidates import build as candidates
+          with tempfile.TemporaryDirectory() as d:
+              root=Path(d); history=root/"history-h2h.json"; offers=root/"provider-offers.json"
+              db_path=root/"team-database.json"; names=root/"provider-team-names.json"; out=root/"kvoter";state=root/"state"
+              fixture={"fixture_id":"test-07","league":"ger.1","home":"Teststadt","away":"Gastverein","start_utc":"2026-11-02T17:00:00Z"}
+              event={"event_id":"odds-07","league":"ger.1","home":"Teststadt","away":"Gastverein 07","start_utc":"2026-11-02T17:00:00Z","bookmaker":"simulated","markets":{"1X2":{"home":2.1}}}
+              history.write_text(json.dumps({"fixtures":[fixture]}));offers.write_text(json.dumps({"offers":[event]}))
+              db_path.write_text(json.dumps({"schema_version":1,"teams":[]}))
+              before=reconcile(history,offers,db_path,names,out)
+              assert before["matched"]==0 and before["unavailable"]==1
+              assert json.loads((out/"unmatched_fixtures.json").read_text())["fixtures"][0]["fixture_id"]=="test-07"
+              assert "Gastverein 07" in [n["name"] for n in json.loads(names.read_text())["names"]]
+              suggestions=candidates({"fixtures":[fixture]},{"offers":[event]},{"fixtures":[fixture]})
+              assert suggestions["fixtures"][0]["candidates"][0]["event_id"]=="odds-07"
+              # Emulate explicit user pressing Matched and confirming via GitHub Issue.
+              approval={"fixture_id":"test-07","event_id":"odds-07","league":"ger.1","collector_home":"Teststadt","collector_away":"Gastverein","odds_home":"Teststadt","odds_away":"Gastverein 07","decision":"matched"}
+              db=json.loads(db_path.read_text());approve(db,approval,"simulated-user-confirmation")
+              db_path.write_text(json.dumps(db))
+              assert run_once(history,offers,db_path,names,out,state).startswith("reconciled")
+              assert json.loads((out/"matched_fixtures.json").read_text())["total"]==1
+              assert json.loads((out/"unmatched_fixtures.json").read_text())["total"]==0
+              assert any(set(t["names"])=={"Gastverein","Gastverein 07"} for t in json.loads(db_path.read_text())["teams"])
+          print("MANUAL_07_ALIAS_CONFIRMATION_OK")
+          PY
+
       - name: Test primary and manual offer merge without real odds
         run: |
           python3 - <<'PY'
