@@ -65,8 +65,10 @@ jobs:
           fi
           python3 -m kvoter.reconcile --history shared/agent/history-h2h.json --offers shared/kvoter/provider-offers.json --database kvoter/team-database.json --names shared/kvoter/team-database/provider-team-names.json --output-dir shared/kvoter
           python3 -m kvoter.manual_candidates --history shared/agent/history-h2h.json --offers shared/kvoter/provider-offers.json --unmatched shared/kvoter/unmatched_fixtures.json --output shared/kvoter/manual-candidates.json
+          cp shared/kvoter/manual-candidates.json docs/manual-candidates.json
+          cp shared/kvoter/unmatched_fixtures.json docs/unmatched_fixtures.json
           python3 -m lista.publish --feed shared/collector-feed.json --matches shared/kvoter/matched_fixtures.json --shared shared --docs docs
-          for path in shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json docs/active-list.json docs/kvoter-ponuda.txt shared/active-list.json shared/kvoter-ponuda.txt; do
+          for path in docs/manual-candidates.json docs/unmatched_fixtures.json shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json docs/active-list.json docs/kvoter-ponuda.txt shared/active-list.json shared/kvoter-ponuda.txt; do
             if [ -f "$path" ]; then git add -f -- "$path"; fi
           done
           if ! git diff --cached --quiet; then
