@@ -4,7 +4,10 @@ import argparse,json
 from pathlib import Path
 from difflib import SequenceMatcher
 from datetime import datetime,timezone
-from kvoter import utc
+try:
+    from kvoter.kvoter import utc
+except ImportError:
+    from kvoter import utc
 try:
     from kvoter.team_identity import normalize
 except ImportError:
