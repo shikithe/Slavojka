@@ -12,6 +12,7 @@ from urllib.parse import urlencode
 from urllib.request import Request,urlopen
 from kvoter import utc,build
 from team_identity import normalize as norm
+from kvoter.provider_team_names import collect_names
 
 LEAGUES={
 "eng.1":"soccer_epl","ger.1":"soccer_germany_bundesliga",
@@ -105,6 +106,10 @@ def main():
     for path,payload in [(a.raw_output,{"source":"the-odds-api-v4","events":raw_events}),(a.offers_output,{"offers":offers})]:
         dest=Path(path);dest.parent.mkdir(parents=True,exist_ok=True)
         tmp=dest.with_suffix(".tmp");tmp.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8");os.replace(tmp,dest)
+    if status=="api_fetched":
+        names_path=Path(os.getenv("KVOTER_PROVIDER_NAMES_PATH",str(Path(__file__).with_name("provider-team-names.json"))))
+        count=collect_names(offers,names_path)
+        print("KVOTER_PROVIDER_TEAM_NAMES_ADDED",count)
     result=build(history,offers,source="the-odds-api-v4")
     result["provider_status"]=status
     result["provider_coverage"]=coverage
