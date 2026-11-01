@@ -10,8 +10,14 @@ from datetime import datetime,timezone
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request,urlopen
-from kvoter import utc,build
-from team_identity import normalize as norm
+try:
+    from kvoter.kvoter import utc,build
+except ImportError:
+    from kvoter import utc,build
+try:
+    from kvoter.team_identity import normalize as norm
+except ImportError:
+    from team_identity import normalize as norm
 from kvoter.reconcile import reconcile
 
 LEAGUES={
