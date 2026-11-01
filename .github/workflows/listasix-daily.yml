@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Enforce 09:00 Sarajevo schedule
-        if: github.event_name == 'schedule'
-        run: |
-          test "$(TZ=Europe/Sarajevo date +%H)" = "09" || { echo "Not 09:00 Sarajevo"; exit 0; }
+      - name: Check Sarajevo schedule
+        id: localtime
+        run: echo "run=$([ \"$(TZ=Europe/Sarajevo date +%H)\" = \"09\" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
       - name: Run safe setup check
+        if: github.event_name == 'workflow_dispatch' || steps.localtime.outputs.run == 'true'
         run: python3 -m lista.pipeline
       - name: Upload setup report
         uses: actions/upload-artifact@v4
