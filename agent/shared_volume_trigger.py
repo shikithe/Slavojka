@@ -17,8 +17,8 @@ def eligible(raw):
     if not isinstance(feed, dict) or not isinstance(feed.get("football_candidates"), list):
         return False
     return bool(feed["football_candidates"]) and all(
-        isinstance(f, dict) and f.get("id") and f.get("home") and f.get("away")
-        and f.get("sport") == "football" and f.get("status") == "pre"
+        isinstance(f, dict) and f.get("fixture_id") and f.get("home") and f.get("away")
+        and f.get("sport") == "football"
         for f in feed["football_candidates"]
     )
 
@@ -58,7 +58,7 @@ def main():
     p.add_argument("--feed", default="/shared/collector-feed.json")
     p.add_argument("--output", default="/shared/agent/history-h2h.json")
     p.add_argument("--state", default="/shared/agent/.last-processed-sha256")
-    p.add_argument("--agent-script", default=str(Path(__file__).with_name("cross_competition_history.py")))
+    p.add_argument("--agent-script", default=str(Path(__file__).with_name("five_matches.py")))
     p.add_argument("--interval", type=int, default=15)
     p.add_argument("--once", action="store_true")
     a = p.parse_args()
