@@ -23,8 +23,8 @@ jobs:
           tz=ZoneInfo("Europe/Sarajevo")
           for d in ("2026-11-01T10:00:00+01:00","2027-07-01T10:00:00+02:00"):
               start,end=window(datetime.fromisoformat(d))
-              assert start.hour==12 and end.hour==12
-              assert expiry(start.date()).endswith("10:59:00+01:00") or expiry(start.date()).endswith("10:59:00+02:00")
+              assert start.hour==13 and end.hour==13
+              assert expiry(start.date()).endswith("11:59:00+01:00") or expiry(start.date()).endswith("11:59:00+02:00")
           print("WINDOW_AND_EXPIRY_OK")
           PY
       - name: Test primary and manual offer merge without real odds
