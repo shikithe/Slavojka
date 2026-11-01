@@ -23,8 +23,8 @@ jobs:
           tz=ZoneInfo("Europe/Sarajevo")
           for d in ("2026-11-01T10:00:00+01:00","2027-07-01T10:00:00+02:00"):
               start,end=window(datetime.fromisoformat(d))
-              assert start.hour==11 and end.hour==11
-              assert expiry(start.date()).endswith("09:59:00+01:00") or expiry(start.date()).endswith("09:59:00+02:00")
+              assert start.hour==12 and end.hour==12
+              assert expiry(start.date()).endswith("10:59:00+01:00") or expiry(start.date()).endswith("10:59:00+02:00")
           print("WINDOW_AND_EXPIRY_OK")
           PY
       - name: Test primary and manual offer merge without real odds
@@ -37,7 +37,7 @@ jobs:
               p=Path(d);(p/"shared").mkdir();(p/"docs").mkdir()
               feed={"date":"2026-11-01","football_candidates":[{"fixture_id":"fixture1"},{"fixture_id":"fixture2"}]}
               def match(fid):
-                  return {"fixture_id":fid,"home":"Home","away":"Away","start_utc":"2026-11-01T11:00:00Z","odds_offers":[{"bookmaker":"test-only","markets":{"1X2":{"home":2.0,"draw":3.0,"away":4.0},"3+":{"over":1.8}}}]}
+                  return {"fixture_id":fid,"home":"Home","away":"Away","start_utc":"2026-11-01T12:00:00Z","odds_offers":[{"bookmaker":"test-only","markets":{"1X2":{"home":2.0,"draw":3.0,"away":4.0},"3+":{"over":1.8}}}]}
               (p/"feed.json").write_text(json.dumps(feed))
               (p/"matches.json").write_text(json.dumps({"matched_fixtures":[match("fixture1")]}))
               (p/"manual.json").write_text(json.dumps({"matched_fixtures":[match("fixture2")]}))
@@ -61,7 +61,7 @@ jobs:
           from unittest.mock import patch
           from agent.shared_volume_trigger import eligible, run_once
           from agent.five_matches import build
-          feed={"date":"2026-11-01","football_candidates":[{"fixture_id":"test-1","home":"Alpha","away":"Beta","league":"eng.1","sport":"football","start_utc":"2026-11-01T11:00:00Z"}]}
+          feed={"date":"2026-11-01","football_candidates":[{"fixture_id":"test-1","home":"Alpha","away":"Beta","league":"eng.1","sport":"football","start_utc":"2026-11-01T12:00:00Z"}]}
           assert eligible(json.dumps(feed).encode())
           assert not eligible(json.dumps({"football_candidates":[]}).encode())
           with tempfile.TemporaryDirectory() as d:
