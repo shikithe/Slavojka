@@ -93,6 +93,20 @@ jobs:
         if: steps.clock.outputs.run == 'true'
         run: |
           python3 -m kvoter.manual_candidates --history shared/agent/history-h2h.json --offers shared/kvoter/provider-offers.json --unmatched shared/kvoter/unmatched_fixtures.json --output shared/kvoter/manual-candidates.json
+      - name: Export Kvoter Manual queue to GitHub Pages
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          cp shared/kvoter/manual-candidates.json docs/manual-candidates.json
+          cp shared/kvoter/unmatched_fixtures.json docs/unmatched_fixtures.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          unmatched=json.loads(Path("docs/unmatched_fixtures.json").read_text())
+          candidates=json.loads(Path("docs/manual-candidates.json").read_text())
+          ids={f["fixture_id"] for f in unmatched["fixtures"]}
+          assert all(f["fixture_id"] in ids for f in candidates["fixtures"])
+          print("KVOTER_MANUAL_QUEUE_PUBLISHED",len(ids),candidates["total"])
+          PY
       - name: Publish verified text offer for mobile ListaSix page
         if: steps.clock.outputs.run == 'true'
         run: |
@@ -114,7 +128,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for path in docs/active-list.json docs/kvoter-ponuda.txt shared/active-list.json shared/kvoter-ponuda.txt shared/agent/history-h2h.json shared/kvoter/provider-offers.json shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json; do
+          for path in docs/manual-candidates.json docs/unmatched_fixtures.json docs/active-list.json docs/kvoter-ponuda.txt shared/active-list.json shared/kvoter-ponuda.txt shared/agent/history-h2h.json shared/kvoter/provider-offers.json shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json; do
             if [ -f "$path" ]; then git add -f -- "$path"; fi
           done
           if ! git diff --cached --quiet; then
