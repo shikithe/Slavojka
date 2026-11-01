@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Clear yesterday's Collector JSON before the next 11:00 Sarajevo run."""
+"""Clear yesterday's Collector JSON before the next 12:00 Sarajevo run."""
 import json
 from datetime import datetime, time
 from pathlib import Path
@@ -10,7 +10,7 @@ FILES = (Path("shared/collector-feed.json"), Path("shared/collector-raw.json"), 
 
 def expire(now=None):
     local = (now or datetime.now(TZ)).astimezone(TZ)
-    if local.time() < time(10, 59):
+    if local.time() < time(11, 59):
         print("COLLECTOR_CLEANUP_NOT_DUE")
         return False
     removed = False
