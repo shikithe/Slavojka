@@ -1,0 +1,36 @@
+name: ListaSix public list expiry
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '59 7,8 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: listasix-public-list
+  cancel-in-progress: false
+jobs:
+  expire:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check 09:59 Sarajevo
+        id: clock
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(TZ=Europe/Sarajevo date +%H:%M)" = "09:59" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Remove expired public offer
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          python3 -m lista.expire
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- docs/active-list.json
+          if ! git diff --cached --quiet; then
+            git commit -m "lista: expire public offer [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
