@@ -85,6 +85,59 @@ jobs:
           print("MANUAL_07_ALIAS_CONFIRMATION_OK")
           PY
 
+      - name: Simulate full Collector Agent Kvoter Manual lifecycle offline
+        run: |
+          python3 - <<'PY'
+          import json,tempfile
+          from pathlib import Path
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          from unittest.mock import patch
+          from lista.pipeline import window,main as collector_main
+          from agent.five_matches import build as agent_build
+          from kvoter.the_odds_api import collect as odds_collect
+          from kvoter.reconcile import reconcile
+          from kvoter.manual_aliases import approve
+          from kvoter.reconcile_trigger import run_once
+          tz=ZoneInfo("Europe/Sarajevo")
+          start,end=window(datetime(2026,11,2,12,tzinfo=tz))
+          assert start.hour==13 and end.hour==13
+          kickoff="2026-11-02T17:00:00+00:00"
+          fixture={"id":"sim-1","home":"Teststadt","away":"Gastverein","league":"ger.1","start_utc":kickoff,"sport":"football","status":"pre"}
+          def fake_collect(s,end_utc=None,football_only=False):
+              assert football_only and s.hour==12 and end_utc.hour==12
+              return {"fixtures":[fixture],"errors":[],"window_start_utc":s.isoformat(),"window_end_utc":end_utc.isoformat()}
+          with tempfile.TemporaryDirectory() as d:
+              root=Path(d); shared=root/"shared";shared.mkdir()
+              with patch("lista.pipeline.collect",side_effect=fake_collect),patch("lista.pipeline.ROOT",shared),patch("lista.pipeline.datetime") as dt:
+                  dt.now.return_value=datetime(2026,11,2,12,30,tzinfo=ZoneInfo("UTC"))
+                  dt.combine=datetime.combine
+                  assert collector_main()==0
+              feed=json.loads((shared/"collector-feed.json").read_text())
+              assert len(feed["football_candidates"])==1
+              history=agent_build(feed,request=lambda url:{"events":[]},days=5,last=5)
+              h=shared/"agent/history-h2h.json";h.parent.mkdir();h.write_text(json.dumps(history))
+              event={"id":"odds-07","home_team":"Teststadt","away_team":"Gastverein 07","commence_time":kickoff,
+                     "bookmakers":[{"key":"simulation","markets":[{"key":"h2h","outcomes":[{"name":"Teststadt","price":2.1},{"name":"Gastverein 07","price":3.4}]}]}]}
+              def fake_odds(url): return [event]
+              offers,raw,coverage,errors=odds_collect(history,"TEST-ONLY",fetch=fake_odds)
+              assert not errors and offers and offers[0]["away"]=="Gastverein 07"
+              offers_path=shared/"kvoter/provider-offers.json";offers_path.parent.mkdir();offers_path.write_text(json.dumps({"offers":offers}))
+              db=shared/"team-database.json";db.write_text(json.dumps({"teams":[]}))
+              names=shared/"provider-team-names.json";out=shared/"kvoter";state=out/".reconcile-state"
+              report=reconcile(h,offers_path,db,names,out)
+              assert report["unavailable"]==1 and report["matched"]==0
+              assert "Gastverein 07" in [n["name"] for n in json.loads(names.read_text())["names"]]
+              data=json.loads(db.read_text())
+              approve(data,{"decision":"matched","league":"ger.1","collector_home":"Teststadt","odds_home":"Teststadt",
+                  "collector_away":"Gastverein","odds_away":"Gastverein 07"},"simulated-manual-confirmation")
+              db.write_text(json.dumps(data))
+              assert run_once(h,offers_path,db,names,out,state).startswith("reconciled")
+              assert json.loads((out/"matched_fixtures.json").read_text())["total"]==1
+              assert json.loads((out/"unmatched_fixtures.json").read_text())["total"]==0
+          print("FULL_LISTASIX_OFFLINE_LIFECYCLE_OK")
+          PY
+
       - name: Test primary and manual offer merge without real odds
         run: |
           python3 - <<'PY'
