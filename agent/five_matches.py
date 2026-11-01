@@ -17,7 +17,7 @@ def build(feed, request=fetch, days=120, last=5):
         raise ValueError("football_candidates must be an array")
     leagues={}
     for f in fixtures:
-        if f.get("sport")!="football" or f.get("status")!="pre":
+        if f.get("sport")!="football" or f.get("status", "pre")!="pre":
             continue
         league=f.get("league")
         if not league or not f.get("home") or not f.get("away"):
