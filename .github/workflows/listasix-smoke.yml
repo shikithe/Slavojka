@@ -191,3 +191,5 @@ jobs:
           PY
 
 # rerun Agent import fix
+
+# trigger integration check after imports corrected
