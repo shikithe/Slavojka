@@ -107,7 +107,7 @@ def main():
         dest=Path(path);dest.parent.mkdir(parents=True,exist_ok=True)
         tmp=dest.with_suffix(".tmp");tmp.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8");os.replace(tmp,dest)
     if status=="api_fetched":
-        names_path=Path(os.getenv("KVOTER_PROVIDER_NAMES_PATH",str(Path(__file__).with_name("provider-team-names.json"))))
+        names_path=Path(os.getenv("KVOTER_PROVIDER_NAMES_PATH","/shared/kvoter/team-database/provider-team-names.json"))
         count=collect_names(offers,names_path)
         print("KVOTER_PROVIDER_TEAM_NAMES_ADDED",count)
     result=build(history,offers,source="the-odds-api-v4")
