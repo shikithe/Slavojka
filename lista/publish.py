@@ -33,7 +33,7 @@ def publish(feed_path,match_path,manual_path,shared,docs):
             if row.get("fixture_id"):approved[row["fixture_id"]]=row
     ids={f["fixture_id"] for f in feed.get("football_candidates",[])}
     rows={}
-    for item in report.get("matched_fixtures",[])+list(approved.values()):
+    for item in report.get("matched_fixtures",report.get("fixtures",[]))+list(approved.values()):
         if item.get("fixture_id") not in ids:continue
         chosen=pick(item)
         if chosen:rows[chosen["fixture_id"]]=chosen
