@@ -6,7 +6,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Europe/Sarajevo")
-FILES = (Path("shared/collector-feed.json"), Path("shared/collector-raw.json"))
+FILES = (Path("shared/collector-feed.json"), Path("shared/collector-raw.json"), Path("shared/agent/history-h2h.json"))
 
 def expire(now=None):
     local = (now or datetime.now(TZ)).astimezone(TZ)
@@ -28,6 +28,9 @@ def expire(now=None):
             print("DELETED_OLD_COLLECTOR", path)
         else:
             print("PRESERVED_CURRENT_COLLECTOR", path)
+    if removed and not Path("shared/collector-feed.json").exists():
+        for auxiliary in (Path("shared/agent/.last-processed-sha256"), Path("shared/agent/.validated-collector-feed.json")):
+            auxiliary.unlink(missing_ok=True)
     return removed
 
 if __name__ == "__main__":
