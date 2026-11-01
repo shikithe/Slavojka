@@ -1,7 +1,7 @@
 name: ListaSix Kvoter Manual confirmation
 on:
   issues:
-    types: [opened]
+    types: [opened, edited]
 permissions:
   contents: write
   issues: write
