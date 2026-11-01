@@ -5,7 +5,10 @@ from pathlib import Path
 from difflib import SequenceMatcher
 from datetime import datetime,timezone
 from kvoter import utc
-from team_identity import normalize
+try:
+    from kvoter.team_identity import normalize
+except ImportError:
+    from team_identity import normalize
 
 def build(history,offers,unmatched):
     result=[]
