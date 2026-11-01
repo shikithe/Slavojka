@@ -15,11 +15,11 @@ base = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(base)
 WINDOW = timedelta(hours=23, minutes=59)
 
-def collect(now=None, leagues=None):
+def collect(now=None, leagues=None, end_utc=None, football_only=False):
     now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
-    until = now + WINDOW
+    until = end_utc.astimezone(timezone.utc) if end_utc is not None else now + WINDOW
     selected = [("football", "soccer", league) for league in (leagues or base.FOOTBALL)]
-    selected.append(("basketball", "basketball", "nba"))
+    if not football_only:\n        selected.append(("basketball", "basketball", "nba"))
     dates = []
     day = now.date()
     while day <= until.date():
@@ -56,7 +56,7 @@ def collect(now=None, leagues=None):
                 errors.append(f"{league}/{date_str}: {type(exc).__name__}: {exc}")
     unique = {item["id"]: item for item in fixtures}
     return {
-        "schema_version":"rolling-24h-test-v1",
+        "schema_version":"listasix-fixed-window-v1",
         "date":now.astimezone(base.ZONE).date().isoformat(),
         "window_start_utc":now.isoformat(),
         "window_end_utc":until.isoformat(),
