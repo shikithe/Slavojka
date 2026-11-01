@@ -10,14 +10,14 @@ ROOT = Path("data")
 def window(now=None):
     now = now or datetime.now(TZ)
     day = now.date()
-    start = datetime.combine(day, time(10), TZ)
+    start = datetime.combine(day, time(11), TZ)
     end = start + timedelta(days=1)
     return start.isoformat(), end.isoformat()
 def main():
     start,end = window()
     ROOT.mkdir(exist_ok=True)
     status = {"project":"ListaSix","generated_at":datetime.now(TZ).isoformat(),
-      "window_start":start,"window_end_exclusive":end,
+      "window_start":start,"window_end_exclusive":end,\n      "data_expires_at":end, "schedule_local":"10:00 Europe/Sarajevo",
       "collector":"not_configured","agent":"waiting_for_collector",
       "kvoter":"waiting_for_agent","publication_allowed":False,
       "fixtures":[]}
