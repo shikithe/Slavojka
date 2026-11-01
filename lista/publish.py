@@ -7,7 +7,7 @@ from zoneinfo import ZoneInfo
 
 TZ=ZoneInfo("Europe/Sarajevo")
 def expiry(day):
-    return datetime.combine(day+timedelta(days=1),time(10,59),tzinfo=TZ).isoformat()
+    return datetime.combine(day+timedelta(days=1),time(11,59),tzinfo=TZ).isoformat()
 def pick(record):
     for offer in record.get("odds_offers",[]):
         markets=offer.get("markets",{})
