@@ -52,3 +52,29 @@ jobs:
 # rerun after syntax fixes
 # rerun collector string fix
 # rerun after collector package import fix
+
+      - name: Test Agent trigger and five-match handoff offline
+        run: |
+          python3 - <<'PY'
+          import json, tempfile
+          from pathlib import Path
+          from unittest.mock import patch
+          from agent.shared_volume_trigger import eligible, run_once
+          from agent.five_matches import build
+          feed={"date":"2026-11-01","football_candidates":[{"fixture_id":"test-1","home":"Alpha","away":"Beta","league":"eng.1","sport":"football","start_utc":"2026-11-01T11:00:00Z"}]}
+          assert eligible(json.dumps(feed).encode())
+          assert not eligible(json.dumps({"football_candidates":[]}).encode())
+          with tempfile.TemporaryDirectory() as d:
+              p=Path(d); source=p/"collector-feed.json"; output=p/"agent/history-h2h.json"; state=p/"agent/state"
+              source.write_text(json.dumps(feed))
+              script=p/"fake_agent.py"
+              script.write_text("import argparse,json\nfrom pathlib import Path\np=argparse.ArgumentParser();p.add_argument('--input');p.add_argument('--output');a=p.parse_args();f=json.loads(Path(a.input).read_text());Path(a.output).write_text(json.dumps({'fixture_count':len(f['football_candidates'])}))\n")
+              with patch("agent.shared_volume_trigger.time.sleep",return_value=None):
+                  assert run_once(source,output,state,script).startswith("processed:")
+                  assert json.loads(output.read_text())["fixture_count"]==1
+                  assert run_once(source,output,state,script)=="waiting: feed already processed"
+              result=build(feed,request=lambda url: {"events":[]},days=5,last=5)
+              assert "eng.1" in result["leagues"]
+              assert len(result["leagues"]["eng.1"]["teams"])==2
+              print("AGENT_TRIGGER_AND_HANDOFF_OFFLINE_OK")
+          PY
