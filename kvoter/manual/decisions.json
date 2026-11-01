@@ -274,6 +274,248 @@
       "league": "fra.1",
       "decision": "matched",
       "issue_number": 14
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875559",
+      "event_id": "c0c32575c239ac72913af247ce084ea2",
+      "league": "ned.1",
+      "collector_home": "Excelsior",
+      "collector_away": "FC Twente",
+      "odds_home": "Excelsior",
+      "odds_away": "FC Twente Enschede",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875558",
+      "event_id": "d7d5552edc5c81a14b6933537ba2043c",
+      "league": "ned.1",
+      "collector_home": "Telstar",
+      "collector_away": "FC Utrecht",
+      "odds_home": "SC Telstar",
+      "odds_away": "FC Utrecht",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884750",
+      "event_id": "60eaeb599578cd5c951f917c4fef06ff",
+      "league": "ger.1",
+      "collector_home": "1. FC Union Berlin",
+      "collector_away": "FC Cologne",
+      "odds_home": "Union Berlin",
+      "odds_away": "1. FC Köln",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878952",
+      "event_id": "480129a4d8e611170372498cd60e69d2",
+      "league": "bel.1",
+      "collector_home": "Sint-Truidense",
+      "collector_away": "OH Leuven",
+      "odds_home": "Sint Truiden",
+      "odds_away": "Leuven",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882819",
+      "event_id": "6c520ed959578ca3aebe351ee3765d53",
+      "league": "esp.1",
+      "collector_home": "Racing Santander",
+      "collector_away": "Real Madrid",
+      "odds_home": "Real Racing Club de Santander",
+      "odds_away": "Real Madrid",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885410",
+      "event_id": "fd5c6a92f2448c1cfe7a2d9b8075172b",
+      "league": "por.1",
+      "collector_home": "Arouca",
+      "collector_away": "C.D. Nacional",
+      "odds_home": "Arouca",
+      "odds_away": "Nacional",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875557",
+      "event_id": "961d9c9f07b1f911e211cd6a750cddba",
+      "league": "ned.1",
+      "collector_home": "FC Groningen",
+      "collector_away": "Sparta Rotterdam",
+      "odds_home": "Groningen",
+      "odds_away": "Sparta Rotterdam",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888262",
+      "event_id": "bf609ced8c6472e7d11428e42a2e468e",
+      "league": "tur.1",
+      "collector_home": "Kasimpasa",
+      "collector_away": "Besiktas",
+      "odds_home": "Kasimpasa SK",
+      "odds_away": "Besiktas JK",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884752",
+      "event_id": "1eb5e1a69ae9dd9edd92fde344308a4e",
+      "league": "ger.1",
+      "collector_home": "Eintracht Frankfurt",
+      "collector_away": "Hamburg SV",
+      "odds_home": "Eintracht Frankfurt",
+      "odds_away": "Hamburger SV",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882823",
+      "event_id": "5262991e389930615bec34b642428c93",
+      "league": "esp.1",
+      "collector_home": "Elche",
+      "collector_away": "Valencia",
+      "odds_home": "Elche CF",
+      "odds_away": "Valencia",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878954",
+      "event_id": "81d52c9bdfaaa5eacaadb9245bc2d883",
+      "league": "bel.1",
+      "collector_home": "Lommel SK",
+      "collector_away": "KAA Gent",
+      "odds_home": "Lommel SK",
+      "odds_away": "Gent",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885411",
+      "event_id": "ce5c2cbdf5db2a13f40f528d3e5044b9",
+      "league": "por.1",
+      "collector_home": "Académico de Viseu",
+      "collector_away": "Rio Ave",
+      "odds_home": "Académico de Viseu",
+      "odds_away": "Rio Ave FC",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885406",
+      "event_id": "6bf5102547eb3f3eb74023133e27d2d3",
+      "league": "por.1",
+      "collector_home": "Maritimo",
+      "collector_away": "Santa Clara",
+      "odds_home": "CS Maritimo",
+      "odds_away": "Santa Clara",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878955",
+      "event_id": "ed2ef578ae4e95bdcd81e662dfec5381",
+      "league": "bel.1",
+      "collector_home": "Royal Charleroi SC",
+      "collector_away": "RAAL La Louvière",
+      "odds_home": "Charleroi",
+      "odds_away": "RAAL La Louvière",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882826",
+      "event_id": "3757bcd765c7da1538cdf2785e784038",
+      "league": "esp.1",
+      "collector_home": "Athletic Club",
+      "collector_away": "Real Sociedad",
+      "odds_home": "Athletic Bilbao",
+      "odds_away": "Real Sociedad",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885409",
+      "event_id": "12fa9f636dbb126cfd4118fa8cdc8fad",
+      "league": "por.1",
+      "collector_home": "Braga",
+      "collector_away": "FC Famalicao",
+      "odds_home": "Braga",
+      "odds_away": "Famalicão",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761927",
+      "event_id": "196c38051dc539d3d85bc3b2e3f9b45b",
+      "league": "usa.1",
+      "collector_home": "Vancouver Whitecaps",
+      "collector_away": "Seattle Sounders FC",
+      "odds_home": "Vancouver Whitecaps FC",
+      "odds_away": "Seattle Sounders FC",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761920",
+      "event_id": "54bf2a52e2dd2f8b9212f4816dceaada",
+      "league": "usa.1",
+      "collector_home": "Nashville SC",
+      "collector_away": "Red Bull New York",
+      "odds_home": "Nashville SC",
+      "odds_away": "New York Red Bulls",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841645",
+      "event_id": "36f6f36650046236bd0c864c56022567",
+      "league": "arg.1",
+      "collector_home": "Belgrano (Córdoba)",
+      "collector_away": "Barracas Central",
+      "odds_home": "Belgrano de Cordoba",
+      "odds_away": "Barracas Central",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841650",
+      "event_id": "bbf63c9655db106dd50c8c05f81c730e",
+      "league": "arg.1",
+      "collector_home": "Newell's Old Boys",
+      "collector_away": "Unión (Santa Fe)",
+      "odds_home": "Newells Old Boys",
+      "odds_away": "Union Santa Fe",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761921",
+      "event_id": "1a27bec6400dba567344a86aee6fca4a",
+      "league": "usa.1",
+      "collector_home": "LAFC",
+      "collector_away": "Minnesota United FC",
+      "odds_home": "Los Angeles FC",
+      "odds_away": "Minnesota United FC",
+      "decision": "matched",
+      "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761933",
+      "event_id": "c59921cdf131bc3c6e9fdc0cbe5abe3f",
+      "league": "usa.1",
+      "collector_home": "Portland Timbers",
+      "collector_away": "Houston Dynamo FC",
+      "odds_home": "Portland Timbers",
+      "odds_away": "Houston Dynamo",
+      "decision": "matched",
+      "issue_number": 2
     }
   ]
 }

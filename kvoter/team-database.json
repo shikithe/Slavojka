@@ -343,6 +343,306 @@
         "github-issue-14"
       ],
       "verified": true
+    },
+    {
+      "id": "ned.1-fc-twente",
+      "league": "ned.1",
+      "names": [
+        "FC Twente",
+        "FC Twente Enschede"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ned.1-telstar",
+      "league": "ned.1",
+      "names": [
+        "Telstar",
+        "SC Telstar"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ger.1-1-fc-union-berlin",
+      "league": "ger.1",
+      "names": [
+        "1. FC Union Berlin",
+        "Union Berlin"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ger.1-fc-cologne",
+      "league": "ger.1",
+      "names": [
+        "FC Cologne",
+        "1. FC Köln"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bel.1-sint-truidense",
+      "league": "bel.1",
+      "names": [
+        "Sint-Truidense",
+        "Sint Truiden"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bel.1-oh-leuven",
+      "league": "bel.1",
+      "names": [
+        "OH Leuven",
+        "Leuven"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "esp.1-racing-santander",
+      "league": "esp.1",
+      "names": [
+        "Racing Santander",
+        "Real Racing Club de Santander"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "por.1-c-d-nacional",
+      "league": "por.1",
+      "names": [
+        "C.D. Nacional",
+        "Nacional"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ned.1-fc-groningen",
+      "league": "ned.1",
+      "names": [
+        "FC Groningen",
+        "Groningen"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "tur.1-kasimpasa",
+      "league": "tur.1",
+      "names": [
+        "Kasimpasa",
+        "Kasimpasa SK"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "tur.1-besiktas",
+      "league": "tur.1",
+      "names": [
+        "Besiktas",
+        "Besiktas JK"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ger.1-hamburg-sv",
+      "league": "ger.1",
+      "names": [
+        "Hamburg SV",
+        "Hamburger SV"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "esp.1-elche",
+      "league": "esp.1",
+      "names": [
+        "Elche",
+        "Elche CF"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bel.1-kaa-gent",
+      "league": "bel.1",
+      "names": [
+        "KAA Gent",
+        "Gent"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "por.1-rio-ave",
+      "league": "por.1",
+      "names": [
+        "Rio Ave",
+        "Rio Ave FC"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "por.1-maritimo",
+      "league": "por.1",
+      "names": [
+        "Maritimo",
+        "CS Maritimo"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bel.1-royal-charleroi-sc",
+      "league": "bel.1",
+      "names": [
+        "Royal Charleroi SC",
+        "Charleroi"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "esp.1-athletic-club",
+      "league": "esp.1",
+      "names": [
+        "Athletic Club",
+        "Athletic Bilbao"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "por.1-fc-famalicao",
+      "league": "por.1",
+      "names": [
+        "FC Famalicao",
+        "Famalicão"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "usa.1-vancouver-whitecaps",
+      "league": "usa.1",
+      "names": [
+        "Vancouver Whitecaps",
+        "Vancouver Whitecaps FC"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "usa.1-red-bull-new-york",
+      "league": "usa.1",
+      "names": [
+        "Red Bull New York",
+        "New York Red Bulls"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "arg.1-belgrano-cordoba",
+      "league": "arg.1",
+      "names": [
+        "Belgrano (Córdoba)",
+        "Belgrano de Cordoba"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "arg.1-newell-s-old-boys",
+      "league": "arg.1",
+      "names": [
+        "Newell's Old Boys",
+        "Newells Old Boys"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "usa.1-lafc",
+      "league": "usa.1",
+      "names": [
+        "LAFC",
+        "Los Angeles FC"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
+    },
+    {
+      "id": "usa.1-houston-dynamo-fc",
+      "league": "usa.1",
+      "names": [
+        "Houston Dynamo FC",
+        "Houston Dynamo"
+      ],
+      "sources": [
+        "github-issue-2"
+      ],
+      "verified": true
     }
   ]
 }
