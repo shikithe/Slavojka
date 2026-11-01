@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ListaSix Collector: fixed Sarajevo 13:00-to-13:00 ESPN fixture window."""
+"""ListaSix Collector: Sarajevo 09:00 collection, fixture starts from 10:00 to next 09:00."""
 import json
 import os
 import sys
@@ -12,12 +12,12 @@ TZ=ZoneInfo("Europe/Sarajevo")
 ROOT=Path(os.environ.get("LISTASIX_SHARED","shared"))
 def window(now=None):
     local=(now or datetime.now(TZ)).astimezone(TZ)
-    start=datetime.combine(local.date(),time(13),tzinfo=TZ)
-    end=datetime.combine(local.date()+timedelta(days=1),time(13),tzinfo=TZ)
+    start=datetime.combine(local.date(),time(10),tzinfo=TZ)
+    end=datetime.combine(local.date()+timedelta(days=1),time(9),tzinfo=TZ)
     return start,end
 def main():
     start,end=window()
-    # Query the complete 13:00-to-next-13:00 window, not a rolling 24h interval.
+    # Daily 09:00 collection covers fixtures starting 10:00 today up to 09:00 tomorrow.
     raw=collect(start.astimezone(timezone.utc), end_utc=end.astimezone(timezone.utc), football_only=True)
     raw["date"]=start.date().isoformat()
     raw["window_start_local"]=start.isoformat()
