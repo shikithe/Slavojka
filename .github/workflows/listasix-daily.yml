@@ -1,4 +1,4 @@
-name: ListaSix daily Collector
+name: ListaSix daily Collector Agent Kvoter
 on:
   workflow_dispatch:
   schedule:
@@ -19,7 +19,7 @@ jobs:
         id: clock
         shell: bash
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(TZ=Europe/Sarajevo date +%H)" = "12" ]; then
+          if [ "$(TZ=Europe/Sarajevo date +%H)" = "12" ]; then
             echo "run=true" >> "$GITHUB_OUTPUT"
           else
             echo "run=false" >> "$GITHUB_OUTPUT"
@@ -50,6 +50,43 @@ jobs:
           git add -- shared/collector-raw.json shared/collector-feed.json
           if ! git diff --cached --quiet; then
             git commit -m "lista: update active ESPN feed [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Build Agent history from Collector feed
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          mkdir -p shared/agent
+          python3 -m agent.five_matches --input shared/collector-feed.json --output shared/agent/history-h2h.json --days 120
+      - name: Run Kvoter with protected OddsAPI secret
+        if: steps.clock.outputs.run == 'true'
+        env:
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
+          KVOTER_PROVIDER_NAMES_PATH: shared/kvoter/team-database/provider-team-names.json
+        run: |
+          test -n "$THE_ODDS_API_KEY" || { echo "::error::THE_ODDS_API_KEY repository secret missing"; exit 1; }
+          mkdir -p shared/kvoter
+          python3 -m kvoter.the_odds_api --feed shared/agent/history-h2h.json --output shared/kvoter/match-report.json --raw-output shared/kvoter/league-odds-raw.json --offers-output shared/kvoter/provider-offers.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path("shared/kvoter/match-report.json").read_text())
+          assert report.get("provider_status")=="api_fetched", "OddsAPI fetch failed"
+          assert not report.get("provider_errors"), "OddsAPI league errors - retry later"
+          print("LISTASIX_KVOTER_OK",report["matched"],report["unavailable"])
+          PY
+      - name: Build manual review candidates
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          python3 -m kvoter.manual_candidates --history shared/agent/history-h2h.json --offers shared/kvoter/provider-offers.json --unmatched shared/kvoter/unmatched_fixtures.json --output shared/kvoter/manual-candidates.json
+      - name: Persist Agent Kvoter and provider alias catalog
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f shared/agent/history-h2h.json shared/kvoter/provider-offers.json shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json
+          if ! git diff --cached --quiet; then
+            git commit -m "lista: update agent and verified odds matching [skip ci]"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
