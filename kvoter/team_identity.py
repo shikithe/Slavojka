@@ -4,7 +4,7 @@ import os
 import unicodedata
 from pathlib import Path
 
-ALIASES_PATH=Path(__file__).with_name("team_aliases.json")
+ALIASES_PATH=Path(__file__).with_name("team-database.json")
 
 def normalize(value):
     value=unicodedata.normalize("NFKD",str(value or "").casefold())
