@@ -1,39 +1,46 @@
-name: ListaSix public list expiry
+name: ListaSix expire previous-day feeds at 08:59
 on:
   workflow_dispatch:
   schedule:
-    - cron: '59 9,10 * * *'
+    # 08:59 Sarajevo: summer 06:59 UTC, winter 07:59 UTC
+    - cron: '59 6 * * *'
+    - cron: '59 7 * * *'
 permissions:
   contents: write
 concurrency:
-  group: listasix-public-list
+  group: listasix-daily-and-expiry
   cancel-in-progress: false
 jobs:
   expire:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check 11:59 Sarajevo
+      - name: Check 08:59 Sarajevo slot and DST
         id: clock
-        shell: bash
+        env:
+          TRIGGER: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(TZ=Europe/Sarajevo date +%H:%M)" = "11:59" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          fi
-      - name: Remove previous Collector database by 11:59 Sarajevo
-        if: steps.clock.outputs.run == 'true'
-        run: python3 -m lista.expire_collector
-      - name: Remove expired public offer
+          python3 - <<'PY'
+          import os
+          from datetime import datetime,time,timezone
+          from zoneinfo import ZoneInfo
+          local=datetime.now(ZoneInfo("Europe/Sarajevo"))
+          slot=datetime.combine(local.date(),time(8,59),tzinfo=ZoneInfo("Europe/Sarajevo"))
+          expected="59 "+str(slot.astimezone(timezone.utc).hour)+" * * *"
+          allowed=(os.environ["TRIGGER"]=="workflow_dispatch" or os.environ["CRON"]==expected)
+          with open(os.environ["GITHUB_OUTPUT"],"a") as f:f.write("run="+("true" if allowed else "false")+"\n")
+          print("LISTASIX_EXPIRY_SLOT",allowed)
+          PY
+      - name: Remove expired previous-day Collector Agent Kvoter public feeds
         if: steps.clock.outputs.run == 'true'
         run: |
-          python3 -m lista.expire
+          python3 -m lista.expire_collector
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- docs/active-list.json docs/kvoter-ponuda.txt shared/active-list.json shared/kvoter-ponuda.txt shared/collector-feed.json shared/collector-raw.json shared/agent/history-h2h.json shared/agent/.last-processed-sha256 shared/agent/.validated-collector-feed.json
+          git add -A -- shared docs/active-list.json docs/kvoter-ponuda.txt docs/manual-candidates.json docs/unmatched_fixtures.json
           if ! git diff --cached --quiet; then
-            git commit -m "lista: expire public offer [skip ci]"
+            git commit -m "lista: expire previous-day feeds at 08:59 [skip ci]"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
