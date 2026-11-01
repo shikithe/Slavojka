@@ -29,7 +29,8 @@ services:
       - listasix_shared:/shared
     environment:
       PYTHONPATH: /app:/app/kvoter
-    command: ["python3", "-c", "print('Kvoter entrypoint not yet integrated')"]
+      THE_ODDS_API_KEY: ${THE_ODDS_API_KEY:-}
+    command: ["python3", "-u", "kvoter/shared_volume_trigger.py", "--interval", "15"]
     profiles: ["jobs"]
 volumes:
   listasix_shared:
