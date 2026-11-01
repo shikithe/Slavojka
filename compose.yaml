@@ -19,7 +19,7 @@ services:
       - listasix_shared:/shared
     environment:
       PYTHONPATH: /app
-    command: ["python3", "-c", "print('Agent entrypoint not yet integrated')"]
+    command: ["python3", "-u", "agent/shared_volume_trigger.py", "--interval", "15"]
     profiles: ["jobs"]
   kvoter:
     image: python:3.12-slim
