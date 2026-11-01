@@ -1,0 +1,50 @@
+name: ListaSix integration smoke test
+on:
+  push:
+    paths:
+      - '.github/workflows/listasix-smoke.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate imported Python syntax
+        run: python3 -m compileall -q lista collector kvoter agent collector.py
+      - name: Validate timezone window and expiration
+        run: |
+          python3 - <<'PY'
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          from lista.pipeline import window
+          from lista.publish import expiry
+          tz=ZoneInfo("Europe/Sarajevo")
+          for d in ("2026-11-01T10:00:00+01:00","2027-07-01T10:00:00+02:00"):
+              start,end=window(datetime.fromisoformat(d))
+              assert start.hour==11 and end.hour==11
+              assert expiry(start.date()).endswith("09:59:00+01:00") or expiry(start.date()).endswith("09:59:00+02:00")
+          print("WINDOW_AND_EXPIRY_OK")
+          PY
+      - name: Test primary and manual offer merge without real odds
+        run: |
+          python3 - <<'PY'
+          import json,tempfile
+          from pathlib import Path
+          from lista.publish import publish
+          with tempfile.TemporaryDirectory() as d:
+              p=Path(d);(p/"shared").mkdir();(p/"docs").mkdir()
+              feed={"date":"2026-11-01","football_candidates":[{"fixture_id":"fixture1"},{"fixture_id":"fixture2"}]}
+              def match(fid):
+                  return {"fixture_id":fid,"home":"Home","away":"Away","start_utc":"2026-11-01T11:00:00Z","odds_offers":[{"bookmaker":"test-only","markets":{"1X2":{"home":2.0,"draw":3.0,"away":4.0},"3+":{"over":1.8}}}]}
+              (p/"feed.json").write_text(json.dumps(feed))
+              (p/"matches.json").write_text(json.dumps({"matched_fixtures":[match("fixture1")]}))
+              (p/"manual.json").write_text(json.dumps({"matched_fixtures":[match("fixture2")]}))
+              n=publish(p/"feed.json",p/"matches.json",p/"manual.json",p/"shared",p/"docs")
+              assert n==2
+              data=json.loads((p/"docs/active-list.json").read_text())
+              assert len(data["fixtures"])==2
+              assert "fixture1" in (p/"docs/kvoter-ponuda.txt").read_text() or "Home - Away" in (p/"docs/kvoter-ponuda.txt").read_text()
+              print("PRIMARY_MANUAL_MERGE_OK")
+          PY
