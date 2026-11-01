@@ -1,0 +1,187 @@
+{
+  "date": "2026-11-01",
+  "expires_at": "2026-11-02T11:59:00+01:00",
+  "publication_allowed": true,
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:bel.1:401878959",
+      "datetime": "2026-11-01T12:30:00Z",
+      "match": "Cercle Brugge KSV - Antwerp",
+      "home_odds": 2.02,
+      "draw_odds": 3.4,
+      "away_odds": 3.05,
+      "over25_odds": null,
+      "bookmaker": "livescorebet"
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878349",
+      "datetime": "2026-11-01T13:00:00Z",
+      "match": "Falkirk - Celtic",
+      "home_odds": 6.4,
+      "draw_odds": 4.5,
+      "away_odds": 1.41,
+      "over25_odds": null,
+      "bookmaker": "unibet_nl"
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882821",
+      "datetime": "2026-11-01T13:00:00Z",
+      "match": "Getafe - Sevilla",
+      "home_odds": 3.53,
+      "draw_odds": 3.04,
+      "away_odds": 2.43,
+      "over25_odds": null,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888261",
+      "datetime": "2026-11-01T13:00:00Z",
+      "match": "Istanbul Basaksehir - Samsunspor",
+      "home_odds": 1.82,
+      "draw_odds": 3.75,
+      "away_odds": 4.0,
+      "over25_odds": 1.55,
+      "bookmaker": "grosvenor"
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888263",
+      "datetime": "2026-11-01T13:00:00Z",
+      "match": "Trabzonspor - Gaziantep FK",
+      "home_odds": 1.22,
+      "draw_odds": 6.25,
+      "away_odds": 9.5,
+      "over25_odds": null,
+      "bookmaker": "unibet_se"
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401874782",
+      "datetime": "2026-11-01T14:00:00Z",
+      "match": "Frosinone - Torino",
+      "home_odds": 2.05,
+      "draw_odds": 3.99,
+      "away_odds": 3.5,
+      "over25_odds": null,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401874983",
+      "datetime": "2026-11-01T14:00:00Z",
+      "match": "Lazio - Cagliari",
+      "home_odds": 1.48,
+      "draw_odds": 4.49,
+      "away_odds": 7.63,
+      "over25_odds": null,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876414",
+      "datetime": "2026-11-01T14:00:00Z",
+      "match": "Strasbourg - AJ Auxerre",
+      "home_odds": 1.87,
+      "draw_odds": 4.06,
+      "away_odds": 4.06,
+      "over25_odds": null,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876418",
+      "datetime": "2026-11-01T16:15:00Z",
+      "match": "Lyon - Angers",
+      "home_odds": 1.43,
+      "draw_odds": 5.02,
+      "away_odds": 7.46,
+      "over25_odds": null,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876415",
+      "datetime": "2026-11-01T16:15:00Z",
+      "match": "Paris FC - AS Monaco",
+      "home_odds": 2.53,
+      "draw_odds": 3.6,
+      "away_odds": 2.85,
+      "over25_odds": 1.82,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879246",
+      "datetime": "2026-11-01T16:30:00Z",
+      "match": "Liverpool - Arsenal",
+      "home_odds": 2.8,
+      "draw_odds": 3.4,
+      "away_odds": 2.55,
+      "over25_odds": null,
+      "bookmaker": "unibet_uk"
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401874968",
+      "datetime": "2026-11-01T17:00:00Z",
+      "match": "Lecce - Genoa",
+      "home_odds": 3.25,
+      "draw_odds": 3.05,
+      "away_odds": 2.57,
+      "over25_odds": null,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841658",
+      "datetime": "2026-11-01T18:00:00Z",
+      "match": "Boca Juniors - River Plate",
+      "home_odds": 2.3,
+      "draw_odds": 2.95,
+      "away_odds": 3.05,
+      "over25_odds": null,
+      "bookmaker": "winamax_de"
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401874949",
+      "datetime": "2026-11-01T19:45:00Z",
+      "match": "Juventus - Napoli",
+      "home_odds": 2.25,
+      "draw_odds": 3.31,
+      "away_odds": 3.6,
+      "over25_odds": 2.08,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876417",
+      "datetime": "2026-11-01T19:45:00Z",
+      "match": "Marseille - Toulouse",
+      "home_odds": 1.94,
+      "draw_odds": 4.15,
+      "away_odds": 3.69,
+      "over25_odds": null,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761931",
+      "datetime": "2026-11-01T21:30:00Z",
+      "match": "Atlanta United FC - Toronto FC",
+      "home_odds": 2.23,
+      "draw_odds": 3.8,
+      "away_odds": 2.8,
+      "over25_odds": null,
+      "bookmaker": "unibet_se"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841651",
+      "datetime": "2026-11-01T23:45:00Z",
+      "match": "Lanús - Gimnasia (Mendoza)",
+      "home_odds": 1.53,
+      "draw_odds": 4.13,
+      "away_odds": 6.33,
+      "over25_odds": 1.91,
+      "bookmaker": "onexbet"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761932",
+      "datetime": "2026-11-02T00:00:00Z",
+      "match": "New England Revolution - Inter Miami CF",
+      "home_odds": 3.0,
+      "draw_odds": 4.0,
+      "away_odds": 2.23,
+      "over25_odds": null,
+      "bookmaker": "leovegas_se"
+    }
+  ]
+}

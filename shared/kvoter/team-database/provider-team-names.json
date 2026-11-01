@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "source": "the-odds-api-v4",
+  "names": [
+    {
+      "league": "arg.1",
+      "name": "Boca Juniors",
+      "normalized": "boca juniors",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "River Plate",
+      "normalized": "river plate",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Belgrano de Cordoba",
+      "normalized": "belgrano de cordoba",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Barracas Central",
+      "normalized": "barracas central",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Newells Old Boys",
+      "normalized": "newells old boys",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Union Santa Fe",
+      "normalized": "union santa fe",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Lanus",
+      "normalized": "lanus",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Gimnasia Mendoza",
+      "normalized": "gimnasia mendoza",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Cercle Brugge KSV",
+      "normalized": "cercle brugge ksv",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Royal Antwerp",
+      "normalized": "royal antwerp",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Sint Truiden",
+      "normalized": "sint truiden",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Leuven",
+      "normalized": "leuven",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Lommel SK",
+      "normalized": "lommel sk",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Gent",
+      "normalized": "gent",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Charleroi",
+      "normalized": "charleroi",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "RAAL La Louvière",
+      "normalized": "raal la louviere",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Liverpool",
+      "normalized": "liverpool",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Arsenal",
+      "normalized": "arsenal",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Getafe",
+      "normalized": "getafe",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Sevilla",
+      "normalized": "sevilla",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Real Racing Club de Santander",
+      "normalized": "real racing club de santander",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Real Madrid",
+      "normalized": "real madrid",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Elche CF",
+      "normalized": "elche cf",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Valencia",
+      "normalized": "valencia",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Athletic Bilbao",
+      "normalized": "athletic bilbao",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Real Sociedad",
+      "normalized": "real sociedad",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Strasbourg",
+      "normalized": "strasbourg",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Auxerre",
+      "normalized": "auxerre",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Paris FC",
+      "normalized": "paris fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "AS Monaco",
+      "normalized": "as monaco",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Lyon",
+      "normalized": "lyon",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Angers",
+      "normalized": "angers",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Marseille",
+      "normalized": "marseille",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Toulouse",
+      "normalized": "toulouse",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ger.1",
+      "name": "Union Berlin",
+      "normalized": "union berlin",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ger.1",
+      "name": "1. FC Köln",
+      "normalized": "1 fc koln",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ger.1",
+      "name": "Eintracht Frankfurt",
+      "normalized": "eintracht frankfurt",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ger.1",
+      "name": "Hamburger SV",
+      "normalized": "hamburger sv",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Lazio",
+      "normalized": "lazio",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Cagliari",
+      "normalized": "cagliari",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Frosinone",
+      "normalized": "frosinone",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Torino",
+      "normalized": "torino",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Lecce",
+      "normalized": "lecce",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Genoa",
+      "normalized": "genoa",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Juventus",
+      "normalized": "juventus",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Napoli",
+      "normalized": "napoli",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "Excelsior",
+      "normalized": "excelsior",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "FC Twente Enschede",
+      "normalized": "fc twente enschede",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "SC Telstar",
+      "normalized": "sc telstar",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "FC Utrecht",
+      "normalized": "fc utrecht",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "Groningen",
+      "normalized": "groningen",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "Sparta Rotterdam",
+      "normalized": "sparta rotterdam",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Arouca",
+      "normalized": "arouca",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Nacional",
+      "normalized": "nacional",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Académico de Viseu",
+      "normalized": "academico de viseu",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Rio Ave FC",
+      "normalized": "rio ave fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "CS Maritimo",
+      "normalized": "cs maritimo",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Santa Clara",
+      "normalized": "santa clara",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Braga",
+      "normalized": "braga",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Famalicão",
+      "normalized": "famalicao",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "sco.1",
+      "name": "Falkirk F.C.",
+      "normalized": "falkirk f c",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "sco.1",
+      "name": "Celtic",
+      "normalized": "celtic",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Basaksehir",
+      "normalized": "basaksehir",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Samsunspor",
+      "normalized": "samsunspor",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Trabzonspor",
+      "normalized": "trabzonspor",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Gazişehir Gaziantep",
+      "normalized": "gazisehir gaziantep",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Kasimpasa SK",
+      "normalized": "kasimpasa sk",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Besiktas JK",
+      "normalized": "besiktas jk",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "Vancouver Whitecaps FC",
+      "normalized": "vancouver whitecaps fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "Seattle Sounders FC",
+      "normalized": "seattle sounders fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "Atlanta United FC",
+      "normalized": "atlanta united fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "Toronto FC",
+      "normalized": "toronto fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "Nashville SC",
+      "normalized": "nashville sc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "New York Red Bulls",
+      "normalized": "new york red bulls",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "New England Revolution",
+      "normalized": "new england revolution",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "Inter Miami CF",
+      "normalized": "inter miami cf",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "Los Angeles FC",
+      "normalized": "los angeles fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "Minnesota United FC",
+      "normalized": "minnesota united fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "Portland Timbers",
+      "normalized": "portland timbers",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "usa.1",
+      "name": "Houston Dynamo",
+      "normalized": "houston dynamo",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
+      "verified_identity": false
+    }
+  ]
+}
