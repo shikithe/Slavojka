@@ -1,37 +1,43 @@
 #!/usr/bin/env python3
-"""Clear yesterday's Collector JSON before the next 12:00 Sarajevo run."""
+"""Expire previous-day transient ListaSix data at/after 08:59 Sarajevo."""
 import json
-from datetime import datetime, time
+from datetime import date, datetime, time
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-TZ = ZoneInfo("Europe/Sarajevo")
-FILES = (Path("shared/collector-feed.json"), Path("shared/collector-raw.json"), Path("shared/agent/history-h2h.json"))
-
+TZ=ZoneInfo("Europe/Sarajevo")
+TRANSIENT=[
+ "shared/collector-feed.json","shared/collector-raw.json",
+ "shared/agent/history-h2h.json",
+ "shared/kvoter/provider-offers.json","shared/kvoter/league-odds-raw.json",
+ "shared/kvoter/match-report.json","shared/kvoter/matched_fixtures.json",
+ "shared/kvoter/unmatched_fixtures.json","shared/kvoter/manual-candidates.json",
+ "shared/active-list.json","shared/kvoter-ponuda.txt",
+ "docs/active-list.json","docs/kvoter-ponuda.txt",
+ "docs/manual-candidates.json","docs/unmatched_fixtures.json",
+]
 def expire(now=None):
-    local = (now or datetime.now(TZ)).astimezone(TZ)
-    if local.time() < time(11, 59):
-        print("COLLECTOR_CLEANUP_NOT_DUE")
+    local=(now or datetime.now(TZ)).astimezone(TZ)
+    if local.time()<time(8,59):
+        print("LISTASIX_CLEANUP_NOT_DUE")
         return False
-    removed = False
-    for path in FILES:
-        if not path.exists():
-            continue
-        data = json.loads(path.read_text(encoding="utf-8"))
-        date = data.get("date")
-        if not date:
-            raise ValueError(f"Missing Collector date: {path}")
-        from datetime import date as Date
-        if Date.fromisoformat(date) < local.date():
+    feed=Path("shared/collector-feed.json")
+    if not feed.exists():
+        print("NO_COLLECTOR_FEED_TO_EXPIRE")
+        return False
+    info=json.loads(feed.read_text(encoding="utf-8"))
+    if date.fromisoformat(info["date"])>=local.date():
+        print("PRESERVED_CURRENT_DAY_DATA")
+        return False
+    removed=[]
+    for name in TRANSIENT:
+        path=Path(name)
+        if path.exists():
             path.unlink()
-            removed = True
-            print("DELETED_OLD_COLLECTOR", path)
-        else:
-            print("PRESERVED_CURRENT_COLLECTOR", path)
-    if removed and not Path("shared/collector-feed.json").exists():
-        for auxiliary in (Path("shared/agent/.last-processed-sha256"), Path("shared/agent/.validated-collector-feed.json")):
-            auxiliary.unlink(missing_ok=True)
-    return removed
-
-if __name__ == "__main__":
+            removed.append(name)
+    for name in ("shared/agent/.last-processed-sha256","shared/agent/.validated-collector-feed.json"):
+        Path(name).unlink(missing_ok=True)
+    print("EXPIRED_PREVIOUS_DAY_DATA",len(removed))
+    return bool(removed)
+if __name__=="__main__":
     expire()
