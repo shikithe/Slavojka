@@ -38,8 +38,13 @@ jobs:
           assert not any((d.get('fixture_id'),d.get('event_id'))==key and d.get('decision')!=row['decision'] for d in old),'Conflicting decision'
           if not any((d.get('fixture_id'),d.get('event_id'))==key for d in old):
               row['issue_number']=int(os.environ['ISSUE_NUMBER'])
+              if row['decision']=='matched':
+                  db_path=Path('kvoter/team-database.json')
+                  db=json.loads(db_path.read_text())
+                  approve(db,row,'github-issue-'+os.environ['ISSUE_NUMBER'])
+                  db_path.write_text(json.dumps(db,ensure_ascii=False,indent=2)+'\\n')
               old.append(row)
-              path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+              path.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\\n')
           print('DECISION_VALIDATED',key,row['decision'])
           PY
       - name: Commit confirmed decision
