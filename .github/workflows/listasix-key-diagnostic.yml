@@ -16,3 +16,24 @@ jobs:
             exit 1
           fi
           echo "Secret is available"
+      - name: Check OddsAPI sports metadata (no fixtures)
+        env:
+          API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from urllib.parse import urlencode
+          from urllib.request import urlopen
+          from urllib.error import HTTPError, URLError
+          url="https://api.the-odds-api.com/v4/sports?"+urlencode({"apiKey":os.environ["API_KEY"]})
+          try:
+              with urlopen(url,timeout=20) as response:
+                  data=json.load(response)
+                  assert isinstance(data,list)
+                  print("ODDSAPI_CONNECTION_OK; sports:",len(data))
+                  print("Request cost:",response.headers.get("x-requests-last","unknown"))
+          except HTTPError as error:
+              raise SystemExit("OddsAPI HTTP "+str(error.code))
+          except URLError:
+              raise SystemExit("OddsAPI network unavailable")
+          PY
