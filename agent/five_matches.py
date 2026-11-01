@@ -28,7 +28,7 @@ def build(feed, request=fetch, days=120, last=5):
         leagues.setdefault(league,set()).update([f["home"],f["away"]])
     now=datetime.now(timezone.utc)
     result={"schema_version":"agent-five-matches-v1","date":feed.get("date"),"generated_at_utc":now.isoformat(),
-            "target_matches_per_team":last,"leagues":{},"errors":[],
+            "target_matches_per_team":last,"fixtures":[f for f in fixtures if f.get("sport")=="football" and f.get("status","pre")=="pre"],"leagues":{},"errors":[],
             "publication_allowed":False,"bank_modified":False}
     for league,team_names in sorted(leagues.items()):
         events={}
