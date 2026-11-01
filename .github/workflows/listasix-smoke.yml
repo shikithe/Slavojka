@@ -51,3 +51,4 @@ jobs:
 
 # rerun after syntax fixes
 # rerun collector string fix
+# rerun after collector package import fix
