@@ -10,7 +10,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   record:
-    if: startsWith(github.event.issue.title, 'Kvoter Manual: ') && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
+    if: >-
+      startsWith(github.event.issue.title, 'Kvoter Manual: ') &&
+      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
