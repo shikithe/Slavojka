@@ -19,7 +19,7 @@ jobs:
           from pathlib import Path
           daily=Path(".github/workflows/listasix-daily.yml").read_text()
           manual=Path(".github/workflows/listasix-manual-confirm.yml").read_text()
-          assert 'cron: \'0 10,11 * * *\'' in daily
+          assert "0 10,11 * * *" in daily
           assert 'TZ=Europe/Sarajevo date +%H' in daily
           assert 'python3 -m lista.pipeline' in daily
           assert 'python3 -m agent.five_matches' in daily
