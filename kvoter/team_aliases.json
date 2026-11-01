@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "teams": [
+    {
+      "id": "ajax-amsterdam",
+      "league": "ned.1",
+      "names": [
+        "Ajax",
+        "Ajax Amsterdam"
+      ]
+    },
+    {
+      "id": "brighton-hove-albion",
+      "league": "eng.1",
+      "names": [
+        "Brighton",
+        "Brighton & Hove Albion"
+      ]
+    }
+  ]
+}
