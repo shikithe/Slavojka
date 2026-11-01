@@ -19,7 +19,8 @@ def collect(now=None, leagues=None, end_utc=None, football_only=False):
     now = (now or datetime.now(timezone.utc)).astimezone(timezone.utc)
     until = end_utc.astimezone(timezone.utc) if end_utc is not None else now + WINDOW
     selected = [("football", "soccer", league) for league in (leagues or base.FOOTBALL)]
-    if not football_only:\n        selected.append(("basketball", "basketball", "nba"))
+    if not football_only:
+        selected.append(("basketball", "basketball", "nba"))
     dates = []
     day = now.date()
     while day <= until.date():
@@ -77,7 +78,8 @@ def main():
     result = collect(now)
     target = Path(args.output)
     target.parent.mkdir(parents=True,exist_ok=True)
-    target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"
+",encoding="utf-8")
     print(json.dumps({"window_start":result["window_start_utc"],"window_end":result["window_end_utc"],"fixtures":result["fixture_count"],"errors":len(result["errors"])},ensure_ascii=False))
     return 0 if result["fixture_count"] else 2
 
