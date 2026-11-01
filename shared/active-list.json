@@ -54,6 +54,26 @@
       "bookmaker": "unibet_se"
     },
     {
+      "fixture_id": "espn:football:ned.1:401875559",
+      "datetime": "2026-11-01T13:30:00Z",
+      "match": "Excelsior - FC Twente",
+      "home_odds": 5.0,
+      "draw_odds": 4.4,
+      "away_odds": 1.39,
+      "over25_odds": null,
+      "bookmaker": "winamax_fr"
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875558",
+      "datetime": "2026-11-01T13:30:00Z",
+      "match": "Telstar - FC Utrecht",
+      "home_odds": 2.9,
+      "draw_odds": 3.75,
+      "away_odds": 2.05,
+      "over25_odds": null,
+      "bookmaker": "winamax_de"
+    },
+    {
       "fixture_id": "espn:football:ita.1:401874782",
       "datetime": "2026-11-01T14:00:00Z",
       "match": "Frosinone - Torino",
@@ -84,6 +104,66 @@
       "bookmaker": "pinnacle"
     },
     {
+      "fixture_id": "espn:football:ger.1:401884750",
+      "datetime": "2026-11-01T14:30:00Z",
+      "match": "1. FC Union Berlin - FC Cologne",
+      "home_odds": 2.74,
+      "draw_odds": 3.55,
+      "away_odds": 2.65,
+      "over25_odds": null,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878952",
+      "datetime": "2026-11-01T15:00:00Z",
+      "match": "Sint-Truidense - OH Leuven",
+      "home_odds": 1.63,
+      "draw_odds": 4.0,
+      "away_odds": 4.9,
+      "over25_odds": null,
+      "bookmaker": "casumo"
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882819",
+      "datetime": "2026-11-01T15:15:00Z",
+      "match": "Racing Santander - Real Madrid",
+      "home_odds": 12.19,
+      "draw_odds": 8.25,
+      "away_odds": 1.2,
+      "over25_odds": null,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885410",
+      "datetime": "2026-11-01T15:30:00Z",
+      "match": "Arouca - C.D. Nacional",
+      "home_odds": 1.61,
+      "draw_odds": 3.55,
+      "away_odds": 4.7,
+      "over25_odds": 1.79,
+      "bookmaker": "unibet_se"
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875557",
+      "datetime": "2026-11-01T15:45:00Z",
+      "match": "FC Groningen - Sparta Rotterdam",
+      "home_odds": 1.64,
+      "draw_odds": 3.85,
+      "away_odds": 3.55,
+      "over25_odds": null,
+      "bookmaker": "winamax_fr"
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888262",
+      "datetime": "2026-11-01T16:00:00Z",
+      "match": "Kasimpasa - Besiktas",
+      "home_odds": 5.6,
+      "draw_odds": 4.1,
+      "away_odds": 1.47,
+      "over25_odds": null,
+      "bookmaker": "virginbet"
+    },
+    {
       "fixture_id": "espn:football:fra.1:401876418",
       "datetime": "2026-11-01T16:15:00Z",
       "match": "Lyon - Angers",
@@ -101,6 +181,16 @@
       "draw_odds": 3.6,
       "away_odds": 2.85,
       "over25_odds": 1.82,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884752",
+      "datetime": "2026-11-01T16:30:00Z",
+      "match": "Eintracht Frankfurt - Hamburg SV",
+      "home_odds": 1.55,
+      "draw_odds": 4.82,
+      "away_odds": 5.65,
+      "over25_odds": null,
       "bookmaker": "pinnacle"
     },
     {
@@ -124,6 +214,36 @@
       "bookmaker": "pinnacle"
     },
     {
+      "fixture_id": "espn:football:esp.1:401882823",
+      "datetime": "2026-11-01T17:30:00Z",
+      "match": "Elche - Valencia",
+      "home_odds": 2.41,
+      "draw_odds": 3.33,
+      "away_odds": 3.23,
+      "over25_odds": 2.0,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878954",
+      "datetime": "2026-11-01T17:30:00Z",
+      "match": "Lommel SK - KAA Gent",
+      "home_odds": 4.75,
+      "draw_odds": 3.8,
+      "away_odds": 1.7,
+      "over25_odds": null,
+      "bookmaker": "unibet_uk"
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885411",
+      "datetime": "2026-11-01T18:00:00Z",
+      "match": "Académico de Viseu - Rio Ave",
+      "home_odds": 1.75,
+      "draw_odds": 3.25,
+      "away_odds": 4.1,
+      "over25_odds": 1.88,
+      "bookmaker": "unibet_se"
+    },
+    {
       "fixture_id": "espn:football:arg.1:401841658",
       "datetime": "2026-11-01T18:00:00Z",
       "match": "Boca Juniors - River Plate",
@@ -132,6 +252,26 @@
       "away_odds": 3.05,
       "over25_odds": null,
       "bookmaker": "winamax_de"
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885406",
+      "datetime": "2026-11-01T18:00:00Z",
+      "match": "Maritimo - Santa Clara",
+      "home_odds": 3.3,
+      "draw_odds": 3.15,
+      "away_odds": 2.23,
+      "over25_odds": 2.25,
+      "bookmaker": "casumo"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878955",
+      "datetime": "2026-11-01T18:15:00Z",
+      "match": "Royal Charleroi SC - RAAL La Louvière",
+      "home_odds": 1.42,
+      "draw_odds": 4.1,
+      "away_odds": 5.8,
+      "over25_odds": null,
+      "bookmaker": "livescorebet"
     },
     {
       "fixture_id": "espn:football:ita.1:401874949",
@@ -154,6 +294,36 @@
       "bookmaker": "pinnacle"
     },
     {
+      "fixture_id": "espn:football:esp.1:401882826",
+      "datetime": "2026-11-01T20:00:00Z",
+      "match": "Athletic Club - Real Sociedad",
+      "home_odds": 1.96,
+      "draw_odds": 3.73,
+      "away_odds": 4.02,
+      "over25_odds": null,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885409",
+      "datetime": "2026-11-01T20:30:00Z",
+      "match": "Braga - FC Famalicao",
+      "home_odds": 1.62,
+      "draw_odds": 3.6,
+      "away_odds": 5.0,
+      "over25_odds": null,
+      "bookmaker": "betfred_uk"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761927",
+      "datetime": "2026-11-01T20:30:00Z",
+      "match": "Vancouver Whitecaps - Seattle Sounders FC",
+      "home_odds": 1.63,
+      "draw_odds": 3.95,
+      "away_odds": 4.35,
+      "over25_odds": null,
+      "bookmaker": "grosvenor"
+    },
+    {
       "fixture_id": "espn:football:usa.1:761931",
       "datetime": "2026-11-01T21:30:00Z",
       "match": "Atlanta United FC - Toronto FC",
@@ -162,6 +332,36 @@
       "away_odds": 2.8,
       "over25_odds": null,
       "bookmaker": "unibet_se"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841645",
+      "datetime": "2026-11-01T21:30:00Z",
+      "match": "Belgrano (Córdoba) - Barracas Central",
+      "home_odds": 1.84,
+      "draw_odds": 3.25,
+      "away_odds": 4.1,
+      "over25_odds": null,
+      "bookmaker": "winamax_de"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761920",
+      "datetime": "2026-11-01T21:30:00Z",
+      "match": "Nashville SC - Red Bull New York",
+      "home_odds": 1.5,
+      "draw_odds": 4.5,
+      "away_odds": 5.4,
+      "over25_odds": null,
+      "bookmaker": "unibet_se"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841650",
+      "datetime": "2026-11-01T21:30:00Z",
+      "match": "Newell's Old Boys - Unión (Santa Fe)",
+      "home_odds": 1.95,
+      "draw_odds": 3.1,
+      "away_odds": 3.8,
+      "over25_odds": null,
+      "bookmaker": "boylesports"
     },
     {
       "fixture_id": "espn:football:arg.1:401841651",
@@ -182,6 +382,26 @@
       "away_odds": 2.23,
       "over25_odds": null,
       "bookmaker": "leovegas_se"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761921",
+      "datetime": "2026-11-02T01:30:00Z",
+      "match": "LAFC - Minnesota United FC",
+      "home_odds": 1.63,
+      "draw_odds": 4.0,
+      "away_odds": 4.4,
+      "over25_odds": null,
+      "bookmaker": "livescorebet"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761933",
+      "datetime": "2026-11-02T02:45:00Z",
+      "match": "Portland Timbers - Houston Dynamo FC",
+      "home_odds": 1.76,
+      "draw_odds": 3.95,
+      "away_odds": 3.95,
+      "over25_odds": null,
+      "bookmaker": "unibet_se"
     }
   ]
 }
