@@ -1,17 +1,37 @@
-<!doctype html><html lang="bs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ListaSix</title><style>body{font:16px system-ui;background:#101a2b;color:#f2f6ff;margin:0;padding:24px}main{max-width:900px;margin:40px auto}section{background:#1d2c43;border-radius:16px;padding:24px}small{color:#bac7d9}table{border-collapse:collapse;width:100%}th,td{padding:9px;border-bottom:1px solid #40506a;text-align:left}div.scroll{overflow:auto}</style></head><body><main><h1>ListaSix</h1><section><h2>Dnevna sportska ponuda</h2><p id="status">Provjera aktivne liste…</p><div class="scroll" id="offer"></div><small>Objavljuju se samo potvrđeni parovi i stvarne kvote nakon završetka Kvotera. Lista ističe narednog dana u 11:59 (Sarajevo).</small></section></main><script>
-const status=document.getElementById('status'), offer=document.getElementById('offer');
-async function refresh(){
-try{
-const response=await fetch('./active-list.json?t='+Date.now(),{cache:'no-store'});
-if(!response.ok)throw Error('not available');
-const data=await response.json();
-if(!data.expires_at||Date.now()>=Date.parse(data.expires_at))throw Error('expired');
-if(data.publication_allowed!==true||!Array.isArray(data.fixtures)||!data.fixtures.length)throw Error('not published');
-const cols=['Br.','Datum/sat','Utakmica','1','X','2','3+','Kladionica'];
-const table=document.createElement('table'),head=document.createElement('tr');
-cols.forEach(c=>{const th=document.createElement('th');th.textContent=c;head.append(th)});table.append(head);
-data.fixtures.forEach((f,i)=>{const tr=document.createElement('tr');[i+1,f.datetime||'',f.match||'',f.home_odds??'',f.draw_odds??'',f.away_odds??'',f.over25_odds??'',f.bookmaker||''].forEach(v=>{const td=document.createElement('td');td.textContent=String(v);tr.append(td)});table.append(tr)});
-offer.replaceChildren(table);status.textContent='Aktuelna ponuda';
-}catch(e){offer.replaceChildren();status.textContent='Čeka se nova ponuda';}}
-refresh();setInterval(refresh,30000);
+<!doctype html>
+<html lang="bs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#172235"><title>KVOTER | Dnevna ponuda - ListaSix</title>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#101722;color:#eaf1f8;font:15px system-ui,-apple-system,sans-serif}
+header{position:sticky;top:0;background:#172235;padding:15px 16px;border-bottom:1px solid #334154;z-index:1}
+h1{font-size:19px;margin:0 0 6px}small{color:#b4c4d6}.status{padding:12px 16px;color:#b4c4d6}
+.scroll{overflow-x:auto;padding:0 8px 30px}table{border-collapse:collapse;width:100%;min-width:690px;font-variant-numeric:tabular-nums}
+th{background:#243249;position:sticky;top:81px;text-align:left;color:#b9d2ef;font-size:12px}
+td,th{padding:11px 8px;border-bottom:1px solid #2c3a4c;white-space:nowrap}
+td:nth-child(n+4),th:nth-child(n+4){text-align:right}td:nth-child(n+4){color:#a6e4b3;font-weight:600}
+tr:nth-child(even){background:#172131}a{color:#9dc8ff}button{background:#2d5c91;color:white;border:0;border-radius:8px;padding:9px 13px;font-weight:600}
+</style></head><body>
+<header><h1>KVOTER · Dnevna kladioničarska ponuda</h1><small>1 · X · 2 · 3+ golova | Stvarne preuzete kvote, nisu uživo</small><div style="margin-top:10px"><button onclick="load()">Osvježi</button> &nbsp; <a href="./kvoter-ponuda.txt">TXT lista</a></div></header>
+<div id="status" class="status">Učitavanje ponude…</div><div class="scroll"><table><thead><tr><th>Br.</th><th>Datum / sat</th><th>Utakmica</th><th>1</th><th>X</th><th>2</th><th>3+</th><th>Kladionica</th></tr></thead><tbody id="rows"></tbody></table></div>
+<script>
+const status=document.getElementById('status'),body=document.getElementById('rows');
+function val(v){return v===null||v===undefined||v===''?'-':String(v)}
+function localTime(v){if(!v)return '-';const d=new Date(v);if(isNaN(d))return v;return new Intl.DateTimeFormat('bs-BA',{timeZone:'Europe/Sarajevo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(d)}
+async function load(){
+ status.textContent='Učitavanje…';body.replaceChildren();
+ try{
+ const res=await fetch('./active-list.json?t='+Date.now(),{cache:'no-store'});
+ if(!res.ok)throw Error('Dnevna lista još nije objavljena.');
+ const data=await res.json();
+ if(!data.expires_at||Date.now()>=Date.parse(data.expires_at))throw Error('Prethodna lista je istekla.');
+ if(!data.publication_allowed||!Array.isArray(data.fixtures)||!data.fixtures.length)throw Error('Čeka se nova potvrđena ponuda.');
+ data.fixtures.forEach((f,i)=>{
+ const tr=document.createElement('tr');
+ [String(i+1).padStart(2,'0'),localTime(f.datetime),val(f.match),val(f.home_odds),val(f.draw_odds),val(f.away_odds),val(f.over25_odds),val(f.bookmaker)].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td)});
+ body.append(tr);
+ });
+ status.textContent='Prikazano '+body.children.length+' utakmica · Ponuda: '+data.date+' · Vrijeme: Europe/Sarajevo · Kvote nisu uživo.';
+ }catch(e){status.textContent='Čeka se nova ponuda. '+e.message}
+}
+load();setInterval(load,30000);
 </script></body></html>
