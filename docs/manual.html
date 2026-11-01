@@ -1,18 +1,25 @@
 <!doctype html><html lang="bs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ListaSix Kvoter Manual</title><style>body{font:16px system-ui;background:#101a2b;color:#f2f6ff;margin:0;padding:22px}main{max-width:900px;margin:auto}article{background:#1d2c43;border-radius:14px;padding:18px;margin:15px 0}button,a.action{border:0;border-radius:8px;padding:10px 14px;margin:5px;background:#426ba4;color:white;cursor:pointer;text-decoration:none;display:inline-block}.choice-matched{background:#16834e;color:#fff}.choice-rejected{background:#b7353e;color:#fff}.choice-matched.selected{background:#0b6038;outline:3px solid #73dfaa}.choice-rejected.selected{background:#881d28;outline:3px solid #ffa1a7}.confirm-all{background:#315f9b;font-size:17px;font-weight:700;padding:12px 24px}.confirm-all:disabled{opacity:.45;cursor:not-allowed}small{color:#b9c9dd}.warn{color:#ffcf83}</style></head><body><main><h1>Kvoter Manual</h1><p>Provjera sličnih utakmica. Za svaki par izaberi Matched ili Unmatched. Nakon svih izbora pritisni Potvrdi na vrhu ili dnu stranice; odluke se kopiraju, a na GitHubu ih zalijepi u polje za opis i pritisni Submit new issue.</p><p id="status">Učitavanje…</p><p id="counter">0 odluka odabrano</p><button class="confirm-all" disabled>Potvrdi</button><button class="copy-batch" type="button" disabled>Kopiraj Description</button><section id="submission"><p><strong>GitHub Description ažurira se svakim izborom.</strong> Kopiraj sadržaj ispod, zatim otvori GitHub i zalijepi ga u polje opisa (Write). Tek nakon toga pritisni Submit new issue.</p><textarea id="batch-payload" readonly rows="7" style="width:100%;box-sizing:border-box;font-size:12px"></textarea><p><a id="open-github" href="https://github.com/shikithe/Slavojka/issues/new" target="_blank" rel="noopener noreferrer">Otvori GitHub potvrdu</a></p></section><div id="items"></div><button class="confirm-all" disabled>Potvrdi</button><button class="copy-batch" type="button" disabled>Kopiraj Description</button></main><script>
 const repo='shikithe/Slavojka', box=document.getElementById('items'), status=document.getElementById('status');
 const selectionByFixture=new Map();
-let totalFixtures=0;
+let totalFixtures=0,queueVersion='',queueFixtures=[];
 function updateDescription(){const decisions=[...selectionByFixture.values()].map(v=>v.payload);const nl=String.fromCharCode(10),fence=String.fromCharCode(96).repeat(3);document.getElementById('batch-payload').value=['KVOTER_MANUAL_BATCH_V1',fence+'json',JSON.stringify({decisions},null,2),fence].join(nl);}
 function updateCounter(){const count=selectionByFixture.size;document.getElementById('counter').textContent=count+' / '+totalFixtures+' parova označeno';document.querySelectorAll('.confirm-all').forEach(b=>b.disabled=totalFixtures===0||count!==totalFixtures);document.querySelectorAll('.copy-batch').forEach(b=>b.disabled=count===0);updateDescription();}
 function clearSelection(key){const prev=selectionByFixture.get(key);if(!prev)return;prev.button.classList.remove('selected');prev.button.setAttribute('aria-pressed','false');selectionByFixture.delete(key);updateCounter();}
 function confirmAll(){
- const decisions=[...selectionByFixture.values()].map(v=>v.payload);
- if(!totalFixtures||decisions.length!==totalFixtures)return;
+ if(!totalFixtures||selectionByFixture.size!==totalFixtures)return;
+ const compact=[];
+ for(let i=0;i<queueFixtures.length;i++){
+   const f=queueFixtures[i], selected=selectionByFixture.get(f.fixture_id);
+   if(!selected)return;
+   const j=f.candidates.findIndex(c=>c.event_id===selected.eventId);
+   if(j<0)return;
+   compact.push([i,j,selected.decision==='matched'?1:0]);
+ }
  const nl=String.fromCharCode(10),fence=String.fromCharCode(96).repeat(3);
- const body=['KVOTER_MANUAL_BATCH_V1',fence+'json',JSON.stringify({decisions},null,2),fence].join(nl);
- document.getElementById('batch-payload').value=body;
- document.getElementById('submission').hidden=false;
- document.getElementById('submission').scrollIntoView({behavior:'smooth',block:'start'});
+ const body=['KVOTER_MANUAL_COMPACT_V1',fence+'json',JSON.stringify({version:queueVersion,choices:compact}),fence].join(nl);
+ const url='https://github.com/'+repo+'/issues/new?title='+encodeURIComponent('Kvoter Manual: batch '+compact.length)+'&body='+encodeURIComponent(body);
+ if(url.length>6000){status.textContent='Previše podataka za automatski unos; upotrijebi Kopiraj Description.';return;}
+ window.location.href=url;
 }
 async function copyBatch(){
  const field=document.getElementById('batch-payload');
@@ -21,7 +28,7 @@ async function copyBatch(){
 }
 document.querySelectorAll('.copy-batch').forEach(b=>b.onclick=copyBatch);
 document.querySelectorAll('.confirm-all').forEach(b=>b.onclick=confirmAll);
-async function load(){try{let r=await fetch('./manual-candidates.json?t='+Date.now(),{cache:'no-store'});if(!r.ok){r=await fetch('https://raw.githubusercontent.com/shikithe/Slavojka/main/docs/manual-candidates.json?t='+Date.now(),{cache:'no-store'});}if(!r.ok)throw Error('Lista nije dostupna ni na GitHub Pages ni u repozitorijumu');const d=await r.json();box.replaceChildren();selectionByFixture.clear();totalFixtures=d.fixtures.length;updateCounter();status.textContent='Neupareni mečevi s ponuđenim OddsAPI kandidatima: '+d.total+' · Izvor: ListaSix / shared/kvoter/unmatched_fixtures.json';for(const f of d.fixtures||[]){const a=document.createElement('article');const h=document.createElement('h3');h.textContent=(f.home||'')+' – '+(f.away||'')+' ('+(f.league||'')+')';a.append(h);if(!f.candidates?.length){const p=document.createElement('p');p.textContent='Nema sličnih OddsAPI parova';a.append(p)}for(const c of f.candidates||[]){const wrap=document.createElement('div'),label=document.createElement('p');label.textContent=(c.home||'')+' – '+(c.away||'')+' | sličnost '+Math.round(c.similarity*100)+'%';wrap.append(label);for(const choice of ['matched','rejected']){const b=document.createElement('button');b.textContent=choice==='matched'?'Matched':'Unmatched';b.classList.add(choice==='matched'?'choice-matched':'choice-rejected');b.setAttribute('aria-pressed','false');b.onclick=()=>{
+async function load(){try{let r=await fetch('./manual-candidates.json?t='+Date.now(),{cache:'no-store'});if(!r.ok){r=await fetch('https://raw.githubusercontent.com/shikithe/Slavojka/main/docs/manual-candidates.json?t='+Date.now(),{cache:'no-store'});}if(!r.ok)throw Error('Lista nije dostupna ni na GitHub Pages ni u repozitorijumu');const d=await r.json();box.replaceChildren();selectionByFixture.clear();queueFixtures=d.fixtures;queueVersion=d.generated_at_utc;totalFixtures=d.fixtures.length;updateCounter();status.textContent='Neupareni mečevi s ponuđenim OddsAPI kandidatima: '+d.total+' · Izvor: ListaSix / shared/kvoter/unmatched_fixtures.json';for(const f of d.fixtures||[]){const a=document.createElement('article');const h=document.createElement('h3');h.textContent=(f.home||'')+' – '+(f.away||'')+' ('+(f.league||'')+')';a.append(h);if(!f.candidates?.length){const p=document.createElement('p');p.textContent='Nema sličnih OddsAPI parova';a.append(p)}for(const c of f.candidates||[]){const wrap=document.createElement('div'),label=document.createElement('p');label.textContent=(c.home||'')+' – '+(c.away||'')+' | sličnost '+Math.round(c.similarity*100)+'%';wrap.append(label);for(const choice of ['matched','rejected']){const b=document.createElement('button');b.textContent=choice==='matched'?'Matched':'Unmatched';b.classList.add(choice==='matched'?'choice-matched':'choice-rejected');b.setAttribute('aria-pressed','false');b.onclick=()=>{
  const previous=selectionByFixture.get(f.fixture_id);
  const wasSelected=previous?.button===b;
  clearSelection(f.fixture_id);
