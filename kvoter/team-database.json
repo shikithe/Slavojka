@@ -1,0 +1,348 @@
+{
+  "schema_version": 1,
+  "teams": [
+    {
+      "id": "ajax-amsterdam",
+      "league": "ned.1",
+      "names": [
+        "Ajax",
+        "Ajax Amsterdam"
+      ],
+      "sources": [],
+      "verified": true
+    },
+    {
+      "id": "brighton-hove-albion",
+      "league": "eng.1",
+      "names": [
+        "Brighton",
+        "Brighton & Hove Albion",
+        "Brighton and Hove Albion"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ger.1-sc-paderborn-07",
+      "league": "ger.1",
+      "names": [
+        "SC Paderborn 07",
+        "SC Paderborn"
+      ],
+      "sources": [
+        "github-issue-6"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ger.1-fc-augsburg",
+      "league": "ger.1",
+      "names": [
+        "FC Augsburg",
+        "Augsburg"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ger.1-schalke-04",
+      "league": "ger.1",
+      "names": [
+        "Schalke 04",
+        "FC Schalke 04"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "eng.1-afc-bournemouth",
+      "league": "eng.1",
+      "names": [
+        "AFC Bournemouth",
+        "Bournemouth"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bel.1-racing-genk",
+      "league": "bel.1",
+      "names": [
+        "Racing Genk",
+        "Genk"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ned.1-feyenoord-rotterdam",
+      "league": "ned.1",
+      "names": [
+        "Feyenoord Rotterdam",
+        "Feyenoord"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "por.1-moreirense",
+      "league": "por.1",
+      "names": [
+        "Moreirense",
+        "Moreirense FC"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "por.1-estrela",
+      "league": "por.1",
+      "names": [
+        "Estrela",
+        "CF Estrela"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "usa.1-columbus-crew",
+      "league": "usa.1",
+      "names": [
+        "Columbus Crew",
+        "Columbus Crew SC"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ita.1-internazionale",
+      "league": "ita.1",
+      "names": [
+        "Internazionale",
+        "Inter Milan"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "fra.1-le-mans",
+      "league": "fra.1",
+      "names": [
+        "Le Mans",
+        "Le Mans FC"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bel.1-kvc-westerlo",
+      "league": "bel.1",
+      "names": [
+        "KVC Westerlo",
+        "Westerlo"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bel.1-waasland-beveren",
+      "league": "bel.1",
+      "names": [
+        "Waasland-Beveren",
+        "SK Beveren"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bel.1-union-st-gilloise",
+      "league": "bel.1",
+      "names": [
+        "Union St.-Gilloise",
+        "Union Saint-Gilloise"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "arg.1-talleres-cordoba",
+      "league": "arg.1",
+      "names": [
+        "Talleres (Córdoba)",
+        "Talleres"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "arg.1-velez-sarsfield",
+      "league": "arg.1",
+      "names": [
+        "Vélez Sarsfield",
+        "Velez Sarsfield BA"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "arg.1-estudiantes-de-la-plata",
+      "league": "arg.1",
+      "names": [
+        "Estudiantes de La Plata",
+        "Estudiantes"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "arg.1-instituto-cordoba",
+      "league": "arg.1",
+      "names": [
+        "Instituto (Córdoba)",
+        "Instituto de Córdoba"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "usa.1-chicago-fire-fc",
+      "league": "usa.1",
+      "names": [
+        "Chicago Fire FC",
+        "Chicago Fire"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "tur.1-amed-sfk",
+      "league": "tur.1",
+      "names": [
+        "Amed SFK",
+        "Amed SK"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ned.1-pec-zwolle",
+      "league": "ned.1",
+      "names": [
+        "PEC Zwolle",
+        "FC Zwolle"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bel.1-antwerp",
+      "league": "bel.1",
+      "names": [
+        "Antwerp",
+        "Royal Antwerp"
+      ],
+      "sources": [
+        "github-issue-11",
+        "github-issue-12",
+        "github-issue-13"
+      ],
+      "verified": true
+    },
+    {
+      "id": "tur.1-istanbul-basaksehir",
+      "league": "tur.1",
+      "names": [
+        "Istanbul Basaksehir",
+        "Basaksehir"
+      ],
+      "sources": [
+        "github-issue-11",
+        "github-issue-12",
+        "github-issue-13"
+      ],
+      "verified": true
+    },
+    {
+      "id": "tur.1-gaziantep-fk",
+      "league": "tur.1",
+      "names": [
+        "Gaziantep FK",
+        "Gazişehir Gaziantep"
+      ],
+      "sources": [
+        "github-issue-11",
+        "github-issue-12",
+        "github-issue-13"
+      ],
+      "verified": true
+    },
+    {
+      "id": "sco.1-falkirk",
+      "league": "sco.1",
+      "names": [
+        "Falkirk",
+        "Falkirk F.C."
+      ],
+      "sources": [
+        "github-issue-11",
+        "github-issue-12",
+        "github-issue-13"
+      ],
+      "verified": true
+    },
+    {
+      "id": "fra.1-aj-auxerre",
+      "league": "fra.1",
+      "names": [
+        "AJ Auxerre",
+        "Auxerre"
+      ],
+      "sources": [
+        "github-issue-14"
+      ],
+      "verified": true
+    }
+  ]
+}
