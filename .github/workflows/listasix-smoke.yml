@@ -27,6 +27,31 @@ jobs:
               assert expiry(start.date()).endswith("11:59:00+01:00") or expiry(start.date()).endswith("11:59:00+02:00")
           print("WINDOW_AND_EXPIRY_OK")
           PY
+      - name: Test OddsAPI identity lifecycle and automatic reconciliation
+        run: |
+          python3 - <<'PY'
+          import json,tempfile
+          from pathlib import Path
+          from kvoter.reconcile import reconcile
+          from kvoter.reconcile_trigger import run_once
+          with tempfile.TemporaryDirectory() as d:
+              root=Path(d); h=root/"history.json"; o=root/"provider-offers.json"
+              db=root/"database.json"; names=root/"team-database/provider-team-names.json"
+              out=root/"out";state=root/"state"
+              h.write_text(json.dumps({"fixtures":[{"fixture_id":"1","league":"eng.1","home":"Example United","away":"Another FC","start_utc":"2026-11-01T15:00:00Z"}]}))
+              o.write_text(json.dumps({"offers":[{"event_id":"odds-1","league":"eng.1","home":"Example United FC","away":"Another FC","start_utc":"2026-11-01T15:00:00Z","bookmaker":"demo","markets":{"1X2":{"home":2.0}}}]}))
+              db.write_text(json.dumps({"teams":[]}))
+              report=reconcile(h,o,db,names,out)
+              assert report["matched"]==0 and report["unavailable"]==1
+              assert any(n["name"]=="Example United FC" for n in json.loads(names.read_text())["names"])
+              db.write_text(json.dumps({"teams":[{"id":"example","league":"eng.1","names":["Example United FC","Example United"],"verified":True}]}))
+              assert run_once(h,o,db,names,out,state).startswith("reconciled")
+              assert json.loads((out/"matched_fixtures.json").read_text())["total"]==1
+              assert json.loads((out/"unmatched_fixtures.json").read_text())["total"]==0
+              assert run_once(h,o,db,names,out,state)=="waiting: no change"
+          print("KVOTER_LIFECYCLE_OK")
+          PY
+
       - name: Test primary and manual offer merge without real odds
         run: |
           python3 - <<'PY'
