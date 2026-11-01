@@ -1,0 +1,64 @@
+name: ListaSix refresh odds before MemaraSix 15:25
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 12,13 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: listasix-odds-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check Sarajevo 14:35 slot
+        id: slot
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] || [ "$(TZ=Europe/Sarajevo date +%H:%M)" = "14:35" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.slot.outputs.run == 'true'
+      - uses: actions/setup-python@v5
+        if: steps.slot.outputs.run == 'true'
+        with:
+          python-version: '3.11'
+      - name: Refresh odds using existing Agent history
+        if: steps.slot.outputs.run == 'true'
+        env:
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
+          KVOTER_PROVIDER_NAMES_PATH: shared/kvoter/team-database/provider-team-names.json
+        run: |
+          test -n "$THE_ODDS_API_KEY" || { echo "::error::Missing THE_ODDS_API_KEY"; exit 1; }
+          python3 - <<'PY'
+          import json
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          x=json.load(open('shared/agent/history-h2h.json'))
+          assert x.get('date')==datetime.now(ZoneInfo('Europe/Sarajevo')).date().isoformat()
+          assert x.get('fixtures') and x.get('leagues')
+          PY
+          python3 -m kvoter.the_odds_api --feed shared/agent/history-h2h.json --output shared/kvoter/match-report.json --raw-output shared/kvoter/league-odds-raw.json --offers-output shared/kvoter/provider-offers.json
+          python3 - <<'PY'
+          import json
+          x=json.load(open('shared/kvoter/provider-offers.json'))
+          assert x.get('offers'), 'No new bookmaker quotes'
+          print('REFRESHED_QUOTES',len(x['offers']))
+          PY
+      - name: Commit refreshed odds
+        if: steps.slot.outputs.run == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f shared/kvoter/provider-offers.json shared/kvoter/match-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'lista: refresh bookmaker odds before MemaraSix publication'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
