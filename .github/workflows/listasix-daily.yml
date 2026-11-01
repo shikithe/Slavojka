@@ -1,23 +1,61 @@
-name: ListaSix daily pipeline
+name: ListaSix daily Collector
 on:
   workflow_dispatch:
   schedule:
     - cron: '0 8,9 * * *'
 permissions:
-  contents: read
+  contents: write
+concurrency:
+  group: listasix-daily
+  cancel-in-progress: false
 jobs:
-  lista:
+  collector:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check Sarajevo schedule
-        id: localtime
-        run: echo "run=$([ \"$(TZ=Europe/Sarajevo date +%H)\" = \"10\" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
-      - name: Run safe setup check
-        if: github.event_name == 'workflow_dispatch' || steps.localtime.outputs.run == 'true'
+        with:
+          persist-credentials: true
+      - name: Check 10:00 Sarajevo schedule
+        id: clock
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(TZ=Europe/Sarajevo date +%H)" = "10" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Collect ESPN fixtures into shared feed
+        if: steps.clock.outputs.run == 'true'
+        env:
+          LISTASIX_SHARED: shared
         run: python3 -m lista.pipeline
-      - name: Upload setup report
+      - name: Validate and persist active daily database
+        if: steps.clock.outputs.run == 'true'
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          from datetime import datetime, timezone
+          raw=json.loads(Path('shared/collector-raw.json').read_text())
+          feed=json.loads(Path('shared/collector-feed.json').read_text())
+          assert feed['football_candidates'], 'Empty active feed'
+          assert raw['date']==feed['date']
+          assert datetime.fromisoformat(feed['expires_at_utc']) > datetime.now(timezone.utc)
+          assert all(raw['window_start_utc'] <= f['start_utc'].replace('Z','+00:00') < raw['window_end_utc'] for f in feed['football_candidates'])
+          print('ACTIVE_FEED_VALIDATED',len(feed['football_candidates']))
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- shared/collector-raw.json shared/collector-feed.json
+          if ! git diff --cached --quiet; then
+            git commit -m "lista: update active ESPN feed [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Upload Collector feed
+        if: steps.clock.outputs.run == 'true'
         uses: actions/upload-artifact@v4
         with:
-          name: listasix-status
-          path: data/status.json
+          name: listasix-active-collector
+          path: shared/*.json
