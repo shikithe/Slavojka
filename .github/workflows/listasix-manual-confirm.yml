@@ -59,13 +59,16 @@ jobs:
           fi
       - name: Reconcile cached daily offers after approved identity changes
         run: |
-          if [ ! -f shared/agent/history-h2h.json ] || [ ! -f shared/kvoter/provider-offers.json ]; then
+          if [ ! -f shared/collector-feed.json ] || [ ! -f shared/agent/history-h2h.json ] || [ ! -f shared/kvoter/provider-offers.json ]; then
             echo "No current cached offer; next daily run will apply approved aliases"
             exit 0
           fi
           python3 -m kvoter.reconcile --history shared/agent/history-h2h.json --offers shared/kvoter/provider-offers.json --database kvoter/team-database.json --names shared/kvoter/team-database/provider-team-names.json --output-dir shared/kvoter
           python3 -m kvoter.manual_candidates --history shared/agent/history-h2h.json --offers shared/kvoter/provider-offers.json --unmatched shared/kvoter/unmatched_fixtures.json --output shared/kvoter/manual-candidates.json
-          git add -f shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json
+          python3 -m lista.publish --feed shared/collector-feed.json --matches shared/kvoter/matched_fixtures.json --shared shared --docs docs
+          for path in shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json docs/active-list.json docs/kvoter-ponuda.txt shared/active-list.json shared/kvoter-ponuda.txt; do
+            if [ -f "$path" ]; then git add -f -- "$path"; fi
+          done
           if ! git diff --cached --quiet; then
             git commit -m "lista: refresh matching after manual confirmation [skip ci]"
             git pull --rebase origin main
