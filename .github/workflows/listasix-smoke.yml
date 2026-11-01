@@ -78,3 +78,5 @@ jobs:
               assert len(result["leagues"]["eng.1"]["teams"])==2
               print("AGENT_TRIGGER_AND_HANDOFF_OFFLINE_OK")
           PY
+
+# rerun Agent import fix
