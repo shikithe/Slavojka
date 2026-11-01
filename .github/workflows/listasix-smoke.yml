@@ -50,3 +50,4 @@ jobs:
           PY
 
 # rerun after syntax fixes
+# rerun collector string fix
