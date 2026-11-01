@@ -2,7 +2,8 @@ name: ListaSix daily Collector Agent Kvoter
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 10,11 * * *'
+    - cron: '0 10 * * *'
+    - cron: '0 11 * * *'
 permissions:
   contents: write
 concurrency:
@@ -15,15 +16,28 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Check 12:00 Sarajevo schedule
+      - name: Validate scheduled noon slot (DST-safe, delay-tolerant)
         id: clock
-        shell: bash
+        env:
+          TRIGGER: ${{ github.event_name }}
+          CRON: ${{ github.event.schedule }}
         run: |
-          if [ "$(TZ=Europe/Sarajevo date +%H)" = "12" ]; then
-            echo "run=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "run=false" >> "$GITHUB_OUTPUT"
-          fi
+          python3 - <<'PY'
+          import os
+          from datetime import datetime, time, timezone
+          from zoneinfo import ZoneInfo
+          if os.environ["TRIGGER"] == "workflow_dispatch":
+              allowed=True
+          else:
+              sarajevo=ZoneInfo("Europe/Sarajevo")
+              today=datetime.now(sarajevo).date()
+              noon=datetime.combine(today,time(12),tzinfo=sarajevo)
+              expected="0 "+str(noon.astimezone(timezone.utc).hour)+" * * *"
+              allowed=os.environ["CRON"]==expected
+          with open(os.environ["GITHUB_OUTPUT"],"a") as out:
+              out.write("run="+("true" if allowed else "false")+"\n")
+          print("LISTASIX_NOON_SLOT",os.environ["TRIGGER"],os.environ["CRON"],"run="+str(allowed))
+          PY
       - name: Collect ESPN fixtures into shared feed
         if: steps.clock.outputs.run == 'true'
         env:
