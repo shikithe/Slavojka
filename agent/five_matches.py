@@ -6,7 +6,10 @@ import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from urllib.parse import urlencode
-from espn_statistics import fetch, extract_summary
+try:
+    from agent.espn_statistics import fetch, extract_summary
+except ModuleNotFoundError:
+    from espn_statistics import fetch, extract_summary
 
 ROOT="https://site.api.espn.com/apis/site/v2/sports"
 def build(feed, request=fetch, days=120, last=5):
