@@ -79,12 +79,28 @@ jobs:
         if: steps.clock.outputs.run == 'true'
         run: |
           python3 -m kvoter.manual_candidates --history shared/agent/history-h2h.json --offers shared/kvoter/provider-offers.json --unmatched shared/kvoter/unmatched_fixtures.json --output shared/kvoter/manual-candidates.json
+      - name: Publish verified text offer for mobile ListaSix page
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          python3 -m lista.publish --feed shared/collector-feed.json --matches shared/kvoter/matched_fixtures.json --shared shared --docs docs
+          if [ -f docs/active-list.json ]; then
+            python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path("docs/active-list.json").read_text())
+          assert data["publication_allowed"] and data["fixtures"]
+          assert Path("docs/kvoter-ponuda.txt").is_file()
+          print("LISTASIX_TEXT_OFFER_READY",len(data["fixtures"]))
+          PY
+          else
+            echo "No verified offer for public display"
+          fi
       - name: Persist Agent Kvoter and provider alias catalog
         if: steps.clock.outputs.run == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f shared/agent/history-h2h.json shared/kvoter/provider-offers.json shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json
+          git add -f docs/active-list.json docs/kvoter-ponuda.txt shared/active-list.json shared/kvoter-ponuda.txt shared/agent/history-h2h.json shared/kvoter/provider-offers.json shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json
           if ! git diff --cached --quiet; then
             git commit -m "lista: update agent and verified odds matching [skip ci]"
             git pull --rebase origin main
