@@ -1,10 +1,11 @@
-name: ListaSix expire previous-day feeds at 08:59
+name: ListaSix expiry window from 08:59 until old feed removed
 on:
   workflow_dispatch:
   schedule:
-    # 08:59 Sarajevo: summer 06:59 UTC, winter 07:59 UTC
-    - cron: '59 6-9 * * *'
-    - cron: '4-59/5 7-9 * * *'
+    # Starts near 08:59 Sarajevo; retry every five minutes until expired data is gone.
+    # UTC slots cover DST; local gate prevents deletion before 08:59.
+    - cron: '59 6,7 * * *'
+    - cron: '*/5 * * * *'
 permissions:
   contents: write
 concurrency:
@@ -15,22 +16,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Check 08:59 Sarajevo slot and DST
+      - name: Keep expiry window open from 08:59 while old Collector feed exists
         id: clock
         env:
           TRIGGER: ${{ github.event_name }}
-          CRON: ${{ github.event.schedule }}
         run: |
           python3 - <<'PY'
-          import os
-          from datetime import datetime,time,timezone
+          import json, os
+          from datetime import datetime, time, date
+          from pathlib import Path
           from zoneinfo import ZoneInfo
-          local=datetime.now(ZoneInfo("Europe/Sarajevo"))
-          slot=datetime.combine(local.date(),time(8,59),tzinfo=ZoneInfo("Europe/Sarajevo"))
-          expected="59 "+str(slot.astimezone(timezone.utc).hour)+" * * *"
-          allowed=(os.environ["TRIGGER"]=="workflow_dispatch" or (local.hour>=8 and local.hour<=10 and (local.hour>8 or local.minute>=59) and (local.hour<10 or local.minute<=30)))
-          with open(os.environ["GITHUB_OUTPUT"],"a") as f:f.write("run="+("true" if allowed else "false")+"\n")
-          print("LISTASIX_EXPIRY_SLOT",allowed)
+          local = datetime.now(ZoneInfo("Europe/Sarajevo"))
+          feed = Path("shared/collector-feed.json")
+          old = False
+          if feed.exists():
+              try:
+                  stamp = json.loads(feed.read_text(encoding="utf-8")).get("date")
+                  old = bool(stamp) and date.fromisoformat(stamp) < local.date()
+              except (OSError, ValueError, TypeError):
+                  old = True  # damaged feed: attempt cleanup and let script report any error
+          due = local.time() >= time(8,59)
+          allowed = (os.environ["TRIGGER"] == "workflow_dispatch" or due) and old
+          with open(os.environ["GITHUB_OUTPUT"],"a") as out:
+              out.write("run=" + ("true" if allowed else "false") + "\n")
+          print("LISTASIX_EXPIRY_WINDOW", local.isoformat(), "old_feed=", old, "run=", allowed)
           PY
       - name: Remove expired previous-day Collector Agent Kvoter public feeds
         if: steps.clock.outputs.run == 'true'
