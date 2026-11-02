@@ -641,6 +641,214 @@
       "source": "the-odds-api-v4",
       "first_seen_utc": "2026-11-01T11:10:41.479290+00:00",
       "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Platense",
+      "normalized": "platense",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Central Córdoba",
+      "normalized": "central cordoba",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Defensa y Justicia",
+      "normalized": "defensa y justicia",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Independiente",
+      "normalized": "independiente",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Atlético Tucuman",
+      "normalized": "atletico tucuman",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Argentinos Juniors",
+      "normalized": "argentinos juniors",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Independiente Rivadavia",
+      "normalized": "independiente rivadavia",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Banfield",
+      "normalized": "banfield",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bra.1",
+      "name": "Bragantino-SP",
+      "normalized": "bragantino sp",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bra.1",
+      "name": "Santos",
+      "normalized": "santos",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Newcastle United",
+      "normalized": "newcastle united",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Everton",
+      "normalized": "everton",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Deportivo La Coruña",
+      "normalized": "deportivo la coruna",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "CA Osasuna",
+      "normalized": "ca osasuna",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Lorient",
+      "normalized": "lorient",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Brest",
+      "normalized": "brest",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Sassuolo",
+      "normalized": "sassuolo",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Fiorentina",
+      "normalized": "fiorentina",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Atalanta BC",
+      "normalized": "atalanta bc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Parma",
+      "normalized": "parma",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Benfica",
+      "normalized": "benfica",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Alverca",
+      "normalized": "alverca",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Gil Vicente",
+      "normalized": "gil vicente",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Vitória SC",
+      "normalized": "vitoria sc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Genclerbirligi SK",
+      "normalized": "genclerbirligi sk",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Alanyaspor",
+      "normalized": "alanyaspor",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
+      "verified_identity": false
     }
   ]
 }

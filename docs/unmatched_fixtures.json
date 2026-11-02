@@ -1,5 +1,48 @@
 {
-  "generated_at_utc": "2026-11-01T12:18:59.323228+00:00",
-  "fixtures": [],
-  "total": 0
+  "generated_at_utc": "2026-11-02T09:32:51.580261+00:00",
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:tur.1:401888260",
+      "league": "tur.1",
+      "home": "Genclerbirligi",
+      "away": "Alanyaspor",
+      "start_utc": "2026-11-02T17:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401874971",
+      "league": "ita.1",
+      "home": "Atalanta",
+      "away": "Parma",
+      "start_utc": "2026-11-02T19:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882824",
+      "league": "esp.1",
+      "home": "Deportivo",
+      "away": "Osasuna",
+      "start_utc": "2026-11-02T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885407",
+      "league": "por.1",
+      "home": "Gil Vicente",
+      "away": "Vitória de Guimaraes",
+      "start_utc": "2026-11-02T20:15:00Z"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841649",
+      "league": "arg.1",
+      "home": "Platense",
+      "away": "Central Córdoba (Santiago del Estero)",
+      "start_utc": "2026-11-02T22:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841299",
+      "league": "bra.1",
+      "home": "Red Bull Bragantino",
+      "away": "Santos",
+      "start_utc": "2026-11-02T23:00:00Z"
+    }
+  ],
+  "total": 6
 }
