@@ -2,8 +2,8 @@ name: ListaSix scheduled trigger diagnostic (5-minute window)
 on:
   workflow_dispatch:
   schedule:
-    # Diagnostic pulses every five minutes; date/time guard below restricts execution.
-    - cron: '*/5 * * * *'
+    # Nov 2 20:15-20:40 Sarajevo/CET = 19:15-19:40 UTC.
+    - cron: '15,20,25,30,35,40 19 2 11 *'
 permissions:
   actions: write
   contents: read
@@ -11,7 +11,7 @@ jobs:
   dispatch-test-branch:
     runs-on: ubuntu-latest
     steps:
-      - name: Run isolated test once in Sarajevo 19:45 window
+      - name: Dispatch isolated test only during Sarajevo 20:15-20:45 diagnostic window
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPOSITORY: ${{ github.repository }}
