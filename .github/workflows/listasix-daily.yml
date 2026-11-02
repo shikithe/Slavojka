@@ -2,8 +2,8 @@ name: ListaSix daily Collector Agent Kvoter
 on:
   workflow_dispatch:
   schedule:
-    # Primary at 09:00 Sarajevo and retry slots until 10:50, DST safe.
-    # UTC 07-09 covers both winter/summer local windows.
+    # Primary at 09:00 Sarajevo and retry slots through 10:30, DST safe.
+    # UTC 07-09 covers both winter/summer local windows. Local gate stops at 10:30.
     - cron: '*/10 7-9 * * *'
 permissions:
   contents: write
@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Check local 09:00-10:50 retry window and existing fresh feed
+      - name: Check local 09:00-10:30 retry window and existing fresh feed
         id: clock
         env:
           TRIGGER: ${{ github.event_name }}
@@ -29,7 +29,7 @@ jobs:
           from zoneinfo import ZoneInfo
           local=datetime.now(ZoneInfo("Europe/Sarajevo"))
           today=local.date().isoformat()
-          scheduled=time(9,0)<=local.time()<=time(10,59,59)
+          scheduled=time(9,0)<=local.time()<=time(10,30,59)
           current=False
           path=Path("shared/collector-feed.json")
           if path.exists():
