@@ -1,8 +1,14 @@
 Br. | Datum/sat | Utakmica | 1 | X | 2 | 3+ | Kladionica
-1 | 2026-11-02T17:30:00Z | Sassuolo - Fiorentina | 2.95 | 3.78 | 2.37 | - | pinnacle
-2 | 2026-11-02T19:45:00Z | Lorient - Brest | 2.35 | 3.25 | 2.85 | - | winamax_de
-3 | 2026-11-02T20:00:00Z | Newcastle United - Everton | 2.15 | 3.5 | 3.1 | 1.68 | leovegas
-4 | 2026-11-02T20:15:00Z | Benfica - Alverca | 1.12 | 7.5 | 13.0 | - | betfred_uk
-5 | 2026-11-02T22:00:00Z | Defensa y Justicia - Independiente | 2.14 | 3.24 | 3.34 | 2.11 | marathonbet
-6 | 2026-11-03T00:15:00Z | Atlético Tucumán - Argentinos Juniors | 2.8 | 2.85 | 2.25 | - | unibet_fr
-7 | 2026-11-03T00:15:00Z | Independiente Rivadavia - Banfield | 1.57 | 4.03 | 6.02 | 1.88 | onexbet
+1 | 2026-11-02T17:00:00Z | Genclerbirligi - Alanyaspor | 2.47 | 3.15 | 2.53 | - | betclic_fr
+2 | 2026-11-02T17:30:00Z | Sassuolo - Fiorentina | 2.95 | 3.78 | 2.37 | - | pinnacle
+3 | 2026-11-02T19:45:00Z | Atalanta - Parma | 1.54 | 4.71 | 5.99 | - | pinnacle
+4 | 2026-11-02T19:45:00Z | Lorient - Brest | 2.35 | 3.25 | 2.85 | - | winamax_de
+5 | 2026-11-02T20:00:00Z | Deportivo - Osasuna | 2.05 | 3.25 | 3.4 | - | betclic_fr
+6 | 2026-11-02T20:00:00Z | Newcastle United - Everton | 2.15 | 3.5 | 3.1 | 1.68 | leovegas
+7 | 2026-11-02T20:15:00Z | Benfica - Alverca | 1.12 | 7.5 | 13.0 | - | betfred_uk
+8 | 2026-11-02T20:15:00Z | Gil Vicente - Vitória de Guimaraes | 2.62 | 3.1 | 2.5 | - | betfred_uk
+9 | 2026-11-02T22:00:00Z | Defensa y Justicia - Independiente | 2.14 | 3.24 | 3.34 | 2.11 | marathonbet
+10 | 2026-11-02T22:00:00Z | Platense - Central Córdoba (Santiago del Estero) | 1.5 | 3.9 | 5.8 | - | winamax_de
+11 | 2026-11-02T23:00:00Z | Red Bull Bragantino - Santos | 1.94 | 3.7 | 3.4 | 1.57 | casumo
+12 | 2026-11-03T00:15:00Z | Atlético Tucumán - Argentinos Juniors | 2.8 | 2.85 | 2.25 | - | unibet_fr
+13 | 2026-11-03T00:15:00Z | Independiente Rivadavia - Banfield | 1.57 | 4.03 | 6.02 | 1.88 | onexbet
