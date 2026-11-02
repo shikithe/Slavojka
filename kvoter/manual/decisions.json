@@ -516,6 +516,72 @@
       "odds_away": "Houston Dynamo",
       "decision": "matched",
       "issue_number": 2
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888260",
+      "event_id": "10a70d197a090f08183739878151539d",
+      "league": "tur.1",
+      "collector_home": "Genclerbirligi",
+      "collector_away": "Alanyaspor",
+      "odds_home": "Genclerbirligi SK",
+      "odds_away": "Alanyaspor",
+      "decision": "matched",
+      "issue_number": 3
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401874971",
+      "event_id": "2e488800d615a94e5377c195810303c0",
+      "league": "ita.1",
+      "collector_home": "Atalanta",
+      "collector_away": "Parma",
+      "odds_home": "Atalanta BC",
+      "odds_away": "Parma",
+      "decision": "matched",
+      "issue_number": 3
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882824",
+      "event_id": "7a2cd2744fdf15ea675423a6c23df46b",
+      "league": "esp.1",
+      "collector_home": "Deportivo",
+      "collector_away": "Osasuna",
+      "odds_home": "Deportivo La Coruña",
+      "odds_away": "CA Osasuna",
+      "decision": "matched",
+      "issue_number": 3
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885407",
+      "event_id": "97ce048d06fc45fc59e114548540828f",
+      "league": "por.1",
+      "collector_home": "Gil Vicente",
+      "collector_away": "Vitória de Guimaraes",
+      "odds_home": "Gil Vicente",
+      "odds_away": "Vitória SC",
+      "decision": "matched",
+      "issue_number": 3
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841649",
+      "event_id": "0f4c1bb9206c94533a556d79b57713f2",
+      "league": "arg.1",
+      "collector_home": "Platense",
+      "collector_away": "Central Córdoba (Santiago del Estero)",
+      "odds_home": "Platense",
+      "odds_away": "Central Córdoba",
+      "decision": "matched",
+      "issue_number": 3
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841299",
+      "event_id": "5bab6fa1aa508d533a40f86e0b82605e",
+      "league": "bra.1",
+      "collector_home": "Red Bull Bragantino",
+      "collector_away": "Santos",
+      "odds_home": "Bragantino-SP",
+      "odds_away": "Santos",
+      "decision": "matched",
+      "issue_number": 3
     }
   ]
 }

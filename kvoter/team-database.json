@@ -643,6 +643,90 @@
         "github-issue-2"
       ],
       "verified": true
+    },
+    {
+      "id": "tur.1-genclerbirligi",
+      "league": "tur.1",
+      "names": [
+        "Genclerbirligi",
+        "Genclerbirligi SK"
+      ],
+      "sources": [
+        "github-issue-3"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ita.1-atalanta",
+      "league": "ita.1",
+      "names": [
+        "Atalanta",
+        "Atalanta BC"
+      ],
+      "sources": [
+        "github-issue-3"
+      ],
+      "verified": true
+    },
+    {
+      "id": "esp.1-deportivo",
+      "league": "esp.1",
+      "names": [
+        "Deportivo",
+        "Deportivo La Coruña"
+      ],
+      "sources": [
+        "github-issue-3"
+      ],
+      "verified": true
+    },
+    {
+      "id": "esp.1-osasuna",
+      "league": "esp.1",
+      "names": [
+        "Osasuna",
+        "CA Osasuna"
+      ],
+      "sources": [
+        "github-issue-3"
+      ],
+      "verified": true
+    },
+    {
+      "id": "por.1-vitoria-de-guimaraes",
+      "league": "por.1",
+      "names": [
+        "Vitória de Guimaraes",
+        "Vitória SC"
+      ],
+      "sources": [
+        "github-issue-3"
+      ],
+      "verified": true
+    },
+    {
+      "id": "arg.1-central-cordoba-santiago-del-estero",
+      "league": "arg.1",
+      "names": [
+        "Central Córdoba (Santiago del Estero)",
+        "Central Córdoba"
+      ],
+      "sources": [
+        "github-issue-3"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bra.1-red-bull-bragantino",
+      "league": "bra.1",
+      "names": [
+        "Red Bull Bragantino",
+        "Bragantino-SP"
+      ],
+      "sources": [
+        "github-issue-3"
+      ],
+      "verified": true
     }
   ]
 }
