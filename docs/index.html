@@ -23,7 +23,11 @@ async function load(){
  const res=await fetch('./active-list.json?t='+Date.now(),{cache:'no-store'});
  if(!res.ok)throw Error('Dnevna lista još nije objavljena.');
  const data=await res.json();
- if(!data.expires_at||Date.now()>=Date.parse(data.expires_at))throw Error('Prethodna lista je istekla.');
+ const sar=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Sarajevo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+ const x=Object.fromEntries(sar.map(z=>[z.type,z.value]));
+ const localDay=x.year+'-'+x.month+'-'+x.day;
+ const localMinutes=Number(x.hour)*60+Number(x.minute);
+ if(!data.expires_at||Date.now()>=Date.parse(data.expires_at)|| (data.date!==localDay&&localMinutes>=8*60+59))throw Error('Prethodna lista je istekla.');
  if(!data.publication_allowed||!Array.isArray(data.fixtures)||!data.fixtures.length)throw Error('Čeka se nova potvrđena ponuda.');
  data.fixtures.forEach((f,i)=>{
  const tr=document.createElement('tr');
