@@ -1,0 +1,34 @@
+name: ListaSix isolated Collector 19:45 test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  isolated-collector:
+    if: github.ref == 'refs/heads/test/collector-1945-20261102'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect ESPN fixture list without writing to production
+        env:
+          LISTASIX_SHARED: shared
+        run: python3 -m lista.pipeline
+      - name: Validate test Collector output
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('shared/collector-feed.json').read_text())
+          assert d.get('football_candidates'), 'No ESPN fixtures returned'
+          print('TEST_COLLECTOR_DATE', d.get('date'))
+          print('TEST_COLLECTOR_FIXTURES', len(d['football_candidates']))
+          PY
+      - name: Save isolated test files as workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: listasix-collector-1945-test
+          path: |
+            shared/collector-feed.json
+            shared/collector-raw.json
+          retention-days: 3
