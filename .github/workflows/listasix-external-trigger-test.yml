@@ -1,0 +1,16 @@
+name: ListaSix external HTTP trigger test
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-external-trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Report dispatch received
+        run: |
+          echo "EXTERNAL TRIGGER OK"
+          echo "event=${{ github.event_name }}"
+          echo "branch=${{ github.ref_name }}"
+          date -u +"utc=%Y-%m-%dT%H:%M:%SZ"
