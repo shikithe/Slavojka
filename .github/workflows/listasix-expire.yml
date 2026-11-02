@@ -1,10 +1,10 @@
-name: ListaSix expiry window from 08:59 until old feed removed
+name: ListaSix expiry window from 08:55 until old feed removed
 on:
   workflow_dispatch:
   schedule:
-    # Starts near 08:59 Sarajevo; retry every five minutes until expired data is gone.
-    # UTC slots cover DST; local gate prevents deletion before 08:59.
-    - cron: '59 6,7 * * *'
+    # Starts near 08:55 Sarajevo; retry every five minutes until expired data is gone.
+    # UTC slots cover DST; local gate prevents deletion before 08:55.
+    - cron: '55 6,7 * * *'
     - cron: '*/5 * * * *'
 permissions:
   contents: write
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Keep expiry window open from 08:59 while old Collector feed exists
+      - name: Keep expiry window open from 08:55 while old Collector feed exists
         id: clock
         env:
           TRIGGER: ${{ github.event_name }}
@@ -35,7 +35,7 @@ jobs:
                   old = bool(stamp) and date.fromisoformat(stamp) < local.date()
               except (OSError, ValueError, TypeError):
                   old = True  # damaged feed: attempt cleanup and let script report any error
-          due = local.time() >= time(8,59)
+          due = local.time() >= time(8,55)
           allowed = (os.environ["TRIGGER"] == "workflow_dispatch" or due) and old
           with open(os.environ["GITHUB_OUTPUT"],"a") as out:
               out.write("run=" + ("true" if allowed else "false") + "\n")
@@ -49,7 +49,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A -- shared docs/active-list.json docs/kvoter-ponuda.txt docs/manual-candidates.json docs/unmatched_fixtures.json
           if ! git diff --cached --quiet; then
-            git commit -m "lista: expire previous-day feeds at 08:59 [skip ci]"
+            git commit -m "lista: expire previous-day feeds at 08:55 [skip ci]"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
