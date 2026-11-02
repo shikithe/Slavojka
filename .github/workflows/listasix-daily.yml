@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Check local 09:00-10:30 retry window and existing fresh feed
+      - name: Check local 09:00-10:30 retry window and completed daily publication
         id: clock
         env:
           TRIGGER: ${{ github.event_name }}
@@ -32,11 +32,11 @@ jobs:
           today=local.date().isoformat()
           scheduled=time(9,0)<=local.time()<=time(10,30,59)
           current=False
-          path=Path("shared/collector-feed.json")
+          path=Path("docs/active-list.json")
           if path.exists():
               try:
                   data=json.loads(path.read_text(encoding="utf-8"))
-                  current=data.get("date")==today and bool(data.get("football_candidates"))
+                  current=data.get("date")==today and bool(data.get("publication_allowed")) and bool(data.get("fixtures"))
               except (ValueError,OSError):
                   pass
           allowed=(os.environ["TRIGGER"]=="workflow_dispatch" or scheduled) and not current
