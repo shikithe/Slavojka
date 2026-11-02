@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Expire previous-day transient ListaSix data at/after 08:59 Sarajevo."""
+"""Expire previous-day transient ListaSix data at/after 08:55 Sarajevo."""
 import json
 from datetime import date, datetime, time
 from pathlib import Path
@@ -18,7 +18,7 @@ TRANSIENT=[
 ]
 def expire(now=None):
     local=(now or datetime.now(TZ)).astimezone(TZ)
-    if local.time()<time(8,59):
+    if local.time()<time(8,55):
         print("LISTASIX_CLEANUP_NOT_DUE")
         return False
     feed=Path("shared/collector-feed.json")
