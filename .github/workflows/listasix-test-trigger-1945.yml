@@ -1,32 +1,15 @@
-name: ListaSix scheduled trigger diagnostic (5-minute window)
+name: ListaSix raw schedule heartbeat
 on:
-  workflow_dispatch:
   schedule:
-    # Nov 2 20:15-20:40 Sarajevo/CET = 19:15-19:40 UTC.
-    - cron: '15,20,25,30,35,40 19 2 11 *'
+    - cron: '*/5 * * * *'
 permissions:
-  actions: write
   contents: read
 jobs:
-  dispatch-test-branch:
+  heartbeat:
     runs-on: ubuntu-latest
     steps:
-      - name: Dispatch isolated test only during Sarajevo 20:15-20:45 diagnostic window
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPOSITORY: ${{ github.repository }}
-          EVENT_NAME: ${{ github.event_name }}
+      - name: Print raw schedule event
         run: |
-          python3 - <<'PY'
-          from datetime import datetime, time
-          from zoneinfo import ZoneInfo
-          local=datetime.now(ZoneInfo('Europe/Sarajevo'))
-          valid=local.date().isoformat()=='2026-11-02' and time(20,15)<=local.time()<time(20,45)
-          if not valid:
-              print('OUTSIDE_TEST_WINDOW',local.isoformat())
-              raise SystemExit(0)
-          import os,subprocess
-          cmd=['gh','workflow','run','listasix-collector-test-1945.yml','--ref','test/collector-1945-20261102']
-          subprocess.run(cmd,check=True)
-          print('DISPATCHED_ISOLATED_COLLECTOR',local.isoformat())
-          PY
+          echo "TRIGGER OK"
+          echo "event=${{ github.event_name }}"
+          date -u +"utc=%Y-%m-%dT%H:%M:%SZ"
