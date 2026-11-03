@@ -849,6 +849,38 @@
       "source": "the-odds-api-v4",
       "first_seen_utc": "2026-11-02T09:32:51.341150+00:00",
       "verified_identity": false
+    },
+    {
+      "league": "bra.1",
+      "name": "Chapecoense",
+      "normalized": "chapecoense",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T08:45:52.621096+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bra.1",
+      "name": "Mirassol",
+      "normalized": "mirassol",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T08:45:52.621096+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bra.1",
+      "name": "Internacional",
+      "normalized": "internacional",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T08:45:52.621096+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bra.1",
+      "name": "Coritiba",
+      "normalized": "coritiba",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T08:45:52.621096+00:00",
+      "verified_identity": false
     }
   ]
 }

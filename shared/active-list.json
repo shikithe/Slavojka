@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-03",
+  "expires_at": "2026-11-04T08:59:00+01:00",
+  "publication_allowed": true,
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:bra.1:401841304",
+      "datetime": "2026-11-03T22:30:00Z",
+      "match": "Chapecoense - Mirassol",
+      "home_odds": 3.2,
+      "draw_odds": 3.4,
+      "away_odds": 2.0,
+      "over25_odds": null,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841301",
+      "datetime": "2026-11-04T00:30:00Z",
+      "match": "Internacional - Coritiba",
+      "home_odds": 1.54,
+      "draw_odds": 4.0,
+      "away_odds": 5.75,
+      "over25_odds": 1.74,
+      "bookmaker": "unibet_nl"
+    }
+  ]
+}
