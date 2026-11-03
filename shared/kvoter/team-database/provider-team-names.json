@@ -881,6 +881,150 @@
       "source": "the-odds-api-v4",
       "first_seen_utc": "2026-11-03T08:45:52.621096+00:00",
       "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Galatasaray",
+      "normalized": "galatasaray",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "VfB Stuttgart",
+      "normalized": "vfb stuttgart",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Shakhtar Donetsk",
+      "normalized": "shakhtar donetsk",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Sporting Lisbon",
+      "normalized": "sporting lisbon",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Manchester United",
+      "normalized": "manchester united",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "AS Roma",
+      "normalized": "as roma",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Barcelona",
+      "normalized": "barcelona",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Aston Villa",
+      "normalized": "aston villa",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Atlético Madrid",
+      "normalized": "atletico madrid",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Bayern Munich",
+      "normalized": "bayern munich",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Bodø/Glimt",
+      "normalized": "bodø glimt",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Lille",
+      "normalized": "lille",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Feyenoord",
+      "normalized": "feyenoord",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Inter Milan",
+      "normalized": "inter milan",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "LASK",
+      "normalized": "lask",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "ŠK Slovan Bratislava",
+      "normalized": "sk slovan bratislava",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Villarreal",
+      "normalized": "villarreal",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.champions",
+      "name": "Paris Saint Germain",
+      "normalized": "paris saint germain",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-03T10:15:50.400345+00:00",
+      "verified_identity": false
     }
   ]
 }

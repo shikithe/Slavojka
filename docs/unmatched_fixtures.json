@@ -1,33 +1,12 @@
 {
-  "generated_at_utc": "2026-11-03T08:45:52.629897+00:00",
+  "generated_at_utc": "2026-11-03T10:15:51.327067+00:00",
   "fixtures": [
-    {
-      "fixture_id": "espn:football:uefa.champions:401915311",
-      "league": "uefa.champions",
-      "home": "Galatasaray",
-      "away": "VfB Stuttgart",
-      "start_utc": "2026-11-03T17:45:00Z"
-    },
     {
       "fixture_id": "espn:football:uefa.champions:401915310",
       "league": "uefa.champions",
       "home": "Shakhtar Donetsk",
       "away": "Sporting CP",
       "start_utc": "2026-11-03T17:45:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915386",
-      "league": "uefa.champions",
-      "home": "Atlético Madrid",
-      "away": "Bayern Munich",
-      "start_utc": "2026-11-03T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915387",
-      "league": "uefa.champions",
-      "home": "Barcelona",
-      "away": "Aston Villa",
-      "start_utc": "2026-11-03T20:00:00Z"
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915384",
@@ -49,21 +28,7 @@
       "home": "LASK Linz",
       "away": "Slovan Bratislava",
       "start_utc": "2026-11-03T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915308",
-      "league": "uefa.champions",
-      "home": "Manchester United",
-      "away": "AS Roma",
-      "start_utc": "2026-11-03T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915309",
-      "league": "uefa.champions",
-      "home": "Villarreal",
-      "away": "Paris Saint-Germain",
-      "start_utc": "2026-11-03T20:00:00Z"
     }
   ],
-  "total": 9
+  "total": 4
 }
