@@ -39,7 +39,7 @@ jobs:
                   current=data.get("date")==today and bool(data.get("publication_allowed")) and bool(data.get("fixtures"))
               except (ValueError,OSError):
                   pass
-          allowed=(os.environ["TRIGGER"]=="workflow_dispatch" or scheduled) and not current
+          allowed=(os.environ["TRIGGER"]=="workflow_dispatch") or (scheduled and not current)
           with open(os.environ["GITHUB_OUTPUT"],"a") as out:
               out.write("run="+("true" if allowed else "false")+"\n")
           print("LISTASIX_RETRY_GATE",local.isoformat(),"current=",current,"run=",allowed)
