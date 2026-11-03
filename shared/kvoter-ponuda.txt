@@ -1,8 +1,12 @@
 Br. | Datum/sat | Utakmica | 1 | X | 2 | 2+ | 3+ | GG | NG
 1 | 2026-11-03T17:45:00Z | Galatasaray - VfB Stuttgart | 2.05 | 4.0 | 3.1 | - | 1.31 | - | -
-2 | 2026-11-03T20:00:00Z | Atlético Madrid - Bayern Munich | 2.62 | 4.0 | 2.38 | - | 1.47 | - | -
-3 | 2026-11-03T20:00:00Z | Barcelona - Aston Villa | 1.28 | 6.5 | 7.5 | - | 1.19 | - | -
-4 | 2026-11-03T20:00:00Z | Manchester United - AS Roma | 2.15 | 3.9 | 2.9 | - | 1.5 | - | -
-5 | 2026-11-03T20:00:00Z | Villarreal - Paris Saint-Germain | 4.0 | 4.5 | 1.73 | - | 1.32 | - | -
-6 | 2026-11-03T22:30:00Z | Chapecoense - Mirassol | 3.2 | 3.4 | 2.0 | - | 1.77 | - | -
-7 | 2026-11-04T00:30:00Z | Internacional - Coritiba | 1.54 | 4.0 | 5.75 | - | 1.74 | - | -
+2 | 2026-11-03T17:45:00Z | Shakhtar Donetsk - Sporting CP | 3.6 | 3.75 | 1.95 | - | 1.63 | - | -
+3 | 2026-11-03T20:00:00Z | Atlético Madrid - Bayern Munich | 2.62 | 4.0 | 2.38 | - | 1.47 | - | -
+4 | 2026-11-03T20:00:00Z | Barcelona - Aston Villa | 1.28 | 6.5 | 7.5 | - | 1.19 | - | -
+5 | 2026-11-03T20:00:00Z | Bodo/Glimt - Lille | 1.62 | 4.1 | 4.1 | - | 1.47 | - | -
+6 | 2026-11-03T20:00:00Z | Feyenoord Rotterdam - Internazionale | 3.45 | 3.95 | 1.76 | - | 1.42 | - | -
+7 | 2026-11-03T20:00:00Z | LASK Linz - Slovan Bratislava | 1.33 | 5.75 | 7.0 | - | 1.32 | - | -
+8 | 2026-11-03T20:00:00Z | Manchester United - AS Roma | 2.15 | 3.9 | 2.9 | - | 1.5 | - | -
+9 | 2026-11-03T20:00:00Z | Villarreal - Paris Saint-Germain | 4.0 | 4.5 | 1.73 | - | 1.32 | - | -
+10 | 2026-11-03T22:30:00Z | Chapecoense - Mirassol | 3.2 | 3.4 | 2.0 | - | 1.77 | - | -
+11 | 2026-11-04T00:30:00Z | Internacional - Coritiba | 1.54 | 4.0 | 5.75 | - | 1.74 | - | -

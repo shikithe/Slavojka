@@ -727,6 +727,78 @@
         "github-issue-3"
       ],
       "verified": true
+    },
+    {
+      "id": "uefa.champions-sporting-cp",
+      "league": "uefa.champions",
+      "names": [
+        "Sporting CP",
+        "Sporting Lisbon"
+      ],
+      "sources": [
+        "github-issue-5"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.champions-bodo-glimt",
+      "league": "uefa.champions",
+      "names": [
+        "Bodo/Glimt",
+        "Bodø/Glimt"
+      ],
+      "sources": [
+        "github-issue-5"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.champions-feyenoord-rotterdam",
+      "league": "uefa.champions",
+      "names": [
+        "Feyenoord Rotterdam",
+        "Feyenoord"
+      ],
+      "sources": [
+        "github-issue-5"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.champions-internazionale",
+      "league": "uefa.champions",
+      "names": [
+        "Internazionale",
+        "Inter Milan"
+      ],
+      "sources": [
+        "github-issue-5"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.champions-lask-linz",
+      "league": "uefa.champions",
+      "names": [
+        "LASK Linz",
+        "LASK"
+      ],
+      "sources": [
+        "github-issue-5"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.champions-slovan-bratislava",
+      "league": "uefa.champions",
+      "names": [
+        "Slovan Bratislava",
+        "ŠK Slovan Bratislava"
+      ],
+      "sources": [
+        "github-issue-5"
+      ],
+      "verified": true
     }
   ]
 }

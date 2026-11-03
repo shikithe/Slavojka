@@ -23,6 +23,25 @@
       "bookmaker": "unibet_uk"
     },
     {
+      "fixture_id": "espn:football:uefa.champions:401915310",
+      "datetime": "2026-11-03T17:45:00Z",
+      "match": "Shakhtar Donetsk - Sporting CP",
+      "bookmakers_by_field": {
+        "home_odds": "unibet_uk",
+        "draw_odds": "unibet_uk",
+        "away_odds": "unibet_uk",
+        "over25_odds": "codere_it"
+      },
+      "home_odds": 3.6,
+      "draw_odds": 3.75,
+      "away_odds": 1.95,
+      "over15_odds": null,
+      "over25_odds": 1.63,
+      "btts_yes_odds": null,
+      "btts_no_odds": null,
+      "bookmaker": "unibet_uk"
+    },
+    {
       "fixture_id": "espn:football:uefa.champions:401915386",
       "datetime": "2026-11-03T20:00:00Z",
       "match": "Atlético Madrid - Bayern Munich",
@@ -56,6 +75,63 @@
       "away_odds": 7.5,
       "over15_odds": null,
       "over25_odds": 1.19,
+      "btts_yes_odds": null,
+      "btts_no_odds": null,
+      "bookmaker": "ladbrokes_uk"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915384",
+      "datetime": "2026-11-03T20:00:00Z",
+      "match": "Bodo/Glimt - Lille",
+      "bookmakers_by_field": {
+        "home_odds": "winamax_fr",
+        "draw_odds": "winamax_fr",
+        "away_odds": "winamax_fr",
+        "over25_odds": "betsson"
+      },
+      "home_odds": 1.62,
+      "draw_odds": 4.1,
+      "away_odds": 4.1,
+      "over15_odds": null,
+      "over25_odds": 1.47,
+      "btts_yes_odds": null,
+      "btts_no_odds": null,
+      "bookmaker": "winamax_fr"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915307",
+      "datetime": "2026-11-03T20:00:00Z",
+      "match": "Feyenoord Rotterdam - Internazionale",
+      "bookmakers_by_field": {
+        "home_odds": "winamax_fr",
+        "draw_odds": "winamax_fr",
+        "away_odds": "winamax_fr",
+        "over25_odds": "betsson"
+      },
+      "home_odds": 3.45,
+      "draw_odds": 3.95,
+      "away_odds": 1.76,
+      "over15_odds": null,
+      "over25_odds": 1.42,
+      "btts_yes_odds": null,
+      "btts_no_odds": null,
+      "bookmaker": "winamax_fr"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915385",
+      "datetime": "2026-11-03T20:00:00Z",
+      "match": "LASK Linz - Slovan Bratislava",
+      "bookmakers_by_field": {
+        "home_odds": "ladbrokes_uk",
+        "draw_odds": "ladbrokes_uk",
+        "away_odds": "ladbrokes_uk",
+        "over25_odds": "betsson"
+      },
+      "home_odds": 1.33,
+      "draw_odds": 5.75,
+      "away_odds": 7.0,
+      "over15_odds": null,
+      "over25_odds": 1.32,
       "btts_yes_odds": null,
       "btts_no_odds": null,
       "bookmaker": "ladbrokes_uk"

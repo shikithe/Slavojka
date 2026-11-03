@@ -1,34 +1,5 @@
 {
-  "generated_at_utc": "2026-11-03T10:15:51.327067+00:00",
-  "fixtures": [
-    {
-      "fixture_id": "espn:football:uefa.champions:401915310",
-      "league": "uefa.champions",
-      "home": "Shakhtar Donetsk",
-      "away": "Sporting CP",
-      "start_utc": "2026-11-03T17:45:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915384",
-      "league": "uefa.champions",
-      "home": "Bodo/Glimt",
-      "away": "Lille",
-      "start_utc": "2026-11-03T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915307",
-      "league": "uefa.champions",
-      "home": "Feyenoord Rotterdam",
-      "away": "Internazionale",
-      "start_utc": "2026-11-03T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915385",
-      "league": "uefa.champions",
-      "home": "LASK Linz",
-      "away": "Slovan Bratislava",
-      "start_utc": "2026-11-03T20:00:00Z"
-    }
-  ],
-  "total": 4
+  "generated_at_utc": "2026-11-03T14:16:30.358179+00:00",
+  "fixtures": [],
+  "total": 0
 }

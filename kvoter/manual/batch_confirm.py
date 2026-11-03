@@ -52,8 +52,8 @@ def process(body, issue_number):
     for row in rows:
         if not isinstance(row, dict) or any(not isinstance(row.get(k),str) or not 0 < len(row[k]) <= 250 for k in required):
             raise ValueError("Invalid decision fields")
-        if row["decision"] not in ("matched","rejected") or not re.fullmatch(r"[a-z]{2,5}\.\d+",row["league"]):
-            raise ValueError("Invalid decision or league")
+        if row["decision"] not in ("matched","rejected"):
+            raise ValueError("Invalid decision")
         fixture = fixtures.get(row["fixture_id"])
         if not fixture or (fixture["league"],fixture["home"],fixture["away"]) != (row["league"],row["collector_home"],row["collector_away"]):
             raise ValueError("Unrecognized fixture")
