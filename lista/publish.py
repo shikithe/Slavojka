@@ -62,7 +62,7 @@ def publish(feed_path,match_path,manual_path,shared,docs):
     for i, row in enumerate(result["fixtures"], 1):
         cells = [str(i), row["datetime"], row["match"]]
         for field, _, _, _ in SELECTIONS:
-            cells.append(f"{row[field]} ({row['bookmakers_by_field'][field]})" if row[field] is not None else "-")
+            cells.append(str(row[field]) if row[field] is not None else "-")
         txt.append(" | ".join(cells))
     for path,data in [(shared/"active-list.json",json.dumps(result,ensure_ascii=False,indent=2)+"\n"),
                       (docs/"active-list.json",json.dumps(result,ensure_ascii=False,indent=2)+"\n"),
