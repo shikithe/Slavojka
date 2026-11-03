@@ -28,12 +28,14 @@ def pick(record):
             prices = offer.get("markets", {}).get(market)
             price = prices.get(outcome) if isinstance(prices, dict) else None
             book = offer.get("bookmaker")
-            if book and isinstance(price, (int, float)) and isfinite(price) and price > 1:
+            if isinstance(price, (int, float)) and isfinite(price) and price > 1:
                 row[field] = price
-                sources[field] = book
+                if book:
+                    sources[field] = book
                 break
     if sources:
         row["bookmaker"] = next(iter(sources.values()))
+    if any(row[field] is not None for field, _, _, _ in SELECTIONS):
         return row
 
 def publish(feed_path,match_path,manual_path,shared,docs):
