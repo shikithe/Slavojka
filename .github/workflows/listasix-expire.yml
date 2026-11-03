@@ -47,7 +47,7 @@ jobs:
           python3 -m lista.expire_collector
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- shared docs/active-list.json docs/kvoter-ponuda.txt docs/manual-candidates.json docs/unmatched_fixtures.json
+          git add -A -- shared docs
           if ! git diff --cached --quiet; then
             git commit -m "lista: expire previous-day feeds at 08:55 [skip ci]"
             git pull --rebase origin main
