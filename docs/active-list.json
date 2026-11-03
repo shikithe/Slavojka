@@ -7,70 +7,133 @@
       "fixture_id": "espn:football:uefa.champions:401915311",
       "datetime": "2026-11-03T17:45:00Z",
       "match": "Galatasaray - VfB Stuttgart",
+      "bookmakers_by_field": {
+        "home_odds": "unibet_uk",
+        "draw_odds": "unibet_uk",
+        "away_odds": "unibet_uk",
+        "over25_odds": "nordicbet"
+      },
       "home_odds": 2.05,
       "draw_odds": 4.0,
       "away_odds": 3.1,
-      "over25_odds": null,
+      "over15_odds": null,
+      "over25_odds": 1.31,
+      "btts_yes_odds": null,
+      "btts_no_odds": null,
       "bookmaker": "unibet_uk"
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915386",
       "datetime": "2026-11-03T20:00:00Z",
       "match": "Atlético Madrid - Bayern Munich",
+      "bookmakers_by_field": {
+        "home_odds": "betfred_uk",
+        "draw_odds": "betfred_uk",
+        "away_odds": "betfred_uk",
+        "over25_odds": "nordicbet"
+      },
       "home_odds": 2.62,
       "draw_odds": 4.0,
       "away_odds": 2.38,
-      "over25_odds": null,
+      "over15_odds": null,
+      "over25_odds": 1.47,
+      "btts_yes_odds": null,
+      "btts_no_odds": null,
       "bookmaker": "betfred_uk"
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915387",
       "datetime": "2026-11-03T20:00:00Z",
       "match": "Barcelona - Aston Villa",
+      "bookmakers_by_field": {
+        "home_odds": "ladbrokes_uk",
+        "draw_odds": "ladbrokes_uk",
+        "away_odds": "ladbrokes_uk",
+        "over25_odds": "nordicbet"
+      },
       "home_odds": 1.28,
       "draw_odds": 6.5,
       "away_odds": 7.5,
-      "over25_odds": null,
+      "over15_odds": null,
+      "over25_odds": 1.19,
+      "btts_yes_odds": null,
+      "btts_no_odds": null,
       "bookmaker": "ladbrokes_uk"
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915308",
       "datetime": "2026-11-03T20:00:00Z",
       "match": "Manchester United - AS Roma",
+      "bookmakers_by_field": {
+        "home_odds": "unibet_uk",
+        "draw_odds": "unibet_uk",
+        "away_odds": "unibet_uk",
+        "over25_odds": "betsson"
+      },
       "home_odds": 2.15,
       "draw_odds": 3.9,
       "away_odds": 2.9,
-      "over25_odds": null,
+      "over15_odds": null,
+      "over25_odds": 1.5,
+      "btts_yes_odds": null,
+      "btts_no_odds": null,
       "bookmaker": "unibet_uk"
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915309",
       "datetime": "2026-11-03T20:00:00Z",
       "match": "Villarreal - Paris Saint-Germain",
+      "bookmakers_by_field": {
+        "home_odds": "betfred_uk",
+        "draw_odds": "betfred_uk",
+        "away_odds": "betfred_uk",
+        "over25_odds": "betsson"
+      },
       "home_odds": 4.0,
       "draw_odds": 4.5,
       "away_odds": 1.73,
-      "over25_odds": null,
+      "over15_odds": null,
+      "over25_odds": 1.32,
+      "btts_yes_odds": null,
+      "btts_no_odds": null,
       "bookmaker": "betfred_uk"
     },
     {
       "fixture_id": "espn:football:bra.1:401841304",
       "datetime": "2026-11-03T22:30:00Z",
       "match": "Chapecoense - Mirassol",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over25_odds": "casumo"
+      },
       "home_odds": 3.2,
       "draw_odds": 3.4,
       "away_odds": 2.0,
-      "over25_odds": null,
+      "over15_odds": null,
+      "over25_odds": 1.77,
+      "btts_yes_odds": null,
+      "btts_no_odds": null,
       "bookmaker": "virginbet"
     },
     {
       "fixture_id": "espn:football:bra.1:401841301",
       "datetime": "2026-11-04T00:30:00Z",
       "match": "Internacional - Coritiba",
+      "bookmakers_by_field": {
+        "home_odds": "unibet_nl",
+        "draw_odds": "unibet_nl",
+        "away_odds": "unibet_nl",
+        "over25_odds": "unibet_nl"
+      },
       "home_odds": 1.54,
       "draw_odds": 4.0,
       "away_odds": 5.75,
+      "over15_odds": null,
       "over25_odds": 1.74,
+      "btts_yes_odds": null,
+      "btts_no_odds": null,
       "bookmaker": "unibet_nl"
     }
   ]

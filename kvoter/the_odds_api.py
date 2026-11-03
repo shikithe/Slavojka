@@ -84,11 +84,32 @@ def collect(history,key,regions="uk,eu",fetch=None,delay=0):
             if not isinstance(events,list): raise ValueError("Invalid API response")
             selected=[e for e in events if utc(e.get("commence_time")) and window_start<=utc(e.get("commence_time"))<=window_end]
             coverage[league]={"api_events":len(events),"window_events":len(selected)}
+            league_starts = [utc(f.get("start_utc")) for f in fixtures if f.get("league") == league]
             for event in selected:
                 raw_events.append({"league":league,"event":event})
                 for book in event.get("bookmakers",[]):
                     offer=parse_bookmaker(event,book,league)
                     if offer["markets"]: offers.append(offer)
+                # Request additional markets only for kickoffs present in the ESPN feed.
+                kickoff = utc(event["commence_time"])
+                same_slot = any(start and abs((kickoff - start).total_seconds()) <= 5400
+                                for start in league_starts)
+                if same_slot and event.get("id"):
+                    try:
+                        if delay: time.sleep(delay)
+                        detail = request(f"/sports/{LEAGUES[league]}/events/{event['id']}/odds", key,
+                                         {"regions": regions, "markets": "alternate_totals,btts",
+                                          "oddsFormat": "decimal"}, fetch)
+                        if detail.get("id") != event["id"]:
+                            raise ValueError("Event mismatch")
+                        for book in detail.get("bookmakers", []):
+                            extra = parse_bookmaker(event, book, league)
+                            if extra["markets"]: offers.append(extra)
+                        raw_events.append({"league": league, "event": detail, "scope": "additional"})
+                    except Exception as exc:
+                        # Preserve the featured prices on a partial provider failure.
+                        coverage[league].setdefault("additional_errors", []).append(
+                            {"event_id": event["id"], "error": type(exc).__name__})
         except Exception as exc:
             errors.append({"league":league,"error":str(exc)[:200]})
         if delay: time.sleep(delay)

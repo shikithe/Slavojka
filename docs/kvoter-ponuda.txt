@@ -1,8 +1,8 @@
-Br. | Datum/sat | Utakmica | 1 | X | 2 | 3+ | Kladionica
-1 | 2026-11-03T17:45:00Z | Galatasaray - VfB Stuttgart | 2.05 | 4.0 | 3.1 | - | unibet_uk
-2 | 2026-11-03T20:00:00Z | Atlético Madrid - Bayern Munich | 2.62 | 4.0 | 2.38 | - | betfred_uk
-3 | 2026-11-03T20:00:00Z | Barcelona - Aston Villa | 1.28 | 6.5 | 7.5 | - | ladbrokes_uk
-4 | 2026-11-03T20:00:00Z | Manchester United - AS Roma | 2.15 | 3.9 | 2.9 | - | unibet_uk
-5 | 2026-11-03T20:00:00Z | Villarreal - Paris Saint-Germain | 4.0 | 4.5 | 1.73 | - | betfred_uk
-6 | 2026-11-03T22:30:00Z | Chapecoense - Mirassol | 3.2 | 3.4 | 2.0 | - | virginbet
-7 | 2026-11-04T00:30:00Z | Internacional - Coritiba | 1.54 | 4.0 | 5.75 | 1.74 | unibet_nl
+Br. | Datum/sat | Utakmica | 1 | X | 2 | 2+ | 3+ | GG | NG
+1 | 2026-11-03T17:45:00Z | Galatasaray - VfB Stuttgart | 2.05 (unibet_uk) | 4.0 (unibet_uk) | 3.1 (unibet_uk) | - | 1.31 (nordicbet) | - | -
+2 | 2026-11-03T20:00:00Z | Atlético Madrid - Bayern Munich | 2.62 (betfred_uk) | 4.0 (betfred_uk) | 2.38 (betfred_uk) | - | 1.47 (nordicbet) | - | -
+3 | 2026-11-03T20:00:00Z | Barcelona - Aston Villa | 1.28 (ladbrokes_uk) | 6.5 (ladbrokes_uk) | 7.5 (ladbrokes_uk) | - | 1.19 (nordicbet) | - | -
+4 | 2026-11-03T20:00:00Z | Manchester United - AS Roma | 2.15 (unibet_uk) | 3.9 (unibet_uk) | 2.9 (unibet_uk) | - | 1.5 (betsson) | - | -
+5 | 2026-11-03T20:00:00Z | Villarreal - Paris Saint-Germain | 4.0 (betfred_uk) | 4.5 (betfred_uk) | 1.73 (betfred_uk) | - | 1.32 (betsson) | - | -
+6 | 2026-11-03T22:30:00Z | Chapecoense - Mirassol | 3.2 (virginbet) | 3.4 (virginbet) | 2.0 (virginbet) | - | 1.77 (casumo) | - | -
+7 | 2026-11-04T00:30:00Z | Internacional - Coritiba | 1.54 (unibet_nl) | 4.0 (unibet_nl) | 5.75 (unibet_nl) | - | 1.74 (unibet_nl) | - | -

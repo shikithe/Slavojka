@@ -11,8 +11,8 @@ td,th{padding:11px 8px;border-bottom:1px solid #2c3a4c;white-space:nowrap}
 td:nth-child(n+4),th:nth-child(n+4){text-align:right}td:nth-child(n+4){color:#a6e4b3;font-weight:600}
 tr:nth-child(even){background:#172131}a{color:#9dc8ff}button{background:#2d5c91;color:white;border:0;border-radius:8px;padding:9px 13px;font-weight:600}
 </style></head><body>
-<header><h1>KVOTER · Dnevna kladioničarska ponuda</h1><small>1 · X · 2 · 3+ golova | Stvarne preuzete kvote, nisu uživo</small><div style="margin-top:10px"><button onclick="load()">Osvježi</button> &nbsp; <a href="./kvoter-ponuda.txt">TXT lista</a></div></header>
-<div id="status" class="status">Učitavanje ponude…</div><div class="scroll"><table><thead><tr><th>Br.</th><th>Datum / sat</th><th>Utakmica</th><th>1</th><th>X</th><th>2</th><th>3+</th><th>Kladionica</th></tr></thead><tbody id="rows"></tbody></table></div>
+<header><h1>KVOTER · Dnevna kladioničarska ponuda</h1><small>1 · X · 2 · 2+ · 3+ · GG / NG | Stvarne preuzete kvote, nisu uživo</small><div style="margin-top:10px"><button onclick="load()">Osvježi</button> &nbsp; <a href="./kvoter-ponuda.txt">TXT lista</a></div></header>
+<div id="status" class="status">Učitavanje ponude…</div><div class="scroll"><table><thead><tr><th>Br.</th><th>Datum / sat</th><th>Utakmica</th><th>1</th><th>X</th><th>2</th><th>2+</th><th>3+</th><th>GG</th><th>NG</th></tr></thead><tbody id="rows"></tbody></table></div>
 <script>
 const status=document.getElementById('status'),body=document.getElementById('rows');
 function val(v){return v===null||v===undefined||v===''?'-':String(v)}
@@ -31,7 +31,7 @@ async function load(){
  if(!data.publication_allowed||!Array.isArray(data.fixtures)||!data.fixtures.length)throw Error('Čeka se nova potvrđena ponuda.');
  data.fixtures.forEach((f,i)=>{
  const tr=document.createElement('tr');
- [String(i+1).padStart(2,'0'),localTime(f.datetime),val(f.match),val(f.home_odds),val(f.draw_odds),val(f.away_odds),val(f.over25_odds),val(f.bookmaker)].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td)});
+ [String(i+1).padStart(2,'0'),localTime(f.datetime),val(f.match),...['home_odds','draw_odds','away_odds','over15_odds','over25_odds','btts_yes_odds','btts_no_odds'].map(field=>f[field]==null?'-':f[field]+' · '+val(f.bookmakers_by_field?.[field]??f.bookmaker))].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td)});
  body.append(tr);
  });
  status.textContent='Prikazano '+body.children.length+' utakmica · Ponuda: '+data.date+' · Vrijeme: Europe/Sarajevo · Kvote nisu uživo.';
