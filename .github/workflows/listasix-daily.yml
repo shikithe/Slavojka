@@ -89,6 +89,7 @@ jobs:
         if: steps.clock.outputs.run == 'true'
         run: |
           mkdir -p shared/agent
+          python3 -m unittest -v test_cross_competition_form.py
           python3 -m agent.five_matches --input shared/collector-feed.json --output shared/agent/history-h2h.json --days 120
           python3 -m agent.cross_competition_form --input shared/agent/history-h2h.json --output shared/agent/history-h2h.json --days 120
           python3 - <<'PY'
