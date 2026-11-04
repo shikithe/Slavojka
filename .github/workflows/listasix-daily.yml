@@ -90,6 +90,17 @@ jobs:
         run: |
           mkdir -p shared/agent
           python3 -m agent.five_matches --input shared/collector-feed.json --output shared/agent/history-h2h.json --days 120
+          python3 -m agent.cross_competition_form --input shared/agent/history-h2h.json --output shared/agent/history-h2h.json --days 120
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          data=json.loads(Path("shared/agent/history-h2h.json").read_text())
+          assert data.get("form_scope"), "Cross-competition form enrichment did not run"
+          for league in ("uefa.champions","uefa.europa"):
+              for name,team in data.get("leagues",{}).get(league,{}).get("teams",{}).items():
+                  assert team.get("found",0)==len(team.get("matches",[])), (league,name)
+                  assert team.get("found",0)<=5, (league,name)
+          PY
       - name: Run Kvoter with protected OddsAPI secret
         if: steps.clock.outputs.run == 'true'
         env:
