@@ -1,0 +1,205 @@
+{
+  "date": "2026-11-04",
+  "expires_at": "2026-11-05T08:59:00+01:00",
+  "publication_allowed": true,
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:uefa.champions:401915383",
+      "datetime": "2026-11-04T17:45:00Z",
+      "match": "AEK Athens - Real Madrid",
+      "bookmakers_by_field": {
+        "home_odds": "smarkets",
+        "draw_odds": "smarkets",
+        "away_odds": "smarkets",
+        "over15_odds": "onexbet",
+        "over25_odds": "betsson",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 13.5,
+      "draw_odds": 7.8,
+      "away_odds": 1.23,
+      "over15_odds": 1.06,
+      "over25_odds": 1.27,
+      "btts_yes_odds": 1.62,
+      "btts_no_odds": 2.2,
+      "bookmaker": "smarkets"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915382",
+      "datetime": "2026-11-04T17:45:00Z",
+      "match": "Fenerbahce - Liverpool",
+      "bookmakers_by_field": {
+        "home_odds": "coral",
+        "draw_odds": "coral",
+        "away_odds": "coral",
+        "over15_odds": "coral",
+        "over25_odds": "betsson",
+        "btts_yes_odds": "coral",
+        "btts_no_odds": "coral"
+      },
+      "home_odds": 5.75,
+      "draw_odds": 5.25,
+      "away_odds": 1.44,
+      "over15_odds": 1.1,
+      "over25_odds": 1.38,
+      "btts_yes_odds": 1.55,
+      "btts_no_odds": 2.3,
+      "bookmaker": "coral"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878967",
+      "datetime": "2026-11-04T19:30:00Z",
+      "match": "KV Kortrijk - KV Mechelen",
+      "bookmakers_by_field": {
+        "home_odds": "pinnacle",
+        "draw_odds": "pinnacle",
+        "away_odds": "pinnacle",
+        "over15_odds": "pinnacle",
+        "over25_odds": "pinnacle",
+        "btts_yes_odds": "onexbet",
+        "btts_no_odds": "onexbet"
+      },
+      "home_odds": 2.44,
+      "draw_odds": 3.41,
+      "away_odds": 3.06,
+      "over15_odds": 1.29,
+      "over25_odds": 1.95,
+      "btts_yes_odds": 1.66,
+      "btts_no_odds": 2.09,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915304",
+      "datetime": "2026-11-04T20:00:00Z",
+      "match": "Borussia Dortmund - Real Betis",
+      "bookmakers_by_field": {
+        "home_odds": "unibet_uk",
+        "draw_odds": "unibet_uk",
+        "away_odds": "unibet_uk",
+        "over15_odds": "onexbet",
+        "over25_odds": "betsson",
+        "btts_yes_odds": "onexbet",
+        "btts_no_odds": "onexbet"
+      },
+      "home_odds": 1.75,
+      "draw_odds": 4.0,
+      "away_odds": 4.25,
+      "over15_odds": 1.13,
+      "over25_odds": 1.5,
+      "btts_yes_odds": 1.49,
+      "btts_no_odds": 2.48,
+      "bookmaker": "unibet_uk"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915303",
+      "datetime": "2026-11-04T20:00:00Z",
+      "match": "PSV Eindhoven - Club Brugge",
+      "bookmakers_by_field": {
+        "home_odds": "unibet_uk",
+        "draw_odds": "unibet_uk",
+        "away_odds": "unibet_uk",
+        "over15_odds": "codere_it",
+        "over25_odds": "betsson",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 1.98,
+      "draw_odds": 4.25,
+      "away_odds": 3.1,
+      "over15_odds": 1.09,
+      "over25_odds": 1.37,
+      "btts_yes_odds": 1.36,
+      "btts_no_odds": 3.0,
+      "bookmaker": "unibet_uk"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915306",
+      "datetime": "2026-11-04T20:00:00Z",
+      "match": "RB Leipzig - Manchester City",
+      "bookmakers_by_field": {
+        "home_odds": "betfred_uk",
+        "draw_odds": "betfred_uk",
+        "away_odds": "betfred_uk",
+        "over15_odds": "onexbet",
+        "over25_odds": "betsson",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 5.0,
+      "draw_odds": 5.0,
+      "away_odds": 1.53,
+      "over15_odds": 1.06,
+      "over25_odds": 1.3,
+      "btts_yes_odds": 1.4,
+      "btts_no_odds": 2.75,
+      "bookmaker": "betfred_uk"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915302",
+      "datetime": "2026-11-04T20:00:00Z",
+      "match": "Viking FK - Sabah FK",
+      "bookmakers_by_field": {
+        "home_odds": "betfred_uk",
+        "draw_odds": "betfred_uk",
+        "away_odds": "betfred_uk",
+        "over15_odds": "onexbet",
+        "over25_odds": "betsson",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 1.4,
+      "draw_odds": 5.0,
+      "away_odds": 7.0,
+      "over15_odds": 1.08,
+      "over25_odds": 1.33,
+      "btts_yes_odds": 1.5,
+      "btts_no_odds": 2.5,
+      "bookmaker": "betfred_uk"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841307",
+      "datetime": "2026-11-04T22:30:00Z",
+      "match": "Flamengo - Grêmio",
+      "bookmakers_by_field": {
+        "home_odds": "winamax_fr",
+        "draw_odds": "winamax_fr",
+        "away_odds": "winamax_fr",
+        "over15_odds": "williamhill",
+        "over25_odds": "williamhill",
+        "btts_yes_odds": "williamhill",
+        "btts_no_odds": "williamhill"
+      },
+      "home_odds": 1.12,
+      "draw_odds": 6.5,
+      "away_odds": 9.5,
+      "over15_odds": 1.08,
+      "over25_odds": 1.35,
+      "btts_yes_odds": 1.91,
+      "btts_no_odds": 1.8,
+      "bookmaker": "winamax_fr"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841298",
+      "datetime": "2026-11-05T00:30:00Z",
+      "match": "São Paulo - Corinthians",
+      "bookmakers_by_field": {
+        "home_odds": "marathonbet",
+        "draw_odds": "marathonbet",
+        "away_odds": "marathonbet",
+        "over15_odds": "williamhill",
+        "over25_odds": "marathonbet",
+        "btts_yes_odds": "williamhill",
+        "btts_no_odds": "williamhill"
+      },
+      "home_odds": 2.29,
+      "draw_odds": 3.14,
+      "away_odds": 3.12,
+      "over15_odds": 1.4,
+      "over25_odds": 2.33,
+      "btts_yes_odds": 1.95,
+      "btts_no_odds": 1.75,
+      "bookmaker": "marathonbet"
+    }
+  ]
+}

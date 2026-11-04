@@ -1,0 +1,48 @@
+{
+  "generated_at_utc": "2026-11-04T08:46:29.599322+00:00",
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:uefa.europa:401915551",
+      "league": "uefa.europa",
+      "home": "Stade Rennais",
+      "away": "Olympiacos",
+      "start_utc": "2026-11-04T15:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915301",
+      "league": "uefa.champions",
+      "home": "FC Porto",
+      "away": "Napoli",
+      "start_utc": "2026-11-04T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915305",
+      "league": "uefa.champions",
+      "home": "Lens",
+      "away": "Como",
+      "start_utc": "2026-11-04T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915381",
+      "league": "uefa.champions",
+      "home": "Slavia Prague",
+      "away": "Arsenal",
+      "start_utc": "2026-11-04T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841306",
+      "league": "bra.1",
+      "home": "Athletico-PR",
+      "away": "Vasco da Gama",
+      "start_utc": "2026-11-04T22:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841305",
+      "league": "bra.1",
+      "home": "Botafogo",
+      "away": "Atlético-MG",
+      "start_utc": "2026-11-05T00:30:00Z"
+    }
+  ],
+  "total": 6
+}
