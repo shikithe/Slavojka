@@ -3,6 +3,7 @@
 import argparse
 import json
 import re
+import unicodedata
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from urllib.parse import urlencode
@@ -14,8 +15,8 @@ DOMESTIC=("eng.1","esp.1","ger.1","ita.1","fra.1","ned.1","por.1",
           "bel.1","tur.1","sco.1","aut.1","sui.1","gre.1","den.1",
           "nor.1","swe.1","cze.1","pol.1","ukr.1","cro.1","ser.1")
 def normalize(name):
-    return re.sub(r"[^a-z0-9]","",str(name).casefold()
-                  .replace("ü","u").replace("ö","o").replace("ä","a"))
+    text=unicodedata.normalize("NFKD",str(name).casefold().replace("ı","i").replace("ø","o"))
+    return re.sub(r"[^a-z0-9]","",text.encode("ascii","ignore").decode("ascii"))
 def iso(value):
     return datetime.fromisoformat(str(value).replace("Z","+00:00")).astimezone(timezone.utc)
 def competitors(event):
