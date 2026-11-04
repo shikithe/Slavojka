@@ -1,0 +1,374 @@
+{
+  "schema_version": "listasix-fixed-window-v1",
+  "date": "2026-11-04",
+  "window_start_utc": "2026-11-04T09:00:00+00:00",
+  "window_end_utc": "2026-11-05T08:00:00+00:00",
+  "fixture_count": 15,
+  "fixtures": [
+    {
+      "id": "espn:football:uefa.europa:401915551",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "uefa.europa",
+      "home": "Stade Rennais",
+      "away": "Olympiacos",
+      "start_utc": "2026-11-04T15:30:00Z",
+      "start_sarajevo": "2026-11-04T16:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:uefa.champions:401915383",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "uefa.champions",
+      "home": "AEK Athens",
+      "away": "Real Madrid",
+      "start_utc": "2026-11-04T17:45:00Z",
+      "start_sarajevo": "2026-11-04T18:45:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:uefa.champions:401915382",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "uefa.champions",
+      "home": "Fenerbahce",
+      "away": "Liverpool",
+      "start_utc": "2026-11-04T17:45:00Z",
+      "start_sarajevo": "2026-11-04T18:45:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:bel.1:401878967",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "bel.1",
+      "home": "KV Kortrijk",
+      "away": "KV Mechelen",
+      "start_utc": "2026-11-04T19:30:00Z",
+      "start_sarajevo": "2026-11-04T20:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:uefa.champions:401915304",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "uefa.champions",
+      "home": "Borussia Dortmund",
+      "away": "Real Betis",
+      "start_utc": "2026-11-04T20:00:00Z",
+      "start_sarajevo": "2026-11-04T21:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:uefa.champions:401915301",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "uefa.champions",
+      "home": "FC Porto",
+      "away": "Napoli",
+      "start_utc": "2026-11-04T20:00:00Z",
+      "start_sarajevo": "2026-11-04T21:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:uefa.champions:401915305",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "uefa.champions",
+      "home": "Lens",
+      "away": "Como",
+      "start_utc": "2026-11-04T20:00:00Z",
+      "start_sarajevo": "2026-11-04T21:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:uefa.champions:401915303",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "uefa.champions",
+      "home": "PSV Eindhoven",
+      "away": "Club Brugge",
+      "start_utc": "2026-11-04T20:00:00Z",
+      "start_sarajevo": "2026-11-04T21:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:uefa.champions:401915306",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "uefa.champions",
+      "home": "RB Leipzig",
+      "away": "Manchester City",
+      "start_utc": "2026-11-04T20:00:00Z",
+      "start_sarajevo": "2026-11-04T21:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:uefa.champions:401915381",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "uefa.champions",
+      "home": "Slavia Prague",
+      "away": "Arsenal",
+      "start_utc": "2026-11-04T20:00:00Z",
+      "start_sarajevo": "2026-11-04T21:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:uefa.champions:401915302",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "uefa.champions",
+      "home": "Viking FK",
+      "away": "Sabah FK",
+      "start_utc": "2026-11-04T20:00:00Z",
+      "start_sarajevo": "2026-11-04T21:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:bra.1:401841306",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "bra.1",
+      "home": "Athletico-PR",
+      "away": "Vasco da Gama",
+      "start_utc": "2026-11-04T22:30:00Z",
+      "start_sarajevo": "2026-11-04T23:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:bra.1:401841307",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "bra.1",
+      "home": "Flamengo",
+      "away": "Grêmio",
+      "start_utc": "2026-11-04T22:30:00Z",
+      "start_sarajevo": "2026-11-04T23:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:bra.1:401841305",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "bra.1",
+      "home": "Botafogo",
+      "away": "Atlético-MG",
+      "start_utc": "2026-11-05T00:30:00Z",
+      "start_sarajevo": "2026-11-05T01:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:bra.1:401841298",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "bra.1",
+      "home": "São Paulo",
+      "away": "Corinthians",
+      "start_utc": "2026-11-05T00:30:00Z",
+      "start_sarajevo": "2026-11-05T01:30:00+01:00",
+      "status": "pre"
+    }
+  ],
+  "sources": [
+    {
+      "league": "eng.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "eng.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "esp.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "esp.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ger.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ger.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ita.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ita.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "fra.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "fra.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ned.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ned.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "por.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "por.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "bel.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 1
+    },
+    {
+      "league": "bel.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "tur.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "tur.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "sco.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "sco.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "uefa.champions",
+      "date": "20261104",
+      "status": "ok",
+      "count": 9
+    },
+    {
+      "league": "uefa.champions",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "uefa.europa",
+      "date": "20261104",
+      "status": "ok",
+      "count": 1
+    },
+    {
+      "league": "uefa.europa",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "uefa.europa.conf",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "uefa.europa.conf",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "usa.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "usa.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "bra.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 4
+    },
+    {
+      "league": "bra.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "arg.1",
+      "date": "20261104",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "arg.1",
+      "date": "20261105",
+      "status": "ok",
+      "count": 0
+    }
+  ],
+  "errors": [],
+  "status": "ok",
+  "publication_allowed": false,
+  "window_start_local": "2026-11-04T10:00:00+01:00",
+  "window_end_local": "2026-11-05T09:00:00+01:00",
+  "data_expires_at_utc": "2026-11-05T08:00:00+00:00"
+}
