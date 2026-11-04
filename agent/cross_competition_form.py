@@ -84,16 +84,38 @@ def augment(result, request=fetch, days=120, now=None):
             if not ident:
                 entry["cross_competition_note"]="UEFA team ID unresolved; domestic form not verified"
                 continue
+            # Find the domestic competition through a one-time team directory per league.
             for domestic in DOMESTIC:
-                key=(domestic,ident)
+                directory_key=("teams",domestic)
+                if directory_key not in teams_cache:
+                    try:
+                        teams_cache[directory_key]=request(ROOT+"/"+domestic+"/teams?limit=500")
+                    except Exception:
+                        teams_cache[directory_key]={}
+                directory=teams_cache[directory_key]
+                listed=[]
+                for sport in directory.get("sports",[]):
+                    for grp in sport.get("leagues",[]):
+                        listed.extend(grp.get("teams",[]))
+                known={}
+                for item in listed:
+                    info=item.get("team",item)
+                    if isinstance(info,dict) and info.get("id"):
+                        known[normalize(info.get("displayName"))]=str(info["id"])
+                domestic_id=known.get(normalize(name))
+                if not domestic_id:
+                    continue
+                key=(domestic,domestic_id)
                 if key not in schedules:
                     try:
-                        schedules[key]=request(ROOT+"/"+domestic+"/teams/"+ident+"/schedule?"+
+                        schedules[key]=request(ROOT+"/"+domestic+"/teams/"+domestic_id+"/schedule?"+
                                                urlencode({"season":now.year}))
-                    except Exception:
+                    except Exception as exc:
+                        result["errors"].append({"league":league,"team":name,
+                                                 "stage":"domestic_schedule","source":domestic,
+                                                 "error":str(exc)})
                         schedules[key]={}
                 doc=schedules[key]
-                # Prevent falsely joining clubs with identical numeric IDs across leagues.
                 doc_team=(doc.get("team") or {}).get("displayName")
                 if doc_team and normalize(doc_team)!=normalize(name):
                     continue
@@ -102,23 +124,20 @@ def augment(result, request=fetch, days=120, now=None):
                     if not eventid or eventid in collected:
                         continue
                     try:
-                        eid=iso(event["date"])
-                        if eid>=now:continue
+                        if iso(event["date"])>=now:continue
                         summary_key=(domestic,eventid)
                         if summary_key not in summary_cache:
                             summary_cache[summary_key]=extract_summary(request(
                                 ROOT+"/"+domestic+"/summary?"+urlencode({"event":eventid})))
                         collected[eventid]={"event_id":eventid,"date":event["date"],
-                                           "name":event.get("name"),
-                                           "competition":domestic,
+                                           "name":event.get("name"),"competition":domestic,
                                            "statistics":summary_cache[summary_key]}
                     except Exception as exc:
                         result["errors"].append({"league":league,"team":name,
                                                  "stage":"domestic_summary","event_id":eventid,
                                                  "error":str(exc)})
-                if len(collected)>=target:
-                    # Continue only if no more plausible newer domestic matches would be found.
-                    pass
+                # A club belongs to one domestic top division; stop after finding it.
+                break
             rows=sorted(collected.values(),key=lambda x:x.get("date",""),reverse=True)[:target]
             entry.update({"matches":rows,"found":len(rows),"complete":len(rows)==target,
                           "form_scope":"all verified competitions",
