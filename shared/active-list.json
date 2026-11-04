@@ -92,6 +92,50 @@
       "bookmaker": "unibet_uk"
     },
     {
+      "fixture_id": "espn:football:uefa.champions:401915301",
+      "datetime": "2026-11-04T20:00:00Z",
+      "match": "FC Porto - Napoli",
+      "bookmakers_by_field": {
+        "home_odds": "betfred_uk",
+        "draw_odds": "betfred_uk",
+        "away_odds": "betfred_uk",
+        "over15_odds": "onexbet",
+        "over25_odds": "marathonbet",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 1.91,
+      "draw_odds": 3.75,
+      "away_odds": 3.75,
+      "over15_odds": 1.21,
+      "over25_odds": 1.74,
+      "btts_yes_odds": 1.62,
+      "btts_no_odds": 2.2,
+      "bookmaker": "betfred_uk"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915305",
+      "datetime": "2026-11-04T20:00:00Z",
+      "match": "Lens - Como",
+      "bookmakers_by_field": {
+        "home_odds": "winamax_fr",
+        "draw_odds": "winamax_fr",
+        "away_odds": "winamax_fr",
+        "over15_odds": "onexbet",
+        "over25_odds": "betsson",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 3.2,
+      "draw_odds": 3.7,
+      "away_odds": 1.86,
+      "over15_odds": 1.15,
+      "over25_odds": 1.54,
+      "btts_yes_odds": 1.5,
+      "btts_no_odds": 2.5,
+      "bookmaker": "winamax_fr"
+    },
+    {
       "fixture_id": "espn:football:uefa.champions:401915303",
       "datetime": "2026-11-04T20:00:00Z",
       "match": "PSV Eindhoven - Club Brugge",
@@ -136,6 +180,28 @@
       "bookmaker": "betfred_uk"
     },
     {
+      "fixture_id": "espn:football:uefa.champions:401915381",
+      "datetime": "2026-11-04T20:00:00Z",
+      "match": "Slavia Prague - Arsenal",
+      "bookmakers_by_field": {
+        "home_odds": "winamax_de",
+        "draw_odds": "winamax_de",
+        "away_odds": "winamax_de",
+        "over15_odds": "coolbet",
+        "over25_odds": "gtbets",
+        "btts_yes_odds": "coral",
+        "btts_no_odds": "coral"
+      },
+      "home_odds": 11.0,
+      "draw_odds": 6.5,
+      "away_odds": 1.2,
+      "over15_odds": 1.21,
+      "over25_odds": 1.62,
+      "btts_yes_odds": 2.25,
+      "btts_no_odds": 1.57,
+      "bookmaker": "winamax_de"
+    },
+    {
       "fixture_id": "espn:football:uefa.champions:401915302",
       "datetime": "2026-11-04T20:00:00Z",
       "match": "Viking FK - Sabah FK",
@@ -158,6 +224,28 @@
       "bookmaker": "betfred_uk"
     },
     {
+      "fixture_id": "espn:football:bra.1:401841306",
+      "datetime": "2026-11-04T22:30:00Z",
+      "match": "Athletico-PR - Vasco da Gama",
+      "bookmakers_by_field": {
+        "home_odds": "unibet_fr",
+        "draw_odds": "unibet_fr",
+        "away_odds": "unibet_fr",
+        "over15_odds": "williamhill",
+        "over25_odds": "onexbet",
+        "btts_yes_odds": "onexbet",
+        "btts_no_odds": "onexbet"
+      },
+      "home_odds": 1.81,
+      "draw_odds": 3.1,
+      "away_odds": 3.0,
+      "over15_odds": 1.22,
+      "over25_odds": 1.83,
+      "btts_yes_odds": 1.64,
+      "btts_no_odds": 2.13,
+      "bookmaker": "unibet_fr"
+    },
+    {
       "fixture_id": "espn:football:bra.1:401841307",
       "datetime": "2026-11-04T22:30:00Z",
       "match": "Flamengo - Grêmio",
@@ -178,6 +266,28 @@
       "btts_yes_odds": 1.91,
       "btts_no_odds": 1.8,
       "bookmaker": "winamax_fr"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841305",
+      "datetime": "2026-11-05T00:30:00Z",
+      "match": "Botafogo - Atlético-MG",
+      "bookmakers_by_field": {
+        "home_odds": "marathonbet",
+        "draw_odds": "marathonbet",
+        "away_odds": "marathonbet",
+        "over15_odds": "williamhill",
+        "over25_odds": "marathonbet",
+        "btts_yes_odds": "williamhill",
+        "btts_no_odds": "williamhill"
+      },
+      "home_odds": 1.65,
+      "draw_odds": 3.94,
+      "away_odds": 4.65,
+      "over15_odds": 1.2,
+      "over25_odds": 1.69,
+      "btts_yes_odds": 1.65,
+      "btts_no_odds": 2.15,
+      "bookmaker": "marathonbet"
     },
     {
       "fixture_id": "espn:football:bra.1:401841298",
