@@ -626,6 +626,61 @@
       "odds_away": "ŠK Slovan Bratislava",
       "decision": "matched",
       "issue_number": 5
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915301",
+      "event_id": "ba82ee37f64a66a30d85f8b90082ec2f",
+      "league": "uefa.champions",
+      "collector_home": "FC Porto",
+      "collector_away": "Napoli",
+      "odds_home": "Porto",
+      "odds_away": "Napoli",
+      "decision": "matched",
+      "issue_number": 6
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915305",
+      "event_id": "013cecbf40f5b4530342632a80f35b00",
+      "league": "uefa.champions",
+      "collector_home": "Lens",
+      "collector_away": "Como",
+      "odds_home": "RC Lens",
+      "odds_away": "Como",
+      "decision": "matched",
+      "issue_number": 6
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915381",
+      "event_id": "a5910ae3b314876faea7f5c03b8aeaad",
+      "league": "uefa.champions",
+      "collector_home": "Slavia Prague",
+      "collector_away": "Arsenal",
+      "odds_home": "Slavia Praha",
+      "odds_away": "Arsenal",
+      "decision": "matched",
+      "issue_number": 6
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841306",
+      "event_id": "9c9b60495c9667d04bcdba59483a623f",
+      "league": "bra.1",
+      "collector_home": "Athletico-PR",
+      "collector_away": "Vasco da Gama",
+      "odds_home": "Atletico Paranaense",
+      "odds_away": "Vasco da Gama",
+      "decision": "matched",
+      "issue_number": 6
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841305",
+      "event_id": "e766824cd38eb33865f45b707c35467e",
+      "league": "bra.1",
+      "collector_home": "Botafogo",
+      "collector_away": "Atlético-MG",
+      "odds_home": "Botafogo",
+      "odds_away": "Atletico Mineiro",
+      "decision": "matched",
+      "issue_number": 6
     }
   ]
 }

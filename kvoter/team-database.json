@@ -799,6 +799,66 @@
         "github-issue-5"
       ],
       "verified": true
+    },
+    {
+      "id": "uefa.champions-fc-porto",
+      "league": "uefa.champions",
+      "names": [
+        "FC Porto",
+        "Porto"
+      ],
+      "sources": [
+        "github-issue-6"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.champions-lens",
+      "league": "uefa.champions",
+      "names": [
+        "Lens",
+        "RC Lens"
+      ],
+      "sources": [
+        "github-issue-6"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.champions-slavia-prague",
+      "league": "uefa.champions",
+      "names": [
+        "Slavia Prague",
+        "Slavia Praha"
+      ],
+      "sources": [
+        "github-issue-6"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bra.1-athletico-pr",
+      "league": "bra.1",
+      "names": [
+        "Athletico-PR",
+        "Atletico Paranaense"
+      ],
+      "sources": [
+        "github-issue-6"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bra.1-atletico-mg",
+      "league": "bra.1",
+      "names": [
+        "Atlético-MG",
+        "Atletico Mineiro"
+      ],
+      "sources": [
+        "github-issue-6"
+      ],
+      "verified": true
     }
   ]
 }
