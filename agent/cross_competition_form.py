@@ -57,11 +57,11 @@ def augment(result, request=fetch, days=120, now=None):
         current={}
         for f in result.get("fixtures",[]):
             if f.get("league")!=league:continue
-            key=f.get("start_utc","")[:10].replace("-","")
-            if not key:continue
+            key=(league,f.get("start_utc","")[:10].replace("-",""))
+            if not key[1]:continue
             if key not in teams_cache:
                 try:
-                    teams_cache[key]=request(ROOT+"/"+league+"/scoreboard?"+urlencode({"dates":key,"limit":500}))
+                    teams_cache[key]=request(ROOT+"/"+league+"/scoreboard?"+urlencode({"dates":key[1],"limit":500}))
                 except Exception as exc:
                     result["errors"].append({"league":league,"stage":"uefa_team_ids","error":str(exc)})
                     teams_cache[key]={}
