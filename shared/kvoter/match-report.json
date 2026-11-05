@@ -1,0 +1,2229 @@
+{
+  "generated_at_utc": "2026-11-05T09:28:26.751297+00:00",
+  "source": "the-odds-api-v4",
+  "total": 39,
+  "matched": 3,
+  "unavailable": 36,
+  "matched_fixtures": [
+    {
+      "fixture_id": "espn:football:arg.1:401841667",
+      "league": "arg.1",
+      "home": "Gimnasia La Plata",
+      "away": "Belgrano (Córdoba)",
+      "start_utc": "2026-11-05T22:15:00Z",
+      "provider_events": [
+        "68f644784f86f60e3602791054c87c24"
+      ],
+      "bookmakers": [
+        "betclic_fr",
+        "betfair_ex_eu",
+        "betfair_ex_uk",
+        "betfair_sb_uk",
+        "betfred_uk",
+        "betonlineag",
+        "betsson",
+        "betway",
+        "boylesports",
+        "codere_it",
+        "ladbrokes_uk",
+        "leovegas_se",
+        "livescorebet",
+        "marathonbet",
+        "nordicbet",
+        "onexbet",
+        "paddypower",
+        "pinnacle",
+        "skybet",
+        "smarkets",
+        "unibet_fr",
+        "unibet_se",
+        "unibet_uk",
+        "virginbet",
+        "winamax_de",
+        "winamax_fr"
+      ],
+      "odds_offers": [
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "pinnacle",
+          "updated_at_utc": "2026-11-05T09:28:17Z",
+          "markets": {
+            "1X2": {
+              "away": 3.47,
+              "home": 2.35,
+              "draw": 3.0
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "nordicbet",
+          "updated_at_utc": "2026-11-05T09:27:36Z",
+          "markets": {
+            "1X2": {
+              "away": 3.25,
+              "home": 2.25,
+              "draw": 3.2
+            },
+            "3+": {
+              "over": 2.02
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "betsson",
+          "updated_at_utc": "2026-11-05T09:28:18Z",
+          "markets": {
+            "1X2": {
+              "away": 3.15,
+              "home": 2.32,
+              "draw": 3.2
+            },
+            "3+": {
+              "over": 2.02
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "betonlineag",
+          "updated_at_utc": "2026-11-05T09:27:58Z",
+          "markets": {
+            "1X2": {
+              "away": 3.55,
+              "home": 2.28,
+              "draw": 3.18
+            },
+            "3+": {
+              "over": 1.98
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "betfred_uk",
+          "updated_at_utc": "2026-11-05T09:27:56Z",
+          "markets": {
+            "1X2": {
+              "away": 3.0,
+              "home": 2.25,
+              "draw": 3.1
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "livescorebet",
+          "updated_at_utc": "2026-11-05T09:28:17Z",
+          "markets": {
+            "1X2": {
+              "away": 2.95,
+              "home": 2.2,
+              "draw": 3.1
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "leovegas_se",
+          "updated_at_utc": "2026-11-05T09:27:56Z",
+          "markets": {
+            "1X2": {
+              "away": 2.88,
+              "home": 2.16,
+              "draw": 3.05
+            },
+            "3+": {
+              "over": 2.0
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "unibet_se",
+          "updated_at_utc": "2026-11-05T09:28:20Z",
+          "markets": {
+            "1X2": {
+              "away": 3.1,
+              "home": 2.3,
+              "draw": 3.25
+            },
+            "3+": {
+              "over": 2.05
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "virginbet",
+          "updated_at_utc": "2026-11-05T09:28:18Z",
+          "markets": {
+            "1X2": {
+              "away": 2.95,
+              "home": 2.2,
+              "draw": 3.1
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "winamax_fr",
+          "updated_at_utc": "2026-11-05T09:28:19Z",
+          "markets": {
+            "1X2": {
+              "away": 2.9,
+              "home": 2.1,
+              "draw": 3.05
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "winamax_de",
+          "updated_at_utc": "2026-11-05T09:27:56Z",
+          "markets": {
+            "1X2": {
+              "away": 3.05,
+              "home": 2.15,
+              "draw": 3.2
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "betclic_fr",
+          "updated_at_utc": "2026-11-05T09:28:08Z",
+          "markets": {
+            "1X2": {
+              "away": 3.05,
+              "home": 2.1,
+              "draw": 3.08
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "unibet_fr",
+          "updated_at_utc": "2026-11-05T09:27:55Z",
+          "markets": {
+            "1X2": {
+              "away": 2.85,
+              "home": 1.95,
+              "draw": 2.9
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "unibet_uk",
+          "updated_at_utc": "2026-11-05T09:27:35Z",
+          "markets": {
+            "1X2": {
+              "away": 3.25,
+              "home": 2.25,
+              "draw": 3.25
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "codere_it",
+          "updated_at_utc": "2026-11-05T09:27:55Z",
+          "markets": {
+            "1X2": {
+              "away": 3.25,
+              "home": 2.29,
+              "draw": 3.15
+            },
+            "3+": {
+              "over": 1.97
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "onexbet",
+          "updated_at_utc": "2026-11-05T09:25:04Z",
+          "markets": {
+            "1X2": {
+              "away": 3.31,
+              "home": 2.29,
+              "draw": 3.19
+            },
+            "3+": {
+              "over": 2.04
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "betfair_ex_uk",
+          "updated_at_utc": "2026-11-05T09:27:57Z",
+          "markets": {
+            "1X2": {
+              "away": 3.45,
+              "home": 2.34,
+              "draw": 3.25
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "betfair_ex_eu",
+          "updated_at_utc": "2026-11-05T09:28:17Z",
+          "markets": {
+            "1X2": {
+              "away": 3.35,
+              "home": 2.38,
+              "draw": 3.25
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "paddypower",
+          "updated_at_utc": "2026-11-05T09:28:17Z",
+          "markets": {
+            "1X2": {
+              "away": 3.0,
+              "home": 2.2,
+              "draw": 3.2
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "skybet",
+          "updated_at_utc": "2026-11-05T09:28:15Z",
+          "markets": {
+            "1X2": {
+              "away": 2.9,
+              "home": 2.2,
+              "draw": 3.1
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "betfair_sb_uk",
+          "updated_at_utc": "2026-11-05T09:27:39Z",
+          "markets": {
+            "1X2": {
+              "away": 3.0,
+              "home": 2.25,
+              "draw": 3.3
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "smarkets",
+          "updated_at_utc": "2026-11-05T09:27:58Z",
+          "markets": {
+            "1X2": {
+              "away": 3.4,
+              "home": 2.32,
+              "draw": 3.2
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "boylesports",
+          "updated_at_utc": "2026-11-05T09:26:34Z",
+          "markets": {
+            "1X2": {
+              "away": 3.25,
+              "home": 2.15,
+              "draw": 3.0
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "betway",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "1X2": {
+              "away": 3.3,
+              "home": 2.3,
+              "draw": 3.0
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "ladbrokes_uk",
+          "updated_at_utc": "2026-11-05T09:28:17Z",
+          "markets": {
+            "1X2": {
+              "away": 3.2,
+              "home": 2.25,
+              "draw": 3.3
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "marathonbet",
+          "updated_at_utc": "2026-11-05T09:28:23Z",
+          "markets": {
+            "1X2": {
+              "away": 3.24,
+              "home": 2.24,
+              "draw": 3.12
+            },
+            "3+": {
+              "over": 2.01
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "pinnacle",
+          "updated_at_utc": "2026-11-05T09:28:17Z",
+          "markets": {
+            "3+": {
+              "over": 2.07
+            },
+            "2+": {
+              "over": 1.31
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "betfred_uk",
+          "updated_at_utc": "2026-11-05T09:27:56Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.8,
+              "no": 1.91
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "livescorebet",
+          "updated_at_utc": "2026-11-05T09:28:17Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.76,
+              "no": 1.92
+            },
+            "3+": {
+              "over": 2.0
+            },
+            "2+": {
+              "over": 1.3
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "virginbet",
+          "updated_at_utc": "2026-11-05T09:28:18Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.77,
+              "no": 1.93
+            },
+            "3+": {
+              "over": 2.0
+            },
+            "2+": {
+              "over": 1.3
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "codere_it",
+          "updated_at_utc": "2026-11-05T09:27:55Z",
+          "markets": {
+            "2+": {
+              "over": 1.31
+            },
+            "3+": {
+              "over": 1.97
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "onexbet",
+          "updated_at_utc": "2026-11-05T09:25:04Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.76,
+              "no": 1.96
+            }
+          }
+        },
+        {
+          "event_id": "68f644784f86f60e3602791054c87c24",
+          "bookmaker": "ladbrokes_uk",
+          "updated_at_utc": "2026-11-05T09:28:17Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.8,
+              "no": 1.91
+            },
+            "2+": {
+              "over": 1.3
+            },
+            "3+": {
+              "over": 2.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841300",
+      "league": "bra.1",
+      "home": "Palmeiras",
+      "away": "Remo",
+      "start_utc": "2026-11-05T22:30:00Z",
+      "provider_events": [
+        "5070809b922fa7079c68e5ed111cbbd7"
+      ],
+      "bookmakers": [
+        "betanysports",
+        "betclic_fr",
+        "betfair_ex_eu",
+        "betfair_ex_uk",
+        "betfair_sb_uk",
+        "betfred_uk",
+        "betonlineag",
+        "betsson",
+        "betway",
+        "boylesports",
+        "casumo",
+        "codere_it",
+        "coolbet",
+        "coral",
+        "grosvenor",
+        "gtbets",
+        "ladbrokes_uk",
+        "leovegas",
+        "leovegas_se",
+        "livescorebet",
+        "marathonbet",
+        "matchbook",
+        "mybookieag",
+        "nordicbet",
+        "onexbet",
+        "paddypower",
+        "pinnacle",
+        "pmu_fr",
+        "skybet",
+        "smarkets",
+        "sport888",
+        "tipico_de",
+        "unibet_fr",
+        "unibet_nl",
+        "unibet_se",
+        "unibet_uk",
+        "virginbet",
+        "williamhill",
+        "winamax_de",
+        "winamax_fr"
+      ],
+      "odds_offers": [
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "unibet_fr",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "home": 1.13,
+              "away": 8.6,
+              "draw": 4.9
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "sport888",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 11.0,
+              "draw": 6.0
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "leovegas",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 11.0,
+              "draw": 6.5
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "williamhill",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 11.0,
+              "draw": 6.0
+            },
+            "3+": {
+              "over": 1.5
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "winamax_de",
+          "updated_at_utc": "2026-11-05T09:27:13Z",
+          "markets": {
+            "1X2": {
+              "home": 1.2,
+              "away": 9.5,
+              "draw": 6.25
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "winamax_fr",
+          "updated_at_utc": "2026-11-05T09:27:35Z",
+          "markets": {
+            "1X2": {
+              "home": 1.17,
+              "away": 8.5,
+              "draw": 5.7
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "onexbet",
+          "updated_at_utc": "2026-11-05T09:18:57Z",
+          "markets": {
+            "1X2": {
+              "home": 1.24,
+              "away": 12.1,
+              "draw": 6.48
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "betclic_fr",
+          "updated_at_utc": "2026-11-05T09:23:46Z",
+          "markets": {
+            "1X2": {
+              "home": 1.18,
+              "away": 10.0,
+              "draw": 5.6
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "mybookieag",
+          "updated_at_utc": "2026-11-05T09:28:00Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 11.5,
+              "draw": 6.4
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "paddypower",
+          "updated_at_utc": "2026-11-05T09:26:30Z",
+          "markets": {
+            "1X2": {
+              "home": 1.17,
+              "away": 13.0,
+              "draw": 6.0
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "skybet",
+          "updated_at_utc": "2026-11-05T09:24:39Z",
+          "markets": {
+            "1X2": {
+              "home": 1.17,
+              "away": 10.5,
+              "draw": 5.75
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "marathonbet",
+          "updated_at_utc": "2026-11-05T09:27:59Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 11.25,
+              "draw": 6.0
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "livescorebet",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "1X2": {
+              "home": 1.18,
+              "away": 11.5,
+              "draw": 6.1
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "grosvenor",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "home": 1.19,
+              "away": 12.0,
+              "draw": 6.25
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "unibet_se",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "home": 1.2,
+              "away": 12.5,
+              "draw": 6.4
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "casumo",
+          "updated_at_utc": "2026-11-05T09:28:15Z",
+          "markets": {
+            "1X2": {
+              "home": 1.2,
+              "away": 12.5,
+              "draw": 6.4
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "pmu_fr",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "home": 1.16,
+              "away": 11.0,
+              "draw": 6.0
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "leovegas_se",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "home": 1.18,
+              "away": 11.5,
+              "draw": 6.0
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "unibet_nl",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "home": 1.2,
+              "away": 12.5,
+              "draw": 6.4
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "virginbet",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "home": 1.18,
+              "away": 11.5,
+              "draw": 6.1
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "smarkets",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "home": 1.23,
+              "away": 15.5,
+              "draw": 7.0
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "betfred_uk",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 10.0,
+              "draw": 5.5
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "nordicbet",
+          "updated_at_utc": "2026-11-05T09:27:55Z",
+          "markets": {
+            "1X2": {
+              "home": 1.2,
+              "away": 12.5,
+              "draw": 5.7
+            },
+            "3+": {
+              "over": 1.52
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "betsson",
+          "updated_at_utc": "2026-11-05T09:27:54Z",
+          "markets": {
+            "1X2": {
+              "home": 1.21,
+              "away": 12.5,
+              "draw": 5.9
+            },
+            "3+": {
+              "over": 1.51
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "coral",
+          "updated_at_utc": "2026-11-05T09:26:29Z",
+          "markets": {
+            "1X2": {
+              "home": 1.25,
+              "away": 11.0,
+              "draw": 6.5
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "ladbrokes_uk",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "home": 1.25,
+              "away": 11.0,
+              "draw": 6.5
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "pinnacle",
+          "updated_at_utc": "2026-11-05T09:28:15Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 12.88,
+              "draw": 7.02
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "codere_it",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "home": 1.23,
+              "away": 12.0,
+              "draw": 6.2
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "unibet_uk",
+          "updated_at_utc": "2026-11-05T09:28:19Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 12.0,
+              "draw": 6.0
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "coolbet",
+          "updated_at_utc": "2026-11-05T09:27:56Z",
+          "markets": {
+            "1X2": {
+              "home": 1.23,
+              "away": 12.9,
+              "draw": 6.25
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "matchbook",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "home": 1.24,
+              "away": 16.0,
+              "draw": 7.0
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "gtbets",
+          "updated_at_utc": "2026-11-05T09:27:55Z",
+          "markets": {
+            "1X2": {
+              "home": 1.21,
+              "away": 11.86,
+              "draw": 6.07
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "tipico_de",
+          "updated_at_utc": "2026-11-05T09:27:54Z",
+          "markets": {
+            "1X2": {
+              "home": 1.15,
+              "away": 12.0,
+              "draw": 6.5
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "betonlineag",
+          "updated_at_utc": "2026-11-05T09:27:54Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 13.0,
+              "draw": 7.15
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "betfair_sb_uk",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "home": 1.17,
+              "away": 14.0,
+              "draw": 6.5
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "betway",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 11.0,
+              "draw": 6.5
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "boylesports",
+          "updated_at_utc": "2026-11-05T09:28:21Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 11.0,
+              "draw": 5.5
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "betanysports",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "home": 1.22,
+              "away": 13.0,
+              "draw": 7.15
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "betfair_ex_eu",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "home": 1.23,
+              "away": 16.0,
+              "draw": 7.0
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "betfair_ex_uk",
+          "updated_at_utc": "2026-11-05T09:28:15Z",
+          "markets": {
+            "1X2": {
+              "home": 1.23,
+              "away": 16.0,
+              "draw": 7.0
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "leovegas",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "BTTS": {
+              "yes": 2.1,
+              "no": 1.68
+            },
+            "2+": {
+              "over": 1.15
+            },
+            "3+": {
+              "over": 1.52
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "williamhill",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "BTTS": {
+              "yes": 2.0,
+              "no": 1.75
+            },
+            "2+": {
+              "over": 1.15
+            },
+            "3+": {
+              "over": 1.5
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "onexbet",
+          "updated_at_utc": "2026-11-05T09:18:57Z",
+          "markets": {
+            "BTTS": {
+              "yes": 2.03,
+              "no": 1.7
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "livescorebet",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "BTTS": {
+              "yes": 2.14,
+              "no": 1.62
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "virginbet",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "BTTS": {
+              "yes": 2.14,
+              "no": 1.62
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "betfred_uk",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "BTTS": {
+              "yes": 2.1,
+              "no": 1.67
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "coral",
+          "updated_at_utc": "2026-11-05T09:26:29Z",
+          "markets": {
+            "BTTS": {
+              "yes": 2.15,
+              "no": 1.65
+            },
+            "3+": {
+              "over": 1.53
+            },
+            "2+": {
+              "over": 1.15
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "ladbrokes_uk",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "BTTS": {
+              "yes": 2.15,
+              "no": 1.61
+            },
+            "3+": {
+              "over": 1.53
+            },
+            "2+": {
+              "over": 1.15
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "pinnacle",
+          "updated_at_utc": "2026-11-05T09:28:15Z",
+          "markets": {
+            "3+": {
+              "over": 1.54
+            },
+            "2+": {
+              "over": 1.18
+            },
+            "BTTS": {
+              "yes": 2.19,
+              "no": 1.71
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "codere_it",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "2+": {
+              "over": 1.15
+            },
+            "3+": {
+              "over": 1.5
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "coolbet",
+          "updated_at_utc": "2026-11-05T09:27:56Z",
+          "markets": {
+            "2+": {
+              "over": 1.17
+            },
+            "3+": {
+              "over": 1.55
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "matchbook",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "BTTS": {
+              "yes": 2.18,
+              "no": 1.78
+            }
+          }
+        },
+        {
+          "event_id": "5070809b922fa7079c68e5ed111cbbd7",
+          "bookmaker": "betfair_ex_uk",
+          "updated_at_utc": "2026-11-05T09:27:26Z",
+          "markets": {
+            "2+": {
+              "over": 1.19
+            },
+            "3+": {
+              "over": 1.57
+            },
+            "BTTS": {
+              "yes": 2.22,
+              "no": 1.78
+            }
+          }
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841303",
+      "league": "bra.1",
+      "home": "Cruzeiro",
+      "away": "Bahia",
+      "start_utc": "2026-11-06T00:30:00Z",
+      "provider_events": [
+        "754fd36ffe7b5a7fcd922576da8b0c8a"
+      ],
+      "bookmakers": [
+        "betanysports",
+        "betclic_fr",
+        "betfair_ex_eu",
+        "betfair_ex_uk",
+        "betfair_sb_uk",
+        "betfred_uk",
+        "betonlineag",
+        "betsson",
+        "betway",
+        "boylesports",
+        "casumo",
+        "codere_it",
+        "coolbet",
+        "coral",
+        "grosvenor",
+        "gtbets",
+        "ladbrokes_uk",
+        "leovegas",
+        "leovegas_se",
+        "livescorebet",
+        "marathonbet",
+        "matchbook",
+        "mybookieag",
+        "nordicbet",
+        "onexbet",
+        "paddypower",
+        "pinnacle",
+        "pmu_fr",
+        "skybet",
+        "smarkets",
+        "sport888",
+        "tipico_de",
+        "unibet_fr",
+        "unibet_nl",
+        "unibet_se",
+        "unibet_uk",
+        "virginbet",
+        "williamhill",
+        "winamax_de",
+        "winamax_fr"
+      ],
+      "odds_offers": [
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "unibet_fr",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "away": 3.9,
+              "home": 1.49,
+              "draw": 3.5
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "williamhill",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "1X2": {
+              "away": 4.2,
+              "home": 1.67,
+              "draw": 3.9
+            },
+            "3+": {
+              "over": 1.53
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "sport888",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "away": 4.2,
+              "home": 1.67,
+              "draw": 3.9
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "leovegas",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "1X2": {
+              "away": 4.5,
+              "home": 1.68,
+              "draw": 4.1
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "winamax_de",
+          "updated_at_utc": "2026-11-05T09:27:13Z",
+          "markets": {
+            "1X2": {
+              "away": 4.2,
+              "home": 1.62,
+              "draw": 4.0
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "winamax_fr",
+          "updated_at_utc": "2026-11-05T09:27:35Z",
+          "markets": {
+            "1X2": {
+              "away": 4.0,
+              "home": 1.58,
+              "draw": 3.8
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "onexbet",
+          "updated_at_utc": "2026-11-05T09:18:57Z",
+          "markets": {
+            "1X2": {
+              "away": 4.43,
+              "home": 1.72,
+              "draw": 4.28
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "marathonbet",
+          "updated_at_utc": "2026-11-05T09:27:59Z",
+          "markets": {
+            "1X2": {
+              "away": 4.3,
+              "home": 1.67,
+              "draw": 4.15
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "mybookieag",
+          "updated_at_utc": "2026-11-05T09:28:00Z",
+          "markets": {
+            "1X2": {
+              "away": 4.6,
+              "home": 1.68,
+              "draw": 4.1
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "paddypower",
+          "updated_at_utc": "2026-11-05T09:26:30Z",
+          "markets": {
+            "1X2": {
+              "away": 4.75,
+              "home": 1.6,
+              "draw": 3.8
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "skybet",
+          "updated_at_utc": "2026-11-05T09:24:39Z",
+          "markets": {
+            "1X2": {
+              "away": 4.5,
+              "home": 1.57,
+              "draw": 3.75
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "betclic_fr",
+          "updated_at_utc": "2026-11-05T09:23:46Z",
+          "markets": {
+            "1X2": {
+              "away": 4.2,
+              "home": 1.59,
+              "draw": 3.75
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "smarkets",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "away": 4.8,
+              "home": 1.73,
+              "draw": 4.4
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "betfred_uk",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "away": 4.2,
+              "home": 1.67,
+              "draw": 4.0
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "leovegas_se",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "away": 4.35,
+              "home": 1.62,
+              "draw": 3.8
+            },
+            "3+": {
+              "over": 1.5
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "unibet_nl",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "away": 4.6,
+              "home": 1.66,
+              "draw": 4.0
+            },
+            "3+": {
+              "over": 1.54
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "unibet_se",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "away": 4.6,
+              "home": 1.66,
+              "draw": 4.0
+            },
+            "3+": {
+              "over": 1.54
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "pmu_fr",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "away": 4.3,
+              "home": 1.6,
+              "draw": 3.75
+            },
+            "3+": {
+              "over": 1.43
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "casumo",
+          "updated_at_utc": "2026-11-05T09:28:15Z",
+          "markets": {
+            "1X2": {
+              "away": 4.6,
+              "home": 1.66,
+              "draw": 4.0
+            },
+            "3+": {
+              "over": 1.54
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "grosvenor",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "away": 4.5,
+              "home": 1.64,
+              "draw": 3.9
+            },
+            "3+": {
+              "over": 1.54
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "livescorebet",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "1X2": {
+              "away": 4.4,
+              "home": 1.63,
+              "draw": 3.85
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "virginbet",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "away": 4.4,
+              "home": 1.63,
+              "draw": 3.85
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "nordicbet",
+          "updated_at_utc": "2026-11-05T09:27:55Z",
+          "markets": {
+            "1X2": {
+              "away": 4.4,
+              "home": 1.62,
+              "draw": 4.05
+            },
+            "3+": {
+              "over": 1.52
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "betsson",
+          "updated_at_utc": "2026-11-05T09:27:54Z",
+          "markets": {
+            "1X2": {
+              "away": 4.45,
+              "home": 1.65,
+              "draw": 4.15
+            },
+            "3+": {
+              "over": 1.51
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "coral",
+          "updated_at_utc": "2026-11-05T09:26:29Z",
+          "markets": {
+            "1X2": {
+              "away": 4.33,
+              "home": 1.73,
+              "draw": 4.2
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "ladbrokes_uk",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "away": 4.33,
+              "home": 1.7,
+              "draw": 4.0
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "pinnacle",
+          "updated_at_utc": "2026-11-05T09:28:15Z",
+          "markets": {
+            "1X2": {
+              "away": 4.64,
+              "home": 1.68,
+              "draw": 4.34
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "coolbet",
+          "updated_at_utc": "2026-11-05T09:27:56Z",
+          "markets": {
+            "1X2": {
+              "away": 4.66,
+              "home": 1.7,
+              "draw": 4.05
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "unibet_uk",
+          "updated_at_utc": "2026-11-05T09:28:19Z",
+          "markets": {
+            "1X2": {
+              "away": 4.5,
+              "home": 1.67,
+              "draw": 4.0
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "matchbook",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "away": 4.8,
+              "home": 1.73,
+              "draw": 4.4
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "tipico_de",
+          "updated_at_utc": "2026-11-05T09:27:54Z",
+          "markets": {
+            "1X2": {
+              "away": 4.6,
+              "home": 1.55,
+              "draw": 4.1
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "codere_it",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "away": 4.6,
+              "home": 1.69,
+              "draw": 3.95
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "betonlineag",
+          "updated_at_utc": "2026-11-05T09:27:54Z",
+          "markets": {
+            "1X2": {
+              "away": 4.65,
+              "home": 1.69,
+              "draw": 4.39
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "gtbets",
+          "updated_at_utc": "2026-11-05T09:27:55Z",
+          "markets": {
+            "1X2": {
+              "away": 4.43,
+              "home": 1.7,
+              "draw": 4.06
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "betway",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "1X2": {
+              "away": 4.33,
+              "home": 1.67,
+              "draw": 4.2
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "betfair_sb_uk",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "away": 4.75,
+              "home": 1.62,
+              "draw": 4.0
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "boylesports",
+          "updated_at_utc": "2026-11-05T09:28:21Z",
+          "markets": {
+            "1X2": {
+              "away": 4.2,
+              "home": 1.62,
+              "draw": 4.0
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "betanysports",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "away": 4.65,
+              "home": 1.69,
+              "draw": 4.39
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "betfair_ex_uk",
+          "updated_at_utc": "2026-11-05T09:28:15Z",
+          "markets": {
+            "1X2": {
+              "away": 4.8,
+              "home": 1.73,
+              "draw": 4.4
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "betfair_ex_eu",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "1X2": {
+              "away": 4.8,
+              "home": 1.73,
+              "draw": 4.4
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "williamhill",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.53,
+              "no": 2.38
+            },
+            "3+": {
+              "over": 1.53
+            },
+            "2+": {
+              "over": 1.17
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "leovegas",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.55,
+              "no": 2.35
+            },
+            "2+": {
+              "over": 1.17
+            },
+            "3+": {
+              "over": 1.55
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "onexbet",
+          "updated_at_utc": "2026-11-05T09:18:57Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.52,
+              "no": 2.37
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "betfred_uk",
+          "updated_at_utc": "2026-11-05T09:27:33Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.53,
+              "no": 2.38
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "livescorebet",
+          "updated_at_utc": "2026-11-05T09:27:34Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.54,
+              "no": 2.28
+            },
+            "2+": {
+              "over": 1.13
+            },
+            "3+": {
+              "over": 1.5
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "virginbet",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.54,
+              "no": 2.28
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "coral",
+          "updated_at_utc": "2026-11-05T09:26:29Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.57,
+              "no": 2.25
+            },
+            "2+": {
+              "over": 1.15
+            },
+            "3+": {
+              "over": 1.53
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "ladbrokes_uk",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.57,
+              "no": 2.25
+            },
+            "2+": {
+              "over": 1.15
+            },
+            "3+": {
+              "over": 1.53
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "pinnacle",
+          "updated_at_utc": "2026-11-05T09:28:20Z",
+          "markets": {
+            "3+": {
+              "over": 1.56
+            },
+            "2+": {
+              "over": 1.17
+            },
+            "BTTS": {
+              "yes": 1.57,
+              "no": 2.45
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "coolbet",
+          "updated_at_utc": "2026-11-05T09:27:56Z",
+          "markets": {
+            "2+": {
+              "over": 1.17
+            },
+            "3+": {
+              "over": 1.54
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "matchbook",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "BTTS": {
+              "yes": 1.64,
+              "no": 2.44
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "codere_it",
+          "updated_at_utc": "2026-11-05T09:28:16Z",
+          "markets": {
+            "2+": {
+              "over": 1.15
+            },
+            "3+": {
+              "over": 1.52
+            }
+          }
+        },
+        {
+          "event_id": "754fd36ffe7b5a7fcd922576da8b0c8a",
+          "bookmaker": "betfair_ex_uk",
+          "updated_at_utc": "2026-11-05T09:28:00Z",
+          "markets": {
+            "2+": {
+              "over": 1.2
+            },
+            "3+": {
+              "over": 1.59
+            },
+            "BTTS": {
+              "yes": 1.65,
+              "no": 2.46
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "unmatched_fixtures": [
+    {
+      "fixture_id": "espn:football:uefa.europa:401915534",
+      "league": "uefa.europa",
+      "home": "AC Milan",
+      "away": "Ferencvaros",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915538",
+      "league": "uefa.europa",
+      "home": "Anderlecht",
+      "away": "RB Salzburg",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915526",
+      "league": "uefa.europa",
+      "home": "Crystal Palace",
+      "away": "TSG Hoffenheim",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915536",
+      "league": "uefa.europa",
+      "home": "Levski Sofia",
+      "away": "Jagiellonia Bialystok",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915527",
+      "league": "uefa.europa",
+      "home": "Lillestrom",
+      "away": "Viktoria Plzen",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915535",
+      "league": "uefa.europa",
+      "home": "NEC Nijmegen",
+      "away": "Omonia Nicosia",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915537",
+      "league": "uefa.europa",
+      "home": "Real Sociedad",
+      "away": "Lyon",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915528",
+      "league": "uefa.europa",
+      "home": "Sparta Prague",
+      "away": "AFC Bournemouth",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915831",
+      "league": "uefa.europa.conf",
+      "home": "AGF",
+      "away": "Braga",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915830",
+      "league": "uefa.europa.conf",
+      "home": "Atalanta",
+      "away": "Kairat Almaty",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915829",
+      "league": "uefa.europa.conf",
+      "home": "FC Midtjylland",
+      "away": "Ajax Amsterdam",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915828",
+      "league": "uefa.europa.conf",
+      "home": "FC Thun",
+      "away": "Heart of Midlothian",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915826",
+      "league": "uefa.europa.conf",
+      "home": "KuPS Kuopio",
+      "away": "KAA Gent",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915742",
+      "league": "uefa.europa.conf",
+      "home": "Lincoln Red Imps",
+      "away": "Hajduk Split",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915741",
+      "league": "uefa.europa.conf",
+      "home": "Mjällby AIF",
+      "away": "Borac Banja Luka",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915827",
+      "league": "uefa.europa.conf",
+      "home": "Red Star Belgrade",
+      "away": "Inter D'Escaldes",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915825",
+      "league": "uefa.europa.conf",
+      "home": "Trabzonspor",
+      "away": "SC Freiburg",
+      "start_utc": "2026-11-05T17:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841659",
+      "league": "arg.1",
+      "home": "Aldosivi",
+      "away": "River Plate",
+      "start_utc": "2026-11-05T18:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915529",
+      "league": "uefa.europa",
+      "home": "AZ Alkmaar",
+      "away": "Juventus",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915533",
+      "league": "uefa.europa",
+      "home": "Bayer Leverkusen",
+      "away": "Marseille",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915525",
+      "league": "uefa.europa",
+      "home": "Benfica",
+      "away": "Lech Poznan",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915531",
+      "league": "uefa.europa",
+      "home": "Celta Vigo",
+      "away": "Union St.-Gilloise",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915522",
+      "league": "uefa.europa",
+      "home": "Celtic",
+      "away": "Besiktas",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915532",
+      "league": "uefa.europa",
+      "home": "Hapoel Be'er",
+      "away": "OFI Crete",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915524",
+      "league": "uefa.europa",
+      "home": "SK Sturm Graz",
+      "away": "NK Celje",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915523",
+      "league": "uefa.europa",
+      "home": "Sunderland",
+      "away": "Dinamo Zagreb",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915530",
+      "league": "uefa.europa",
+      "home": "Torreense",
+      "away": "Ararat-Armenia",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915824",
+      "league": "uefa.europa.conf",
+      "home": "AS Monaco",
+      "away": "FC Nordsjælland",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915817",
+      "league": "uefa.europa.conf",
+      "home": "CSU Craiova",
+      "away": "Egnatia",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915740",
+      "league": "uefa.europa.conf",
+      "home": "F.C. København",
+      "away": "Iberia 1999",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915823",
+      "league": "uefa.europa.conf",
+      "home": "FC Lugano",
+      "away": "Kauno Zalgiris",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915822",
+      "league": "uefa.europa.conf",
+      "home": "FC Twente",
+      "away": "Pafos",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915821",
+      "league": "uefa.europa.conf",
+      "home": "Getafe",
+      "away": "Brighton & Hove Albion",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915819",
+      "league": "uefa.europa.conf",
+      "home": "Panathinaikos",
+      "away": "CSKA Sofia",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915818",
+      "league": "uefa.europa.conf",
+      "home": "Riga FC",
+      "away": "Jablonec",
+      "start_utc": "2026-11-05T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915820",
+      "league": "uefa.europa.conf",
+      "home": "Sint-Truidense",
+      "away": "SK Brann",
+      "start_utc": "2026-11-05T20:00:00Z"
+    }
+  ],
+  "publication_allowed": false,
+  "bank_modified": false,
+  "tickets_published": false,
+  "provider_status": "api_fetched",
+  "provider_coverage": {
+    "arg.1": {
+      "api_events": 2,
+      "window_events": 2
+    },
+    "bra.1": {
+      "api_events": 2,
+      "window_events": 2
+    }
+  },
+  "provider_errors": []
+}

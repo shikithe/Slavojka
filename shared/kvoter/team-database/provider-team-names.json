@@ -1249,6 +1249,54 @@
       "source": "the-odds-api-v4",
       "first_seen_utc": "2026-11-04T08:46:28.584743+00:00",
       "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Aldosivi Mar del Plata",
+      "normalized": "aldosivi mar del plata",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:28:26.639148+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Gimnasia La Plata",
+      "normalized": "gimnasia la plata",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:28:26.639148+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bra.1",
+      "name": "Palmeiras",
+      "normalized": "palmeiras",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:28:26.639148+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bra.1",
+      "name": "Remo",
+      "normalized": "remo",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:28:26.639148+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bra.1",
+      "name": "Cruzeiro",
+      "normalized": "cruzeiro",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:28:26.639148+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bra.1",
+      "name": "Bahia",
+      "normalized": "bahia",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:28:26.639148+00:00",
+      "verified_identity": false
     }
   ]
 }

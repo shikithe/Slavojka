@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-05",
+  "expires_at": "2026-11-06T08:59:00+01:00",
+  "publication_allowed": true,
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:arg.1:401841667",
+      "datetime": "2026-11-05T22:15:00Z",
+      "match": "Gimnasia La Plata - Belgrano (Córdoba)",
+      "bookmakers_by_field": {
+        "home_odds": "pinnacle",
+        "draw_odds": "pinnacle",
+        "away_odds": "pinnacle",
+        "over15_odds": "pinnacle",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 2.35,
+      "draw_odds": 3.0,
+      "away_odds": 3.47,
+      "over15_odds": 1.31,
+      "over25_odds": 2.02,
+      "btts_yes_odds": 1.8,
+      "btts_no_odds": 1.91,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841300",
+      "datetime": "2026-11-05T22:30:00Z",
+      "match": "Palmeiras - Remo",
+      "bookmakers_by_field": {
+        "home_odds": "unibet_fr",
+        "draw_odds": "unibet_fr",
+        "away_odds": "unibet_fr",
+        "over15_odds": "leovegas",
+        "over25_odds": "williamhill",
+        "btts_yes_odds": "leovegas",
+        "btts_no_odds": "leovegas"
+      },
+      "home_odds": 1.13,
+      "draw_odds": 4.9,
+      "away_odds": 8.6,
+      "over15_odds": 1.15,
+      "over25_odds": 1.5,
+      "btts_yes_odds": 2.1,
+      "btts_no_odds": 1.68,
+      "bookmaker": "unibet_fr"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841303",
+      "datetime": "2026-11-06T00:30:00Z",
+      "match": "Cruzeiro - Bahia",
+      "bookmakers_by_field": {
+        "home_odds": "unibet_fr",
+        "draw_odds": "unibet_fr",
+        "away_odds": "unibet_fr",
+        "over15_odds": "williamhill",
+        "over25_odds": "williamhill",
+        "btts_yes_odds": "williamhill",
+        "btts_no_odds": "williamhill"
+      },
+      "home_odds": 1.49,
+      "draw_odds": 3.5,
+      "away_odds": 3.9,
+      "over15_odds": 1.17,
+      "over25_odds": 1.53,
+      "btts_yes_odds": 1.53,
+      "btts_no_odds": 2.38,
+      "bookmaker": "unibet_fr"
+    }
+  ]
+}
