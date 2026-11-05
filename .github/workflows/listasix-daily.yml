@@ -117,8 +117,21 @@ jobs:
           from pathlib import Path
           report=json.loads(Path("shared/kvoter/match-report.json").read_text())
           assert report.get("provider_status")=="api_fetched", "OddsAPI fetch failed"
-          assert not report.get("provider_errors"), "OddsAPI league errors - retry later"
-          print("LISTASIX_KVOTER_OK",report["matched"],report["unavailable"])
+          errors=report.get("provider_errors",[])
+          fallback=report.get("provider_cached_fallback",{})
+          if errors:
+              print("ODDSAPI_PARTIAL_FAILURE_RECOVERED",errors,"cached_quotes_by_league",fallback)
+              failed_leagues={x.get("league") for x in errors}
+              assert all(fallback.get(league,0)>0 for league in failed_leagues), (
+                  "A failed league lacks recent cached quotes; preserve the existing public offer")
+              old=Path("docs/active-list.json")
+              if old.exists():
+                  previous=json.loads(old.read_text(encoding="utf-8"))
+                  if previous.get("date")==json.loads(Path("shared/collector-feed.json").read_text())["date"]:
+                      assert report["matched"]>=len(previous.get("fixtures",[])), (
+                          "Partial API failure would shrink a previously verified active-list")
+          print("LISTASIX_KVOTER_OK",report["matched"],report["unavailable"],
+                "partial_api_errors",len(errors))
           PY
       - name: Build manual review candidates
         if: steps.clock.outputs.run == 'true'
