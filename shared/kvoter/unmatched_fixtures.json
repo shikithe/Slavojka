@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-05T09:28:26.751297+00:00",
+  "generated_at_utc": "2026-11-05T09:32:34.582241+00:00",
   "fixtures": [
     {
       "fixture_id": "espn:football:uefa.europa:401915534",
@@ -119,13 +119,6 @@
       "home": "Trabzonspor",
       "away": "SC Freiburg",
       "start_utc": "2026-11-05T17:45:00Z"
-    },
-    {
-      "fixture_id": "espn:football:arg.1:401841659",
-      "league": "arg.1",
-      "home": "Aldosivi",
-      "away": "River Plate",
-      "start_utc": "2026-11-05T18:00:00Z"
     },
     {
       "fixture_id": "espn:football:uefa.europa:401915529",
@@ -254,5 +247,5 @@
       "start_utc": "2026-11-05T20:00:00Z"
     }
   ],
-  "total": 36
+  "total": 35
 }

@@ -1,23 +1,5 @@
 {
-  "generated_at_utc": "2026-11-05T09:28:26.871802+00:00",
-  "total": 1,
-  "fixtures": [
-    {
-      "fixture_id": "espn:football:arg.1:401841659",
-      "league": "arg.1",
-      "home": "Aldosivi",
-      "away": "River Plate",
-      "start_utc": "2026-11-05T18:00:00Z",
-      "candidates": [
-        {
-          "event_id": "15d62dc210bdd9cdfc3a985397de2a2d",
-          "home": "Aldosivi Mar del Plata",
-          "away": "River Plate",
-          "start_utc": "2026-11-05T18:00:00Z",
-          "league": "arg.1",
-          "similarity": 0.767
-        }
-      ]
-    }
-  ]
+  "generated_at_utc": "2026-11-05T09:32:34.655479+00:00",
+  "total": 0,
+  "fixtures": []
 }

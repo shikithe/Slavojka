@@ -4,6 +4,28 @@
   "publication_allowed": true,
   "fixtures": [
     {
+      "fixture_id": "espn:football:arg.1:401841659",
+      "datetime": "2026-11-05T18:00:00Z",
+      "match": "Aldosivi - River Plate",
+      "bookmakers_by_field": {
+        "home_odds": "pinnacle",
+        "draw_odds": "pinnacle",
+        "away_odds": "pinnacle",
+        "over15_odds": "pinnacle",
+        "over25_odds": "pinnacle",
+        "btts_yes_odds": "livescorebet",
+        "btts_no_odds": "livescorebet"
+      },
+      "home_odds": 7.27,
+      "draw_odds": 4.65,
+      "away_odds": 1.44,
+      "over15_odds": 1.27,
+      "over25_odds": 1.88,
+      "btts_yes_odds": 2.07,
+      "btts_no_odds": 1.66,
+      "bookmaker": "pinnacle"
+    },
+    {
       "fixture_id": "espn:football:arg.1:401841667",
       "datetime": "2026-11-05T22:15:00Z",
       "match": "Gimnasia La Plata - Belgrano (Córdoba)",
