@@ -1,4 +1,7 @@
 import unittest
+import json
+import tempfile
+from pathlib import Path
 from datetime import datetime,timezone
 from agent.cross_competition_form import augment
 
@@ -38,4 +41,12 @@ class CrossCompetitionTests(unittest.TestCase):
         self.assertEqual(entry["matches"][0]["event_id"],"3")
         self.assertTrue(all(x["date"]<NOW.isoformat().replace("+00:00","Z") for x in entry["matches"]))
         self.assertEqual(set(entry["competitions_used"]),{"esp.1","uefa.champions"})
+    def test_json_output_is_valid_document(self):
+        # Regression: do not write escaped '\\n' after JSON document.
+        with tempfile.TemporaryDirectory() as d:
+            path=Path(d)/"history.json"
+            payload={"leagues":{},"fixtures":[]}
+            path.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+            self.assertEqual(json.loads(path.read_text()),payload)
+
 if __name__=="__main__":unittest.main()
