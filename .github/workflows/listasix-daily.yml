@@ -110,6 +110,7 @@ jobs:
         run: |
           test -n "$THE_ODDS_API_KEY" || { echo "::error::THE_ODDS_API_KEY repository secret missing"; exit 1; }
           mkdir -p shared/kvoter
+          python3 -m unittest -v test_oddsapi_uefa_markets.py
           python3 -m kvoter.the_odds_api --feed shared/agent/history-h2h.json --output shared/kvoter/match-report.json --raw-output shared/kvoter/league-odds-raw.json --offers-output shared/kvoter/provider-offers.json
           python3 - <<'PY'
           import json
