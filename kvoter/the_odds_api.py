@@ -117,6 +117,48 @@ def collect(history,key,regions="uk,eu",fetch=None,delay=0):
         if delay: time.sleep(delay)
     return offers,raw_events,coverage,errors
 
+def recover_recent_cached_offers(history, cached, errors, now=None, max_age_minutes=180):
+    """Only recover API-failed leagues from verified, recent same-day OddsAPI snapshots.
+
+    Do not fabricate quotes or transfer an old season's event onto a current fixture.
+    The downstream identity matcher still validates fixture league, both team aliases,
+    and kickoff before any public quote can be emitted.
+    """
+    from datetime import timedelta
+    now=now or datetime.now(timezone.utc)
+    failed={e.get("league") for e in errors if e.get("league") in LEAGUES}
+    slots={}
+    for fixture in history.get("fixtures",[]):
+        league=fixture.get("league")
+        kick=utc(fixture.get("start_utc"))
+        if league in failed and kick:
+            slots.setdefault(league,[]).append(kick)
+    selected=[]
+    for offer in cached:
+        if not isinstance(offer,dict) or offer.get("league") not in failed:
+            continue
+        league=offer["league"]
+        kick=utc(offer.get("start_utc"))
+        stamp=utc(offer.get("updated_at_utc"))
+        if not kick or not stamp or not offer.get("bookmaker") or not offer.get("event_id"):
+            continue
+        if not (now-timedelta(minutes=max_age_minutes)<=stamp<=now+timedelta(minutes=5)):
+            continue
+        if not isinstance(offer.get("markets"),dict) or not offer["markets"]:
+            continue
+        if any(abs((kick - slot).total_seconds())<=5400 for slot in slots.get(league,[])):
+            selected.append(offer)
+    recovered={league:sum(o["league"]==league for o in selected) for league in failed}
+    return selected,recovered
+
+
+def load_cached_offers(path):
+    try:
+        data=json.loads(Path(path).read_text(encoding="utf-8"))
+        return data.get("offers",[]) if isinstance(data,dict) else []
+    except (OSError,ValueError,TypeError):
+        return []
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--feed",default="/shared/agent/history-h2h.json")
@@ -127,9 +169,18 @@ def main():
     a=p.parse_args()
     history=json.loads(Path(a.feed).read_text(encoding="utf-8"))
     key=os.getenv("THE_ODDS_API_KEY","").strip()
+    cached_before_fetch=load_cached_offers(a.offers_output)
+    fallback={}
     if key:
         offers,raw_events,coverage,errors=collect(history,key,a.regions,delay=0.2)
         status="api_fetched"
+        if errors:
+            recovered,fallback=recover_recent_cached_offers(history,cached_before_fetch,errors)
+            offers+=recovered
+            for league,n in fallback.items():
+                coverage.setdefault(league,{})["cached_fallback_offers"]=n
+            print("ODDSAPI_LEAGUE_ERRORS",json.dumps(errors,ensure_ascii=False))
+            print("ODDSAPI_RECENT_CACHE_RECOVERY",json.dumps(fallback))
     else:
         offers,raw_events,coverage,errors=[],[],{},[{"stage":"configuration","error":"THE_ODDS_API_KEY not configured"}]
         status="missing_api_key"
@@ -146,6 +197,7 @@ def main():
     result["provider_status"]=status
     result["provider_coverage"]=coverage
     result["provider_errors"]=errors
+    result["provider_cached_fallback"]=fallback
     out=Path(a.output);out.parent.mkdir(parents=True,exist_ok=True)
     temp=out.with_suffix(".tmp")
     temp.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
