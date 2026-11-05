@@ -1,0 +1,324 @@
+{
+  "date": "2026-11-05",
+  "generated_at_utc": "2026-11-05T08:45:37.821891+00:00",
+  "window_start_utc": "2026-11-05T09:00:00+00:00",
+  "window_end_utc": "2026-11-06T08:00:00+00:00",
+  "expires_at_utc": "2026-11-06T08:00:00+00:00",
+  "football_candidates": [
+    {
+      "fixture_id": "espn:football:uefa.europa:401915534",
+      "home": "AC Milan",
+      "away": "Ferencvaros",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915538",
+      "home": "Anderlecht",
+      "away": "RB Salzburg",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915526",
+      "home": "Crystal Palace",
+      "away": "TSG Hoffenheim",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915536",
+      "home": "Levski Sofia",
+      "away": "Jagiellonia Bialystok",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915527",
+      "home": "Lillestrom",
+      "away": "Viktoria Plzen",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915535",
+      "home": "NEC Nijmegen",
+      "away": "Omonia Nicosia",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915537",
+      "home": "Real Sociedad",
+      "away": "Lyon",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915528",
+      "home": "Sparta Prague",
+      "away": "AFC Bournemouth",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915831",
+      "home": "AGF",
+      "away": "Braga",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915830",
+      "home": "Atalanta",
+      "away": "Kairat Almaty",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915829",
+      "home": "FC Midtjylland",
+      "away": "Ajax Amsterdam",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915828",
+      "home": "FC Thun",
+      "away": "Heart of Midlothian",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915826",
+      "home": "KuPS Kuopio",
+      "away": "KAA Gent",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915742",
+      "home": "Lincoln Red Imps",
+      "away": "Hajduk Split",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915741",
+      "home": "Mjällby AIF",
+      "away": "Borac Banja Luka",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915827",
+      "home": "Red Star Belgrade",
+      "away": "Inter D'Escaldes",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915825",
+      "home": "Trabzonspor",
+      "away": "SC Freiburg",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841659",
+      "home": "Aldosivi",
+      "away": "River Plate",
+      "league": "arg.1",
+      "start_utc": "2026-11-05T18:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915529",
+      "home": "AZ Alkmaar",
+      "away": "Juventus",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915533",
+      "home": "Bayer Leverkusen",
+      "away": "Marseille",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915525",
+      "home": "Benfica",
+      "away": "Lech Poznan",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915531",
+      "home": "Celta Vigo",
+      "away": "Union St.-Gilloise",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915522",
+      "home": "Celtic",
+      "away": "Besiktas",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915532",
+      "home": "Hapoel Be'er",
+      "away": "OFI Crete",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915524",
+      "home": "SK Sturm Graz",
+      "away": "NK Celje",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915523",
+      "home": "Sunderland",
+      "away": "Dinamo Zagreb",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915530",
+      "home": "Torreense",
+      "away": "Ararat-Armenia",
+      "league": "uefa.europa",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915824",
+      "home": "AS Monaco",
+      "away": "FC Nordsjælland",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915817",
+      "home": "CSU Craiova",
+      "away": "Egnatia",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915740",
+      "home": "F.C. København",
+      "away": "Iberia 1999",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915823",
+      "home": "FC Lugano",
+      "away": "Kauno Zalgiris",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915822",
+      "home": "FC Twente",
+      "away": "Pafos",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915821",
+      "home": "Getafe",
+      "away": "Brighton & Hove Albion",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915819",
+      "home": "Panathinaikos",
+      "away": "CSKA Sofia",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915818",
+      "home": "Riga FC",
+      "away": "Jablonec",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915820",
+      "home": "Sint-Truidense",
+      "away": "SK Brann",
+      "league": "uefa.europa.conf",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841667",
+      "home": "Gimnasia La Plata",
+      "away": "Belgrano (Córdoba)",
+      "league": "arg.1",
+      "start_utc": "2026-11-05T22:15:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841300",
+      "home": "Palmeiras",
+      "away": "Remo",
+      "league": "bra.1",
+      "start_utc": "2026-11-05T22:30:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841303",
+      "home": "Cruzeiro",
+      "away": "Bahia",
+      "league": "bra.1",
+      "start_utc": "2026-11-06T00:30:00Z",
+      "sport": "football"
+    }
+  ],
+  "nba_games": [],
+  "errors": [],
+  "publication_allowed": false
+}
