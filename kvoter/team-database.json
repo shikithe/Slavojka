@@ -871,6 +871,402 @@
         "github-issue-7"
       ],
       "verified": true
+    },
+    {
+      "id": "uefa.europa-ferencvaros",
+      "league": "uefa.europa",
+      "names": [
+        "Ferencvaros",
+        "Ferencváros TC"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa-rb-salzburg",
+      "league": "uefa.europa",
+      "names": [
+        "RB Salzburg",
+        "Salzburg"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa-levski-sofia",
+      "league": "uefa.europa",
+      "names": [
+        "Levski Sofia",
+        "PFC Levski Sofia"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa-jagiellonia-bialystok",
+      "league": "uefa.europa",
+      "names": [
+        "Jagiellonia Bialystok",
+        "Jagiellonia Białystok"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa-omonia-nicosia",
+      "league": "uefa.europa",
+      "names": [
+        "Omonia Nicosia",
+        "Omonoia FC"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa-afc-bournemouth",
+      "league": "uefa.europa",
+      "names": [
+        "AFC Bournemouth",
+        "Bournemouth"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-agf",
+      "league": "uefa.europa.conf",
+      "names": [
+        "AGF",
+        "AGF Aarhus"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-braga",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Braga",
+        "SC Braga"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-atalanta",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Atalanta",
+        "Atalanta BC"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-kairat-almaty",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Kairat Almaty",
+        "FC Kairat"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-ajax-amsterdam",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Ajax Amsterdam",
+        "Ajax"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-heart-of-midlothian",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Heart of Midlothian",
+        "Hearts"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-kaa-gent",
+      "league": "uefa.europa.conf",
+      "names": [
+        "KAA Gent",
+        "Gent"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-lincoln-red-imps",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Lincoln Red Imps",
+        "Lincoln Red Imps FC"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-borac-banja-luka",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Borac Banja Luka",
+        "FK Borac Banja Luka"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-inter-d-escaldes",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Inter D'Escaldes",
+        "Inter Club d'Escaldes"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa-union-st-gilloise",
+      "league": "uefa.europa",
+      "names": [
+        "Union St.-Gilloise",
+        "Union Saint-Gilloise"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa-besiktas",
+      "league": "uefa.europa",
+      "names": [
+        "Besiktas",
+        "Besiktas JK"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa-hapoel-be-er",
+      "league": "uefa.europa",
+      "names": [
+        "Hapoel Be'er",
+        "Hapoel Be'er Sheva"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa-ararat-armenia",
+      "league": "uefa.europa",
+      "names": [
+        "Ararat-Armenia",
+        "FC Ararat-Armenia"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-fc-nordsjælland",
+      "league": "uefa.europa.conf",
+      "names": [
+        "FC Nordsjælland",
+        "FC Nordsjaelland"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-csu-craiova",
+      "league": "uefa.europa.conf",
+      "names": [
+        "CSU Craiova",
+        "Universitatea Craiova"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-egnatia",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Egnatia",
+        "KF Egnatia"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-f-c-københavn",
+      "league": "uefa.europa.conf",
+      "names": [
+        "F.C. København",
+        "FC Copenhagen"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-iberia-1999",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Iberia 1999",
+        "FC Iberia 1999"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-kauno-zalgiris",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Kauno Zalgiris",
+        "FK Kauno Žalgiris"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-fc-twente",
+      "league": "uefa.europa.conf",
+      "names": [
+        "FC Twente",
+        "FC Twente Enschede"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-pafos",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Pafos",
+        "Pafos FC"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-brighton-hove-albion",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Brighton & Hove Albion",
+        "Brighton and Hove Albion"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-panathinaikos",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Panathinaikos",
+        "Panathinaikos FC"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-cska-sofia",
+      "league": "uefa.europa.conf",
+      "names": [
+        "CSKA Sofia",
+        "PFC CSKA Sofia"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-jablonec",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Jablonec",
+        "FK Jablonec"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "uefa.europa.conf-sint-truidense",
+      "league": "uefa.europa.conf",
+      "names": [
+        "Sint-Truidense",
+        "Sint Truiden"
+      ],
+      "sources": [
+        "github-issue-8"
+      ],
+      "verified": true
     }
   ]
 }
