@@ -1,6 +1,7 @@
 import unittest
 from urllib.parse import urlparse,parse_qs
-from kvoter.the_odds_api import collect,parse_bookmaker,LEAGUES
+from datetime import datetime,timezone
+from kvoter.the_odds_api import collect,parse_bookmaker,LEAGUES,recover_recent_cached_offers
 
 class OddsApiEuropeTests(unittest.TestCase):
     def test_uefa_competitions_are_requested(self):
@@ -22,6 +23,39 @@ class OddsApiEuropeTests(unittest.TestCase):
         for url in seen:
             params=parse_qs(urlparse(url).query)
             self.assertEqual(params["markets"],["h2h,totals"])
+    def test_cached_verified_quotes_survive_transient_europa_api_error(self):
+        now=datetime(2026,11,5,10,40,tzinfo=timezone.utc)
+        history={"fixtures":[{"league":"uefa.europa","start_utc":"2026-11-05T17:45:00Z"},
+                             {"league":"uefa.europa.conf","start_utc":"2026-11-05T20:00:00Z"}]}
+        old=[{"event_id":"e11","league":"uefa.europa","bookmaker":"old-book",
+              "home":"Milan","away":"Ferencváros","start_utc":"2026-11-05T17:45:00Z",
+              "updated_at_utc":"2026-11-05T09:59:19Z","markets":{"3+":{"over":1.92}}},
+             {"event_id":"e12","league":"uefa.europa.conf","bookmaker":"old-book",
+              "home":"Team A","away":"Team B","start_utc":"2026-11-05T20:00:00Z",
+              "updated_at_utc":"2026-11-05T09:59:19Z","markets":{"1X2":{"home":1.55}}}]
+        recovered,counts=recover_recent_cached_offers(history,old,
+                     [{"league":"uefa.europa","error":"HTTP 429"}],now=now)
+        self.assertEqual(counts,{"uefa.europa":1})
+        self.assertEqual(len(recovered),1)
+        self.assertEqual(recovered[0]["event_id"],"e11")
+
+    def test_stale_and_wrong_kickoff_cache_rejected(self):
+        now=datetime(2026,11,5,10,40,tzinfo=timezone.utc)
+        history={"fixtures":[{"league":"uefa.europa",
+                               "start_utc":"2026-11-05T17:45:00Z"}]}
+        old=[{"event_id":"yesterday","league":"uefa.europa","bookmaker":"book",
+              "start_utc":"2026-11-05T17:45:00Z",
+              "updated_at_utc":"2026-11-04T10:40:00Z",
+              "markets":{"3+":{"over":2.0}}},
+             {"event_id":"wrong-match","league":"uefa.europa","bookmaker":"book",
+              "start_utc":"2026-11-05T22:15:00Z",
+              "updated_at_utc":"2026-11-05T09:59:19Z",
+              "markets":{"1X2":{"home":2.0}}}]
+        recovered,counts=recover_recent_cached_offers(history,old,
+                     [{"league":"uefa.europa","error":"HTTP 503"}],now=now)
+        self.assertEqual(recovered,[])
+        self.assertEqual(counts,{"uefa.europa":0})
+
     def test_goal_totals_and_btts_mapping(self):
         event={"id":"e","home_team":"Home FC","away_team":"Away FC",
                "commence_time":"2026-11-05T17:45:00Z"}
