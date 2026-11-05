@@ -156,7 +156,7 @@ def main():
     augment(data,days=args.days)
     output=Path(args.output)
     output.parent.mkdir(parents=True,exist_ok=True)
-    output.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+    output.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     for league in EUROPE & data.get("leagues",{}).keys():
         teams=data["leagues"][league]["teams"]
         print("CROSS_COMPETITION",league,"complete",sum(t["complete"] for t in teams.values()),"of",len(teams))
