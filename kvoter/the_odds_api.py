@@ -27,6 +27,8 @@ LEAGUES={
 "por.1":"soccer_portugal_primeira_liga","bel.1":"soccer_belgium_first_div",
 "sco.1":"soccer_spl","tur.1":"soccer_turkey_super_league",
 "uefa.champions":"soccer_uefa_champs_league",
+"uefa.europa":"soccer_uefa_europa_league",
+"uefa.europa.conf":"soccer_uefa_europa_conference_league",
 "bra.1":"soccer_brazil_campeonato","arg.1":"soccer_argentina_primera_division",
 "usa.1":"soccer_usa_mls",
 }
