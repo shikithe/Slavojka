@@ -4,6 +4,94 @@
   "publication_allowed": true,
   "fixtures": [
     {
+      "fixture_id": "espn:football:uefa.europa:401915534",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "AC Milan - Ferencvaros",
+      "bookmakers_by_field": {
+        "home_odds": "winamax_de",
+        "draw_odds": "winamax_de",
+        "away_odds": "winamax_de",
+        "over15_odds": "pinnacle",
+        "over25_odds": "betsson",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 1.29,
+      "draw_odds": 5.7,
+      "away_odds": 8.0,
+      "over15_odds": 1.15,
+      "over25_odds": 1.47,
+      "btts_yes_odds": 1.8,
+      "btts_no_odds": 1.91,
+      "bookmaker": "winamax_de"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915831",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "AGF - Braga",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "livescorebet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 3.8,
+      "draw_odds": 3.3,
+      "away_odds": 1.85,
+      "over15_odds": 1.25,
+      "over25_odds": 1.88,
+      "btts_yes_odds": 1.72,
+      "btts_no_odds": 1.98,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915538",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "Anderlecht - RB Salzburg",
+      "bookmakers_by_field": {
+        "home_odds": "winamax_de",
+        "draw_odds": "winamax_de",
+        "away_odds": "winamax_de",
+        "over15_odds": "pinnacle",
+        "over25_odds": "betsson",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 1.92,
+      "draw_odds": 3.85,
+      "away_odds": 3.4,
+      "over15_odds": 1.18,
+      "over25_odds": 1.58,
+      "btts_yes_odds": 1.53,
+      "btts_no_odds": 2.38,
+      "bookmaker": "winamax_de"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915830",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "Atalanta - Kairat Almaty",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 1.13,
+      "draw_odds": 7.5,
+      "away_odds": 14.0,
+      "over15_odds": 1.07,
+      "over25_odds": 1.29,
+      "btts_yes_odds": 2.02,
+      "btts_no_odds": 1.7,
+      "bookmaker": "virginbet"
+    },
+    {
       "fixture_id": "espn:football:uefa.europa:401915526",
       "datetime": "2026-11-05T17:45:00Z",
       "match": "Crystal Palace - TSG Hoffenheim",
@@ -23,6 +111,94 @@
       "over25_odds": 1.44,
       "btts_yes_odds": 1.44,
       "btts_no_odds": 2.62,
+      "bookmaker": "winamax_fr"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915829",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "FC Midtjylland - Ajax Amsterdam",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 2.55,
+      "draw_odds": 3.45,
+      "away_odds": 2.33,
+      "over15_odds": 1.12,
+      "over25_odds": 1.44,
+      "btts_yes_odds": 1.41,
+      "btts_no_odds": 2.63,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915828",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "FC Thun - Heart of Midlothian",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 2.23,
+      "draw_odds": 3.45,
+      "away_odds": 2.7,
+      "over15_odds": 1.12,
+      "over25_odds": 1.5,
+      "btts_yes_odds": 1.41,
+      "btts_no_odds": 2.63,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915826",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "KuPS Kuopio - KAA Gent",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 4.8,
+      "draw_odds": 3.6,
+      "away_odds": 1.62,
+      "over15_odds": 1.27,
+      "over25_odds": 1.88,
+      "btts_yes_odds": 1.85,
+      "btts_no_odds": 1.83,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915536",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "Levski Sofia - Jagiellonia Bialystok",
+      "bookmakers_by_field": {
+        "home_odds": "winamax_fr",
+        "draw_odds": "winamax_fr",
+        "away_odds": "winamax_fr",
+        "over15_odds": "pinnacle",
+        "over25_odds": "pinnacle",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 1.92,
+      "draw_odds": 3.3,
+      "away_odds": 3.3,
+      "over15_odds": 1.29,
+      "over25_odds": 1.94,
+      "btts_yes_odds": 1.73,
+      "btts_no_odds": 2.0,
       "bookmaker": "winamax_fr"
     },
     {
@@ -48,6 +224,72 @@
       "bookmaker": "winamax_fr"
     },
     {
+      "fixture_id": "espn:football:uefa.europa.conf:401915742",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "Lincoln Red Imps - Hajduk Split",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 8.0,
+      "draw_odds": 4.6,
+      "away_odds": 1.32,
+      "over15_odds": 1.19,
+      "over25_odds": 1.68,
+      "btts_yes_odds": 2.0,
+      "btts_no_odds": 1.7,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915741",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "Mjällby AIF - Borac Banja Luka",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 2.16,
+      "draw_odds": 3.1,
+      "away_odds": 3.1,
+      "over15_odds": 1.3,
+      "over25_odds": 1.92,
+      "btts_yes_odds": 1.76,
+      "btts_no_odds": 1.93,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915535",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "NEC Nijmegen - Omonia Nicosia",
+      "bookmakers_by_field": {
+        "home_odds": "winamax_fr",
+        "draw_odds": "winamax_fr",
+        "away_odds": "winamax_fr",
+        "over15_odds": "pinnacle",
+        "over25_odds": "leovegas",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 1.7,
+      "draw_odds": 3.8,
+      "away_odds": 3.65,
+      "over15_odds": 1.2,
+      "over25_odds": 1.55,
+      "btts_yes_odds": 1.53,
+      "btts_no_odds": 2.38,
+      "bookmaker": "winamax_fr"
+    },
+    {
       "fixture_id": "espn:football:uefa.europa:401915537",
       "datetime": "2026-11-05T17:45:00Z",
       "match": "Real Sociedad - Lyon",
@@ -67,6 +309,50 @@
       "over25_odds": 1.5,
       "btts_yes_odds": 1.53,
       "btts_no_odds": 2.38,
+      "bookmaker": "winamax_fr"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915827",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "Red Star Belgrade - Inter D'Escaldes",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 1.05,
+      "draw_odds": 10.5,
+      "away_odds": 23.0,
+      "over15_odds": 1.06,
+      "over25_odds": 1.24,
+      "btts_yes_odds": 2.55,
+      "btts_no_odds": 1.43,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915528",
+      "datetime": "2026-11-05T17:45:00Z",
+      "match": "Sparta Prague - AFC Bournemouth",
+      "bookmakers_by_field": {
+        "home_odds": "winamax_fr",
+        "draw_odds": "winamax_fr",
+        "away_odds": "winamax_fr",
+        "over15_odds": "pinnacle",
+        "over25_odds": "betsson",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 5.6,
+      "draw_odds": 4.5,
+      "away_odds": 1.36,
+      "over15_odds": 1.18,
+      "over25_odds": 1.54,
+      "btts_yes_odds": 1.73,
+      "btts_no_odds": 2.0,
       "bookmaker": "winamax_fr"
     },
     {
@@ -112,6 +398,28 @@
       "btts_yes_odds": 2.07,
       "btts_no_odds": 1.66,
       "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915824",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "AS Monaco - FC Nordsjælland",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "leovegas",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 1.4,
+      "draw_odds": 4.4,
+      "away_odds": 6.0,
+      "over15_odds": 1.11,
+      "over25_odds": 1.41,
+      "btts_yes_odds": 1.54,
+      "btts_no_odds": 2.3,
+      "bookmaker": "virginbet"
     },
     {
       "fixture_id": "espn:football:uefa.europa:401915529",
@@ -180,6 +488,226 @@
       "bookmaker": "unibet_fr"
     },
     {
+      "fixture_id": "espn:football:uefa.europa.conf:401915817",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "CSU Craiova - Egnatia",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 1.36,
+      "draw_odds": 4.4,
+      "away_odds": 7.5,
+      "over15_odds": 1.17,
+      "over25_odds": 1.68,
+      "btts_yes_odds": 1.87,
+      "btts_no_odds": 1.81,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915531",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "Celta Vigo - Union St.-Gilloise",
+      "bookmakers_by_field": {
+        "home_odds": "betfred_uk",
+        "draw_odds": "betfred_uk",
+        "away_odds": "betfred_uk",
+        "over15_odds": "pinnacle",
+        "over25_odds": "pinnacle",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 2.3,
+      "draw_odds": 3.5,
+      "away_odds": 3.0,
+      "over15_odds": 1.27,
+      "over25_odds": 1.91,
+      "btts_yes_odds": 1.67,
+      "btts_no_odds": 2.1,
+      "bookmaker": "betfred_uk"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915522",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "Celtic - Besiktas",
+      "bookmakers_by_field": {
+        "home_odds": "winamax_de",
+        "draw_odds": "winamax_de",
+        "away_odds": "winamax_de",
+        "over15_odds": "leovegas",
+        "over25_odds": "betsson",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 2.85,
+      "draw_odds": 3.9,
+      "away_odds": 2.1,
+      "over15_odds": 1.14,
+      "over25_odds": 1.48,
+      "btts_yes_odds": 1.44,
+      "btts_no_odds": 2.62,
+      "bookmaker": "winamax_de"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915740",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "F.C. København - Iberia 1999",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "leovegas",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 1.13,
+      "draw_odds": 7.0,
+      "away_odds": 14.0,
+      "over15_odds": 1.13,
+      "over25_odds": 1.49,
+      "btts_yes_odds": 2.14,
+      "btts_no_odds": 1.61,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915823",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "FC Lugano - Kauno Zalgiris",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 1.15,
+      "draw_odds": 6.75,
+      "away_odds": 12.5,
+      "over15_odds": 1.07,
+      "over25_odds": 1.32,
+      "btts_yes_odds": 1.98,
+      "btts_no_odds": 1.71,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915822",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "FC Twente - Pafos",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 1.25,
+      "draw_odds": 5.5,
+      "away_odds": 8.5,
+      "over15_odds": 1.07,
+      "over25_odds": 1.32,
+      "btts_yes_odds": 1.65,
+      "btts_no_odds": 2.07,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915821",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "Getafe - Brighton & Hove Albion",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 5.8,
+      "draw_odds": 3.7,
+      "away_odds": 1.5,
+      "over15_odds": 1.22,
+      "over25_odds": 1.88,
+      "btts_yes_odds": 1.83,
+      "btts_no_odds": 1.85,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915532",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "Hapoel Be'er - OFI Crete",
+      "bookmakers_by_field": {
+        "home_odds": "pinnacle",
+        "draw_odds": "pinnacle",
+        "away_odds": "pinnacle",
+        "over15_odds": "pinnacle",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "pinnacle",
+        "btts_no_odds": "pinnacle"
+      },
+      "home_odds": 2.17,
+      "draw_odds": 3.59,
+      "away_odds": 3.42,
+      "over15_odds": 1.24,
+      "over25_odds": 1.72,
+      "btts_yes_odds": 1.64,
+      "btts_no_odds": 2.33,
+      "bookmaker": "pinnacle"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915819",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "Panathinaikos - CSKA Sofia",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "leovegas_se",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 1.38,
+      "draw_odds": 4.4,
+      "away_odds": 6.5,
+      "over15_odds": 1.16,
+      "over25_odds": 1.62,
+      "btts_yes_odds": 1.77,
+      "btts_no_odds": 1.92,
+      "bookmaker": "virginbet"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915818",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "Riga FC - Jablonec",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 2.28,
+      "draw_odds": 3.2,
+      "away_odds": 2.85,
+      "over15_odds": 1.23,
+      "over25_odds": 1.82,
+      "btts_yes_odds": 1.63,
+      "btts_no_odds": 2.1,
+      "bookmaker": "virginbet"
+    },
+    {
       "fixture_id": "espn:football:uefa.europa:401915524",
       "datetime": "2026-11-05T20:00:00Z",
       "match": "SK Sturm Graz - NK Celje",
@@ -202,6 +730,28 @@
       "bookmaker": "pinnacle"
     },
     {
+      "fixture_id": "espn:football:uefa.europa.conf:401915820",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "Sint-Truidense - SK Brann",
+      "bookmakers_by_field": {
+        "home_odds": "virginbet",
+        "draw_odds": "virginbet",
+        "away_odds": "virginbet",
+        "over15_odds": "virginbet",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "virginbet",
+        "btts_no_odds": "virginbet"
+      },
+      "home_odds": 1.65,
+      "draw_odds": 3.85,
+      "away_odds": 4.2,
+      "over15_odds": 1.13,
+      "over25_odds": 1.46,
+      "btts_yes_odds": 1.5,
+      "btts_no_odds": 2.35,
+      "bookmaker": "virginbet"
+    },
+    {
       "fixture_id": "espn:football:uefa.europa:401915523",
       "datetime": "2026-11-05T20:00:00Z",
       "match": "Sunderland - Dinamo Zagreb",
@@ -222,6 +772,28 @@
       "btts_yes_odds": 1.8,
       "btts_no_odds": 1.91,
       "bookmaker": "winamax_de"
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915530",
+      "datetime": "2026-11-05T20:00:00Z",
+      "match": "Torreense - Ararat-Armenia",
+      "bookmakers_by_field": {
+        "home_odds": "betfred_uk",
+        "draw_odds": "betfred_uk",
+        "away_odds": "betfred_uk",
+        "over15_odds": "pinnacle",
+        "over25_odds": "nordicbet",
+        "btts_yes_odds": "betfred_uk",
+        "btts_no_odds": "betfred_uk"
+      },
+      "home_odds": 1.73,
+      "draw_odds": 3.75,
+      "away_odds": 4.6,
+      "over15_odds": 1.32,
+      "over25_odds": 1.95,
+      "btts_yes_odds": 1.91,
+      "btts_no_odds": 1.8,
+      "bookmaker": "betfred_uk"
     },
     {
       "fixture_id": "espn:football:arg.1:401841667",
