@@ -1297,6 +1297,566 @@
       "source": "the-odds-api-v4",
       "first_seen_utc": "2026-11-05T09:28:26.639148+00:00",
       "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "AC Milan",
+      "normalized": "ac milan",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Ferencváros TC",
+      "normalized": "ferencvaros tc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Anderlecht",
+      "normalized": "anderlecht",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Salzburg",
+      "normalized": "salzburg",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Sparta Prague",
+      "normalized": "sparta prague",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Bournemouth",
+      "normalized": "bournemouth",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Crystal Palace",
+      "normalized": "crystal palace",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "TSG Hoffenheim",
+      "normalized": "tsg hoffenheim",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "PFC Levski Sofia",
+      "normalized": "pfc levski sofia",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Jagiellonia Białystok",
+      "normalized": "jagiellonia białystok",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Lillestrom",
+      "normalized": "lillestrom",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Viktoria Plzeň",
+      "normalized": "viktoria plzen",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Real Sociedad",
+      "normalized": "real sociedad",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Lyon",
+      "normalized": "lyon",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "NEC Nijmegen",
+      "normalized": "nec nijmegen",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Omonoia FC",
+      "normalized": "omonoia fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "AZ Alkmaar",
+      "normalized": "az alkmaar",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Juventus",
+      "normalized": "juventus",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Bayer Leverkusen",
+      "normalized": "bayer leverkusen",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Marseille",
+      "normalized": "marseille",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Benfica",
+      "normalized": "benfica",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Lech Poznań",
+      "normalized": "lech poznan",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Celtic",
+      "normalized": "celtic",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Besiktas JK",
+      "normalized": "besiktas jk",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Celta Vigo",
+      "normalized": "celta vigo",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Union Saint-Gilloise",
+      "normalized": "union saint gilloise",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Sunderland",
+      "normalized": "sunderland",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Dinamo Zagreb",
+      "normalized": "dinamo zagreb",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Torreense",
+      "normalized": "torreense",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "FC Ararat-Armenia",
+      "normalized": "fc ararat armenia",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "Hapoel Be'er Sheva",
+      "normalized": "hapoel be er sheva",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "OFI Crete",
+      "normalized": "ofi crete",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "SK Sturm Graz",
+      "normalized": "sk sturm graz",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa",
+      "name": "NK Celje",
+      "normalized": "nk celje",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "AGF Aarhus",
+      "normalized": "agf aarhus",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "SC Braga",
+      "normalized": "sc braga",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "FC Midtjylland",
+      "normalized": "fc midtjylland",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Ajax",
+      "normalized": "ajax",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Atalanta BC",
+      "normalized": "atalanta bc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "FC Kairat",
+      "normalized": "fc kairat",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "FC Thun",
+      "normalized": "fc thun",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Hearts",
+      "normalized": "hearts",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Mjällby AIF",
+      "normalized": "mjallby aif",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "FK Borac Banja Luka",
+      "normalized": "fk borac banja luka",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "KuPS Kuopio",
+      "normalized": "kups kuopio",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Gent",
+      "normalized": "gent",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Lincoln Red Imps FC",
+      "normalized": "lincoln red imps fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Hajduk Split",
+      "normalized": "hajduk split",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Red Star Belgrade",
+      "normalized": "red star belgrade",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Inter Club d'Escaldes",
+      "normalized": "inter club d escaldes",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Trabzonspor",
+      "normalized": "trabzonspor",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "SC Freiburg",
+      "normalized": "sc freiburg",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "AS Monaco",
+      "normalized": "as monaco",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "FC Nordsjaelland",
+      "normalized": "fc nordsjaelland",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Getafe",
+      "normalized": "getafe",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Brighton and Hove Albion",
+      "normalized": "brighton and hove albion",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "FC Copenhagen",
+      "normalized": "fc copenhagen",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "FC Iberia 1999",
+      "normalized": "fc iberia 1999",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "FC Lugano",
+      "normalized": "fc lugano",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "FK Kauno Žalgiris",
+      "normalized": "fk kauno zalgiris",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "FC Twente Enschede",
+      "normalized": "fc twente enschede",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Pafos FC",
+      "normalized": "pafos fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Riga FC",
+      "normalized": "riga fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "FK Jablonec",
+      "normalized": "fk jablonec",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Universitatea Craiova",
+      "normalized": "universitatea craiova",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "KF Egnatia",
+      "normalized": "kf egnatia",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Panathinaikos FC",
+      "normalized": "panathinaikos fc",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "PFC CSKA Sofia",
+      "normalized": "pfc cska sofia",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "Sint Truiden",
+      "normalized": "sint truiden",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "uefa.europa.conf",
+      "name": "SK Brann",
+      "normalized": "sk brann",
+      "source": "the-odds-api-v4",
+      "first_seen_utc": "2026-11-05T09:59:53.497347+00:00",
+      "verified_identity": false
     }
   ]
 }

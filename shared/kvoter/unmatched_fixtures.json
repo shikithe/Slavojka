@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-05T09:32:34.582241+00:00",
+  "generated_at_utc": "2026-11-05T10:00:00.906940+00:00",
   "fixtures": [
     {
       "fixture_id": "espn:football:uefa.europa:401915534",
@@ -16,13 +16,6 @@
       "start_utc": "2026-11-05T17:45:00Z"
     },
     {
-      "fixture_id": "espn:football:uefa.europa:401915526",
-      "league": "uefa.europa",
-      "home": "Crystal Palace",
-      "away": "TSG Hoffenheim",
-      "start_utc": "2026-11-05T17:45:00Z"
-    },
-    {
       "fixture_id": "espn:football:uefa.europa:401915536",
       "league": "uefa.europa",
       "home": "Levski Sofia",
@@ -30,24 +23,10 @@
       "start_utc": "2026-11-05T17:45:00Z"
     },
     {
-      "fixture_id": "espn:football:uefa.europa:401915527",
-      "league": "uefa.europa",
-      "home": "Lillestrom",
-      "away": "Viktoria Plzen",
-      "start_utc": "2026-11-05T17:45:00Z"
-    },
-    {
       "fixture_id": "espn:football:uefa.europa:401915535",
       "league": "uefa.europa",
       "home": "NEC Nijmegen",
       "away": "Omonia Nicosia",
-      "start_utc": "2026-11-05T17:45:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.europa:401915537",
-      "league": "uefa.europa",
-      "home": "Real Sociedad",
-      "away": "Lyon",
       "start_utc": "2026-11-05T17:45:00Z"
     },
     {
@@ -114,34 +93,6 @@
       "start_utc": "2026-11-05T17:45:00Z"
     },
     {
-      "fixture_id": "espn:football:uefa.europa.conf:401915825",
-      "league": "uefa.europa.conf",
-      "home": "Trabzonspor",
-      "away": "SC Freiburg",
-      "start_utc": "2026-11-05T17:45:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.europa:401915529",
-      "league": "uefa.europa",
-      "home": "AZ Alkmaar",
-      "away": "Juventus",
-      "start_utc": "2026-11-05T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.europa:401915533",
-      "league": "uefa.europa",
-      "home": "Bayer Leverkusen",
-      "away": "Marseille",
-      "start_utc": "2026-11-05T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.europa:401915525",
-      "league": "uefa.europa",
-      "home": "Benfica",
-      "away": "Lech Poznan",
-      "start_utc": "2026-11-05T20:00:00Z"
-    },
-    {
       "fixture_id": "espn:football:uefa.europa:401915531",
       "league": "uefa.europa",
       "home": "Celta Vigo",
@@ -160,20 +111,6 @@
       "league": "uefa.europa",
       "home": "Hapoel Be'er",
       "away": "OFI Crete",
-      "start_utc": "2026-11-05T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.europa:401915524",
-      "league": "uefa.europa",
-      "home": "SK Sturm Graz",
-      "away": "NK Celje",
-      "start_utc": "2026-11-05T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.europa:401915523",
-      "league": "uefa.europa",
-      "home": "Sunderland",
-      "away": "Dinamo Zagreb",
       "start_utc": "2026-11-05T20:00:00Z"
     },
     {
@@ -247,5 +184,5 @@
       "start_utc": "2026-11-05T20:00:00Z"
     }
   ],
-  "total": 35
+  "total": 26
 }

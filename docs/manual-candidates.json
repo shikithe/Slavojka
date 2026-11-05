@@ -1,5 +1,544 @@
 {
-  "generated_at_utc": "2026-11-05T09:32:34.655479+00:00",
-  "total": 0,
-  "fixtures": []
+  "generated_at_utc": "2026-11-05T10:00:01.455439+00:00",
+  "total": 26,
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:uefa.europa:401915534",
+      "league": "uefa.europa",
+      "home": "AC Milan",
+      "away": "Ferencvaros",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "cb7170b1b0e68a09be62b7a0fcb8d268",
+          "home": "AC Milan",
+          "away": "Ferencváros TC",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.94
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915538",
+      "league": "uefa.europa",
+      "home": "Anderlecht",
+      "away": "RB Salzburg",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "9604c5b1c465435911e038db95ab2a7b",
+          "home": "Anderlecht",
+          "away": "Salzburg",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.921
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915536",
+      "league": "uefa.europa",
+      "home": "Levski Sofia",
+      "away": "Jagiellonia Bialystok",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "3493023efb0aadbdffe37e74e528177c",
+          "home": "PFC Levski Sofia",
+          "away": "Jagiellonia Białystok",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.905
+        },
+        {
+          "event_id": "d6ef4964addd663baed90f8f19fda1d3",
+          "home": "Real Sociedad",
+          "away": "Lyon",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.36
+        },
+        {
+          "event_id": "c50815d0a3cbc7dfe6b9f3a737ce4836",
+          "home": "Lillestrom",
+          "away": "Viktoria Plzeň",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.353
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915535",
+      "league": "uefa.europa",
+      "home": "NEC Nijmegen",
+      "away": "Omonia Nicosia",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "02228f9f6863e25c9538d6062932e155",
+          "home": "NEC Nijmegen",
+          "away": "Omonoia FC",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.833
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915528",
+      "league": "uefa.europa",
+      "home": "Sparta Prague",
+      "away": "AFC Bournemouth",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "d437cbfcee6b57ec58d464e6b459c56e",
+          "home": "Sparta Prague",
+          "away": "Bournemouth",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.923
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915831",
+      "league": "uefa.europa.conf",
+      "home": "AGF",
+      "away": "Braga",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "e2bb1ddf148879e8fc2aabaed0357eb9",
+          "home": "AGF Aarhus",
+          "away": "SC Braga",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.615
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915830",
+      "league": "uefa.europa.conf",
+      "home": "Atalanta",
+      "away": "Kairat Almaty",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "dce9bc68a02a1588bbcf869175c77289",
+          "home": "Atalanta BC",
+          "away": "FC Kairat",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.694
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915829",
+      "league": "uefa.europa.conf",
+      "home": "FC Midtjylland",
+      "away": "Ajax Amsterdam",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "6d5c68c79565ce4d215e25592e18ce5e",
+          "home": "FC Midtjylland",
+          "away": "Ajax",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.722
+        },
+        {
+          "event_id": "3d5f9e4353cbdaa543391b958b9cd9fa",
+          "home": "Mjällby AIF",
+          "away": "FK Borac Banja Luka",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.352
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915828",
+      "league": "uefa.europa.conf",
+      "home": "FC Thun",
+      "away": "Heart of Midlothian",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "1c56e398a31a6f7cf176c463baf65f38",
+          "home": "FC Thun",
+          "away": "Hearts",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.7
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915826",
+      "league": "uefa.europa.conf",
+      "home": "KuPS Kuopio",
+      "away": "KAA Gent",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "b92f06bcd9b50df5151c4f94196e856f",
+          "home": "KuPS Kuopio",
+          "away": "Gent",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.833
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915742",
+      "league": "uefa.europa.conf",
+      "home": "Lincoln Red Imps",
+      "away": "Hajduk Split",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "55cee2f9278cbabb8d9516f48a61561d",
+          "home": "Lincoln Red Imps FC",
+          "away": "Hajduk Split",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.957
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915741",
+      "league": "uefa.europa.conf",
+      "home": "Mjällby AIF",
+      "away": "Borac Banja Luka",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "3d5f9e4353cbdaa543391b958b9cd9fa",
+          "home": "Mjällby AIF",
+          "away": "FK Borac Banja Luka",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.957
+        },
+        {
+          "event_id": "e2bb1ddf148879e8fc2aabaed0357eb9",
+          "home": "AGF Aarhus",
+          "away": "SC Braga",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.351
+        },
+        {
+          "event_id": "6d5c68c79565ce4d215e25592e18ce5e",
+          "home": "FC Midtjylland",
+          "away": "Ajax",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.35
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915827",
+      "league": "uefa.europa.conf",
+      "home": "Red Star Belgrade",
+      "away": "Inter D'Escaldes",
+      "start_utc": "2026-11-05T17:45:00Z",
+      "candidates": [
+        {
+          "event_id": "dc1e2520503a3d74cb2b80eb20cb4432",
+          "home": "Red Star Belgrade",
+          "away": "Inter Club d'Escaldes",
+          "start_utc": "2026-11-05T17:45:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.932
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915531",
+      "league": "uefa.europa",
+      "home": "Celta Vigo",
+      "away": "Union St.-Gilloise",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "b828d43ba5fa1c8cdd2e34aabea9d0ce",
+          "home": "Celta Vigo",
+          "away": "Union Saint-Gilloise",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.959
+        },
+        {
+          "event_id": "5ecf6578ba030a1e99abaa3200319e37",
+          "home": "Celtic",
+          "away": "Besiktas JK",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.384
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915522",
+      "league": "uefa.europa",
+      "home": "Celtic",
+      "away": "Besiktas",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "5ecf6578ba030a1e99abaa3200319e37",
+          "home": "Celtic",
+          "away": "Besiktas JK",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.921
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915532",
+      "league": "uefa.europa",
+      "home": "Hapoel Be'er",
+      "away": "OFI Crete",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "2af127e906ae56f3543d283b85f7b54e",
+          "home": "Hapoel Be'er Sheva",
+          "away": "OFI Crete",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.9
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915530",
+      "league": "uefa.europa",
+      "home": "Torreense",
+      "away": "Ararat-Armenia",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "402e102fa845ed84ab7e59b3b17f8c29",
+          "home": "Torreense",
+          "away": "FC Ararat-Armenia",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa",
+          "similarity": 0.952
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915824",
+      "league": "uefa.europa.conf",
+      "home": "AS Monaco",
+      "away": "FC Nordsjælland",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "35d4f8b2b7ec249fd22afd235c31ef2d",
+          "home": "AS Monaco",
+          "away": "FC Nordsjaelland",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.952
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915817",
+      "league": "uefa.europa.conf",
+      "home": "CSU Craiova",
+      "away": "Egnatia",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "fdfe43b1709a68218ab42934f7355032",
+          "home": "Universitatea Craiova",
+          "away": "KF Egnatia",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.693
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915740",
+      "league": "uefa.europa.conf",
+      "home": "F.C. København",
+      "away": "Iberia 1999",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "5d2de41c72a26f06f5b1f85676a7df00",
+          "home": "FC Copenhagen",
+          "away": "FC Iberia 1999",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.748
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915823",
+      "league": "uefa.europa.conf",
+      "home": "FC Lugano",
+      "away": "Kauno Zalgiris",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "158d65d9ca4cd4baf93be0a4c2b9e83a",
+          "home": "FC Lugano",
+          "away": "FK Kauno Žalgiris",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.952
+        },
+        {
+          "event_id": "5d2de41c72a26f06f5b1f85676a7df00",
+          "home": "FC Copenhagen",
+          "away": "FC Iberia 1999",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.37
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915822",
+      "league": "uefa.europa.conf",
+      "home": "FC Twente",
+      "away": "Pafos",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "91f5f46805156c8d245a9bb89f59969a",
+          "home": "FC Twente Enschede",
+          "away": "Pafos FC",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.718
+        },
+        {
+          "event_id": "158d65d9ca4cd4baf93be0a4c2b9e83a",
+          "home": "FC Lugano",
+          "away": "FK Kauno Žalgiris",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.359
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915821",
+      "league": "uefa.europa.conf",
+      "home": "Getafe",
+      "away": "Brighton & Hove Albion",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "5f12be0b4bcb21b30f6f0cd3326c14ba",
+          "home": "Getafe",
+          "away": "Brighton and Hove Albion",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.955
+        },
+        {
+          "event_id": "ae868659024756b45f047362d4ed0ee4",
+          "home": "Riga FC",
+          "away": "FK Jablonec",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.36
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915819",
+      "league": "uefa.europa.conf",
+      "home": "Panathinaikos",
+      "away": "CSKA Sofia",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "8a2c155e7fe5e67981b44e12c0c6eba6",
+          "home": "Panathinaikos FC",
+          "away": "PFC CSKA Sofia",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.865
+        },
+        {
+          "event_id": "fdfe43b1709a68218ab42934f7355032",
+          "home": "Universitatea Craiova",
+          "away": "KF Egnatia",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.376
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915818",
+      "league": "uefa.europa.conf",
+      "home": "Riga FC",
+      "away": "Jablonec",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "ae868659024756b45f047362d4ed0ee4",
+          "home": "Riga FC",
+          "away": "FK Jablonec",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.921
+        },
+        {
+          "event_id": "5f12be0b4bcb21b30f6f0cd3326c14ba",
+          "home": "Getafe",
+          "away": "Brighton and Hove Albion",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.356
+        },
+        {
+          "event_id": "35d4f8b2b7ec249fd22afd235c31ef2d",
+          "home": "AS Monaco",
+          "away": "FC Nordsjaelland",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.354
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915820",
+      "league": "uefa.europa.conf",
+      "home": "Sint-Truidense",
+      "away": "SK Brann",
+      "start_utc": "2026-11-05T20:00:00Z",
+      "candidates": [
+        {
+          "event_id": "a3b02e19f5a52fe43adf2ece08319ee4",
+          "home": "Sint Truiden",
+          "away": "SK Brann",
+          "start_utc": "2026-11-05T20:00:00Z",
+          "league": "uefa.europa.conf",
+          "similarity": 0.962
+        }
+      ]
+    }
+  ]
 }
