@@ -59,8 +59,21 @@ jobs:
           assert report.get('provider_status')=='api_fetched', 'OddsAPI did not finish'
           assert report.get('matched',0)>0, 'No verified matched fixtures: refuse to publish old active-list'
           assert Path('shared/kvoter/matched_fixtures.json').exists(), 'Reconciled match file missing'
+          failures=report.get('provider_errors',[])
+          if failures:
+              fallback=report.get('provider_cached_fallback',{})
+              print('RECOVERED_API_ERRORS',failures,'cached_quotes',fallback)
+              assert all(fallback.get(error.get('league'),0)>0 for error in failures), (
+                  'Provider league failed without current verified cached prices; preserve public list')
+              previous_path=Path('docs/active-list.json')
+              if previous_path.exists():
+                  previous=json.loads(previous_path.read_text())
+                  today=json.loads(Path('shared/collector-feed.json').read_text())['date']
+                  if previous.get('date')==today:
+                      assert report['matched']>=len(previous.get('fixtures',[])), (
+                          'Recoverable API error must not shrink a previously verified list')
           print('REFRESHED_QUOTES',len(offers['offers']),'MATCHED',report['matched'],
-                'UNMATCHED',report['unavailable'],'PROVIDER_ERRORS',report.get('provider_errors',[]))
+                'UNMATCHED',report['unavailable'],'PROVIDER_ERRORS',failures)
           PY
           python3 -m kvoter.manual_candidates --history shared/agent/history-h2h.json --offers shared/kvoter/provider-offers.json --unmatched shared/kvoter/unmatched_fixtures.json --output shared/kvoter/manual-candidates.json
           cp shared/kvoter/manual-candidates.json docs/manual-candidates.json
