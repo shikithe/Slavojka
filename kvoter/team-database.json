@@ -859,6 +859,18 @@
         "github-issue-6"
       ],
       "verified": true
+    },
+    {
+      "id": "arg.1-aldosivi",
+      "league": "arg.1",
+      "names": [
+        "Aldosivi",
+        "Aldosivi Mar del Plata"
+      ],
+      "sources": [
+        "github-issue-7"
+      ],
+      "verified": true
     }
   ]
 }

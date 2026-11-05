@@ -681,6 +681,17 @@
       "odds_away": "Atletico Mineiro",
       "decision": "matched",
       "issue_number": 6
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841659",
+      "event_id": "15d62dc210bdd9cdfc3a985397de2a2d",
+      "league": "arg.1",
+      "collector_home": "Aldosivi",
+      "collector_away": "River Plate",
+      "odds_home": "Aldosivi Mar del Plata",
+      "odds_away": "River Plate",
+      "decision": "matched",
+      "issue_number": 7
     }
   ]
 }
