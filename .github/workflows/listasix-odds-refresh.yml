@@ -1,4 +1,4 @@
-name: ListaSix refresh odds before MemaraSix 15:25
+name: ListaSix refresh odds and active-list before MemaraSix
 on:
   workflow_dispatch:
   schedule:
@@ -6,7 +6,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: listasix-odds-refresh
+  group: listasix-daily-and-expiry
   cancel-in-progress: false
 jobs:
   refresh:
@@ -29,7 +29,7 @@ jobs:
         if: steps.slot.outputs.run == 'true'
         with:
           python-version: '3.11'
-      - name: Refresh odds using existing Agent history
+      - name: Refresh OddsAPI and rebuild the complete verified offer
         if: steps.slot.outputs.run == 'true'
         env:
           THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
@@ -40,25 +40,73 @@ jobs:
           import json
           from datetime import datetime
           from zoneinfo import ZoneInfo
+          today=datetime.now(ZoneInfo('Europe/Sarajevo')).date().isoformat()
           x=json.load(open('shared/agent/history-h2h.json'))
-          assert x.get('date')==datetime.now(ZoneInfo('Europe/Sarajevo')).date().isoformat()
-          assert x.get('fixtures') and x.get('leagues')
+          feed=json.load(open('shared/collector-feed.json'))
+          assert x.get('date')==today and feed.get('date')==today, 'History / ESPN collector date not today'
+          assert x.get('fixtures') and x.get('leagues') and feed.get('football_candidates'), 'No current verified fixtures'
+          history_ids={f['fixture_id'] for f in x['fixtures']}
+          assert all(f['fixture_id'] in history_ids for f in feed['football_candidates']), 'History/collector fixture mismatch'
           PY
+          python3 -m unittest -v test_oddsapi_uefa_markets.py test_lista_refresh_active.py
           python3 -m kvoter.the_odds_api --feed shared/agent/history-h2h.json --output shared/kvoter/match-report.json --raw-output shared/kvoter/league-odds-raw.json --offers-output shared/kvoter/provider-offers.json
           python3 - <<'PY'
           import json
-          x=json.load(open('shared/kvoter/provider-offers.json'))
-          assert x.get('offers'), 'No new bookmaker quotes'
-          print('REFRESHED_QUOTES',len(x['offers']))
+          from pathlib import Path
+          offers=json.load(open('shared/kvoter/provider-offers.json'))
+          report=json.load(open('shared/kvoter/match-report.json'))
+          assert offers.get('offers'), 'No new bookmaker quotes'
+          assert report.get('provider_status')=='api_fetched', 'OddsAPI did not finish'
+          assert report.get('matched',0)>0, 'No verified matched fixtures: refuse to publish old active-list'
+          assert Path('shared/kvoter/matched_fixtures.json').exists(), 'Reconciled match file missing'
+          print('REFRESHED_QUOTES',len(offers['offers']),'MATCHED',report['matched'],
+                'UNMATCHED',report['unavailable'],'PROVIDER_ERRORS',report.get('provider_errors',[]))
           PY
-      - name: Commit refreshed odds
+          python3 -m kvoter.manual_candidates --history shared/agent/history-h2h.json --offers shared/kvoter/provider-offers.json --unmatched shared/kvoter/unmatched_fixtures.json --output shared/kvoter/manual-candidates.json
+          cp shared/kvoter/manual-candidates.json docs/manual-candidates.json
+          cp shared/kvoter/unmatched_fixtures.json docs/unmatched_fixtures.json
+          python3 -m lista.publish --feed shared/collector-feed.json --matches shared/kvoter/matched_fixtures.json --shared shared --docs docs
+      - name: Validate regenerated active list and mobile offer
+        if: steps.slot.outputs.run == 'true'
+        run: |
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          from lista.publish import pick
+          today=datetime.now(ZoneInfo('Europe/Sarajevo')).date().isoformat()
+          report=json.loads(Path('shared/kvoter/matched_fixtures.json').read_text())
+          feed=json.loads(Path('shared/collector-feed.json').read_text())
+          a=json.loads(Path('shared/active-list.json').read_text())
+          d=json.loads(Path('docs/active-list.json').read_text())
+          assert a==d, 'Published JSON copies differ'
+          assert a['date']==today==feed['date'], 'Active-list does not contain today'
+          assert a['publication_allowed'] and a['fixtures'], 'No public verified fixtures'
+          assert datetime.fromisoformat(a['expires_at']).astimezone(timezone.utc)>datetime.now(timezone.utc), 'Expired active-list'
+          ids={x['fixture_id'] for x in feed['football_candidates']}
+          expected={x['fixture_id'] for x in report['fixtures'] if x['fixture_id'] in ids and pick(x)}
+          actual={x['fixture_id'] for x in a['fixtures']}
+          assert len(a['fixtures'])==len(actual) and actual==expected, 'Active-list not regenerated from latest odds'
+          for item in a['fixtures']:
+              assert any(isinstance(item.get(field),(float,int)) and item[field]>1
+                         for field in ('home_odds','draw_odds','away_odds','over15_odds','over25_odds','btts_yes_odds','btts_no_odds'))
+          assert Path('docs/kvoter-ponuda.txt').read_text()==Path('shared/kvoter-ponuda.txt').read_text()
+          print('ACTIVE_LIST_REFRESHED',len(actual),'DATE',today)
+          PY
+      - name: Commit refreshed odds and rebuilt active-list
         if: steps.slot.outputs.run == 'true'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f shared/kvoter/provider-offers.json shared/kvoter/match-report.json
+          git add -f -- shared/kvoter/provider-offers.json shared/kvoter/match-report.json \
+            shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json \
+            shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json \
+            shared/active-list.json docs/active-list.json \
+            shared/kvoter-ponuda.txt docs/kvoter-ponuda.txt \
+            docs/manual-candidates.json docs/unmatched_fixtures.json
           if ! git diff --cached --quiet; then
-            git commit -m 'lista: refresh bookmaker odds before MemaraSix publication'
+            git commit -m 'lista: refresh odds and republish verified active list'
             git pull --rebase origin main
             git push origin HEAD:main
           fi
