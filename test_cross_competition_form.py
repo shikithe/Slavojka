@@ -46,7 +46,7 @@ class CrossCompetitionTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             path=Path(d)/"history.json"
             payload={"leagues":{},"fixtures":[]}
-            path.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+            path.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
             self.assertEqual(json.loads(path.read_text()),payload)
 
 if __name__=="__main__":unittest.main()
