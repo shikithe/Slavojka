@@ -145,5 +145,56 @@ class ApiFootballV3Tests(unittest.TestCase):
             {"fixtures": [espn]}, [wrong_league, wrong_time], []), [])
 
 
+    def test_user_matched_confirmation_persists_alias_then_rematches(self):
+        import json
+        import os
+        import tempfile
+        from pathlib import Path
+        from kvoter.manual.batch_confirm import process
+        from kvoter.kvoter import build
+        espn = dict(self.espn, home="Sevilla FC", away="Deportivo Alaves")
+        offer = {
+            "event_id": "api-football:456", "league": "esp.1",
+            "home": "Sevilla", "away": "Alaves",
+            "start_utc": "2026-11-06T20:00:00Z", "bookmaker": "Bet365",
+            "markets": {"1X2": {"home": 2.2}},
+        }
+        result = build({"fixtures": [espn]}, [offer])
+        self.assertEqual(result["matched"], 0)
+        candidate = {
+            "event_id": offer["event_id"], "home": offer["home"],
+            "away": offer["away"]
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            root=Path(tmp)
+            (root/"shared/kvoter").mkdir(parents=True)
+            (root/"kvoter/manual").mkdir(parents=True)
+            (root/"kvoter/team-database.json").write_text('{"teams":[]}')
+            (root/"kvoter/manual/decisions.json").write_text('{"decisions":[]}')
+            queue={"generated_at_utc":"test-queue-version","fixtures":[{
+                **espn,"candidates":[candidate]
+            }]}
+            (root/"shared/kvoter/manual-candidates.json").write_text(json.dumps(queue))
+            payload={"version":"test-queue-version","choices":[[0,0,1]]}
+            body="KVOTER_MANUAL_COMPACT_V1\\n```json\\n"+json.dumps(payload)+"\\n```"
+            old=os.getcwd()
+            previous=os.environ.get("KVOTER_ALIASES_PATH")
+            try:
+                os.chdir(root)
+                process(body, 123)
+                os.environ["KVOTER_ALIASES_PATH"]=str(root/"kvoter/team-database.json")
+                result=build({"fixtures":[espn]},[offer])
+                self.assertEqual(result["matched"],1)
+                aliases=json.loads((root/"kvoter/team-database.json").read_text())
+                self.assertEqual(len(aliases["teams"]),2)
+                self.assertTrue(all(x.get("verified") for x in aliases["teams"]))
+            finally:
+                os.chdir(old)
+                if previous is None:
+                    os.environ.pop("KVOTER_ALIASES_PATH",None)
+                else:
+                    os.environ["KVOTER_ALIASES_PATH"]=previous
+
+
 if __name__ == "__main__":
     unittest.main()
