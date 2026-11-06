@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Reconcile Agent fixtures against real Odds API events and approved identities.
+"""Reconcile Agent fixtures against real provider events and approved identities.
 
 Provider spellings are recorded first; unapproved spellings never imply identity.
 Outputs are derived on each run, so removals from unmatched cannot be stale.
@@ -20,7 +20,7 @@ def reconcile(history_path, offers_path, database_path, names_path, output_dir):
     source=json.loads(Path(offers_path).read_text(encoding="utf-8"))
     offers=source.get("offers",[]) if isinstance(source,dict) else source
     if not isinstance(offers,list): raise ValueError("Invalid provider offers")
-    # First persist the actual spellings from The Odds API.
+    # First persist the actual spellings from the quoted odds provider.
     collect_names(offers,names_path)
     os.environ["KVOTER_ALIASES_PATH"]=str(Path(database_path).resolve())
     report=build(history,offers)
