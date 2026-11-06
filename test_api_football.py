@@ -1,5 +1,5 @@
 import unittest
-from kvoter.api_football import bookmaker_markets, find_fixture_pairs, parse_odds_response, collect
+from kvoter.api_football import bookmaker_markets, find_fixture_pairs, find_manual_review_events, parse_odds_response, collect
 
 
 class ApiFootballV3Tests(unittest.TestCase):
@@ -97,6 +97,52 @@ class ApiFootballV3Tests(unittest.TestCase):
         self.assertEqual(coverage["verified_fixture_pairs"], 1)
         self.assertEqual([p for p, _ in calls], ["fixtures", "odds"])
         self.assertEqual(errors, [])
+
+
+    def test_unrecognized_team_spellings_go_to_manual_not_automatic_matching(self):
+        from kvoter.manual_candidates import build as manual_candidates_build
+        from kvoter.kvoter import build as verify_match
+        espn = dict(self.espn, home="Sevilla FC", away="Deportivo Alaves")
+        # Same legitimate teams but NO approved alias; still high similarity.
+        vendor = dict(self.football, teams={"home": {"name": "Sevilla"},
+                                            "away": {"name": "Alaves"}})
+        confirmed = find_fixture_pairs({"fixtures": [espn]}, [vendor])
+        self.assertEqual(confirmed, [])
+        manual = find_manual_review_events({"fixtures": [espn]}, [vendor], confirmed)
+        self.assertEqual(len(manual), 1)
+        self.assertEqual(manual[0][1]["fixture"]["id"], 456)
+        response = [{
+            "fixture": {"id": 456}, "league": {"id": 140},
+            "bookmakers": [{"name": "Bet365", "bets": [{
+                "name": "Match Winner",
+                "values": [{"value": "Home", "odd": "2.1"}],
+            }]}],
+        }]
+        def fetch(path, params, key):
+            return {"response": [vendor] if path == "fixtures" else response}
+        offers, coverage, errors = collect(
+            {"fixtures": [espn]}, "fake-test-key", get=fetch, delay=0)
+        self.assertEqual(len(offers), 1)
+        self.assertEqual(coverage["manual_events_with_odds"], 1)
+        self.assertEqual(coverage["verified_fixture_pairs"], 0)
+        report = verify_match({"fixtures": [espn]}, offers)
+        self.assertEqual(report["matched"], 0)
+        self.assertEqual(report["unavailable"], 1)
+        suggested = manual_candidates_build(
+            {"fixtures": [espn]}, {"offers": offers},
+            {"fixtures": report["unmatched_fixtures"]})
+        self.assertEqual(suggested["total"], 1)
+        self.assertEqual(suggested["fixtures"][0]["candidates"][0]["event_id"],
+                         "api-football:456")
+        self.assertEqual(errors, [])
+
+    def test_unknown_names_wrong_league_and_kickoff_never_suggested(self):
+        espn = dict(self.espn, home="Sevilla FC", away="Deportivo Alaves")
+        wrong_league = dict(self.football, league={"id": 39})
+        wrong_time = dict(self.football,
+                          fixture={"id": 456, "date": "2026-11-06T22:30:00+00:00"})
+        self.assertEqual(find_manual_review_events(
+            {"fixtures": [espn]}, [wrong_league, wrong_time], []), [])
 
 
 if __name__ == "__main__":
