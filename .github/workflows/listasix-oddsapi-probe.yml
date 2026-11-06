@@ -1,0 +1,53 @@
+name: ListaSix manual OddsAPI quote connectivity probe
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'manual/oddsapi-probe.trigger'
+permissions:
+  contents: read
+jobs:
+  quotes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Fetch actual football 1X2 quotes without revealing API key
+        env:
+          THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json, os, sys
+          from urllib.request import Request, urlopen
+          from urllib.parse import urlencode
+          from urllib.error import HTTPError, URLError
+          key=os.environ.get("THE_ODDS_API_KEY","")
+          if not key:
+              print("ODDSAPI_TEST_RESULT: SECRET_MISSING")
+              sys.exit(1)
+          params=urlencode({"apiKey":key,"regions":"eu","markets":"h2h","oddsFormat":"decimal"})
+          url="https://api.the-odds-api.com/v4/sports/soccer_epl/odds?"+params
+          req=Request(url,headers={"User-Agent":"ListaSix-Manual-OddsAPI-Connectivity-Probe/1.0"})
+          try:
+              with urlopen(req,timeout=20) as response:
+                  rows=json.load(response)
+                  print("ODDSAPI_TEST_RESULT: HTTP",response.status)
+                  print("ODDSAPI_EVENT_COUNT:",len(rows) if isinstance(rows,list) else "unexpected-response")
+                  print("ODDSAPI_BOOKMAKER_COUNT:",sum(len(r.get("bookmakers",[])) for r in rows) if isinstance(rows,list) else 0)
+                  print("ODDSAPI_QUOTA_REMAINING:",response.headers.get("x-requests-remaining","unknown"))
+                  print("ODDSAPI_QUOTA_USED:",response.headers.get("x-requests-used","unknown"))
+                  if not isinstance(rows,list):
+                      sys.exit(1)
+          except HTTPError as e:
+              print("ODDSAPI_TEST_RESULT: HTTP",e.code)
+              print("ODDSAPI_QUOTA_REMAINING:",e.headers.get("x-requests-remaining","unknown"))
+              try:
+                  obj=json.loads(e.read().decode("utf-8","replace"))
+                  print("ODDSAPI_ERROR_CODE:",str(obj.get("error_code","unknown"))[:120])
+                  print("ODDSAPI_ERROR_MESSAGE:",str(obj.get("message","unknown"))[:160])
+              except (ValueError,UnicodeError):
+                  print("ODDSAPI_ERROR_BODY: unavailable")
+              sys.exit(1)
+          except (URLError,TimeoutError) as e:
+              print("ODDSAPI_TEST_RESULT: NETWORK_ERROR",type(e).__name__)
+              sys.exit(1)
+          PY
