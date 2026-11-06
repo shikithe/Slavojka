@@ -67,7 +67,17 @@ jobs:
               print("ODDS_SAMPLES",json.dumps([{"fixture_id":e.get("fixture",{}).get("id"),
                  "league_id":e.get("league",{}).get("id"),
                  "bookmakers":len(e.get("bookmakers",[]))} for e in rows[:3]]))
-          if not status and not odds:
+          fixtures=check("FIXTURES","fixtures",{"date":date,"timezone":"UTC"})
+          if fixtures:
+              x=fixtures.get("response",[])
+              wanted=("everton","gaziantep","seville","sevilla","famalicao","toulouse")
+              candidates=[{"id":m.get("fixture",{}).get("id"),"date":m.get("fixture",{}).get("date"),
+                           "league":m.get("league",{}).get("id"),
+                           "home":m.get("teams",{}).get("home",{}).get("name"),
+                           "away":m.get("teams",{}).get("away",{}).get("name")}
+                          for m in x if any(w in str(m.get("teams",{})).lower() for w in wanted)]
+              print("FIXTURES_TOTAL",len(x),"EXAMPLE_CANDIDATES",json.dumps(candidates[:12]))
+                    if not status and not odds:
               print("API_FOOTBALL_TEST: CONNECTION_FAILED")
               sys.exit(1)
           if not odds or odds.get("errors") or not odds.get("response"):
