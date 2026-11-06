@@ -75,7 +75,7 @@ def bookmaker_markets(bookmaker):
                 if outcome:
                     markets.setdefault("1X2", {})[outcome] = odd
             elif key == "goals":
-                over = re.fullmatch(r"over\\s+(1\\.5|2\\.5)", value)
+                over = re.fullmatch(r"over\s+(1\.5|2\.5)", value)
                 if over:
                     markets["2+" if over.group(1) == "1.5" else "3+"] = {"over": odd}
             elif key == "BTTS" and value in ("yes", "no"):
@@ -221,13 +221,18 @@ def main():
     if not key:
         raise SystemExit("API_FOOTBALL_KEY missing in GitHub Secrets")
     history = json.loads(Path(args.feed).read_text(encoding="utf-8"))
+    effective_feed = args.feed
+    if not history.get("fixtures") and isinstance(history.get("football_candidates"), list):
+        history = {"date": history.get("date"), "fixtures": history["football_candidates"]}
+        effective_feed = str(Path(args.output).parent / "api-football-source-feed.json")
+        write_json(effective_feed, history)
     offers, coverage, errors = collect(
         history, key, max_event_requests=max(0, min(args.max_event_requests, 45))
     )
     write_json(args.offers_output, {"source": "api-football-v3", "offers": offers,
                                    "coverage": coverage, "errors": errors})
     report = reconcile(
-        args.feed, args.offers_output,
+        effective_feed, args.offers_output,
         os.getenv("KVOTER_ALIASES_PATH", str(Path(__file__).with_name("team-database.json"))),
         os.getenv("KVOTER_PROVIDER_NAMES_PATH", "shared/kvoter/team-database/provider-team-names.json"),
         str(Path(args.output).parent),
@@ -238,6 +243,11 @@ def main():
         "provider_cached_fallback": {},
     })
     write_json(args.output, report)
+    write_json(Path(args.output).parent / "api-football-attempt.json", {
+        "date": history.get("date"), "attempt_at_utc": datetime.now(timezone.utc).isoformat(),
+        "matched": report["matched"], "api_fixtures": coverage["api_fixtures"],
+        "calls_for_odds": coverage["odds_checked"], "errors": len(errors),
+    })
     print("API_FOOTBALL_KVOTER", json.dumps({
         "total": report["total"], "matched": report["matched"],
         "verified_identity_pairs": coverage["verified_fixture_pairs"],
