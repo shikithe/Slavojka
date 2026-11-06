@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-06",
+  "generated_at_utc": "2026-11-06T08:45:35.958987+00:00",
+  "window_start_utc": "2026-11-06T09:00:00+00:00",
+  "window_end_utc": "2026-11-07T08:00:00+00:00",
+  "expires_at_utc": "2026-11-07T08:00:00+00:00",
+  "football_candidates": [
+    {
+      "fixture_id": "espn:football:tur.1:401888256",
+      "home": "Gaziantep FK",
+      "away": "Kasimpasa",
+      "league": "tur.1",
+      "start_utc": "2026-11-06T17:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841670",
+      "home": "Barracas Central",
+      "away": "Racing Club",
+      "league": "arg.1",
+      "start_utc": "2026-11-06T18:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875556",
+      "home": "Willem II",
+      "away": "PEC Zwolle",
+      "league": "ned.1",
+      "start_utc": "2026-11-06T19:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884739",
+      "home": "Hamburg SV",
+      "away": "Borussia Mönchengladbach",
+      "league": "ger.1",
+      "start_utc": "2026-11-06T19:30:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401874815",
+      "home": "Venezia",
+      "away": "Udinese",
+      "league": "ita.1",
+      "start_utc": "2026-11-06T19:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876405",
+      "home": "Toulouse",
+      "away": "Strasbourg",
+      "league": "fra.1",
+      "start_utc": "2026-11-06T19:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878951",
+      "home": "Standard Liege",
+      "away": "Waasland-Beveren",
+      "league": "bel.1",
+      "start_utc": "2026-11-06T19:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879242",
+      "home": "Everton",
+      "away": "Coventry City",
+      "league": "eng.1",
+      "start_utc": "2026-11-06T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882809",
+      "home": "Sevilla",
+      "away": "Alavés",
+      "league": "esp.1",
+      "start_utc": "2026-11-06T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885399",
+      "home": "FC Famalicao",
+      "away": "Arouca",
+      "league": "por.1",
+      "start_utc": "2026-11-06T20:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841665",
+      "home": "Independiente",
+      "away": "Deportivo Riestra",
+      "league": "arg.1",
+      "start_utc": "2026-11-06T22:15:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841662",
+      "home": "San Lorenzo",
+      "away": "Platense",
+      "league": "arg.1",
+      "start_utc": "2026-11-06T22:15:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841660",
+      "home": "Unión (Santa Fe)",
+      "away": "Vélez Sarsfield",
+      "league": "arg.1",
+      "start_utc": "2026-11-06T22:15:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841302",
+      "home": "Vitória",
+      "away": "Fluminense",
+      "league": "bra.1",
+      "start_utc": "2026-11-06T23:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841671",
+      "home": "Banfield",
+      "away": "Atlético Tucumán",
+      "league": "arg.1",
+      "start_utc": "2026-11-07T01:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841673",
+      "home": "Tigre",
+      "away": "Sarmiento (Junín)",
+      "league": "arg.1",
+      "start_utc": "2026-11-07T01:00:00Z",
+      "sport": "football"
+    }
+  ],
+  "nba_games": [],
+  "errors": [],
+  "publication_allowed": false
+}
