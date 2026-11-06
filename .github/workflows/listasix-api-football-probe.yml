@@ -1,0 +1,77 @@
+name: ListaSix API-Football integration test
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'manual/api-football-probe.trigger'
+permissions:
+  contents: read
+jobs:
+  api_football:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Probe API-Football authentication, coverage, and odds (no data publication)
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json,os,sys,datetime
+          from urllib.request import Request,urlopen
+          from urllib.parse import urlencode
+          from urllib.error import HTTPError,URLError
+          from zoneinfo import ZoneInfo
+          key=os.environ.get("API_FOOTBALL_KEY","").strip()
+          if not key:
+              print("API_FOOTBALL_TEST: SECRET_MISSING")
+              sys.exit(1)
+          base="https://v3.football.api-sports.io/"
+          headers={"x-apisports-key":key, "User-Agent":"ListaSix-API-Football-Probe/1.0"}
+          date=datetime.datetime.now(ZoneInfo("Europe/Sarajevo")).strftime("%Y-%m-%d")
+          print("API_FOOTBALL_DATE:",date)
+          def check(label,path,params=None):
+              url=base+path+("?" + urlencode(params) if params else "")
+              request=Request(url,headers=headers)
+              try:
+                  with urlopen(request,timeout=22) as resp:
+                      payload=json.load(resp)
+                      print(label,"HTTP",resp.status,"RESULTS",payload.get("results"),
+                          "REQUESTS_REMAINING",resp.headers.get("x-ratelimit-requests-remaining","unknown"))
+              except HTTPError as err:
+                  print(label,"HTTP",err.code)
+                  try:
+                      data=json.load(err)
+                      print(label,"ERRORS",str(data.get("errors",{}))[:350])
+                  except (ValueError,UnicodeError):
+                      pass
+                  return None
+              except (URLError,TimeoutError) as err:
+                  print(label,"NETWORK_ERROR",type(err).__name__)
+                  return None
+              errors=payload.get("errors",{})
+              print(label,"ERRORS",str(errors)[:350])
+              return payload
+          status=check("STATUS","status")
+          odds=check("ODDS","odds",{"date":date,"page":1})
+          if odds:
+              rows=odds.get("response",[])
+              labels=set()
+              bookmakers=0
+              for fixture in rows:
+                  for bm in fixture.get("bookmakers",[]):
+                      bookmakers+=1
+                      for bet in bm.get("bets",[]):
+                          labels.add(bet.get("name",""))
+              print("ODDS_PAGE",odds.get("paging",{}),"EVENTS",len(rows),
+                "BOOKMAKER_SETS",bookmakers, "MARKET_LABELS",json.dumps(sorted(labels)[:80]))
+              print("ODDS_SAMPLES",json.dumps([{"fixture_id":e.get("fixture",{}).get("id"),
+                 "league_id":e.get("league",{}).get("id"),
+                 "bookmakers":len(e.get("bookmakers",[]))} for e in rows[:3]]))
+          if not status and not odds:
+              print("API_FOOTBALL_TEST: CONNECTION_FAILED")
+              sys.exit(1)
+          if not odds or odds.get("errors") or not odds.get("response"):
+              print("API_FOOTBALL_TEST: ODDS_NOT_CONFIRMED")
+              sys.exit(1)
+          print("API_FOOTBALL_TEST: REAL_ODDS_AVAILABLE")
+          PY
