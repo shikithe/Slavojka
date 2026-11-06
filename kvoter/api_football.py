@@ -10,12 +10,14 @@ import json
 import os
 import re
 import time
+from difflib import SequenceMatcher
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 from kvoter.kvoter import match, utc
+from kvoter.team_identity import normalize
 from kvoter.reconcile import reconcile
 
 BASE = "https://v3.football.api-sports.io"
@@ -125,6 +127,56 @@ def find_fixture_pairs(history, api_fixture_rows):
     return [(f, e) for f, e in pairs if counts[e["fixture"]["id"]] == 1]
 
 
+def find_manual_review_events(history, api_fixture_rows, confirmed_pairs, limit=20):
+    """Find same-league/time candidate events without pre-approving team aliases.
+
+    They are only saved as provider offers so Kvoter Manual can review them.
+    The strict reconciler never treats these suggestions as matched unless the
+    user confirms both team identities (via Kvoter Manual) first.
+    """
+    confirmed_ids = {event["fixture"]["id"] for _, event in confirmed_pairs}
+    confirmed_fixtures = {f.get("fixture_id") for f, _ in confirmed_pairs}
+    claimed = set(confirmed_ids)
+    suggestions = []
+    for fixture in history.get("fixtures", []):
+        if fixture.get("fixture_id") in confirmed_fixtures:
+            continue
+        expected_start = utc(fixture.get("start_utc"))
+        if not expected_start:
+            continue
+        ranked = []
+        for event in api_fixture_rows:
+            try:
+                api_id = event["fixture"]["id"]
+                api_league = int(event["league"]["id"])
+                provider_start = utc(event["fixture"]["date"])
+                home = event["teams"]["home"]["name"]
+                away = event["teams"]["away"]["name"]
+            except (KeyError, ValueError, TypeError):
+                continue
+            if api_id in claimed or API_TO_ESPN.get(api_league) != fixture.get("league"):
+                continue
+            if not provider_start or abs((provider_start-expected_start).total_seconds()) > 5400:
+                continue
+            h = SequenceMatcher(None, normalize(fixture.get("home")), normalize(home)).ratio()
+            a = SequenceMatcher(None, normalize(fixture.get("away")), normalize(away)).ratio()
+            score = (h+a)/2
+            if score >= 0.35:
+                ranked.append((score, event))
+        # Show only the strongest plausible provider alternative per ESPN match
+        # to reduce quota usage and avoid unrelated team suggestions.
+        if ranked:
+            ranked.sort(key=lambda item: item[0], reverse=True)
+            event = ranked[0][1]
+            api_id = event["fixture"]["id"]
+            if api_id not in claimed:
+                claimed.add(api_id)
+                suggestions.append((fixture, event))
+        if len(suggestions) >= limit:
+            break
+    return suggestions
+
+
 def parse_odds_response(espn_fixture, api_fixture, odds_response, observed_at):
     fixture_id = api_fixture["fixture"]["id"]
     league_id = int(api_fixture["league"]["id"])
@@ -193,17 +245,28 @@ def collect(history, key, get=api_get, max_event_requests=40, delay=None):
             errors.append({"stage": "fixtures", "date": day,
                            "error": type(err).__name__})
     pairs = find_fixture_pairs({"fixtures": fixtures}, fixture_rows)
-    # Never use an ambiguous, unidentified team/league or kickoff.
+    # Additional provider events for previously unknown team spellings.
+    # These events remain UNMATCHED and require human verification.
+    manual_pairs = find_manual_review_events(
+        {"fixtures": fixtures}, fixture_rows, pairs,
+        limit=max(0, max_event_requests-len(pairs))
+    )
     observed_at = datetime.now(timezone.utc).isoformat()
     checked, available = 0, 0
-    for espn, event in pairs[:max_event_requests]:
+    checked_manual, available_manual = 0, 0
+    for espn, event in (pairs + manual_pairs)[:max_event_requests]:
         checked += 1
         fixture_id = event["fixture"]["id"]
         try:
             payload = paced_get("odds", {"fixture": fixture_id, "page": 1})
             rows = parse_odds_response(espn, event, payload["response"], observed_at)
             offers += rows
-            if rows:
+            is_manual = any(item["fixture"]["id"] == fixture_id for _, item in manual_pairs)
+            if is_manual:
+                checked_manual += 1
+                if rows:
+                    available_manual += 1
+            elif rows:
                 available += 1
         except Exception as err:
             errors.append({"stage": "odds", "fixture_id": str(fixture_id),
@@ -212,6 +275,9 @@ def collect(history, key, get=api_get, max_event_requests=40, delay=None):
         "espn_fixtures": len(fixtures), "api_fixtures": len(fixture_rows),
         "verified_fixture_pairs": len(pairs), "odds_checked": checked,
         "fixtures_with_odds": available,
+        "manual_suggestion_events": len(manual_pairs),
+        "manual_odds_checked": checked_manual,
+        "manual_events_with_odds": available_manual,
         "request_cap": max_event_requests,
     }, errors
 
@@ -267,6 +333,7 @@ def main():
         "total": report["total"], "matched": report["matched"],
         "verified_identity_pairs": coverage["verified_fixture_pairs"],
         "events_with_odds": coverage["fixtures_with_odds"],
+        "unapproved_manual_events_with_odds": coverage["manual_events_with_odds"],
         "errors": len(errors)
     }))
     if not offers or report["matched"] < 1:
