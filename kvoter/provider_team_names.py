@@ -1,4 +1,4 @@
-"""Record every distinct OddsAPI team name without asserting team equivalence."""
+"""Record every distinct provider team name without asserting equivalence."""
 import json,os
 from datetime import datetime,timezone
 from pathlib import Path
@@ -17,7 +17,7 @@ def collect_names(offers, path):
             if not league or not isinstance(name,str) or not normalize(name):continue
             key=(league,normalize(name))
             if key in known:continue
-            data["names"].append({"league":league,"name":name,"normalized":key[1],"source":"the-odds-api-v4","first_seen_utc":now,"verified_identity":False})
+            data["names"].append({"league":league,"name":name,"normalized":key[1],"source":offer.get("source") or "the-odds-api-v4","first_seen_utc":now,"verified_identity":False})
             known.add(key);added+=1
     path.parent.mkdir(parents=True,exist_ok=True)
     tmp=path.with_suffix(".tmp")
