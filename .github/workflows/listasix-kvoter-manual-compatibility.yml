@@ -1,0 +1,21 @@
+name: ListaSix Kvoter Manual API-Football compatibility test
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'manual/kvoter-manual-compatibility.trigger'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify API-Football, unknown fixture suggestions and human confirmations
+        run: |
+          python -m unittest -v test_api_football.py
+          echo "KVOTER_MANUAL_API_FOOTBALL_COMPATIBILITY_TESTED"
