@@ -176,7 +176,7 @@ class ApiFootballV3Tests(unittest.TestCase):
             }]}
             (root/"shared/kvoter/manual-candidates.json").write_text(json.dumps(queue))
             payload={"version":"test-queue-version","choices":[[0,0,1]]}
-            body="KVOTER_MANUAL_COMPACT_V1\\n```json\\n"+json.dumps(payload)+"\\n```"
+            body="KVOTER_MANUAL_COMPACT_V1\n```json\n"+json.dumps(payload)+"\n```"
             old=os.getcwd()
             previous=os.environ.get("KVOTER_ALIASES_PATH")
             try:
