@@ -134,7 +134,7 @@ jobs:
               --feed shared/agent/history-h2h.json \
               --output shared/kvoter/match-report.json \
               --offers-output shared/kvoter/provider-offers.json \
-              --max-event-requests 16; then
+              --max-event-requests 45; then
               # Persist only metadata about the attempt, not credentials,
               # to prevent repeated costly requests every 15 minutes.
               if [ -f shared/kvoter/api-football-attempt.json ]; then
