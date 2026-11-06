@@ -1,0 +1,38 @@
+name: ListaSix API-Football dry-run (no publication)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'manual/api-football-pipeline.trigger'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 7
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test normalized markets and strict fixture identity
+        run: python -m unittest -v test_api_football.py
+      - name: Fetch API-Football quotes and reconcile safely (no commit or publication)
+        env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
+          KVOTER_PROVIDER_NAMES_PATH: /tmp/api-football-provider-team-names.json
+        run: |
+          test -n "$API_FOOTBALL_KEY" || { echo "::error::API_FOOTBALL_KEY missing"; exit 1; }
+          python -m kvoter.api_football \
+            --feed shared/collector-feed.json \
+            --offers-output /tmp/api-football-provider-offers.json \
+            --output /tmp/api-football-match-report.json \
+            --max-event-requests 30
+          python - <<'PY'
+          import json
+          data=json.load(open("/tmp/api-football-match-report.json"))
+          offers=json.load(open("/tmp/api-football-provider-offers.json"))
+          print("DRYRUN_MATCHED",data["matched"],"OF",data["total"])
+          print("DRYRUN_OFFERS",len(offers.get("offers",[])))
+          print("DRYRUN_NO_TICKET_OR_LANDING_PAGE_MODIFICATION")
+          PY
