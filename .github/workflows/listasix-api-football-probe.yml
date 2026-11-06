@@ -77,7 +77,7 @@ jobs:
                            "away":m.get("teams",{}).get("away",{}).get("name")}
                           for m in x if any(w in str(m.get("teams",{})).lower() for w in wanted)]
               print("FIXTURES_TOTAL",len(x),"EXAMPLE_CANDIDATES",json.dumps(candidates[:12]))
-                    if not status and not odds:
+          if not status and not odds:
               print("API_FOOTBALL_TEST: CONNECTION_FAILED")
               sys.exit(1)
           if not odds or odds.get("errors") or not odds.get("response"):
