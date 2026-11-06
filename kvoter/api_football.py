@@ -9,6 +9,7 @@ import argparse
 import json
 import os
 import re
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode
@@ -160,19 +161,33 @@ def parse_odds_response(espn_fixture, api_fixture, odds_response, observed_at):
     return result
 
 
-def collect(history, key, get=api_get, max_event_requests=40):
+def collect(history, key, get=api_get, max_event_requests=40, delay=None):
     """Fetch fixture identities, then only query odds for safe ESPN matches.
 
     One fixtures request per UTC date, then one odds request per verified event.
     Never paginate the entire global bookmaker catalogue at 15-min intervals.
     """
+    # API-Football Free has a per-minute request limit. Pacing also avoids
+    # 429 responses that otherwise look like missing bookmaker coverage.
+    if delay is None:
+        delay = 6.5 if get is api_get else 0
+    ready_at = 0.0
+    def paced_get(path, params):
+        nonlocal ready_at
+        if ready_at:
+            time.sleep(max(0.0, ready_at - time.monotonic()))
+        try:
+            return get(path, params, key)
+        finally:
+            ready_at = time.monotonic() + delay
+
     fixtures = [f for f in history.get("fixtures", [])
                 if f.get("league") in LEAGUE_IDS and utc(f.get("start_utc"))]
     dates = sorted({utc(f["start_utc"]).date().isoformat() for f in fixtures})
     errors, fixture_rows, offers = [], [], []
     for day in dates:
         try:
-            payload = get("fixtures", {"date": day, "timezone": "UTC"}, key)
+            payload = paced_get("fixtures", {"date": day, "timezone": "UTC"})
             fixture_rows += payload["response"]
         except Exception as err:
             errors.append({"stage": "fixtures", "date": day,
@@ -185,7 +200,7 @@ def collect(history, key, get=api_get, max_event_requests=40):
         checked += 1
         fixture_id = event["fixture"]["id"]
         try:
-            payload = get("odds", {"fixture": fixture_id, "page": 1}, key)
+            payload = paced_get("odds", {"fixture": fixture_id, "page": 1})
             rows = parse_odds_response(espn, event, payload["response"], observed_at)
             offers += rows
             if rows:
