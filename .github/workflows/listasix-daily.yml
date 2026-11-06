@@ -21,6 +21,7 @@ jobs:
         id: clock
         env:
           TRIGGER: ${{ github.event_name }}
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
         run: |
           python3 - <<'PY'
           import json, os
@@ -41,6 +42,21 @@ jobs:
               except (ValueError,OSError):
                   pass
           allowed=(os.environ["TRIGGER"]=="workflow_dispatch") or (scheduled and not current)
+          # Keep the 15-minute GitHub checks, but do not burn the Free API
+          # allocation: pre-match odds refresh only about every 3 hours.
+          if allowed and os.environ["TRIGGER"]!="workflow_dispatch" and os.environ.get("API_FOOTBALL_KEY"):
+              marker=Path("shared/kvoter/api-football-attempt.json")
+              if marker.exists():
+                  try:
+                      from datetime import timezone, timedelta
+                      last=json.loads(marker.read_text(encoding="utf-8"))
+                      when=datetime.fromisoformat(last["attempt_at_utc"]).astimezone(timezone.utc)
+                      age=datetime.now(timezone.utc)-when
+                      if last.get("date")==today and timedelta(0)<=age<timedelta(hours=3):
+                          allowed=False
+                          print("API_FOOTBALL_BACKOFF_TO_SAVE_FREE_QUOTA", "retry_after_hours=",round(3-age.total_seconds()/3600,2))
+                  except (OSError, ValueError, KeyError, TypeError):
+                      pass
           with open(os.environ["GITHUB_OUTPUT"],"a") as out:
               out.write("run="+("true" if allowed else "false")+"\n")
           print("LISTASIX_RETRY_GATE",local.isoformat(),"current=",current,"run=",allowed)
@@ -103,36 +119,67 @@ jobs:
                   assert team.get("found",0)==len(team.get("matches",[])), (league,name)
                   assert team.get("found",0)<=5, (league,name)
           PY
-      - name: Run Kvoter with protected OddsAPI secret
+      - name: Run Kvoter using API-Football when configured (The Odds API kept as legacy fallback)
         if: steps.clock.outputs.run == 'true'
         env:
+          API_FOOTBALL_KEY: ${{ secrets.API_FOOTBALL_KEY }}
           THE_ODDS_API_KEY: ${{ secrets.THE_ODDS_API_KEY }}
           KVOTER_PROVIDER_NAMES_PATH: shared/kvoter/team-database/provider-team-names.json
         run: |
-          test -n "$THE_ODDS_API_KEY" || { echo "::error::THE_ODDS_API_KEY repository secret missing"; exit 1; }
           mkdir -p shared/kvoter
-          python3 -m unittest -v test_oddsapi_uefa_markets.py
-          python3 -m kvoter.the_odds_api --feed shared/agent/history-h2h.json --output shared/kvoter/match-report.json --raw-output shared/kvoter/league-odds-raw.json --offers-output shared/kvoter/provider-offers.json
+          python3 -m unittest -v test_api_football.py test_oddsapi_uefa_markets.py
+          if [ -n "$API_FOOTBALL_KEY" ]; then
+            echo "KVOTER_PROVIDER=api-football-v3"
+            if ! python3 -m kvoter.api_football \
+              --feed shared/agent/history-h2h.json \
+              --output shared/kvoter/match-report.json \
+              --offers-output shared/kvoter/provider-offers.json \
+              --max-event-requests 16; then
+              # Persist only metadata about the attempt, not credentials,
+              # to prevent repeated costly requests every 15 minutes.
+              if [ -f shared/kvoter/api-football-attempt.json ]; then
+                git config user.name "github-actions[bot]"
+                git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                git add -f -- shared/kvoter/api-football-attempt.json
+                if ! git diff --cached --quiet; then
+                  git commit -m "lista: API-Football retry marker to respect free quota [skip ci]"
+                  git pull --rebase origin main
+                  git push origin HEAD:main
+                fi
+              fi
+              exit 1
+            fi
+          else
+            echo "KVOTER_PROVIDER=legacy-the-odds-api"
+            test -n "$THE_ODDS_API_KEY" || { echo "::error::Both odds provider secrets missing"; exit 1; }
+            python3 -m kvoter.the_odds_api --feed shared/agent/history-h2h.json \
+              --output shared/kvoter/match-report.json \
+              --raw-output shared/kvoter/league-odds-raw.json \
+              --offers-output shared/kvoter/provider-offers.json
+          fi
           python3 - <<'PY'
           import json
           from pathlib import Path
           report=json.loads(Path("shared/kvoter/match-report.json").read_text())
-          assert report.get("provider_status")=="api_fetched", "OddsAPI fetch failed"
+          assert report.get("provider_status")=="api_fetched", "Odds provider fetch failed"
+          assert report.get("matched",0)>0, "No independently verified bookmaker matches"
           errors=report.get("provider_errors",[])
-          fallback=report.get("provider_cached_fallback",{})
-          if errors:
-              print("ODDSAPI_PARTIAL_FAILURE_RECOVERED",errors,"cached_quotes_by_league",fallback)
-              failed_leagues={x.get("league") for x in errors}
-              assert all(fallback.get(league,0)>0 for league in failed_leagues), (
-                  "A failed league lacks recent cached quotes; preserve the existing public offer")
-              old=Path("docs/active-list.json")
-              if old.exists():
-                  previous=json.loads(old.read_text(encoding="utf-8"))
-                  if previous.get("date")==json.loads(Path("shared/collector-feed.json").read_text())["date"]:
-                      assert report["matched"]>=len(previous.get("fixtures",[])), (
-                          "Partial API failure would shrink a previously verified active-list")
-          print("LISTASIX_KVOTER_OK",report["matched"],report["unavailable"],
-                "partial_api_errors",len(errors))
+          if report.get("source")=="api-football-v3":
+              print("API_FOOTBALL_QUOTES_READY", "matched=",report["matched"],
+                    "total=",report["total"],"provider_errors=",len(errors))
+          else:
+              fallback=report.get("provider_cached_fallback",{})
+              if errors:
+                  print("ODDSAPI_PARTIAL_FAILURE_RECOVERED",errors,"cached_quotes_by_league",fallback)
+                  failed_leagues={x.get("league") for x in errors}
+                  assert all(fallback.get(league,0)>0 for league in failed_leagues), (
+                      "A failed league lacks recent cached quotes; preserve existing public offer")
+                  old=Path("docs/active-list.json")
+                  if old.exists():
+                      previous=json.loads(old.read_text())
+                      if previous.get("date")==json.loads(Path("shared/collector-feed.json").read_text())["date"]:
+                          assert report["matched"]>=len(previous.get("fixtures",[])), (
+                              "Partial provider error would shrink verified active-list")
           PY
       - name: Build manual review candidates
         if: steps.clock.outputs.run == 'true'
