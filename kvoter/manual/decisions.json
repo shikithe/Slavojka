@@ -1088,6 +1088,28 @@
       "odds_away": "San Jose Earthquakes",
       "decision": "rejected",
       "issue_number": 9
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761936",
+      "event_id": "api-football:1490601",
+      "league": "usa.1",
+      "collector_home": "D.C. United",
+      "collector_away": "New York City FC",
+      "odds_home": "FC Cincinnati",
+      "odds_away": "Nashville SC",
+      "decision": "rejected",
+      "issue_number": 10
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761938",
+      "event_id": "api-football:1490601",
+      "league": "usa.1",
+      "collector_home": "Inter Miami CF",
+      "collector_away": "Charlotte FC",
+      "odds_home": "FC Cincinnati",
+      "odds_away": "Nashville SC",
+      "decision": "rejected",
+      "issue_number": 10
     }
   ]
 }
