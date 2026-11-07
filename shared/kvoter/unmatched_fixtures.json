@@ -1,0 +1,139 @@
+{
+  "generated_at_utc": "2026-11-07T08:52:59.765046+00:00",
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:eng.1:401878758",
+      "league": "eng.1",
+      "home": "Leeds United",
+      "away": "Tottenham Hotspur",
+      "start_utc": "2026-11-07T12:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884740",
+      "league": "ger.1",
+      "home": "Mainz",
+      "away": "Bayern Munich",
+      "start_utc": "2026-11-07T14:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879241",
+      "league": "eng.1",
+      "home": "Fulham",
+      "away": "Newcastle United",
+      "start_utc": "2026-11-07T15:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878342",
+      "league": "sco.1",
+      "home": "Dundee United",
+      "away": "Motherwell",
+      "start_utc": "2026-11-07T15:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885398",
+      "league": "por.1",
+      "home": "C.D. Nacional",
+      "away": "Académico de Viseu",
+      "start_utc": "2026-11-07T15:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888371",
+      "league": "tur.1",
+      "home": "Galatasaray",
+      "away": "Amed SFK",
+      "start_utc": "2026-11-07T16:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841666",
+      "league": "arg.1",
+      "home": "Gimnasia (Mendoza)",
+      "away": "Independiente Rivadavia",
+      "start_utc": "2026-11-07T18:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841661",
+      "league": "arg.1",
+      "home": "Talleres (Córdoba)",
+      "away": "Estudiantes de La Plata",
+      "start_utc": "2026-11-07T18:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878950",
+      "league": "bel.1",
+      "home": "Antwerp",
+      "away": "Lommel SK",
+      "start_utc": "2026-11-07T19:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878948",
+      "league": "bel.1",
+      "home": "RAAL La Louvière",
+      "away": "Cercle Brugge KSV",
+      "start_utc": "2026-11-07T19:45:00Z"
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876407",
+      "league": "fra.1",
+      "home": "Paris Saint-Germain",
+      "away": "Troyes",
+      "start_utc": "2026-11-07T20:05:00Z"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841672",
+      "league": "arg.1",
+      "home": "Argentinos Juniors",
+      "away": "Huracán",
+      "start_utc": "2026-11-07T20:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761936",
+      "league": "usa.1",
+      "home": "D.C. United",
+      "away": "New York City FC",
+      "start_utc": "2026-11-07T21:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761938",
+      "league": "usa.1",
+      "home": "Inter Miami CF",
+      "away": "Charlotte FC",
+      "start_utc": "2026-11-07T21:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761942",
+      "league": "usa.1",
+      "home": "Austin FC",
+      "away": "Portland Timbers",
+      "start_utc": "2026-11-08T00:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761944",
+      "league": "usa.1",
+      "home": "Houston Dynamo FC",
+      "away": "St. Louis CITY SC",
+      "start_utc": "2026-11-08T00:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761946",
+      "league": "usa.1",
+      "home": "Real Salt Lake",
+      "away": "LA Galaxy",
+      "start_utc": "2026-11-08T00:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761947",
+      "league": "usa.1",
+      "home": "San Diego FC",
+      "away": "Sporting Kansas City",
+      "start_utc": "2026-11-08T00:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761948",
+      "league": "usa.1",
+      "home": "Seattle Sounders FC",
+      "away": "LAFC",
+      "start_utc": "2026-11-08T00:00:00Z"
+    }
+  ],
+  "total": 19
+}

@@ -1,0 +1,216 @@
+{
+  "generated_at_utc": "2026-11-07T08:52:59.947885+00:00",
+  "total": 10,
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:eng.1:401878758",
+      "league": "eng.1",
+      "home": "Leeds United",
+      "away": "Tottenham Hotspur",
+      "start_utc": "2026-11-07T12:30:00Z",
+      "candidates": [
+        {
+          "event_id": "api-football:1557463",
+          "home": "Leeds",
+          "away": "Tottenham",
+          "start_utc": "2026-11-07T12:30:00+00:00",
+          "league": "eng.1",
+          "similarity": 0.64
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884740",
+      "league": "ger.1",
+      "home": "Mainz",
+      "away": "Bayern Munich",
+      "start_utc": "2026-11-07T14:30:00Z",
+      "candidates": [
+        {
+          "event_id": "api-football:1575217",
+          "home": "FSV Mainz 05",
+          "away": "Bayern München",
+          "start_utc": "2026-11-07T14:30:00+00:00",
+          "league": "ger.1",
+          "similarity": 0.739
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879241",
+      "league": "eng.1",
+      "home": "Fulham",
+      "away": "Newcastle United",
+      "start_utc": "2026-11-07T15:00:00Z",
+      "candidates": [
+        {
+          "event_id": "api-football:1557461",
+          "home": "Fulham",
+          "away": "Newcastle",
+          "start_utc": "2026-11-07T15:00:00+00:00",
+          "league": "eng.1",
+          "similarity": 0.86
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878342",
+      "league": "sco.1",
+      "home": "Dundee United",
+      "away": "Motherwell",
+      "start_utc": "2026-11-07T15:00:00Z",
+      "candidates": [
+        {
+          "event_id": "api-football:1556702",
+          "home": "Dundee Utd",
+          "away": "Motherwell",
+          "start_utc": "2026-11-07T15:00:00+00:00",
+          "league": "sco.1",
+          "similarity": 0.935
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885398",
+      "league": "por.1",
+      "home": "C.D. Nacional",
+      "away": "Académico de Viseu",
+      "start_utc": "2026-11-07T15:30:00Z",
+      "candidates": [
+        {
+          "event_id": "api-football:1575540",
+          "home": "Nacional",
+          "away": "Academico Viseu",
+          "start_utc": "2026-11-07T15:30:00+00:00",
+          "league": "por.1",
+          "similarity": 0.855
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888371",
+      "league": "tur.1",
+      "home": "Galatasaray",
+      "away": "Amed SFK",
+      "start_utc": "2026-11-07T16:00:00Z",
+      "candidates": [
+        {
+          "event_id": "api-football:1584461",
+          "home": "Galatasaray",
+          "away": "Amed",
+          "start_utc": "2026-11-07T16:00:00+00:00",
+          "league": "tur.1",
+          "similarity": 0.833
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841672",
+      "league": "arg.1",
+      "home": "Argentinos Juniors",
+      "away": "Huracán",
+      "start_utc": "2026-11-07T20:30:00Z",
+      "candidates": [
+        {
+          "event_id": "api-football:1493231",
+          "home": "Boca Juniors",
+          "away": "Defensa Y Justicia",
+          "start_utc": "2026-11-07T20:30:00+00:00",
+          "league": "arg.1",
+          "similarity": 0.38
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761936",
+      "league": "usa.1",
+      "home": "D.C. United",
+      "away": "New York City FC",
+      "start_utc": "2026-11-07T21:00:00Z",
+      "candidates": [
+        {
+          "event_id": "api-football:1490602",
+          "home": "Philadelphia Union",
+          "away": "Toronto FC",
+          "start_utc": "2026-11-07T21:00:00+00:00",
+          "league": "usa.1",
+          "similarity": 0.409
+        },
+        {
+          "event_id": "api-football:1490604",
+          "home": "CF Montreal",
+          "away": "Vancouver Whitecaps",
+          "start_utc": "2026-11-07T21:00:00+00:00",
+          "league": "usa.1",
+          "similarity": 0.362
+        },
+        {
+          "event_id": "api-football:1490601",
+          "home": "FC Cincinnati",
+          "away": "Nashville SC",
+          "start_utc": "2026-11-07T21:00:00+00:00",
+          "league": "usa.1",
+          "similarity": 0.36
+        },
+        {
+          "event_id": "api-football:1490606",
+          "home": "Orlando City SC",
+          "away": "New England Revolution",
+          "start_utc": "2026-11-07T21:00:00+00:00",
+          "league": "usa.1",
+          "similarity": 0.358
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761938",
+      "league": "usa.1",
+      "home": "Inter Miami CF",
+      "away": "Charlotte FC",
+      "start_utc": "2026-11-07T21:00:00Z",
+      "candidates": [
+        {
+          "event_id": "api-football:1490603",
+          "home": "New York Red Bulls",
+          "away": "Atlanta United FC",
+          "start_utc": "2026-11-07T21:00:00+00:00",
+          "league": "usa.1",
+          "similarity": 0.432
+        },
+        {
+          "event_id": "api-football:1490602",
+          "home": "Philadelphia Union",
+          "away": "Toronto FC",
+          "start_utc": "2026-11-07T21:00:00+00:00",
+          "league": "usa.1",
+          "similarity": 0.429
+        },
+        {
+          "event_id": "api-football:1490601",
+          "home": "FC Cincinnati",
+          "away": "Nashville SC",
+          "start_utc": "2026-11-07T21:00:00+00:00",
+          "league": "usa.1",
+          "similarity": 0.356
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761947",
+      "league": "usa.1",
+      "home": "San Diego FC",
+      "away": "Sporting Kansas City",
+      "start_utc": "2026-11-08T00:00:00Z",
+      "candidates": [
+        {
+          "event_id": "api-football:1490613",
+          "home": "Minnesota United FC",
+          "away": "San Jose Earthquakes",
+          "start_utc": "2026-11-08T00:00:00+00:00",
+          "league": "usa.1",
+          "similarity": 0.376
+        }
+      ]
+    }
+  ]
+}
