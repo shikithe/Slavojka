@@ -119,6 +119,14 @@ jobs:
                   assert team.get("found",0)==len(team.get("matches",[])), (league,name)
                   assert team.get("found",0)<=5, (league,name)
           PY
+      - name: Make compact evidence-only ESPN form brief for MemaraSix research
+        if: steps.clock.outputs.run == 'true'
+        run: |
+          python3 -m unittest -v test_analysis_brief.py
+          python3 -m agent.analysis_brief \
+            --input shared/agent/history-h2h.json \
+            --output shared/agent/analysis-brief.json \
+            --expected-date "$(TZ=Europe/Sarajevo date +%F)"
       - name: Run Kvoter using API-Football when configured (The Odds API kept as legacy fallback)
         if: steps.clock.outputs.run == 'true'
         env:
@@ -220,7 +228,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for path in docs/manual-candidates.json docs/unmatched_fixtures.json docs/active-list.json docs/kvoter-ponuda.txt shared/active-list.json shared/kvoter-ponuda.txt shared/agent/history-h2h.json shared/kvoter/provider-offers.json shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json; do
+          for path in docs/manual-candidates.json docs/unmatched_fixtures.json docs/active-list.json docs/kvoter-ponuda.txt shared/active-list.json shared/kvoter-ponuda.txt shared/agent/history-h2h.json shared/agent/analysis-brief.json shared/kvoter/provider-offers.json shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/manual-candidates.json shared/kvoter/team-database/provider-team-names.json; do
             if [ -f "$path" ]; then git add -f -- "$path"; fi
           done
           if ! git diff --cached --quiet; then
