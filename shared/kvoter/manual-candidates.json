@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-11-07T08:55:35.935127+00:00",
+  "generated_at_utc": "2026-11-07T08:56:52.139468+00:00",
   "total": 2,
   "fixtures": [
     {
@@ -16,14 +16,6 @@
           "start_utc": "2026-11-07T21:00:00+00:00",
           "league": "usa.1",
           "similarity": 0.362
-        },
-        {
-          "event_id": "api-football:1490601",
-          "home": "FC Cincinnati",
-          "away": "Nashville SC",
-          "start_utc": "2026-11-07T21:00:00+00:00",
-          "league": "usa.1",
-          "similarity": 0.36
         },
         {
           "event_id": "api-football:1490606",
@@ -49,14 +41,6 @@
           "start_utc": "2026-11-07T21:00:00+00:00",
           "league": "usa.1",
           "similarity": 0.429
-        },
-        {
-          "event_id": "api-football:1490601",
-          "home": "FC Cincinnati",
-          "away": "Nashville SC",
-          "start_utc": "2026-11-07T21:00:00+00:00",
-          "league": "usa.1",
-          "similarity": 0.356
         }
       ]
     }
