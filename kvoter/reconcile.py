@@ -23,7 +23,10 @@ def reconcile(history_path, offers_path, database_path, names_path, output_dir):
     # First persist the actual spellings from the quoted odds provider.
     collect_names(offers,names_path)
     os.environ["KVOTER_ALIASES_PATH"]=str(Path(database_path).resolve())
-    report=build(history,offers)
+    # Preserve actual odds provider provenance on manual re-reconciliation.
+    # API-Football offers must never be mislabeled as legacy The Odds API.
+    provider=source.get("source") if isinstance(source,dict) else None
+    report=build(history,offers,source=provider or "the-odds-api-v4")
     out=Path(output_dir)
     atomic(out/"matched_fixtures.json",{"generated_at_utc":report["generated_at_utc"],"fixtures":report["matched_fixtures"],"total":report["matched"]})
     atomic(out/"unmatched_fixtures.json",{"generated_at_utc":report["generated_at_utc"],"fixtures":report["unmatched_fixtures"],"total":report["unavailable"]})
