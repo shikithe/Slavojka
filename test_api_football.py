@@ -196,5 +196,44 @@ class ApiFootballV3Tests(unittest.TestCase):
                     os.environ["KVOTER_ALIASES_PATH"]=previous
 
 
+    def test_manual_reconciliation_keeps_actual_api_football_provider_source(self):
+        import json
+        import os
+        import tempfile
+        from pathlib import Path
+        from kvoter.reconcile import reconcile
+        with tempfile.TemporaryDirectory() as temporary:
+            root=Path(temporary)
+            history_path=root/"history.json"
+            offers_path=root/"offers.json"
+            aliases_path=root/"aliases.json"
+            names_path=root/"provider-names.json"
+            report_dir=root/"kvoter"
+            history_path.write_text(json.dumps({"fixtures":[self.espn]}))
+            offers_path.write_text(json.dumps({
+                "source":"api-football-v3",
+                "offers":[{
+                    "event_id":"api-football:456", "league":"esp.1",
+                    "home":"Sevilla", "away":"Alavés",
+                    "start_utc":"2026-11-06T20:00:00Z",
+                    "bookmaker":"Bet365", "markets":{"1X2":{"home":2.2}}
+                }]
+            }))
+            aliases_path.write_text('{"teams":[]}')
+            prior=os.environ.get("KVOTER_ALIASES_PATH")
+            try:
+                report=reconcile(history_path,offers_path,aliases_path,
+                                 names_path,report_dir)
+                self.assertEqual(report["source"],"api-football-v3")
+                self.assertEqual(report["matched"],1)
+                disk=json.loads((report_dir/"match-report.json").read_text())
+                self.assertEqual(disk["source"],"api-football-v3")
+            finally:
+                if prior is None:
+                    os.environ.pop("KVOTER_ALIASES_PATH",None)
+                else:
+                    os.environ["KVOTER_ALIASES_PATH"]=prior
+
+
 if __name__ == "__main__":
     unittest.main()
