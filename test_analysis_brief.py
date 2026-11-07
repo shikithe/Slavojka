@@ -1,5 +1,6 @@
 import unittest
 from agent.analysis_brief import compress
+from agent.five_matches import verified_scores
 
 class TestAnalysisBrief(unittest.TestCase):
     def test_preserves_verified_match_dates_and_missing_scores(self):
@@ -24,6 +25,21 @@ class TestAnalysisBrief(unittest.TestCase):
         self.assertEqual(a["scores"],{"home":"1","away":"0"})
         self.assertFalse(d["fixtures"][0]["home_form"]["complete"])
         self.assertFalse(d["fixtures"][0]["away_form"]["complete"])
+
+    def test_score_capture_requires_completed_event_and_both_sides(self):
+        event = {
+            "status": {"type": {"state": "post"}},
+            "competitions": [{"competitors": [
+                {"homeAway":"home","score":"3"},
+                {"homeAway":"away","score":"1"}
+            ]}]
+        }
+        self.assertEqual(verified_scores(event), {"home":"3","away":"1"})
+        event["status"]["type"]["state"] = "pre"
+        self.assertIsNone(verified_scores(event))
+        event["status"]["type"]["state"] = "post"
+        event["competitions"][0]["competitors"][1].pop("score")
+        self.assertIsNone(verified_scores(event))
 
 if __name__=="__main__":
     unittest.main()
