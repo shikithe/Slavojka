@@ -1,0 +1,36 @@
+name: ListaSix compact form evidence verification
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'manual/analysis-brief-test.trigger'
+permissions:
+  contents: write
+concurrency:
+  group: listasix-analysis-brief-verify
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Verify compact ESPN source generation
+        run: |
+          python3 -m unittest -v test_analysis_brief.py
+          python3 -m agent.analysis_brief \
+            --input shared/agent/history-h2h.json \
+            --output shared/agent/analysis-brief.json \
+            --expected-date "$(TZ=Europe/Sarajevo date +%F)"
+      - name: Commit compact evidence for MemaraSix AI (never publish bets)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f -- shared/agent/analysis-brief.json
+          if ! git diff --cached --quiet; then
+            git commit -m "lista: expose compact verified ESPN match history to AI [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
