@@ -257,10 +257,12 @@
       "league": "tur.1",
       "names": [
         "Amed SFK",
-        "Amed SK"
+        "Amed SK",
+        "Amed"
       ],
       "sources": [
-        "github-issue-8"
+        "github-issue-8",
+        "github-issue-9"
       ],
       "verified": true
     },
@@ -436,7 +438,8 @@
         "Nacional"
       ],
       "sources": [
-        "github-issue-2"
+        "github-issue-2",
+        "github-issue-9"
       ],
       "verified": true
     },
@@ -1265,6 +1268,90 @@
       ],
       "sources": [
         "github-issue-8"
+      ],
+      "verified": true
+    },
+    {
+      "id": "eng.1-leeds-united",
+      "league": "eng.1",
+      "names": [
+        "Leeds United",
+        "Leeds"
+      ],
+      "sources": [
+        "github-issue-9"
+      ],
+      "verified": true
+    },
+    {
+      "id": "eng.1-tottenham-hotspur",
+      "league": "eng.1",
+      "names": [
+        "Tottenham Hotspur",
+        "Tottenham"
+      ],
+      "sources": [
+        "github-issue-9"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ger.1-mainz",
+      "league": "ger.1",
+      "names": [
+        "Mainz",
+        "FSV Mainz 05"
+      ],
+      "sources": [
+        "github-issue-9"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ger.1-bayern-munich",
+      "league": "ger.1",
+      "names": [
+        "Bayern Munich",
+        "Bayern München"
+      ],
+      "sources": [
+        "github-issue-9"
+      ],
+      "verified": true
+    },
+    {
+      "id": "eng.1-newcastle-united",
+      "league": "eng.1",
+      "names": [
+        "Newcastle United",
+        "Newcastle"
+      ],
+      "sources": [
+        "github-issue-9"
+      ],
+      "verified": true
+    },
+    {
+      "id": "sco.1-dundee-united",
+      "league": "sco.1",
+      "names": [
+        "Dundee United",
+        "Dundee Utd"
+      ],
+      "sources": [
+        "github-issue-9"
+      ],
+      "verified": true
+    },
+    {
+      "id": "por.1-academico-de-viseu",
+      "league": "por.1",
+      "names": [
+        "Académico de Viseu",
+        "Academico Viseu"
+      ],
+      "sources": [
+        "github-issue-9"
       ],
       "verified": true
     }

@@ -978,6 +978,116 @@
       "odds_away": "SK Brann",
       "decision": "matched",
       "issue_number": 8
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401878758",
+      "event_id": "api-football:1557463",
+      "league": "eng.1",
+      "collector_home": "Leeds United",
+      "collector_away": "Tottenham Hotspur",
+      "odds_home": "Leeds",
+      "odds_away": "Tottenham",
+      "decision": "matched",
+      "issue_number": 9
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884740",
+      "event_id": "api-football:1575217",
+      "league": "ger.1",
+      "collector_home": "Mainz",
+      "collector_away": "Bayern Munich",
+      "odds_home": "FSV Mainz 05",
+      "odds_away": "Bayern München",
+      "decision": "matched",
+      "issue_number": 9
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879241",
+      "event_id": "api-football:1557461",
+      "league": "eng.1",
+      "collector_home": "Fulham",
+      "collector_away": "Newcastle United",
+      "odds_home": "Fulham",
+      "odds_away": "Newcastle",
+      "decision": "matched",
+      "issue_number": 9
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878342",
+      "event_id": "api-football:1556702",
+      "league": "sco.1",
+      "collector_home": "Dundee United",
+      "collector_away": "Motherwell",
+      "odds_home": "Dundee Utd",
+      "odds_away": "Motherwell",
+      "decision": "matched",
+      "issue_number": 9
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885398",
+      "event_id": "api-football:1575540",
+      "league": "por.1",
+      "collector_home": "C.D. Nacional",
+      "collector_away": "Académico de Viseu",
+      "odds_home": "Nacional",
+      "odds_away": "Academico Viseu",
+      "decision": "matched",
+      "issue_number": 9
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888371",
+      "event_id": "api-football:1584461",
+      "league": "tur.1",
+      "collector_home": "Galatasaray",
+      "collector_away": "Amed SFK",
+      "odds_home": "Galatasaray",
+      "odds_away": "Amed",
+      "decision": "matched",
+      "issue_number": 9
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401841672",
+      "event_id": "api-football:1493231",
+      "league": "arg.1",
+      "collector_home": "Argentinos Juniors",
+      "collector_away": "Huracán",
+      "odds_home": "Boca Juniors",
+      "odds_away": "Defensa Y Justicia",
+      "decision": "rejected",
+      "issue_number": 9
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761936",
+      "event_id": "api-football:1490602",
+      "league": "usa.1",
+      "collector_home": "D.C. United",
+      "collector_away": "New York City FC",
+      "odds_home": "Philadelphia Union",
+      "odds_away": "Toronto FC",
+      "decision": "rejected",
+      "issue_number": 9
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761938",
+      "event_id": "api-football:1490603",
+      "league": "usa.1",
+      "collector_home": "Inter Miami CF",
+      "collector_away": "Charlotte FC",
+      "odds_home": "New York Red Bulls",
+      "odds_away": "Atlanta United FC",
+      "decision": "rejected",
+      "issue_number": 9
+    },
+    {
+      "fixture_id": "espn:football:usa.1:761947",
+      "event_id": "api-football:1490613",
+      "league": "usa.1",
+      "collector_home": "San Diego FC",
+      "collector_away": "Sporting Kansas City",
+      "odds_home": "Minnesota United FC",
+      "odds_away": "San Jose Earthquakes",
+      "decision": "rejected",
+      "issue_number": 9
     }
   ]
 }
