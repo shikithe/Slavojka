@@ -12,6 +12,18 @@ except ModuleNotFoundError:
     from espn_statistics import fetch, extract_summary
 
 ROOT="https://site.api.espn.com/apis/site/v2/sports"
+def verified_scores(event):
+    """Only retain scores supplied by a finished ESPN scoreboard event."""
+    if (event.get("status") or {}).get("type",{}).get("state")!="post":
+        return None
+    competition=(event.get("competitions") or [{}])[0]
+    home=away=None
+    for competitor in competition.get("competitors",[]):
+        side=competitor.get("homeAway")
+        value=competitor.get("score")
+        if side=="home" and value is not None: home=value
+        if side=="away" and value is not None: away=value
+    return {"home":home,"away":away} if home is not None and away is not None else None
 def build(feed, request=fetch, days=120, last=5):
     if not isinstance(feed,dict):
         raise ValueError("Feed must be an object")
@@ -72,6 +84,7 @@ def build(feed, request=fetch, days=120, last=5):
                         errors.append({"event_id":event_id,"error":str(exc)})
                         summaries[event_id]={"available":False,"team_statistics":[]}
                 rows.append({"event_id":event_id,"date":e.get("date"),"name":e.get("name"),
+                             "competition":league,"scores":verified_scores(e),
                              "statistics":summaries[event_id]})
             per_team[name]={"found":len(rows),"complete":len(rows)==last,"matches":rows}
         # H2H: inspect saved completed fixtures first; then fill historical meetings
