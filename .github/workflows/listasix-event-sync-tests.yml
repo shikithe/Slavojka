@@ -1,0 +1,21 @@
+name: ListaSix MemaraSix ready-event relay tests
+on:
+  pull_request:
+    paths:
+      - 'lista/notify_memarasix.py'
+      - 'test_notify_memarasix.py'
+      - '.github/workflows/listasix-daily.yml'
+      - '.github/workflows/listasix-event-sync-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  ready-event-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -m unittest -v test_notify_memarasix.py

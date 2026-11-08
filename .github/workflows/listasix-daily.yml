@@ -236,6 +236,16 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+      - name: Relay ready list to MemaraSix and retry until exact receipt confirmed
+        # Runs even when today's list was already prepared in an earlier attempt:
+        # ongoing ListaSix schedule is then a lightweight retry, not a new collection.
+        if: success()
+        env:
+          MEMARASIX_DISPATCH_TOKEN: ${{ secrets.MEMARASIX_DISPATCH_TOKEN }}
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          python3 -m lista.notify_memarasix
       - name: Upload Collector feed
         if: steps.clock.outputs.run == 'true'
         uses: actions/upload-artifact@v4
