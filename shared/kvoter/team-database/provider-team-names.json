@@ -2337,6 +2337,518 @@
       "source": "api-football-v3",
       "first_seen_utc": "2026-11-07T08:52:58.806916+00:00",
       "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "Heerenveen",
+      "normalized": "heerenveen",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "Feyenoord",
+      "normalized": "feyenoord",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Elche",
+      "normalized": "elche",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Real Betis",
+      "normalized": "real betis",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Çorum FK",
+      "normalized": "corum fk",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Fenerbahçe",
+      "normalized": "fenerbahce",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Brighton",
+      "normalized": "brighton",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Brentford",
+      "normalized": "brentford",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Crystal Palace",
+      "normalized": "crystal palace",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Sunderland",
+      "normalized": "sunderland",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Chelsea",
+      "normalized": "chelsea",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "AC Milan",
+      "normalized": "ac milan",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Monza",
+      "normalized": "monza",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Atalanta",
+      "normalized": "atalanta",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ger.1",
+      "name": "Bayer Leverkusen",
+      "normalized": "bayer leverkusen",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "sco.1",
+      "name": "Heart Of Midlothian",
+      "normalized": "heart of midlothian",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "sco.1",
+      "name": "Falkirk",
+      "normalized": "falkirk",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Rayo Vallecano",
+      "normalized": "rayo vallecano",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "AZ Alkmaar",
+      "normalized": "az alkmaar",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "sco.1",
+      "name": "Kilmarnock",
+      "normalized": "kilmarnock",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Nice",
+      "normalized": "nice",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Manchester United",
+      "normalized": "manchester united",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Aston Villa",
+      "normalized": "aston villa",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ger.1",
+      "name": "SC Freiburg",
+      "normalized": "sc freiburg",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Celta Vigo",
+      "normalized": "celta vigo",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Levante",
+      "normalized": "levante",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Villarreal",
+      "normalized": "villarreal",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Union St. Gilloise",
+      "normalized": "union st gilloise",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Genk",
+      "normalized": "genk",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "FC Porto",
+      "normalized": "fc porto",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Lens",
+      "normalized": "lens",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Atletico Madrid",
+      "normalized": "atletico madrid",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "esp.1",
+      "name": "Barcelona",
+      "normalized": "barcelona",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Estrela",
+      "normalized": "estrela",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Rizespor",
+      "normalized": "rizespor",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Erzurumspor FK",
+      "normalized": "erzurumspor fk",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Club Brugge KV",
+      "normalized": "club brugge kv",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Anderlecht",
+      "normalized": "anderlecht",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "Twente",
+      "normalized": "twente",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "Ajax",
+      "normalized": "ajax",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Ipswich",
+      "normalized": "ipswich",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "eng.1",
+      "name": "Bournemouth",
+      "normalized": "bournemouth",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Rennes",
+      "normalized": "rennes",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Lille",
+      "normalized": "lille",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Kortrijk",
+      "normalized": "kortrijk",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "Cambuur",
+      "normalized": "cambuur",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "PSV Eindhoven",
+      "normalized": "psv eindhoven",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Stade Brestois 29",
+      "normalized": "stade brestois 29",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Le Havre",
+      "normalized": "le havre",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Le Mans",
+      "normalized": "le mans",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "fra.1",
+      "name": "Monaco",
+      "normalized": "monaco",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Inter",
+      "normalized": "inter",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ita.1",
+      "name": "Como",
+      "normalized": "como",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Beşiktaş",
+      "normalized": "besiktas",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "tur.1",
+      "name": "Gençlerbirliği S.K.",
+      "normalized": "genclerbirligi s k",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "St. Truiden",
+      "normalized": "st truiden",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "bel.1",
+      "name": "Zulte Waregem",
+      "normalized": "zulte waregem",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ger.1",
+      "name": "1899 Hoffenheim",
+      "normalized": "1899 hoffenheim",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ger.1",
+      "name": "FC Schalke 04",
+      "normalized": "fc schalke 04",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "Utrecht",
+      "normalized": "utrecht",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "ned.1",
+      "name": "NEC Nijmegen",
+      "normalized": "nec nijmegen",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "Rio Ave",
+      "normalized": "rio ave",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "por.1",
+      "name": "SC Braga",
+      "normalized": "sc braga",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
+    },
+    {
+      "league": "arg.1",
+      "name": "Central Cordoba de Santiago",
+      "normalized": "central cordoba de santiago",
+      "source": "api-football-v3",
+      "first_seen_utc": "2026-11-08T08:49:07.315889+00:00",
+      "verified_identity": false
     }
   ]
 }
