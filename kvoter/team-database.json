@@ -8,7 +8,9 @@
         "Ajax",
         "Ajax Amsterdam"
       ],
-      "sources": [],
+      "sources": [
+        "github-issue-12"
+      ],
       "verified": true
     },
     {
@@ -56,7 +58,8 @@
         "FC Schalke 04"
       ],
       "sources": [
-        "github-issue-8"
+        "github-issue-8",
+        "github-issue-12"
       ],
       "verified": true
     },
@@ -68,7 +71,8 @@
         "Bournemouth"
       ],
       "sources": [
-        "github-issue-8"
+        "github-issue-8",
+        "github-issue-12"
       ],
       "verified": true
     },
@@ -137,10 +141,12 @@
       "league": "ita.1",
       "names": [
         "Internazionale",
-        "Inter Milan"
+        "Inter Milan",
+        "Inter"
       ],
       "sources": [
-        "github-issue-8"
+        "github-issue-8",
+        "github-issue-12"
       ],
       "verified": true
     },
@@ -351,10 +357,12 @@
       "league": "ned.1",
       "names": [
         "FC Twente",
-        "FC Twente Enschede"
+        "FC Twente Enschede",
+        "Twente"
       ],
       "sources": [
-        "github-issue-2"
+        "github-issue-2",
+        "github-issue-12"
       ],
       "verified": true
     },
@@ -399,10 +407,12 @@
       "league": "bel.1",
       "names": [
         "Sint-Truidense",
-        "Sint Truiden"
+        "Sint Truiden",
+        "St. Truiden"
       ],
       "sources": [
-        "github-issue-2"
+        "github-issue-2",
+        "github-issue-12"
       ],
       "verified": true
     },
@@ -511,7 +521,8 @@
         "Gent"
       ],
       "sources": [
-        "github-issue-2"
+        "github-issue-2",
+        "github-issue-12"
       ],
       "verified": true
     },
@@ -652,10 +663,12 @@
       "league": "tur.1",
       "names": [
         "Genclerbirligi",
-        "Genclerbirligi SK"
+        "Genclerbirligi SK",
+        "Gençlerbirliği S.K."
       ],
       "sources": [
-        "github-issue-3"
+        "github-issue-3",
+        "github-issue-12"
       ],
       "verified": true
     },
@@ -712,10 +725,12 @@
       "league": "arg.1",
       "names": [
         "Central Córdoba (Santiago del Estero)",
-        "Central Córdoba"
+        "Central Córdoba",
+        "Central Cordoba de Santiago"
       ],
       "sources": [
-        "github-issue-3"
+        "github-issue-3",
+        "github-issue-12"
       ],
       "verified": true
     },
@@ -1352,6 +1367,162 @@
       ],
       "sources": [
         "github-issue-9"
+      ],
+      "verified": true
+    },
+    {
+      "id": "tur.1-caykur-rizespor",
+      "league": "tur.1",
+      "names": [
+        "Caykur Rizespor",
+        "Rizespor"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "tur.1-erzurum-bb",
+      "league": "tur.1",
+      "names": [
+        "Erzurum BB",
+        "Erzurumspor FK"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bel.1-club-brugge",
+      "league": "bel.1",
+      "names": [
+        "Club Brugge",
+        "Club Brugge KV"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "eng.1-ipswich-town",
+      "league": "eng.1",
+      "names": [
+        "Ipswich Town",
+        "Ipswich"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "fra.1-stade-rennais",
+      "league": "fra.1",
+      "names": [
+        "Stade Rennais",
+        "Rennes"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "bel.1-kv-kortrijk",
+      "league": "bel.1",
+      "names": [
+        "KV Kortrijk",
+        "Kortrijk"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ned.1-sc-cambuur",
+      "league": "ned.1",
+      "names": [
+        "SC Cambuur",
+        "Cambuur"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "fra.1-brest",
+      "league": "fra.1",
+      "names": [
+        "Brest",
+        "Stade Brestois 29"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "fra.1-le-havre-ac",
+      "league": "fra.1",
+      "names": [
+        "Le Havre AC",
+        "Le Havre"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "fra.1-as-monaco",
+      "league": "fra.1",
+      "names": [
+        "AS Monaco",
+        "Monaco"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ger.1-tsg-hoffenheim",
+      "league": "ger.1",
+      "names": [
+        "TSG Hoffenheim",
+        "1899 Hoffenheim"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "ned.1-fc-utrecht",
+      "league": "ned.1",
+      "names": [
+        "FC Utrecht",
+        "Utrecht"
+      ],
+      "sources": [
+        "github-issue-12"
+      ],
+      "verified": true
+    },
+    {
+      "id": "por.1-braga",
+      "league": "por.1",
+      "names": [
+        "Braga",
+        "SC Braga"
+      ],
+      "sources": [
+        "github-issue-12"
       ],
       "verified": true
     }
