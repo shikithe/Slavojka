@@ -53,3 +53,9 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+      - name: Relay 08:55 expiry to MemaraSix until exact same-day ACK
+        env:
+          MEMARASIX_DISPATCH_TOKEN: ${{ secrets.MEMARASIX_DISPATCH_TOKEN }}
+        run: |
+          set -euo pipefail
+          python3 -m lista.notify_memarasix_expiry
