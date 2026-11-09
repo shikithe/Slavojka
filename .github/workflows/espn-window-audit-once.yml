@@ -57,4 +57,9 @@ jobs:
                   except Exception as e:
                       stats["api_errors"].append(type(e).__name__+":"+str(e)[:90])
               print("RAW_ESPN_LEAGUE",json.dumps({"league":league,**stats},ensure_ascii=False))
+          for league in ("eng.1","tur.1","ita.1"):
+              url=f"{base.ROOT}/soccer/{league}/scoreboard?dates=20261108&limit=500"
+              with urllib.request.urlopen(urllib.request.Request(url,headers={"User-Agent":"MEMARA-Isolated-Collector/1.0","Accept":"application/json"}),timeout=12) as resp:
+                  old=json.load(resp)
+              print("ESPN_POSITIVE_CONTROL_PREVIOUS_DAY",json.dumps({"league":league,"events":len(old.get("events",[])),"league_field":bool(old.get("leagues"))}))
           PY
