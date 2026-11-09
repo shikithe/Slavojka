@@ -1,0 +1,23 @@
+name: ListaSix sends MemaraSix 08:55 expiry tests
+on:
+  pull_request:
+    paths:
+      - 'lista/notify_memarasix_expiry.py'
+      - 'test_notify_memarasix_expiry.py'
+      - '.github/workflows/listasix-expire.yml'
+      - '.github/workflows/listasix-memara-expiry-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate exact Sarajevo cutoff and one ACKed event
+        run: |
+          python3 -m unittest -v test_notify_memarasix_expiry.py
