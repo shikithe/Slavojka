@@ -1,0 +1,34 @@
+name: ESPN audit - 09 Nov 2026 source window
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/espn-window-audit-once.yml']
+permissions:
+  contents: read
+jobs:
+  readonly-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compare ESPN scheduled fixture coverage to collector filter
+        run: |
+          python3 - <<'PY'
+          import json,sys
+          from datetime import datetime,timezone
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          from collector.collector_24h import collect,base
+          start=datetime(2026,11,9,10,0,tzinfo=ZoneInfo("Europe/Sarajevo"))
+          end=datetime(2026,11,10,9,0,tzinfo=ZoneInfo("Europe/Sarajevo"))
+          result=collect(start.astimezone(timezone.utc),end_utc=end.astimezone(timezone.utc),football_only=True)
+          print("READONLY_ESPN_AUDIT",json.dumps({"start":start.isoformat(),"end":end.isoformat(),"fixtures":len(result["fixtures"]),"errors":len(result["errors"]),"leagues":list(base.FOOTBALL)}))
+          for league in base.FOOTBALL:
+              sources=[x for x in result["sources"] if x["league"]==league]
+              events=[{"home":f["home"],"away":f["away"],"start_utc":f["start_utc"],"status":f["status"]} for f in result["fixtures"] if f["league"]==league]
+              errors=[e for e in result["errors"] if e.startswith(league+"/")]
+              print("ESPN_LEAGUE",json.dumps({"league":league,"sources":sources,"accepted":events,"errors":errors},ensure_ascii=False))
+          PY
