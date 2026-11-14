@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-14",
+  "generated_at_utc": "2026-11-14T08:45:33.959821+00:00",
+  "window_start_utc": "2026-11-14T09:00:00+00:00",
+  "window_end_utc": "2026-11-15T08:00:00+00:00",
+  "expires_at_utc": "2026-11-15T08:00:00+00:00",
+  "football_candidates": [
+    {
+      "fixture_id": "espn:football:bra.1:401841311",
+      "home": "Mirassol",
+      "away": "Atlético-MG",
+      "league": "bra.1",
+      "start_utc": "2026-11-14T21:30:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841175",
+      "home": "Chapecoense",
+      "away": "Vasco da Gama",
+      "league": "bra.1",
+      "start_utc": "2026-11-14T23:30:00Z",
+      "sport": "football"
+    }
+  ],
+  "nba_games": [],
+  "errors": [],
+  "publication_allowed": false
+}

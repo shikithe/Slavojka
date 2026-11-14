@@ -1,0 +1,231 @@
+{
+  "schema_version": "listasix-fixed-window-v1",
+  "date": "2026-11-14",
+  "window_start_utc": "2026-11-14T09:00:00+00:00",
+  "window_end_utc": "2026-11-15T08:00:00+00:00",
+  "fixture_count": 2,
+  "fixtures": [
+    {
+      "id": "espn:football:bra.1:401841311",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "bra.1",
+      "home": "Mirassol",
+      "away": "Atlético-MG",
+      "start_utc": "2026-11-14T21:30:00Z",
+      "start_sarajevo": "2026-11-14T22:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:bra.1:401841175",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "bra.1",
+      "home": "Chapecoense",
+      "away": "Vasco da Gama",
+      "start_utc": "2026-11-14T23:30:00Z",
+      "start_sarajevo": "2026-11-15T00:30:00+01:00",
+      "status": "pre"
+    }
+  ],
+  "sources": [
+    {
+      "league": "eng.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "eng.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "esp.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "esp.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ger.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ger.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ita.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ita.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "fra.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "fra.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ned.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "ned.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "por.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "por.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "bel.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "bel.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "tur.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "tur.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "sco.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "sco.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "uefa.champions",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "uefa.champions",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "uefa.europa",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "uefa.europa",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "uefa.europa.conf",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "uefa.europa.conf",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "usa.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "usa.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "bra.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 2
+    },
+    {
+      "league": "bra.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "arg.1",
+      "date": "20261114",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "league": "arg.1",
+      "date": "20261115",
+      "status": "ok",
+      "count": 0
+    }
+  ],
+  "errors": [],
+  "status": "ok",
+  "publication_allowed": false,
+  "window_start_local": "2026-11-14T10:00:00+01:00",
+  "window_end_local": "2026-11-15T09:00:00+01:00",
+  "data_expires_at_utc": "2026-11-15T08:00:00+00:00"
+}
