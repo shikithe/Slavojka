@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-18",
+  "generated_at_utc": "2026-11-18T08:45:36.340863+00:00",
+  "window_start_utc": "2026-11-18T09:00:00+00:00",
+  "window_end_utc": "2026-11-19T08:00:00+00:00",
+  "expires_at_utc": "2026-11-19T08:00:00+00:00",
+  "football_candidates": [
+    {
+      "fixture_id": "espn:football:bra.1:401841315",
+      "home": "Coritiba",
+      "away": "Santos",
+      "league": "bra.1",
+      "start_utc": "2026-11-18T22:30:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841310",
+      "home": "Remo",
+      "away": "Chapecoense",
+      "league": "bra.1",
+      "start_utc": "2026-11-18T23:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841314",
+      "home": "Cruzeiro",
+      "away": "Palmeiras",
+      "league": "bra.1",
+      "start_utc": "2026-11-18T23:30:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841313",
+      "home": "Flamengo",
+      "away": "Athletico-PR",
+      "league": "bra.1",
+      "start_utc": "2026-11-18T23:30:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841316",
+      "home": "Corinthians",
+      "away": "Botafogo",
+      "league": "bra.1",
+      "start_utc": "2026-11-19T00:30:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841312",
+      "home": "Grêmio",
+      "away": "Bahia",
+      "league": "bra.1",
+      "start_utc": "2026-11-19T00:30:00Z",
+      "sport": "football"
+    }
+  ],
+  "nba_games": [],
+  "errors": [],
+  "publication_allowed": false
+}
