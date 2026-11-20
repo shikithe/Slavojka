@@ -12,7 +12,7 @@ def expiry(day):
 # Public field, provider market, provider outcome, display label.
 SELECTIONS = (
     ("home_odds", "1X2", "home", "1"), ("draw_odds", "1X2", "draw", "X"),
-    ("away_odds", "1X2", "away", "2"), ("over15_odds", "2+", "over", "2+"),
+    ("away_odds", "1X2", "away", "2"),
     ("over25_odds", "3+", "over", "3+"), ("btts_yes_odds", "BTTS", "yes", "GG"),
     ("btts_no_odds", "BTTS", "no", "NG"),
 )
@@ -55,17 +55,30 @@ def publish(feed_path,match_path,manual_path,shared,docs):
         if chosen:rows[chosen["fixture_id"]]=chosen
     result={"date":feed["date"],"expires_at":expiry(day),"publication_allowed":bool(rows),
             "fixtures":sorted(rows.values(),key=lambda x:(x["datetime"],x["match"]))}
-    if not rows:
-        print("NO_VERIFIED_ODDS: no public offer created")
-        return 0
     shared,docs=Path(shared),Path(docs)
     shared.mkdir(parents=True,exist_ok=True);docs.mkdir(parents=True,exist_ok=True)
+    # The visible daily list accounts for every ESPN fixture; missing quotes
+    # are clearly marked, never promoted into a publishable ticket selection.
+    missing=[f for f in feed.get("football_candidates",[]) if f["fixture_id"] not in rows]
+    if not rows:
+        print("NO_VERIFIED_ODDS: keeping visibility, no approved ticket offer")
+        for stale in (shared/"active-list.json",docs/"active-list.json"):
+            if stale.exists():stale.unlink()
+    
     txt=["Br. | Datum/sat | Utakmica | " + " | ".join(entry[3] for entry in SELECTIONS)]
     for i, row in enumerate(result["fixtures"], 1):
         cells = [str(i), row["datetime"], row["match"]]
         for field, _, _, _ in SELECTIONS:
             cells.append(str(row[field]) if row[field] is not None else "-")
         txt.append(" | ".join(cells))
+    for f in sorted(missing,key=lambda f:(f.get("start_utc",""),f.get("home",""))):
+        txt.append(" | ".join(["-",f.get("start_utc",""),f.get("home","")+" - "+f.get("away","")]
+                            + ["-"]*len(SELECTIONS))+" | NEMA POTVRDJENE KVOTE")
+    # Empty active-list must not be sent to MemaraSix as a publishable offer.
+    if not rows:
+        for out in (shared/"kvoter-ponuda.txt",docs/"kvoter-ponuda.txt"):
+            out.write_text("\\n".join(txt)+"\\n",encoding="utf-8")
+        return 0
     for path,data in [(shared/"active-list.json",json.dumps(result,ensure_ascii=False,indent=2)+"\n"),
                       (docs/"active-list.json",json.dumps(result,ensure_ascii=False,indent=2)+"\n"),
                       (shared/"kvoter-ponuda.txt","\n".join(txt)+"\n"),
