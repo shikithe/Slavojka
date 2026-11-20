@@ -12,31 +12,61 @@ td,th{padding:11px 8px;border-bottom:1px solid #2c3a4c;white-space:nowrap}
 td:nth-child(n+4),th:nth-child(n+4){text-align:right}td:nth-child(n+4){color:#a6e4b3;font-weight:600}
 tr:nth-child(even){background:#172131}a{color:#9dc8ff}button{background:#2d5c91;color:white;border:0;border-radius:8px;padding:9px 13px;font-weight:600}
 </style></head><body>
-<header><h1>KVOTER · Dnevna kladioničarska ponuda</h1><small>1 · X · 2 · 2+ · 3+ · GG / NG | Stvarne preuzete kvote, nisu uživo</small><div style="margin-top:10px"><button onclick="load()">Osvježi</button> &nbsp; <a href="./kvoter-ponuda.txt">TXT lista</a></div></header>
-<div id="status" class="status">Učitavanje ponude…</div><div class="scroll"><table><thead><tr><th>Br.</th><th>Datum / sat</th><th>Utakmica</th><th>1</th><th>X</th><th>2</th><th>2+</th><th>3+</th><th>GG</th><th>NG</th></tr></thead><tbody id="rows"></tbody></table></div>
+<header><h1>KVOTER · Dnevna kladioničarska ponuda</h1><small>1 · X · 2 · 3+ · GG / NG | Sve ESPN utakmice; kvote samo kada su potvrđene</small><div style="margin-top:10px"><button onclick="load()">Osvježi</button> &nbsp; <a href="./kvoter-ponuda.txt">TXT lista</a></div></header>
+<div id="status" class="status">Učitavanje ponude…</div><div class="scroll"><table><thead><tr><th>Br.</th><th>Datum / sat</th><th>Utakmica</th><th>1</th><th>X</th><th>2</th><th>3+</th><th>GG</th><th>NG</th></tr></thead><tbody id="rows"></tbody></table></div>
 <script>
 const status=document.getElementById('status'),body=document.getElementById('rows');
 function val(v){return v===null||v===undefined||v===''?'-':String(v)}
 function localTime(v){if(!v)return '-';const d=new Date(v);if(isNaN(d))return v;return new Intl.DateTimeFormat('bs-BA',{timeZone:'Europe/Sarajevo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(d)}
+async function jsonMaybe(path){
+ try{const r=await fetch(path+'?t='+Date.now(),{cache:'no-store'});return r.ok?await r.json():null}
+ catch(e){return null}
+}
+function sarajevoDay(){
+ const d=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Sarajevo',
+ year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+ const p=Object.fromEntries(d.map(x=>[x.type,x.value]));
+ return {date:p.year+'-'+p.month+'-'+p.day,mins:Number(p.hour)*60+Number(p.minute)};
+}
 async function load(){
  status.textContent='Učitavanje…';body.replaceChildren();
- try{
- const res=await fetch('./active-list.json?t='+Date.now(),{cache:'no-store'});
- if(!res.ok)throw Error('Dnevna lista još nije objavljena.');
- const data=await res.json();
- const sar=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Sarajevo',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
- const x=Object.fromEntries(sar.map(z=>[z.type,z.value]));
- const localDay=x.year+'-'+x.month+'-'+x.day;
- const localMinutes=Number(x.hour)*60+Number(x.minute);
- if(!data.expires_at||Date.now()>=Date.parse(data.expires_at)|| (data.date!==localDay&&localMinutes>=8*60+59))throw Error('Prethodna lista je istekla.');
- if(!data.publication_allowed||!Array.isArray(data.fixtures)||!data.fixtures.length)throw Error('Čeka se nova potvrđena ponuda.');
- data.fixtures.forEach((f,i)=>{
- const tr=document.createElement('tr');
- [String(i+1).padStart(2,'0'),localTime(f.datetime),val(f.match),...['home_odds','draw_odds','away_odds','over15_odds','over25_odds','btts_yes_odds','btts_no_odds'].map(field=>val(f[field]))].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td)});
- body.append(tr);
+ const [feed, active, coverage]=await Promise.all([
+   jsonMaybe('./collector-feed.json'),jsonMaybe('./active-list.json'),jsonMaybe('./kvoter-coverage.json')
+ ]);
+ const today=sarajevoDay();
+ const feedValid=feed&&Array.isArray(feed.football_candidates)&&feed.date===today.date
+   && (!feed.expires_at_utc||Date.now()<Date.parse(feed.expires_at_utc));
+ const activeValid=active&&active.date===today.date&&active.publication_allowed
+   && Array.isArray(active.fixtures)&&(!active.expires_at||Date.now()<Date.parse(active.expires_at));
+ const odds=new Map(activeValid?active.fixtures.map(f=>[f.fixture_id,f]):[]);
+ const statusMap=new Map(coverage&&coverage.date===today.date&&Array.isArray(coverage.fixtures)
+   ?coverage.fixtures.map(f=>[f.fixture_id,f.status]):[]);
+ const fixtures=feedValid?feed.football_candidates.map(f=>({
+   fixture_id:f.fixture_id,datetime:f.start_utc,match:f.home+' - '+f.away
+ })):activeValid?active.fixtures:[];
+ if(!fixtures.length){
+   status.textContent='Još nema današnjeg ESPN kolektora. Posljednja objava nije prikazana kao današnja.';
+   return;
+ }
+ const fields=['home_odds','draw_odds','away_odds','over25_odds','btts_yes_odds','btts_no_odds'];
+ let withOdds=0;
+ fixtures.sort((a,b)=>String(a.datetime).localeCompare(String(b.datetime)));
+ fixtures.forEach((f,i)=>{
+   const v=odds.get(f.fixture_id)||{};
+   const confirmed=fields.some(k=>typeof v[k]==='number'&&v[k]>1);
+   if(confirmed)withOdds++;
+   const tr=document.createElement('tr');
+   if(!confirmed)tr.style.opacity='.78';
+   const values=[String(i+1).padStart(2,'0'),localTime(f.datetime),val(f.match),
+     ...fields.map(field=>val(v[field]))];
+   values.forEach(value=>{const td=document.createElement('td');td.textContent=value;tr.append(td)});
+   tr.title=confirmed?'Provjerene kvote':'Nema potvrđenih kvota; utakmica ostaje vidljiva';
+   body.append(tr);
  });
- status.textContent='Prikazano '+body.children.length+' utakmica · Ponuda: '+data.date+' · Vrijeme: Europe/Sarajevo · Kvote nisu uživo.';
- }catch(e){status.textContent='Čeka se nova ponuda. '+e.message}
+ status.textContent=fixtures.length+' ESPN utakmica · '+withOdds+' s potvrđenim kvotama · '
+   +(fixtures.length-withOdds)+' bez kvota · '+today.date+
+   ' · Crtica znači da kvota nije provjerena, ne da utakmica ne postoji.';
 }
+
 load();setInterval(load,30000);
 </script></body></html>
