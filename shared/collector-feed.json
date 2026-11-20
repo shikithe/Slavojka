@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-20",
+  "generated_at_utc": "2026-11-20T08:45:32.696744+00:00",
+  "window_start_utc": "2026-11-20T09:00:00+00:00",
+  "window_end_utc": "2026-11-21T08:00:00+00:00",
+  "expires_at_utc": "2026-11-21T08:00:00+00:00",
+  "football_candidates": [
+    {
+      "fixture_id": "espn:football:ger.1:401884736",
+      "home": "Bayern Munich",
+      "away": "FC Cologne",
+      "league": "ger.1",
+      "start_utc": "2026-11-20T19:30:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876395",
+      "home": "Troyes",
+      "away": "Le Havre AC",
+      "league": "fra.1",
+      "start_utc": "2026-11-20T19:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878937",
+      "home": "Cercle Brugge KSV",
+      "away": "KVC Westerlo",
+      "league": "bel.1",
+      "start_utc": "2026-11-20T19:45:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882805",
+      "home": "Athletic Club",
+      "away": "Espanyol",
+      "league": "esp.1",
+      "start_utc": "2026-11-20T20:00:00Z",
+      "sport": "football"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401933760",
+      "home": "Vélez Sarsfield",
+      "away": "Belgrano (Córdoba)",
+      "league": "arg.1",
+      "start_utc": "2026-11-20T23:00:00Z",
+      "sport": "football"
+    }
+  ],
+  "nba_games": [],
+  "errors": [],
+  "publication_allowed": false
+}
