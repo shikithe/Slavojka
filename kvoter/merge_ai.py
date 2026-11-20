@@ -23,7 +23,7 @@ def main():
         print("AI_ODDS_NO_SNAPSHOT_FOR_DATE",date)
         return
     ai=json.loads(verified.read_text(encoding="utf-8"))
-    if ai.get("date")!=date or ai.get("feed_generated_at_utc")!=feed.get("generated_at_utc"):
+    if ai.get("date")!=date:
         print("AI_ODDS_SNAPSHOT_STALE",date)
         return
     expected={f["fixture_id"]:f for f in feed["football_candidates"]}
