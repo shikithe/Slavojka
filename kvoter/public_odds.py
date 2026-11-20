@@ -39,7 +39,10 @@ def norm(name):
     s = s.replace("&"," and ")
     return " ".join(re.findall(r"[a-z0-9]+",s))
 def key(name):
-    return " ".join(x for x in norm(name).split() if x not in STOP)
+    words=[x for x in norm(name).split() if x not in STOP]
+    # Common published abbreviations; do not strip distinctive team tokens.
+    canonical={"man":"manchester","utd":"united","st":"saint","ath":"athletic"}
+    return " ".join(canonical.get(x,x) for x in words)
 def similarity(a,b):
     a,b=key(a),key(b)
     if not a or not b: return 0.
