@@ -1,5 +1,294 @@
 {
-  "generated_at_utc": "2026-11-20T08:46:31.662357+00:00",
-  "total": 0,
-  "fixtures": []
+  "date": "2026-11-20",
+  "generated_at_utc": "2026-11-20T18:10:37.995Z",
+  "total": 5,
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:ger.1:401884736",
+      "home": "Bayern Munich",
+      "away": "FC Cologne",
+      "league": "ger.1",
+      "start_utc": "2026-11-20T19:30:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://oddsrun.com/match/football/de/123/12153830/germany-bundesliga-i/bayern-munich-vs-cologne/",
+        "https://verdict.football/predictions/germany/bundesliga/bayern-munchen-vs-1-fc-koln-2026-11-20/"
+      ],
+      "verified_from_web_on": "2026-11-20",
+      "markets": {
+        "1X2": {
+          "home": 1.07,
+          "draw": 13,
+          "away": 19
+        },
+        "3+": {
+          "over": 1.16
+        },
+        "BTTS": {
+          "yes": 1.83,
+          "no": 1.89
+        }
+      },
+      "bookmaker": "multiple-public-bookmaker-quotes",
+      "provider_events": [
+        "ai-web:espn:football:ger.1:401884736"
+      ],
+      "bookmakers": [
+        "OddsRun public odds"
+      ],
+      "odds_offers": [
+        {
+          "event_id": "ai-web:espn:football:ger.1:401884736",
+          "bookmaker": "OddsRun public odds",
+          "updated_at_utc": "2026-11-20T18:10:37.995Z",
+          "source_urls": [
+            "https://oddsrun.com/match/football/de/123/12153830/germany-bundesliga-i/bayern-munich-vs-cologne/",
+            "https://verdict.football/predictions/germany/bundesliga/bayern-munchen-vs-1-fc-koln-2026-11-20/"
+          ],
+          "markets": {
+            "1X2": {
+              "home": 1.07,
+              "draw": 13,
+              "away": 19
+            },
+            "3+": {
+              "over": 1.16
+            },
+            "BTTS": {
+              "yes": 1.83,
+              "no": 1.89
+            }
+          }
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876395",
+      "home": "Troyes",
+      "away": "Le Havre AC",
+      "league": "fra.1",
+      "start_utc": "2026-11-20T19:45:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/match/troyes-le-havre-ligue-1-france-955828"
+      ],
+      "verified_from_web_on": "2026-11-20",
+      "markets": {
+        "1X2": {
+          "home": 2.2,
+          "draw": 3.7,
+          "away": 3.46
+        },
+        "3+": {
+          "over": 1.94
+        },
+        "BTTS": {
+          "yes": 1.68,
+          "no": 2.08
+        }
+      },
+      "bookmaker": "1xBet via TipsterArea",
+      "provider_events": [
+        "ai-web:espn:football:fra.1:401876395"
+      ],
+      "bookmakers": [
+        "TipsterArea public odds"
+      ],
+      "odds_offers": [
+        {
+          "event_id": "ai-web:espn:football:fra.1:401876395",
+          "bookmaker": "TipsterArea public odds",
+          "updated_at_utc": "2026-11-20T18:10:37.995Z",
+          "source_urls": [
+            "https://tipsterarea.com/match/troyes-le-havre-ligue-1-france-955828"
+          ],
+          "markets": {
+            "1X2": {
+              "home": 2.2,
+              "draw": 3.7,
+              "away": 3.46
+            },
+            "3+": {
+              "over": 1.94
+            },
+            "BTTS": {
+              "yes": 1.68,
+              "no": 2.08
+            }
+          }
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878937",
+      "home": "Cercle Brugge KSV",
+      "away": "KVC Westerlo",
+      "league": "bel.1",
+      "start_utc": "2026-11-20T19:45:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/match/cercle-brugge-westerlo-pro-league-belgium-955832"
+      ],
+      "verified_from_web_on": "2026-11-20",
+      "markets": {
+        "1X2": {
+          "home": 2.07,
+          "draw": 3.92,
+          "away": 3.25
+        },
+        "3+": {
+          "over": 1.47
+        },
+        "BTTS": {
+          "yes": 1.41,
+          "no": 2.69
+        }
+      },
+      "bookmaker": "1xBet via TipsterArea",
+      "provider_events": [
+        "ai-web:espn:football:bel.1:401878937"
+      ],
+      "bookmakers": [
+        "TipsterArea public odds"
+      ],
+      "odds_offers": [
+        {
+          "event_id": "ai-web:espn:football:bel.1:401878937",
+          "bookmaker": "TipsterArea public odds",
+          "updated_at_utc": "2026-11-20T18:10:37.995Z",
+          "source_urls": [
+            "https://tipsterarea.com/match/cercle-brugge-westerlo-pro-league-belgium-955832"
+          ],
+          "markets": {
+            "1X2": {
+              "home": 2.07,
+              "draw": 3.92,
+              "away": 3.25
+            },
+            "3+": {
+              "over": 1.47
+            },
+            "BTTS": {
+              "yes": 1.41,
+              "no": 2.69
+            }
+          }
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882805",
+      "home": "Athletic Club",
+      "away": "Espanyol",
+      "league": "esp.1",
+      "start_utc": "2026-11-20T20:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/match/athletic-bilbao-espanyol-primera-division-spain-955826"
+      ],
+      "verified_from_web_on": "2026-11-20",
+      "markets": {
+        "1X2": {
+          "home": 1.54,
+          "draw": 4.52,
+          "away": 7.01
+        },
+        "3+": {
+          "over": 1.92
+        },
+        "BTTS": {
+          "yes": 1.94,
+          "no": 1.79
+        }
+      },
+      "bookmaker": "1xBet via TipsterArea",
+      "provider_events": [
+        "ai-web:espn:football:esp.1:401882805"
+      ],
+      "bookmakers": [
+        "TipsterArea public odds"
+      ],
+      "odds_offers": [
+        {
+          "event_id": "ai-web:espn:football:esp.1:401882805",
+          "bookmaker": "TipsterArea public odds",
+          "updated_at_utc": "2026-11-20T18:10:37.995Z",
+          "source_urls": [
+            "https://tipsterarea.com/match/athletic-bilbao-espanyol-primera-division-spain-955826"
+          ],
+          "markets": {
+            "1X2": {
+              "home": 1.54,
+              "draw": 4.52,
+              "away": 7.01
+            },
+            "3+": {
+              "over": 1.92
+            },
+            "BTTS": {
+              "yes": 1.94,
+              "no": 1.79
+            }
+          }
+        }
+      ]
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401933760",
+      "home": "Vélez Sarsfield",
+      "away": "Belgrano (Córdoba)",
+      "league": "arg.1",
+      "start_utc": "2026-11-20T23:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/match/velez-sarsfield-belgrano-cordoba-playoff-argentina-956103"
+      ],
+      "verified_from_web_on": "2026-11-20",
+      "markets": {
+        "1X2": {
+          "home": 2.23,
+          "draw": 3.22,
+          "away": 3.41
+        },
+        "3+": {
+          "over": 2.27
+        },
+        "BTTS": {
+          "yes": 1.92,
+          "no": 1.79
+        }
+      },
+      "bookmaker": "1xBet via TipsterArea",
+      "provider_events": [
+        "ai-web:espn:football:arg.1:401933760"
+      ],
+      "bookmakers": [
+        "TipsterArea public odds"
+      ],
+      "odds_offers": [
+        {
+          "event_id": "ai-web:espn:football:arg.1:401933760",
+          "bookmaker": "TipsterArea public odds",
+          "updated_at_utc": "2026-11-20T18:10:37.995Z",
+          "source_urls": [
+            "https://tipsterarea.com/match/velez-sarsfield-belgrano-cordoba-playoff-argentina-956103"
+          ],
+          "markets": {
+            "1X2": {
+              "home": 2.23,
+              "draw": 3.22,
+              "away": 3.41
+            },
+            "3+": {
+              "over": 2.27
+            },
+            "BTTS": {
+              "yes": 1.92,
+              "no": 1.79
+            }
+          }
+        }
+      ]
+    }
+  ]
 }
