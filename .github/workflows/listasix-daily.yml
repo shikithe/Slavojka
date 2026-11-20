@@ -40,6 +40,40 @@ jobs:
                   current=data.get("date")==today and bool(data.get("publication_allowed")) and bool(data.get("fixtures"))
               except (ValueError,OSError):
                   pass
+          # AI can add verified quotes after a partial published list exists.
+          # Rebuild if any AI snapshot fixture is not reflected by the final
+          # active-list and provider match catalog. A missing snapshot must
+          # never prevent initial ESPN collection.
+          ai_path=Path("shared/kvoter")/("ai-verified-"+today+".json")
+          if scheduled and current and ai_path.exists():
+              try:
+                  ai=json.loads(ai_path.read_text(encoding="utf-8"))
+                  active=json.loads(path.read_text(encoding="utf-8"))
+                  matched=json.loads(Path("shared/kvoter/matched_fixtures.json").read_text(encoding="utf-8"))
+                  provider=json.loads(Path("shared/kvoter/provider-offers.json").read_text(encoding="utf-8"))
+                  by_active={x["fixture_id"]:x for x in active.get("fixtures",[])}
+                  by_match={x["fixture_id"]:x for x in matched.get("fixtures",[])}
+                  by_provider={str(x.get("event_id")):x for x in provider.get("offers",[])}
+                  fields={"1X2":{"home":"home_odds","draw":"draw_odds","away":"away_odds"},
+                          "3+":{"over":"over25_odds"},
+                          "BTTS":{"yes":"btts_yes_odds","no":"btts_no_odds"}}
+                  for item in ai.get("fixtures",[]):
+                      fid=item["fixture_id"]
+                      event="ai-web:"+fid
+                      row=by_active.get(fid,{})
+                      matched_row=by_match.get(fid,{})
+                      quote=by_provider.get(event,{})
+                      if not row or event not in matched_row.get("provider_events",[]) or not quote:
+                          current=False
+                          break
+                      for market,prices in item.get("markets",{}).items():
+                          for outcome,price in prices.items():
+                              field=fields[market][outcome]
+                              if row.get(field)!=price or quote.get("markets",{}).get(market,{}).get(outcome)!=price:
+                                  current=False
+                                  break
+              except (OSError,ValueError,TypeError,KeyError):
+                  current=False
           allowed=(os.environ["TRIGGER"]=="workflow_dispatch") or (scheduled and not current)
           with open(os.environ["GITHUB_OUTPUT"],"a") as out:
               out.write("run="+("true" if allowed else "false")+"\n")
