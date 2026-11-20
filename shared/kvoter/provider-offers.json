@@ -1,19 +1,142 @@
 {
-  "source": "public-csv-cascade",
-  "offers": [],
-  "attempts": [
+  "date": "2026-11-20",
+  "generated_at_utc": "2026-11-20T18:10:37.995Z",
+  "offers": [
     {
-      "source": "https://www.football-data.co.uk/fixtures.csv",
-      "rows": 51,
-      "valid_offers": 0,
-      "new_matches": 0,
-      "pending": 5
+      "fixture_id": "espn:football:ger.1:401884736",
+      "league": "ger.1",
+      "home": "Bayern Munich",
+      "away": "FC Cologne",
+      "start_utc": "2026-11-20T19:30:00Z",
+      "event_id": "ai-web:espn:football:ger.1:401884736",
+      "bookmaker": "OddsRun public odds",
+      "updated_at_utc": "2026-11-20T18:10:37.995Z",
+      "source_urls": [
+        "https://oddsrun.com/match/football/de/123/12153830/germany-bundesliga-i/bayern-munich-vs-cologne/",
+        "https://verdict.football/predictions/germany/bundesliga/bayern-munchen-vs-1-fc-koln-2026-11-20/"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.07,
+          "draw": 13,
+          "away": 19
+        },
+        "3+": {
+          "over": 1.16
+        },
+        "BTTS": {
+          "yes": 1.83,
+          "no": 1.89
+        }
+      }
     },
     {
-      "source": "https://football-data.co.uk/matches/fixtures.csv",
-      "error": "HTTPError: HTTP Error 406: Not Acceptable",
-      "new_matches": 0,
-      "pending": 5
+      "fixture_id": "espn:football:fra.1:401876395",
+      "league": "fra.1",
+      "home": "Troyes",
+      "away": "Le Havre AC",
+      "start_utc": "2026-11-20T19:45:00Z",
+      "event_id": "ai-web:espn:football:fra.1:401876395",
+      "bookmaker": "TipsterArea public odds",
+      "updated_at_utc": "2026-11-20T18:10:37.995Z",
+      "source_urls": [
+        "https://tipsterarea.com/match/troyes-le-havre-ligue-1-france-955828"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 2.2,
+          "draw": 3.7,
+          "away": 3.46
+        },
+        "3+": {
+          "over": 1.94
+        },
+        "BTTS": {
+          "yes": 1.68,
+          "no": 2.08
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878937",
+      "league": "bel.1",
+      "home": "Cercle Brugge KSV",
+      "away": "KVC Westerlo",
+      "start_utc": "2026-11-20T19:45:00Z",
+      "event_id": "ai-web:espn:football:bel.1:401878937",
+      "bookmaker": "TipsterArea public odds",
+      "updated_at_utc": "2026-11-20T18:10:37.995Z",
+      "source_urls": [
+        "https://tipsterarea.com/match/cercle-brugge-westerlo-pro-league-belgium-955832"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 2.07,
+          "draw": 3.92,
+          "away": 3.25
+        },
+        "3+": {
+          "over": 1.47
+        },
+        "BTTS": {
+          "yes": 1.41,
+          "no": 2.69
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882805",
+      "league": "esp.1",
+      "home": "Athletic Club",
+      "away": "Espanyol",
+      "start_utc": "2026-11-20T20:00:00Z",
+      "event_id": "ai-web:espn:football:esp.1:401882805",
+      "bookmaker": "TipsterArea public odds",
+      "updated_at_utc": "2026-11-20T18:10:37.995Z",
+      "source_urls": [
+        "https://tipsterarea.com/match/athletic-bilbao-espanyol-primera-division-spain-955826"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.54,
+          "draw": 4.52,
+          "away": 7.01
+        },
+        "3+": {
+          "over": 1.92
+        },
+        "BTTS": {
+          "yes": 1.94,
+          "no": 1.79
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401933760",
+      "league": "arg.1",
+      "home": "Vélez Sarsfield",
+      "away": "Belgrano (Córdoba)",
+      "start_utc": "2026-11-20T23:00:00Z",
+      "event_id": "ai-web:espn:football:arg.1:401933760",
+      "bookmaker": "TipsterArea public odds",
+      "updated_at_utc": "2026-11-20T18:10:37.995Z",
+      "source_urls": [
+        "https://tipsterarea.com/match/velez-sarsfield-belgrano-cordoba-playoff-argentina-956103"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 2.23,
+          "draw": 3.22,
+          "away": 3.41
+        },
+        "3+": {
+          "over": 2.27
+        },
+        "BTTS": {
+          "yes": 1.92,
+          "no": 1.79
+        }
+      }
     }
   ]
 }
