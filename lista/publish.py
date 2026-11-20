@@ -77,7 +77,7 @@ def publish(feed_path,match_path,manual_path,shared,docs):
     # Empty active-list must not be sent to MemaraSix as a publishable offer.
     if not rows:
         for out in (shared/"kvoter-ponuda.txt",docs/"kvoter-ponuda.txt"):
-            out.write_text("\\n".join(txt)+"\\n",encoding="utf-8")
+            out.write_text("\n".join(txt)+"\n",encoding="utf-8")
         return 0
     for path,data in [(shared/"active-list.json",json.dumps(result,ensure_ascii=False,indent=2)+"\n"),
                       (docs/"active-list.json",json.dumps(result,ensure_ascii=False,indent=2)+"\n"),
@@ -90,7 +90,7 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument("--feed",default="shared/collector-feed.json")
     p.add_argument("--matches",default="shared/kvoter/matched-fixtures.json")
-    p.add_argument("--manual",default="shared/kvoter/manual-matched.json")
+    p.add_argument("--manual",default=None)
     p.add_argument("--shared",default="shared")
     p.add_argument("--docs",default="docs")
     a=p.parse_args()
