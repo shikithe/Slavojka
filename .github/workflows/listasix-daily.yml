@@ -120,6 +120,7 @@ jobs:
         run: |
           python3 -m unittest -v test_public_odds.py
           python3 -m kvoter.public_odds --feed shared/collector-feed.json --out-dir shared/kvoter
+          python3 -m kvoter.merge_ai
           mkdir -p docs
           cp shared/kvoter/coverage.json docs/kvoter-coverage.json
           python3 - <<'PY'
