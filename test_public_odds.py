@@ -16,7 +16,7 @@ class PublicOddsTests(unittest.TestCase):
         self.assertIn("3+",p["markets"])
         self.assertNotIn("2+",p["markets"])
     def test_auto_typographic_alias(self):
-        row=dict(self.row,HomeTeam="Manchester United")
+        row=dict(self.row,HomeTeam="Man Utd")
         offer=row_offer(row,"public-csv","2026-11-20T10:00:00Z")
         self.assertEqual(len(choose([self.fixture],[offer])),1)
     def test_no_swapped_teams(self):
