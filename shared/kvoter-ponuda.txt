@@ -1,0 +1,6 @@
+Br. | Datum/sat | Utakmica | 1 | X | 2 | 3+ | GG | NG
+- | 2026-11-20T19:30:00Z | Bayern Munich - FC Cologne | - | - | - | - | - | - | NEMA POTVRDJENE KVOTE
+- | 2026-11-20T19:45:00Z | Cercle Brugge KSV - KVC Westerlo | - | - | - | - | - | - | NEMA POTVRDJENE KVOTE
+- | 2026-11-20T19:45:00Z | Troyes - Le Havre AC | - | - | - | - | - | - | NEMA POTVRDJENE KVOTE
+- | 2026-11-20T20:00:00Z | Athletic Club - Espanyol | - | - | - | - | - | - | NEMA POTVRDJENE KVOTE
+- | 2026-11-20T23:00:00Z | Vélez Sarsfield - Belgrano (Córdoba) | - | - | - | - | - | - | NEMA POTVRDJENE KVOTE
