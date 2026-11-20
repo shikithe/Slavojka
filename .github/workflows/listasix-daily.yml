@@ -1,24 +1,24 @@
-name: ListaSix daily Collector Agent Kvoter
+name: ListaSix ESPN football collector only
 on:
   workflow_dispatch:
   schedule:
-    # Check every 15 minutes; local gate starts at 09:00 Sarajevo.
-    # No fixed end: retry until the day's verified active-list exists.
     - cron: '*/15 * * * *'
 permissions:
   contents: write
 concurrency:
-  group: listasix-daily-and-expiry
+  group: listasix-espn-collector
   cancel-in-progress: false
 jobs:
-  collector:
+  collect-espn:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          persist-credentials: true
-      - name: Retry from 09:00 Sarajevo every 15 minutes until verified list is published
-        id: clock
+          python-version: '3.11'
+      - name: Only collect after 09:00 Sarajevo and when today's feed is missing
+        id: gate
         env:
           TRIGGER: ${{ github.event_name }}
         run: |
@@ -27,185 +27,45 @@ jobs:
           from datetime import datetime, time
           from pathlib import Path
           from zoneinfo import ZoneInfo
-          local=datetime.now(ZoneInfo("Europe/Sarajevo"))
-          today=local.date().isoformat()
-          # No upper bound: keep retrying all day until a current
-          # verified and publishable offer is committed.
-          scheduled=local.time()>=time(9,0)
-          current=False
-          path=Path("docs/active-list.json")
+          local = datetime.now(ZoneInfo("Europe/Sarajevo"))
+          path = Path("shared/collector-feed.json")
+          today = local.date().isoformat()
+          current = False
           if path.exists():
               try:
-                  data=json.loads(path.read_text(encoding="utf-8"))
-                  current=data.get("date")==today and bool(data.get("publication_allowed")) and bool(data.get("fixtures"))
-              except (ValueError,OSError):
+                  feed = json.loads(path.read_text(encoding="utf-8"))
+                  current = feed.get("date") == today and bool(feed.get("football_candidates"))
+              except (ValueError, OSError, TypeError):
                   pass
-          # AI can add verified quotes after a partial published list exists.
-          # Rebuild if any AI snapshot fixture is not reflected by the final
-          # active-list and provider match catalog. A missing snapshot must
-          # never prevent initial ESPN collection.
-          ai_path=Path("shared/kvoter")/("ai-verified-"+today+".json")
-          if scheduled and current and ai_path.exists():
-              try:
-                  ai=json.loads(ai_path.read_text(encoding="utf-8"))
-                  active=json.loads(path.read_text(encoding="utf-8"))
-                  matched=json.loads(Path("shared/kvoter/matched_fixtures.json").read_text(encoding="utf-8"))
-                  provider=json.loads(Path("shared/kvoter/provider-offers.json").read_text(encoding="utf-8"))
-                  by_active={x["fixture_id"]:x for x in active.get("fixtures",[])}
-                  by_match={x["fixture_id"]:x for x in matched.get("fixtures",[])}
-                  by_provider={str(x.get("event_id")):x for x in provider.get("offers",[])}
-                  fields={"1X2":{"home":"home_odds","draw":"draw_odds","away":"away_odds"},
-                          "3+":{"over":"over25_odds"},
-                          "BTTS":{"yes":"btts_yes_odds","no":"btts_no_odds"}}
-                  for item in ai.get("fixtures",[]):
-                      fid=item["fixture_id"]
-                      event="ai-web:"+fid
-                      row=by_active.get(fid,{})
-                      matched_row=by_match.get(fid,{})
-                      quote=by_provider.get(event,{})
-                      if not row or event not in matched_row.get("provider_events",[]) or not quote:
-                          current=False
-                          break
-                      for market,prices in item.get("markets",{}).items():
-                          for outcome,price in prices.items():
-                              field=fields[market][outcome]
-                              if row.get(field)!=price or quote.get("markets",{}).get(market,{}).get(outcome)!=price:
-                                  current=False
-                                  break
-              except (OSError,ValueError,TypeError,KeyError):
-                  current=False
-          allowed=(os.environ["TRIGGER"]=="workflow_dispatch") or (scheduled and not current)
-          with open(os.environ["GITHUB_OUTPUT"],"a") as out:
-              out.write("run="+("true" if allowed else "false")+"\n")
-          print("LISTASIX_RETRY_GATE",local.isoformat(),"current=",current,"run=",allowed)
+          run = (os.environ["TRIGGER"] == "workflow_dispatch" or local.time() >= time(9)) and not current
+          with open(os.environ["GITHUB_OUTPUT"], "a") as out:
+              out.write(f"run={'true' if run else 'false'}\n")
+          print("ESPN_COLLECTOR_GATE", local.isoformat(), "current=", current, "run=", run)
           PY
-      - name: Expire previous-day feeds before collecting
-        if: steps.clock.outputs.run == 'true'
-        run: |
-          python3 -m lista.expire_collector
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A -- shared docs
-          if ! git diff --cached --quiet; then
-            git commit -m "lista: clear expired feeds before collection [skip ci]"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
-      - name: Collect ESPN fixtures into shared feed
-        if: steps.clock.outputs.run == 'true'
+      - name: Download ESPN fixtures (football only)
+        if: steps.gate.outputs.run == 'true'
         env:
           LISTASIX_SHARED: shared
         run: python3 -m lista.pipeline
-      - name: Validate and persist active daily database
-        if: steps.clock.outputs.run == 'true'
-        shell: bash
+      - name: Validate and commit only ESPN feed
+        if: steps.gate.outputs.run == 'true'
         run: |
           python3 - <<'PY'
           import json
           from pathlib import Path
-          from datetime import datetime, timezone
-          raw=json.loads(Path('shared/collector-raw.json').read_text())
-          feed=json.loads(Path('shared/collector-feed.json').read_text())
-          assert feed['football_candidates'], 'Empty active feed'
-          assert raw['date']==feed['date']
-          assert datetime.fromisoformat(feed['expires_at_utc']) > datetime.now(timezone.utc)
-          assert all(raw['window_start_utc'] <= f['start_utc'].replace('Z','+00:00') < raw['window_end_utc'] for f in feed['football_candidates'])
-          print('ACTIVE_FEED_VALIDATED',len(feed['football_candidates']))
+          feed=json.loads(Path("shared/collector-feed.json").read_text(encoding="utf-8"))
+          raw=json.loads(Path("shared/collector-raw.json").read_text(encoding="utf-8"))
+          assert feed["date"] == raw["date"]
+          assert feed["football_candidates"], "ESPN list is empty"
+          assert feed["publication_allowed"] is False, "Raw ESPN list is not betting approval"
+          print("ESPN_FEED_READY", feed["date"], len(feed["football_candidates"]))
           PY
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          mkdir -p docs
           cp shared/collector-feed.json docs/collector-feed.json
-          git add -- shared/collector-raw.json shared/collector-feed.json docs/collector-feed.json
+          git add -f -- shared/collector-feed.json shared/collector-raw.json docs/collector-feed.json
           if ! git diff --cached --quiet; then
-            git commit -m "lista: update active ESPN feed [skip ci]"
+            git commit -m "ListaSix: publish ESPN fixture feed only [skip ci]"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
-      - name: Build Agent history from Collector feed
-        if: steps.clock.outputs.run == 'true'
-        run: |
-          mkdir -p shared/agent
-          python3 -m unittest -v test_cross_competition_form.py
-          python3 -m agent.five_matches --input shared/collector-feed.json --output shared/agent/history-h2h.json --days 120
-          python3 -m agent.cross_competition_form --input shared/agent/history-h2h.json --output shared/agent/history-h2h.json --days 120
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          data=json.loads(Path("shared/agent/history-h2h.json").read_text())
-          assert data.get("form_scope"), "Cross-competition form enrichment did not run"
-          for league in ("uefa.champions","uefa.europa"):
-              for name,team in data.get("leagues",{}).get(league,{}).get("teams",{}).items():
-                  assert team.get("found",0)==len(team.get("matches",[])), (league,name)
-                  assert team.get("found",0)<=5, (league,name)
-          PY
-      - name: Make compact evidence-only ESPN form brief for MemaraSix research
-        if: steps.clock.outputs.run == 'true'
-        run: |
-          python3 -m unittest -v test_analysis_brief.py
-          python3 -m agent.analysis_brief \
-            --input shared/agent/history-h2h.json \
-            --output shared/agent/analysis-brief.json \
-            --expected-date "$(TZ=Europe/Sarajevo date +%F)"
-      - name: Collect no-key public football odds, cascade sources, auto-match ESPN identities
-        if: steps.clock.outputs.run == 'true'
-        env:
-          LISTASIX_ODDS_CSV_SOURCES: ${{ vars.LISTASIX_ODDS_CSV_SOURCES }}
-        run: |
-          python3 -m unittest -v test_public_odds.py
-          python3 -m kvoter.public_odds --feed shared/collector-feed.json --out-dir shared/kvoter
-          python3 -m kvoter.merge_ai
-          mkdir -p docs
-          cp shared/kvoter/coverage.json docs/kvoter-coverage.json
-          python3 - <<'PY'
-          import json
-          from pathlib import Path
-          c=json.loads(Path('shared/kvoter/coverage.json').read_text())
-          print('ALL_ESPN_FIXTURES_ACCOUNTED_FOR',c['total'],c['matched'],c['unmatched'])
-          assert c['matched']+c['unmatched']==c['total']
-          PY
-      - name: Publish verified text offer for mobile ListaSix page
-        if: steps.clock.outputs.run == 'true'
-        run: |
-          python3 -m lista.publish --feed shared/collector-feed.json --matches shared/kvoter/matched_fixtures.json --shared shared --docs docs
-          if [ -f docs/active-list.json ]; then
-            python3 - <<'PY'
-          import json
-          from pathlib import Path
-          data=json.loads(Path("docs/active-list.json").read_text())
-          assert data["publication_allowed"] and data["fixtures"]
-          assert Path("docs/kvoter-ponuda.txt").is_file()
-          print("LISTASIX_TEXT_OFFER_READY",len(data["fixtures"]))
-          PY
-          else
-            echo "No verified offer for public display"
-          fi
-      - name: Persist Agent Kvoter and provider alias catalog
-        if: steps.clock.outputs.run == 'true'
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          for path in docs/kvoter-coverage.json docs/active-list.json docs/kvoter-ponuda.txt shared/active-list.json shared/kvoter-ponuda.txt shared/agent/history-h2h.json shared/agent/analysis-brief.json shared/kvoter/coverage.json shared/kvoter/provider-offers.json shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json; do
-            if [ -f "$path" ]; then git add -f -- "$path"; fi
-          done
-          if ! git diff --cached --quiet; then
-            git commit -m "lista: update agent and verified odds matching [skip ci]"
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
-      - name: Relay ready list to MemaraSix and retry until exact receipt confirmed
-        # Runs even when today's list was already prepared in an earlier attempt:
-        # ongoing ListaSix schedule is then a lightweight retry, not a new collection.
-        if: success()
-        env:
-          MEMARASIX_DISPATCH_TOKEN: ${{ secrets.MEMARASIX_DISPATCH_TOKEN }}
-        run: |
-          set -euo pipefail
-          git pull --ff-only origin main
-          python3 -m lista.notify_memarasix
-      - name: Upload Collector feed
-        if: steps.clock.outputs.run == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: listasix-active-collector
-          path: shared/*.json
