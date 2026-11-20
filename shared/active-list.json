@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-20",
+  "expires_at": "2026-11-21T08:59:00+01:00",
+  "publication_allowed": true,
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:ger.1:401884736",
+      "datetime": "2026-11-20T19:30:00Z",
+      "match": "Bayern Munich - FC Cologne",
+      "home_odds": 1.07,
+      "draw_odds": 13,
+      "away_odds": 19,
+      "over25_odds": 1.16,
+      "btts_yes_odds": 1.83,
+      "btts_no_odds": 1.89,
+      "bookmakers_by_field": {},
+      "source_urls": [
+        "https://oddsrun.com/match/football/de/123/12153830/germany-bundesliga-i/bayern-munich-vs-cologne/",
+        "https://verdict.football/predictions/germany/bundesliga/bayern-munchen-vs-1-fc-koln-2026-11-20/"
+      ]
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876395",
+      "datetime": "2026-11-20T19:45:00Z",
+      "match": "Troyes - Le Havre AC",
+      "home_odds": 2.2,
+      "draw_odds": 3.7,
+      "away_odds": 3.46,
+      "over25_odds": 1.94,
+      "btts_yes_odds": 1.68,
+      "btts_no_odds": 2.08,
+      "bookmakers_by_field": {},
+      "source_urls": [
+        "https://tipsterarea.com/match/troyes-le-havre-ligue-1-france-955828"
+      ]
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878937",
+      "datetime": "2026-11-20T19:45:00Z",
+      "match": "Cercle Brugge KSV - KVC Westerlo",
+      "home_odds": 2.07,
+      "draw_odds": 3.92,
+      "away_odds": 3.25,
+      "over25_odds": 1.47,
+      "btts_yes_odds": 1.41,
+      "btts_no_odds": 2.69,
+      "bookmakers_by_field": {},
+      "source_urls": [
+        "https://tipsterarea.com/match/cercle-brugge-westerlo-pro-league-belgium-955832"
+      ]
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882805",
+      "datetime": "2026-11-20T20:00:00Z",
+      "match": "Athletic Club - Espanyol",
+      "home_odds": 1.54,
+      "draw_odds": 4.52,
+      "away_odds": 7.01,
+      "over25_odds": 1.92,
+      "btts_yes_odds": 1.94,
+      "btts_no_odds": 1.79,
+      "bookmakers_by_field": {},
+      "source_urls": [
+        "https://tipsterarea.com/match/athletic-bilbao-espanyol-primera-division-spain-955826"
+      ]
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401933760",
+      "datetime": "2026-11-20T23:00:00Z",
+      "match": "Vélez Sarsfield - Belgrano (Córdoba)",
+      "home_odds": 2.23,
+      "draw_odds": 3.22,
+      "away_odds": 3.41,
+      "over25_odds": 2.27,
+      "btts_yes_odds": 1.92,
+      "btts_no_odds": 1.79,
+      "bookmakers_by_field": {},
+      "source_urls": [
+        "https://tipsterarea.com/match/velez-sarsfield-belgrano-cordoba-playoff-argentina-956103"
+      ]
+    }
+  ]
+}
