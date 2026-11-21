@@ -1,0 +1,304 @@
+#!/usr/bin/env python3
+"""ListaSix Scout 6/6: evaluate every ESPN fixture on all SIX football markets.
+
+This is a transparent statistical PRE-SCOUT, not calibrated certainty.
+Every fixture is modeled, even if its odds are missing or kickoff has passed.
+One strongest market per fixture; a second-highest probability breaks ties
+between fixtures. B can only use fixtures with 3+ as the top market.
+Ticket proposals are NEVER approved or published by this module:
+the independent analyst must review injuries, suspensions, lineup, H2H, xG
+when available, and source odds before publishing.
+"""
+import argparse
+import itertools
+import json
+import math
+from datetime import datetime, timedelta, timezone
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+TZ = ZoneInfo("Europe/Sarajevo")
+MARKETS = ("1", "X", "2", "3+", "GG", "NG")
+MARKET_FIELDS = {
+    "1": "home_odds", "X": "draw_odds", "2": "away_odds",
+    "3+": "over25_odds", "GG": "btts_yes_odds", "NG": "btts_no_odds",
+}
+TIE_PRIORITY = {"3+": 0, "1": 1, "2": 2, "GG": 3, "NG": 4, "X": 5}
+MODELED_MAX_GOALS = 16
+MAX_LEGS = 3
+MAX_CANDIDATES_PER_POOL = 36
+MAX_COMBOS_PER_POOL = 130
+
+def clamp(number, low, high):
+    return min(high, max(low, float(number)))
+
+def league_goal_reference(league_record):
+    """Deduplicate recent ESPN events. Shrink league rates toward broad priors."""
+    unique = {}
+    for team in league_record.get("teams", {}).values():
+        for item in team.get("matches", []):
+            if item.get("event_id") and isinstance(item.get("home_goals"), (int, float)) and isinstance(item.get("away_goals"), (int, float)):
+                unique[str(item["event_id"])] = item
+    count = len(unique)
+    home = (sum(x["home_goals"] for x in unique.values()) + 18 * 1.45) / (count + 18)
+    away = (sum(x["away_goals"] for x in unique.values()) + 18 * 1.15) / (count + 18)
+    return clamp(home, 0.85, 2.15), clamp(away, 0.65, 1.95), count
+
+def rates(record, expected_for, expected_against, preferred_side):
+    """Recency-weighted actual scores; 3-match prior limits five-game noise."""
+    games = record.get("matches", [])[:5] if isinstance(record, dict) else []
+    weighted = []
+    side_weighted = []
+    for index, item in enumerate(games):
+        try:
+            gf, ga = int(item["goals_for"]), int(item["goals_against"])
+            if not (0 <= gf <= 25 and 0 <= ga <= 25):
+                continue
+            w = (1.20, 1.10, 1.00, 0.90, 0.80)[min(index, 4)]
+            weighted.append((w, gf, ga))
+            if item.get("side") == preferred_side:
+                side_weighted.append((w, gf, ga))
+        except (TypeError, KeyError, ValueError):
+            continue
+    sumw = sum(x[0] for x in weighted)
+    attack = (3.0 * expected_for + sum(w*gf for w, gf, _ in weighted)) / (3.0 + sumw)
+    concede = (3.0 * expected_against + sum(w*ga for w, _, ga in weighted)) / (3.0 + sumw)
+    if len(side_weighted) >= 2:
+        sw = sum(x[0] for x in side_weighted)
+        specific_attack = (2.0 * expected_for + sum(w*gf for w, gf, _ in side_weighted)) / (2.0 + sw)
+        specific_concede = (2.0 * expected_against + sum(w*ga for w, _, ga in side_weighted)) / (2.0 + sw)
+        attack = 0.75 * attack + 0.25 * specific_attack
+        concede = 0.75 * concede + 0.25 * specific_concede
+    return attack, concede, len(weighted)
+
+def poisson_mass(lam):
+    pmf = [math.exp(-lam)]
+    for k in range(1, MODELED_MAX_GOALS+1):
+        pmf.append(pmf[-1] * lam / k)
+    return pmf
+
+def six_probs(home_xg, away_xg):
+    """Independently modeled goals -> mutually coherent 1X2 and GG/NG outcomes."""
+    h, a = poisson_mass(home_xg), poisson_mass(away_xg)
+    vals = {k: 0.0 for k in MARKETS}
+    covered_mass = sum(h) * sum(a)
+    for hg, hp in enumerate(h):
+        for ag, ap in enumerate(a):
+            weight = hp * ap / covered_mass
+            vals["1" if hg > ag else ("X" if hg == ag else "2")] += weight
+            if hg + ag >= 3: vals["3+"] += weight
+            vals["GG" if (hg > 0 and ag > 0) else "NG"] += weight
+    # Show one decimal; ensure complementary and exhaustive outcomes still sum to 100.
+    ans = {k: round(100.0 * v, 1) for k, v in vals.items()}
+    ans["2"] = round(100.0 - ans["1"] - ans["X"], 1)
+    ans["NG"] = round(100.0 - ans["GG"], 1)
+    return ans
+
+def available_odd(fixture, market):
+    val = fixture.get(MARKET_FIELDS[market])
+    if isinstance(val, bool) or not isinstance(val, (int, float)) or not 1.01 < val < 50:
+        return None
+    return float(val)
+
+def evaluate_fixture(fixture, history, now):
+    fixture_id = fixture["fixture_id"]
+    league = fixture_id.split(":")[2]
+    if " - " not in fixture["match"]:
+        raise ValueError("Fixture has invalid ESPN match name: " + fixture_id)
+    home, away = fixture["match"].split(" - ", 1)
+    records = history.get("leagues", {}).get(league, {}).get("teams", {})
+    h, a = records.get(home, {}), records.get(away, {})
+    base_h, base_a, league_sample = league_goal_reference(history["leagues"].get(league, {}))
+    # Home attack and away defensive concessions belong on a home-scoring scale;
+    # away attack and home defensive concessions belong on the away scale.
+    hgf, hga, hn = rates(h, base_h, base_a, "home")
+    agf, aga, an = rates(a, base_a, base_h, "away")
+    xgh = clamp((hgf + aga) * .5, .35, 3.65)
+    xga = clamp((agf + hga) * .5, .30, 3.45)
+    pcts = six_probs(xgh, xga)
+    ranked = sorted(MARKETS, key=lambda k: (-pcts[k], TIE_PRIORITY[k]))
+    top, second = ranked[:2]
+    odds = {k: available_odd(fixture, k) for k in MARKETS}
+    start = datetime.fromisoformat(fixture["datetime"].replace("Z","+00:00")).astimezone(timezone.utc)
+    notes = []
+    if min(hn, an) < 4:
+        notes.append("Incomplete ESPN last-five form: independent model confidence low")
+    if odds[top] is None:
+        notes.append("The strongest market has no verified price: do not substitute the second market")
+    if start <= now + timedelta(minutes=20):
+        notes.append("Started or less than 20 minutes to kickoff; exclude from new tickets")
+    return {
+        "fixture_id": fixture_id, "league": league, "match": fixture["match"],
+        "datetime": fixture["datetime"],
+        "probability_pct": pcts, "odds": odds,
+        "strongest_market": top, "strongest_pct": pcts[top],
+        "second_market": second, "second_pct": pcts[second],
+        "third_pct": pcts[ranked[2]], "strongest_odds": odds[top],
+        "strongest_implied_pct": round(100.0 / odds[top],1) if odds[top] else None,
+        "estimated_goals": {"home": round(xgh, 2), "away": round(xga, 2)},
+        "evidence": {"home_last_matches": hn, "away_last_matches": an,
+                     "league_unique_result_matches": league_sample,
+                     "used_xg": False, "lineups_checked": False,
+                     "injuries_checked": False, "h2h_checked": False},
+        "candidate_A": bool(min(hn, an) >= 4 and odds[top] and start > now + timedelta(minutes=20)),
+        "candidate_B": bool(top == "3+" and min(hn, an) >= 4 and odds[top]
+                            and start > now + timedelta(minutes=20)),
+        "needs_independent_ai_review": True, "limitations": notes
+    }
+
+def ranking(candidate):
+    """Most probable top outcome; in exact ties the runner-up is decisive."""
+    return (-candidate["strongest_pct"], -candidate["second_pct"],
+            -candidate["third_pct"], candidate["fixture_id"])
+
+def ticket_combos(rows):
+    pool = sorted(rows, key=ranking)[:MAX_CANDIDATES_PER_POOL]
+    combos = []
+    for n in (2, 3):
+        for combo in itertools.combinations(pool, n):
+            product = math.prod(x["strongest_odds"] for x in combo)
+            if not (2.0 <= product <= 3.0):
+                continue
+            scores = [x["strongest_pct"] for x in combo]
+            second = [x["second_pct"] for x in combo]
+            # Favor higher top-market reliability rather than high odds.
+            # Lower n helps avoid extra legs when equally rated.
+            grade = (round(sum(scores)/n, 5), min(scores),
+                     round(sum(second)/n, 5), -n, -abs(product-2.5))
+            combos.append({"rows": combo, "odds": round(product, 3), "grade": grade,
+                           "ids": frozenset(x["fixture_id"] for x in combo)})
+    combos.sort(key=lambda c: c["grade"], reverse=True)
+    return combos[:MAX_COMBOS_PER_POOL]
+
+def suggestions(ranked):
+    a_pool = [f for f in ranked if f["candidate_A"]]
+    b_pool = [f for f in ranked if f["candidate_B"]]
+    a_combos, b_combos = ticket_combos(a_pool), ticket_combos(b_pool)
+    if not a_combos:
+        return {"A": None,"B": None,"reason": "No 2-3 leg A combination totaling 2.00-3.00"}
+    if not b_combos:
+        best = a_combos[0]
+        return {"A": format_combo(best, "A"), "B": None,
+                "reason": "No 2-3 leg B combination: only fixtures with 3+ as TOP market qualify"}
+    chosen = None
+    for a in a_combos:
+        for b in b_combos:
+            if a["ids"] & b["ids"]:
+                continue
+            leg_list = list(a["rows"]) + list(b["rows"])
+            all_scores = [r["strongest_pct"] for r in leg_list]
+            next_scores = [r["second_pct"] for r in leg_list]
+            score = (round(sum(all_scores)/len(all_scores),5), min(all_scores),
+                     round(sum(next_scores)/len(next_scores),5),
+                     -len(leg_list), a["grade"], b["grade"])
+            if chosen is None or score > chosen[0]:
+                chosen = (score,a,b)
+    if chosen is None:
+        best=a_combos[0]
+        return {"A":format_combo(best,"A"),"B":None,
+                "reason":"No eligible pair of NON-overlapping A and B combinations totaling 2.00-3.00 each"}
+    return {"A":format_combo(chosen[1],"A"),"B":format_combo(chosen[2],"B"),
+            "reason":"Statistical proposals only. Independent Scout must verify and explicitly approve."}
+
+def format_combo(combo, tid):
+    return {
+        "id":tid,"combined_odds":combo["odds"],
+        "selection_method":"highest estimated top-market percentages; tie by second best",
+        "ready_for_publication":False,"requires_independent_ai_approval":True,
+        "matches":[{
+            "fixture_id":r["fixture_id"],"match":r["match"],"datetime":r["datetime"],
+            "pick":r["strongest_market"],"probability_pct":r["strongest_pct"],
+            "second_best_pct":r["second_pct"],"odd":r["strongest_odds"]
+        } for r in combo["rows"]]
+    }
+
+def analyze(feed, active, history, now):
+    if feed.get("date") != active.get("date") or feed.get("date") != history.get("date"):
+        raise ValueError("ESPN feed, Tipster quotes and last-five form must be SAME date")
+    official = {x["fixture_id"]:x for x in feed.get("football_candidates",[])}
+    display = {x["fixture_id"]:x for x in active.get("fixtures",[])}
+    historical = {x["fixture_id"] for x in history.get("fixtures",[])}
+    if not official or len(official)!=len(feed["football_candidates"]):
+        raise ValueError("Missing or duplicated ESPN fixture IDs")
+    if official.keys()!=display.keys() or not official.keys()<=historical:
+        raise ValueError("Cannot score: missing ESPN fixtures in displayed odds or history")
+    records = []
+    for fid, f in official.items():
+        display_row=display[fid]
+        if display_row.get("match")!=f["home"]+" - "+f["away"] or display_row.get("datetime")!=f["start_utc"]:
+            raise ValueError("ESPN team or kickoff discrepancy for "+fid)
+        records.append(evaluate_fixture(display_row,history,now))
+    records.sort(key=ranking)
+    possible = suggestions(records)
+    return {
+        "schema_version":1,"date":feed["date"],
+        "generated_at_utc":now.isoformat(),"source_feed_generated_at_utc":feed.get("generated_at_utc"),
+        "model":"Independent Poisson 1X2/Over2.5/BTTS with recency-weighted five matches and league shrinkage",
+        "probabilities_are_calibrated":False,
+        "disclaimer":"Statistical estimates, not observed win chances or guarantees. Validate via rolling backtest; separate analyst review for injuries/xG/H2H.",
+        "all_six_markets":list(MARKETS),
+        "total_espn_fixtures":len(official),"total_market_probabilities":len(records)*6,
+        "all_fixtures_evaluated":len(records),
+        "all_six_odds_present":sum(all(x["odds"][m] is not None for m in MARKETS) for x in records),
+        "candidate_A_count":sum(x["candidate_A"] for x in records),
+        "candidate_B_count":sum(x["candidate_B"] for x in records),
+        "ranked_fixtures":records,
+        "ticket_proposals":possible,
+        "publication_allowed":False
+    }
+
+def render_text(doc):
+    out=[
+        "LISTASIX SCOUT 6/6 | "+doc["date"],
+        "PROBABILITY MODEL (NOT BACKTEST-CALIBRATED). No ticket is auto-published.",
+        "Number of matches: "+str(doc["all_fixtures_evaluated"])+"; probability estimates: "+str(doc["total_market_probabilities"]),
+        "RANK | FIXTURE | 1 | X | 2 | 3+ | GG | NG | TOP | RUNNER-UP | ODDS | STATUS"
+    ]
+    for n,r in enumerate(doc["ranked_fixtures"],1):
+        odds = "-" if r["strongest_odds"] is None else f'{r["strongest_odds"]:.2f}'
+        ps=" | ".join(f'{r["probability_pct"][m]:.1f}%' for m in MARKETS)
+        stat="A/B" if r["candidate_B"] else ("A" if r["candidate_A"] else "OUT")
+        out.append(f'{n} | {r["match"]} | {ps} | {r["strongest_market"]} {r["strongest_pct"]:.1f}% | {r["second_market"]} {r["second_pct"]:.1f}% | {odds} | {stat}')
+    out.append("")
+    for tid in ("A","B"):
+        t=doc["ticket_proposals"][tid]
+        if t:
+            out.append(f'{tid} PROPOSAL (UNAPPROVED) {t["combined_odds"]:.2f}: '+
+                       "; ".join(f'{x["match"]} [{x["pick"]} {x["odd"]:.2f}, p={x["probability_pct"]:.1f}%]' for x in t["matches"]))
+        else:out.append(tid+" NO ELIGIBLE PROPOSAL")
+    out.append(doc["ticket_proposals"]["reason"])
+    return "\n".join(out)+"\n"
+
+def save(path, data, raw=False):
+    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
+    temp=path.with_name(path.name+".tmp")
+    temp.write_text(data if raw else json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    temp.replace(path)
+
+def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument("--root", default=".")
+    args=parser.parse_args()
+    root=Path(args.root)
+    now=datetime.now(timezone.utc)
+    day=now.astimezone(TZ).date().isoformat()
+    feed=json.loads((root/"shared/collector-feed.json").read_text(encoding="utf-8"))
+    active=json.loads((root/"shared/active-list.json").read_text(encoding="utf-8"))
+    history=json.loads((root/"shared/agent/history-h2h.json").read_text(encoding="utf-8"))
+    if feed.get("date") != day:
+        print("SCOUT_6OF6_WAIT_TODAY_ESPN",feed.get("date"),day)
+        return
+    if history.get("date") != day or active.get("date") != day:
+        print("SCOUT_6OF6_WAIT_QUOTES_AND_HISTORY",history.get("date"),active.get("date"),day)
+        return
+    result=analyze(feed,active,history,now)
+    save(root/"shared/agent"/f"scout-six-markets-{day}.json",result)
+    save(root/"shared/agent/scout-six-markets.json",result)
+    save(root/"docs/scout-six-markets.json",result)
+    save(root/"docs/scout-six-markets.txt",render_text(result),raw=True)
+    print("SCOUT_6OF6_COMPLETE",result["total_espn_fixtures"],result["total_market_probabilities"],
+          "FULL_ODDS",result["all_six_odds_present"],
+          "A",result["candidate_A_count"],"B",result["candidate_B_count"])
+    print("SCOUT_6OF6_PROPOSALS", json.dumps(result["ticket_proposals"],ensure_ascii=False))
+if __name__=="__main__":
+    main()
