@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "date": "2026-11-21",
-  "generated_at_utc": "2026-11-21T11:11:31.196189+00:00",
+  "generated_at_utc": "2026-11-21T11:14:46.718556+00:00",
   "source_feed_generated_at_utc": "2026-11-21T08:45:33.236183+00:00",
   "source_active_sha256": "0dd15dcbe2c2087d3b8578513c240847cfa73707fcd97dc94138b8d3026f5691",
-  "source_history_sha256": "7a0c1612dcf037234acd7449394d2666f8153f011e7d5b15a60bfd745f54a072",
+  "source_history_sha256": "f99f1a7bf5bddf1c532fef98cbb865f2a4ff60455d083613957c0c3afa845c3b",
   "model": "Independent Poisson 1X2/Over2.5/BTTS with recency-weighted five matches and league shrinkage",
   "probabilities_are_calibrated": false,
   "disclaimer": "Statistical estimates, not observed win chances or guarantees. Validate via rolling backtest; separate analyst review for injuries/xG/H2H.",
