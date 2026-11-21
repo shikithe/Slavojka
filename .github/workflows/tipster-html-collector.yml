@@ -1,0 +1,49 @@
+name: ListaSix TipsterArea HTML collector (ESPN -> 1X2, 3+, GG/NG)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'kvoter/tipster_collector.py'
+      - 'tests/test_tipster_collector.py'
+      - '.github/workflows/tipster-html-collector.yml'
+  schedule:
+    # UTC cadence; the Python timezone gate enforces 09:00-12:00 Sarajevo.
+    # Cron is best-effort; subsequent runs fill any remaining fields.
+    - cron: '*/10 7-11 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: listasix-tipster-html-collector
+  cancel-in-progress: false
+jobs:
+  collect-tipster:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install public HTML parser
+        run: python3 -m pip install "requests>=2.31,<3" "beautifulsoup4>=4.12,<5"
+      - name: Test date, odds markets and home-away validation
+        run: python3 -m unittest discover -s tests -p 'test_tipster_collector.py' -v
+      - name: First verify the fresh ESPN collector, then fetch TipsterArea
+        run: python3 -m kvoter.tipster_collector
+      - name: Commit only actual price additions and diagnostics
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "ListaSix: TipsterArea HTML odds update [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          else
+            echo "TIPSTER_NO_NEW_PRICES"
+          fi
