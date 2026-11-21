@@ -36,12 +36,16 @@ jobs:
         run: python3 -m kvoter.tipster_collector
       - name: Update the public Kvoter Dnevna kladionicarska ponuda directly
         run: python3 -m lista.publish_ai_offer
+      - name: Score EVERY available ESPN game on six markets after the new odds snapshot
+        run: |
+          python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
+          python3 -m lista.scout_six_markets
       - name: Commit collected odds AND visible daily list in the same workflow
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt
+          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt shared/agent/scout-six-markets*.json docs/scout-six-markets.json docs/scout-six-markets.txt
           if ! git diff --cached --quiet; then
             git commit -m "ListaSix: TipsterArea HTML odds update [skip ci]"
             # Another service may commit while this action is collecting; retry safe fast-forward pushes.
