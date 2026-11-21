@@ -336,11 +336,17 @@
       "fixture_id": "espn:football:eng.1:401879235",
       "datetime": "2026-11-21T15:00:00Z",
       "match": "Coventry City - Crystal Palace",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea pre-match bookmaker average",
+        "draw_odds": "TipsterArea pre-match bookmaker average",
+        "away_odds": "TipsterArea pre-match bookmaker average"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "home_odds": 2.41,
+      "draw_odds": 3.64,
+      "away_odds": 2.84,
       "over25_odds": null,
       "btts_yes_odds": null,
       "btts_no_odds": null
@@ -550,11 +556,17 @@
       "fixture_id": "espn:football:bel.1:401878939",
       "datetime": "2026-11-21T17:15:00Z",
       "match": "Racing Genk - RAAL La Louvière",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea pre-match bookmaker average",
+        "draw_odds": "TipsterArea pre-match bookmaker average",
+        "away_odds": "TipsterArea pre-match bookmaker average"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "home_odds": 1.44,
+      "draw_odds": 4.79,
+      "away_odds": 6.44,
       "over25_odds": null,
       "btts_yes_odds": null,
       "btts_no_odds": null
@@ -563,11 +575,17 @@
       "fixture_id": "espn:football:eng.1:401879232",
       "datetime": "2026-11-21T17:30:00Z",
       "match": "Newcastle United - Arsenal",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea pre-match bookmaker average",
+        "draw_odds": "TipsterArea pre-match bookmaker average",
+        "away_odds": "TipsterArea pre-match bookmaker average"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "home_odds": 5.54,
+      "draw_odds": 4.28,
+      "away_odds": 1.58,
       "over25_odds": null,
       "btts_yes_odds": null,
       "btts_no_odds": null
@@ -868,11 +886,17 @@
       "fixture_id": "espn:football:bel.1:401878938",
       "datetime": "2026-11-21T19:45:00Z",
       "match": "Zulte-Waregem - Antwerp",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea pre-match bookmaker average",
+        "draw_odds": "TipsterArea pre-match bookmaker average",
+        "away_odds": "TipsterArea pre-match bookmaker average"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "home_odds": 2.14,
+      "draw_odds": 3.6,
+      "away_odds": 3.21,
       "over25_odds": null,
       "btts_yes_odds": null,
       "btts_no_odds": null

@@ -15,7 +15,7 @@ Br. | Datum/sat | Utakmica | 1 | X | 2 | 3+ | GG | NG
 14 | 2026-11-21T15:00:00Z | Aston Villa - Sunderland | 1.8 | 4.16 | 4.57 | 1.93 | 1.7 | 2.18
 15 | 2026-11-21T15:00:00Z | Celtic - St Mirren | 1.17 | 7.7 | 15 | 1.26 | 1.77 | 2.01
 16 | 2026-11-21T15:00:00Z | Chelsea - Leeds United | 1.99 | 3.86 | 3.93 | 1.89 | 1.69 | 2.07
-17 | 2026-11-21T15:00:00Z | Coventry City - Crystal Palace | - | - | - | - | - | -
+17 | 2026-11-21T15:00:00Z | Coventry City - Crystal Palace | 2.41 | 3.64 | 2.84 | - | - | -
 18 | 2026-11-21T15:00:00Z | Falkirk - St Johnstone | - | - | - | - | - | -
 19 | 2026-11-21T15:00:00Z | Hibernian - Dundee United | - | - | - | - | - | -
 20 | 2026-11-21T15:00:00Z | Kilmarnock - Aberdeen | - | - | - | - | - | -
@@ -26,8 +26,8 @@ Br. | Datum/sat | Utakmica | 1 | X | 2 | 3+ | GG | NG
 25 | 2026-11-21T16:00:00Z | Kocaelispor - Fenerbahce | 6.2 | 4.45 | 1.6 | 1.73 | 1.72 | 2.01
 26 | 2026-11-21T16:15:00Z | Nice - Paris Saint-Germain | 6.32 | 5.24 | 1.5 | 1.39 | 1.51 | 2.52
 27 | 2026-11-21T17:00:00Z | Parma - AS Roma | 11.3 | 6.39 | 1.3 | 1.5 | 1.87 | 1.85
-28 | 2026-11-21T17:15:00Z | Racing Genk - RAAL La Louvière | - | - | - | - | - | -
-29 | 2026-11-21T17:30:00Z | Newcastle United - Arsenal | - | - | - | - | - | -
+28 | 2026-11-21T17:15:00Z | Racing Genk - RAAL La Louvière | 1.44 | 4.79 | 6.44 | - | - | -
+29 | 2026-11-21T17:30:00Z | Newcastle United - Arsenal | 5.54 | 4.28 | 1.58 | - | - | -
 30 | 2026-11-21T17:30:00Z | Schalke 04 - VfB Stuttgart | 4.22 | 4.32 | 1.83 | 1.46 | 1.45 | 2.59
 31 | 2026-11-21T17:30:00Z | Sevilla - Real Betis | 3.07 | 3.58 | 2.44 | 1.9 | 1.63 | 2.17
 32 | 2026-11-21T17:45:00Z | Dundee - Heart of Midlothian | - | - | - | - | - | -
@@ -42,7 +42,7 @@ Br. | Datum/sat | Utakmica | 1 | X | 2 | 3+ | GG | NG
 41 | 2026-11-21T19:45:00Z | Lille - Lyon | 2.32 | 3.57 | 3.29 | 2.1 | 1.77 | 1.96
 42 | 2026-11-21T19:45:00Z | Napoli - Torino | 1.53 | 4.73 | 6.76 | 1.77 | 1.82 | 1.9
 43 | 2026-11-21T19:45:00Z | Strasbourg - Brest | 2.29 | 3.86 | 3.12 | 1.72 | 1.54 | 2.35
-44 | 2026-11-21T19:45:00Z | Zulte-Waregem - Antwerp | - | - | - | - | - | -
+44 | 2026-11-21T19:45:00Z | Zulte-Waregem - Antwerp | 2.14 | 3.6 | 3.21 | - | - | -
 45 | 2026-11-21T20:00:00Z | Argentinos Juniors - Independiente | - | - | - | - | - | -
 46 | 2026-11-21T20:00:00Z | FC Groningen - Heerenveen | - | - | - | - | - | -
 47 | 2026-11-21T20:00:00Z | Motherwell - Rangers | 5.11 | 4.35 | 1.55 | 1.48 | 1.59 | 2.21
