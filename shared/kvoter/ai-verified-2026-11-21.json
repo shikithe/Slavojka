@@ -125,6 +125,136 @@
           "no": 3.05
         }
       }
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879236",
+      "home": "Chelsea",
+      "away": "Leeds United",
+      "league": "eng.1",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/match/chelsea-leeds-premier-league-england-955989"
+      ],
+      "bookmaker": "1xBet via TipsterArea",
+      "markets": {
+        "1X2": {
+          "home": 1.99,
+          "draw": 3.86,
+          "away": 3.93
+        },
+        "3+": {
+          "over": 1.89
+        },
+        "BTTS": {
+          "yes": 1.69,
+          "no": 2.07
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876403",
+      "home": "Lens",
+      "away": "Toulouse",
+      "league": "fra.1",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/match/lens-toulouse-ligue-1-france-956009"
+      ],
+      "bookmaker": "1xBet via TipsterArea",
+      "markets": {
+        "1X2": {
+          "home": 2.09,
+          "draw": 3.95,
+          "away": 3.54
+        },
+        "3+": {
+          "over": 1.71
+        },
+        "BTTS": {
+          "yes": 1.55,
+          "no": 2.32
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875543",
+      "home": "Feyenoord Rotterdam",
+      "away": "Excelsior",
+      "league": "ned.1",
+      "start_utc": "2026-11-21T17:45:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://www.sportytrader.com/en/odds/feyenoord-excelsior-8533169/"
+      ],
+      "bookmaker": "SportyTrader published bookmaker offers",
+      "markets": {
+        "1X2": {
+          "home": 1.2,
+          "draw": 10.5,
+          "away": 18
+        },
+        "3+": {
+          "over": 1.33
+        },
+        "BTTS": {
+          "yes": 1.83,
+          "no": 1.95
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876398",
+      "home": "Nice",
+      "away": "Paris Saint-Germain",
+      "league": "fra.1",
+      "start_utc": "2026-11-21T16:15:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://www.sportytrader.com/en/odds/nice-psg-8532726/"
+      ],
+      "bookmaker": "SportyTrader published bookmaker offers",
+      "markets": {
+        "1X2": {
+          "home": 6.32,
+          "draw": 5.24,
+          "away": 1.5
+        },
+        "3+": {
+          "over": 1.39
+        },
+        "BTTS": {
+          "yes": 1.51,
+          "no": 2.52
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401878756",
+      "home": "Aston Villa",
+      "away": "Sunderland",
+      "league": "eng.1",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://www.sportytrader.com/en/odds/aston-villa-sunderland-8558913/"
+      ],
+      "bookmaker": "SportyTrader published bookmaker offers",
+      "markets": {
+        "1X2": {
+          "home": 1.8,
+          "draw": 4.16,
+          "away": 4.57
+        },
+        "3+": {
+          "over": 1.93
+        },
+        "BTTS": {
+          "yes": 1.7,
+          "no": 2.18
+        }
+      }
     }
   ]
 }
