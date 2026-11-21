@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-11-21T09:28:35.747253+00:00",
-  "total": 36,
+  "generated_at_utc": "2026-11-21T09:37:11.829128+00:00",
+  "total": 32,
   "fixtures": [
     {
       "fixture_id": "espn:football:tur.1:401888247",
@@ -24,14 +24,6 @@
       "away": "Caykur Rizespor",
       "league": "tur.1",
       "start_utc": "2026-11-21T13:00:00Z",
-      "sport": "football"
-    },
-    {
-      "fixture_id": "espn:football:ger.1:401884732",
-      "home": "1. FC Union Berlin",
-      "away": "RB Leipzig",
-      "league": "ger.1",
-      "start_utc": "2026-11-21T14:30:00Z",
       "sport": "football"
     },
     {
@@ -67,14 +59,6 @@
       "sport": "football"
     },
     {
-      "fixture_id": "espn:football:eng.1:401878754",
-      "home": "Tottenham Hotspur",
-      "away": "Ipswich Town",
-      "league": "eng.1",
-      "start_utc": "2026-11-21T15:00:00Z",
-      "sport": "football"
-    },
-    {
       "fixture_id": "espn:football:bel.1:401878940",
       "home": "Royal Charleroi SC",
       "away": "Sint-Truidense",
@@ -104,22 +88,6 @@
       "away": "Aberdeen",
       "league": "sco.1",
       "start_utc": "2026-11-21T15:00:00Z",
-      "sport": "football"
-    },
-    {
-      "fixture_id": "espn:football:ned.1:401875541",
-      "home": "NEC Nijmegen",
-      "away": "PSV Eindhoven",
-      "league": "ned.1",
-      "start_utc": "2026-11-21T15:30:00Z",
-      "sport": "football"
-    },
-    {
-      "fixture_id": "espn:football:tur.1:401888244",
-      "home": "Kocaelispor",
-      "away": "Fenerbahce",
-      "league": "tur.1",
-      "start_utc": "2026-11-21T16:00:00Z",
       "sport": "football"
     },
     {
