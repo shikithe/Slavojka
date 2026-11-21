@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-11-21T10:15:47.643457+00:00",
-  "total": 34,
+  "generated_at_utc": "2026-11-21T10:16:24.663850+00:00",
+  "total": 37,
   "fixtures": [
     {
       "fixture_id": "espn:football:ger.1:401884736",
@@ -299,7 +299,7 @@
         {
           "event_id": "ai-web:espn:football:eng.1:401879233",
           "bookmaker": "Verdict football market comparison",
-          "updated_at_utc": "2026-11-21T10:15:47.643003+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663550+00:00",
           "source_urls": [
             "https://verdict.football/predictions/england/premier-league/manchester-city-vs-fulham-2026-11-21/"
           ],
@@ -336,7 +336,7 @@
         {
           "event_id": "ai-web:espn:football:tur.1:401888245",
           "bookmaker": "1Win via Verdict comparison",
-          "updated_at_utc": "2026-11-21T10:15:47.643051+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663587+00:00",
           "source_urls": [
             "https://verdict.football/predictions/turkey/super-lig/galatasaray-vs-samsunspor-2026-11-21/"
           ],
@@ -373,7 +373,7 @@
         {
           "event_id": "ai-web:espn:football:ger.1:401884735",
           "bookmaker": "Bet365 via OddsRun",
-          "updated_at_utc": "2026-11-21T10:15:47.643074+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663604+00:00",
           "source_urls": [
             "https://oddsrun.com/match/football/de/123/12153829/germany-bundesliga-i/bayer-leverkusen-vs-paderborn/",
             "https://tipsterarea.com/match/bayer-leverkusen-paderborn-bundesliga-germany-955997"
@@ -429,7 +429,7 @@
         {
           "event_id": "ai-web:espn:football:sco.1:401878338",
           "bookmaker": "Verdict football market comparison",
-          "updated_at_utc": "2026-11-21T10:15:47.643094+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663619+00:00",
           "source_urls": [
             "https://verdict.football/predictions/scotland/premiership/celtic-vs-st-mirren-2026-11-21/"
           ],
@@ -466,7 +466,7 @@
         {
           "event_id": "ai-web:espn:football:esp.1:401882798",
           "bookmaker": "SportyTrader market comparison",
-          "updated_at_utc": "2026-11-21T10:15:47.643110+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663631+00:00",
           "source_urls": [
             "https://www.sportytrader.com/en/odds/real-madrid-celta-vigo-8586542/"
           ],
@@ -503,7 +503,7 @@
         {
           "event_id": "ai-web:espn:football:eng.1:401879236",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643125+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663640+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/chelsea-leeds-premier-league-england-955989"
           ],
@@ -540,7 +540,7 @@
         {
           "event_id": "ai-web:espn:football:fra.1:401876403",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643139+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663648+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/lens-toulouse-ligue-1-france-956009"
           ],
@@ -577,7 +577,7 @@
         {
           "event_id": "ai-web:espn:football:ned.1:401875543",
           "bookmaker": "SportyTrader published bookmaker offers",
-          "updated_at_utc": "2026-11-21T10:15:47.643152+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663657+00:00",
           "source_urls": [
             "https://www.sportytrader.com/en/odds/feyenoord-excelsior-8533169/"
           ],
@@ -614,7 +614,7 @@
         {
           "event_id": "ai-web:espn:football:fra.1:401876398",
           "bookmaker": "SportyTrader published bookmaker offers",
-          "updated_at_utc": "2026-11-21T10:15:47.643168+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663665+00:00",
           "source_urls": [
             "https://www.sportytrader.com/en/odds/nice-psg-8532726/"
           ],
@@ -651,7 +651,7 @@
         {
           "event_id": "ai-web:espn:football:eng.1:401878756",
           "bookmaker": "SportyTrader published bookmaker offers",
-          "updated_at_utc": "2026-11-21T10:15:47.643188+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663674+00:00",
           "source_urls": [
             "https://www.sportytrader.com/en/odds/aston-villa-sunderland-8558913/"
           ],
@@ -688,7 +688,7 @@
         {
           "event_id": "ai-web:espn:football:ita.1:401875056",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643201+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663682+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/como-cagliari-serie-a-italy-956003"
           ],
@@ -725,7 +725,7 @@
         {
           "event_id": "ai-web:espn:football:ita.1:401874981",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643216+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663690+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/lazio-lecce-serie-a-italy-956004"
           ],
@@ -762,7 +762,7 @@
         {
           "event_id": "ai-web:espn:football:ita.1:401875067",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643230+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663698+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/napoli-torino-serie-a-italy-956006"
           ],
@@ -799,7 +799,7 @@
         {
           "event_id": "ai-web:espn:football:ita.1:401874967",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643243+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663705+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/parma-roma-serie-a-italy-956005"
           ],
@@ -836,7 +836,7 @@
         {
           "event_id": "ai-web:espn:football:ger.1:401884731",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643256+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663713+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/borussia-m-gladbach-borussia-dortmund-bundesliga-germany-955998"
           ],
@@ -873,7 +873,7 @@
         {
           "event_id": "ai-web:espn:football:esp.1:401882799",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643269+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663720+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/rayo-vallecano-valencia-primera-division-spain-955994"
           ],
@@ -910,7 +910,7 @@
         {
           "event_id": "ai-web:espn:football:fra.1:401876402",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643283+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663727+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/lille-lyonnais-ligue-1-france-956010"
           ],
@@ -947,7 +947,7 @@
         {
           "event_id": "ai-web:espn:football:eng.1:401878754",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643297+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663734+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/tottenham-ipswich-premier-league-england-955991"
           ],
@@ -984,7 +984,7 @@
         {
           "event_id": "ai-web:espn:football:ger.1:401884732",
           "bookmaker": "OddSeek displayed bookmaker prices",
-          "updated_at_utc": "2026-11-21T10:15:47.643310+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663742+00:00",
           "source_urls": [
             "https://oddseek.com/football/union-berlin-vs-rb-leipzig-13662137"
           ],
@@ -1021,7 +1021,7 @@
         {
           "event_id": "ai-web:espn:football:ned.1:401875541",
           "bookmaker": "1Win via Verdict Football",
-          "updated_at_utc": "2026-11-21T10:15:47.643324+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663749+00:00",
           "source_urls": [
             "https://verdict.football/predictions/netherlands/eredivisie/nec-nijmegen-vs-psv-eindhoven-2026-11-21/"
           ],
@@ -1058,7 +1058,7 @@
         {
           "event_id": "ai-web:espn:football:tur.1:401888244",
           "bookmaker": "OddSeek displayed bookmaker prices",
-          "updated_at_utc": "2026-11-21T10:15:47.643338+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663757+00:00",
           "source_urls": [
             "https://oddseek.com/pl/football/kocaelispor-vs-fenerbahce-13670561",
             "https://tipsterarea.com/match/kocaelispor-fenerbahce-super-lig-turkiye-956065"
@@ -1114,7 +1114,7 @@
         {
           "event_id": "ai-web:espn:football:fra.1:401876399",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643353+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663766+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/monaco-auxerre-ligue-1-france-956008"
           ],
@@ -1151,7 +1151,7 @@
         {
           "event_id": "ai-web:espn:football:ned.1:401875544",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643367+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663774+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/fc-utrecht-sc-cambuur-eredivisie-netherlands-956013"
           ],
@@ -1188,7 +1188,7 @@
         {
           "event_id": "ai-web:espn:football:ger.1:401884729",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643380+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663781+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/schalke-04-stuttgart-bundesliga-germany-956002"
           ],
@@ -1225,7 +1225,7 @@
         {
           "event_id": "ai-web:espn:football:esp.1:401882797",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643392+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663788+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/sevilla-real-betis-primera-division-spain-955995"
           ],
@@ -1262,7 +1262,7 @@
         {
           "event_id": "ai-web:espn:football:sco.1:401878333",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643405+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663795+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/motherwell-rangers-premiership-scotland-956075"
           ],
@@ -1299,7 +1299,7 @@
         {
           "event_id": "ai-web:espn:football:ger.1:401884734",
           "bookmaker": "1xBet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643419+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663803+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/eintracht-frankfurt-hoffenheim-bundesliga-germany-955999"
           ],
@@ -1336,7 +1336,7 @@
         {
           "event_id": "ai-web:espn:football:eng.1:401879238",
           "bookmaker": "SpinnerBet",
-          "updated_at_utc": "2026-11-21T10:15:47.643432+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663810+00:00",
           "source_urls": [
             "https://www.spinnerbet.com/en-en/sports/240/meetings/6323610/events/2843049248"
           ],
@@ -1373,7 +1373,7 @@
         {
           "event_id": "ai-web:espn:football:bra.1:401841322",
           "bookmaker": "1xbet via TipsterArea",
-          "updated_at_utc": "2026-11-21T10:15:47.643445+00:00",
+          "updated_at_utc": "2026-11-21T10:16:24.663817+00:00",
           "source_urls": [
             "https://tipsterarea.com/match/palmeiras-sp-flamengo-rj-serie-a-brazil-956101"
           ],
@@ -1427,6 +1427,117 @@
       ],
       "provider_events": [
         "ai-web:espn:football:bra.1:401841322"
+      ],
+      "bookmakers": [
+        "1xbet via TipsterArea"
+      ]
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878940",
+      "league": "bel.1",
+      "home": "Royal Charleroi SC",
+      "away": "Sint-Truidense",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "odds_offers": [
+        {
+          "event_id": "ai-web:espn:football:bel.1:401878940",
+          "bookmaker": "1xbet via TipsterArea",
+          "updated_at_utc": "2026-11-21T10:16:24.663827+00:00",
+          "source_urls": [
+            "https://tipsterarea.com/match/charleroi-saint-truiden-pro-league-belgium-956066"
+          ],
+          "markets": {
+            "1X2": {
+              "home": 2,
+              "draw": 3.9,
+              "away": 3.43
+            },
+            "3+": {
+              "over": 1.52
+            },
+            "BTTS": {
+              "yes": 1.46,
+              "no": 2.53
+            }
+          }
+        }
+      ],
+      "provider_events": [
+        "ai-web:espn:football:bel.1:401878940"
+      ],
+      "bookmakers": [
+        "1xbet via TipsterArea"
+      ]
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876396",
+      "league": "fra.1",
+      "home": "Strasbourg",
+      "away": "Brest",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "odds_offers": [
+        {
+          "event_id": "ai-web:espn:football:fra.1:401876396",
+          "bookmaker": "1xbet via TipsterArea",
+          "updated_at_utc": "2026-11-21T10:16:24.663836+00:00",
+          "source_urls": [
+            "https://tipsterarea.com/match/strasbourg-brest-ligue-1-france-956011"
+          ],
+          "markets": {
+            "1X2": {
+              "home": 2.29,
+              "draw": 3.86,
+              "away": 3.12
+            },
+            "3+": {
+              "over": 1.72
+            },
+            "BTTS": {
+              "yes": 1.54,
+              "no": 2.35
+            }
+          }
+        }
+      ],
+      "provider_events": [
+        "ai-web:espn:football:fra.1:401876396"
+      ],
+      "bookmakers": [
+        "1xbet via TipsterArea"
+      ]
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878935",
+      "league": "bel.1",
+      "home": "KV Mechelen",
+      "away": "Club Brugge",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "odds_offers": [
+        {
+          "event_id": "ai-web:espn:football:bel.1:401878935",
+          "bookmaker": "1xbet via TipsterArea",
+          "updated_at_utc": "2026-11-21T10:16:24.663844+00:00",
+          "source_urls": [
+            "https://tipsterarea.com/match/mechelen-club-brugge-pro-league-belgium-956068"
+          ],
+          "markets": {
+            "1X2": {
+              "home": 7.14,
+              "draw": 5.4,
+              "away": 1.39
+            },
+            "3+": {
+              "over": 1.38
+            },
+            "BTTS": {
+              "yes": 1.56,
+              "no": 2.28
+            }
+          }
+        }
+      ],
+      "provider_events": [
+        "ai-web:espn:football:bel.1:401878935"
       ],
       "bookmakers": [
         "1xbet via TipsterArea"
