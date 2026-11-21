@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "date": "2026-11-21",
-  "generated_at_utc": "2026-11-21T17:45:21.488465+00:00",
+  "generated_at_utc": "2026-11-21T17:47:18.340521+00:00",
   "source_feed_generated_at_utc": "2026-11-21T08:45:33.236183+00:00",
   "source_active_sha256": "0dd15dcbe2c2087d3b8578513c240847cfa73707fcd97dc94138b8d3026f5691",
-  "source_history_sha256": "f99f1a7bf5bddf1c532fef98cbb865f2a4ff60455d083613957c0c3afa845c3b",
+  "source_history_sha256": "59014eb983815605fc5fa8005597276f1931f7c01b6f0f9a2030439074101295",
   "model": "Poisson 6/6 + market-anchored adjusted probabilities + conservative EV + sample-quality index across six markets",
   "value_selection_enabled": true,
   "score_formula": "0.42*adjusted_probability_pct + 0.43*clamp(conservative_ev_pct,-25,30) + 0.15*data_quality_index_pct",
