@@ -52,6 +52,21 @@ class ScoutSixTests(unittest.TestCase):
         self.assertEqual(result["total_espn_fixtures"],100)
         self.assertEqual(result["total_market_probabilities"],600)
         self.assertEqual(len(result["ranked_fixtures"]),100)
+        handoff = result["detailed_ai_handoff"]
+        self.assertEqual(handoff["count"],10)
+        self.assertEqual(handoff["limit"],10)
+        self.assertTrue(handoff["math_recalculation_prohibited"])
+        self.assertEqual(len(result["detailed_ai_top_ten_fixture_ids"]),10)
+        self.assertEqual([r["fixture_id"] for r in handoff["candidates"]],
+                         result["detailed_ai_top_ten_fixture_ids"])
+        self.assertTrue(all("last_five_matches_per_team" in x["math_already_done"] and
+                            "expected_lineups" in x["ai_checks_still_required"]
+                            for x in handoff["candidates"]))
+        handed_off = set(result["detailed_ai_top_ten_fixture_ids"])
+        for proposed in ("A", "B"):
+            ticket = result["ticket_proposals"].get(proposed)
+            if ticket:
+                self.assertTrue(all(leg["fixture_id"] in handed_off for leg in ticket["matches"]))
         self.assertTrue(all(len(r["probability_pct"])==6 for r in result["ranked_fixtures"]))
         self.assertTrue(all(r["strongest_pct"]==max(r["probability_pct"].values()) for r in result["ranked_fixtures"]))
         self.assertFalse(result["publication_allowed"])
