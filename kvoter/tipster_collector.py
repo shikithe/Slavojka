@@ -103,10 +103,10 @@ def fetch_page(session, url):
     return BeautifulSoup(resp.text, "html.parser")
 
 def parse_daily(soup, day):
-    expected = f"{day.day} {MONTHS[day.month]} {day.year}".casefold()
-    title = soup.get_text(" ", strip=True)[:2000].casefold()
-    if expected not in title:
-        raise ValueError("TipsterArea daily page date mismatch, expected " + expected)
+    expected = rf"\b{day.day}\s+{MONTHS[day.month]},?\s+{day.year}\b"
+    title = soup.get_text(" ", strip=True)[:2000]
+    if not re.search(expected, title, re.IGNORECASE):
+        raise ValueError("TipsterArea daily page date mismatch, expected " + day.isoformat())
     matches = []
     seen = set()
     for a in soup.select('a[href*="/match/"]'):
