@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-21",
+  "feed_generated_at_utc": "2026-11-21T08:45:33.236183+00:00",
+  "source": "AI-reviewed publicly displayed odds from dated market comparison pages; prices may change",
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:eng.1:401879233",
+      "home": "Manchester City",
+      "away": "Fulham",
+      "league": "eng.1",
+      "start_utc": "2026-11-21T12:30:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://verdict.football/predictions/england/premier-league/manchester-city-vs-fulham-2026-11-21/"
+      ],
+      "bookmaker": "Verdict football market comparison",
+      "markets": {
+        "1X2": {
+          "home": 1.42,
+          "draw": 5.63,
+          "away": 7.6
+        },
+        "3+": {
+          "over": 1.43
+        },
+        "BTTS": {
+          "yes": 1.63,
+          "no": 2.32
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888245",
+      "home": "Galatasaray",
+      "away": "Samsunspor",
+      "league": "tur.1",
+      "start_utc": "2026-11-21T13:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://verdict.football/predictions/turkey/super-lig/galatasaray-vs-samsunspor-2026-11-21/"
+      ],
+      "bookmaker": "1Win via Verdict comparison",
+      "markets": {
+        "1X2": {
+          "home": 1.23,
+          "draw": 6.2,
+          "away": 10
+        },
+        "3+": {
+          "over": 1.35
+        },
+        "BTTS": {
+          "yes": 1.72,
+          "no": 2.03
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884735",
+      "home": "Bayer Leverkusen",
+      "away": "SC Paderborn 07",
+      "league": "ger.1",
+      "start_utc": "2026-11-21T14:30:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://oddsrun.com/match/football/de/123/12153829/germany-bundesliga-i/bayer-leverkusen-vs-paderborn/"
+      ],
+      "bookmaker": "Bet365 via OddsRun",
+      "markets": {
+        "1X2": {
+          "home": 1.27,
+          "draw": 7,
+          "away": 8
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878338",
+      "home": "Celtic",
+      "away": "St Mirren",
+      "league": "sco.1",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://verdict.football/predictions/scotland/premiership/celtic-vs-st-mirren-2026-11-21/"
+      ],
+      "bookmaker": "Verdict football market comparison",
+      "markets": {
+        "1X2": {
+          "home": 1.17,
+          "draw": 7.7,
+          "away": 15
+        },
+        "3+": {
+          "over": 1.26
+        },
+        "BTTS": {
+          "yes": 1.77,
+          "no": 2.01
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882798",
+      "home": "Real Madrid",
+      "away": "Celta Vigo",
+      "league": "esp.1",
+      "start_utc": "2026-11-21T20:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://www.sportytrader.com/en/odds/real-madrid-celta-vigo-8586542/"
+      ],
+      "bookmaker": "SportyTrader market comparison",
+      "markets": {
+        "1X2": {
+          "home": 1.21,
+          "draw": 8.5,
+          "away": 17.5
+        },
+        "3+": {
+          "over": 1.39
+        },
+        "BTTS": {
+          "yes": 1.96,
+          "no": 3.05
+        }
+      }
+    }
+  ]
+}
