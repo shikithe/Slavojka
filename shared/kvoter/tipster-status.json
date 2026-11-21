@@ -1,22 +1,15 @@
 {
   "date": "2026-11-21",
-  "generated_at_utc": "2026-11-21T10:30:17.342218+00:00",
+  "generated_at_utc": "2026-11-21T10:31:27.328272+00:00",
   "espn": 53,
-  "daily_tipster_links": 421,
-  "paired": 44,
-  "pages_checked": 15,
-  "updated": 15,
-  "with_any_quotes": 52,
+  "daily_tipster_links": 700,
+  "paired": 51,
+  "pages_checked": 5,
+  "updated": 5,
+  "with_any_quotes": 53,
   "unpaired": [
-    "Chelsea - Leeds United",
-    "Coventry City - Crystal Palace",
     "Tottenham Hotspur - Ipswich Town",
-    "Newcastle United - Arsenal",
-    "Palmeiras - Flamengo",
-    "Lille - Lyon",
-    "Telstar - PEC Zwolle",
-    "Bahia - Coritiba",
-    "Chapecoense - Cruzeiro"
+    "Inter Miami CF - Columbus Crew"
   ],
   "failures": []
 }

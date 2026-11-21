@@ -913,7 +913,8 @@
       "start_utc": "2026-11-21T15:00:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/coventry-crystal-palace-premier-league-england-955990"
       ],
       "bookmaker": "TipsterArea pre-match bookmaker average",
       "markets": {
@@ -921,6 +922,31 @@
           "home": 2.41,
           "draw": 3.64,
           "away": 2.84
+        },
+        "3+": {
+          "over": 1.77
+        },
+        "BTTS": {
+          "yes": 1.56,
+          "no": 2.3
+        }
+      },
+      "market_sources": {
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/coventry-crystal-palace-premier-league-england-955990",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/coventry-crystal-palace-premier-league-england-955990",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/coventry-crystal-palace-premier-league-england-955990",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -932,7 +958,8 @@
       "start_utc": "2026-11-21T17:30:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/newcastle-arsenal-premier-league-england-955992"
       ],
       "bookmaker": "TipsterArea pre-match bookmaker average",
       "markets": {
@@ -940,6 +967,31 @@
           "home": 5.54,
           "draw": 4.28,
           "away": 1.58
+        },
+        "3+": {
+          "over": 1.74
+        },
+        "BTTS": {
+          "yes": 1.73,
+          "no": 2.01
+        }
+      },
+      "market_sources": {
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/newcastle-arsenal-premier-league-england-955992",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/newcastle-arsenal-premier-league-england-955992",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/newcastle-arsenal-premier-league-england-955992",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1507,7 +1559,8 @@
       "start_utc": "2026-11-21T20:00:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/telstar-velsen-fc-zwolle-eredivisie-netherlands-956016"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1515,12 +1568,35 @@
           "home": 2.08,
           "draw": 3.63,
           "away": 3.39
+        },
+        "3+": {
+          "over": 1.7
+        },
+        "BTTS": {
+          "yes": 1.55,
+          "no": 2.3
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/telstar-velsen-fc-zwolle-eredivisie-netherlands-956016",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/telstar-velsen-fc-zwolle-eredivisie-netherlands-956016",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/telstar-velsen-fc-zwolle-eredivisie-netherlands-956016",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1581,7 +1657,8 @@
       "start_utc": "2026-11-21T20:30:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/bahia-ba-coritiba-pr-serie-a-brazil-956102"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1589,12 +1666,35 @@
           "home": 1.49,
           "draw": 4.54,
           "away": 6.02
+        },
+        "3+": {
+          "over": 1.57
+        },
+        "BTTS": {
+          "yes": 1.66,
+          "no": 2.09
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/bahia-ba-coritiba-pr-serie-a-brazil-956102",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/bahia-ba-coritiba-pr-serie-a-brazil-956102",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/bahia-ba-coritiba-pr-serie-a-brazil-956102",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1764,6 +1864,63 @@
           },
           "no": {
             "url": "https://tipsterarea.com/match/inter-miami-columbus-crew-playoff-usa-956442",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841325",
+      "league": "bra.1",
+      "home": "Chapecoense",
+      "away": "Cruzeiro",
+      "start_utc": "2026-11-22T00:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 6.34,
+          "draw": 4.85,
+          "away": 1.48
+        },
+        "3+": {
+          "over": 1.52
+        },
+        "BTTS": {
+          "yes": 1.63,
+          "no": 2.14
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/chapecoense-sc-cruzeiro-mg-serie-a-brazil-956453"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-cruzeiro-mg-serie-a-brazil-956453",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-cruzeiro-mg-serie-a-brazil-956453",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-cruzeiro-mg-serie-a-brazil-956453",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-cruzeiro-mg-serie-a-brazil-956453",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-cruzeiro-mg-serie-a-brazil-956453",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-cruzeiro-mg-serie-a-brazil-956453",
             "bookmaker": "1xbet"
           }
         }
