@@ -1,6 +1,10 @@
 name: ListaSix ESPN football collector only
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'shared/kvoter/ai-verified-*.json'
   schedule:
     - cron: '*/15 * * * *'
 permissions:
