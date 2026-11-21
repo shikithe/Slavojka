@@ -951,7 +951,8 @@
       "start_utc": "2026-11-21T17:15:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/genk-raal-la-louviere-pro-league-belgium-956067"
       ],
       "bookmaker": "TipsterArea pre-match bookmaker average",
       "markets": {
@@ -959,6 +960,31 @@
           "home": 1.44,
           "draw": 4.79,
           "away": 6.44
+        },
+        "3+": {
+          "over": 1.54
+        },
+        "BTTS": {
+          "yes": 1.68,
+          "no": 2.06
+        }
+      },
+      "market_sources": {
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/genk-raal-la-louviere-pro-league-belgium-956067",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/genk-raal-la-louviere-pro-league-belgium-956067",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/genk-raal-la-louviere-pro-league-belgium-956067",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -970,7 +996,8 @@
       "start_utc": "2026-11-21T19:45:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/zulte-waregem-royal-antwerp-pro-league-belgium-956069"
       ],
       "bookmaker": "TipsterArea pre-match bookmaker average",
       "markets": {
@@ -978,6 +1005,31 @@
           "home": 2.14,
           "draw": 3.6,
           "away": 3.21
+        },
+        "3+": {
+          "over": 1.72
+        },
+        "BTTS": {
+          "yes": 1.57,
+          "no": 2.26
+        }
+      },
+      "market_sources": {
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/zulte-waregem-royal-antwerp-pro-league-belgium-956069",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/zulte-waregem-royal-antwerp-pro-league-belgium-956069",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/zulte-waregem-royal-antwerp-pro-league-belgium-956069",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1014,7 +1066,8 @@
       "start_utc": "2026-11-21T13:00:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/deportivo-alaves-deportivo-la-coruna-primera-division-spain-955993"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1022,12 +1075,35 @@
           "home": 2.33,
           "draw": 3.32,
           "away": 3.24
+        },
+        "3+": {
+          "over": 2.25
+        },
+        "BTTS": {
+          "yes": 1.86,
+          "no": 1.86
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/deportivo-alaves-deportivo-la-coruna-primera-division-spain-955993",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/deportivo-alaves-deportivo-la-coruna-primera-division-spain-955993",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/deportivo-alaves-deportivo-la-coruna-primera-division-spain-955993",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1039,7 +1115,8 @@
       "start_utc": "2026-11-21T13:00:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/amed-sfk-caykur-rizespor-super-lig-turkiye-956063"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1047,12 +1124,35 @@
           "home": 1.72,
           "draw": 4.05,
           "away": 4.5
+        },
+        "3+": {
+          "over": 1.62
+        },
+        "BTTS": {
+          "yes": 1.56,
+          "no": 2.28
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/amed-sfk-caykur-rizespor-super-lig-turkiye-956063",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/amed-sfk-caykur-rizespor-super-lig-turkiye-956063",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/amed-sfk-caykur-rizespor-super-lig-turkiye-956063",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1064,7 +1164,8 @@
       "start_utc": "2026-11-21T14:30:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/elversberg-freiburg-bundesliga-germany-956000"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1072,12 +1173,35 @@
           "home": 3.46,
           "draw": 3.82,
           "away": 2.04
+        },
+        "3+": {
+          "over": 1.56
+        },
+        "BTTS": {
+          "yes": 1.49,
+          "no": 2.48
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/elversberg-freiburg-bundesliga-germany-956000",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/elversberg-freiburg-bundesliga-germany-956000",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/elversberg-freiburg-bundesliga-germany-956000",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1089,7 +1213,8 @@
       "start_utc": "2026-11-21T15:00:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/falkirk-saint-johnstone-premiership-scotland-956071"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1097,12 +1222,35 @@
           "home": 1.81,
           "draw": 3.68,
           "away": 4.02
+        },
+        "3+": {
+          "over": 1.72
+        },
+        "BTTS": {
+          "yes": 1.63,
+          "no": 2.14
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/falkirk-saint-johnstone-premiership-scotland-956071",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/falkirk-saint-johnstone-premiership-scotland-956071",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/falkirk-saint-johnstone-premiership-scotland-956071",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1114,7 +1262,8 @@
       "start_utc": "2026-11-21T15:00:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/hibernian-dundee-united-premiership-scotland-956072"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1122,12 +1271,35 @@
           "home": 1.93,
           "draw": 3.74,
           "away": 3.47
+        },
+        "3+": {
+          "over": 1.58
+        },
+        "BTTS": {
+          "yes": 1.52,
+          "no": 2.37
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/hibernian-dundee-united-premiership-scotland-956072",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/hibernian-dundee-united-premiership-scotland-956072",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/hibernian-dundee-united-premiership-scotland-956072",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1139,7 +1311,8 @@
       "start_utc": "2026-11-21T15:00:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/kilmarnock-aberdeen-premiership-scotland-956073"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1147,12 +1320,35 @@
           "home": 2.53,
           "draw": 3.48,
           "away": 2.56
+        },
+        "3+": {
+          "over": 1.66
+        },
+        "BTTS": {
+          "yes": 1.53,
+          "no": 2.35
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/kilmarnock-aberdeen-premiership-scotland-956073",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/kilmarnock-aberdeen-premiership-scotland-956073",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/kilmarnock-aberdeen-premiership-scotland-956073",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1164,7 +1360,8 @@
       "start_utc": "2026-11-21T17:45:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/dundee-fc-hearts-premiership-scotland-956074"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1172,12 +1369,35 @@
           "home": 3.31,
           "draw": 3.66,
           "away": 2.02
+        },
+        "3+": {
+          "over": 1.54
+        },
+        "BTTS": {
+          "yes": 1.51,
+          "no": 2.39
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/dundee-fc-hearts-premiership-scotland-956074",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/dundee-fc-hearts-premiership-scotland-956074",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/dundee-fc-hearts-premiership-scotland-956074",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1189,7 +1409,8 @@
       "start_utc": "2026-11-21T18:00:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/defensa-y-justicia-barracas-central-playoff-argentina-956104"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1197,12 +1418,35 @@
           "home": 2.11,
           "draw": 3.09,
           "away": 3.66
+        },
+        "3+": {
+          "over": 2.4
+        },
+        "BTTS": {
+          "yes": 2.05,
+          "no": 1.69
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/defensa-y-justicia-barracas-central-playoff-argentina-956104",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/defensa-y-justicia-barracas-central-playoff-argentina-956104",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/defensa-y-justicia-barracas-central-playoff-argentina-956104",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1214,7 +1458,8 @@
       "start_utc": "2026-11-21T20:00:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/fc-groningen-heerenveen-eredivisie-netherlands-956015"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1222,12 +1467,35 @@
           "home": 2.51,
           "draw": 3.81,
           "away": 2.57
+        },
+        "3+": {
+          "over": 1.4
+        },
+        "BTTS": {
+          "yes": 1.34,
+          "no": 2.99
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/fc-groningen-heerenveen-eredivisie-netherlands-956015",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/fc-groningen-heerenveen-eredivisie-netherlands-956015",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/fc-groningen-heerenveen-eredivisie-netherlands-956015",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1264,7 +1532,8 @@
       "start_utc": "2026-11-21T20:00:00Z",
       "sport": "football",
       "source_urls": [
-        "https://tipsterarea.com/matches/date-21-11-2026"
+        "https://tipsterarea.com/matches/date-21-11-2026",
+        "https://tipsterarea.com/match/argentinos-juniors-independiente-playoff-argentina-956105"
       ],
       "bookmaker": "TipsterArea published 1X2 odds",
       "markets": {
@@ -1272,12 +1541,35 @@
           "home": 1.95,
           "draw": 3.14,
           "away": 4.19
+        },
+        "3+": {
+          "over": 2.51
+        },
+        "BTTS": {
+          "yes": 2.18,
+          "no": 1.61
         }
       },
       "market_sources": {
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/argentinos-juniors-independiente-playoff-argentina-956105",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/argentinos-juniors-independiente-playoff-argentina-956105",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/argentinos-juniors-independiente-playoff-argentina-956105",
+            "bookmaker": "1xbet"
+          }
         }
       }
     },
@@ -1303,6 +1595,177 @@
         "1X2": {
           "url": "https://tipsterarea.com/matches/date-21-11-2026",
           "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933733",
+      "league": "usa.1",
+      "home": "New England Revolution",
+      "away": "Philadelphia Union",
+      "start_utc": "2026-11-21T19:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 3.15,
+          "draw": 3.65,
+          "away": 2.27
+        },
+        "3+": {
+          "over": 1.54
+        },
+        "BTTS": {
+          "yes": 1.45,
+          "no": 2.56
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/new-england-revolution-philadelphia-union-playoff-usa-956080"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/new-england-revolution-philadelphia-union-playoff-usa-956080",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/new-england-revolution-philadelphia-union-playoff-usa-956080",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/new-england-revolution-philadelphia-union-playoff-usa-956080",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/new-england-revolution-philadelphia-union-playoff-usa-956080",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/new-england-revolution-philadelphia-union-playoff-usa-956080",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/new-england-revolution-philadelphia-union-playoff-usa-956080",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933732",
+      "league": "usa.1",
+      "home": "FC Dallas",
+      "away": "Portland Timbers",
+      "start_utc": "2026-11-21T21:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.96,
+          "draw": 4.05,
+          "away": 3.65
+        },
+        "3+": {
+          "over": 1.45
+        },
+        "BTTS": {
+          "yes": 1.43,
+          "no": 2.63
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/fc-dallas-portland-timbers-playoff-usa-956081"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/fc-dallas-portland-timbers-playoff-usa-956081",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/fc-dallas-portland-timbers-playoff-usa-956081",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/fc-dallas-portland-timbers-playoff-usa-956081",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/fc-dallas-portland-timbers-playoff-usa-956081",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/fc-dallas-portland-timbers-playoff-usa-956081",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/fc-dallas-portland-timbers-playoff-usa-956081",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933739",
+      "league": "usa.1",
+      "home": "Inter Miami CF",
+      "away": "Columbus Crew",
+      "start_utc": "2026-11-21T23:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.62,
+          "draw": 4.85,
+          "away": 4.85
+        },
+        "3+": {
+          "over": 1.32
+        },
+        "BTTS": {
+          "yes": 1.4,
+          "no": 2.73
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/inter-miami-columbus-crew-playoff-usa-956442"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/inter-miami-columbus-crew-playoff-usa-956442",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/inter-miami-columbus-crew-playoff-usa-956442",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/inter-miami-columbus-crew-playoff-usa-956442",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/inter-miami-columbus-crew-playoff-usa-956442",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/inter-miami-columbus-crew-playoff-usa-956442",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/inter-miami-columbus-crew-playoff-usa-956442",
+            "bookmaker": "1xbet"
+          }
         }
       }
     }
