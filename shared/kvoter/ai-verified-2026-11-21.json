@@ -690,6 +690,32 @@
           "no": 2.45
         }
       }
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879238",
+      "home": "AFC Bournemouth",
+      "away": "Nottingham Forest",
+      "league": "eng.1",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://www.spinnerbet.com/en-en/sports/240/meetings/6323610/events/2843049248"
+      ],
+      "bookmaker": "SpinnerBet",
+      "markets": {
+        "1X2": {
+          "home": 1.9,
+          "draw": 3.6,
+          "away": 3.75
+        },
+        "3+": {
+          "over": 1.775
+        },
+        "BTTS": {
+          "yes": 1.666,
+          "no": 2.05
+        }
+      }
     }
   ]
 }
