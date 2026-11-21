@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'lista/scout_history.py'
+      - 'lista/notify_memarasix.py'
       - '.github/workflows/listasix-scout-history.yml'
   schedule:
     - cron: '5,25,45 8-11 * * *'
