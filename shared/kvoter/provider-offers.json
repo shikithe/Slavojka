@@ -137,6 +137,441 @@
           "no": 1.79
         }
       }
+    },
+    {
+      "league": "eng.1",
+      "home": "Manchester City",
+      "away": "Fulham",
+      "start_utc": "2026-11-21T12:30:00Z",
+      "event_id": "ai-web:espn:football:eng.1:401879233",
+      "bookmaker": "Verdict football market comparison",
+      "updated_at_utc": "2026-11-21T09:28:35.746953+00:00",
+      "source_urls": [
+        "https://verdict.football/predictions/england/premier-league/manchester-city-vs-fulham-2026-11-21/"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.42,
+          "draw": 5.63,
+          "away": 7.6
+        },
+        "3+": {
+          "over": 1.43
+        },
+        "BTTS": {
+          "yes": 1.63,
+          "no": 2.32
+        }
+      }
+    },
+    {
+      "league": "tur.1",
+      "home": "Galatasaray",
+      "away": "Samsunspor",
+      "start_utc": "2026-11-21T13:00:00Z",
+      "event_id": "ai-web:espn:football:tur.1:401888245",
+      "bookmaker": "1Win via Verdict comparison",
+      "updated_at_utc": "2026-11-21T09:28:35.747001+00:00",
+      "source_urls": [
+        "https://verdict.football/predictions/turkey/super-lig/galatasaray-vs-samsunspor-2026-11-21/"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.23,
+          "draw": 6.2,
+          "away": 10
+        },
+        "3+": {
+          "over": 1.35
+        },
+        "BTTS": {
+          "yes": 1.72,
+          "no": 2.03
+        }
+      }
+    },
+    {
+      "league": "ger.1",
+      "home": "Bayer Leverkusen",
+      "away": "SC Paderborn 07",
+      "start_utc": "2026-11-21T14:30:00Z",
+      "event_id": "ai-web:espn:football:ger.1:401884735",
+      "bookmaker": "Bet365 via OddsRun",
+      "updated_at_utc": "2026-11-21T09:28:35.747019+00:00",
+      "source_urls": [
+        "https://oddsrun.com/match/football/de/123/12153829/germany-bundesliga-i/bayer-leverkusen-vs-paderborn/"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.27,
+          "draw": 7,
+          "away": 8
+        }
+      }
+    },
+    {
+      "league": "sco.1",
+      "home": "Celtic",
+      "away": "St Mirren",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "event_id": "ai-web:espn:football:sco.1:401878338",
+      "bookmaker": "Verdict football market comparison",
+      "updated_at_utc": "2026-11-21T09:28:35.747054+00:00",
+      "source_urls": [
+        "https://verdict.football/predictions/scotland/premiership/celtic-vs-st-mirren-2026-11-21/"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.17,
+          "draw": 7.7,
+          "away": 15
+        },
+        "3+": {
+          "over": 1.26
+        },
+        "BTTS": {
+          "yes": 1.77,
+          "no": 2.01
+        }
+      }
+    },
+    {
+      "league": "esp.1",
+      "home": "Real Madrid",
+      "away": "Celta Vigo",
+      "start_utc": "2026-11-21T20:00:00Z",
+      "event_id": "ai-web:espn:football:esp.1:401882798",
+      "bookmaker": "SportyTrader market comparison",
+      "updated_at_utc": "2026-11-21T09:28:35.747073+00:00",
+      "source_urls": [
+        "https://www.sportytrader.com/en/odds/real-madrid-celta-vigo-8586542/"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.21,
+          "draw": 8.5,
+          "away": 17.5
+        },
+        "3+": {
+          "over": 1.39
+        },
+        "BTTS": {
+          "yes": 1.96,
+          "no": 3.05
+        }
+      }
+    },
+    {
+      "league": "eng.1",
+      "home": "Chelsea",
+      "away": "Leeds United",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "event_id": "ai-web:espn:football:eng.1:401879236",
+      "bookmaker": "1xBet via TipsterArea",
+      "updated_at_utc": "2026-11-21T09:28:35.747089+00:00",
+      "source_urls": [
+        "https://tipsterarea.com/match/chelsea-leeds-premier-league-england-955989"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.99,
+          "draw": 3.86,
+          "away": 3.93
+        },
+        "3+": {
+          "over": 1.89
+        },
+        "BTTS": {
+          "yes": 1.69,
+          "no": 2.07
+        }
+      }
+    },
+    {
+      "league": "fra.1",
+      "home": "Lens",
+      "away": "Toulouse",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "event_id": "ai-web:espn:football:fra.1:401876403",
+      "bookmaker": "1xBet via TipsterArea",
+      "updated_at_utc": "2026-11-21T09:28:35.747103+00:00",
+      "source_urls": [
+        "https://tipsterarea.com/match/lens-toulouse-ligue-1-france-956009"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 2.09,
+          "draw": 3.95,
+          "away": 3.54
+        },
+        "3+": {
+          "over": 1.71
+        },
+        "BTTS": {
+          "yes": 1.55,
+          "no": 2.32
+        }
+      }
+    },
+    {
+      "league": "ned.1",
+      "home": "Feyenoord Rotterdam",
+      "away": "Excelsior",
+      "start_utc": "2026-11-21T17:45:00Z",
+      "event_id": "ai-web:espn:football:ned.1:401875543",
+      "bookmaker": "SportyTrader published bookmaker offers",
+      "updated_at_utc": "2026-11-21T09:28:35.747119+00:00",
+      "source_urls": [
+        "https://www.sportytrader.com/en/odds/feyenoord-excelsior-8533169/"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.2,
+          "draw": 10.5,
+          "away": 18
+        },
+        "3+": {
+          "over": 1.33
+        },
+        "BTTS": {
+          "yes": 1.83,
+          "no": 1.95
+        }
+      }
+    },
+    {
+      "league": "fra.1",
+      "home": "Nice",
+      "away": "Paris Saint-Germain",
+      "start_utc": "2026-11-21T16:15:00Z",
+      "event_id": "ai-web:espn:football:fra.1:401876398",
+      "bookmaker": "SportyTrader published bookmaker offers",
+      "updated_at_utc": "2026-11-21T09:28:35.747132+00:00",
+      "source_urls": [
+        "https://www.sportytrader.com/en/odds/nice-psg-8532726/"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 6.32,
+          "draw": 5.24,
+          "away": 1.5
+        },
+        "3+": {
+          "over": 1.39
+        },
+        "BTTS": {
+          "yes": 1.51,
+          "no": 2.52
+        }
+      }
+    },
+    {
+      "league": "eng.1",
+      "home": "Aston Villa",
+      "away": "Sunderland",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "event_id": "ai-web:espn:football:eng.1:401878756",
+      "bookmaker": "SportyTrader published bookmaker offers",
+      "updated_at_utc": "2026-11-21T09:28:35.747147+00:00",
+      "source_urls": [
+        "https://www.sportytrader.com/en/odds/aston-villa-sunderland-8558913/"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.8,
+          "draw": 4.16,
+          "away": 4.57
+        },
+        "3+": {
+          "over": 1.93
+        },
+        "BTTS": {
+          "yes": 1.7,
+          "no": 2.18
+        }
+      }
+    },
+    {
+      "league": "ita.1",
+      "home": "Como",
+      "away": "Cagliari",
+      "start_utc": "2026-11-21T14:00:00Z",
+      "event_id": "ai-web:espn:football:ita.1:401875056",
+      "bookmaker": "1xBet via TipsterArea",
+      "updated_at_utc": "2026-11-21T09:28:35.747159+00:00",
+      "source_urls": [
+        "https://tipsterarea.com/match/como-cagliari-serie-a-italy-956003"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.31,
+          "draw": 6.2,
+          "away": 10.7
+        },
+        "3+": {
+          "over": 1.53
+        },
+        "BTTS": {
+          "yes": 1.87,
+          "no": 1.85
+        }
+      }
+    },
+    {
+      "league": "ita.1",
+      "home": "Lazio",
+      "away": "Lecce",
+      "start_utc": "2026-11-21T14:00:00Z",
+      "event_id": "ai-web:espn:football:ita.1:401874981",
+      "bookmaker": "1xBet via TipsterArea",
+      "updated_at_utc": "2026-11-21T09:28:35.747174+00:00",
+      "source_urls": [
+        "https://tipsterarea.com/match/lazio-lecce-serie-a-italy-956004"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.45,
+          "draw": 5.1,
+          "away": 7.6
+        },
+        "3+": {
+          "over": 1.67
+        },
+        "BTTS": {
+          "yes": 1.79,
+          "no": 1.94
+        }
+      }
+    },
+    {
+      "league": "ita.1",
+      "home": "Napoli",
+      "away": "Torino",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "event_id": "ai-web:espn:football:ita.1:401875067",
+      "bookmaker": "1xBet via TipsterArea",
+      "updated_at_utc": "2026-11-21T09:28:35.747187+00:00",
+      "source_urls": [
+        "https://tipsterarea.com/match/napoli-torino-serie-a-italy-956006"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.53,
+          "draw": 4.73,
+          "away": 6.76
+        },
+        "3+": {
+          "over": 1.77
+        },
+        "BTTS": {
+          "yes": 1.82,
+          "no": 1.9
+        }
+      }
+    },
+    {
+      "league": "ita.1",
+      "home": "Parma",
+      "away": "AS Roma",
+      "start_utc": "2026-11-21T17:00:00Z",
+      "event_id": "ai-web:espn:football:ita.1:401874967",
+      "bookmaker": "1xBet via TipsterArea",
+      "updated_at_utc": "2026-11-21T09:28:35.747200+00:00",
+      "source_urls": [
+        "https://tipsterarea.com/match/parma-roma-serie-a-italy-956005"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 11.3,
+          "draw": 6.39,
+          "away": 1.3
+        },
+        "3+": {
+          "over": 1.5
+        },
+        "BTTS": {
+          "yes": 1.87,
+          "no": 1.85
+        }
+      }
+    },
+    {
+      "league": "ger.1",
+      "home": "Borussia Mönchengladbach",
+      "away": "Borussia Dortmund",
+      "start_utc": "2026-11-21T14:30:00Z",
+      "event_id": "ai-web:espn:football:ger.1:401884731",
+      "bookmaker": "1xBet via TipsterArea",
+      "updated_at_utc": "2026-11-21T09:28:35.747218+00:00",
+      "source_urls": [
+        "https://tipsterarea.com/match/borussia-m-gladbach-borussia-dortmund-bundesliga-germany-955998"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 5.18,
+          "draw": 4.73,
+          "away": 1.64
+        },
+        "3+": {
+          "over": 1.47
+        },
+        "BTTS": {
+          "yes": 1.51,
+          "no": 2.42
+        }
+      }
+    },
+    {
+      "league": "esp.1",
+      "home": "Rayo Vallecano",
+      "away": "Valencia",
+      "start_utc": "2026-11-21T15:15:00Z",
+      "event_id": "ai-web:espn:football:esp.1:401882799",
+      "bookmaker": "1xBet via TipsterArea",
+      "updated_at_utc": "2026-11-21T09:28:35.747230+00:00",
+      "source_urls": [
+        "https://tipsterarea.com/match/rayo-vallecano-valencia-primera-division-spain-955994"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.97,
+          "draw": 3.7,
+          "away": 4.21
+        },
+        "3+": {
+          "over": 2.07
+        },
+        "BTTS": {
+          "yes": 1.83,
+          "no": 1.89
+        }
+      }
+    },
+    {
+      "league": "fra.1",
+      "home": "Lille",
+      "away": "Lyon",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "event_id": "ai-web:espn:football:fra.1:401876402",
+      "bookmaker": "1xBet via TipsterArea",
+      "updated_at_utc": "2026-11-21T09:28:35.747242+00:00",
+      "source_urls": [
+        "https://tipsterarea.com/match/lille-lyonnais-ligue-1-france-956010"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 2.32,
+          "draw": 3.57,
+          "away": 3.29
+        },
+        "3+": {
+          "over": 2.1
+        },
+        "BTTS": {
+          "yes": 1.77,
+          "no": 1.96
+        }
+      }
     }
   ]
 }
