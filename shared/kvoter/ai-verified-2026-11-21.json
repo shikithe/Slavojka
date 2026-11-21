@@ -534,6 +534,162 @@
           "away": 1.6
         }
       }
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876399",
+      "home": "AS Monaco",
+      "away": "AJ Auxerre",
+      "league": "fra.1",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/monaco-auxerre-ligue-1-france-956008"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.46,
+          "draw": 5.18,
+          "away": 7.29
+        },
+        "3+": {
+          "over": 1.52
+        },
+        "BTTS": {
+          "yes": 1.67,
+          "no": 2.11
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875544",
+      "home": "FC Utrecht",
+      "away": "SC Cambuur",
+      "league": "ned.1",
+      "start_utc": "2026-11-21T17:45:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/fc-utrecht-sc-cambuur-eredivisie-netherlands-956013"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.91,
+          "draw": 4.05,
+          "away": 3.69
+        },
+        "3+": {
+          "over": 1.43
+        },
+        "BTTS": {
+          "yes": 1.4,
+          "no": 2.73
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884729",
+      "home": "Schalke 04",
+      "away": "VfB Stuttgart",
+      "league": "ger.1",
+      "start_utc": "2026-11-21T17:30:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/schalke-04-stuttgart-bundesliga-germany-956002"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 4.22,
+          "draw": 4.32,
+          "away": 1.83
+        },
+        "3+": {
+          "over": 1.46
+        },
+        "BTTS": {
+          "yes": 1.45,
+          "no": 2.59
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882797",
+      "home": "Sevilla",
+      "away": "Real Betis",
+      "league": "esp.1",
+      "start_utc": "2026-11-21T17:30:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/sevilla-real-betis-primera-division-spain-955995"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 3.07,
+          "draw": 3.58,
+          "away": 2.44
+        },
+        "3+": {
+          "over": 1.9
+        },
+        "BTTS": {
+          "yes": 1.63,
+          "no": 2.17
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878333",
+      "home": "Motherwell",
+      "away": "Rangers",
+      "league": "sco.1",
+      "start_utc": "2026-11-21T20:00:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/motherwell-rangers-premiership-scotland-956075"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 5.11,
+          "draw": 4.35,
+          "away": 1.55
+        },
+        "3+": {
+          "over": 1.48
+        },
+        "BTTS": {
+          "yes": 1.59,
+          "no": 2.21
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884734",
+      "home": "Eintracht Frankfurt",
+      "away": "TSG Hoffenheim",
+      "league": "ger.1",
+      "start_utc": "2026-11-21T14:30:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/eintracht-frankfurt-hoffenheim-bundesliga-germany-955999"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 2.45,
+          "draw": 4.31,
+          "away": 2.66
+        },
+        "3+": {
+          "over": 1.34
+        },
+        "BTTS": {
+          "yes": 1.49,
+          "no": 2.45
+        }
+      }
     }
   ]
 }
