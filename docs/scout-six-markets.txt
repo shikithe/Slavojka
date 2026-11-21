@@ -3,46 +3,46 @@ PROBABILITY MODEL (NOT BACKTEST-CALIBRATED). No ticket is auto-published.
 Number of matches: 53; probability estimates: 318
 RANK | FIXTURE | 1 | X | 2 | 3+ | GG | NG | TOP | RUNNER-UP | ODDS | STATUS
 1 | FC Groningen - Heerenveen | 32.6% | 19.3% | 48.1% | 81.6% | 78.7% | 21.3% | 3+ 81.6% | GG 78.7% | 1.40 | A/B
-2 | Royal Charleroi SC - Sint-Truidense | 48.6% | 19.8% | 31.6% | 78.7% | 76.2% | 23.8% | 3+ 78.7% | GG 76.2% | 1.52 | A/B
+2 | Royal Charleroi SC - Sint-Truidense | 48.6% | 19.8% | 31.6% | 78.7% | 76.2% | 23.8% | 3+ 78.7% | GG 76.2% | 1.52 | OUT
 3 | Zulte-Waregem - Antwerp | 36.6% | 21.3% | 42.1% | 73.0% | 72.1% | 27.9% | 3+ 73.0% | GG 72.1% | 1.72 | A/B
 4 | Telstar - PEC Zwolle | 38.5% | 21.6% | 39.9% | 71.4% | 71.0% | 29.0% | 3+ 71.4% | GG 71.0% | 1.70 | A/B
-5 | FC Utrecht - SC Cambuur | 31.0% | 20.0% | 49.0% | 77.3% | 74.9% | 25.1% | 3+ 77.3% | GG 74.9% | 1.43 | A/B
+5 | FC Utrecht - SC Cambuur | 31.0% | 20.0% | 49.0% | 77.3% | 74.9% | 25.1% | 3+ 77.3% | GG 74.9% | 1.43 | OUT
 6 | Real Madrid - Celta Vigo | 61.2% | 23.5% | 15.3% | 43.4% | 41.6% | 58.4% | 1 61.2% | NG 58.4% | 1.21 | OUT
-7 | Coventry City - Crystal Palace | 57.6% | 21.5% | 20.9% | 60.0% | 58.1% | 41.9% | 3+ 60.0% | GG 58.1% | 1.77 | A
-8 | Dundee - Heart of Midlothian | 50.2% | 20.6% | 29.2% | 73.1% | 71.2% | 28.8% | 3+ 73.1% | GG 71.2% | 1.54 | A/B
+7 | Coventry City - Crystal Palace | 57.6% | 21.5% | 20.9% | 60.0% | 58.1% | 41.9% | 3+ 60.0% | GG 58.1% | 1.77 | OUT
+8 | Dundee - Heart of Midlothian | 50.2% | 20.6% | 29.2% | 73.1% | 71.2% | 28.8% | 3+ 73.1% | GG 71.2% | 1.54 | OUT
 9 | KV Mechelen - Club Brugge | 37.8% | 21.7% | 40.5% | 71.1% | 70.7% | 29.3% | 3+ 71.1% | GG 70.7% | 1.38 | A
-10 | Parma - AS Roma | 24.8% | 21.1% | 54.1% | 66.8% | 65.0% | 35.0% | 3+ 66.8% | GG 65.0% | 1.50 | A
+10 | Parma - AS Roma | 24.8% | 21.1% | 54.1% | 66.8% | 65.0% | 35.0% | 3+ 66.8% | GG 65.0% | 1.50 | OUT
 11 | NEC Nijmegen - PSV Eindhoven | 28.7% | 20.3% | 51.0% | 74.3% | 72.0% | 28.0% | 3+ 74.3% | GG 72.0% | 1.29 | OUT
 12 | Galatasaray - Samsunspor | 63.1% | 18.2% | 18.7% | 72.8% | 66.7% | 33.3% | 3+ 72.8% | GG 66.7% | 1.35 | OUT
-13 | Newcastle United - Arsenal | 25.8% | 29.8% | 44.4% | 33.4% | 39.7% | 60.3% | NG 60.3% | 2 44.4% | 2.01 | A
+13 | Newcastle United - Arsenal | 25.8% | 29.8% | 44.4% | 33.4% | 39.7% | 60.3% | NG 60.3% | 2 44.4% | 2.01 | OUT
 14 | Inter Miami CF - Columbus Crew | 31.3% | 21.2% | 47.5% | 71.3% | 70.2% | 29.8% | 3+ 71.3% | GG 70.2% | 1.32 | OUT
 15 | Feyenoord Rotterdam - Excelsior | 62.7% | 18.4% | 18.9% | 72.0% | 66.2% | 33.8% | 3+ 72.0% | GG 66.2% | 1.33 | OUT
-16 | SV Elversberg - SC Freiburg | 43.1% | 22.5% | 34.4% | 66.3% | 66.8% | 33.2% | GG 66.8% | 3+ 66.3% | 1.49 | A/B
-17 | Nice - Paris Saint-Germain | 36.8% | 22.5% | 40.7% | 66.7% | 67.3% | 32.7% | GG 67.3% | 3+ 66.7% | 1.51 | A
+16 | SV Elversberg - SC Freiburg | 43.1% | 22.5% | 34.4% | 66.3% | 66.8% | 33.2% | GG 66.8% | 3+ 66.3% | 1.49 | OUT
+17 | Nice - Paris Saint-Germain | 36.8% | 22.5% | 40.7% | 66.7% | 67.3% | 32.7% | GG 67.3% | 3+ 66.7% | 1.51 | OUT
 18 | Genclerbirligi - Gaziantep FK | 54.1% | 22.7% | 23.2% | 57.3% | 57.1% | 42.9% | 3+ 57.3% | GG 57.1% | - | OUT
-19 | Chelsea - Leeds United | 50.8% | 27.0% | 22.2% | 39.7% | 43.4% | 56.6% | NG 56.6% | 1 50.8% | 2.07 | A
+19 | Chelsea - Leeds United | 50.8% | 27.0% | 22.2% | 39.7% | 43.4% | 56.6% | NG 56.6% | 1 50.8% | 2.07 | OUT
 20 | Palmeiras - Flamengo | 40.3% | 23.2% | 36.5% | 63.1% | 64.5% | 35.5% | GG 64.5% | 3+ 63.1% | 1.67 | A/B
-21 | Lazio - Lecce | 54.3% | 21.7% | 24.0% | 63.3% | 62.1% | 37.9% | 3+ 63.3% | GG 62.1% | 1.67 | A
+21 | Lazio - Lecce | 54.3% | 21.7% | 24.0% | 63.3% | 62.1% | 37.9% | 3+ 63.3% | GG 62.1% | 1.67 | OUT
 22 | Strasbourg - Brest | 32.1% | 23.1% | 44.8% | 62.5% | 63.6% | 36.4% | GG 63.6% | 3+ 62.5% | 1.54 | A/B
 23 | Napoli - Torino | 39.2% | 24.0% | 36.8% | 59.2% | 61.5% | 38.5% | GG 61.5% | 3+ 59.2% | 1.82 | A
-24 | Amed SFK - Caykur Rizespor | 52.8% | 21.6% | 25.6% | 65.0% | 63.9% | 36.1% | 3+ 65.0% | GG 63.9% | 1.62 | A/B
-25 | Falkirk - St Johnstone | 61.2% | 20.2% | 18.6% | 62.5% | 58.6% | 41.4% | 3+ 62.5% | 1 61.2% | 1.72 | A/B
-26 | Bayer Leverkusen - SC Paderborn 07 | 40.6% | 23.6% | 35.8% | 60.8% | 62.7% | 37.3% | GG 62.7% | 3+ 60.8% | 1.67 | A
+24 | Amed SFK - Caykur Rizespor | 52.8% | 21.6% | 25.6% | 65.0% | 63.9% | 36.1% | 3+ 65.0% | GG 63.9% | 1.62 | OUT
+25 | Falkirk - St Johnstone | 61.2% | 20.2% | 18.6% | 62.5% | 58.6% | 41.4% | 3+ 62.5% | 1 61.2% | 1.72 | OUT
+26 | Bayer Leverkusen - SC Paderborn 07 | 40.6% | 23.6% | 35.8% | 60.8% | 62.7% | 37.3% | GG 62.7% | 3+ 60.8% | 1.67 | OUT
 27 | 1. FC Union Berlin - RB Leipzig | 33.2% | 23.8% | 43.0% | 59.5% | 61.5% | 38.5% | GG 61.5% | 3+ 59.5% | 1.62 | OUT
 28 | Lille - Lyon | 50.9% | 26.5% | 22.6% | 41.5% | 45.0% | 55.0% | NG 55.0% | 1 50.9% | 1.96 | OUT
 29 | AS Monaco - AJ Auxerre | 48.0% | 23.2% | 28.8% | 59.9% | 61.0% | 39.0% | GG 61.0% | 3+ 59.9% | 1.67 | A
 30 | Defensa y Justicia - Barracas Central | 31.0% | 28.6% | 40.4% | 39.0% | 45.2% | 54.8% | NG 54.8% | GG 45.2% | 1.69 | OUT
 31 | Argentinos Juniors - Independiente | 34.9% | 31.5% | 33.6% | 30.4% | 38.3% | 61.7% | NG 61.7% | GG 38.3% | 1.61 | OUT
-32 | Kilmarnock - Aberdeen | 45.5% | 23.2% | 31.3% | 61.6% | 62.8% | 37.2% | GG 62.8% | 3+ 61.6% | 1.53 | A/B
-33 | Racing Genk - RAAL La Louvière | 55.8% | 21.5% | 22.7% | 62.7% | 61.1% | 38.9% | 3+ 62.7% | GG 61.1% | 1.54 | A
+32 | Kilmarnock - Aberdeen | 45.5% | 23.2% | 31.3% | 61.6% | 62.8% | 37.2% | GG 62.8% | 3+ 61.6% | 1.53 | OUT
+33 | Racing Genk - RAAL La Louvière | 55.8% | 21.5% | 22.7% | 62.7% | 61.1% | 38.9% | 3+ 62.7% | GG 61.1% | 1.54 | OUT
 34 | Manchester City - Fulham | 37.3% | 26.9% | 35.8% | 46.0% | 51.2% | 48.8% | GG 51.2% | NG 48.8% | 1.63 | OUT
 35 | Borussia Mönchengladbach - Borussia Dortmund | 36.1% | 25.8% | 38.1% | 50.9% | 55.0% | 45.0% | GG 55.0% | 3+ 50.9% | 1.51 | OUT
 36 | FC Dallas - Portland Timbers | 36.9% | 23.9% | 39.2% | 59.5% | 61.8% | 38.2% | GG 61.8% | 3+ 59.5% | 1.43 | OUT
 37 | Motherwell - Rangers | 30.3% | 24.0% | 45.7% | 57.2% | 59.3% | 40.7% | GG 59.3% | 3+ 57.2% | 1.59 | OUT
 38 | Kocaelispor - Fenerbahce | 27.5% | 24.0% | 48.5% | 55.3% | 57.2% | 42.8% | GG 57.2% | 3+ 55.3% | 1.72 | OUT
 39 | Eintracht Frankfurt - TSG Hoffenheim | 41.1% | 24.2% | 34.7% | 57.9% | 60.4% | 39.6% | GG 60.4% | 3+ 57.9% | 1.49 | OUT
-40 | AFC Bournemouth - Nottingham Forest | 54.2% | 24.0% | 21.8% | 50.4% | 51.3% | 48.7% | 1 54.2% | GG 51.3% | 1.90 | A
-41 | Como - Cagliari | 55.8% | 22.7% | 21.5% | 55.5% | 55.0% | 45.0% | 1 55.8% | 3+ 55.5% | 1.31 | A
+40 | AFC Bournemouth - Nottingham Forest | 54.2% | 24.0% | 21.8% | 50.4% | 51.3% | 48.7% | 1 54.2% | GG 51.3% | 1.90 | OUT
+41 | Como - Cagliari | 55.8% | 22.7% | 21.5% | 55.5% | 55.0% | 45.0% | 1 55.8% | 3+ 55.5% | 1.31 | OUT
 42 | Bahia - Coritiba | 39.1% | 27.8% | 33.1% | 42.2% | 48.1% | 51.9% | NG 51.9% | GG 48.1% | 2.09 | OUT
 43 | Schalke 04 - VfB Stuttgart | 29.6% | 25.6% | 44.8% | 49.7% | 53.5% | 46.5% | GG 53.5% | 3+ 49.7% | 1.45 | OUT
 44 | Hibernian - Dundee United | 40.7% | 24.6% | 34.7% | 55.9% | 58.9% | 41.1% | GG 58.9% | 3+ 55.9% | 1.52 | OUT
@@ -52,52 +52,52 @@ RANK | FIXTURE | 1 | X | 2 | 3+ | GG | NG | TOP | RUNNER-UP | ODDS | STATUS
 48 | Lens - Toulouse | 39.4% | 25.4% | 35.2% | 52.5% | 56.3% | 43.7% | GG 56.3% | 3+ 52.5% | 1.55 | OUT
 49 | New England Revolution - Philadelphia Union | 40.0% | 26.0% | 34.0% | 49.7% | 54.0% | 46.0% | GG 54.0% | 3+ 49.7% | 1.45 | OUT
 50 | Tottenham Hotspur - Ipswich Town | 51.3% | 23.9% | 24.8% | 53.5% | 54.9% | 45.1% | GG 54.9% | 3+ 53.5% | 1.66 | OUT
-51 | Aston Villa - Sunderland | 51.4% | 24.2% | 24.4% | 52.0% | 53.6% | 46.4% | GG 53.6% | 3+ 52.0% | 1.70 | A/B
+51 | Aston Villa - Sunderland | 51.4% | 24.2% | 24.4% | 52.0% | 53.6% | 46.4% | GG 53.6% | 3+ 52.0% | 1.70 | OUT
 52 | Sevilla - Real Betis | 33.3% | 25.2% | 41.5% | 52.8% | 56.4% | 43.6% | GG 56.4% | 3+ 52.8% | 1.63 | OUT
 53 | Chapecoense - Cruzeiro | 23.7% | 23.9% | 52.4% | 52.6% | 53.8% | 46.2% | GG 53.8% | 3+ 52.6% | 1.63 | OUT
 
 PRICE/EV RANKING | match | pick | raw p% | conservative p% | evidence /100 | conservative EV% | score | odds | eligible
 1 | FC Groningen - Heerenveen | 3+ | 81.6% | 76.9% | 54.2 | +7.7% | 43.76 | 1.40 | YES
-2 | Royal Charleroi SC - Sint-Truidense | 3+ | 78.7% | 72.7% | 53.8 | +10.6% | 43.17 | 1.52 | YES
+2 | Royal Charleroi SC - Sint-Truidense | 3+ | 78.7% | 72.7% | 53.8 | +10.6% | 43.17 | 1.52 | NO
 3 | Zulte-Waregem - Antwerp | 3+ | 73.0% | 66.5% | 56.1 | +14.3% | 42.50 | 1.72 | YES
 4 | Telstar - PEC Zwolle | 3+ | 71.4% | 66.3% | 59.3 | +12.7% | 42.19 | 1.70 | YES
-5 | FC Utrecht - SC Cambuur | 3+ | 77.3% | 74.1% | 56.4 | +6.0% | 42.14 | 1.43 | YES
+5 | FC Utrecht - SC Cambuur | 3+ | 77.3% | 74.1% | 56.4 | +6.0% | 42.14 | 1.43 | NO
 6 | Real Madrid - Celta Vigo | NG | 58.4% | 47.3% | 56.6 | +44.2% | 41.25 | 3.05 | NO
-7 | Coventry City - Crystal Palace | 1 | 57.6% | 51.3% | 60.8 | +23.6% | 40.82 | 2.41 | YES
-8 | Dundee - Heart of Midlothian | 3+ | 73.1% | 69.5% | 55.4 | +7.0% | 40.49 | 1.54 | YES
+7 | Coventry City - Crystal Palace | 1 | 57.6% | 51.3% | 60.8 | +23.6% | 40.82 | 2.41 | NO
+8 | Dundee - Heart of Midlothian | 3+ | 73.1% | 69.5% | 55.4 | +7.0% | 40.49 | 1.54 | NO
 9 | KV Mechelen - Club Brugge | GG | 70.7% | 67.8% | 55.6 | +5.7% | 39.27 | 1.56 | YES
-10 | Parma - AS Roma | GG | 65.0% | 60.1% | 57.1 | +12.3% | 39.08 | 1.87 | YES
+10 | Parma - AS Roma | GG | 65.0% | 60.1% | 57.1 | +12.3% | 39.08 | 1.87 | NO
 11 | NEC Nijmegen - PSV Eindhoven | 3+ | 74.3% | 75.8% | 54.1 | -2.2% | 38.97 | 1.29 | NO
 12 | Galatasaray - Samsunspor | 3+ | 72.8% | 73.4% | 55.1 | -0.9% | 38.67 | 1.35 | NO
-13 | Newcastle United - Arsenal | NG | 60.3% | 56.0% | 59.2 | +12.6% | 37.80 | 2.01 | YES
+13 | Newcastle United - Arsenal | NG | 60.3% | 56.0% | 59.2 | +12.6% | 37.80 | 2.01 | NO
 14 | Inter Miami CF - Columbus Crew | 3+ | 71.3% | 73.3% | 55.5 | -3.3% | 37.70 | 1.32 | NO
 15 | Feyenoord Rotterdam - Excelsior | 3+ | 72.0% | 73.7% | 47.2 | -2.0% | 37.16 | 1.33 | NO
-16 | SV Elversberg - SC Freiburg | 3+ | 66.3% | 65.4% | 57.4 | +2.0% | 36.91 | 1.56 | YES
-17 | Nice - Paris Saint-Germain | GG | 67.3% | 66.8% | 55.2 | +0.9% | 36.73 | 1.51 | YES
+16 | SV Elversberg - SC Freiburg | 3+ | 66.3% | 65.4% | 57.4 | +2.0% | 36.91 | 1.56 | NO
+17 | Nice - Paris Saint-Germain | GG | 67.3% | 66.8% | 55.2 | +0.9% | 36.73 | 1.51 | NO
 18 | Genclerbirligi - Gaziantep FK | 1 | 54.1% | 49.3% | 59.4 | +16.4% | 36.71 | 2.36 | NO
-19 | Chelsea - Leeds United | NG | 56.6% | 53.5% | 62.2 | +10.7% | 36.37 | 2.07 | YES
+19 | Chelsea - Leeds United | NG | 56.6% | 53.5% | 62.2 | +10.7% | 36.37 | 2.07 | NO
 20 | Palmeiras - Flamengo | 3+ | 63.1% | 59.5% | 53.5 | +7.6% | 36.26 | 1.81 | YES
-21 | Lazio - Lecce | GG | 62.1% | 59.4% | 55.9 | +6.2% | 35.99 | 1.79 | YES
+21 | Lazio - Lecce | GG | 62.1% | 59.4% | 55.9 | +6.2% | 35.99 | 1.79 | NO
 22 | Strasbourg - Brest | 3+ | 62.5% | 60.6% | 57.2 | +4.3% | 35.90 | 1.72 | YES
 23 | Napoli - Torino | GG | 61.5% | 58.6% | 55.2 | +6.6% | 35.70 | 1.82 | YES
-24 | Amed SFK - Caykur Rizespor | 3+ | 65.0% | 63.4% | 51.8 | +2.7% | 35.58 | 1.62 | YES
-25 | Falkirk - St Johnstone | 3+ | 62.5% | 60.6% | 55.4 | +4.2% | 35.54 | 1.72 | YES
-26 | Bayer Leverkusen - SC Paderborn 07 | GG | 62.7% | 61.5% | 56.5 | +2.7% | 35.43 | 1.67 | YES
+24 | Amed SFK - Caykur Rizespor | 3+ | 65.0% | 63.4% | 51.8 | +2.7% | 35.58 | 1.62 | NO
+25 | Falkirk - St Johnstone | 3+ | 62.5% | 60.6% | 55.4 | +4.2% | 35.54 | 1.72 | NO
+26 | Bayer Leverkusen - SC Paderborn 07 | GG | 62.7% | 61.5% | 56.5 | +2.7% | 35.43 | 1.67 | NO
 27 | 1. FC Union Berlin - RB Leipzig | GG | 61.5% | 61.6% | 59.4 | -0.2% | 34.69 | 1.62 | NO
 28 | Lille - Lyon | 1 | 50.9% | 48.1% | 63.5 | +11.5% | 34.65 | 2.32 | NO
 29 | AS Monaco - AJ Auxerre | GG | 61.0% | 60.5% | 58.2 | +1.1% | 34.62 | 1.67 | YES
 30 | Defensa y Justicia - Barracas Central | 2 | 40.4% | 34.7% | 56.2 | +26.9% | 34.56 | 3.66 | NO
 31 | Argentinos Juniors - Independiente | NG | 61.7% | 61.9% | 57.9 | -0.4% | 34.50 | 1.61 | NO
-32 | Kilmarnock - Aberdeen | 3+ | 61.6% | 61.0% | 53.6 | +1.2% | 34.16 | 1.66 | YES
-33 | Racing Genk - RAAL La Louvière | GG | 61.1% | 60.4% | 54.4 | +1.4% | 34.14 | 1.68 | YES
+32 | Kilmarnock - Aberdeen | 3+ | 61.6% | 61.0% | 53.6 | +1.2% | 34.16 | 1.66 | NO
+33 | Racing Genk - RAAL La Louvière | GG | 61.1% | 60.4% | 54.4 | +1.4% | 34.14 | 1.68 | NO
 34 | Manchester City - Fulham | 2 | 35.8% | 27.1% | 61.6 | +106.0% | 33.53 | 7.60 | NO
 35 | Borussia Mönchengladbach - Borussia Dortmund | 1 | 36.1% | 28.8% | 56.6 | +49.2% | 33.49 | 5.18 | NO
 36 | FC Dallas - Portland Timbers | 2 | 39.2% | 34.1% | 56.8 | +24.5% | 33.36 | 3.65 | NO
 37 | Motherwell - Rangers | GG | 59.3% | 60.8% | 59.1 | -3.4% | 32.93 | 1.59 | NO
 38 | Kocaelispor - Fenerbahce | GG | 57.2% | 57.6% | 59.9 | -1.0% | 32.75 | 1.72 | NO
 39 | Eintracht Frankfurt - TSG Hoffenheim | GG | 60.4% | 63.3% | 57.2 | -5.7% | 32.69 | 1.49 | NO
-40 | AFC Bournemouth - Nottingham Forest | 1 | 54.2% | 53.6% | 60.6 | +1.8% | 32.37 | 1.90 | YES
-41 | Como - Cagliari | GG | 55.0% | 54.4% | 57.8 | +1.6% | 32.20 | 1.87 | YES
+40 | AFC Bournemouth - Nottingham Forest | 1 | 54.2% | 53.6% | 60.6 | +1.8% | 32.37 | 1.90 | NO
+41 | Como - Cagliari | GG | 55.0% | 54.4% | 57.8 | +1.6% | 32.20 | 1.87 | NO
 42 | Bahia - Coritiba | 2 | 33.1% | 25.8% | 55.4 | +55.0% | 32.03 | 6.02 | NO
 43 | Schalke 04 - VfB Stuttgart | NG | 46.5% | 43.2% | 58.3 | +11.9% | 32.02 | 2.59 | NO
 44 | Hibernian - Dundee United | GG | 58.9% | 61.9% | 56.7 | -5.9% | 31.95 | 1.52 | NO
@@ -107,22 +107,20 @@ PRICE/EV RANKING | match | pick | raw p% | conservative p% | evidence /100 | con
 48 | Lens - Toulouse | GG | 56.3% | 59.5% | 61.6 | -7.8% | 30.84 | 1.55 | NO
 49 | New England Revolution - Philadelphia Union | NG | 46.0% | 42.9% | 55.9 | +9.9% | 30.68 | 2.56 | NO
 50 | Tottenham Hotspur - Ipswich Town | GG | 54.9% | 57.0% | 59.9 | -5.3% | 30.66 | 1.66 | NO
-51 | Aston Villa - Sunderland | 3+ | 52.0% | 51.9% | 57.3 | +0.2% | 30.49 | 1.93 | YES
+51 | Aston Villa - Sunderland | 3+ | 52.0% | 51.9% | 57.3 | +0.2% | 30.49 | 1.93 | NO
 52 | Sevilla - Real Betis | GG | 56.4% | 58.9% | 49.6 | -4.0% | 30.45 | 1.63 | NO
 53 | Chapecoense - Cruzeiro | GG | 53.8% | 57.0% | 56.9 | -7.0% | 29.49 | 1.63 | NO
 
-DETAILED AI SCOUT: TOP 10 ONLY (mathematical form, goals, home/away, league averages ALREADY DONE)
+DETAILED AI SCOUT: TOP 8 ONLY (mathematical form, goals, home/away, league averages ALREADY DONE)
 1. FC Groningen - Heerenveen | VALUE PICK 3+ 81.6% | conservative p 76.9% | EV +7.7% | evidence 54.2/100 | score 43.76 | odds 1.40 | Independent AI review pending
-2. Royal Charleroi SC - Sint-Truidense | VALUE PICK 3+ 78.7% | conservative p 72.7% | EV +10.6% | evidence 53.8/100 | score 43.17 | odds 1.52 | Independent AI review pending
-3. Zulte-Waregem - Antwerp | VALUE PICK 3+ 73.0% | conservative p 66.5% | EV +14.3% | evidence 56.1/100 | score 42.50 | odds 1.72 | Independent AI review pending
-4. Telstar - PEC Zwolle | VALUE PICK 3+ 71.4% | conservative p 66.3% | EV +12.7% | evidence 59.3/100 | score 42.19 | odds 1.70 | Independent AI review pending
-5. FC Utrecht - SC Cambuur | VALUE PICK 3+ 77.3% | conservative p 74.1% | EV +6.0% | evidence 56.4/100 | score 42.14 | odds 1.43 | Independent AI review pending
-6. Coventry City - Crystal Palace | VALUE PICK 1 57.6% | conservative p 51.3% | EV +23.6% | evidence 60.8/100 | score 40.82 | odds 2.41 | Independent AI review pending
-7. Dundee - Heart of Midlothian | VALUE PICK 3+ 73.1% | conservative p 69.5% | EV +7.0% | evidence 55.4/100 | score 40.49 | odds 1.54 | Independent AI review pending
-8. KV Mechelen - Club Brugge | VALUE PICK GG 70.7% | conservative p 67.8% | EV +5.7% | evidence 55.6/100 | score 39.27 | odds 1.56 | Independent AI review pending
-9. Parma - AS Roma | VALUE PICK GG 65.0% | conservative p 60.1% | EV +12.3% | evidence 57.1/100 | score 39.08 | odds 1.87 | Independent AI review pending
-10. Newcastle United - Arsenal | VALUE PICK NG 60.3% | conservative p 56.0% | EV +12.6% | evidence 59.2/100 | score 37.80 | odds 2.01 | Independent AI review pending
+2. Zulte-Waregem - Antwerp | VALUE PICK 3+ 73.0% | conservative p 66.5% | EV +14.3% | evidence 56.1/100 | score 42.50 | odds 1.72 | Independent AI review pending
+3. Telstar - PEC Zwolle | VALUE PICK 3+ 71.4% | conservative p 66.3% | EV +12.7% | evidence 59.3/100 | score 42.19 | odds 1.70 | Independent AI review pending
+4. KV Mechelen - Club Brugge | VALUE PICK GG 70.7% | conservative p 67.8% | EV +5.7% | evidence 55.6/100 | score 39.27 | odds 1.56 | Independent AI review pending
+5. Palmeiras - Flamengo | VALUE PICK 3+ 63.1% | conservative p 59.5% | EV +7.6% | evidence 53.5/100 | score 36.26 | odds 1.81 | Independent AI review pending
+6. Strasbourg - Brest | VALUE PICK 3+ 62.5% | conservative p 60.6% | EV +4.3% | evidence 57.2/100 | score 35.90 | odds 1.72 | Independent AI review pending
+7. Napoli - Torino | VALUE PICK GG 61.5% | conservative p 58.6% | EV +6.6% | evidence 55.2/100 | score 35.70 | odds 1.82 | Independent AI review pending
+8. AS Monaco - AJ Auxerre | VALUE PICK GG 61.0% | conservative p 60.5% | EV +1.1% | evidence 58.2/100 | score 34.62 | odds 1.67 | Independent AI review pending
 
-A PROPOSAL (UNAPPROVED) 2.13: FC Groningen - Heerenveen [3+ 1.40, p=81.6%]; Royal Charleroi SC - Sint-Truidense [3+ 1.52, p=78.7%]
+A PROPOSAL (UNAPPROVED) 2.18: FC Groningen - Heerenveen [3+ 1.40, p=81.6%]; KV Mechelen - Club Brugge [GG 1.56, p=70.7%]
 B PROPOSAL (UNAPPROVED) 2.92: Zulte-Waregem - Antwerp [3+ 1.72, p=73.0%]; Telstar - PEC Zwolle [3+ 1.70, p=71.4%]
 Statistical proposals only. Independent Scout must verify and explicitly approve.
