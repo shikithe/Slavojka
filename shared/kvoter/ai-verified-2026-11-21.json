@@ -63,7 +63,8 @@
       "start_utc": "2026-11-21T14:30:00Z",
       "sport": "football",
       "source_urls": [
-        "https://oddsrun.com/match/football/de/123/12153829/germany-bundesliga-i/bayer-leverkusen-vs-paderborn/"
+        "https://oddsrun.com/match/football/de/123/12153829/germany-bundesliga-i/bayer-leverkusen-vs-paderborn/",
+        "https://tipsterarea.com/match/bayer-leverkusen-paderborn-bundesliga-germany-955997"
       ],
       "bookmaker": "Bet365 via OddsRun",
       "markets": {
@@ -71,6 +72,31 @@
           "home": 1.27,
           "draw": 7,
           "away": 8
+        },
+        "3+": {
+          "over": 1.35
+        },
+        "BTTS": {
+          "yes": 1.67,
+          "no": 2.08
+        }
+      },
+      "market_sources": {
+        "3+": {
+          "over": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/bayer-leverkusen-paderborn-bundesliga-germany-955997"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/bayer-leverkusen-paderborn-bundesliga-germany-955997"
+          },
+          "no": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/bayer-leverkusen-paderborn-bundesliga-germany-955997"
+          }
         }
       }
     },
@@ -524,7 +550,8 @@
       "start_utc": "2026-11-21T16:00:00Z",
       "sport": "football",
       "source_urls": [
-        "https://oddseek.com/pl/football/kocaelispor-vs-fenerbahce-13670561"
+        "https://oddseek.com/pl/football/kocaelispor-vs-fenerbahce-13670561",
+        "https://tipsterarea.com/match/kocaelispor-fenerbahce-super-lig-turkiye-956065"
       ],
       "bookmaker": "OddSeek displayed bookmaker prices",
       "markets": {
@@ -532,6 +559,31 @@
           "home": 6.2,
           "draw": 4.45,
           "away": 1.6
+        },
+        "3+": {
+          "over": 1.73
+        },
+        "BTTS": {
+          "yes": 1.72,
+          "no": 2.01
+        }
+      },
+      "market_sources": {
+        "3+": {
+          "over": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/kocaelispor-fenerbahce-super-lig-turkiye-956065"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/kocaelispor-fenerbahce-super-lig-turkiye-956065"
+          },
+          "no": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/kocaelispor-fenerbahce-super-lig-turkiye-956065"
+          }
         }
       }
     },
@@ -714,6 +766,64 @@
         "BTTS": {
           "yes": 1.666,
           "no": 2.05
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841322",
+      "home": "Palmeiras",
+      "away": "Flamengo",
+      "league": "bra.1",
+      "start_utc": "2026-11-21T19:30:00Z",
+      "sport": "football",
+      "markets": {
+        "1X2": {
+          "home": 4.09,
+          "draw": 3.74,
+          "away": 1.89
+        },
+        "3+": {
+          "over": 1.81
+        },
+        "BTTS": {
+          "yes": 1.67,
+          "no": 2.08
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/palmeiras-sp-flamengo-rj-serie-a-brazil-956101"
+      ],
+      "bookmaker": "1xbet via TipsterArea",
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/palmeiras-sp-flamengo-rj-serie-a-brazil-956101"
+          },
+          "draw": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/palmeiras-sp-flamengo-rj-serie-a-brazil-956101"
+          },
+          "away": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/palmeiras-sp-flamengo-rj-serie-a-brazil-956101"
+          }
+        },
+        "3+": {
+          "over": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/palmeiras-sp-flamengo-rj-serie-a-brazil-956101"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/palmeiras-sp-flamengo-rj-serie-a-brazil-956101"
+          },
+          "no": {
+            "bookmaker": "1xbet",
+            "url": "https://tipsterarea.com/match/palmeiras-sp-flamengo-rj-serie-a-brazil-956101"
+          }
         }
       }
     }
