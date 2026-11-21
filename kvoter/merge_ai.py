@@ -52,11 +52,26 @@ def main():
                 valid[option]=value
             if valid:markets[name]=valid
         if not markets:continue
-        offer={"event_id":"ai-web:"+fid,"bookmaker":item.get("bookmaker","public-web"),
-               "updated_at_utc":datetime.now(timezone.utc).isoformat(),
-               "source_urls":item["source_urls"],"markets":markets}
         row=found.get(fid) or {k:f[k] for k in ("fixture_id","league","home","away","start_utc")}
         old=row.get("odds_offers",[])
+        # A snapshot may have only one market. Preserve already found prices
+        # for the same match and fill missing columns from subsequent sources.
+        prior=next((o for o in old if o.get("event_id")=="ai-web:"+fid),{})
+        combined={k:dict(v) for k,v in prior.get("markets",{}).items()}
+        for name,values in markets.items():
+            target=combined.setdefault(name,{})
+            for outcome,price in values.items():
+                target.setdefault(outcome,price)
+        source_urls=list(dict.fromkeys(prior.get("source_urls",[])+item["source_urls"]))
+        offer={"event_id":"ai-web:"+fid,
+               "bookmaker":prior.get("bookmaker") or item.get("bookmaker") or "AI public web offers",
+               "updated_at_utc":datetime.now(timezone.utc).isoformat(),
+               "source_urls":source_urls,
+               "markets":combined}
+        # Preserve optional per-market source information for traceability.
+        old_sources=dict(prior.get("market_sources",{}))
+        old_sources.update({k:v for k,v in item.get("market_sources",{}).items() if k not in old_sources})
+        if old_sources: offer["market_sources"]=old_sources
         row["odds_offers"]=[offer]+[o for o in old if not str(o.get("event_id","")).startswith("ai-web:")]
         row["provider_events"]=list(dict.fromkeys([offer["event_id"]]+row.get("provider_events",[])))
         row["bookmakers"]=list(dict.fromkeys([offer["bookmaker"]]+row.get("bookmakers",[])))
