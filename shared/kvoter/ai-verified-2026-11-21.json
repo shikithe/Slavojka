@@ -255,6 +255,188 @@
           "no": 2.18
         }
       }
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401875056",
+      "home": "Como",
+      "away": "Cagliari",
+      "league": "ita.1",
+      "start_utc": "2026-11-21T14:00:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/como-cagliari-serie-a-italy-956003"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.31,
+          "draw": 6.2,
+          "away": 10.7
+        },
+        "3+": {
+          "over": 1.53
+        },
+        "BTTS": {
+          "yes": 1.87,
+          "no": 1.85
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401874981",
+      "home": "Lazio",
+      "away": "Lecce",
+      "league": "ita.1",
+      "start_utc": "2026-11-21T14:00:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/lazio-lecce-serie-a-italy-956004"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.45,
+          "draw": 5.1,
+          "away": 7.6
+        },
+        "3+": {
+          "over": 1.67
+        },
+        "BTTS": {
+          "yes": 1.79,
+          "no": 1.94
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401875067",
+      "home": "Napoli",
+      "away": "Torino",
+      "league": "ita.1",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/napoli-torino-serie-a-italy-956006"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.53,
+          "draw": 4.73,
+          "away": 6.76
+        },
+        "3+": {
+          "over": 1.77
+        },
+        "BTTS": {
+          "yes": 1.82,
+          "no": 1.9
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401874967",
+      "home": "Parma",
+      "away": "AS Roma",
+      "league": "ita.1",
+      "start_utc": "2026-11-21T17:00:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/parma-roma-serie-a-italy-956005"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 11.3,
+          "draw": 6.39,
+          "away": 1.3
+        },
+        "3+": {
+          "over": 1.5
+        },
+        "BTTS": {
+          "yes": 1.87,
+          "no": 1.85
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884731",
+      "home": "Borussia Mönchengladbach",
+      "away": "Borussia Dortmund",
+      "league": "ger.1",
+      "start_utc": "2026-11-21T14:30:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/borussia-m-gladbach-borussia-dortmund-bundesliga-germany-955998"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 5.18,
+          "draw": 4.73,
+          "away": 1.64
+        },
+        "3+": {
+          "over": 1.47
+        },
+        "BTTS": {
+          "yes": 1.51,
+          "no": 2.42
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882799",
+      "home": "Rayo Vallecano",
+      "away": "Valencia",
+      "league": "esp.1",
+      "start_utc": "2026-11-21T15:15:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/rayo-vallecano-valencia-primera-division-spain-955994"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 1.97,
+          "draw": 3.7,
+          "away": 4.21
+        },
+        "3+": {
+          "over": 2.07
+        },
+        "BTTS": {
+          "yes": 1.83,
+          "no": 1.89
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876402",
+      "home": "Lille",
+      "away": "Lyon",
+      "league": "fra.1",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "sport": "football",
+      "bookmaker": "1xBet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/lille-lyonnais-ligue-1-france-956010"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 2.32,
+          "draw": 3.57,
+          "away": 3.29
+        },
+        "3+": {
+          "over": 2.1
+        },
+        "BTTS": {
+          "yes": 1.77,
+          "no": 1.96
+        }
+      }
     }
   ]
 }
