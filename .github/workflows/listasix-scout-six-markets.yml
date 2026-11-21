@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'lista/scout_six_markets.py'
+      - 'lista/scout_value.py'
       - 'tests/test_scout_six_markets.py'
       - '.github/workflows/listasix-scout-six-markets.yml'
   schedule:
