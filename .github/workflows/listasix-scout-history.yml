@@ -1,0 +1,50 @@
+name: ListaSix ESPN Scout last-five results - daily handoff
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'lista/scout_history.py'
+      - '.github/workflows/listasix-scout-history.yml'
+  schedule:
+    - cron: '5,25,45 8-11 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: listasix-espn-history
+  cancel-in-progress: false
+jobs:
+  collect-form:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Collect real ESPN scoreboards for daily match history
+        run: python3 -m lista.scout_history
+      - name: Commit current ESPN form
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f -- shared/agent/history-h2h.json
+          if ! git diff --cached --quiet; then
+            git commit -m "ListaSix ESPN current last-five scout history [skip ci]"
+            for attempt in 1 2 3 4; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then break; fi
+              if [ "$attempt" = 4 ]; then exit 1; fi
+              sleep 2
+            done
+          fi
+      - name: Signal MemaraSix after results and AI prices are ready
+        env:
+          MEMARASIX_DISPATCH_TOKEN: ${{ secrets.MEMARASIX_DISPATCH_TOKEN }}
+        run: |
+          git pull --ff-only origin main
+          python3 -m lista.notify_memarasix
