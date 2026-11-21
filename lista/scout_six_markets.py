@@ -35,6 +35,7 @@ MODELED_MAX_GOALS = 16
 MAX_LEGS = 3
 MAX_CANDIDATES_PER_POOL = 36
 MAX_COMBOS_PER_POOL = 130
+DETAILED_SCOUT_LIMIT = 10
 
 def clamp(number, low, high):
     return min(high, max(low, float(number)))
@@ -219,6 +220,52 @@ def format_combo(combo, tid):
         } for r in combo["rows"]]
     }
 
+def detailed_ai_handoff(rows):
+    """Top 10 still eligible fixtures, with existing math evidence reusable as-is.
+
+    These are the only matches for detailed AI investigation, not 10 new math
+    calculations. Independent analyst owns all remaining nonmathematical checks.
+    """
+    selected = [r for r in rows if r["candidate_A"]][:DETAILED_SCOUT_LIMIT]
+    items = []
+    for rank, r in enumerate(selected, 1):
+        items.append({
+            "rank": rank, "fixture_id": r["fixture_id"],
+            "match": r["match"], "datetime": r["datetime"],
+            "top_market": r["strongest_market"],
+            "top_probability_pct": r["strongest_pct"],
+            "second_market": r["second_market"],
+            "second_probability_pct": r["second_pct"],
+            "top_market_odds": r["strongest_odds"],
+            "eligible_for_A": True, "eligible_for_B": r["candidate_B"],
+            "all_six_probabilities_pct": r["probability_pct"],
+            "math_already_done": {
+                "last_five_matches_per_team": {
+                    "home": r["evidence"]["home_last_matches"],
+                    "away": r["evidence"]["away_last_matches"]},
+                "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+                "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+                "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+                "modeled_goals": r["estimated_goals"],
+                "poisson_probabilities": r["probability_pct"]
+            },
+            "ai_checks_still_required": [
+                "actual_xg_xga_if_available", "injuries_and_suspensions",
+                "expected_lineups", "recent_h2h_up_to_five",
+                "table_and_motivation", "rest_days_and_schedule",
+                "odds_identity_and_source"
+            ],
+            "ai_review_status": "pending_independent_review"
+        })
+    return {
+        "limit": DETAILED_SCOUT_LIMIT,
+        "selection_rule": "Only eligible future fixtures, sorted by highest TOP model probability; ties by second and then third best; never select a weaker market",
+        "count": len(items),
+        "math_recalculation_prohibited": True,
+        "independent_ai_review_required": True,
+        "candidates": items
+    }
+
 def analyze(feed, active, history, now):
     if feed.get("date") != active.get("date") or feed.get("date") != history.get("date"):
         raise ValueError("ESPN feed, Tipster quotes and last-five form must be SAME date")
@@ -236,7 +283,10 @@ def analyze(feed, active, history, now):
             raise ValueError("ESPN team or kickoff discrepancy for "+fid)
         records.append(evaluate_fixture(display_row,history,now))
     records.sort(key=ranking)
-    possible = suggestions(records)
+    handoff = detailed_ai_handoff(records)
+    selected_ids = {x["fixture_id"] for x in handoff["candidates"]}
+    # Every proposed A/B leg must be among the exact 10 forwarded to Detailed AI.
+    possible = suggestions([r for r in records if r["fixture_id"] in selected_ids])
     return {
         "schema_version":1,"date":feed["date"],
         "generated_at_utc":now.isoformat(),"source_feed_generated_at_utc":feed.get("generated_at_utc"),
@@ -252,6 +302,8 @@ def analyze(feed, active, history, now):
         "candidate_A_count":sum(x["candidate_A"] for x in records),
         "candidate_B_count":sum(x["candidate_B"] for x in records),
         "ranked_fixtures":records,
+        "detailed_ai_handoff":handoff,
+        "detailed_ai_top_ten_fixture_ids":[x["fixture_id"] for x in handoff["candidates"]],
         "ticket_proposals":possible,
         "publication_allowed":False
     }
@@ -268,6 +320,14 @@ def render_text(doc):
         ps=" | ".join(f'{r["probability_pct"][m]:.1f}%' for m in MARKETS)
         stat="A/B" if r["candidate_B"] else ("A" if r["candidate_A"] else "OUT")
         out.append(f'{n} | {r["match"]} | {ps} | {r["strongest_market"]} {r["strongest_pct"]:.1f}% | {r["second_market"]} {r["second_pct"]:.1f}% | {odds} | {stat}')
+    out.append("")
+    out.append("DETAILED AI SCOUT: TOP " + str(doc["detailed_ai_handoff"]["count"]) +
+               " ONLY (mathematical form, goals, home/away, league averages ALREADY DONE)")
+    for item in doc["detailed_ai_handoff"]["candidates"]:
+        out.append(f'{item["rank"]}. {item["match"]} | TOP {item["top_market"]} '
+                   f'{item["top_probability_pct"]:.1f}% | runner-up {item["second_market"]} '
+                   f'{item["second_probability_pct"]:.1f}% | odds {item["top_market_odds"]:.2f} '
+                   '| Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check')
     out.append("")
     for tid in ("A","B"):
         t=doc["ticket_proposals"][tid]
