@@ -1,6 +1,54 @@
 Br. | Datum/sat | Utakmica | 1 | X | 2 | 3+ | GG | NG
-1 | 2026-11-20T19:30:00Z | Bayern Munich - FC Cologne | 1.07 | 13 | 19 | 1.16 | 1.83 | 1.89
-2 | 2026-11-20T19:45:00Z | Troyes - Le Havre AC | 2.2 | 3.7 | 3.46 | 1.94 | 1.68 | 2.08
-3 | 2026-11-20T19:45:00Z | Cercle Brugge KSV - KVC Westerlo | 2.07 | 3.92 | 3.25 | 1.47 | 1.41 | 2.69
-4 | 2026-11-20T20:00:00Z | Athletic Club - Espanyol | 1.54 | 4.52 | 7.01 | 1.92 | 1.94 | 1.79
-5 | 2026-11-20T23:00:00Z | Vélez Sarsfield - Belgrano (Córdoba) | 2.23 | 3.22 | 3.41 | 2.27 | 1.92 | 1.79
+1 | 2026-11-21T10:30:00Z | Genclerbirligi - Gaziantep FK | - | - | - | - | - | -
+2 | 2026-11-21T12:30:00Z | Manchester City - Fulham | 1.42 | 5.63 | 7.6 | 1.43 | 1.63 | 2.32
+3 | 2026-11-21T13:00:00Z | Alavés - Deportivo | - | - | - | - | - | -
+4 | 2026-11-21T13:00:00Z | Amed SFK - Caykur Rizespor | - | - | - | - | - | -
+5 | 2026-11-21T13:00:00Z | Galatasaray - Samsunspor | 1.23 | 6.2 | 10 | 1.35 | 1.72 | 2.03
+6 | 2026-11-21T14:00:00Z | Como - Cagliari | - | - | - | - | - | -
+7 | 2026-11-21T14:00:00Z | Lazio - Lecce | - | - | - | - | - | -
+8 | 2026-11-21T14:30:00Z | 1. FC Union Berlin - RB Leipzig | - | - | - | - | - | -
+9 | 2026-11-21T14:30:00Z | Bayer Leverkusen - SC Paderborn 07 | 1.27 | 7 | 8 | - | - | -
+10 | 2026-11-21T14:30:00Z | Borussia Mönchengladbach - Borussia Dortmund | - | - | - | - | - | -
+11 | 2026-11-21T14:30:00Z | Eintracht Frankfurt - TSG Hoffenheim | - | - | - | - | - | -
+12 | 2026-11-21T14:30:00Z | SV Elversberg - SC Freiburg | - | - | - | - | - | -
+13 | 2026-11-21T15:00:00Z | AFC Bournemouth - Nottingham Forest | - | - | - | - | - | -
+14 | 2026-11-21T15:00:00Z | Aston Villa - Sunderland | 1.8 | 4.16 | 4.57 | 1.93 | 1.7 | 2.18
+15 | 2026-11-21T15:00:00Z | Celtic - St Mirren | 1.17 | 7.7 | 15 | 1.26 | 1.77 | 2.01
+16 | 2026-11-21T15:00:00Z | Chelsea - Leeds United | 1.99 | 3.86 | 3.93 | 1.89 | 1.69 | 2.07
+17 | 2026-11-21T15:00:00Z | Coventry City - Crystal Palace | - | - | - | - | - | -
+18 | 2026-11-21T15:00:00Z | Falkirk - St Johnstone | - | - | - | - | - | -
+19 | 2026-11-21T15:00:00Z | Hibernian - Dundee United | - | - | - | - | - | -
+20 | 2026-11-21T15:00:00Z | Kilmarnock - Aberdeen | - | - | - | - | - | -
+21 | 2026-11-21T15:00:00Z | Royal Charleroi SC - Sint-Truidense | - | - | - | - | - | -
+22 | 2026-11-21T15:00:00Z | Tottenham Hotspur - Ipswich Town | - | - | - | - | - | -
+23 | 2026-11-21T15:15:00Z | Rayo Vallecano - Valencia | - | - | - | - | - | -
+24 | 2026-11-21T15:30:00Z | NEC Nijmegen - PSV Eindhoven | - | - | - | - | - | -
+25 | 2026-11-21T16:00:00Z | Kocaelispor - Fenerbahce | - | - | - | - | - | -
+26 | 2026-11-21T16:15:00Z | Nice - Paris Saint-Germain | 6.32 | 5.24 | 1.5 | 1.39 | 1.51 | 2.52
+27 | 2026-11-21T17:00:00Z | Parma - AS Roma | - | - | - | - | - | -
+28 | 2026-11-21T17:15:00Z | Racing Genk - RAAL La Louvière | - | - | - | - | - | -
+29 | 2026-11-21T17:30:00Z | Newcastle United - Arsenal | - | - | - | - | - | -
+30 | 2026-11-21T17:30:00Z | Schalke 04 - VfB Stuttgart | - | - | - | - | - | -
+31 | 2026-11-21T17:30:00Z | Sevilla - Real Betis | - | - | - | - | - | -
+32 | 2026-11-21T17:45:00Z | Dundee - Heart of Midlothian | - | - | - | - | - | -
+33 | 2026-11-21T17:45:00Z | FC Utrecht - SC Cambuur | - | - | - | - | - | -
+34 | 2026-11-21T17:45:00Z | Feyenoord Rotterdam - Excelsior | 1.2 | 10.5 | 18 | 1.33 | 1.83 | 1.95
+35 | 2026-11-21T18:00:00Z | Defensa y Justicia - Barracas Central | - | - | - | - | - | -
+36 | 2026-11-21T19:00:00Z | New England Revolution - Philadelphia Union | - | - | - | - | - | -
+37 | 2026-11-21T19:30:00Z | Palmeiras - Flamengo | - | - | - | - | - | -
+38 | 2026-11-21T19:45:00Z | AS Monaco - AJ Auxerre | - | - | - | - | - | -
+39 | 2026-11-21T19:45:00Z | KV Mechelen - Club Brugge | - | - | - | - | - | -
+40 | 2026-11-21T19:45:00Z | Lens - Toulouse | 2.09 | 3.95 | 3.54 | 1.71 | 1.55 | 2.32
+41 | 2026-11-21T19:45:00Z | Lille - Lyon | - | - | - | - | - | -
+42 | 2026-11-21T19:45:00Z | Napoli - Torino | - | - | - | - | - | -
+43 | 2026-11-21T19:45:00Z | Strasbourg - Brest | - | - | - | - | - | -
+44 | 2026-11-21T19:45:00Z | Zulte-Waregem - Antwerp | - | - | - | - | - | -
+45 | 2026-11-21T20:00:00Z | Argentinos Juniors - Independiente | - | - | - | - | - | -
+46 | 2026-11-21T20:00:00Z | FC Groningen - Heerenveen | - | - | - | - | - | -
+47 | 2026-11-21T20:00:00Z | Motherwell - Rangers | - | - | - | - | - | -
+48 | 2026-11-21T20:00:00Z | Real Madrid - Celta Vigo | 1.21 | 8.5 | 17.5 | 1.39 | 1.96 | 3.05
+49 | 2026-11-21T20:00:00Z | Telstar - PEC Zwolle | - | - | - | - | - | -
+50 | 2026-11-21T20:30:00Z | Bahia - Coritiba | - | - | - | - | - | -
+51 | 2026-11-21T21:00:00Z | FC Dallas - Portland Timbers | - | - | - | - | - | -
+52 | 2026-11-21T23:00:00Z | Inter Miami CF - Columbus Crew | - | - | - | - | - | -
+53 | 2026-11-22T00:00:00Z | Chapecoense - Cruzeiro | - | - | - | - | - | -
