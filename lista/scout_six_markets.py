@@ -10,6 +10,7 @@ the independent analyst must review injuries, suspensions, lineup, H2H, xG
 when available, and source odds before publishing.
 """
 import argparse
+import hashlib
 import itertools
 import json
 import math
@@ -18,6 +19,12 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 TZ = ZoneInfo("Europe/Sarajevo")
+
+def canonical_hash(obj):
+    """Match MemaraSix source synchronization's canonical JSON SHA256."""
+    payload = json.dumps(obj, ensure_ascii=False, sort_keys=True,
+                         separators=(",", ":")).encode("utf-8")
+    return hashlib.sha256(payload).hexdigest()
 MARKETS = ("1", "X", "2", "3+", "GG", "NG")
 MARKET_FIELDS = {
     "1": "home_odds", "X": "draw_odds", "2": "away_odds",
@@ -233,6 +240,8 @@ def analyze(feed, active, history, now):
     return {
         "schema_version":1,"date":feed["date"],
         "generated_at_utc":now.isoformat(),"source_feed_generated_at_utc":feed.get("generated_at_utc"),
+        "source_active_sha256":canonical_hash(active),
+        "source_history_sha256":canonical_hash(history),
         "model":"Independent Poisson 1X2/Over2.5/BTTS with recency-weighted five matches and league shrinkage",
         "probabilities_are_calibrated":False,
         "disclaimer":"Statistical estimates, not observed win chances or guarantees. Validate via rolling backtest; separate analyst review for injuries/xG/H2H.",
