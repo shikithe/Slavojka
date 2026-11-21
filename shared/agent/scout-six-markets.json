@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "date": "2026-11-21",
-  "generated_at_utc": "2026-11-21T11:14:46.718556+00:00",
+  "generated_at_utc": "2026-11-21T11:34:51.410792+00:00",
   "source_feed_generated_at_utc": "2026-11-21T08:45:33.236183+00:00",
   "source_active_sha256": "0dd15dcbe2c2087d3b8578513c240847cfa73707fcd97dc94138b8d3026f5691",
   "source_history_sha256": "f99f1a7bf5bddf1c532fef98cbb865f2a4ff60455d083613957c0c3afa845c3b",
@@ -2464,6 +2464,547 @@
       "needs_independent_ai_review": true,
       "limitations": []
     }
+  ],
+  "detailed_ai_handoff": {
+    "limit": 10,
+    "selection_rule": "Only eligible future fixtures, sorted by highest TOP model probability; ties by second and then third best; never select a weaker market",
+    "count": 10,
+    "math_recalculation_prohibited": true,
+    "independent_ai_review_required": true,
+    "candidates": [
+      {
+        "rank": 1,
+        "fixture_id": "espn:football:ned.1:401875546",
+        "match": "FC Groningen - Heerenveen",
+        "datetime": "2026-11-21T20:00:00Z",
+        "top_market": "3+",
+        "top_probability_pct": 81.6,
+        "second_market": "GG",
+        "second_probability_pct": 78.7,
+        "top_market_odds": 1.4,
+        "eligible_for_A": true,
+        "eligible_for_B": true,
+        "all_six_probabilities_pct": {
+          "1": 32.6,
+          "X": 19.3,
+          "2": 48.1,
+          "3+": 81.6,
+          "GG": 78.7,
+          "NG": 21.3
+        },
+        "math_already_done": {
+          "last_five_matches_per_team": {
+            "home": 5,
+            "away": 5
+          },
+          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+          "modeled_goals": {
+            "home": 1.99,
+            "away": 2.42
+          },
+          "poisson_probabilities": {
+            "1": 32.6,
+            "X": 19.3,
+            "2": 48.1,
+            "3+": 81.6,
+            "GG": 78.7,
+            "NG": 21.3
+          }
+        },
+        "ai_checks_still_required": [
+          "actual_xg_xga_if_available",
+          "injuries_and_suspensions",
+          "expected_lineups",
+          "recent_h2h_up_to_five",
+          "table_and_motivation",
+          "rest_days_and_schedule",
+          "odds_identity_and_source"
+        ],
+        "ai_review_status": "pending_independent_review"
+      },
+      {
+        "rank": 2,
+        "fixture_id": "espn:football:bel.1:401878940",
+        "match": "Royal Charleroi SC - Sint-Truidense",
+        "datetime": "2026-11-21T15:00:00Z",
+        "top_market": "3+",
+        "top_probability_pct": 78.7,
+        "second_market": "GG",
+        "second_probability_pct": 76.2,
+        "top_market_odds": 1.52,
+        "eligible_for_A": true,
+        "eligible_for_B": true,
+        "all_six_probabilities_pct": {
+          "1": 48.6,
+          "X": 19.8,
+          "2": 31.6,
+          "3+": 78.7,
+          "GG": 76.2,
+          "NG": 23.8
+        },
+        "math_already_done": {
+          "last_five_matches_per_team": {
+            "home": 5,
+            "away": 5
+          },
+          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+          "modeled_goals": {
+            "home": 2.32,
+            "away": 1.86
+          },
+          "poisson_probabilities": {
+            "1": 48.6,
+            "X": 19.8,
+            "2": 31.6,
+            "3+": 78.7,
+            "GG": 76.2,
+            "NG": 23.8
+          }
+        },
+        "ai_checks_still_required": [
+          "actual_xg_xga_if_available",
+          "injuries_and_suspensions",
+          "expected_lineups",
+          "recent_h2h_up_to_five",
+          "table_and_motivation",
+          "rest_days_and_schedule",
+          "odds_identity_and_source"
+        ],
+        "ai_review_status": "pending_independent_review"
+      },
+      {
+        "rank": 3,
+        "fixture_id": "espn:football:ned.1:401875544",
+        "match": "FC Utrecht - SC Cambuur",
+        "datetime": "2026-11-21T17:45:00Z",
+        "top_market": "3+",
+        "top_probability_pct": 77.3,
+        "second_market": "GG",
+        "second_probability_pct": 74.9,
+        "top_market_odds": 1.43,
+        "eligible_for_A": true,
+        "eligible_for_B": true,
+        "all_six_probabilities_pct": {
+          "1": 31.0,
+          "X": 20.0,
+          "2": 49.0,
+          "3+": 77.3,
+          "GG": 74.9,
+          "NG": 25.1
+        },
+        "math_already_done": {
+          "last_five_matches_per_team": {
+            "home": 5,
+            "away": 5
+          },
+          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+          "modeled_goals": {
+            "home": 1.8,
+            "away": 2.27
+          },
+          "poisson_probabilities": {
+            "1": 31.0,
+            "X": 20.0,
+            "2": 49.0,
+            "3+": 77.3,
+            "GG": 74.9,
+            "NG": 25.1
+          }
+        },
+        "ai_checks_still_required": [
+          "actual_xg_xga_if_available",
+          "injuries_and_suspensions",
+          "expected_lineups",
+          "recent_h2h_up_to_five",
+          "table_and_motivation",
+          "rest_days_and_schedule",
+          "odds_identity_and_source"
+        ],
+        "ai_review_status": "pending_independent_review"
+      },
+      {
+        "rank": 4,
+        "fixture_id": "espn:football:ned.1:401875541",
+        "match": "NEC Nijmegen - PSV Eindhoven",
+        "datetime": "2026-11-21T15:30:00Z",
+        "top_market": "3+",
+        "top_probability_pct": 74.3,
+        "second_market": "GG",
+        "second_probability_pct": 72.0,
+        "top_market_odds": 1.29,
+        "eligible_for_A": true,
+        "eligible_for_B": true,
+        "all_six_probabilities_pct": {
+          "1": 28.7,
+          "X": 20.3,
+          "2": 51.0,
+          "3+": 74.3,
+          "GG": 72.0,
+          "NG": 28.0
+        },
+        "math_already_done": {
+          "last_five_matches_per_team": {
+            "home": 5,
+            "away": 5
+          },
+          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+          "modeled_goals": {
+            "home": 1.65,
+            "away": 2.23
+          },
+          "poisson_probabilities": {
+            "1": 28.7,
+            "X": 20.3,
+            "2": 51.0,
+            "3+": 74.3,
+            "GG": 72.0,
+            "NG": 28.0
+          }
+        },
+        "ai_checks_still_required": [
+          "actual_xg_xga_if_available",
+          "injuries_and_suspensions",
+          "expected_lineups",
+          "recent_h2h_up_to_five",
+          "table_and_motivation",
+          "rest_days_and_schedule",
+          "odds_identity_and_source"
+        ],
+        "ai_review_status": "pending_independent_review"
+      },
+      {
+        "rank": 5,
+        "fixture_id": "espn:football:sco.1:401878337",
+        "match": "Dundee - Heart of Midlothian",
+        "datetime": "2026-11-21T17:45:00Z",
+        "top_market": "3+",
+        "top_probability_pct": 73.1,
+        "second_market": "GG",
+        "second_probability_pct": 71.2,
+        "top_market_odds": 1.54,
+        "eligible_for_A": true,
+        "eligible_for_B": true,
+        "all_six_probabilities_pct": {
+          "1": 50.2,
+          "X": 20.6,
+          "2": 29.2,
+          "3+": 73.1,
+          "GG": 71.2,
+          "NG": 28.8
+        },
+        "math_already_done": {
+          "last_five_matches_per_team": {
+            "home": 5,
+            "away": 5
+          },
+          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+          "modeled_goals": {
+            "home": 2.17,
+            "away": 1.63
+          },
+          "poisson_probabilities": {
+            "1": 50.2,
+            "X": 20.6,
+            "2": 29.2,
+            "3+": 73.1,
+            "GG": 71.2,
+            "NG": 28.8
+          }
+        },
+        "ai_checks_still_required": [
+          "actual_xg_xga_if_available",
+          "injuries_and_suspensions",
+          "expected_lineups",
+          "recent_h2h_up_to_five",
+          "table_and_motivation",
+          "rest_days_and_schedule",
+          "odds_identity_and_source"
+        ],
+        "ai_review_status": "pending_independent_review"
+      },
+      {
+        "rank": 6,
+        "fixture_id": "espn:football:bel.1:401878938",
+        "match": "Zulte-Waregem - Antwerp",
+        "datetime": "2026-11-21T19:45:00Z",
+        "top_market": "3+",
+        "top_probability_pct": 73.0,
+        "second_market": "GG",
+        "second_probability_pct": 72.1,
+        "top_market_odds": 1.72,
+        "eligible_for_A": true,
+        "eligible_for_B": true,
+        "all_six_probabilities_pct": {
+          "1": 36.6,
+          "X": 21.3,
+          "2": 42.1,
+          "3+": 73.0,
+          "GG": 72.1,
+          "NG": 27.9
+        },
+        "math_already_done": {
+          "last_five_matches_per_team": {
+            "home": 5,
+            "away": 5
+          },
+          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+          "modeled_goals": {
+            "home": 1.82,
+            "away": 1.97
+          },
+          "poisson_probabilities": {
+            "1": 36.6,
+            "X": 21.3,
+            "2": 42.1,
+            "3+": 73.0,
+            "GG": 72.1,
+            "NG": 27.9
+          }
+        },
+        "ai_checks_still_required": [
+          "actual_xg_xga_if_available",
+          "injuries_and_suspensions",
+          "expected_lineups",
+          "recent_h2h_up_to_five",
+          "table_and_motivation",
+          "rest_days_and_schedule",
+          "odds_identity_and_source"
+        ],
+        "ai_review_status": "pending_independent_review"
+      },
+      {
+        "rank": 7,
+        "fixture_id": "espn:football:tur.1:401888245",
+        "match": "Galatasaray - Samsunspor",
+        "datetime": "2026-11-21T13:00:00Z",
+        "top_market": "3+",
+        "top_probability_pct": 72.8,
+        "second_market": "GG",
+        "second_probability_pct": 66.7,
+        "top_market_odds": 1.35,
+        "eligible_for_A": true,
+        "eligible_for_B": true,
+        "all_six_probabilities_pct": {
+          "1": 63.1,
+          "X": 18.2,
+          "2": 18.7,
+          "3+": 72.8,
+          "GG": 66.7,
+          "NG": 33.3
+        },
+        "math_already_done": {
+          "last_five_matches_per_team": {
+            "home": 5,
+            "away": 5
+          },
+          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+          "modeled_goals": {
+            "home": 2.48,
+            "away": 1.3
+          },
+          "poisson_probabilities": {
+            "1": 63.1,
+            "X": 18.2,
+            "2": 18.7,
+            "3+": 72.8,
+            "GG": 66.7,
+            "NG": 33.3
+          }
+        },
+        "ai_checks_still_required": [
+          "actual_xg_xga_if_available",
+          "injuries_and_suspensions",
+          "expected_lineups",
+          "recent_h2h_up_to_five",
+          "table_and_motivation",
+          "rest_days_and_schedule",
+          "odds_identity_and_source"
+        ],
+        "ai_review_status": "pending_independent_review"
+      },
+      {
+        "rank": 8,
+        "fixture_id": "espn:football:ned.1:401875543",
+        "match": "Feyenoord Rotterdam - Excelsior",
+        "datetime": "2026-11-21T17:45:00Z",
+        "top_market": "3+",
+        "top_probability_pct": 72.0,
+        "second_market": "GG",
+        "second_probability_pct": 66.2,
+        "top_market_odds": 1.33,
+        "eligible_for_A": true,
+        "eligible_for_B": true,
+        "all_six_probabilities_pct": {
+          "1": 62.7,
+          "X": 18.4,
+          "2": 18.9,
+          "3+": 72.0,
+          "GG": 66.2,
+          "NG": 33.8
+        },
+        "math_already_done": {
+          "last_five_matches_per_team": {
+            "home": 5,
+            "away": 5
+          },
+          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+          "modeled_goals": {
+            "home": 2.44,
+            "away": 1.29
+          },
+          "poisson_probabilities": {
+            "1": 62.7,
+            "X": 18.4,
+            "2": 18.9,
+            "3+": 72.0,
+            "GG": 66.2,
+            "NG": 33.8
+          }
+        },
+        "ai_checks_still_required": [
+          "actual_xg_xga_if_available",
+          "injuries_and_suspensions",
+          "expected_lineups",
+          "recent_h2h_up_to_five",
+          "table_and_motivation",
+          "rest_days_and_schedule",
+          "odds_identity_and_source"
+        ],
+        "ai_review_status": "pending_independent_review"
+      },
+      {
+        "rank": 9,
+        "fixture_id": "espn:football:ned.1:401875539",
+        "match": "Telstar - PEC Zwolle",
+        "datetime": "2026-11-21T20:00:00Z",
+        "top_market": "3+",
+        "top_probability_pct": 71.4,
+        "second_market": "GG",
+        "second_probability_pct": 71.0,
+        "top_market_odds": 1.7,
+        "eligible_for_A": true,
+        "eligible_for_B": true,
+        "all_six_probabilities_pct": {
+          "1": 38.5,
+          "X": 21.6,
+          "2": 39.9,
+          "3+": 71.4,
+          "GG": 71.0,
+          "NG": 29.0
+        },
+        "math_already_done": {
+          "last_five_matches_per_team": {
+            "home": 5,
+            "away": 5
+          },
+          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+          "modeled_goals": {
+            "home": 1.83,
+            "away": 1.87
+          },
+          "poisson_probabilities": {
+            "1": 38.5,
+            "X": 21.6,
+            "2": 39.9,
+            "3+": 71.4,
+            "GG": 71.0,
+            "NG": 29.0
+          }
+        },
+        "ai_checks_still_required": [
+          "actual_xg_xga_if_available",
+          "injuries_and_suspensions",
+          "expected_lineups",
+          "recent_h2h_up_to_five",
+          "table_and_motivation",
+          "rest_days_and_schedule",
+          "odds_identity_and_source"
+        ],
+        "ai_review_status": "pending_independent_review"
+      },
+      {
+        "rank": 10,
+        "fixture_id": "espn:football:usa.1:401933739",
+        "match": "Inter Miami CF - Columbus Crew",
+        "datetime": "2026-11-21T23:00:00Z",
+        "top_market": "3+",
+        "top_probability_pct": 71.3,
+        "second_market": "GG",
+        "second_probability_pct": 70.2,
+        "top_market_odds": 1.32,
+        "eligible_for_A": true,
+        "eligible_for_B": true,
+        "all_six_probabilities_pct": {
+          "1": 31.3,
+          "X": 21.2,
+          "2": 47.5,
+          "3+": 71.3,
+          "GG": 70.2,
+          "NG": 29.8
+        },
+        "math_already_done": {
+          "last_five_matches_per_team": {
+            "home": 5,
+            "away": 5
+          },
+          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+          "modeled_goals": {
+            "home": 1.64,
+            "away": 2.05
+          },
+          "poisson_probabilities": {
+            "1": 31.3,
+            "X": 21.2,
+            "2": 47.5,
+            "3+": 71.3,
+            "GG": 70.2,
+            "NG": 29.8
+          }
+        },
+        "ai_checks_still_required": [
+          "actual_xg_xga_if_available",
+          "injuries_and_suspensions",
+          "expected_lineups",
+          "recent_h2h_up_to_five",
+          "table_and_motivation",
+          "rest_days_and_schedule",
+          "odds_identity_and_source"
+        ],
+        "ai_review_status": "pending_independent_review"
+      }
+    ]
+  },
+  "detailed_ai_top_ten_fixture_ids": [
+    "espn:football:ned.1:401875546",
+    "espn:football:bel.1:401878940",
+    "espn:football:ned.1:401875544",
+    "espn:football:ned.1:401875541",
+    "espn:football:sco.1:401878337",
+    "espn:football:bel.1:401878938",
+    "espn:football:tur.1:401888245",
+    "espn:football:ned.1:401875543",
+    "espn:football:ned.1:401875539",
+    "espn:football:usa.1:401933739"
   ],
   "ticket_proposals": {
     "A": {

@@ -56,6 +56,18 @@ RANK | FIXTURE | 1 | X | 2 | 3+ | GG | NG | TOP | RUNNER-UP | ODDS | STATUS
 52 | Alavés - Deportivo | 32.7% | 26.7% | 40.6% | 46.3% | 51.3% | 48.7% | GG 51.3% | NG 48.7% | 1.86 | A
 53 | Manchester City - Fulham | 37.3% | 26.9% | 35.8% | 46.0% | 51.2% | 48.8% | GG 51.2% | NG 48.8% | 1.63 | A
 
+DETAILED AI SCOUT: TOP 10 ONLY (mathematical form, goals, home/away, league averages ALREADY DONE)
+1. FC Groningen - Heerenveen | TOP 3+ 81.6% | runner-up GG 78.7% | odds 1.40 | Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check
+2. Royal Charleroi SC - Sint-Truidense | TOP 3+ 78.7% | runner-up GG 76.2% | odds 1.52 | Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check
+3. FC Utrecht - SC Cambuur | TOP 3+ 77.3% | runner-up GG 74.9% | odds 1.43 | Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check
+4. NEC Nijmegen - PSV Eindhoven | TOP 3+ 74.3% | runner-up GG 72.0% | odds 1.29 | Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check
+5. Dundee - Heart of Midlothian | TOP 3+ 73.1% | runner-up GG 71.2% | odds 1.54 | Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check
+6. Zulte-Waregem - Antwerp | TOP 3+ 73.0% | runner-up GG 72.1% | odds 1.72 | Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check
+7. Galatasaray - Samsunspor | TOP 3+ 72.8% | runner-up GG 66.7% | odds 1.35 | Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check
+8. Feyenoord Rotterdam - Excelsior | TOP 3+ 72.0% | runner-up GG 66.2% | odds 1.33 | Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check
+9. Telstar - PEC Zwolle | TOP 3+ 71.4% | runner-up GG 71.0% | odds 1.70 | Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check
+10. Inter Miami CF - Columbus Crew | TOP 3+ 71.3% | runner-up GG 70.2% | odds 1.32 | Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check
+
 A PROPOSAL (UNAPPROVED) 2.13: FC Groningen - Heerenveen [3+ 1.40, p=81.6%]; Royal Charleroi SC - Sint-Truidense [3+ 1.52, p=78.7%]
 B PROPOSAL (UNAPPROVED) 2.20: FC Utrecht - SC Cambuur [3+ 1.43, p=77.3%]; Dundee - Heart of Midlothian [3+ 1.54, p=73.1%]
 Statistical proposals only. Independent Scout must verify and explicitly approve.
