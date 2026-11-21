@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-11-21T09:37:11.829128+00:00",
-  "total": 32,
+  "generated_at_utc": "2026-11-21T10:15:47.643457+00:00",
+  "total": 24,
   "fixtures": [
     {
       "fixture_id": "espn:football:tur.1:401888247",
@@ -27,27 +27,11 @@
       "sport": "football"
     },
     {
-      "fixture_id": "espn:football:ger.1:401884734",
-      "home": "Eintracht Frankfurt",
-      "away": "TSG Hoffenheim",
-      "league": "ger.1",
-      "start_utc": "2026-11-21T14:30:00Z",
-      "sport": "football"
-    },
-    {
       "fixture_id": "espn:football:ger.1:401884728",
       "home": "SV Elversberg",
       "away": "SC Freiburg",
       "league": "ger.1",
       "start_utc": "2026-11-21T14:30:00Z",
-      "sport": "football"
-    },
-    {
-      "fixture_id": "espn:football:eng.1:401879238",
-      "home": "AFC Bournemouth",
-      "away": "Nottingham Forest",
-      "league": "eng.1",
-      "start_utc": "2026-11-21T15:00:00Z",
       "sport": "football"
     },
     {
@@ -107,30 +91,6 @@
       "sport": "football"
     },
     {
-      "fixture_id": "espn:football:esp.1:401882797",
-      "home": "Sevilla",
-      "away": "Real Betis",
-      "league": "esp.1",
-      "start_utc": "2026-11-21T17:30:00Z",
-      "sport": "football"
-    },
-    {
-      "fixture_id": "espn:football:ger.1:401884729",
-      "home": "Schalke 04",
-      "away": "VfB Stuttgart",
-      "league": "ger.1",
-      "start_utc": "2026-11-21T17:30:00Z",
-      "sport": "football"
-    },
-    {
-      "fixture_id": "espn:football:ned.1:401875544",
-      "home": "FC Utrecht",
-      "away": "SC Cambuur",
-      "league": "ned.1",
-      "start_utc": "2026-11-21T17:45:00Z",
-      "sport": "football"
-    },
-    {
       "fixture_id": "espn:football:sco.1:401878337",
       "home": "Dundee",
       "away": "Heart of Midlothian",
@@ -152,22 +112,6 @@
       "away": "Philadelphia Union",
       "league": "usa.1",
       "start_utc": "2026-11-21T19:00:00Z",
-      "sport": "football"
-    },
-    {
-      "fixture_id": "espn:football:bra.1:401841322",
-      "home": "Palmeiras",
-      "away": "Flamengo",
-      "league": "bra.1",
-      "start_utc": "2026-11-21T19:30:00Z",
-      "sport": "football"
-    },
-    {
-      "fixture_id": "espn:football:fra.1:401876399",
-      "home": "AS Monaco",
-      "away": "AJ Auxerre",
-      "league": "fra.1",
-      "start_utc": "2026-11-21T19:45:00Z",
       "sport": "football"
     },
     {
@@ -207,14 +151,6 @@
       "home": "Telstar",
       "away": "PEC Zwolle",
       "league": "ned.1",
-      "start_utc": "2026-11-21T20:00:00Z",
-      "sport": "football"
-    },
-    {
-      "fixture_id": "espn:football:sco.1:401878333",
-      "home": "Motherwell",
-      "away": "Rangers",
-      "league": "sco.1",
       "start_utc": "2026-11-21T20:00:00Z",
       "sport": "football"
     },

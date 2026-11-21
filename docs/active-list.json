@@ -4,19 +4,6 @@
   "publication_allowed": true,
   "fixtures": [
     {
-      "fixture_id": "espn:football:tur.1:401888247",
-      "datetime": "2026-11-21T10:30:00Z",
-      "match": "Genclerbirligi - Gaziantep FK",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
       "fixture_id": "espn:football:eng.1:401879233",
       "datetime": "2026-11-21T12:30:00Z",
       "match": "Manchester City - Fulham",
@@ -28,41 +15,13 @@
         "btts_yes_odds": "Verdict football market comparison",
         "btts_no_odds": "Verdict football market comparison"
       },
-      "source_urls": [
-        "https://verdict.football/predictions/england/premier-league/manchester-city-vs-fulham-2026-11-21/"
-      ],
       "home_odds": 1.42,
       "draw_odds": 5.63,
       "away_odds": 7.6,
       "over25_odds": 1.43,
       "btts_yes_odds": 1.63,
-      "btts_no_odds": 2.32
-    },
-    {
-      "fixture_id": "espn:football:esp.1:401882806",
-      "datetime": "2026-11-21T13:00:00Z",
-      "match": "Alavés - Deportivo",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:tur.1:401888369",
-      "datetime": "2026-11-21T13:00:00Z",
-      "match": "Amed SFK - Caykur Rizespor",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "btts_no_odds": 2.32,
+      "bookmaker": "Verdict football market comparison"
     },
     {
       "fixture_id": "espn:football:tur.1:401888245",
@@ -76,15 +35,13 @@
         "btts_yes_odds": "1Win via Verdict comparison",
         "btts_no_odds": "1Win via Verdict comparison"
       },
-      "source_urls": [
-        "https://verdict.football/predictions/turkey/super-lig/galatasaray-vs-samsunspor-2026-11-21/"
-      ],
       "home_odds": 1.23,
       "draw_odds": 6.2,
       "away_odds": 10,
       "over25_odds": 1.35,
       "btts_yes_odds": 1.72,
-      "btts_no_odds": 2.03
+      "btts_no_odds": 2.03,
+      "bookmaker": "1Win via Verdict comparison"
     },
     {
       "fixture_id": "espn:football:ita.1:401875056",
@@ -98,15 +55,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/como-cagliari-serie-a-italy-956003"
-      ],
       "home_odds": 1.31,
       "draw_odds": 6.2,
       "away_odds": 10.7,
       "over25_odds": 1.53,
       "btts_yes_odds": 1.87,
-      "btts_no_odds": 1.85
+      "btts_no_odds": 1.85,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:ita.1:401874981",
@@ -120,15 +75,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/lazio-lecce-serie-a-italy-956004"
-      ],
       "home_odds": 1.45,
       "draw_odds": 5.1,
       "away_odds": 7.6,
       "over25_odds": 1.67,
       "btts_yes_odds": 1.79,
-      "btts_no_odds": 1.94
+      "btts_no_odds": 1.94,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:ger.1:401884732",
@@ -142,15 +95,13 @@
         "btts_yes_odds": "OddSeek displayed bookmaker prices",
         "btts_no_odds": "OddSeek displayed bookmaker prices"
       },
-      "source_urls": [
-        "https://oddseek.com/football/union-berlin-vs-rb-leipzig-13662137"
-      ],
       "home_odds": 6.4,
       "draw_odds": 5.08,
       "away_odds": 1.54,
       "over25_odds": 1.47,
       "btts_yes_odds": 1.62,
-      "btts_no_odds": 2.56
+      "btts_no_odds": 2.56,
+      "bookmaker": "OddSeek displayed bookmaker prices"
     },
     {
       "fixture_id": "espn:football:ger.1:401884735",
@@ -159,17 +110,18 @@
       "bookmakers_by_field": {
         "home_odds": "Bet365 via OddsRun",
         "draw_odds": "Bet365 via OddsRun",
-        "away_odds": "Bet365 via OddsRun"
+        "away_odds": "Bet365 via OddsRun",
+        "over25_odds": "Bet365 via OddsRun",
+        "btts_yes_odds": "Bet365 via OddsRun",
+        "btts_no_odds": "Bet365 via OddsRun"
       },
-      "source_urls": [
-        "https://oddsrun.com/match/football/de/123/12153829/germany-bundesliga-i/bayer-leverkusen-vs-paderborn/"
-      ],
       "home_odds": 1.27,
       "draw_odds": 7,
       "away_odds": 8,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "over25_odds": 1.35,
+      "btts_yes_odds": 1.67,
+      "btts_no_odds": 2.08,
+      "bookmaker": "Bet365 via OddsRun"
     },
     {
       "fixture_id": "espn:football:ger.1:401884731",
@@ -183,15 +135,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/borussia-m-gladbach-borussia-dortmund-bundesliga-germany-955998"
-      ],
       "home_odds": 5.18,
       "draw_odds": 4.73,
       "away_odds": 1.64,
       "over25_odds": 1.47,
       "btts_yes_odds": 1.51,
-      "btts_no_odds": 2.42
+      "btts_no_odds": 2.42,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:ger.1:401884734",
@@ -205,28 +155,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/eintracht-frankfurt-hoffenheim-bundesliga-germany-955999"
-      ],
       "home_odds": 2.45,
       "draw_odds": 4.31,
       "away_odds": 2.66,
       "over25_odds": 1.34,
       "btts_yes_odds": 1.49,
-      "btts_no_odds": 2.45
-    },
-    {
-      "fixture_id": "espn:football:ger.1:401884728",
-      "datetime": "2026-11-21T14:30:00Z",
-      "match": "SV Elversberg - SC Freiburg",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "btts_no_odds": 2.45,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:eng.1:401879238",
@@ -240,15 +175,13 @@
         "btts_yes_odds": "SpinnerBet",
         "btts_no_odds": "SpinnerBet"
       },
-      "source_urls": [
-        "https://www.spinnerbet.com/en-en/sports/240/meetings/6323610/events/2843049248"
-      ],
       "home_odds": 1.9,
       "draw_odds": 3.6,
       "away_odds": 3.75,
       "over25_odds": 1.775,
       "btts_yes_odds": 1.666,
-      "btts_no_odds": 2.05
+      "btts_no_odds": 2.05,
+      "bookmaker": "SpinnerBet"
     },
     {
       "fixture_id": "espn:football:eng.1:401878756",
@@ -262,15 +195,13 @@
         "btts_yes_odds": "SportyTrader published bookmaker offers",
         "btts_no_odds": "SportyTrader published bookmaker offers"
       },
-      "source_urls": [
-        "https://www.sportytrader.com/en/odds/aston-villa-sunderland-8558913/"
-      ],
       "home_odds": 1.8,
       "draw_odds": 4.16,
       "away_odds": 4.57,
       "over25_odds": 1.93,
       "btts_yes_odds": 1.7,
-      "btts_no_odds": 2.18
+      "btts_no_odds": 2.18,
+      "bookmaker": "SportyTrader published bookmaker offers"
     },
     {
       "fixture_id": "espn:football:sco.1:401878338",
@@ -284,15 +215,13 @@
         "btts_yes_odds": "Verdict football market comparison",
         "btts_no_odds": "Verdict football market comparison"
       },
-      "source_urls": [
-        "https://verdict.football/predictions/scotland/premiership/celtic-vs-st-mirren-2026-11-21/"
-      ],
       "home_odds": 1.17,
       "draw_odds": 7.7,
       "away_odds": 15,
       "over25_odds": 1.26,
       "btts_yes_odds": 1.77,
-      "btts_no_odds": 2.01
+      "btts_no_odds": 2.01,
+      "bookmaker": "Verdict football market comparison"
     },
     {
       "fixture_id": "espn:football:eng.1:401879236",
@@ -306,80 +235,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/chelsea-leeds-premier-league-england-955989"
-      ],
       "home_odds": 1.99,
       "draw_odds": 3.86,
       "away_odds": 3.93,
       "over25_odds": 1.89,
       "btts_yes_odds": 1.69,
-      "btts_no_odds": 2.07
-    },
-    {
-      "fixture_id": "espn:football:eng.1:401879235",
-      "datetime": "2026-11-21T15:00:00Z",
-      "match": "Coventry City - Crystal Palace",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:sco.1:401878336",
-      "datetime": "2026-11-21T15:00:00Z",
-      "match": "Falkirk - St Johnstone",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:sco.1:401878335",
-      "datetime": "2026-11-21T15:00:00Z",
-      "match": "Hibernian - Dundee United",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:sco.1:401878334",
-      "datetime": "2026-11-21T15:00:00Z",
-      "match": "Kilmarnock - Aberdeen",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:bel.1:401878940",
-      "datetime": "2026-11-21T15:00:00Z",
-      "match": "Royal Charleroi SC - Sint-Truidense",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "btts_no_odds": 2.07,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:eng.1:401878754",
@@ -393,15 +255,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/tottenham-ipswich-premier-league-england-955991"
-      ],
       "home_odds": 1.6,
       "draw_odds": 4.63,
       "away_odds": 5.7,
       "over25_odds": 1.66,
       "btts_yes_odds": 1.66,
-      "btts_no_odds": 2.12
+      "btts_no_odds": 2.12,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:esp.1:401882799",
@@ -415,15 +275,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/rayo-vallecano-valencia-primera-division-spain-955994"
-      ],
       "home_odds": 1.97,
       "draw_odds": 3.7,
       "away_odds": 4.21,
       "over25_odds": 2.07,
       "btts_yes_odds": 1.83,
-      "btts_no_odds": 1.89
+      "btts_no_odds": 1.89,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:ned.1:401875541",
@@ -437,15 +295,13 @@
         "btts_yes_odds": "1Win via Verdict Football",
         "btts_no_odds": "1Win via Verdict Football"
       },
-      "source_urls": [
-        "https://verdict.football/predictions/netherlands/eredivisie/nec-nijmegen-vs-psv-eindhoven-2026-11-21/"
-      ],
       "home_odds": 4.04,
       "draw_odds": 4.4,
       "away_odds": 1.7,
       "over25_odds": 1.29,
       "btts_yes_odds": 1.32,
-      "btts_no_odds": 3.2
+      "btts_no_odds": 3.2,
+      "bookmaker": "1Win via Verdict Football"
     },
     {
       "fixture_id": "espn:football:tur.1:401888244",
@@ -454,17 +310,18 @@
       "bookmakers_by_field": {
         "home_odds": "OddSeek displayed bookmaker prices",
         "draw_odds": "OddSeek displayed bookmaker prices",
-        "away_odds": "OddSeek displayed bookmaker prices"
+        "away_odds": "OddSeek displayed bookmaker prices",
+        "over25_odds": "OddSeek displayed bookmaker prices",
+        "btts_yes_odds": "OddSeek displayed bookmaker prices",
+        "btts_no_odds": "OddSeek displayed bookmaker prices"
       },
-      "source_urls": [
-        "https://oddseek.com/pl/football/kocaelispor-vs-fenerbahce-13670561"
-      ],
       "home_odds": 6.2,
       "draw_odds": 4.45,
       "away_odds": 1.6,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "over25_odds": 1.73,
+      "btts_yes_odds": 1.72,
+      "btts_no_odds": 2.01,
+      "bookmaker": "OddSeek displayed bookmaker prices"
     },
     {
       "fixture_id": "espn:football:fra.1:401876398",
@@ -478,15 +335,13 @@
         "btts_yes_odds": "SportyTrader published bookmaker offers",
         "btts_no_odds": "SportyTrader published bookmaker offers"
       },
-      "source_urls": [
-        "https://www.sportytrader.com/en/odds/nice-psg-8532726/"
-      ],
       "home_odds": 6.32,
       "draw_odds": 5.24,
       "away_odds": 1.5,
       "over25_odds": 1.39,
       "btts_yes_odds": 1.51,
-      "btts_no_odds": 2.52
+      "btts_no_odds": 2.52,
+      "bookmaker": "SportyTrader published bookmaker offers"
     },
     {
       "fixture_id": "espn:football:ita.1:401874967",
@@ -500,41 +355,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/parma-roma-serie-a-italy-956005"
-      ],
       "home_odds": 11.3,
       "draw_odds": 6.39,
       "away_odds": 1.3,
       "over25_odds": 1.5,
       "btts_yes_odds": 1.87,
-      "btts_no_odds": 1.85
-    },
-    {
-      "fixture_id": "espn:football:bel.1:401878939",
-      "datetime": "2026-11-21T17:15:00Z",
-      "match": "Racing Genk - RAAL La Louvière",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:eng.1:401879232",
-      "datetime": "2026-11-21T17:30:00Z",
-      "match": "Newcastle United - Arsenal",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "btts_no_odds": 1.85,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:ger.1:401884729",
@@ -548,15 +375,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/schalke-04-stuttgart-bundesliga-germany-956002"
-      ],
       "home_odds": 4.22,
       "draw_odds": 4.32,
       "away_odds": 1.83,
       "over25_odds": 1.46,
       "btts_yes_odds": 1.45,
-      "btts_no_odds": 2.59
+      "btts_no_odds": 2.59,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:esp.1:401882797",
@@ -570,28 +395,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/sevilla-real-betis-primera-division-spain-955995"
-      ],
       "home_odds": 3.07,
       "draw_odds": 3.58,
       "away_odds": 2.44,
       "over25_odds": 1.9,
       "btts_yes_odds": 1.63,
-      "btts_no_odds": 2.17
-    },
-    {
-      "fixture_id": "espn:football:sco.1:401878337",
-      "datetime": "2026-11-21T17:45:00Z",
-      "match": "Dundee - Heart of Midlothian",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "btts_no_odds": 2.17,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:ned.1:401875544",
@@ -605,15 +415,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/fc-utrecht-sc-cambuur-eredivisie-netherlands-956013"
-      ],
       "home_odds": 1.91,
       "draw_odds": 4.05,
       "away_odds": 3.69,
       "over25_odds": 1.43,
       "btts_yes_odds": 1.4,
-      "btts_no_odds": 2.73
+      "btts_no_odds": 2.73,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:ned.1:401875543",
@@ -627,54 +435,33 @@
         "btts_yes_odds": "SportyTrader published bookmaker offers",
         "btts_no_odds": "SportyTrader published bookmaker offers"
       },
-      "source_urls": [
-        "https://www.sportytrader.com/en/odds/feyenoord-excelsior-8533169/"
-      ],
       "home_odds": 1.2,
       "draw_odds": 10.5,
       "away_odds": 18,
       "over25_odds": 1.33,
       "btts_yes_odds": 1.83,
-      "btts_no_odds": 1.95
-    },
-    {
-      "fixture_id": "espn:football:arg.1:401933758",
-      "datetime": "2026-11-21T18:00:00Z",
-      "match": "Defensa y Justicia - Barracas Central",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:usa.1:401933733",
-      "datetime": "2026-11-21T19:00:00Z",
-      "match": "New England Revolution - Philadelphia Union",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "btts_no_odds": 1.95,
+      "bookmaker": "SportyTrader published bookmaker offers"
     },
     {
       "fixture_id": "espn:football:bra.1:401841322",
       "datetime": "2026-11-21T19:30:00Z",
       "match": "Palmeiras - Flamengo",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "1xbet via TipsterArea",
+        "draw_odds": "1xbet via TipsterArea",
+        "away_odds": "1xbet via TipsterArea",
+        "over25_odds": "1xbet via TipsterArea",
+        "btts_yes_odds": "1xbet via TipsterArea",
+        "btts_no_odds": "1xbet via TipsterArea"
+      },
+      "home_odds": 4.09,
+      "draw_odds": 3.74,
+      "away_odds": 1.89,
+      "over25_odds": 1.81,
+      "btts_yes_odds": 1.67,
+      "btts_no_odds": 2.08,
+      "bookmaker": "1xbet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:fra.1:401876399",
@@ -688,28 +475,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/monaco-auxerre-ligue-1-france-956008"
-      ],
       "home_odds": 1.46,
       "draw_odds": 5.18,
       "away_odds": 7.29,
       "over25_odds": 1.52,
       "btts_yes_odds": 1.67,
-      "btts_no_odds": 2.11
-    },
-    {
-      "fixture_id": "espn:football:bel.1:401878935",
-      "datetime": "2026-11-21T19:45:00Z",
-      "match": "KV Mechelen - Club Brugge",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "btts_no_odds": 2.11,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:fra.1:401876403",
@@ -723,15 +495,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/lens-toulouse-ligue-1-france-956009"
-      ],
       "home_odds": 2.09,
       "draw_odds": 3.95,
       "away_odds": 3.54,
       "over25_odds": 1.71,
       "btts_yes_odds": 1.55,
-      "btts_no_odds": 2.32
+      "btts_no_odds": 2.32,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:fra.1:401876402",
@@ -745,15 +515,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/lille-lyonnais-ligue-1-france-956010"
-      ],
       "home_odds": 2.32,
       "draw_odds": 3.57,
       "away_odds": 3.29,
       "over25_odds": 2.1,
       "btts_yes_odds": 1.77,
-      "btts_no_odds": 1.96
+      "btts_no_odds": 1.96,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:ita.1:401875067",
@@ -767,67 +535,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/napoli-torino-serie-a-italy-956006"
-      ],
       "home_odds": 1.53,
       "draw_odds": 4.73,
       "away_odds": 6.76,
       "over25_odds": 1.77,
       "btts_yes_odds": 1.82,
-      "btts_no_odds": 1.9
-    },
-    {
-      "fixture_id": "espn:football:fra.1:401876396",
-      "datetime": "2026-11-21T19:45:00Z",
-      "match": "Strasbourg - Brest",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:bel.1:401878938",
-      "datetime": "2026-11-21T19:45:00Z",
-      "match": "Zulte-Waregem - Antwerp",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:arg.1:401933755",
-      "datetime": "2026-11-21T20:00:00Z",
-      "match": "Argentinos Juniors - Independiente",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:ned.1:401875546",
-      "datetime": "2026-11-21T20:00:00Z",
-      "match": "FC Groningen - Heerenveen",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "btts_no_odds": 1.9,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:sco.1:401878333",
@@ -841,15 +555,13 @@
         "btts_yes_odds": "1xBet via TipsterArea",
         "btts_no_odds": "1xBet via TipsterArea"
       },
-      "source_urls": [
-        "https://tipsterarea.com/match/motherwell-rangers-premiership-scotland-956075"
-      ],
       "home_odds": 5.11,
       "draw_odds": 4.35,
       "away_odds": 1.55,
       "over25_odds": 1.48,
       "btts_yes_odds": 1.59,
-      "btts_no_odds": 2.21
+      "btts_no_odds": 2.21,
+      "bookmaker": "1xBet via TipsterArea"
     },
     {
       "fixture_id": "espn:football:esp.1:401882798",
@@ -863,80 +575,13 @@
         "btts_yes_odds": "SportyTrader market comparison",
         "btts_no_odds": "SportyTrader market comparison"
       },
-      "source_urls": [
-        "https://www.sportytrader.com/en/odds/real-madrid-celta-vigo-8586542/"
-      ],
       "home_odds": 1.21,
       "draw_odds": 8.5,
       "away_odds": 17.5,
       "over25_odds": 1.39,
       "btts_yes_odds": 1.96,
-      "btts_no_odds": 3.05
-    },
-    {
-      "fixture_id": "espn:football:ned.1:401875539",
-      "datetime": "2026-11-21T20:00:00Z",
-      "match": "Telstar - PEC Zwolle",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:bra.1:401841327",
-      "datetime": "2026-11-21T20:30:00Z",
-      "match": "Bahia - Coritiba",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:usa.1:401933732",
-      "datetime": "2026-11-21T21:00:00Z",
-      "match": "FC Dallas - Portland Timbers",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:usa.1:401933739",
-      "datetime": "2026-11-21T23:00:00Z",
-      "match": "Inter Miami CF - Columbus Crew",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:bra.1:401841325",
-      "datetime": "2026-11-22T00:00:00Z",
-      "match": "Chapecoense - Cruzeiro",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "btts_no_odds": 3.05,
+      "bookmaker": "SportyTrader market comparison"
     }
   ]
 }
