@@ -4,6 +4,7 @@ from datetime import datetime, timezone, timedelta
 from lista.scout_six_markets import (
     MARKETS, analyze, six_probs, ranking, suggestions, evaluate_fixture
 )
+from lista.scout_value import market_evaluation, quality, rank_key
 
 NOW = datetime(2026, 11, 21, 10, 30, tzinfo=timezone.utc)
 
@@ -87,6 +88,47 @@ class ScoutSixTests(unittest.TestCase):
         lower={"fixture_id":"a","strongest_pct":72.0,"second_pct":56.0,"third_pct":48.0}
         higher={"fixture_id":"b","strongest_pct":72.0,"second_pct":61.0,"third_pct":41.0}
         self.assertEqual(sorted([lower,higher],key=ranking)[0]["fixture_id"],"b")
+
+    def test_price_aware_model_may_select_lower_raw_probability(self):
+        probs={"1":60.0,"X":20.0,"2":20.0,"3+":55.0,"GG":52.0,"NG":48.0}
+        odds={"1":1.4,"X":3.8,"2":8.0,"3+":1.9,"GG":1.75,"NG":2.1}
+        value=market_evaluation(probs,odds,.55)
+        ranked=sorted(MARKETS,key=lambda m:-value[m]["score"])
+        self.assertEqual(ranked[0],"3+")
+        self.assertGreater(value["3+"]["conservative_ev_pct"],0)
+        self.assertLess(value["1"]["conservative_ev_pct"],0)
+
+    def test_quality_index_is_heuristic_not_accuracy(self):
+        h=form("SampleHome","home")
+        a=form("SampleAway","away")
+        rich,info=quality(h,a,40)
+        sparse,_=quality({"matches":h["matches"][:1]},
+                         {"matches":a["matches"][:1]},1)
+        self.assertGreater(rich,sparse)
+        self.assertTrue(.20<=rich<=.72)
+        self.assertEqual(info["home_last_matches"],5)
+
+    def test_value_model_reports_six_markets_per_fixture_in_same_run(self):
+        fixtures=[fixture(i) for i in range(30)]
+        feed={"date":"2026-11-21","football_candidates":fixtures}
+        active={"date":"2026-11-21","fixtures":[row(i) for i in range(30)]}
+        history={"date":"2026-11-21","fixtures":fixtures,
+                 "leagues":{"eng.1":{"teams":{name:form(name,side)
+                 for i in range(30) for name,side in ((f"Home{i}","home"),(f"Away{i}","away"))}}}}
+        d=analyze(feed,active,history,NOW)
+        self.assertEqual(d["schema_version"],2)
+        self.assertEqual(d["total_market_probabilities"],180)
+        self.assertEqual(len(d["ranked_fixtures"]),30)
+        self.assertTrue(d["value_selection_enabled"])
+        self.assertTrue(d["value_selection_not_backtested"])
+        self.assertTrue(all(set(r["market_value"])==set(MARKETS)
+                            for r in d["ranked_fixtures"]))
+        self.assertTrue(all("data_quality_index_pct" in r and
+                            "recommended_market" in r
+                            for r in d["ranked_fixtures"]))
+        self.assertTrue(all(x["fixture_id"] in d["detailed_ai_top_ten_fixture_ids"]
+                            for tid in ("A","B")
+                            for x in (d["ticket_proposals"][tid] or {"matches":[]})["matches"]))
 
     def test_a_b_no_overlap_and_3plus_only_for_b(self):
         arr=[]
