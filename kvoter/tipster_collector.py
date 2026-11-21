@@ -49,6 +49,13 @@ ALIASES = {
     "nec nijmegen": "nec", "psv eindhoven": "psv",
     "feyenoord rotterdam": "feyenoord", "fc groningen": "groningen",
     "inter miami cf": "inter miami", "new england revolution": "new england",
+    "leeds united": "leeds", "coventry city": "coventry",
+    "newcastle united": "newcastle", "tottenham hotspur": "tottenham",
+    "lyonnais": "lyon", "olympique lyonnais": "lyon",
+    "telstar velsen": "telstar", "fc zwolle": "pec zwolle",
+    "bahia ba": "bahia", "coritiba pr": "coritiba",
+    "palmeiras sp": "palmeiras", "flamengo rj": "flamengo",
+    "chapecoense sc": "chapecoense", "cruzeiro mg": "cruzeiro",
     "philadelphia union": "philadelphia", "fc dallas": "dallas",
     "columbus crew": "columbus", "portland timbers": "portland",
     "chapecoense": "chapecoense", "bahia": "bahia",
@@ -254,12 +261,26 @@ def run(args):
     fixtures = feed["football_candidates"]
     existing = {x["fixture_id"]: x for x in doc.get("fixtures", [])}
     session = requests.Session()
-    url = BASE + "/matches/date-" + day.strftime("%d-%m-%Y")
-    daily = fetch_page(session, url)
-    matches = parse_daily(daily, day)
-    if not matches:
-        raise RuntimeError("Daily page returned no match links; possible block or site change")
-    links = assign_links(fixtures, matches)
+    links = {}
+    linked_day = {}
+    total_matches = 0
+    # ESPN can include late fixtures after local midnight, e.g. Brazil 00:00 UTC.
+    local_days = {datetime.fromisoformat(f["start_utc"].replace("Z", "+00:00")).astimezone(TZ).date()
+                  for f in fixtures}
+    for fixture_day in sorted(local_days):
+        if fixture_day < day or fixture_day > day + timedelta(days=1):
+            continue
+        url = BASE + "/matches/date-" + fixture_day.strftime("%d-%m-%Y")
+        daily = fetch_page(session, url)
+        matches = parse_daily(daily, fixture_day)
+        total_matches += len(matches)
+        day_fixtures = [f for f in fixtures
+                        if datetime.fromisoformat(f["start_utc"].replace("Z", "+00:00")).astimezone(TZ).date() == fixture_day]
+        mapped = assign_links(day_fixtures, matches)
+        links.update(mapped)
+        linked_day.update({fid: fixture_day for fid in mapped})
+    if not total_matches:
+        raise RuntimeError("TipsterArea returned no match links; possible block or site change")
     updated = 0
     attempted = 0
     failures = []
@@ -288,7 +309,7 @@ def run(args):
         attempted += 1
         try:
             page = fetch_page(session, link["url"])
-            if not verified_match_page(page, link, fixture, day):
+            if not verified_match_page(page, link, fixture, linked_day[fid]):
                 failures.append(fid + ": mismatched page title/date/teams")
                 continue
             prices, bookmakers = parse_markets(page)
@@ -319,7 +340,7 @@ def run(args):
         time.sleep(max(0.8, args.delay))
     report = {
         "date": day.isoformat(), "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "espn": len(fixtures), "daily_tipster_links": len(matches),
+        "espn": len(fixtures), "daily_tipster_links": total_matches,
         "paired": len(links), "pages_checked": attempted,
         "updated": updated, "with_any_quotes": len(existing),
         "unpaired": [f["home"] + " - " + f["away"] for f in fixtures if f["fixture_id"] not in links],
