@@ -826,6 +826,84 @@
           }
         }
       }
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878940",
+      "home": "Royal Charleroi SC",
+      "away": "Sint-Truidense",
+      "league": "bel.1",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "sport": "football",
+      "bookmaker": "1xbet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/charleroi-saint-truiden-pro-league-belgium-956066"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 2,
+          "draw": 3.9,
+          "away": 3.43
+        },
+        "3+": {
+          "over": 1.52
+        },
+        "BTTS": {
+          "yes": 1.46,
+          "no": 2.53
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876396",
+      "home": "Strasbourg",
+      "away": "Brest",
+      "league": "fra.1",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "sport": "football",
+      "bookmaker": "1xbet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/strasbourg-brest-ligue-1-france-956011"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 2.29,
+          "draw": 3.86,
+          "away": 3.12
+        },
+        "3+": {
+          "over": 1.72
+        },
+        "BTTS": {
+          "yes": 1.54,
+          "no": 2.35
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878935",
+      "home": "KV Mechelen",
+      "away": "Club Brugge",
+      "league": "bel.1",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "sport": "football",
+      "bookmaker": "1xbet via TipsterArea",
+      "source_urls": [
+        "https://tipsterarea.com/match/mechelen-club-brugge-pro-league-belgium-956068"
+      ],
+      "markets": {
+        "1X2": {
+          "home": 7.14,
+          "draw": 5.4,
+          "away": 1.39
+        },
+        "3+": {
+          "over": 1.38
+        },
+        "BTTS": {
+          "yes": 1.56,
+          "no": 2.28
+        }
+      }
     }
   ]
 }
