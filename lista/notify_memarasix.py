@@ -62,7 +62,7 @@ def verify_source(root, now):
     if len(set(ids)) != len(ids) or not set(ids).issubset(matched_ids):
         raise ValueError("ListaSix is not completely reconciled")
     return {"date": today, "active_sha256": fingerprint(active),
-            "fixture_count": len(fixtures)}
+            "history_sha256": fingerprint(history), "fixture_count": len(fixtures)}
 
 
 def request_json(method, url, token, data=None):
@@ -87,13 +87,25 @@ def acknowledged(expected, token, requester=request_json):
         receipt = json.loads(base64.b64decode(doc["content"]))
         if receipt.get("date") != expected["date"] or receipt.get("active_sha256") != expected["active_sha256"]:
             return False
+        if expected.get("history_sha256") and receipt.get("history_sha256") != expected["history_sha256"]:
+            return False
         # Independently verify MemaraSix actually committed the full source list.
         url2 = "https://api.github.com/repos/" + TARGET_REPO + "/contents/listasix-data/active-list.json?ref=main"
         active_doc = requester("GET", url2, token)
         if active_doc.get("encoding") != "base64":
             return False
         active = json.loads(base64.b64decode(active_doc["content"]))
-        return active.get("date") == expected["date"] and fingerprint(active) == expected["active_sha256"]
+        if active.get("date") != expected["date"] or fingerprint(active) != expected["active_sha256"]:
+            return False
+        # New Scout gate also requires the exact same ESPN last-five history.
+        if expected.get("history_sha256"):
+            url3 = "https://api.github.com/repos/" + TARGET_REPO + "/contents/listasix-data/history-h2h.json?ref=main"
+            history_doc = requester("GET", url3, token)
+            if history_doc.get("encoding") != "base64":
+                return False
+            history = json.loads(base64.b64decode(history_doc["content"]))
+            return history.get("date") == expected["date"] and fingerprint(history) == expected["history_sha256"]
+        return True
     except (HTTPError, URLError, ValueError, KeyError, TypeError, TimeoutError):
         return False
 
