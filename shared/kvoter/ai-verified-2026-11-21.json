@@ -904,6 +904,82 @@
           "no": 2.28
         }
       }
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879235",
+      "home": "Coventry City",
+      "away": "Crystal Palace",
+      "league": "eng.1",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea pre-match bookmaker average",
+      "markets": {
+        "1X2": {
+          "home": 2.41,
+          "draw": 3.64,
+          "away": 2.84
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879232",
+      "home": "Newcastle United",
+      "away": "Arsenal",
+      "league": "eng.1",
+      "start_utc": "2026-11-21T17:30:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea pre-match bookmaker average",
+      "markets": {
+        "1X2": {
+          "home": 5.54,
+          "draw": 4.28,
+          "away": 1.58
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878939",
+      "home": "Racing Genk",
+      "away": "RAAL La Louvière",
+      "league": "bel.1",
+      "start_utc": "2026-11-21T17:15:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea pre-match bookmaker average",
+      "markets": {
+        "1X2": {
+          "home": 1.44,
+          "draw": 4.79,
+          "away": 6.44
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878938",
+      "home": "Zulte-Waregem",
+      "away": "Antwerp",
+      "league": "bel.1",
+      "start_utc": "2026-11-21T19:45:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea pre-match bookmaker average",
+      "markets": {
+        "1X2": {
+          "home": 2.14,
+          "draw": 3.6,
+          "away": 3.21
+        }
+      }
     }
   ]
 }
