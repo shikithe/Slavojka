@@ -1,0 +1,36 @@
+name: ListaSix — publish AI quotes to dnevna kladionicarska ponuda
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'shared/kvoter/ai-verified-*.json'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: listasix-ai-quote-publisher
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify ESPN identity and publish AI quotes directly
+        run: python3 -m lista.publish_ai_offer
+      - name: Commit named daily offer and synchronized source
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f -- docs/active-list.json docs/kvoter-ponuda.txt shared/active-list.json shared/kvoter-ponuda.txt
+          if ! git diff --cached --quiet; then
+            git commit -m "Kvoter dnevna kladionicarska ponuda: show online AI prices [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
