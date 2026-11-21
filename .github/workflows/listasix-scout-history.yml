@@ -29,12 +29,16 @@ jobs:
         run: python3 -m lista.scout_history
       - name: Reconcile AI online prices with ESPN IDs for technical MemaraSix quote validation
         run: python3 -m kvoter.merge_ai
+      - name: Score ALL ESPN fixtures once fresh odds and last-five history both exist
+        run: |
+          python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
+          python3 -m lista.scout_six_markets
       - name: Commit current ESPN form and validated quote provenance
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- shared/agent/history-h2h.json shared/kvoter/provider-offers.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/match-report.json shared/kvoter/coverage.json
+          git add -f -- shared/agent/history-h2h.json shared/kvoter/provider-offers.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/match-report.json shared/kvoter/coverage.json shared/agent/scout-six-markets*.json docs/scout-six-markets.json docs/scout-six-markets.txt
           if ! git diff --cached --quiet; then
             git commit -m "ListaSix ESPN current last-five scout history [skip ci]"
             for attempt in 1 2 3 4; do
