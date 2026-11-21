@@ -980,6 +980,331 @@
           "away": 3.21
         }
       }
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888247",
+      "home": "Genclerbirligi",
+      "away": "Gaziantep FK",
+      "league": "tur.1",
+      "start_utc": "2026-11-21T10:30:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 2.36,
+          "draw": 3.54,
+          "away": 2.92
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882806",
+      "home": "Alavés",
+      "away": "Deportivo",
+      "league": "esp.1",
+      "start_utc": "2026-11-21T13:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 2.33,
+          "draw": 3.32,
+          "away": 3.24
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888369",
+      "home": "Amed SFK",
+      "away": "Caykur Rizespor",
+      "league": "tur.1",
+      "start_utc": "2026-11-21T13:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 1.72,
+          "draw": 4.05,
+          "away": 4.5
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884728",
+      "home": "SV Elversberg",
+      "away": "SC Freiburg",
+      "league": "ger.1",
+      "start_utc": "2026-11-21T14:30:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 3.46,
+          "draw": 3.82,
+          "away": 2.04
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878336",
+      "home": "Falkirk",
+      "away": "St Johnstone",
+      "league": "sco.1",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 1.81,
+          "draw": 3.68,
+          "away": 4.02
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878335",
+      "home": "Hibernian",
+      "away": "Dundee United",
+      "league": "sco.1",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 1.93,
+          "draw": 3.74,
+          "away": 3.47
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878334",
+      "home": "Kilmarnock",
+      "away": "Aberdeen",
+      "league": "sco.1",
+      "start_utc": "2026-11-21T15:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 2.53,
+          "draw": 3.48,
+          "away": 2.56
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878337",
+      "home": "Dundee",
+      "away": "Heart of Midlothian",
+      "league": "sco.1",
+      "start_utc": "2026-11-21T17:45:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 3.31,
+          "draw": 3.66,
+          "away": 2.02
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401933758",
+      "home": "Defensa y Justicia",
+      "away": "Barracas Central",
+      "league": "arg.1",
+      "start_utc": "2026-11-21T18:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 2.11,
+          "draw": 3.09,
+          "away": 3.66
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875546",
+      "home": "FC Groningen",
+      "away": "Heerenveen",
+      "league": "ned.1",
+      "start_utc": "2026-11-21T20:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 2.51,
+          "draw": 3.81,
+          "away": 2.57
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875539",
+      "home": "Telstar",
+      "away": "PEC Zwolle",
+      "league": "ned.1",
+      "start_utc": "2026-11-21T20:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 2.08,
+          "draw": 3.63,
+          "away": 3.39
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401933755",
+      "home": "Argentinos Juniors",
+      "away": "Independiente",
+      "league": "arg.1",
+      "start_utc": "2026-11-21T20:00:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 1.95,
+          "draw": 3.14,
+          "away": 4.19
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841327",
+      "home": "Bahia",
+      "away": "Coritiba",
+      "league": "bra.1",
+      "start_utc": "2026-11-21T20:30:00Z",
+      "sport": "football",
+      "source_urls": [
+        "https://tipsterarea.com/matches/date-21-11-2026"
+      ],
+      "bookmaker": "TipsterArea published 1X2 odds",
+      "markets": {
+        "1X2": {
+          "home": 1.49,
+          "draw": 4.54,
+          "away": 6.02
+        }
+      },
+      "market_sources": {
+        "1X2": {
+          "url": "https://tipsterarea.com/matches/date-21-11-2026",
+          "bookmaker": "TipsterArea published 1X2 odds"
+        }
+      }
     }
   ]
 }
