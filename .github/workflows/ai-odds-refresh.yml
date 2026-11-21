@@ -1,9 +1,5 @@
-name: ListaSix refresh offer after AI Kvoter partial odds commit
+name: Legacy AI Kvoter matching (manual only; replaced by direct daily offer)
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'shared/kvoter/ai-verified-*.json'
   workflow_dispatch:
 permissions:
   contents: write
