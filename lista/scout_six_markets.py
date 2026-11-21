@@ -167,7 +167,7 @@ def ticket_combos(rows):
             product = math.prod(x["strongest_odds"] for x in combo)
             if not (2.0 <= product <= 3.0):
                 continue
-            scores = [x["strongest_pct"] for x in combo]
+            scores = [x.get("scout_value_score") if x.get("scout_value_score") is not None else x["strongest_pct"] for x in combo]
             second = [x["second_pct"] for x in combo]
             # Favor higher top-market reliability rather than high odds.
             # Lower n helps avoid extra legs when equally rated.
@@ -194,7 +194,7 @@ def suggestions(ranked):
             if a["ids"] & b["ids"]:
                 continue
             leg_list = list(a["rows"]) + list(b["rows"])
-            all_scores = [r["strongest_pct"] for r in leg_list]
+            all_scores = [r.get("scout_value_score") if r.get("scout_value_score") is not None else r["strongest_pct"] for r in leg_list]
             next_scores = [r["second_pct"] for r in leg_list]
             score = (round(sum(all_scores)/len(all_scores),5), min(all_scores),
                      round(sum(next_scores)/len(next_scores),5),
@@ -211,11 +211,14 @@ def suggestions(ranked):
 def format_combo(combo, tid):
     return {
         "id":tid,"combined_odds":combo["odds"],
-        "selection_method":"highest estimated top-market percentages; tie by second best",
+        "selection_method":"highest conservative market EV/probability/evidence score; tie by model probability then runner-up",
         "ready_for_publication":False,"requires_independent_ai_approval":True,
         "matches":[{
             "fixture_id":r["fixture_id"],"match":r["match"],"datetime":r["datetime"],
             "pick":r["strongest_market"],"probability_pct":r["strongest_pct"],
+            "rank_score":r.get("scout_value_score"),
+            "conservative_ev_pct":r.get("recommended_ev_pct"),
+            "data_quality_index_pct":r.get("data_quality_index_pct"),
             "second_best_pct":r["second_pct"],"odd":r["strongest_odds"]
         } for r in combo["rows"]]
     }
@@ -234,9 +237,16 @@ def detailed_ai_handoff(rows):
             "match": r["match"], "datetime": r["datetime"],
             "top_market": r["strongest_market"],
             "top_probability_pct": r["strongest_pct"],
+            "recommended_market": r["recommended_market"],
+            "recommended_probability_pct": r["recommended_pct"],
+            "recommended_adjusted_probability_pct": r["recommended_adjusted_pct"],
+            "recommended_score": r["recommended_score"],
+            "recommended_ev_pct": r["recommended_ev_pct"],
+            "data_quality_index_pct": r["data_quality_index_pct"],
             "second_market": r["second_market"],
             "second_probability_pct": r["second_pct"],
             "top_market_odds": r["strongest_odds"],
+            "recommended_market_odds": r["recommended_odds"],
             "eligible_for_A": True, "eligible_for_B": r["candidate_B"],
             "all_six_probabilities_pct": r["probability_pct"],
             "math_already_done": {
@@ -259,7 +269,7 @@ def detailed_ai_handoff(rows):
         })
     return {
         "limit": DETAILED_SCOUT_LIMIT,
-        "selection_rule": "Only eligible future fixtures, sorted by highest TOP model probability; ties by second and then third best; never select a weaker market",
+        "selection_rule": "Top 10 eligible future fixtures by conservative six-market score (adjusted probability, EV and sample quality); one strongest scored market per match; probability tie-breaker",
         "count": len(items),
         "math_recalculation_prohibited": True,
         "independent_ai_review_required": True,
@@ -282,17 +292,22 @@ def analyze(feed, active, history, now):
         if display_row.get("match")!=f["home"]+" - "+f["away"] or display_row.get("datetime")!=f["start_utc"]:
             raise ValueError("ESPN team or kickoff discrepancy for "+fid)
         records.append(evaluate_fixture(display_row,history,now))
-    records.sort(key=ranking)
+    from lista.scout_value import apply_value_model, proposal_view
+    records = apply_value_model(records, history, now)
     handoff = detailed_ai_handoff(records)
     selected_ids = {x["fixture_id"] for x in handoff["candidates"]}
     # Every proposed A/B leg must be among the exact 10 forwarded to Detailed AI.
-    possible = suggestions([r for r in records if r["fixture_id"] in selected_ids])
+    possible = suggestions([proposal_view(r) for r in records if r["fixture_id"] in selected_ids])
     return {
-        "schema_version":1,"date":feed["date"],
+        "schema_version":2,"date":feed["date"],
         "generated_at_utc":now.isoformat(),"source_feed_generated_at_utc":feed.get("generated_at_utc"),
         "source_active_sha256":canonical_hash(active),
         "source_history_sha256":canonical_hash(history),
-        "model":"Independent Poisson 1X2/Over2.5/BTTS with recency-weighted five matches and league shrinkage",
+        "model":"Poisson 6/6 + market-anchored adjusted probabilities + conservative EV + sample-quality index across six markets",
+        "value_selection_enabled":True,
+        "score_formula":"0.42*adjusted_probability_pct + 0.43*clamp(conservative_ev_pct,-25,30) + 0.15*data_quality_index_pct",
+        "value_selection_not_backtested":True,
+        "data_quality_index_is_not_accuracy":True,
         "probabilities_are_calibrated":False,
         "disclaimer":"Statistical estimates, not observed win chances or guarantees. Validate via rolling backtest; separate analyst review for injuries/xG/H2H.",
         "all_six_markets":list(MARKETS),
@@ -321,13 +336,25 @@ def render_text(doc):
         stat="A/B" if r["candidate_B"] else ("A" if r["candidate_A"] else "OUT")
         out.append(f'{n} | {r["match"]} | {ps} | {r["strongest_market"]} {r["strongest_pct"]:.1f}% | {r["second_market"]} {r["second_pct"]:.1f}% | {odds} | {stat}')
     out.append("")
+    out.append("PRICE/EV RANKING | match | pick | raw p% | conservative p% | evidence /100 | conservative EV% | score | odds | eligible")
+    for rank, r in enumerate(doc["ranked_fixtures"], 1):
+        if r["recommended_market"] is None:
+            continue
+        out.append(f'{rank} | {r["match"]} | {r["recommended_market"]} | '
+                   f'{r["recommended_pct"]:.1f}% | {r["recommended_adjusted_pct"]:.1f}% '
+                   f'| {r["data_quality_index_pct"]:.1f} | {r["recommended_ev_pct"]:+.1f}% '
+                   f'| {r["recommended_score"]:.2f} | {r["recommended_odds"]:.2f} '
+                   f'| {"YES" if r["candidate_A"] else "NO"}')
+    out.append("")
     out.append("DETAILED AI SCOUT: TOP " + str(doc["detailed_ai_handoff"]["count"]) +
                " ONLY (mathematical form, goals, home/away, league averages ALREADY DONE)")
     for item in doc["detailed_ai_handoff"]["candidates"]:
-        out.append(f'{item["rank"]}. {item["match"]} | TOP {item["top_market"]} '
-                   f'{item["top_probability_pct"]:.1f}% | runner-up {item["second_market"]} '
-                   f'{item["second_probability_pct"]:.1f}% | odds {item["top_market_odds"]:.2f} '
-                   '| Detailed AI: xG, injuries, lineup, H2H, motivation, rest, source check')
+        out.append(f'{item["rank"]}. {item["match"]} | VALUE PICK {item["recommended_market"]} '
+                   f'{item["recommended_probability_pct"]:.1f}% | conservative p '
+                   f'{item["recommended_adjusted_probability_pct"]:.1f}% | EV '
+                   f'{item["recommended_ev_pct"]:+.1f}% | evidence '
+                   f'{item["data_quality_index_pct"]:.1f}/100 | score {item["recommended_score"]:.2f} '
+                   f'| odds {item["recommended_market_odds"]:.2f} | Independent AI review pending')
     out.append("")
     for tid in ("A","B"):
         t=doc["ticket_proposals"][tid]
