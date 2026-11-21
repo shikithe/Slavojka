@@ -1,0 +1,54 @@
+name: ListaSix SCOUT 6/6 every game six markets and candidate A/B
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'lista/scout_six_markets.py'
+      - 'tests/test_scout_six_markets.py'
+      - '.github/workflows/listasix-scout-six-markets.yml'
+  schedule:
+    # UTC: every 15m across the European morning/early afternoon.
+    # Local-date, source-date, and kickoff checks are enforced in Python.
+    - cron: '0,15,30,45 7-12 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: listasix-scout-six-markets
+  cancel-in-progress: false
+jobs:
+  rank-all-markets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regression tests 100 matches times 6 markets, unique A/B, odds 2-3
+        run: python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
+      - name: Evaluate ALL same-day ESPN fixtures on 6 markets
+        run: python3 -m lista.scout_six_markets
+      - name: Commit complete ranked matrix and unapproved A/B suggestions
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f -- shared/agent/scout-six-markets*.json docs/scout-six-markets.json docs/scout-six-markets.txt 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "ListaSix Scout 6/6 all fixtures ranked, not auto-approved [skip ci]"
+            for attempt in 1 2 3 4 5; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then
+                echo "SCOUT_6OF6_REPORT_PUBLISHED"
+                break
+              fi
+              if [ "$attempt" = 5 ]; then exit 1; fi
+              sleep $((attempt * 2))
+            done
+          else
+            echo "SCOUT_6OF6_NO_NEW_DATA"
+          fi
