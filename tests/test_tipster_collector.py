@@ -2,7 +2,7 @@ import unittest
 from datetime import date
 from bs4 import BeautifulSoup
 
-from kvoter.tipster_collector import parse_daily, assign_links, parse_markets, verified_match_page
+from kvoter.tipster_collector import parse_daily, assign_links, parse_markets, verified_match_page, recover_verified_page_links
 
 DAY = date(2026, 11, 21)
 DAILY = """<html><body><h1>Matches for Saturday, 21 November, 2026</h1>
@@ -57,6 +57,18 @@ class TipsterCollectorTests(unittest.TestCase):
                 self.assertIn(fixture["fixture_id"], matched)
                 swapped = dict(candidate, home=tipster[1], away=tipster[0])
                 self.assertNotIn(fixture["fixture_id"], assign_links([fixture], [swapped]))
+
+    def test_missing_index_link_recovers_only_verified_exact_fixture(self):
+        fixture = dict(fixture_id="espn:chicago", home="Chicago Fire FC",
+                       away="Charlotte FC", start_utc="2026-11-22T23:30:00Z")
+        links = {}
+        days = {}
+        recover_verified_page_links([fixture], links, days)
+        self.assertEqual(links["espn:chicago"]["url"],
+                         "https://tipsterarea.com/match/chicago-fire-charlotte-fc-playoff-usa-956702")
+        other = dict(fixture, fixture_id="espn:wrong", away="Columbus Crew")
+        recover_verified_page_links([other], links, days)
+        self.assertNotIn("espn:wrong", links)
 
     def test_bookmakers_market_columns(self):
         prices, books = parse_markets(BeautifulSoup(MATCH, "html.parser"))
