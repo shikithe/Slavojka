@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "date": "2026-11-22",
-  "generated_at_utc": "2026-11-22T15:09:21.047489+00:00",
+  "generated_at_utc": "2026-11-22T16:10:34.002448+00:00",
   "source_feed_generated_at_utc": "2026-11-22T08:45:33.379109+00:00",
   "source_active_sha256": "6ec5789d72fddd88f7b02aa7c1a4b856d4c802d52df4d35ec189dabb49921164",
-  "source_history_sha256": "2e34052d6011833ec82bd86e2b6277f0368cb1d248e09b0e5d37bffe6b91c327",
+  "source_history_sha256": "dcb9c25cb4360d85dd5a769d98346e90c58714ed1b209df2d36476d254e72288",
   "model": "Poisson 6/6 + market-anchored adjusted probabilities + conservative EV + sample-quality index across six markets",
   "value_selection_enabled": true,
   "score_formula": "0.42*adjusted_probability_pct + 0.43*clamp(conservative_ev_pct,-25,30) + 0.15*data_quality_index_pct",
@@ -24,8 +24,8 @@
   "total_market_probabilities": 222,
   "all_fixtures_evaluated": 37,
   "all_six_odds_present": 37,
-  "candidate_A_count": 8,
-  "candidate_B_count": 3,
+  "candidate_A_count": 6,
+  "candidate_B_count": 2,
   "ranked_fixtures": [
     {
       "fixture_id": "espn:football:ita.1:401874960",
@@ -929,10 +929,12 @@
         "injuries_checked": false,
         "h2h_checked": false
       },
-      "candidate_A": true,
-      "candidate_B": true,
+      "candidate_A": false,
+      "candidate_B": false,
       "needs_independent_ai_review": true,
-      "limitations": [],
+      "limitations": [
+        "Started or less than 20 minutes to kickoff; exclude from new tickets"
+      ],
       "market_value": {
         "1": {
           "raw_probability_pct": 46.0,
@@ -1006,7 +1008,9 @@
       "recommended_ev_pct": 10.62,
       "value_runner_up_market": "GG",
       "value_runner_up_score": 35.23,
-      "value_limitations": []
+      "value_limitations": [
+        "Kickoff already started or within twenty minutes"
+      ]
     },
     {
       "fixture_id": "espn:football:tur.1:401888249",
@@ -1052,7 +1056,9 @@
       "candidate_A": false,
       "candidate_B": false,
       "needs_independent_ai_review": true,
-      "limitations": [],
+      "limitations": [
+        "Started or less than 20 minutes to kickoff; exclude from new tickets"
+      ],
       "market_value": {
         "1": {
           "raw_probability_pct": 71.4,
@@ -1127,7 +1133,8 @@
       "value_runner_up_market": "NG",
       "value_runner_up_score": 30.026,
       "value_limitations": [
-        "No positive conservative EV for chosen market"
+        "No positive conservative EV for chosen market",
+        "Kickoff already started or within twenty minutes"
       ]
     },
     {
@@ -1171,10 +1178,12 @@
         "injuries_checked": false,
         "h2h_checked": false
       },
-      "candidate_A": true,
+      "candidate_A": false,
       "candidate_B": false,
       "needs_independent_ai_review": true,
-      "limitations": [],
+      "limitations": [
+        "Started or less than 20 minutes to kickoff; exclude from new tickets"
+      ],
       "market_value": {
         "1": {
           "raw_probability_pct": 35.2,
@@ -1248,7 +1257,9 @@
       "recommended_ev_pct": 0.03,
       "value_runner_up_market": "3+",
       "value_runner_up_score": 36.45,
-      "value_limitations": []
+      "value_limitations": [
+        "Kickoff already started or within twenty minutes"
+      ]
     },
     {
       "fixture_id": "espn:football:bel.1:401878934",
@@ -2884,7 +2895,9 @@
       "candidate_A": false,
       "candidate_B": false,
       "needs_independent_ai_review": true,
-      "limitations": [],
+      "limitations": [
+        "Started or less than 20 minutes to kickoff; exclude from new tickets"
+      ],
       "market_value": {
         "1": {
           "raw_probability_pct": 45.7,
@@ -2959,7 +2972,8 @@
       "value_runner_up_market": "3+",
       "value_runner_up_score": 32.299,
       "value_limitations": [
-        "No positive conservative EV for chosen market"
+        "No positive conservative EV for chosen market",
+        "Kickoff already started or within twenty minutes"
       ]
     },
     {
@@ -4485,7 +4499,9 @@
       "candidate_A": false,
       "candidate_B": false,
       "needs_independent_ai_review": true,
-      "limitations": [],
+      "limitations": [
+        "Started or less than 20 minutes to kickoff; exclude from new tickets"
+      ],
       "market_value": {
         "1": {
           "raw_probability_pct": 47.0,
@@ -4560,14 +4576,15 @@
       "value_runner_up_market": "NG",
       "value_runner_up_score": 28.528,
       "value_limitations": [
-        "No positive conservative EV for chosen market"
+        "No positive conservative EV for chosen market",
+        "Kickoff already started or within twenty minutes"
       ]
     }
   ],
   "detailed_ai_handoff": {
     "limit": 10,
     "selection_rule": "Top 10 eligible future fixtures by conservative six-market score (adjusted probability, EV and sample quality); one strongest scored market per match; probability tie-breaker",
-    "count": 8,
+    "count": 6,
     "math_recalculation_prohibited": true,
     "independent_ai_review_required": true,
     "candidates": [
@@ -4691,124 +4708,6 @@
       },
       {
         "rank": 3,
-        "fixture_id": "espn:football:fra.1:401876401",
-        "match": "Lorient - Stade Rennais",
-        "datetime": "2026-11-22T16:15:00Z",
-        "top_market": "GG",
-        "top_probability_pct": 62.3,
-        "recommended_market": "3+",
-        "recommended_probability_pct": 61.1,
-        "recommended_adjusted_probability_pct": 57.02,
-        "recommended_score": 37.104,
-        "recommended_ev_pct": 10.62,
-        "data_quality_index_pct": 57.3,
-        "second_market": "3+",
-        "second_probability_pct": 61.1,
-        "top_market_odds": 1.66,
-        "recommended_market_odds": 1.94,
-        "eligible_for_A": true,
-        "eligible_for_B": true,
-        "all_six_probabilities_pct": {
-          "1": 46.0,
-          "X": 23.2,
-          "2": 30.8,
-          "3+": 61.1,
-          "GG": 62.3,
-          "NG": 37.7
-        },
-        "math_already_done": {
-          "last_five_matches_per_team": {
-            "home": 5,
-            "away": 5
-          },
-          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
-          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
-          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
-          "modeled_goals": {
-            "home": 1.76,
-            "away": 1.4
-          },
-          "poisson_probabilities": {
-            "1": 46.0,
-            "X": 23.2,
-            "2": 30.8,
-            "3+": 61.1,
-            "GG": 62.3,
-            "NG": 37.7
-          }
-        },
-        "ai_checks_still_required": [
-          "actual_xg_xga_if_available",
-          "injuries_and_suspensions",
-          "expected_lineups",
-          "recent_h2h_up_to_five",
-          "table_and_motivation",
-          "rest_days_and_schedule",
-          "odds_identity_and_source"
-        ],
-        "ai_review_status": "pending_independent_review"
-      },
-      {
-        "rank": 4,
-        "fixture_id": "espn:football:ned.1:401875542",
-        "match": "Go Ahead Eagles - Fortuna Sittard",
-        "datetime": "2026-11-22T15:45:00Z",
-        "top_market": "GG",
-        "top_probability_pct": 67.6,
-        "recommended_market": "GG",
-        "recommended_probability_pct": 67.6,
-        "recommended_adjusted_probability_pct": 67.59,
-        "recommended_score": 36.761,
-        "recommended_ev_pct": 0.03,
-        "data_quality_index_pct": 55.8,
-        "second_market": "3+",
-        "second_probability_pct": 67.2,
-        "top_market_odds": 1.48,
-        "recommended_market_odds": 1.48,
-        "eligible_for_A": true,
-        "eligible_for_B": false,
-        "all_six_probabilities_pct": {
-          "1": 35.2,
-          "X": 22.3,
-          "2": 42.5,
-          "3+": 67.2,
-          "GG": 67.6,
-          "NG": 32.4
-        },
-        "math_already_done": {
-          "last_five_matches_per_team": {
-            "home": 5,
-            "away": 5
-          },
-          "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
-          "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
-          "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
-          "modeled_goals": {
-            "home": 1.64,
-            "away": 1.82
-          },
-          "poisson_probabilities": {
-            "1": 35.2,
-            "X": 22.3,
-            "2": 42.5,
-            "3+": 67.2,
-            "GG": 67.6,
-            "NG": 32.4
-          }
-        },
-        "ai_checks_still_required": [
-          "actual_xg_xga_if_available",
-          "injuries_and_suspensions",
-          "expected_lineups",
-          "recent_h2h_up_to_five",
-          "table_and_motivation",
-          "rest_days_and_schedule",
-          "odds_identity_and_source"
-        ],
-        "ai_review_status": "pending_independent_review"
-      },
-      {
-        "rank": 5,
         "fixture_id": "espn:football:bel.1:401878941",
         "match": "Anderlecht - OH Leuven",
         "datetime": "2026-11-22T17:30:00Z",
@@ -4867,7 +4766,7 @@
         "ai_review_status": "pending_independent_review"
       },
       {
-        "rank": 6,
+        "rank": 4,
         "fixture_id": "espn:football:esp.1:401882801",
         "match": "Osasuna - Málaga",
         "datetime": "2026-11-22T17:30:00Z",
@@ -4926,7 +4825,7 @@
         "ai_review_status": "pending_independent_review"
       },
       {
-        "rank": 7,
+        "rank": 5,
         "fixture_id": "espn:football:esp.1:401882803",
         "match": "Getafe - Atlético Madrid",
         "datetime": "2026-11-22T20:00:00Z",
@@ -4985,7 +4884,7 @@
         "ai_review_status": "pending_independent_review"
       },
       {
-        "rank": 8,
+        "rank": 6,
         "fixture_id": "espn:football:bra.1:401841318",
         "match": "Athletico-PR - Remo",
         "datetime": "2026-11-22T19:00:00Z",
@@ -5048,8 +4947,6 @@
   "detailed_ai_top_ten_fixture_ids": [
     "espn:football:usa.1:401933730",
     "espn:football:ita.1:401874989",
-    "espn:football:fra.1:401876401",
-    "espn:football:ned.1:401875542",
     "espn:football:bel.1:401878941",
     "espn:football:esp.1:401882801",
     "espn:football:esp.1:401882803",
@@ -5058,7 +4955,7 @@
   "ticket_proposals": {
     "A": {
       "id": "A",
-      "combined_odds": 2.102,
+      "combined_odds": 2.414,
       "selection_method": "highest conservative market EV/probability/evidence score; tie by model probability then runner-up",
       "ready_for_publication": false,
       "requires_independent_ai_approval": true,
@@ -5076,22 +4973,22 @@
           "odd": 1.42
         },
         {
-          "fixture_id": "espn:football:ned.1:401875542",
-          "match": "Go Ahead Eagles - Fortuna Sittard",
-          "datetime": "2026-11-22T15:45:00Z",
+          "fixture_id": "espn:football:bel.1:401878941",
+          "match": "Anderlecht - OH Leuven",
+          "datetime": "2026-11-22T17:30:00Z",
           "pick": "GG",
-          "probability_pct": 67.6,
-          "rank_score": 36.761,
-          "conservative_ev_pct": 0.03,
-          "data_quality_index_pct": 55.8,
-          "second_best_pct": 67.2,
-          "odd": 1.48
+          "probability_pct": 60.6,
+          "rank_score": 34.171,
+          "conservative_ev_pct": 1.68,
+          "data_quality_index_pct": 55.5,
+          "second_best_pct": 58.1,
+          "odd": 1.7
         }
       ]
     },
     "B": {
       "id": "B",
-      "combined_odds": 2.522,
+      "combined_odds": 2.678,
       "selection_method": "highest conservative market EV/probability/evidence score; tie by model probability then runner-up",
       "ready_for_publication": false,
       "requires_independent_ai_approval": true,
@@ -5109,16 +5006,16 @@
           "odd": 1.3
         },
         {
-          "fixture_id": "espn:football:fra.1:401876401",
-          "match": "Lorient - Stade Rennais",
-          "datetime": "2026-11-22T16:15:00Z",
+          "fixture_id": "espn:football:esp.1:401882801",
+          "match": "Osasuna - Málaga",
+          "datetime": "2026-11-22T17:30:00Z",
           "pick": "3+",
-          "probability_pct": 61.1,
-          "rank_score": 37.104,
-          "conservative_ev_pct": 10.62,
-          "data_quality_index_pct": 57.3,
-          "second_best_pct": 61.1,
-          "odd": 1.94
+          "probability_pct": 56.3,
+          "rank_score": 33.912,
+          "conservative_ev_pct": 8.6,
+          "data_quality_index_pct": 53.8,
+          "second_best_pct": 56.3,
+          "odd": 2.06
         }
       ]
     },
