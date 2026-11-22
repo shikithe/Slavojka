@@ -17,10 +17,10 @@ When today's `shared/kvoter/coverage-feedback.json` has `status=ai_review_requir
 4. If a page is located, open it and verify its date and identity rather than merely trusting a search result. Record exact URL and evidence.
 5. Only confirmed pages may be offered to the existing collector for parsing 1X2, Over 2.5 (3+) and BTTS yes/no, using real displayed prices. Never invent or interpolate prices.
 6. If ambiguity remains, leave the fixture unmatched and log why; do not reduce identity thresholds globally or silently overwrite any quote.
-7. Recheck completion: ALL ESPN fixture IDs require >=1 real odds field, then feedback becomes `ready_for_scout` and the already existing Scout 6/6 can run. Otherwise keep `ai_review_required`. Report ESPN total, matched, unmatched, quote coverage, and reasons for remaining exceptions.
+7. Recheck completion after one additional verified matching attempt. Return `ODDS_READY` even when some fixtures remain without a valid quote. Preserve all confirmed quotes; report ESPN total, matched, unmatched/skipped, quote coverage, and reasons. Do not invent prices; unquoted matches cannot be selected as betting candidates.
 
 ## Output contract
 Write structured review records with ESPN fixture_id, original ESPN names, TipsterArea names, source URL, local source date, decision (confirmed / rejected / unresolved), reason and evidence. Only confirmed records can be consumed by a separate verified importer, which must recheck URL allowlist, page title/date and team identity.
 
 ## Ownership
-GitHub collects, stores and publishes; the AI analyst performs the research and identity judgments. This prompt does not schedule or launch the analyst. The existing scheduled MEMARA A/B AI task now checks the feedback and may execute this review at its next scheduled run; GitHub additionally opens a deduplicated review issue as a visible handoff. This is not an immediate GitHub-to-ChatGPT webhook.
+GitHub collects, stores and publishes; the AI analyst performs the research and identity judgments. This prompt does not schedule or launch the analyst. On missing matches GitHub opens a deduplicated AI review issue and makes ONE additional verified deterministic matching attempt before emitting final `ODDS_READY`. A GitHub issue or this prompt does not itself execute an AI model; genuine AI name research requires the ChatGPT analyst at a subsequent run or a separately connected inference service. The final status must never misrepresent a deterministic retry as completed AI research.
