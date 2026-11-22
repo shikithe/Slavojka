@@ -4,81 +4,20 @@
   "status": "ready",
   "source_fingerprint": "9fde36b10286dffdc0eee6284e18246ffa9ed9e088ef08363fe74b8603200307",
   "scout_report": "shared/agent/scout-six-markets.json",
-  "count": 10,
+  "count": 8,
   "fixture_ids": [
-    "espn:football:ita.1:401874960",
     "espn:football:usa.1:401933730",
-    "espn:football:tur.1:401888248",
     "espn:football:ita.1:401874989",
-    "espn:football:ger.1:401884733",
     "espn:football:fra.1:401876401",
     "espn:football:ned.1:401875542",
-    "espn:football:ita.1:401875047",
-    "espn:football:ned.1:401875547",
-    "espn:football:bel.1:401878942"
+    "espn:football:bel.1:401878941",
+    "espn:football:esp.1:401882801",
+    "espn:football:esp.1:401882803",
+    "espn:football:bra.1:401841318"
   ],
   "candidates": [
     {
       "rank": 1,
-      "fixture_id": "espn:football:ita.1:401874960",
-      "match": "Sassuolo - Genoa",
-      "datetime": "2026-11-22T14:00:00Z",
-      "top_market": "3+",
-      "top_probability_pct": 68.5,
-      "recommended_market": "3+",
-      "recommended_probability_pct": 68.5,
-      "recommended_adjusted_probability_pct": 60.36,
-      "recommended_score": 42.652,
-      "recommended_ev_pct": 20.71,
-      "data_quality_index_pct": 56.0,
-      "second_market": "GG",
-      "second_probability_pct": 65.7,
-      "top_market_odds": 2.0,
-      "recommended_market_odds": 2.0,
-      "eligible_for_A": true,
-      "eligible_for_B": true,
-      "all_six_probabilities_pct": {
-        "1": 23.2,
-        "X": 20.4,
-        "2": 56.4,
-        "3+": 68.5,
-        "GG": 65.7,
-        "NG": 34.3
-      },
-      "math_already_done": {
-        "last_five_matches_per_team": {
-          "home": 5,
-          "away": 5
-        },
-        "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
-        "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
-        "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
-        "modeled_goals": {
-          "home": 1.35,
-          "away": 2.18
-        },
-        "poisson_probabilities": {
-          "1": 23.2,
-          "X": 20.4,
-          "2": 56.4,
-          "3+": 68.5,
-          "GG": 65.7,
-          "NG": 34.3
-        }
-      },
-      "ai_checks_still_required": [
-        "actual_xg_xga_if_available",
-        "injuries_and_suspensions",
-        "expected_lineups",
-        "recent_h2h_up_to_five",
-        "table_and_motivation",
-        "rest_days_and_schedule",
-        "odds_identity_and_source"
-      ],
-      "ai_review_status": "pending_independent_review"
-    },
-    {
-      "rank": 2,
       "fixture_id": "espn:football:usa.1:401933730",
       "match": "Chicago Fire FC - Charlotte FC",
       "datetime": "2026-11-22T23:30:00Z",
@@ -137,66 +76,7 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 3,
-      "fixture_id": "espn:football:tur.1:401888248",
-      "match": "Kasimpasa - Alanyaspor",
-      "datetime": "2026-11-22T13:00:00Z",
-      "top_market": "1",
-      "top_probability_pct": 65.2,
-      "recommended_market": "1",
-      "recommended_probability_pct": 65.2,
-      "recommended_adjusted_probability_pct": 58.68,
-      "recommended_score": 39.94,
-      "recommended_ev_pct": 16.18,
-      "data_quality_index_pct": 55.6,
-      "second_market": "3+",
-      "second_probability_pct": 58.3,
-      "top_market_odds": 1.98,
-      "recommended_market_odds": 1.98,
-      "eligible_for_A": true,
-      "eligible_for_B": false,
-      "all_six_probabilities_pct": {
-        "1": 65.2,
-        "X": 19.7,
-        "2": 15.1,
-        "3+": 58.3,
-        "GG": 52.5,
-        "NG": 47.5
-      },
-      "math_already_done": {
-        "last_five_matches_per_team": {
-          "home": 5,
-          "away": 5
-        },
-        "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
-        "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
-        "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
-        "modeled_goals": {
-          "home": 2.12,
-          "away": 0.91
-        },
-        "poisson_probabilities": {
-          "1": 65.2,
-          "X": 19.7,
-          "2": 15.1,
-          "3+": 58.3,
-          "GG": 52.5,
-          "NG": 47.5
-        }
-      },
-      "ai_checks_still_required": [
-        "actual_xg_xga_if_available",
-        "injuries_and_suspensions",
-        "expected_lineups",
-        "recent_h2h_up_to_five",
-        "table_and_motivation",
-        "rest_days_and_schedule",
-        "odds_identity_and_source"
-      ],
-      "ai_review_status": "pending_independent_review"
-    },
-    {
-      "rank": 4,
+      "rank": 2,
       "fixture_id": "espn:football:ita.1:401874989",
       "match": "AC Milan - Frosinone",
       "datetime": "2026-11-22T17:00:00Z",
@@ -255,66 +135,7 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 5,
-      "fixture_id": "espn:football:ger.1:401884733",
-      "match": "FC Augsburg - Mainz",
-      "datetime": "2026-11-22T14:30:00Z",
-      "top_market": "3+",
-      "top_probability_pct": 71.7,
-      "recommended_market": "3+",
-      "recommended_probability_pct": 71.7,
-      "recommended_adjusted_probability_pct": 71.33,
-      "recommended_score": 38.056,
-      "recommended_ev_pct": 0.57,
-      "data_quality_index_pct": 52.3,
-      "second_market": "GG",
-      "second_probability_pct": 71.1,
-      "top_market_odds": 1.41,
-      "recommended_market_odds": 1.41,
-      "eligible_for_A": true,
-      "eligible_for_B": true,
-      "all_six_probabilities_pct": {
-        "1": 43.3,
-        "X": 21.5,
-        "2": 35.2,
-        "3+": 71.7,
-        "GG": 71.1,
-        "NG": 28.9
-      },
-      "math_already_done": {
-        "last_five_matches_per_team": {
-          "home": 5,
-          "away": 5
-        },
-        "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
-        "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
-        "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
-        "modeled_goals": {
-          "home": 1.96,
-          "away": 1.76
-        },
-        "poisson_probabilities": {
-          "1": 43.3,
-          "X": 21.5,
-          "2": 35.2,
-          "3+": 71.7,
-          "GG": 71.1,
-          "NG": 28.9
-        }
-      },
-      "ai_checks_still_required": [
-        "actual_xg_xga_if_available",
-        "injuries_and_suspensions",
-        "expected_lineups",
-        "recent_h2h_up_to_five",
-        "table_and_motivation",
-        "rest_days_and_schedule",
-        "odds_identity_and_source"
-      ],
-      "ai_review_status": "pending_independent_review"
-    },
-    {
-      "rank": 6,
+      "rank": 3,
       "fixture_id": "espn:football:fra.1:401876401",
       "match": "Lorient - Stade Rennais",
       "datetime": "2026-11-22T16:15:00Z",
@@ -373,7 +194,7 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 7,
+      "rank": 4,
       "fixture_id": "espn:football:ned.1:401875542",
       "match": "Go Ahead Eagles - Fortuna Sittard",
       "datetime": "2026-11-22T15:45:00Z",
@@ -432,90 +253,31 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 8,
-      "fixture_id": "espn:football:ita.1:401875047",
-      "match": "Bologna - Udinese",
-      "datetime": "2026-11-22T14:00:00Z",
-      "top_market": "3+",
-      "top_probability_pct": 60.1,
-      "recommended_market": "3+",
-      "recommended_probability_pct": 60.1,
-      "recommended_adjusted_probability_pct": 55.75,
-      "recommended_score": 36.066,
-      "recommended_ev_pct": 10.38,
-      "data_quality_index_pct": 54.6,
-      "second_market": "GG",
-      "second_probability_pct": 59.9,
-      "top_market_odds": 1.98,
-      "recommended_market_odds": 1.98,
-      "eligible_for_A": true,
-      "eligible_for_B": true,
-      "all_six_probabilities_pct": {
-        "1": 52.7,
-        "X": 22.5,
-        "2": 24.8,
-        "3+": 60.1,
-        "GG": 59.9,
-        "NG": 40.1
-      },
-      "math_already_done": {
-        "last_five_matches_per_team": {
-          "home": 5,
-          "away": 5
-        },
-        "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
-        "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
-        "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
-        "modeled_goals": {
-          "home": 1.88,
-          "away": 1.23
-        },
-        "poisson_probabilities": {
-          "1": 52.7,
-          "X": 22.5,
-          "2": 24.8,
-          "3+": 60.1,
-          "GG": 59.9,
-          "NG": 40.1
-        }
-      },
-      "ai_checks_still_required": [
-        "actual_xg_xga_if_available",
-        "injuries_and_suspensions",
-        "expected_lineups",
-        "recent_h2h_up_to_five",
-        "table_and_motivation",
-        "rest_days_and_schedule",
-        "odds_identity_and_source"
-      ],
-      "ai_review_status": "pending_independent_review"
-    },
-    {
-      "rank": 9,
-      "fixture_id": "espn:football:ned.1:401875547",
-      "match": "Ajax Amsterdam - ADO Den Haag",
-      "datetime": "2026-11-22T13:30:00Z",
+      "rank": 5,
+      "fixture_id": "espn:football:bel.1:401878941",
+      "match": "Anderlecht - OH Leuven",
+      "datetime": "2026-11-22T17:30:00Z",
       "top_market": "GG",
-      "top_probability_pct": 63.3,
+      "top_probability_pct": 60.6,
       "recommended_market": "GG",
-      "recommended_probability_pct": 63.3,
-      "recommended_adjusted_probability_pct": 61.58,
-      "recommended_score": 35.505,
-      "recommended_ev_pct": 3.45,
-      "data_quality_index_pct": 54.4,
+      "recommended_probability_pct": 60.6,
+      "recommended_adjusted_probability_pct": 59.81,
+      "recommended_score": 34.171,
+      "recommended_ev_pct": 1.68,
+      "data_quality_index_pct": 55.5,
       "second_market": "3+",
-      "second_probability_pct": 62.1,
-      "top_market_odds": 1.68,
-      "recommended_market_odds": 1.68,
+      "second_probability_pct": 58.1,
+      "top_market_odds": 1.7,
+      "recommended_market_odds": 1.7,
       "eligible_for_A": true,
       "eligible_for_B": false,
       "all_six_probabilities_pct": {
-        "1": 45.0,
-        "X": 23.1,
-        "2": 31.9,
-        "3+": 62.1,
-        "GG": 63.3,
-        "NG": 36.7
+        "1": 35.5,
+        "X": 24.2,
+        "2": 40.3,
+        "3+": 58.1,
+        "GG": 60.6,
+        "NG": 39.4
       },
       "math_already_done": {
         "last_five_matches_per_team": {
@@ -526,16 +288,16 @@
         "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
         "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
         "modeled_goals": {
-          "home": 1.76,
-          "away": 1.45
+          "home": 1.45,
+          "away": 1.57
         },
         "poisson_probabilities": {
-          "1": 45.0,
-          "X": 23.1,
-          "2": 31.9,
-          "3+": 62.1,
-          "GG": 63.3,
-          "NG": 36.7
+          "1": 35.5,
+          "X": 24.2,
+          "2": 40.3,
+          "3+": 58.1,
+          "GG": 60.6,
+          "NG": 39.4
         }
       },
       "ai_checks_still_required": [
@@ -550,31 +312,31 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 10,
-      "fixture_id": "espn:football:bel.1:401878942",
-      "match": "Waasland-Beveren - KAA Gent",
-      "datetime": "2026-11-22T12:30:00Z",
+      "rank": 6,
+      "fixture_id": "espn:football:esp.1:401882801",
+      "match": "Osasuna - Málaga",
+      "datetime": "2026-11-22T17:30:00Z",
       "top_market": "GG",
-      "top_probability_pct": 60.0,
+      "top_probability_pct": 58.8,
       "recommended_market": "3+",
-      "recommended_probability_pct": 59.7,
-      "recommended_adjusted_probability_pct": 57.43,
-      "recommended_score": 34.597,
-      "recommended_ev_pct": 5.11,
-      "data_quality_index_pct": 55.2,
+      "recommended_probability_pct": 56.3,
+      "recommended_adjusted_probability_pct": 52.72,
+      "recommended_score": 33.912,
+      "recommended_ev_pct": 8.6,
+      "data_quality_index_pct": 53.8,
       "second_market": "3+",
-      "second_probability_pct": 59.7,
-      "top_market_odds": 1.65,
-      "recommended_market_odds": 1.83,
+      "second_probability_pct": 56.3,
+      "top_market_odds": 1.85,
+      "recommended_market_odds": 2.06,
       "eligible_for_A": true,
       "eligible_for_B": true,
       "all_six_probabilities_pct": {
-        "1": 25.7,
-        "X": 22.8,
-        "2": 51.5,
-        "3+": 59.7,
-        "GG": 60.0,
-        "NG": 40.0
+        "1": 44.5,
+        "X": 24.3,
+        "2": 31.2,
+        "3+": 56.3,
+        "GG": 58.8,
+        "NG": 41.2
       },
       "math_already_done": {
         "last_five_matches_per_team": {
@@ -585,16 +347,134 @@
         "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
         "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
         "modeled_goals": {
-          "home": 1.25,
-          "away": 1.85
+          "home": 1.62,
+          "away": 1.32
         },
         "poisson_probabilities": {
-          "1": 25.7,
-          "X": 22.8,
-          "2": 51.5,
-          "3+": 59.7,
-          "GG": 60.0,
-          "NG": 40.0
+          "1": 44.5,
+          "X": 24.3,
+          "2": 31.2,
+          "3+": 56.3,
+          "GG": 58.8,
+          "NG": 41.2
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 7,
+      "fixture_id": "espn:football:esp.1:401882803",
+      "match": "Getafe - Atlético Madrid",
+      "datetime": "2026-11-22T20:00:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 52.9,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 52.9,
+      "recommended_adjusted_probability_pct": 50.63,
+      "recommended_score": 33.472,
+      "recommended_ev_pct": 7.33,
+      "data_quality_index_pct": 60.4,
+      "second_market": "3+",
+      "second_probability_pct": 49.3,
+      "top_market_odds": 2.12,
+      "recommended_market_odds": 2.12,
+      "eligible_for_A": true,
+      "eligible_for_B": false,
+      "all_six_probabilities_pct": {
+        "1": 28.7,
+        "X": 25.6,
+        "2": 45.7,
+        "3+": 49.3,
+        "GG": 52.9,
+        "NG": 47.1
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+        "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+        "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+        "modeled_goals": {
+          "home": 1.14,
+          "away": 1.51
+        },
+        "poisson_probabilities": {
+          "1": 28.7,
+          "X": 25.6,
+          "2": 45.7,
+          "3+": 49.3,
+          "GG": 52.9,
+          "NG": 47.1
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 8,
+      "fixture_id": "espn:football:bra.1:401841318",
+      "match": "Athletico-PR - Remo",
+      "datetime": "2026-11-22T19:00:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 58.7,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 58.7,
+      "recommended_adjusted_probability_pct": 58.29,
+      "recommended_score": 33.033,
+      "recommended_ev_pct": 0.85,
+      "data_quality_index_pct": 54.6,
+      "second_market": "3+",
+      "second_probability_pct": 55.6,
+      "top_market_odds": 1.73,
+      "recommended_market_odds": 1.73,
+      "eligible_for_A": true,
+      "eligible_for_B": false,
+      "all_six_probabilities_pct": {
+        "1": 38.6,
+        "X": 24.7,
+        "2": 36.7,
+        "3+": 55.6,
+        "GG": 58.7,
+        "NG": 41.3
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
+        "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
+        "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+        "modeled_goals": {
+          "home": 1.48,
+          "away": 1.43
+        },
+        "poisson_probabilities": {
+          "1": 38.6,
+          "X": 24.7,
+          "2": 36.7,
+          "3+": 55.6,
+          "GG": 58.7,
+          "NG": 41.3
         }
       },
       "ai_checks_still_required": [
