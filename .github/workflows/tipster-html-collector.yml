@@ -100,7 +100,7 @@ jobs:
             git commit -m "ListaSix: TipsterArea HTML odds update [skip ci]"
             # Another service may commit while this action is collecting; retry safe fast-forward pushes.
             for attempt in 1 2 3 4 5; do
-              git pull --rebase origin main
+              git -c rebase.autoStash=true pull --rebase origin main
               if git push origin HEAD:main; then
                 echo "TIPSTER_PUBLIC_OFFER_COMMITTED"
                 break
