@@ -8,11 +8,9 @@ on:
     paths:
       - 'kvoter/tipster_collector.py'
       - 'tests/test_tipster_collector.py'
+      - 'lista/tipster_feedback_cycle.py'
+      - 'tests/test_tipster_feedback_cycle.py'
       - '.github/workflows/tipster-html-collector.yml'
-  schedule:
-    # UTC cadence; the Python timezone gate enforces 09:00-12:00 Sarajevo.
-    # Cron is best-effort; subsequent runs fill any remaining fields.
-    - cron: '*/10 7-11 * * *'
 permissions:
   contents: write
   issues: write
@@ -39,23 +37,55 @@ jobs:
         run: python3 -m kvoter.tipster_collector
       - name: Update the public Kvoter Dnevna kladionicarska ponuda directly
         run: python3 -m lista.publish_ai_offer
-      - name: Feedback — require at least one real quote for EVERY ESPN fixture
+      - name: Initial feedback — detect unpaired ESPN fixtures
         id: feedback
         run: |
           python3 -m unittest discover -s tests -p 'test_odds_feedback.py' -v
           python3 -m lista.odds_feedback
-      - name: Feedback MISSING — request AI identity matching before Scout
+      - name: Feedback MISSING — request prompt-guided identity review
+        if: steps.feedback.outputs.ready == 'false'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess
+          from pathlib import Path
+          fb=json.loads(Path("shared/kvoter/coverage-feedback.json").read_text())
+          if fb.get("feedback")!="ODDS_MISSING_AI_REVIEW": raise SystemExit("Missing preliminary feedback")
+          title=f"ListaSix AI odds matching — {fb['date']}"
+          body=("IDENTITY REVIEW: prompts/tipster-unmatched-ai-review.md\n"
+                "This issue is a prompt handoff; GitHub does not execute an AI model.\n"
+                "Before finalization, the collector makes one additional deterministic, "
+                "verified-only matching pass; unresolved games remain without quotes.\n\n"
+                + "\n".join(f"- {x['fixture_id']} | {x['league']} | {x['home']} - {x['away']} | {x['start_utc']}"
+                            for x in fb["missing_fixtures"]))
+          found=subprocess.run(["gh","issue","list","--repo",os.environ["GH_REPO"],
+                                "--state","all","--search",title,"--json","title"],
+                               check=True,capture_output=True,text=True)
+          if not any(x["title"]==title for x in json.loads(found.stdout)):
+              subprocess.run(["gh","issue","create","--repo",os.environ["GH_REPO"],
+                              "--title",title,"--body",body],check=True)
+          print("AI_NAME_REVIEW_FEEDBACK_SENT",fb["without_quote"])
+          PY
+      - name: One extra verified matching pass only when initial coverage is incomplete
         if: steps.feedback.outputs.ready == 'false'
         run: |
-          echo "FEEDBACK_ODDS_MISSING_AI_REVIEW: ${{ steps.feedback.outputs.missing }} fixtures lack quotes"
-          echo "AI instructions: prompts/tipster-unmatched-ai-review.md"
+          python3 -m kvoter.tipster_collector --force
+          python3 -m lista.publish_ai_offer
+      - name: Final feedback — proceed with collected prices, even if some names stay unmatched
+        id: final_feedback
+        run: |
+          python3 -m unittest discover -s tests -p 'test_tipster_feedback_cycle.py' -v
+          python3 -m lista.tipster_feedback_cycle
       - name: Require fresh last-five history before producing Scout/Top10 signals
         id: scout_sources
         run: python3 -m lista.scout_source_gate
       - name: Both feedback paths converge at Scout 6/6
         if: steps.scout_sources.outputs.ready == 'true'
         run: |
-          echo "SCOUT_6OF6_AFTER_FEEDBACK; missing=${{ steps.feedback.outputs.missing }}"
+          echo "SCOUT_6OF6_AFTER_ODDS_READY; missing_initial=${{ steps.feedback.outputs.missing }}"
           python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
           python3 -m lista.scout_six_markets
           python3 -m unittest discover -s tests -p 'test_scout_feedback.py' -v
@@ -65,7 +95,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json shared/kvoter/coverage-feedback.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt shared/agent/scout-six-markets*.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json docs/scout-six-markets.json docs/scout-six-markets.txt
+          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json shared/kvoter/coverage-feedback.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt shared/agent/scout-six-markets*.json docs/scout-six-markets.json docs/scout-six-markets.txt
           if ! git diff --cached --quiet; then
             git commit -m "ListaSix: TipsterArea HTML odds update [skip ci]"
             # Another service may commit while this action is collecting; retry safe fast-forward pushes.
@@ -82,33 +112,3 @@ jobs:
             echo "TIPSTER_NO_NEW_PRICES"
           fi
 
-      - name: Post one deduplicated GitHub issue for AI review of missing fixtures
-        if: steps.feedback.outputs.ready == 'false'
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
-        run: |
-          python3 - <<'PY'
-          import json, os, subprocess
-          from pathlib import Path
-          status=json.loads(Path("shared/kvoter/coverage-feedback.json").read_text())
-          title=f"ListaSix AI odds matching — {status['date']}"
-          # gh issue list returns one row per open issue, including existing handoff.
-          listing=subprocess.run(["gh","issue","list","--repo",os.environ["GH_REPO"],"--state","open",
-                                  "--search",title,"--json","title,number"],
-                                  check=True,text=True,capture_output=True)
-          items=json.loads(listing.stdout)
-          body=("AI IDENTITY RESEARCH REQUIRED. Follow exactly:\n"
-                "prompts/tipster-unmatched-ai-review.md\n\n"
-                "Feedback: shared/kvoter/coverage-feedback.json\n"
-                f"Missing {status['without_quote']} of {status['espn_total']} ESPN fixtures.\n\n"
-                + "\n".join("- "+x["fixture_id"]+" | "+x["league"]+" | "+x["home"]+
-                            " - "+x["away"]+" | "+x["start_utc"] for x in status["missing_fixtures"]))
-          if any(x["title"]==title for x in items):
-              print("AI_REVIEW_ISSUE_ALREADY_OPEN")
-          else:
-              subprocess.run(["gh","issue","create","--repo",os.environ["GH_REPO"],"--title",title,
-                              "--body",body],check=True)
-              print("AI_REVIEW_ISSUE_CREATED")
-          PY
