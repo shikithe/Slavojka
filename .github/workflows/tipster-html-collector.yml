@@ -44,17 +44,16 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p 'test_odds_feedback.py' -v
           python3 -m lista.odds_feedback
-      - name: Feedback COMPLETE — run Scout 6/6
-        if: steps.feedback.outputs.ready == 'true'
-        run: |
-          echo "FEEDBACK_ODDS_COMPLETE_SCOUT_6OF6"
-          python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
-          python3 -m lista.scout_six_markets
-      - name: Feedback MISSING — request AI identity matching (no premature Scout)
+      - name: Feedback MISSING — request AI identity matching before Scout
         if: steps.feedback.outputs.ready == 'false'
         run: |
           echo "FEEDBACK_ODDS_MISSING_AI_REVIEW: ${{ steps.feedback.outputs.missing }} fixtures lack quotes"
           echo "AI instructions: prompts/tipster-unmatched-ai-review.md"
+      - name: Both feedback paths converge at Scout 6/6
+        run: |
+          echo "SCOUT_6OF6_AFTER_FEEDBACK; missing=${{ steps.feedback.outputs.missing }}"
+          python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
+          python3 -m lista.scout_six_markets
       - name: Commit collected odds AND visible daily list in the same workflow
         run: |
           set -euo pipefail
