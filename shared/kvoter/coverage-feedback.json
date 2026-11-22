@@ -1,11 +1,17 @@
 {
   "date": "2026-11-22",
   "status": "ready_for_scout",
-  "feedback": "ODDS_COMPLETE_SCOUT_6OF6",
+  "feedback": "ODDS_READY",
   "espn_total": 37,
   "with_at_least_one_quote": 37,
   "without_quote": 0,
   "missing_fixtures": [],
   "ai_prompt": null,
-  "next_action": "scout_6of6"
+  "next_action": "scout_6of6_if_history_ready",
+  "final": true,
+  "retry_attempted": false,
+  "matched_with_quotes": 37,
+  "skipped_unmatched": 0,
+  "incomplete_markets_allowed": true,
+  "finished_at_utc": "2026-11-22T12:51:19.488085+00:00"
 }
