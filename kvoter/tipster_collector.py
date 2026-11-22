@@ -261,12 +261,16 @@ def recover_verified_page_links(fixtures, links, linked_day):
         fid = fixture["fixture_id"]
         if fid in links:
             continue
-        match_day = datetime.fromisoformat(fixture["start_utc"].replace("Z", "+00:00")).astimezone(TZ).date()
-        key = (match_day.isoformat(), normalized(fixture["home"]), normalized(fixture["away"]))
-        url = VERIFIED_PAGE_FALLBACKS.get(key)
-        if url:
-            links[fid] = {"home": fixture["home"], "away": fixture["away"], "url": url}
-            linked_day[fid] = match_day
+        kickoff_utc = datetime.fromisoformat(fixture["start_utc"].replace("Z", "+00:00"))
+        # The TipsterArea index and ESPN local-date boundary can differ near midnight.
+        # Try the explicitly verified UTC date as well, never accept an unchecked title.
+        for match_day in (kickoff_utc.astimezone(TZ).date(), kickoff_utc.date()):
+            key = (match_day.isoformat(), normalized(fixture["home"]), normalized(fixture["away"]))
+            url = VERIFIED_PAGE_FALLBACKS.get(key)
+            if url:
+                links[fid] = {"home": fixture["home"], "away": fixture["away"], "url": url}
+                linked_day[fid] = match_day
+                break
     return links
 
 def save_json(path, data):
