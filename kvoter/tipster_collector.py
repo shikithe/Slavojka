@@ -249,6 +249,26 @@ def verified_match_page(soup, daily, fixture, day):
             and similarity(daily["home"], home) >= 0.78
             and similarity(daily["away"], away) >= 0.78)
 
+# Date-scoped direct page recovered from TipsterArea search when its daily
+# index omitted the link. The page title/date/home/away MUST still verify.
+VERIFIED_PAGE_FALLBACKS = {
+    ("2026-11-22", "chicago fire", "charlotte"): 
+        "https://tipsterarea.com/match/chicago-fire-charlotte-fc-playoff-usa-956702",
+}
+
+def recover_verified_page_links(fixtures, links, linked_day):
+    for fixture in fixtures:
+        fid = fixture["fixture_id"]
+        if fid in links:
+            continue
+        match_day = datetime.fromisoformat(fixture["start_utc"].replace("Z", "+00:00")).astimezone(TZ).date()
+        key = (match_day.isoformat(), normalized(fixture["home"]), normalized(fixture["away"]))
+        url = VERIFIED_PAGE_FALLBACKS.get(key)
+        if url:
+            links[fid] = {"home": fixture["home"], "away": fixture["away"], "url": url}
+            linked_day[fid] = match_day
+    return links
+
 def save_json(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
@@ -299,6 +319,7 @@ def run(args):
         mapped = assign_links(day_fixtures, matches)
         links.update(mapped)
         linked_day.update({fid: fixture_day for fid in mapped})
+    recover_verified_page_links(fixtures, links, linked_day)
     if not total_matches:
         raise RuntimeError("TipsterArea returned no match links; possible block or site change")
     updated = 0
