@@ -50,7 +50,7 @@ def evaluate(feed, active, today):
         "espn_total": len(fixtures), "with_at_least_one_quote": with_quotes,
         "without_quote": len(missing), "missing_fixtures": missing,
         "ai_prompt": "prompts/tipster-unmatched-ai-review.md" if missing else None,
-        "next_action": "scout_6of6" if not missing else "ai_research_and_retry"
+        "next_action": "scout_6of6" if not missing else "ai_review_handoff_then_scout_6of6_and_rescout_after_recovery"
     }
 
 def main():
