@@ -59,6 +59,26 @@ ALIASES = {
     "philadelphia union": "philadelphia", "fc dallas": "dallas",
     "columbus crew": "columbus", "portland timbers": "portland",
     "chapecoense": "chapecoense", "bahia": "bahia",
+    # ESPN / TipsterArea verified 2026-11-22 same-match identity aliases.
+    # Exact normalized names only: retain home/away and date verification.
+    "erzurum bb": "erzurumspor", "erzurumspor": "erzurumspor",
+    "willem ii tilburg": "willem ii",
+    "waasland beveren": "sk beveren", "sk beveren": "sk beveren",
+    "brighton and hove albion": "brighton", "brighton": "brighton",
+    "stade rennais": "rennais", "rennais": "rennais",
+    "hamburg sv": "hamburg", "hamburger": "hamburg",
+    "oh leuven": "oud heverlee leuven",
+    "athletico pr": "atletico pr", "atletico pr": "atletico pr",
+    "remo pa": "remo",
+    "internazionale": "inter",
+    "fluminense rj": "fluminense", "mirassol sp": "mirassol",
+    "red bull bragantino": "bragantino", "bragantino sp": "bragantino",
+    "vasco da gama rj": "vasco da gama",
+    "chicago fire": "chicago fire", "chicago fire fc": "chicago fire",
+    "instituto cordoba": "instituto ac cordoba",
+    "instituto ac cordoba": "instituto ac cordoba",
+    "huracan": "huracan buenos aires",
+    "huracan buenos aires": "huracan buenos aires",
 }
 def normalized(name):
     text = unicodedata.normalize("NFKD", name.casefold())
