@@ -29,7 +29,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Require today's COMPLETE quote feedback before independent Scout
+      - name: Require today's quote feedback before independent Scout
         id: coverage
         run: |
           python3 - <<'PY'
@@ -48,8 +48,11 @@ jobs:
               feed=json.loads(Path("shared/collector-feed.json").read_text(encoding="utf-8"))
               active=json.loads(Path("shared/active-list.json").read_text(encoding="utf-8"))
               computed=evaluate(feed, active, today)
-              ready=(status.get("date")==today and status.get("status")=="ready_for_scout"
-                     and computed["status"]=="ready_for_scout")
+              ready=(status.get("date")==today
+                     and status.get("status") in ("ready_for_scout", "ai_review_required")
+                     and computed["status"]==status["status"]
+                     and status.get("espn_total")==computed["espn_total"]
+                     and status.get("without_quote")==computed["without_quote"])
               print("SCOUT_COVERAGE_READY",ready)
           with open(os.environ["GITHUB_OUTPUT"],"a") as out:
               out.write("ready="+("true" if ready else "false")+"\n")
