@@ -1,6 +1,8 @@
 name: ListaSix TipsterArea HTML collector (ESPN -> 1X2, 3+, GG/NG)
 on:
   workflow_dispatch:
+  repository_dispatch:
+    types: [espn-feed-ready]
   push:
     branches: [main]
     paths:
