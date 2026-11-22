@@ -13,7 +13,19 @@ U validnom meču preuzmi:
 - link izvora, datum utakmice i vrijeme provjere.
 Važno: FairXG-ove 'fair odds' su izvedene iz vjerovatnoća; NISU ponuđene kladioničarske kvote. Kladioničarske kvote ostaju iz našeg TipsterArea active-list.json.
 
-Uporedi procenat ISTOG tržišta našeg Matematičkog Scouta 6/6 i FairXG. delta_pp = nas_model_pct - fairxg_pct. Naš EV se računa pomoću NAŠE stvarne kvote s TipsterArea, ne FairXG fair odds. Prikaži i zaseban hipotetički FairXG EV samo uz jasno označenu istu stvarnu kvotu. Za razliku veću ili jednaku 10 procentnih poena napiši eksplicitno 'MODEL DISAGREEMENT', razloge neizvjesnosti, dodatnu provjeru ili odbijanje tipa. Nema automatskog povećanja ili smanjenja našeg modela: prosudi dokaze.
+NOVO OBAVEZNO PRAVILO — KONAČNA VJEROVATNOĆA PO TRŽIŠTU (22.11.2026):
+Za SVAKO pojedinačno tržište od 1, X, 2, 3+, GG, NG odredi:
+- p_math = vjerovatnoća iz originalnog Matematičkog Scouta 6/6 (ne mijenjati izvornu datoteku).
+- p_fairxg = odgovarajući FairXG procenat SAMO kada je potvrđen identičan ESPN meč (liga, datum, domaćin/gost), identično tržište i dostupan eksplicitan broj; ne zaključuj/procjenjuj nedostajući podatak osim NG = 100 - eksplicitni FairXG GG, ako su oba istog modela i iste definicije tržišta.
+- Ako p_fairxg postoji: p_final = (p_math + p_fairxg) / 2.
+- Ako p_fairxg ne postoji za to tržište ili podudaranje nije sigurno: p_final = p_math.
+Izračun radi PO TRŽIŠTU nezavisno; ne smiješ proglasiti cijelu utakmicu nedostupnom ako FairXG ima samo neka tržišta. Čuvaj polja math_probability_pct, fairxg_probability_pct (ili null), final_probability_pct, fairxg_status, source_url, model_basis, delta_pp. Prikaži ta tri procenta jasno, da korisnik vidi porijeklo konačne brojke. Za 1/X/2 koristi isti glavni FairXG skup procjena, NE miješaj nasumično bookmaker-based i poseban Goals model; Goals model prikaži odvojeno kao kontekst.
+
+KONAČNI EV za TipsterArea kvotu O iz active-list.json: ev_final_pct = (p_final/100 * O - 1)*100. Na osnovu ove konačne vjerovatnoće i konačnog EV rangiraj tipove i donesi završnu A/B odluku uz ostalih sedam obaveznih AI faktora. Ne miješaj FairXG modelsku 'fair odds' sa ponudom kladionice. Ako p_fairxg nije dostupan, koristi originalni p_math i izračunaj finalni EV na toj osnovi.
+
+Ako apsolutna razlika p_math i p_fairxg iznosi >=10 procentnih poena, obavezno označi MODEL DISAGREEMENT i objasni rizik; PRAVILO PROSJEKA ipak važi kada su oba podatka za isto tržište validna. Ne miješaj izvornu modelsku vjerovatnoću i ranije dodatno konzervativno prilagođenu vjerovatnoću: za p_math koristi originalni market probability iz all_six_probabilities_pct; obje druge vrijednosti prikaži odvojeno kao kontekst.
+
+Napomena: aritmetički prosjek je korisnikovo operativno pravilo, nije statistički dokaz da je procjena preciznija; izvori mogu biti korelisani. Održavaj ovu ogradu u analizi.
 
 Ako FairXG nema utakmicu, ne podudara se datum, liga, domaćin ili gost, ili pristup nije moguć: označi unavailable/ambiguous i nastavi sedam drugih faktora te naš Scout bez čekanja. Sve TOP10 analiziraj i prijavi pokrivenost (matched/ambiguous/unavailable), bez prisilnog odabira tiketa.
 
