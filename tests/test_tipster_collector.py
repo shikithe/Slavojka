@@ -33,6 +33,31 @@ class TipsterCollectorTests(unittest.TestCase):
         self.assertIn("espn:test", links)
         self.assertEqual(links["espn:test"]["home"], "Manchester City")
 
+    def test_verified_espn_tipster_aliases_20261122(self):
+        pairs = [
+            (("Erzurum BB", "Goztepe"), ("Erzurumspor", "Goztepe")),
+            (("FC Twente", "Willem II"), ("Twente", "Willem II Tilburg")),
+            (("Waasland-Beveren", "KAA Gent"), ("SK Beveren", "KAA Gent")),
+            (("Hull City", "Brighton & Hove Albion"), ("Hull City", "Brighton")),
+            (("Lorient", "Stade Rennais"), ("Lorient", "Rennais")),
+            (("Werder Bremen", "Hamburg SV"), ("Werder Bremen", "Hamburger")),
+            (("Anderlecht", "OH Leuven"), ("Anderlecht", "Oud-Heverlee Leuven")),
+            (("Athletico-PR", "Remo"), ("Atletico PR", "Remo PA")),
+            (("Atalanta", "Internazionale"), ("Atalanta", "Inter")),
+            (("Fluminense", "Mirassol"), ("Fluminense RJ", "Mirassol SP")),
+            (("Red Bull Bragantino", "Vasco da Gama"), ("Bragantino SP", "Vasco Da Gama RJ")),
+            (("Chicago Fire FC", "Charlotte FC"), ("Chicago Fire", "Charlotte FC")),
+            (("Instituto (Córdoba)", "Huracán"), ("Instituto AC Cordoba", "Huracan Buenos Aires")),
+        ]
+        for i, (espn, tipster) in enumerate(pairs):
+            with self.subTest(espn=espn):
+                fixture = dict(fixture_id=f"espn:alias:{i}", home=espn[0], away=espn[1])
+                candidate = dict(home=tipster[0], away=tipster[1], url=f"https://tipsterarea.com/match/test-{i}")
+                matched = assign_links([fixture], [candidate])
+                self.assertIn(fixture["fixture_id"], matched)
+                swapped = dict(candidate, home=tipster[1], away=tipster[0])
+                self.assertNotIn(fixture["fixture_id"], assign_links([fixture], [swapped]))
+
     def test_bookmakers_market_columns(self):
         prices, books = parse_markets(BeautifulSoup(MATCH, "html.parser"))
         self.assertEqual(prices["1X2"], {"home": 1.42, "draw": 5.53, "away": 7.6})
