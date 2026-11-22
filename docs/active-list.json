@@ -755,14 +755,23 @@
       "fixture_id": "espn:football:usa.1:401933730",
       "datetime": "2026-11-22T23:30:00Z",
       "match": "Chicago Fire FC - Charlotte FC",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/chicago-fire-charlotte-fc-playoff-usa-956702"
+      ],
+      "home_odds": 1.68,
+      "draw_odds": 4.58,
+      "away_odds": 4.58,
+      "over25_odds": 1.3,
+      "btts_yes_odds": 1.35,
+      "btts_no_odds": 2.94
     },
     {
       "fixture_id": "espn:football:arg.1:401933762",

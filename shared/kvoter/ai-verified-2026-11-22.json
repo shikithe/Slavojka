@@ -2054,6 +2054,63 @@
           }
         }
       }
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933730",
+      "league": "usa.1",
+      "home": "Chicago Fire FC",
+      "away": "Charlotte FC",
+      "start_utc": "2026-11-22T23:30:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.68,
+          "draw": 4.58,
+          "away": 4.58
+        },
+        "3+": {
+          "over": 1.3
+        },
+        "BTTS": {
+          "yes": 1.35,
+          "no": 2.94
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/chicago-fire-charlotte-fc-playoff-usa-956702"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/chicago-fire-charlotte-fc-playoff-usa-956702",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/chicago-fire-charlotte-fc-playoff-usa-956702",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/chicago-fire-charlotte-fc-playoff-usa-956702",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/chicago-fire-charlotte-fc-playoff-usa-956702",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/chicago-fire-charlotte-fc-playoff-usa-956702",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/chicago-fire-charlotte-fc-playoff-usa-956702",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
     }
   ]
 }
