@@ -14,6 +14,7 @@ on:
     - cron: '0,15,30,45 7-12 * * *'
 permissions:
   contents: write
+  issues: write
 concurrency:
   group: listasix-scout-six-markets
   cancel-in-progress: false
@@ -63,13 +64,19 @@ jobs:
       - name: Evaluate ALL same-day ESPN fixtures on 6 markets
         if: steps.coverage.outputs.ready == 'true'
         run: python3 -m lista.scout_six_markets
+      - name: Feedback 1 complete Scout 6/6; Feedback 2 verify TOP10 readiness
+        if: steps.coverage.outputs.ready == 'true'
+        run: |
+          python3 -m unittest discover -s tests -p 'test_scout_feedback.py' -v
+          python3 -m lista.scout_feedback
+
       - name: Commit complete ranked matrix and unapproved A/B suggestions
         if: steps.coverage.outputs.ready == 'true'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- shared/agent/scout-six-markets*.json docs/scout-six-markets.json docs/scout-six-markets.txt 2>/dev/null || true
+          git add -f -- shared/agent/scout-six-markets*.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json docs/scout-six-markets.json docs/scout-six-markets.txt 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "ListaSix Scout 6/6 all fixtures ranked, not auto-approved [skip ci]"
             for attempt in 1 2 3 4 5; do
@@ -84,3 +91,37 @@ jobs:
           else
             echo "SCOUT_6OF6_NO_NEW_DATA"
           fi
+
+      - name: Emit deduplicated TOP10_READY feedback to independent AI analyst
+        if: steps.coverage.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          report=json.loads(Path("shared/agent/top10-feedback.json").read_text(encoding="utf-8"))
+          if report.get("feedback") != "TOP10_READY":
+              print("NO_ELIGIBLE_TOP10_AI_NOT_TRIGGERED")
+              raise SystemExit(0)
+          title="LISTASIX TOP10_READY — "+report["date"]+" — "+report["source_fingerprint"][:12]
+          existing=subprocess.run(["gh","issue","list","--repo",os.environ["GH_REPO"],
+                                  "--state","all","--search",title,"--json","title,number"],
+                                  capture_output=True,text=True,check=True)
+          if any(x["title"]==title for x in json.loads(existing.stdout)):
+              print("TOP10_READY_ALREADY_SIGNALLED")
+              raise SystemExit(0)
+          body=("TOP10_READY: mathematical Scout 6/6 is fully verified, same-day source signatures checked.\\n"
+                "Existing ChatGPT MEMARA A/B AI Scout automation: pick up this signal at the next run, "
+                "research each candidate using the seven detailed factors; no Poisson recalculation.\\n"
+                "Read shared/agent/top10-feedback.json and shared/agent/scout-six-markets.json.\\n"
+                "Only independently verified, non-overlapping, approved A/B selections may be committed "
+                "to shikithe/Memara-tip/memarasix-football-ai-approved.json. GitHub is publisher only.\\n"
+                f"Fingerprint: {report['source_fingerprint']}\\n"
+                f"Candidate IDs: {', '.join(report['fixture_ids'])}.\\n"
+                "This issue is an AI handoff signal, NOT proof the AI analysis has run.")
+          subprocess.run(["gh","issue","create","--repo",os.environ["GH_REPO"],
+                          "--title",title,"--body",body],check=True)
+          print("TOP10_READY_AI_HANDOFF_CREATED")
+          PY
