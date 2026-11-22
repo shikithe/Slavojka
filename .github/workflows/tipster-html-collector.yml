@@ -15,6 +15,7 @@ on:
     - cron: '*/10 7-11 * * *'
 permissions:
   contents: write
+  issues: write
 concurrency:
   group: listasix-tipster-html-collector
   cancel-in-progress: false
@@ -38,16 +39,28 @@ jobs:
         run: python3 -m kvoter.tipster_collector
       - name: Update the public Kvoter Dnevna kladionicarska ponuda directly
         run: python3 -m lista.publish_ai_offer
-      - name: Score EVERY available ESPN game on six markets after the new odds snapshot
+      - name: Feedback — require at least one real quote for EVERY ESPN fixture
+        id: feedback
         run: |
+          python3 -m unittest discover -s tests -p 'test_odds_feedback.py' -v
+          python3 -m lista.odds_feedback
+      - name: Feedback COMPLETE — run Scout 6/6
+        if: steps.feedback.outputs.ready == 'true'
+        run: |
+          echo "FEEDBACK_ODDS_COMPLETE_SCOUT_6OF6"
           python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
           python3 -m lista.scout_six_markets
+      - name: Feedback MISSING — request AI identity matching (no premature Scout)
+        if: steps.feedback.outputs.ready == 'false'
+        run: |
+          echo "FEEDBACK_ODDS_MISSING_AI_REVIEW: ${{ steps.feedback.outputs.missing }} fixtures lack quotes"
+          echo "AI instructions: prompts/tipster-unmatched-ai-review.md"
       - name: Commit collected odds AND visible daily list in the same workflow
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt shared/agent/scout-six-markets*.json docs/scout-six-markets.json docs/scout-six-markets.txt
+          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json shared/kvoter/coverage-feedback.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt shared/agent/scout-six-markets*.json docs/scout-six-markets.json docs/scout-six-markets.txt
           if ! git diff --cached --quiet; then
             git commit -m "ListaSix: TipsterArea HTML odds update [skip ci]"
             # Another service may commit while this action is collecting; retry safe fast-forward pushes.
@@ -63,3 +76,34 @@ jobs:
           else
             echo "TIPSTER_NO_NEW_PRICES"
           fi
+
+      - name: Post one deduplicated GitHub issue for AI review of missing fixtures
+        if: steps.feedback.outputs.ready == 'false'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          status=json.loads(Path("shared/kvoter/coverage-feedback.json").read_text())
+          title=f"ListaSix AI odds matching — {status['date']}"
+          # gh issue list returns one row per open issue, including existing handoff.
+          listing=subprocess.run(["gh","issue","list","--repo",os.environ["GH_REPO"],"--state","open",
+                                  "--search",title,"--json","title,number"],
+                                  check=True,text=True,capture_output=True)
+          items=json.loads(listing.stdout)
+          body=("AI IDENTITY RESEARCH REQUIRED. Follow exactly:\n"
+                "prompts/tipster-unmatched-ai-review.md\n\n"
+                "Feedback: shared/kvoter/coverage-feedback.json\n"
+                f"Missing {status['without_quote']} of {status['espn_total']} ESPN fixtures.\n\n"
+                + "\n".join("- "+x["fixture_id"]+" | "+x["league"]+" | "+x["home"]+
+                            " - "+x["away"]+" | "+x["start_utc"] for x in status["missing_fixtures"]))
+          if any(x["title"]==title for x in items):
+              print("AI_REVIEW_ISSUE_ALREADY_OPEN")
+          else:
+              subprocess.run(["gh","issue","create","--repo",os.environ["GH_REPO"],"--title",title,
+                              "--body",body],check=True)
+              print("AI_REVIEW_ISSUE_CREATED")
+          PY
