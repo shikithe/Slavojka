@@ -73,3 +73,36 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+
+      - name: Feedback - trigger TipsterArea only after confirmed ESPN commit
+        if: steps.gate.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os, urllib.request
+          from datetime import datetime, timezone
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          feed = json.loads(Path("shared/collector-feed.json").read_text(encoding="utf-8"))
+          today = datetime.now(ZoneInfo("Europe/Sarajevo")).date().isoformat()
+          if feed.get("date") != today or not feed.get("football_candidates"):
+              raise SystemExit("ESPN_FEEDBACK_BLOCKED: missing same-day nonempty feed")
+          expires = feed.get("expires_at_utc")
+          if expires and datetime.fromisoformat(expires.replace("Z", "+00:00")) <= datetime.now(timezone.utc):
+              raise SystemExit("ESPN_FEEDBACK_BLOCKED: ESPN feed expired")
+          payload = json.dumps({"event_type": "espn-feed-ready",
+                                "client_payload": {"date": today, "fixtures": len(feed["football_candidates"])}}).encode()
+          url = f"https://api.github.com/repos/{os.environ['GH_REPOSITORY']}/dispatches"
+          req = urllib.request.Request(url, data=payload, method="POST", headers={
+              "Authorization": "Bearer " + os.environ["GH_TOKEN"],
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "Content-Type": "application/json"})
+          with urllib.request.urlopen(req, timeout=20) as response:
+              if response.status != 204:
+                  raise RuntimeError(f"dispatch status {response.status}")
+          print("ESPN_FEEDBACK_DISPATCHED", today, len(feed["football_candidates"]))
+          PY
