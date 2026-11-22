@@ -52,7 +52,7 @@ jobs:
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -f -- shared/collector-feed.json shared/collector-raw.json shared/active-list.json docs/collector-feed.json docs/active-list.json shared/agent/history-h2h.json shared/agent/scout-six-markets.json docs/scout-six-markets.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json shared/agent/daily-reset-feedback.json shared/kvoter/coverage-feedback.json shared/kvoter/tipster-status.json shared/kvoter-ponuda.txt docs/kvoter-ponuda.txt docs/scout-six-markets.txt
+          git add -f -- shared/collector-feed.json shared/collector-raw.json shared/active-list.json docs/collector-feed.json docs/active-list.json shared/agent/history-h2h.json shared/agent/scout-six-markets.json docs/scout-six-markets.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json shared/agent/daily-reset-feedback.json shared/kvoter/coverage-feedback.json shared/kvoter/tipster-status.json shared/kvoter/coverage.json shared/kvoter/match-report.json shared/kvoter/matched_fixtures.json shared/kvoter/unmatched_fixtures.json shared/kvoter/provider-offers.json shared/kvoter-ponuda.txt docs/kvoter-ponuda.txt docs/scout-six-markets.txt
           if ! git diff --cached --quiet; then
             git commit -m 'ListaSix: first daily step, clear yesterday offer [skip ci]'
             for attempt in 1 2 3; do
