@@ -49,7 +49,11 @@ jobs:
         run: |
           echo "FEEDBACK_ODDS_MISSING_AI_REVIEW: ${{ steps.feedback.outputs.missing }} fixtures lack quotes"
           echo "AI instructions: prompts/tipster-unmatched-ai-review.md"
+      - name: Require fresh last-five history before producing Scout/Top10 signals
+        id: scout_sources
+        run: python3 -m lista.scout_source_gate
       - name: Both feedback paths converge at Scout 6/6
+        if: steps.scout_sources.outputs.ready == 'true'
         run: |
           echo "SCOUT_6OF6_AFTER_FEEDBACK; missing=${{ steps.feedback.outputs.missing }}"
           python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
