@@ -58,20 +58,24 @@ jobs:
           with open(os.environ["GITHUB_OUTPUT"],"a") as out:
               out.write("ready="+("true" if ready else "false")+"\n")
           PY
-      - name: Regression tests 100 matches times 6 markets, unique A/B, odds 2-3
+      - name: Check fresh ESPN, TipsterArea and last-five history before Scout
         if: steps.coverage.outputs.ready == 'true'
+        id: sources
+        run: python3 -m lista.scout_source_gate
+      - name: Regression tests 100 matches times 6 markets, unique A/B, odds 2-3
+        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
         run: python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
       - name: Evaluate ALL same-day ESPN fixtures on 6 markets
-        if: steps.coverage.outputs.ready == 'true'
+        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
         run: python3 -m lista.scout_six_markets
       - name: Feedback 1 complete Scout 6/6; Feedback 2 verify TOP10 readiness
-        if: steps.coverage.outputs.ready == 'true'
+        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
         run: |
           python3 -m unittest discover -s tests -p 'test_scout_feedback.py' -v
           python3 -m lista.scout_feedback
 
       - name: Commit complete ranked matrix and unapproved A/B suggestions
-        if: steps.coverage.outputs.ready == 'true'
+        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -93,7 +97,7 @@ jobs:
           fi
 
       - name: Emit deduplicated TOP10_READY feedback to independent AI analyst
-        if: steps.coverage.outputs.ready == 'true'
+        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
