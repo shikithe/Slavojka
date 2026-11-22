@@ -7,27 +7,45 @@
       "fixture_id": "espn:football:tur.1:401888243",
       "datetime": "2026-11-22T10:30:00Z",
       "match": "Erzurum BB - Goztepe",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/erzurumspor-goztepe-super-lig-turkiye-956433"
+      ],
+      "home_odds": 2.75,
+      "draw_odds": 3.39,
+      "away_odds": 2.68,
+      "over25_odds": 2.03,
+      "btts_yes_odds": 1.72,
+      "btts_no_odds": 2.01
     },
     {
       "fixture_id": "espn:football:ned.1:401875545",
       "datetime": "2026-11-22T11:15:00Z",
       "match": "FC Twente - Willem II",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/twente-willem-ii-tilburg-eredivisie-netherlands-956428"
+      ],
+      "home_odds": 1.05,
+      "draw_odds": 16.5,
+      "away_odds": 34.0,
+      "over25_odds": 1.2,
+      "btts_yes_odds": 2.03,
+      "btts_no_odds": 1.7
     },
     {
       "fixture_id": "espn:football:ita.1:401875008",
@@ -55,14 +73,23 @@
       "fixture_id": "espn:football:bel.1:401878942",
       "datetime": "2026-11-22T12:30:00Z",
       "match": "Waasland-Beveren - KAA Gent",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/sk-beveren-kaa-gent-pro-league-belgium-956438"
+      ],
+      "home_odds": 3.62,
+      "draw_odds": 3.62,
+      "away_odds": 2.02,
+      "over25_odds": 1.83,
+      "btts_yes_odds": 1.65,
+      "btts_no_odds": 2.11
     },
     {
       "fixture_id": "espn:football:esp.1:401882804",
@@ -200,14 +227,23 @@
       "fixture_id": "espn:football:eng.1:401879234",
       "datetime": "2026-11-22T14:00:00Z",
       "match": "Hull City - Brighton & Hove Albion",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/hull-city-brighton-premier-league-england-956412"
+      ],
+      "home_odds": 6.73,
+      "draw_odds": 4.68,
+      "away_odds": 1.53,
+      "over25_odds": 1.77,
+      "btts_yes_odds": 1.81,
+      "btts_no_odds": 1.91
     },
     {
       "fixture_id": "espn:football:fra.1:401876397",
@@ -367,14 +403,23 @@
       "fixture_id": "espn:football:fra.1:401876401",
       "datetime": "2026-11-22T16:15:00Z",
       "match": "Lorient - Stade Rennais",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/lorient-rennais-ligue-1-france-956426"
+      ],
+      "home_odds": 2.96,
+      "draw_odds": 3.64,
+      "away_odds": 2.49,
+      "over25_odds": 1.94,
+      "btts_yes_odds": 1.66,
+      "btts_no_odds": 2.12
     },
     {
       "fixture_id": "espn:football:eng.1:401878755",
@@ -402,14 +447,23 @@
       "fixture_id": "espn:football:ger.1:401884730",
       "datetime": "2026-11-22T16:30:00Z",
       "match": "Werder Bremen - Hamburg SV",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/werder-bremen-hamburger-bundesliga-germany-956419"
+      ],
+      "home_odds": 1.66,
+      "draw_odds": 4.57,
+      "away_odds": 5.18,
+      "over25_odds": 1.53,
+      "btts_yes_odds": 1.56,
+      "btts_no_odds": 2.3
     },
     {
       "fixture_id": "espn:football:ita.1:401874989",
@@ -437,14 +491,23 @@
       "fixture_id": "espn:football:bel.1:401878941",
       "datetime": "2026-11-22T17:30:00Z",
       "match": "Anderlecht - OH Leuven",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/anderlecht-oud-heverlee-leuven-pro-league-belgium-956440"
+      ],
+      "home_odds": 1.47,
+      "draw_odds": 4.72,
+      "away_odds": 6.47,
+      "over25_odds": 1.59,
+      "btts_yes_odds": 1.7,
+      "btts_no_odds": 2.04
     },
     {
       "fixture_id": "espn:football:esp.1:401882801",
@@ -494,14 +557,23 @@
       "fixture_id": "espn:football:bra.1:401841318",
       "datetime": "2026-11-22T19:00:00Z",
       "match": "Athletico-PR - Remo",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/atletico-pr-remo-pa-serie-a-brazil-956454"
+      ],
+      "home_odds": 1.59,
+      "draw_odds": 4.18,
+      "away_odds": 5.77,
+      "over25_odds": 1.72,
+      "btts_yes_odds": 1.73,
+      "btts_no_odds": 2.0
     },
     {
       "fixture_id": "espn:football:arg.1:401933759",
@@ -529,14 +601,23 @@
       "fixture_id": "espn:football:ita.1:401875001",
       "datetime": "2026-11-22T19:45:00Z",
       "match": "Atalanta - Internazionale",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/atalanta-inter-serie-a-italy-956424"
+      ],
+      "home_odds": 5.28,
+      "draw_odds": 4.93,
+      "away_odds": 1.61,
+      "over25_odds": 1.39,
+      "btts_yes_odds": 1.45,
+      "btts_no_odds": 2.59
     },
     {
       "fixture_id": "espn:football:fra.1:401876400",
@@ -608,14 +689,23 @@
       "fixture_id": "espn:football:bra.1:401841324",
       "datetime": "2026-11-22T21:30:00Z",
       "match": "Fluminense - Mirassol",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/fluminense-rj-mirassol-sp-serie-a-brazil-956455"
+      ],
+      "home_odds": 1.65,
+      "draw_odds": 4.11,
+      "away_odds": 5.2,
+      "over25_odds": 1.81,
+      "btts_yes_odds": 1.77,
+      "btts_no_odds": 1.95
     },
     {
       "fixture_id": "espn:football:arg.1:401933761",
@@ -643,14 +733,23 @@
       "fixture_id": "espn:football:bra.1:401841321",
       "datetime": "2026-11-22T22:30:00Z",
       "match": "Red Bull Bragantino - Vasco da Gama",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/bragantino-sp-vasco-da-gama-rj-serie-a-brazil-956709"
+      ],
+      "home_odds": 2.58,
+      "draw_odds": 3.55,
+      "away_odds": 2.68,
+      "over25_odds": 1.71,
+      "btts_yes_odds": 1.53,
+      "btts_no_odds": 2.35
     },
     {
       "fixture_id": "espn:football:usa.1:401933730",
@@ -669,14 +768,23 @@
       "fixture_id": "espn:football:arg.1:401933762",
       "datetime": "2026-11-23T01:00:00Z",
       "match": "Instituto (Córdoba) - Huracán",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/instituto-ac-cordoba-huracan-buenos-aires-playoff-argentina-956711"
+      ],
+      "home_odds": 2.08,
+      "draw_odds": 3.09,
+      "away_odds": 4.02,
+      "over25_odds": 2.58,
+      "btts_yes_odds": 2.2,
+      "btts_no_odds": 1.6
     },
     {
       "fixture_id": "espn:football:usa.1:401933729",

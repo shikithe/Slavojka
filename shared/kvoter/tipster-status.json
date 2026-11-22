@@ -1,26 +1,14 @@
 {
   "date": "2026-11-22",
-  "generated_at_utc": "2026-11-22T09:54:43.235304+00:00",
+  "generated_at_utc": "2026-11-22T09:59:57.567998+00:00",
   "espn": 37,
   "daily_tipster_links": 345,
-  "paired": 24,
-  "pages_checked": 24,
-  "updated": 24,
-  "with_any_quotes": 24,
+  "paired": 36,
+  "pages_checked": 12,
+  "updated": 12,
+  "with_any_quotes": 36,
   "unpaired": [
-    "Erzurum BB - Goztepe",
-    "FC Twente - Willem II",
-    "Waasland-Beveren - KAA Gent",
-    "Hull City - Brighton & Hove Albion",
-    "Lorient - Stade Rennais",
-    "Werder Bremen - Hamburg SV",
-    "Anderlecht - OH Leuven",
-    "Athletico-PR - Remo",
-    "Atalanta - Internazionale",
-    "Fluminense - Mirassol",
-    "Red Bull Bragantino - Vasco da Gama",
-    "Chicago Fire FC - Charlotte FC",
-    "Instituto (Córdoba) - Huracán"
+    "Chicago Fire FC - Charlotte FC"
   ],
   "failures": []
 }
