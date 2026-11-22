@@ -24,6 +24,11 @@ FILES = {
     "shared/agent/top10-feedback.json": {"feedback": "WAIT_SCOUT_6OF6", "status": "waiting", "count": 0, "fixture_ids": [], "candidates": []},
     "shared/kvoter/coverage-feedback.json": {"status": "waiting_for_espn", "espn_total": 0, "with_at_least_one_quote": 0, "without_quote": 0, "missing_fixtures": []},
     "shared/kvoter/tipster-status.json": {"espn": 0, "paired": 0, "unpaired": [], "failures": []},
+    "shared/kvoter/coverage.json": {"total": 0, "matched": 0, "unmatched": 0, "fixtures": [], "sources": []},
+    "shared/kvoter/match-report.json": {"total": 0, "matched": 0, "unavailable": 0, "matched_fixtures": [], "unmatched_fixtures": [], "publication_allowed": False},
+    "shared/kvoter/matched_fixtures.json": {"total": 0, "fixtures": []},
+    "shared/kvoter/unmatched_fixtures.json": {"total": 0, "fixtures": []},
+    "shared/kvoter/provider-offers.json": {"offers": []},
 }
 TEXT_FILES = ("shared/kvoter-ponuda.txt", "docs/kvoter-ponuda.txt", "docs/scout-six-markets.txt")
 
@@ -60,6 +65,7 @@ def reset(root, now):
                 raise ValueError("Invalid existing file: "+name)
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps({"date": today, **template}, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
+    # Historical dated snapshots are kept, but only today's dated file can be used.
     for name in TEXT_FILES:
         path=root/name
         path.parent.mkdir(parents=True,exist_ok=True)
