@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-22",
+  "status": "ready_for_scout",
+  "feedback": "ODDS_COMPLETE_SCOUT_6OF6",
+  "espn_total": 37,
+  "with_at_least_one_quote": 37,
+  "without_quote": 0,
+  "missing_fixtures": [],
+  "ai_prompt": null,
+  "next_action": "scout_6of6"
+}
