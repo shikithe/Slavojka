@@ -72,7 +72,7 @@ jobs:
       - name: One extra verified matching pass only when initial coverage is incomplete
         if: steps.feedback.outputs.ready == 'false'
         run: |
-          python3 -m kvoter.tipster_collector --force
+          python3 -m kvoter.tipster_collector --force || echo "SECOND_MATCHING_ATTEMPT_FAILED: keep first-pass verified quotes"
           python3 -m lista.publish_ai_offer
       - name: Final feedback — proceed with collected prices, even if some names stay unmatched
         id: final_feedback
