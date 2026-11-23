@@ -53,7 +53,7 @@ jobs:
                  and set(ids)=={x.get("fixture_id") for x in active.get("fixtures",[])}
                  and fb.get("feedback")=="ODDS_READY" and fb.get("final") is True
                  and fb.get("status")=="ready_for_scout"
-                 and fb.get("matched_with_quotes")==quoted
+                 and quoted>0 and fb.get("matched_with_quotes")==quoted
                  and fb.get("espn_total")==len(ids))
           previous={x.get("fixture_id") for x in hist.get("fixtures",[])}
           complete=(ready and hist.get("date")==today
