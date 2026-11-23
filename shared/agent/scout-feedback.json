@@ -1,10 +1,11 @@
 {
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "feedback": "SCOUT_6OF6_COMPLETE",
   "status": "complete",
-  "all_fixtures_evaluated": 37,
-  "market_probabilities": 222,
-  "source_fingerprint": "671617e85807e138f7a9144f0ebedcb18cec632969d7cd420b91227accfe1db6",
-  "generated_at_utc": "2026-11-22T16:10:34.002448+00:00",
+  "all_fixtures_evaluated": 9,
+  "market_probabilities": 54,
+  "source_fingerprint": "13eca7d12083eb667b6f1fdb35a4e84f834492ec39dd496cad8130f79ea99c0e",
+  "generated_at_utc": "2026-11-23T13:28:00.846990+00:00",
+  "history_status": "unavailable_no_fabrication",
   "next_action": "validate_top10"
 }

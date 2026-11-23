@@ -1,92 +1,26 @@
-LISTASIX SCOUT 6/6 | 2026-11-22
+LISTASIX SCOUT 6/6 | 2026-11-23
 PROBABILITY MODEL (NOT BACKTEST-CALIBRATED). No ticket is auto-published.
-Number of matches: 37; probability estimates: 222
+Number of matches: 9; probability estimates: 54
 RANK | FIXTURE | 1 | X | 2 | 3+ | GG | NG | TOP | RUNNER-UP | ODDS | STATUS
-1 | Sassuolo - Genoa | 23.2% | 20.4% | 56.4% | 68.5% | 65.7% | 34.3% | 3+ 68.5% | GG 65.7% | 2.00 | OUT
-2 | Chicago Fire FC - Charlotte FC | 36.3% | 20.1% | 43.6% | 78.9% | 76.8% | 23.2% | 3+ 78.9% | GG 76.8% | 1.30 | A/B
-3 | FC Twente - Willem II | 69.2% | 15.8% | 15.0% | 78.1% | 68.4% | 31.6% | 3+ 78.1% | 1 69.2% | 1.20 | OUT
-4 | Kasimpasa - Alanyaspor | 65.2% | 19.7% | 15.1% | 58.3% | 52.5% | 47.5% | 1 65.2% | 3+ 58.3% | 1.98 | OUT
-5 | AC Milan - Frosinone | 38.4% | 21.5% | 40.1% | 72.2% | 71.6% | 28.4% | 3+ 72.2% | GG 71.6% | 1.36 | A
-6 | FC Augsburg - Mainz | 43.3% | 21.5% | 35.2% | 71.7% | 71.1% | 28.9% | 3+ 71.7% | GG 71.1% | 1.41 | OUT
-7 | Sparta Rotterdam - AZ Alkmaar | 43.8% | 21.8% | 34.4% | 69.9% | 69.6% | 30.4% | 3+ 69.9% | GG 69.6% | 1.43 | OUT
-8 | Lorient - Stade Rennais | 46.0% | 23.2% | 30.8% | 61.1% | 62.3% | 37.7% | GG 62.3% | 3+ 61.1% | 1.66 | OUT
-9 | Trabzonspor - Eyupspor | 71.4% | 17.8% | 10.8% | 56.8% | 46.4% | 53.6% | 1 71.4% | 3+ 56.8% | 1.12 | OUT
-10 | Go Ahead Eagles - Fortuna Sittard | 35.2% | 22.3% | 42.5% | 67.2% | 67.6% | 32.4% | GG 67.6% | 3+ 67.2% | 1.48 | OUT
-11 | Lommel SK - Standard Liege | 46.2% | 24.5% | 29.3% | 54.5% | 57.1% | 42.9% | GG 57.1% | 3+ 54.5% | 1.47 | OUT
-12 | Bologna - Udinese | 52.7% | 22.5% | 24.8% | 60.1% | 59.9% | 40.1% | 3+ 60.1% | GG 59.9% | 1.98 | OUT
-13 | Ajax Amsterdam - ADO Den Haag | 45.0% | 23.1% | 31.9% | 62.1% | 63.3% | 36.7% | GG 63.3% | 3+ 62.1% | 1.68 | OUT
-14 | Atalanta - Internazionale | 29.1% | 22.1% | 48.8% | 65.7% | 65.5% | 34.5% | 3+ 65.7% | GG 65.5% | 1.39 | OUT
-15 | Waasland-Beveren - KAA Gent | 25.7% | 22.8% | 51.5% | 59.7% | 60.0% | 40.0% | GG 60.0% | 3+ 59.7% | 1.65 | OUT
-16 | Anderlecht - OH Leuven | 35.5% | 24.2% | 40.3% | 58.1% | 60.6% | 39.4% | GG 60.6% | 3+ 58.1% | 1.70 | A
-17 | Paris FC - Angers | 60.9% | 20.3% | 18.8% | 62.7% | 58.8% | 41.2% | 3+ 62.7% | 1 60.9% | 1.66 | OUT
-18 | Osasuna - Málaga | 44.5% | 24.3% | 31.2% | 56.3% | 58.8% | 41.2% | GG 58.8% | 3+ 56.3% | 1.85 | A/B
-19 | Erzurum BB - Goztepe | 31.0% | 24.6% | 44.4% | 54.8% | 57.6% | 42.4% | GG 57.6% | 3+ 54.8% | 1.72 | OUT
-20 | Instituto (Córdoba) - Huracán | 46.8% | 25.7% | 27.5% | 48.2% | 51.8% | 48.2% | GG 51.8% | 3+ 48.2% | 2.20 | OUT
-21 | Vancouver Whitecaps - Real Salt Lake | 52.4% | 22.1% | 25.5% | 62.5% | 62.0% | 38.0% | 3+ 62.5% | GG 62.0% | 1.38 | OUT
-22 | Getafe - Atlético Madrid | 28.7% | 25.6% | 45.7% | 49.3% | 52.9% | 47.1% | GG 52.9% | 3+ 49.3% | 2.12 | A
-23 | Marseille - Le Mans | 61.5% | 20.3% | 18.2% | 61.7% | 57.7% | 42.3% | 3+ 61.7% | 1 61.5% | 1.51 | OUT
-24 | Werder Bremen - Hamburg SV | 45.7% | 23.5% | 30.8% | 59.6% | 61.2% | 38.8% | GG 61.2% | 3+ 59.6% | 1.56 | OUT
-25 | Racing Santander - Real Sociedad | 31.8% | 23.1% | 45.1% | 62.1% | 63.3% | 36.7% | GG 63.3% | 3+ 62.1% | 1.33 | OUT
-26 | River Plate - Lanús | 41.2% | 30.2% | 28.6% | 33.4% | 40.3% | 59.7% | NG 59.7% | 1 41.2% | 1.60 | OUT
-27 | Athletico-PR - Remo | 38.6% | 24.7% | 36.7% | 55.6% | 58.7% | 41.3% | GG 58.7% | 3+ 55.6% | 1.73 | A
-28 | Nashville SC - FC Cincinnati | 41.2% | 25.2% | 33.6% | 52.8% | 56.4% | 43.6% | GG 56.4% | 3+ 52.8% | 1.48 | OUT
-29 | KV Kortrijk - Union St.-Gilloise | 22.2% | 22.3% | 55.5% | 57.9% | 57.1% | 42.9% | 3+ 57.9% | GG 57.1% | 1.65 | OUT
-30 | Red Bull Bragantino - Vasco da Gama | 38.5% | 24.6% | 36.9% | 56.3% | 59.3% | 40.7% | GG 59.3% | 3+ 56.3% | 1.53 | OUT
-31 | Konyaspor - Besiktas | 29.2% | 26.5% | 44.3% | 46.1% | 50.6% | 49.4% | GG 50.6% | NG 49.4% | 1.71 | OUT
-32 | Juventus - Venezia | 40.0% | 27.2% | 32.8% | 44.6% | 49.9% | 50.1% | NG 50.1% | GG 49.9% | 1.86 | OUT
-33 | Hull City - Brighton & Hove Albion | 26.9% | 26.4% | 46.7% | 45.1% | 49.2% | 50.8% | NG 50.8% | GG 49.2% | 1.91 | OUT
-34 | Fluminense - Mirassol | 44.5% | 27.0% | 28.5% | 43.7% | 48.6% | 51.4% | NG 51.4% | GG 48.6% | 1.95 | OUT
-35 | Barcelona - Villarreal | 55.0% | 22.4% | 22.6% | 58.1% | 57.5% | 42.5% | 3+ 58.1% | GG 57.5% | 1.18 | OUT
-36 | Rosario Central - Gimnasia (Mendoza) | 57.6% | 24.3% | 18.1% | 45.0% | 45.1% | 54.9% | 1 57.6% | NG 54.9% | 1.41 | OUT
-37 | Liverpool - Manchester United | 47.0% | 24.8% | 28.2% | 52.6% | 55.3% | 44.7% | GG 55.3% | 3+ 52.6% | 1.49 | OUT
+1 | Monza - Fiorentina | 44.0% | 26.0% | 30.0% | 48.2% | 52.3% | 47.7% | GG 52.3% | 3+ 48.2% | 1.50 | OUT
+2 | Istanbul Basaksehir - Çorum FK | 44.0% | 26.0% | 30.0% | 48.2% | 52.3% | 47.7% | GG 52.3% | 3+ 48.2% | 1.51 | OUT
+3 | Levante - Elche | 44.0% | 26.0% | 30.0% | 48.2% | 52.3% | 47.7% | GG 52.3% | 3+ 48.2% | 1.55 | OUT
+4 | Brentford - Everton | 44.0% | 26.0% | 30.0% | 48.2% | 52.3% | 47.7% | GG 52.3% | 3+ 48.2% | 1.63 | OUT
+5 | Gimnasia La Plata - Newell's Old Boys | 44.0% | 26.0% | 30.0% | 48.2% | 52.3% | 47.7% | GG 52.3% | 3+ 48.2% | 1.94 | OUT
+6 | Santos - Grêmio | 44.0% | 26.0% | 30.0% | 48.2% | 52.3% | 47.7% | GG 52.3% | 3+ 48.2% | - | OUT
+7 | Internacional - Vitória | 44.0% | 26.0% | 30.0% | 48.2% | 52.3% | 47.7% | GG 52.3% | 3+ 48.2% | - | OUT
+8 | Botafogo - São Paulo | 44.0% | 26.0% | 30.0% | 48.2% | 52.3% | 47.7% | GG 52.3% | 3+ 48.2% | - | OUT
+9 | St. Louis CITY SC - LAFC | 44.0% | 26.0% | 30.0% | 48.2% | 52.3% | 47.7% | GG 52.3% | 3+ 48.2% | - | OUT
 
 PRICE/EV RANKING | match | pick | raw p% | conservative p% | evidence /100 | conservative EV% | score | odds | eligible
-1 | Sassuolo - Genoa | 3+ | 68.5% | 60.4% | 56.0 | +20.7% | 42.65 | 2.00 | NO
-2 | Chicago Fire FC - Charlotte FC | 3+ | 78.9% | 78.0% | 56.9 | +1.5% | 41.94 | 1.30 | YES
-3 | FC Twente - Willem II | GG | 68.4% | 59.4% | 52.9 | +20.6% | 41.71 | 2.03 | NO
-4 | Kasimpasa - Alanyaspor | 1 | 65.2% | 58.7% | 55.6 | +16.2% | 39.94 | 1.98 | NO
-5 | AC Milan - Frosinone | GG | 71.6% | 71.1% | 55.0 | +0.9% | 38.49 | 1.42 | YES
-6 | FC Augsburg - Mainz | 3+ | 71.7% | 71.3% | 52.3 | +0.6% | 38.06 | 1.41 | NO
-7 | Sparta Rotterdam - AZ Alkmaar | 3+ | 69.9% | 69.9% | 56.8 | -0.0% | 37.87 | 1.43 | NO
-8 | Lorient - Stade Rennais | 3+ | 61.1% | 57.0% | 57.3 | +10.6% | 37.10 | 1.94 | NO
-9 | Trabzonspor - Eyupspor | 1 | 71.4% | 79.7% | 53.8 | -10.8% | 36.89 | 1.12 | NO
-10 | Go Ahead Eagles - Fortuna Sittard | GG | 67.6% | 67.6% | 55.8 | +0.0% | 36.76 | 1.48 | NO
-11 | Lommel SK - Standard Liege | 1 | 46.2% | 39.2% | 55.0 | +27.8% | 36.70 | 3.26 | NO
-12 | Bologna - Udinese | 3+ | 60.1% | 55.8% | 54.6 | +10.4% | 36.07 | 1.98 | NO
-13 | Ajax Amsterdam - ADO Den Haag | GG | 63.3% | 61.6% | 54.4 | +3.5% | 35.51 | 1.68 | NO
-14 | Atalanta - Internazionale | GG | 65.5% | 67.0% | 57.3 | -2.9% | 35.49 | 1.45 | NO
-15 | Waasland-Beveren - KAA Gent | 3+ | 59.7% | 57.4% | 55.2 | +5.1% | 34.60 | 1.83 | NO
-16 | Anderlecht - OH Leuven | GG | 60.6% | 59.8% | 55.5 | +1.7% | 34.17 | 1.70 | YES
-17 | Paris FC - Angers | 3+ | 62.7% | 61.4% | 48.6 | +2.0% | 33.94 | 1.66 | NO
-18 | Osasuna - Málaga | 3+ | 56.3% | 52.7% | 53.8 | +8.6% | 33.91 | 2.06 | YES
-19 | Erzurum BB - Goztepe | 3+ | 54.8% | 52.5% | 59.4 | +6.7% | 33.84 | 2.03 | NO
-20 | Instituto (Córdoba) - Huracán | 3+ | 48.2% | 44.4% | 59.5 | +14.5% | 33.79 | 2.58 | NO
-21 | Vancouver Whitecaps - Real Salt Lake | GG | 62.0% | 64.3% | 57.9 | -4.8% | 33.66 | 1.48 | NO
-22 | Getafe - Atlético Madrid | GG | 52.9% | 50.6% | 60.4 | +7.3% | 33.47 | 2.12 | YES
-23 | Marseille - Le Mans | 3+ | 61.7% | 63.7% | 55.5 | -3.8% | 33.45 | 1.51 | NO
-24 | Werder Bremen - Hamburg SV | GG | 61.2% | 62.5% | 55.1 | -2.5% | 33.45 | 1.56 | NO
-25 | Racing Santander - Real Sociedad | GG | 63.3% | 68.3% | 58.0 | -9.2% | 33.44 | 1.33 | NO
-26 | River Plate - Lanús | NG | 59.7% | 60.9% | 58.1 | -2.6% | 33.16 | 1.60 | NO
-27 | Athletico-PR - Remo | GG | 58.7% | 58.3% | 54.6 | +0.8% | 33.03 | 1.73 | YES
-28 | Nashville SC - FC Cincinnati | 2 | 33.6% | 26.7% | 57.6 | +54.4% | 32.74 | 5.79 | NO
-29 | KV Kortrijk - Union St.-Gilloise | GG | 57.1% | 55.8% | 52.3 | +2.6% | 32.42 | 1.84 | NO
-30 | Red Bull Bragantino - Vasco da Gama | GG | 59.3% | 61.9% | 57.4 | -5.3% | 32.31 | 1.53 | NO
-31 | Konyaspor - Besiktas | 1 | 29.2% | 24.8% | 59.6 | +35.6% | 32.24 | 5.47 | NO
-32 | Juventus - Venezia | 2 | 32.8% | 24.1% | 59.3 | +111.8% | 31.91 | 8.80 | NO
-33 | Hull City - Brighton & Hove Albion | 1 | 26.9% | 21.9% | 58.2 | +47.1% | 30.81 | 6.73 | NO
-34 | Fluminense - Mirassol | 2 | 28.5% | 24.6% | 57.4 | +27.6% | 30.80 | 5.20 | NO
-35 | Barcelona - Villarreal | GG | 57.5% | 62.1% | 57.7 | -9.3% | 30.78 | 1.46 | NO
-36 | Rosario Central - Gimnasia (Mendoza) | NG | 54.9% | 57.0% | 58.7 | -4.9% | 30.63 | 1.67 | NO
-37 | Liverpool - Manchester United | GG | 55.3% | 60.8% | 53.9 | -9.5% | 29.52 | 1.49 | NO
+1 | Monza - Fiorentina | GG | 52.3% | 63.8% | 20.0 | -4.3% | 27.94 | 1.50 | NO
+2 | Istanbul Basaksehir - Çorum FK | GG | 52.3% | 63.4% | 20.0 | -4.2% | 27.84 | 1.51 | NO
+3 | Levante - Elche | GG | 52.3% | 62.1% | 20.0 | -3.8% | 27.44 | 1.55 | NO
+4 | Brentford - Everton | GG | 52.3% | 59.5% | 20.0 | -3.0% | 26.74 | 1.63 | NO
+5 | Gimnasia La Plata - Newell's Old Boys | GG | 52.3% | 51.7% | 20.0 | +0.3% | 24.84 | 1.94 | NO
 
-DETAILED AI SCOUT: TOP 6 ONLY (mathematical form, goals, home/away, league averages ALREADY DONE)
-1. Chicago Fire FC - Charlotte FC | VALUE PICK 3+ 78.9% | conservative p 78.0% | EV +1.5% | evidence 56.9/100 | score 41.94 | odds 1.30 | Independent AI review pending
-2. AC Milan - Frosinone | VALUE PICK GG 71.6% | conservative p 71.1% | EV +0.9% | evidence 55.0/100 | score 38.49 | odds 1.42 | Independent AI review pending
-3. Anderlecht - OH Leuven | VALUE PICK GG 60.6% | conservative p 59.8% | EV +1.7% | evidence 55.5/100 | score 34.17 | odds 1.70 | Independent AI review pending
-4. Osasuna - Málaga | VALUE PICK 3+ 56.3% | conservative p 52.7% | EV +8.6% | evidence 53.8/100 | score 33.91 | odds 2.06 | Independent AI review pending
-5. Getafe - Atlético Madrid | VALUE PICK GG 52.9% | conservative p 50.6% | EV +7.3% | evidence 60.4/100 | score 33.47 | odds 2.12 | Independent AI review pending
-6. Athletico-PR - Remo | VALUE PICK GG 58.7% | conservative p 58.3% | EV +0.8% | evidence 54.6/100 | score 33.03 | odds 1.73 | Independent AI review pending
+DETAILED AI SCOUT: TOP 0 ONLY (mathematical form, goals, home/away, league averages ALREADY DONE)
 
-A PROPOSAL (UNAPPROVED) 2.41: AC Milan - Frosinone [GG 1.42, p=71.6%]; Anderlecht - OH Leuven [GG 1.70, p=60.6%]
-B PROPOSAL (UNAPPROVED) 2.68: Chicago Fire FC - Charlotte FC [3+ 1.30, p=78.9%]; Osasuna - Málaga [3+ 2.06, p=56.3%]
-Statistical proposals only. Independent Scout must verify and explicitly approve.
+A NO ELIGIBLE PROPOSAL
+B NO ELIGIBLE PROPOSAL
+No 2-3 leg A combination totaling 2.00-3.00
