@@ -9,8 +9,8 @@ from zoneinfo import ZoneInfo
 TZ = ZoneInfo("Europe/Sarajevo")
 
 def is_ready(feed, active, history, date):
-    if any(not isinstance(x, dict) or x.get("date") != date for x in (feed, active, history)):
-        return False, "ESPN, TipsterArea and last-five/H2H history must all be current"
+    if any(not isinstance(x, dict) or x.get("date") != date for x in (feed, active)):
+        return False, "ESPN and odds lists must be current"
     fixtures = feed.get("football_candidates", [])
     if not fixtures:
         return False, "empty ESPN feed"
@@ -19,8 +19,8 @@ def is_ready(feed, active, history, date):
         return False, "duplicate or missing ESPN fixture ID"
     if {x.get("fixture_id") for x in active.get("fixtures", [])} != set(ids):
         return False, "TipsterArea missing current ESPN fixtures"
-    if {x.get("fixture_id") for x in history.get("fixtures", [])} != set(ids):
-        return False, "ESPN history missing current fixtures"
+    if not isinstance(history, dict) or history.get("date") != date or {x.get("fixture_id") for x in history.get("fixtures", [])} != set(ids):
+        return True, "DEGRADED: fresh ESPN/odds available; no usable same-day history (low confidence)"
     return True, "all source files are current"
 
 def main():
