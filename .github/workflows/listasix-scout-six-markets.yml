@@ -63,6 +63,7 @@ jobs:
                     and set(ids)=={x.get("fixture_id") for x in history.get("fixtures",[])}
                     and bool(history.get("leagues")))
               ready=(history_ready
+                     and computed["with_at_least_one_quote"]>0
                      and status.get("date")==today
                      and status.get("feedback")=="ODDS_READY"
                      and status.get("final") is True
