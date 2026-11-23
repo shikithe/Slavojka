@@ -9,6 +9,7 @@ on:
     - cron: '*/15 * * * *'
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: listasix-espn-collector
   cancel-in-progress: false
@@ -73,6 +74,35 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+
+      - name: Feedback - trigger History immediately after ESPN feed is committed
+        if: steps.gate.outputs.run == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          today=datetime.now(ZoneInfo("Europe/Sarajevo")).date().isoformat()
+          feed=json.loads(Path("shared/collector-feed.json").read_text(encoding="utf-8"))
+          if feed.get("date") != today or not feed.get("football_candidates"):
+              raise SystemExit("HISTORY_DISPATCH_BLOCKED: ESPN feed not ready today")
+          print("ESPN_READY_FOR_HISTORY", today, len(feed["football_candidates"]))
+          PY
+          for attempt in 1 2 3; do
+            if gh workflow run listasix-scout-history.yml --repo "$GH_REPO" --ref main; then
+              echo "HISTORY_WORKFLOW_DISPATCH_ACCEPTED"
+              exit 0
+            fi
+            echo "::warning::History dispatch failed on attempt $attempt"
+            sleep $((attempt * 3))
+          done
+          echo "::error::History dispatch failed. Scheduled History runs remain a backup."
+          exit 1
 
       - name: Feedback - trigger TipsterArea only after confirmed ESPN commit
         if: steps.gate.outputs.run == 'true'
