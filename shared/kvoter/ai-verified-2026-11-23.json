@@ -1,0 +1,292 @@
+{
+  "date": "2026-11-23",
+  "feed_generated_at_utc": "2026-11-23T08:45:35.167904+00:00",
+  "source": "AI or TipsterArea verified public prices",
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:tur.1:401888370",
+      "league": "tur.1",
+      "home": "Istanbul Basaksehir",
+      "away": "Çorum FK",
+      "start_utc": "2026-11-23T17:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.94,
+          "draw": 3.96,
+          "away": 3.81
+        },
+        "3+": {
+          "over": 1.63
+        },
+        "BTTS": {
+          "yes": 1.51,
+          "no": 2.39
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/istanbul-basaksehir-corum-super-lig-turkiye-956701"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/istanbul-basaksehir-corum-super-lig-turkiye-956701",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/istanbul-basaksehir-corum-super-lig-turkiye-956701",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/istanbul-basaksehir-corum-super-lig-turkiye-956701",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/istanbul-basaksehir-corum-super-lig-turkiye-956701",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/istanbul-basaksehir-corum-super-lig-turkiye-956701",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/istanbul-basaksehir-corum-super-lig-turkiye-956701",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401875009",
+      "league": "ita.1",
+      "home": "Monza",
+      "away": "Fiorentina",
+      "start_utc": "2026-11-23T19:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 3.7,
+          "draw": 4.07,
+          "away": 2.0
+        },
+        "3+": {
+          "over": 1.63
+        },
+        "BTTS": {
+          "yes": 1.5,
+          "no": 2.45
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/monza-fiorentina-serie-a-italy-956695"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/monza-fiorentina-serie-a-italy-956695",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/monza-fiorentina-serie-a-italy-956695",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/monza-fiorentina-serie-a-italy-956695",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/monza-fiorentina-serie-a-italy-956695",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/monza-fiorentina-serie-a-italy-956695",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/monza-fiorentina-serie-a-italy-956695",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879237",
+      "league": "eng.1",
+      "home": "Brentford",
+      "away": "Everton",
+      "start_utc": "2026-11-23T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.32,
+          "draw": 3.72,
+          "away": 3.18
+        },
+        "3+": {
+          "over": 1.88
+        },
+        "BTTS": {
+          "yes": 1.63,
+          "no": 2.17
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/brentford-everton-premier-league-england-956693"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/brentford-everton-premier-league-england-956693",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/brentford-everton-premier-league-england-956693",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/brentford-everton-premier-league-england-956693",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/brentford-everton-premier-league-england-956693",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/brentford-everton-premier-league-england-956693",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/brentford-everton-premier-league-england-956693",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882802",
+      "league": "esp.1",
+      "home": "Levante",
+      "away": "Elche",
+      "start_utc": "2026-11-23T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.26,
+          "draw": 3.82,
+          "away": 3.21
+        },
+        "3+": {
+          "over": 1.73
+        },
+        "BTTS": {
+          "yes": 1.55,
+          "no": 2.32
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/levante-elche-primera-division-spain-956694"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/levante-elche-primera-division-spain-956694",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/levante-elche-primera-division-spain-956694",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/levante-elche-primera-division-spain-956694",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/levante-elche-primera-division-spain-956694",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/levante-elche-primera-division-spain-956694",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/levante-elche-primera-division-spain-956694",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401933756",
+      "league": "arg.1",
+      "home": "Gimnasia La Plata",
+      "away": "Newell's Old Boys",
+      "start_utc": "2026-11-23T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.06,
+          "draw": 3.21,
+          "away": 3.9
+        },
+        "3+": {
+          "over": 2.29
+        },
+        "BTTS": {
+          "yes": 1.94,
+          "no": 1.77
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/gimnasia-la-plata-newell-s-old-boys-playoff-argentina-956712"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/gimnasia-la-plata-newell-s-old-boys-playoff-argentina-956712",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/gimnasia-la-plata-newell-s-old-boys-playoff-argentina-956712",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/gimnasia-la-plata-newell-s-old-boys-playoff-argentina-956712",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/gimnasia-la-plata-newell-s-old-boys-playoff-argentina-956712",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/gimnasia-la-plata-newell-s-old-boys-playoff-argentina-956712",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/gimnasia-la-plata-newell-s-old-boys-playoff-argentina-956712",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    }
+  ]
+}

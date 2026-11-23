@@ -1,12 +1,17 @@
 {
-  "date": "2026-11-22",
-  "generated_at_utc": "2026-11-22T10:16:32.033650+00:00",
-  "espn": 37,
-  "daily_tipster_links": 345,
-  "paired": 37,
+  "date": "2026-11-23",
+  "generated_at_utc": "2026-11-23T08:46:00.592022+00:00",
+  "espn": 9,
+  "daily_tipster_links": 155,
+  "paired": 5,
   "pages_checked": 0,
   "updated": 0,
-  "with_any_quotes": 37,
-  "unpaired": [],
+  "with_any_quotes": 5,
+  "unpaired": [
+    "Internacional - Vitória",
+    "Botafogo - São Paulo",
+    "Santos - Grêmio",
+    "St. Louis CITY SC - LAFC"
+  ],
   "failures": []
 }
