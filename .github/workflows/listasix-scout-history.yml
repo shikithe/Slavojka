@@ -70,14 +70,39 @@ jobs:
       - name: Collect real ESPN scoreboards for daily match history
         if: steps.source.outputs.run == 'true'
         run: python3 -m lista.scout_history
-      - name: Commit current ESPN last-five history only
-        if: steps.source.outputs.run == 'true'
+      - name: Write verified HISTORY_READY feedback
+        if: steps.source.outputs.ready == 'true'
+        run: |
+          python3 - <<'PY'
+          import json
+          from datetime import datetime,timezone
+          from pathlib import Path
+          feed=json.loads(Path("shared/collector-feed.json").read_text(encoding="utf-8"))
+          hist=json.loads(Path("shared/agent/history-h2h.json").read_text(encoding="utf-8"))
+          ids=[f["fixture_id"] for f in feed["football_candidates"]]
+          if not (hist.get("date")==feed["date"] and
+                  {x.get("fixture_id") for x in hist.get("fixtures",[])}==set(ids)
+                  and hist.get("leagues") and
+                  hist.get("history_status") not in ("unavailable_no_fabrication","incomplete_no_fabrication")):
+              raise SystemExit("HISTORY_NOT_READY")
+          report={"date":feed["date"],"feedback":"HISTORY_READY",
+                  "espn_generated_at_utc":feed["generated_at_utc"],
+                  "history_generated_at_utc":hist.get("generated_at_utc"),
+                  "fixture_ids":ids,"count":len(ids),
+                  "checked_at_utc":datetime.now(timezone.utc).isoformat()}
+          p=Path("shared/agent/history-feedback.json")
+          p.parent.mkdir(parents=True,exist_ok=True)
+          p.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          print("HISTORY_READY",len(ids))
+          PY
+      - name: Commit current ESPN last-five history and HISTORY_READY
+        if: steps.source.outputs.ready == 'true'
         id: save
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- shared/agent/history-h2h.json
+          git add -f -- shared/agent/history-h2h.json shared/agent/history-feedback.json
           if ! git diff --cached --quiet; then
             git commit -m "ListaSix ESPN current last-five scout history [skip ci]"
             for attempt in 1 2 3 4; do
@@ -91,7 +116,7 @@ jobs:
             done
           fi
       - name: Feedback — fresh history saved, now trigger existing Scout 6/6
-        if: steps.source.outputs.ready == 'true' && (steps.source.outputs.complete == 'true' || steps.save.outputs.changed == 'true')
+        if: steps.source.outputs.ready == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
