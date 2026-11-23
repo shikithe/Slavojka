@@ -49,14 +49,28 @@ jobs:
               feed=json.loads(Path("shared/collector-feed.json").read_text(encoding="utf-8"))
               active=json.loads(Path("shared/active-list.json").read_text(encoding="utf-8"))
               computed=evaluate(feed, active, today)
-              ready=(status.get("date")==today
+              history_path=Path("shared/agent/history-h2h.json")
+              marker_path=Path("shared/agent/history-feedback.json")
+              history=json.loads(history_path.read_text(encoding="utf-8")) if history_path.exists() else {}
+              marker=json.loads(marker_path.read_text(encoding="utf-8")) if marker_path.exists() else {}
+              ids=[x.get("fixture_id") for x in feed.get("football_candidates",[])]
+              history_ready=(history.get("date")==today
+                    and marker.get("date")==today
+                    and marker.get("feedback")=="HISTORY_READY"
+                    and marker.get("espn_generated_at_utc")==feed.get("generated_at_utc")
+                    and marker.get("history_generated_at_utc")==history.get("generated_at_utc")
+                    and marker.get("fixture_ids")==ids
+                    and set(ids)=={x.get("fixture_id") for x in history.get("fixtures",[])}
+                    and bool(history.get("leagues")))
+              ready=(history_ready
+                     and status.get("date")==today
                      and status.get("feedback")=="ODDS_READY"
                      and status.get("final") is True
                      and status.get("status")=="ready_for_scout"
                      and status.get("matched_with_quotes")==computed["with_at_least_one_quote"]
                      and status.get("skipped_unmatched")==computed["without_quote"]
                      and status.get("espn_total")==computed["espn_total"])
-              print("SCOUT_COVERAGE_READY",ready)
+              print("SCOUT_COVERAGE_AND_HISTORY_READY",ready)
           with open(os.environ["GITHUB_OUTPUT"],"a") as out:
               out.write("ready="+("true" if ready else "false")+"\n")
           PY
