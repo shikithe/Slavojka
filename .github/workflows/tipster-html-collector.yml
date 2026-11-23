@@ -14,6 +14,7 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: write
 concurrency:
   group: listasix-tipster-html-collector
   cancel-in-progress: false
@@ -79,24 +80,12 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p 'test_tipster_feedback_cycle.py' -v
           python3 -m lista.tipster_feedback_cycle
-      - name: Require fresh last-five history before producing Scout/Top10 signals
-        id: scout_sources
-        run: python3 -m lista.scout_source_gate
-      - name: Both feedback paths converge at Scout 6/6
-        if: steps.scout_sources.outputs.ready == 'true'
-        run: |
-          echo "SCOUT_6OF6_AFTER_ODDS_READY; missing_initial=${{ steps.feedback.outputs.missing }}"
-          python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
-          python3 -m unittest discover -s tests -p 'test_scout_history_fallback.py' -v
-          python3 -m lista.scout_six_markets
-          python3 -m unittest discover -s tests -p 'test_scout_feedback.py' -v
-          python3 -m lista.scout_feedback
       - name: Commit collected odds AND visible daily list in the same workflow
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json shared/kvoter/coverage-feedback.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt shared/agent/history-h2h.json shared/agent/scout-six-markets*.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json docs/scout-six-markets.json docs/scout-six-markets.txt
+          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json shared/kvoter/coverage-feedback.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt 
           if ! git diff --cached --quiet; then
             git commit -m "ListaSix: TipsterArea HTML odds update [skip ci]"
             # Another service may commit while this action is collecting; retry safe fast-forward pushes.
@@ -113,3 +102,34 @@ jobs:
             echo "TIPSTER_NO_NEW_PRICES"
           fi
 
+      - name: ODDS_READY feedback - dispatch History only after committed quotes
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          python3 - <<'PY'
+          import json, subprocess
+          from datetime import datetime
+          from zoneinfo import ZoneInfo
+          today=datetime.now(ZoneInfo("Europe/Sarajevo")).date().isoformat()
+          def remote(name):
+              return json.loads(subprocess.check_output(["git","show","origin/main:"+name],text=True))
+          feed=remote("shared/collector-feed.json")
+          active=remote("shared/active-list.json")
+          signal=remote("shared/kvoter/coverage-feedback.json")
+          ids={x.get("fixture_id") for x in feed.get("football_candidates",[])}
+          quoted=[x for x in active.get("fixtures",[]) if any(
+              isinstance(x.get(k),(int,float)) and not isinstance(x.get(k),bool) and 1.01<x[k]<50
+              for k in ("home_odds","draw_odds","away_odds","over25_odds","btts_yes_odds","btts_no_odds"))]
+          if not (feed.get("date")==active.get("date")==signal.get("date")==today
+                  and ids and ids=={x.get("fixture_id") for x in active.get("fixtures",[])}
+                  and signal.get("feedback")=="ODDS_READY" and signal.get("final") is True
+                  and signal.get("matched_with_quotes")==len(quoted)
+                  and signal.get("espn_total")==len(ids)):
+              raise SystemExit("ODDS_READY_NOT_COMMITTED_OR_INCONSISTENT")
+          print("ODDS_READY_CONFIRMED",today,len(quoted),"/",len(ids))
+          PY
+          gh workflow run listasix-scout-history.yml --repo "$GH_REPO" --ref main
+          echo "ODDS_READY_HISTORY_DISPATCH_ACCEPTED"
