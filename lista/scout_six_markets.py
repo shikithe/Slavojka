@@ -226,13 +226,22 @@ def format_combo(combo, tid):
         } for r in combo["rows"]]
     }
 
-def detailed_ai_handoff(rows):
+def detailed_ai_handoff(rows, now=None):
     """Top 10 still eligible fixtures, with existing math evidence reusable as-is.
 
     These are the only matches for detailed AI investigation, not 10 new math
     calculations. Independent analyst owns all remaining nonmathematical checks.
     """
     selected = [r for r in rows if r["candidate_A"]][:DETAILED_SCOUT_LIMIT]
+    research_only = False
+    # If the statistical acceptance gate has no candidates because history is
+    # unavailable, still send future, quoted fixtures for independent review.
+    # This DOES NOT authorize publication or loosen ticket proposal rules.
+    if not selected and now is not None:
+        selected = [r for r in rows
+                    if r.get("recommended_market") and r.get("recommended_odds")
+                    and datetime.fromisoformat(r["datetime"].replace("Z","+00:00")) > now+timedelta(minutes=20)][:DETAILED_SCOUT_LIMIT]
+        research_only = True
     items = []
     for rank, r in enumerate(selected, 1):
         items.append({
@@ -250,15 +259,19 @@ def detailed_ai_handoff(rows):
             "second_probability_pct": r["second_pct"],
             "top_market_odds": r["strongest_odds"],
             "recommended_market_odds": r["recommended_odds"],
-            "eligible_for_A": True, "eligible_for_B": r["candidate_B"],
+            "eligible_for_A": bool(r["candidate_A"]),
+            "eligible_for_B": bool(r["candidate_B"]),
+            "research_only": bool(research_only and not r["candidate_A"]),
+            "confidence": r.get("confidence","unknown"),
+            "history_evidence_complete": bool(r.get("history_evidence_complete",False)),
             "all_six_probabilities_pct": r["probability_pct"],
             "math_already_done": {
                 "last_five_matches_per_team": {
                     "home": r["evidence"]["home_last_matches"],
                     "away": r["evidence"]["away_last_matches"]},
-                "recent_goals_attack_defence": "Included in Poisson 6/6 model; do not recalculate",
-                "home_away_form": "Included in Poisson 6/6 model; do not recalculate",
-                "league_goal_average": "Included in Poisson 6/6 model; do not recalculate",
+                "recent_goals_attack_defence": "Present" if r.get("history_evidence_complete") else "Missing; modeled using broad priors, not actual recent form",
+                "home_away_form": "Present" if r.get("history_evidence_complete") else "Missing; independent research required",
+                "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
                 "modeled_goals": r["estimated_goals"],
                 "poisson_probabilities": r["probability_pct"]
             },
@@ -272,7 +285,8 @@ def detailed_ai_handoff(rows):
         })
     return {
         "limit": DETAILED_SCOUT_LIMIT,
-        "selection_rule": "Top 10 eligible future fixtures by conservative six-market score (adjusted probability, EV and sample quality); one strongest scored market per match; probability tie-breaker",
+        "selection_rule": "Research-only future quoted matches if zero statistically qualified; otherwise top statistically qualified matches",
+        "research_only": research_only,
         "count": len(items),
         "math_recalculation_prohibited": True,
         "independent_ai_review_required": True,
@@ -303,7 +317,7 @@ def analyze(feed, active, history, now):
         records.append(evaluate_fixture(display_row,history,now))
     from lista.scout_value import apply_value_model, proposal_view
     records = apply_value_model(records, history, now)
-    handoff = detailed_ai_handoff(records)
+    handoff = detailed_ai_handoff(records, now)
     selected_ids = {x["fixture_id"] for x in handoff["candidates"]}
     # Every proposed A/B leg must be among the exact 10 forwarded to Detailed AI.
     possible = suggestions([proposal_view(r) for r in records if r["fixture_id"] in selected_ids])
