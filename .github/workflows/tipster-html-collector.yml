@@ -126,6 +126,7 @@ jobs:
           if not (feed.get("date")==active.get("date")==signal.get("date")==today
                   and ids and ids=={x.get("fixture_id") for x in active.get("fixtures",[])}
                   and signal.get("feedback")=="ODDS_READY" and signal.get("final") is True
+                  and len(quoted)>0
                   and signal.get("matched_with_quotes")==len(quoted)
                   and signal.get("espn_total")==len(ids)):
               raise SystemExit("ODDS_READY_NOT_COMMITTED_OR_INCONSISTENT")
