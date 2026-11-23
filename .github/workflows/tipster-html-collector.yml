@@ -87,6 +87,7 @@ jobs:
         run: |
           echo "SCOUT_6OF6_AFTER_ODDS_READY; missing_initial=${{ steps.feedback.outputs.missing }}"
           python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
+          python3 -m unittest discover -s tests -p 'test_scout_history_fallback.py' -v
           python3 -m lista.scout_six_markets
           python3 -m unittest discover -s tests -p 'test_scout_feedback.py' -v
           python3 -m lista.scout_feedback
@@ -95,7 +96,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json shared/kvoter/coverage-feedback.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt shared/agent/scout-six-markets*.json docs/scout-six-markets.json docs/scout-six-markets.txt
+          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json shared/kvoter/coverage-feedback.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt shared/agent/history-h2h.json shared/agent/scout-six-markets*.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json docs/scout-six-markets.json docs/scout-six-markets.txt
           if ! git diff --cached --quiet; then
             git commit -m "ListaSix: TipsterArea HTML odds update [skip ci]"
             # Another service may commit while this action is collecting; retry safe fast-forward pushes.
