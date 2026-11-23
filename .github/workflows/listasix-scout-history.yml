@@ -27,7 +27,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Require today's ESPN feed and skip already-complete matching history
+      - name: Only continue after today's confirmed ODDS_READY
         id: source
         run: |
           python3 - <<'PY'
@@ -40,18 +40,32 @@ jobs:
               try: return json.loads(Path(p).read_text(encoding="utf-8"))
               except (ValueError,OSError): return {}
           feed=read("shared/collector-feed.json")
+          active=read("shared/active-list.json")
+          fb=read("shared/kvoter/coverage-feedback.json")
           hist=read("shared/agent/history-h2h.json")
           ids=[f.get("fixture_id") for f in feed.get("football_candidates",[])]
-          feed_valid=feed.get("date")==today and bool(ids) and len(set(ids))==len(ids) and None not in ids
+          quoted=sum(any(isinstance(x.get(k),(int,float)) and not isinstance(x.get(k),bool)
+                         and 1.01<x[k]<50 for k in
+                         ("home_odds","draw_odds","away_odds","over25_odds","btts_yes_odds","btts_no_odds"))
+                     for x in active.get("fixtures",[]))
+          ready=(feed.get("date")==active.get("date")==fb.get("date")==today
+                 and bool(ids) and len(set(ids))==len(ids) and None not in ids
+                 and set(ids)=={x.get("fixture_id") for x in active.get("fixtures",[])}
+                 and fb.get("feedback")=="ODDS_READY" and fb.get("final") is True
+                 and fb.get("status")=="ready_for_scout"
+                 and fb.get("matched_with_quotes")==quoted
+                 and fb.get("espn_total")==len(ids))
           previous={x.get("fixture_id") for x in hist.get("fixtures",[])}
-          complete=(feed_valid and hist.get("date")==today
+          complete=(ready and hist.get("date")==today
                     and previous==set(ids) and bool(hist.get("leagues"))
                     and hist.get("history_status") not in ("unavailable_no_fabrication","incomplete_no_fabrication"))
-          run=feed_valid and not complete
+          run=ready and not complete
           with open(os.environ["GITHUB_OUTPUT"],"a") as output:
+              output.write("ready="+str(ready).lower()+"\n")
+              output.write("complete="+str(complete).lower()+"\n")
               output.write("run="+str(run).lower()+"\n")
-          print("HISTORY_GATE",today,"feed_valid=",feed_valid,
-                "history_complete=",complete,"run=",run)
+          print("HISTORY_AFTER_ODDS",today,"ODDS_READY=",ready,
+                "history_complete=",complete,"collect=",run)
           PY
       - name: Collect real ESPN scoreboards for daily match history
         if: steps.source.outputs.run == 'true'
@@ -77,7 +91,7 @@ jobs:
             done
           fi
       - name: Feedback — fresh history saved, now trigger existing Scout 6/6
-        if: steps.source.outputs.run == 'true' && steps.save.outputs.changed == 'true'
+        if: steps.source.outputs.ready == 'true' && (steps.source.outputs.complete == 'true' || steps.save.outputs.changed == 'true')
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
