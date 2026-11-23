@@ -18,6 +18,7 @@ FILES = {
     "docs/collector-feed.json": {"football_candidates": [], "publication_allowed": False},
     "docs/active-list.json": {"fixtures": [], "publication_allowed": False},
     "shared/agent/history-h2h.json": {"fixtures": [], "leagues": {}, "head_to_head": {}, "publication_allowed": False},
+    "shared/agent/history-feedback.json": {"feedback": "WAIT_ODDS_READY", "fixture_ids": [], "count": 0},
     "shared/agent/scout-six-markets.json": {"ranked_fixtures": [], "detailed_ai_handoff": {"count": 0, "candidates": []}, "publication_allowed": False},
     "docs/scout-six-markets.json": {"ranked_fixtures": [], "detailed_ai_handoff": {"count": 0, "candidates": []}, "publication_allowed": False},
     "shared/agent/scout-feedback.json": {"feedback": "WAIT_ESPN", "status": "waiting"},
