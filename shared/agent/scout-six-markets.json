@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "generated_at_utc": "2026-11-23T19:05:34.333074+00:00",
+  "generated_at_utc": "2026-11-23T20:04:53.485543+00:00",
   "source_feed_generated_at_utc": "2026-11-23T08:45:35.167904+00:00",
   "source_active_sha256": "a51368a97b595670f40a80f3b53621a966fa4d72edefbbbb807974226c898392",
   "source_history_sha256": "30e8eabee25c22d62d8695cad2ccb82eef5dec3785ca97a17fd52d1b7e129832",
@@ -26,8 +26,8 @@
   "total_market_probabilities": 54,
   "all_fixtures_evaluated": 9,
   "all_six_odds_present": 5,
-  "candidate_A_count": 2,
-  "candidate_B_count": 1,
+  "candidate_A_count": 0,
+  "candidate_B_count": 0,
   "ranked_fixtures": [
     {
       "fixture_id": "espn:football:esp.1:401882802",
@@ -70,13 +70,15 @@
         "injuries_checked": false,
         "h2h_checked": false
       },
-      "candidate_A": true,
+      "candidate_A": false,
       "candidate_B": false,
       "history_evidence_complete": true,
       "confidence": "normal",
       "requires_independent_ai_review": true,
       "needs_independent_ai_review": true,
-      "limitations": [],
+      "limitations": [
+        "Started or less than 20 minutes to kickoff; exclude from new tickets"
+      ],
       "market_value": {
         "1": {
           "raw_probability_pct": 30.8,
@@ -150,7 +152,9 @@
       "recommended_ev_pct": 21.2,
       "value_runner_up_market": "2",
       "value_runner_up_score": 28.082,
-      "value_limitations": []
+      "value_limitations": [
+        "Kickoff already started or within twenty minutes"
+      ]
     },
     {
       "fixture_id": "espn:football:ita.1:401875009",
@@ -193,13 +197,15 @@
         "injuries_checked": false,
         "h2h_checked": false
       },
-      "candidate_A": true,
-      "candidate_B": true,
+      "candidate_A": false,
+      "candidate_B": false,
       "history_evidence_complete": true,
       "confidence": "normal",
       "requires_independent_ai_review": true,
       "needs_independent_ai_review": true,
-      "limitations": [],
+      "limitations": [
+        "Started or less than 20 minutes to kickoff; exclude from new tickets"
+      ],
       "market_value": {
         "1": {
           "raw_probability_pct": 36.3,
@@ -273,7 +279,9 @@
       "recommended_ev_pct": 6.51,
       "value_runner_up_market": "GG",
       "value_runner_up_score": 37.452,
-      "value_limitations": []
+      "value_limitations": [
+        "Kickoff already started or within twenty minutes"
+      ]
     },
     {
       "fixture_id": "espn:football:tur.1:401888370",
@@ -449,7 +457,9 @@
       "confidence": "normal",
       "requires_independent_ai_review": true,
       "needs_independent_ai_review": true,
-      "limitations": [],
+      "limitations": [
+        "Started or less than 20 minutes to kickoff; exclude from new tickets"
+      ],
       "market_value": {
         "1": {
           "raw_probability_pct": 47.5,
@@ -524,7 +534,8 @@
       "value_runner_up_market": "1",
       "value_runner_up_score": 28.277,
       "value_limitations": [
-        "No positive conservative EV for chosen market"
+        "No positive conservative EV for chosen market",
+        "Kickoff already started or within twenty minutes"
       ]
     },
     {
@@ -574,7 +585,9 @@
       "confidence": "normal",
       "requires_independent_ai_review": true,
       "needs_independent_ai_review": true,
-      "limitations": [],
+      "limitations": [
+        "Started or less than 20 minutes to kickoff; exclude from new tickets"
+      ],
       "market_value": {
         "1": {
           "raw_probability_pct": 40.4,
@@ -649,7 +662,8 @@
       "value_runner_up_market": "GG",
       "value_runner_up_score": 27.921,
       "value_limitations": [
-        "Risk-adjusted probability below 50% for chosen market"
+        "Risk-adjusted probability below 50% for chosen market",
+        "Kickoff already started or within twenty minutes"
       ]
     },
     {
@@ -1164,141 +1178,13 @@
   "detailed_ai_handoff": {
     "limit": 10,
     "selection_rule": "Research-only future quoted matches if zero statistically qualified; otherwise top statistically qualified matches",
-    "research_only": false,
-    "count": 2,
+    "research_only": true,
+    "count": 0,
     "math_recalculation_prohibited": true,
     "independent_ai_review_required": true,
-    "candidates": [
-      {
-        "rank": 1,
-        "fixture_id": "espn:football:esp.1:401882802",
-        "match": "Levante - Elche",
-        "datetime": "2026-11-23T20:00:00Z",
-        "top_market": "NG",
-        "top_probability_pct": 60.3,
-        "recommended_market": "NG",
-        "recommended_probability_pct": 60.3,
-        "recommended_adjusted_probability_pct": 52.24,
-        "recommended_score": 39.026,
-        "recommended_ev_pct": 21.2,
-        "data_quality_index_pct": 53.1,
-        "second_market": "GG",
-        "second_probability_pct": 39.7,
-        "top_market_odds": 2.32,
-        "recommended_market_odds": 2.32,
-        "eligible_for_A": true,
-        "eligible_for_B": false,
-        "research_only": false,
-        "confidence": "normal",
-        "history_evidence_complete": true,
-        "all_six_probabilities_pct": {
-          "1": 30.8,
-          "X": 30.7,
-          "2": 38.5,
-          "3+": 32.3,
-          "GG": 39.7,
-          "NG": 60.3
-        },
-        "math_already_done": {
-          "last_five_matches_per_team": {
-            "home": 5,
-            "away": 5
-          },
-          "recent_goals_attack_defence": "Present",
-          "home_away_form": "Present",
-          "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
-          "modeled_goals": {
-            "home": 0.93,
-            "away": 1.07
-          },
-          "poisson_probabilities": {
-            "1": 30.8,
-            "X": 30.7,
-            "2": 38.5,
-            "3+": 32.3,
-            "GG": 39.7,
-            "NG": 60.3
-          }
-        },
-        "ai_checks_still_required": [
-          "actual_xg_xga_if_available",
-          "injuries_and_suspensions",
-          "expected_lineups",
-          "recent_h2h_up_to_five",
-          "table_and_motivation",
-          "rest_days_and_schedule",
-          "odds_identity_and_source"
-        ],
-        "ai_review_status": "pending_independent_review"
-      },
-      {
-        "rank": 2,
-        "fixture_id": "espn:football:ita.1:401875009",
-        "match": "Monza - Fiorentina",
-        "datetime": "2026-11-23T19:45:00Z",
-        "top_market": "GG",
-        "top_probability_pct": 68.7,
-        "recommended_market": "3+",
-        "recommended_probability_pct": 68.6,
-        "recommended_adjusted_probability_pct": 65.34,
-        "recommended_score": 38.502,
-        "recommended_ev_pct": 6.51,
-        "data_quality_index_pct": 55.1,
-        "second_market": "3+",
-        "second_probability_pct": 68.6,
-        "top_market_odds": 1.5,
-        "recommended_market_odds": 1.63,
-        "eligible_for_A": true,
-        "eligible_for_B": true,
-        "research_only": false,
-        "confidence": "normal",
-        "history_evidence_complete": true,
-        "all_six_probabilities_pct": {
-          "1": 36.3,
-          "X": 22.1,
-          "2": 41.6,
-          "3+": 68.6,
-          "GG": 68.7,
-          "NG": 31.3
-        },
-        "math_already_done": {
-          "last_five_matches_per_team": {
-            "home": 5,
-            "away": 5
-          },
-          "recent_goals_attack_defence": "Present",
-          "home_away_form": "Present",
-          "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
-          "modeled_goals": {
-            "home": 1.7,
-            "away": 1.83
-          },
-          "poisson_probabilities": {
-            "1": 36.3,
-            "X": 22.1,
-            "2": 41.6,
-            "3+": 68.6,
-            "GG": 68.7,
-            "NG": 31.3
-          }
-        },
-        "ai_checks_still_required": [
-          "actual_xg_xga_if_available",
-          "injuries_and_suspensions",
-          "expected_lineups",
-          "recent_h2h_up_to_five",
-          "table_and_motivation",
-          "rest_days_and_schedule",
-          "odds_identity_and_source"
-        ],
-        "ai_review_status": "pending_independent_review"
-      }
-    ]
+    "candidates": []
   },
-  "detailed_ai_top_ten_fixture_ids": [
-    "espn:football:esp.1:401882802",
-    "espn:football:ita.1:401875009"
-  ],
+  "detailed_ai_top_ten_fixture_ids": [],
   "ticket_proposals": {
     "A": null,
     "B": null,

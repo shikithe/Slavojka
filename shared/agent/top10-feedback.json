@@ -1,143 +1,15 @@
 {
   "date": "2026-11-23",
-  "feedback": "TOP10_READY",
-  "status": "ready",
+  "feedback": "TOP10_UNAVAILABLE",
+  "status": "unavailable",
   "source_fingerprint": "fac60c9e1410e5130c5d95292a544f95a565ddba1fb599f34d5a7e293ed19dd1",
   "scout_report": "shared/agent/scout-six-markets.json",
-  "count": 2,
-  "fixture_ids": [
-    "espn:football:esp.1:401882802",
-    "espn:football:ita.1:401875009"
-  ],
-  "candidates": [
-    {
-      "rank": 1,
-      "fixture_id": "espn:football:esp.1:401882802",
-      "match": "Levante - Elche",
-      "datetime": "2026-11-23T20:00:00Z",
-      "top_market": "NG",
-      "top_probability_pct": 60.3,
-      "recommended_market": "NG",
-      "recommended_probability_pct": 60.3,
-      "recommended_adjusted_probability_pct": 52.24,
-      "recommended_score": 39.026,
-      "recommended_ev_pct": 21.2,
-      "data_quality_index_pct": 53.1,
-      "second_market": "GG",
-      "second_probability_pct": 39.7,
-      "top_market_odds": 2.32,
-      "recommended_market_odds": 2.32,
-      "eligible_for_A": true,
-      "eligible_for_B": false,
-      "research_only": false,
-      "confidence": "normal",
-      "history_evidence_complete": true,
-      "all_six_probabilities_pct": {
-        "1": 30.8,
-        "X": 30.7,
-        "2": 38.5,
-        "3+": 32.3,
-        "GG": 39.7,
-        "NG": 60.3
-      },
-      "math_already_done": {
-        "last_five_matches_per_team": {
-          "home": 5,
-          "away": 5
-        },
-        "recent_goals_attack_defence": "Present",
-        "home_away_form": "Present",
-        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
-        "modeled_goals": {
-          "home": 0.93,
-          "away": 1.07
-        },
-        "poisson_probabilities": {
-          "1": 30.8,
-          "X": 30.7,
-          "2": 38.5,
-          "3+": 32.3,
-          "GG": 39.7,
-          "NG": 60.3
-        }
-      },
-      "ai_checks_still_required": [
-        "actual_xg_xga_if_available",
-        "injuries_and_suspensions",
-        "expected_lineups",
-        "recent_h2h_up_to_five",
-        "table_and_motivation",
-        "rest_days_and_schedule",
-        "odds_identity_and_source"
-      ],
-      "ai_review_status": "pending_independent_review"
-    },
-    {
-      "rank": 2,
-      "fixture_id": "espn:football:ita.1:401875009",
-      "match": "Monza - Fiorentina",
-      "datetime": "2026-11-23T19:45:00Z",
-      "top_market": "GG",
-      "top_probability_pct": 68.7,
-      "recommended_market": "3+",
-      "recommended_probability_pct": 68.6,
-      "recommended_adjusted_probability_pct": 65.34,
-      "recommended_score": 38.502,
-      "recommended_ev_pct": 6.51,
-      "data_quality_index_pct": 55.1,
-      "second_market": "3+",
-      "second_probability_pct": 68.6,
-      "top_market_odds": 1.5,
-      "recommended_market_odds": 1.63,
-      "eligible_for_A": true,
-      "eligible_for_B": true,
-      "research_only": false,
-      "confidence": "normal",
-      "history_evidence_complete": true,
-      "all_six_probabilities_pct": {
-        "1": 36.3,
-        "X": 22.1,
-        "2": 41.6,
-        "3+": 68.6,
-        "GG": 68.7,
-        "NG": 31.3
-      },
-      "math_already_done": {
-        "last_five_matches_per_team": {
-          "home": 5,
-          "away": 5
-        },
-        "recent_goals_attack_defence": "Present",
-        "home_away_form": "Present",
-        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
-        "modeled_goals": {
-          "home": 1.7,
-          "away": 1.83
-        },
-        "poisson_probabilities": {
-          "1": 36.3,
-          "X": 22.1,
-          "2": 41.6,
-          "3+": 68.6,
-          "GG": 68.7,
-          "NG": 31.3
-        }
-      },
-      "ai_checks_still_required": [
-        "actual_xg_xga_if_available",
-        "injuries_and_suspensions",
-        "expected_lineups",
-        "recent_h2h_up_to_five",
-        "table_and_motivation",
-        "rest_days_and_schedule",
-        "odds_identity_and_source"
-      ],
-      "ai_review_status": "pending_independent_review"
-    }
-  ],
-  "next_action": "independent_ai_detailed_scout",
+  "count": 0,
+  "fixture_ids": [],
+  "candidates": [],
+  "next_action": "report_no_eligible_candidates",
   "history_status": "available",
-  "research_only": false,
+  "research_only": true,
   "ai_approval_required": true,
   "publication_allowed": false
 }
