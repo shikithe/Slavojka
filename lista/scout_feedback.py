@@ -19,8 +19,10 @@ def canonical_hash(obj):
 
 def inspect(feed, active, history, scout, today):
     if any(not isinstance(doc, dict) or doc.get("date") != today
-           for doc in (feed, active, history, scout)):
-        raise ValueError("All source files and Scout report must have today's Sarajevo date")
+           for doc in (feed, active, scout)):
+        raise ValueError("Feed, odds and Scout report must have today's Sarajevo date")
+    if not isinstance(history, dict) or history.get("date") != today:
+        raise ValueError("Scout history input must be a same-day unavailable marker or history")
     fixtures = feed.get("football_candidates", [])
     ids = [f.get("fixture_id") for f in fixtures]
     if not ids or len(set(ids)) != len(ids):
@@ -50,6 +52,7 @@ def inspect(feed, active, history, scout, today):
         "status": "complete", "all_fixtures_evaluated": len(ids),
         "market_probabilities": len(ids) * 6, "source_fingerprint": fingerprint,
         "generated_at_utc": scout.get("generated_at_utc"),
+        "history_status": scout.get("history_status","available"),
         "next_action": "validate_top10"
     }
     handoff = scout.get("detailed_ai_handoff", {})
@@ -76,6 +79,7 @@ def inspect(feed, active, history, scout, today):
         "fixture_ids": selected_ids,
         "candidates": selected,
         "next_action": "independent_ai_detailed_scout" if ready else "report_no_eligible_candidates",
+        "history_status": scout.get("history_status","available"),
         "ai_approval_required": True,
         "publication_allowed": False
     }
