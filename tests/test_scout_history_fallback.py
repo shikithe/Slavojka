@@ -41,6 +41,10 @@ class FallbackTests(unittest.TestCase):
         self.assertEqual(record["confidence"],"low_data")
         self.assertTrue(record["needs_independent_ai_review"])
         self.assertFalse(result["publication_allowed"])
+        self.assertEqual(result["detailed_ai_handoff"]["count"],1)
+        self.assertTrue(result["detailed_ai_handoff"]["research_only"])
+        self.assertFalse(result["detailed_ai_handoff"]["candidates"][0]["eligible_for_A"])
+        self.assertTrue(result["detailed_ai_handoff"]["candidates"][0]["research_only"])
 
     def test_stale_offer_is_still_blocked(self):
         feed,active=sample()
