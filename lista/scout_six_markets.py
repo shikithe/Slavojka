@@ -116,7 +116,7 @@ def evaluate_fixture(fixture, history, now):
     home, away = fixture["match"].split(" - ", 1)
     records = history.get("leagues", {}).get(league, {}).get("teams", {})
     h, a = records.get(home, {}), records.get(away, {})
-    base_h, base_a, league_sample = league_goal_reference(history["leagues"].get(league, {}))
+    base_h, base_a, league_sample = league_goal_reference(history.get("leagues", {}).get(league, {}))
     # Home attack and away defensive concessions belong on a home-scoring scale;
     # away attack and home defensive concessions belong on the away scale.
     hgf, hga, hn = rates(h, base_h, base_a, "home")
@@ -148,9 +148,12 @@ def evaluate_fixture(fixture, history, now):
                      "league_unique_result_matches": league_sample,
                      "used_xg": False, "lineups_checked": False,
                      "injuries_checked": False, "h2h_checked": False},
-        "candidate_A": bool(min(hn, an) >= 4 and odds[top] and start > now + timedelta(minutes=20)),
-        "candidate_B": bool(top == "3+" and min(hn, an) >= 4 and odds[top]
+        "candidate_A": bool(odds[top] and start > now + timedelta(minutes=20)),
+        "candidate_B": bool(top == "3+" and odds[top]
                             and start > now + timedelta(minutes=20)),
+        "history_evidence_complete": bool(min(hn, an) >= 4),
+        "confidence": "normal" if min(hn, an) >= 4 else "low_data",
+        "requires_independent_ai_review": True,
         "needs_independent_ai_review": True, "limitations": notes
     }
 
@@ -277,15 +280,21 @@ def detailed_ai_handoff(rows):
     }
 
 def analyze(feed, active, history, now):
-    if feed.get("date") != active.get("date") or feed.get("date") != history.get("date"):
-        raise ValueError("ESPN feed, Tipster quotes and last-five form must be SAME date")
+    if feed.get("date") != active.get("date"):
+        raise ValueError("ESPN feed and odds must be SAME date")
+    if not isinstance(history, dict) or history.get("date") != feed["date"]:
+        history = {"date": feed["date"], "fixtures": feed.get("football_candidates", []),
+                   "leagues": {}, "head_to_head": {}, "history_status": "unavailable_no_fabrication"}
     official = {x["fixture_id"]:x for x in feed.get("football_candidates",[])}
     display = {x["fixture_id"]:x for x in active.get("fixtures",[])}
     historical = {x["fixture_id"] for x in history.get("fixtures",[])}
     if not official or len(official)!=len(feed["football_candidates"]):
         raise ValueError("Missing or duplicated ESPN fixture IDs")
-    if official.keys()!=display.keys() or not official.keys()<=historical:
-        raise ValueError("Cannot score: missing ESPN fixtures in displayed odds or history")
+    if official.keys()!=display.keys():
+        raise ValueError("Cannot score: missing ESPN fixtures in displayed odds")
+    if not official.keys()<=historical:
+        history = {"date": feed["date"], "fixtures": feed["football_candidates"],
+                   "leagues": {}, "head_to_head": {}, "history_status": "incomplete_no_fabrication"}
     records = []
     for fid, f in official.items():
         display_row=display[fid]
@@ -304,6 +313,8 @@ def analyze(feed, active, history, now):
         "source_active_sha256":canonical_hash(active),
         "source_history_sha256":canonical_hash(history),
         "model":"Poisson 6/6 + market-anchored adjusted probabilities + conservative EV + sample-quality index across six markets",
+        "history_status":history.get("history_status","available"),
+        "history_missing":history.get("history_status") in ("unavailable_no_fabrication","incomplete_no_fabrication"),
         "value_selection_enabled":True,
         "score_formula":"0.42*adjusted_probability_pct + 0.43*clamp(conservative_ev_pct,-25,30) + 0.15*data_quality_index_pct",
         "value_selection_not_backtested":True,
@@ -380,13 +391,24 @@ def main():
     day=now.astimezone(TZ).date().isoformat()
     feed=json.loads((root/"shared/collector-feed.json").read_text(encoding="utf-8"))
     active=json.loads((root/"shared/active-list.json").read_text(encoding="utf-8"))
-    history=json.loads((root/"shared/agent/history-h2h.json").read_text(encoding="utf-8"))
+    history_path=root/"shared/agent/history-h2h.json"
+    try:
+        history=json.loads(history_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        history={}
     if feed.get("date") != day:
         print("SCOUT_6OF6_WAIT_TODAY_ESPN",feed.get("date"),day)
         return
-    if history.get("date") != day or active.get("date") != day:
-        print("SCOUT_6OF6_WAIT_QUOTES_AND_HISTORY",history.get("date"),active.get("date"),day)
+    if active.get("date") != day:
+        print("SCOUT_6OF6_WAIT_QUOTES",active.get("date"),day)
         return
+    history_ids={x.get("fixture_id") for x in history.get("fixtures", [])}
+    feed_ids={x.get("fixture_id") for x in feed.get("football_candidates", [])}
+    if history.get("date") != day or history_ids != feed_ids:
+        print("SCOUT_6OF6_HISTORY_MISSING_DEGRADED",history.get("date"),day)
+        history={"date":day,"fixtures":feed["football_candidates"],"leagues":{},
+                 "head_to_head":{},"history_status":"unavailable_no_fabrication"}
+        save(history_path,history)
     result=analyze(feed,active,history,now)
     save(root/"shared/agent"/f"scout-six-markets-{day}.json",result)
     save(root/"shared/agent/scout-six-markets.json",result)
