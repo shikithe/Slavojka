@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "date": "2026-11-23",
-  "generated_at_utc": "2026-11-23T15:01:53.149144+00:00",
+  "generated_at_utc": "2026-11-23T19:05:34.333074+00:00",
   "source_feed_generated_at_utc": "2026-11-23T08:45:35.167904+00:00",
   "source_active_sha256": "a51368a97b595670f40a80f3b53621a966fa4d72edefbbbb807974226c898392",
   "source_history_sha256": "30e8eabee25c22d62d8695cad2ccb82eef5dec3785ca97a17fd52d1b7e129832",
@@ -26,8 +26,8 @@
   "total_market_probabilities": 54,
   "all_fixtures_evaluated": 9,
   "all_six_odds_present": 5,
-  "candidate_A_count": 3,
-  "candidate_B_count": 2,
+  "candidate_A_count": 2,
+  "candidate_B_count": 1,
   "ranked_fixtures": [
     {
       "fixture_id": "espn:football:esp.1:401882802",
@@ -316,13 +316,15 @@
         "injuries_checked": false,
         "h2h_checked": false
       },
-      "candidate_A": true,
-      "candidate_B": true,
+      "candidate_A": false,
+      "candidate_B": false,
       "history_evidence_complete": true,
       "confidence": "normal",
       "requires_independent_ai_review": true,
       "needs_independent_ai_review": true,
-      "limitations": [],
+      "limitations": [
+        "Started or less than 20 minutes to kickoff; exclude from new tickets"
+      ],
       "market_value": {
         "1": {
           "raw_probability_pct": 46.8,
@@ -396,7 +398,9 @@
       "recommended_ev_pct": 1.07,
       "value_runner_up_market": "GG",
       "value_runner_up_score": 34.115,
-      "value_limitations": []
+      "value_limitations": [
+        "Kickoff already started or within twenty minutes"
+      ]
     },
     {
       "fixture_id": "espn:football:arg.1:401933756",
@@ -1161,7 +1165,7 @@
     "limit": 10,
     "selection_rule": "Research-only future quoted matches if zero statistically qualified; otherwise top statistically qualified matches",
     "research_only": false,
-    "count": 3,
+    "count": 2,
     "math_recalculation_prohibited": true,
     "independent_ai_review_required": true,
     "candidates": [
@@ -1288,112 +1292,17 @@
           "odds_identity_and_source"
         ],
         "ai_review_status": "pending_independent_review"
-      },
-      {
-        "rank": 3,
-        "fixture_id": "espn:football:tur.1:401888370",
-        "match": "Istanbul Basaksehir - Çorum FK",
-        "datetime": "2026-11-23T17:00:00Z",
-        "top_market": "GG",
-        "top_probability_pct": 63.4,
-        "recommended_market": "3+",
-        "recommended_probability_pct": 62.6,
-        "recommended_adjusted_probability_pct": 62.01,
-        "recommended_score": 34.393,
-        "recommended_ev_pct": 1.07,
-        "data_quality_index_pct": 52.6,
-        "second_market": "3+",
-        "second_probability_pct": 62.6,
-        "top_market_odds": 1.51,
-        "recommended_market_odds": 1.63,
-        "eligible_for_A": true,
-        "eligible_for_B": true,
-        "research_only": false,
-        "confidence": "normal",
-        "history_evidence_complete": true,
-        "all_six_probabilities_pct": {
-          "1": 46.8,
-          "X": 22.9,
-          "2": 30.3,
-          "3+": 62.6,
-          "GG": 63.4,
-          "NG": 36.6
-        },
-        "math_already_done": {
-          "last_five_matches_per_team": {
-            "home": 5,
-            "away": 5
-          },
-          "recent_goals_attack_defence": "Present",
-          "home_away_form": "Present",
-          "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
-          "modeled_goals": {
-            "home": 1.81,
-            "away": 1.42
-          },
-          "poisson_probabilities": {
-            "1": 46.8,
-            "X": 22.9,
-            "2": 30.3,
-            "3+": 62.6,
-            "GG": 63.4,
-            "NG": 36.6
-          }
-        },
-        "ai_checks_still_required": [
-          "actual_xg_xga_if_available",
-          "injuries_and_suspensions",
-          "expected_lineups",
-          "recent_h2h_up_to_five",
-          "table_and_motivation",
-          "rest_days_and_schedule",
-          "odds_identity_and_source"
-        ],
-        "ai_review_status": "pending_independent_review"
       }
     ]
   },
   "detailed_ai_top_ten_fixture_ids": [
     "espn:football:esp.1:401882802",
-    "espn:football:ita.1:401875009",
-    "espn:football:tur.1:401888370"
+    "espn:football:ita.1:401875009"
   ],
   "ticket_proposals": {
-    "A": {
-      "id": "A",
-      "combined_odds": 2.657,
-      "selection_method": "highest conservative market EV/probability/evidence score; tie by model probability then runner-up",
-      "ready_for_publication": false,
-      "requires_independent_ai_approval": true,
-      "matches": [
-        {
-          "fixture_id": "espn:football:ita.1:401875009",
-          "match": "Monza - Fiorentina",
-          "datetime": "2026-11-23T19:45:00Z",
-          "pick": "3+",
-          "probability_pct": 68.6,
-          "rank_score": 38.502,
-          "conservative_ev_pct": 6.51,
-          "data_quality_index_pct": 55.1,
-          "second_best_pct": 68.6,
-          "odd": 1.63
-        },
-        {
-          "fixture_id": "espn:football:tur.1:401888370",
-          "match": "Istanbul Basaksehir - Çorum FK",
-          "datetime": "2026-11-23T17:00:00Z",
-          "pick": "3+",
-          "probability_pct": 62.6,
-          "rank_score": 34.393,
-          "conservative_ev_pct": 1.07,
-          "data_quality_index_pct": 52.6,
-          "second_best_pct": 62.6,
-          "odd": 1.63
-        }
-      ]
-    },
+    "A": null,
     "B": null,
-    "reason": "No eligible pair of NON-overlapping A and B combinations totaling 2.00-3.00 each"
+    "reason": "No 2-3 leg A combination totaling 2.00-3.00"
   },
   "publication_allowed": false
 }
