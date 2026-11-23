@@ -1,14 +1,332 @@
 {
   "date": "2026-11-23",
-  "feedback": "TOP10_UNAVAILABLE",
-  "status": "unavailable",
+  "feedback": "TOP10_READY",
+  "status": "ready",
   "source_fingerprint": "13eca7d12083eb667b6f1fdb35a4e84f834492ec39dd496cad8130f79ea99c0e",
   "scout_report": "shared/agent/scout-six-markets.json",
-  "count": 0,
-  "fixture_ids": [],
-  "candidates": [],
-  "next_action": "report_no_eligible_candidates",
+  "count": 5,
+  "fixture_ids": [
+    "espn:football:ita.1:401875009",
+    "espn:football:tur.1:401888370",
+    "espn:football:esp.1:401882802",
+    "espn:football:eng.1:401879237",
+    "espn:football:arg.1:401933756"
+  ],
+  "candidates": [
+    {
+      "rank": 1,
+      "fixture_id": "espn:football:ita.1:401875009",
+      "match": "Monza - Fiorentina",
+      "datetime": "2026-11-23T19:45:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 52.3,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 52.3,
+      "recommended_adjusted_probability_pct": 63.79,
+      "recommended_score": 27.94,
+      "recommended_ev_pct": -4.31,
+      "data_quality_index_pct": 20.0,
+      "second_market": "3+",
+      "second_probability_pct": 48.2,
+      "top_market_odds": 1.5,
+      "recommended_market_odds": 1.5,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "research_only": true,
+      "confidence": "low_data",
+      "history_evidence_complete": false,
+      "all_six_probabilities_pct": {
+        "1": 44.0,
+        "X": 26.0,
+        "2": 30.0,
+        "3+": 48.2,
+        "GG": 52.3,
+        "NG": 47.7
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 0,
+          "away": 0
+        },
+        "recent_goals_attack_defence": "Missing; modeled using broad priors, not actual recent form",
+        "home_away_form": "Missing; independent research required",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.45,
+          "away": 1.15
+        },
+        "poisson_probabilities": {
+          "1": 44.0,
+          "X": 26.0,
+          "2": 30.0,
+          "3+": 48.2,
+          "GG": 52.3,
+          "NG": 47.7
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 2,
+      "fixture_id": "espn:football:tur.1:401888370",
+      "match": "Istanbul Basaksehir - Çorum FK",
+      "datetime": "2026-11-23T17:00:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 52.3,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 52.3,
+      "recommended_adjusted_probability_pct": 63.44,
+      "recommended_score": 27.837,
+      "recommended_ev_pct": -4.21,
+      "data_quality_index_pct": 20.0,
+      "second_market": "3+",
+      "second_probability_pct": 48.2,
+      "top_market_odds": 1.51,
+      "recommended_market_odds": 1.51,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "research_only": true,
+      "confidence": "low_data",
+      "history_evidence_complete": false,
+      "all_six_probabilities_pct": {
+        "1": 44.0,
+        "X": 26.0,
+        "2": 30.0,
+        "3+": 48.2,
+        "GG": 52.3,
+        "NG": 47.7
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 0,
+          "away": 0
+        },
+        "recent_goals_attack_defence": "Missing; modeled using broad priors, not actual recent form",
+        "home_away_form": "Missing; independent research required",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.45,
+          "away": 1.15
+        },
+        "poisson_probabilities": {
+          "1": 44.0,
+          "X": 26.0,
+          "2": 30.0,
+          "3+": 48.2,
+          "GG": 52.3,
+          "NG": 47.7
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 3,
+      "fixture_id": "espn:football:esp.1:401882802",
+      "match": "Levante - Elche",
+      "datetime": "2026-11-23T20:00:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 52.3,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 52.3,
+      "recommended_adjusted_probability_pct": 62.07,
+      "recommended_score": 27.442,
+      "recommended_ev_pct": -3.79,
+      "data_quality_index_pct": 20.0,
+      "second_market": "3+",
+      "second_probability_pct": 48.2,
+      "top_market_odds": 1.55,
+      "recommended_market_odds": 1.55,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "research_only": true,
+      "confidence": "low_data",
+      "history_evidence_complete": false,
+      "all_six_probabilities_pct": {
+        "1": 44.0,
+        "X": 26.0,
+        "2": 30.0,
+        "3+": 48.2,
+        "GG": 52.3,
+        "NG": 47.7
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 0,
+          "away": 0
+        },
+        "recent_goals_attack_defence": "Missing; modeled using broad priors, not actual recent form",
+        "home_away_form": "Missing; independent research required",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.45,
+          "away": 1.15
+        },
+        "poisson_probabilities": {
+          "1": 44.0,
+          "X": 26.0,
+          "2": 30.0,
+          "3+": 48.2,
+          "GG": 52.3,
+          "NG": 47.7
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 4,
+      "fixture_id": "espn:football:eng.1:401879237",
+      "match": "Brentford - Everton",
+      "datetime": "2026-11-23T20:00:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 52.3,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 52.3,
+      "recommended_adjusted_probability_pct": 59.54,
+      "recommended_score": 26.738,
+      "recommended_ev_pct": -2.95,
+      "data_quality_index_pct": 20.0,
+      "second_market": "3+",
+      "second_probability_pct": 48.2,
+      "top_market_odds": 1.63,
+      "recommended_market_odds": 1.63,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "research_only": true,
+      "confidence": "low_data",
+      "history_evidence_complete": false,
+      "all_six_probabilities_pct": {
+        "1": 44.0,
+        "X": 26.0,
+        "2": 30.0,
+        "3+": 48.2,
+        "GG": 52.3,
+        "NG": 47.7
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 0,
+          "away": 0
+        },
+        "recent_goals_attack_defence": "Missing; modeled using broad priors, not actual recent form",
+        "home_away_form": "Missing; independent research required",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.45,
+          "away": 1.15
+        },
+        "poisson_probabilities": {
+          "1": 44.0,
+          "X": 26.0,
+          "2": 30.0,
+          "3+": 48.2,
+          "GG": 52.3,
+          "NG": 47.7
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 5,
+      "fixture_id": "espn:football:arg.1:401933756",
+      "match": "Gimnasia La Plata - Newell's Old Boys",
+      "datetime": "2026-11-23T20:00:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 52.3,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 52.3,
+      "recommended_adjusted_probability_pct": 51.7,
+      "recommended_score": 24.839,
+      "recommended_ev_pct": 0.29,
+      "data_quality_index_pct": 20.0,
+      "second_market": "3+",
+      "second_probability_pct": 48.2,
+      "top_market_odds": 1.94,
+      "recommended_market_odds": 1.94,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "research_only": true,
+      "confidence": "low_data",
+      "history_evidence_complete": false,
+      "all_six_probabilities_pct": {
+        "1": 44.0,
+        "X": 26.0,
+        "2": 30.0,
+        "3+": 48.2,
+        "GG": 52.3,
+        "NG": 47.7
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 0,
+          "away": 0
+        },
+        "recent_goals_attack_defence": "Missing; modeled using broad priors, not actual recent form",
+        "home_away_form": "Missing; independent research required",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.45,
+          "away": 1.15
+        },
+        "poisson_probabilities": {
+          "1": 44.0,
+          "X": 26.0,
+          "2": 30.0,
+          "3+": 48.2,
+          "GG": 52.3,
+          "NG": 47.7
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    }
+  ],
+  "next_action": "independent_ai_detailed_scout",
   "history_status": "unavailable_no_fabrication",
+  "research_only": true,
   "ai_approval_required": true,
   "publication_allowed": false
 }
