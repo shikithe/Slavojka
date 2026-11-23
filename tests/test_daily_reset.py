@@ -25,8 +25,23 @@ class DailyResetTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             root=Path(d);p=root/"shared/collector-feed.json";p.parent.mkdir(parents=True)
             p.write_text(json.dumps({"date":"2026-11-23","football_candidates":[{"fixture_id":"today"}]}))
-            with self.assertRaises(ValueError):reset(root,NOW)
+            self.assertTrue(reset(root,NOW))
             self.assertIn("today",p.read_text())
+            self.assertFalse(reset(root,NOW))
+    def test_midnight_and_partial_retry_clear_only_stale_files(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)
+            now=datetime(2026,11,24,0,2,tzinfo=TZ)
+            self.assertTrue(reset(root,now))
+            old=root/"shared/agent/history-h2h.json"
+            old.write_text(json.dumps({"date":"2026-11-23","fixtures":[{"old":1}]}))
+            active=root/"shared/active-list.json"
+            active.write_text(json.dumps({"date":"2026-11-24","fixtures":[{"fixture_id":"today"}]}))
+            self.assertTrue(reset(root,now))
+            self.assertEqual(json.loads(old.read_text())["fixtures"],[])
+            self.assertEqual(json.loads(active.read_text())["fixtures"][0]["fixture_id"],"today")
+            self.assertFalse(reset(root,now))
+
     def test_refuses_after_nine(self):
         with tempfile.TemporaryDirectory() as d:
             with self.assertRaises(ValueError):
