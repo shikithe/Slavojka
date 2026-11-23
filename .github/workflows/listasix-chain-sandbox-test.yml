@@ -1,0 +1,36 @@
+name: ListaSix SAFE isolated feedback chain test
+on:
+  push:
+    branches: [test/listasix-chain-safety-20261123]
+    paths:
+      - 'tests/test_sequential_chain_contract.py'
+      - '.github/workflows/listasix-chain-sandbox-test.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: listasix-chain-sandbox-only
+  cancel-in-progress: false
+jobs:
+  safe-dry-run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate Python and branch-only workflow contracts
+        run: |
+          python3 -m compileall -q lista
+          python3 -m unittest discover -s tests -p 'test_sequential_chain_contract.py' -v
+          python3 -m unittest discover -s tests -p 'test_daily_reset.py' -v
+          python3 -m unittest discover -s tests -p 'test_odds_feedback.py' -v
+          python3 -m unittest discover -s tests -p 'test_scout_history_fallback.py' -v
+          python3 -m unittest discover -s tests -p 'test_scout_feedback.py' -v
+      - name: Confirm safety scope
+        run: |
+          echo 'SAFE_TEST_NO_PUBLICATION_OR_MAIN_WRITES'
+          test "$GITHUB_REF_NAME" = 'test/listasix-chain-safety-20261123'
