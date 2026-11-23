@@ -60,13 +60,15 @@ jobs:
           with open(os.environ["GITHUB_OUTPUT"],"a") as out:
               out.write("ready="+("true" if ready else "false")+"\n")
           PY
-      - name: Check fresh ESPN, TipsterArea and last-five history before Scout
+      - name: Check fresh ESPN/odds; stale history is downgraded
         if: steps.coverage.outputs.ready == 'true'
         id: sources
         run: python3 -m lista.scout_source_gate
       - name: Regression tests 100 matches times 6 markets, unique A/B, odds 2-3
         if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
-        run: python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
+        run: |
+          python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
+          python3 -m unittest discover -s tests -p 'test_scout_history_fallback.py' -v
       - name: Evaluate ALL same-day ESPN fixtures on 6 markets
         if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
         run: python3 -m lista.scout_six_markets
@@ -82,7 +84,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- shared/agent/scout-six-markets*.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json docs/scout-six-markets.json docs/scout-six-markets.txt 2>/dev/null || true
+          git add -f -- shared/agent/history-h2h.json shared/agent/scout-six-markets*.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json docs/scout-six-markets.json docs/scout-six-markets.txt 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "ListaSix Scout 6/6 all fixtures ranked, not auto-approved [skip ci]"
             for attempt in 1 2 3 4 5; do
