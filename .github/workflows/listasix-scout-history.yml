@@ -27,9 +27,37 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Require today's ESPN feed and skip already-complete matching history
+        id: source
+        run: |
+          python3 - <<'PY'
+          import json,os
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          today=datetime.now(ZoneInfo("Europe/Sarajevo")).date().isoformat()
+          def read(p):
+              try: return json.loads(Path(p).read_text(encoding="utf-8"))
+              except (ValueError,OSError): return {}
+          feed=read("shared/collector-feed.json")
+          hist=read("shared/agent/history-h2h.json")
+          ids=[f.get("fixture_id") for f in feed.get("football_candidates",[])]
+          feed_valid=feed.get("date")==today and bool(ids) and len(set(ids))==len(ids) and None not in ids
+          previous={x.get("fixture_id") for x in hist.get("fixtures",[])}
+          complete=(feed_valid and hist.get("date")==today
+                    and previous==set(ids) and bool(hist.get("leagues"))
+                    and hist.get("history_status") not in ("unavailable_no_fabrication","incomplete_no_fabrication"))
+          run=feed_valid and not complete
+          with open(os.environ["GITHUB_OUTPUT"],"a") as output:
+              output.write("run="+str(run).lower()+"\n")
+          print("HISTORY_GATE",today,"feed_valid=",feed_valid,
+                "history_complete=",complete,"run=",run)
+          PY
       - name: Collect real ESPN scoreboards for daily match history
+        if: steps.source.outputs.run == 'true'
         run: python3 -m lista.scout_history
       - name: Commit current ESPN last-five history only
+        if: steps.source.outputs.run == 'true'
         id: save
         run: |
           set -euo pipefail
@@ -49,7 +77,7 @@ jobs:
             done
           fi
       - name: Feedback — fresh history saved, now trigger existing Scout 6/6
-        if: steps.save.outputs.changed == 'true'
+        if: steps.source.outputs.run == 'true' && steps.save.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
@@ -57,6 +85,7 @@ jobs:
           gh workflow run listasix-scout-six-markets.yml --repo "$GH_REPO" --ref main
           echo "HISTORY_READY_SCOUT_6OF6_DISPATCHED"
       - name: Signal MemaraSix after results and AI prices are ready
+        if: steps.source.outputs.run == 'true'
         env:
           MEMARASIX_DISPATCH_TOKEN: ${{ secrets.MEMARASIX_DISPATCH_TOKEN }}
         run: |
