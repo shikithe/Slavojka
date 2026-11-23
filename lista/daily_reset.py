@@ -38,41 +38,37 @@ def reset(root, now):
         raise ValueError("Daily reset forbidden after 09:00 Sarajevo")
     today = local.date().isoformat()
     marker = root / "shared/agent/daily-reset-feedback.json"
-    if marker.exists():
-        try:
-            if json.loads(marker.read_text(encoding="utf-8")).get("date") == today:
-                return False
-        except (ValueError, OSError):
-            pass
-    # Never overwrite current-day data from a collector that already ran.
-    for name in ("shared/collector-feed.json", "shared/active-list.json"):
-        path = root/name
-        if path.exists():
-            try:
-                doc = json.loads(path.read_text(encoding="utf-8"))
-                if doc.get("date") == today and (doc.get("football_candidates") or doc.get("fixtures")):
-                    raise ValueError("Refusing to erase an already populated current-day football offer")
-            except json.JSONDecodeError:
-                raise ValueError("Invalid existing live data: "+name)
+    changed = False
+    # Retry-safe: reset stale files individually, preserve all current-day data.
     for name, template in FILES.items():
         path = root/name
         if path.exists():
             try:
                 existing = json.loads(path.read_text(encoding="utf-8"))
-                if existing.get("date") == today and (existing.get("football_candidates") or existing.get("fixtures") or existing.get("ranked_fixtures")):
-                    raise ValueError("Refusing to clear current-day data: "+name)
-            except json.JSONDecodeError:
-                raise ValueError("Invalid existing file: "+name)
+            except (ValueError, OSError):
+                raise ValueError("Invalid existing daily file: "+name)
+            if existing.get("date") == today:
+                continue
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps({"date": today, **template}, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
-    # Historical dated snapshots are kept, but only today's dated file can be used.
-    for name in TEXT_FILES:
-        path=root/name
-        path.parent.mkdir(parents=True,exist_ok=True)
-        path.write_text("Dnevna ponuda je prazna — čeka ESPN preuzimanje poslije 09:00 Sarajevo.\n",encoding="utf-8")
+        changed = True
+    # Never overwrite current-day text after the feed has been collected.
+    feed_path = root/"shared/collector-feed.json"
+    feed = json.loads(feed_path.read_text(encoding="utf-8")) if feed_path.exists() else {}
+    if not feed.get("football_candidates"):
+        for name in TEXT_FILES:
+            path=root/name
+            empty="Dnevna ponuda je prazna — čeka ESPN preuzimanje poslije 09:00 Sarajevo.\n"
+            if not path.exists() or path.read_text(encoding="utf-8") != empty:
+                path.parent.mkdir(parents=True,exist_ok=True)
+                path.write_text(empty,encoding="utf-8")
+                changed=True
     marker.parent.mkdir(parents=True,exist_ok=True)
-    marker.write_text(json.dumps({"date": today, "feedback": "DAILY_RESET_COMPLETE", "status": "complete", "next_action": "espn_after_0900"}, indent=2)+"\n",encoding="utf-8")
-    return True
+    feedback={"date": today, "feedback": "DAILY_RESET_COMPLETE", "status": "complete", "next_action": "espn_after_0900"}
+    if not marker.exists() or json.loads(marker.read_text(encoding="utf-8")) != feedback:
+        marker.write_text(json.dumps(feedback, indent=2)+"\n",encoding="utf-8")
+        changed=True
+    return changed
 
 if __name__ == "__main__":
     changed=reset(Path("."), datetime.now(TZ))
