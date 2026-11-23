@@ -77,6 +77,7 @@ jobs:
 
       - name: Feedback - trigger History immediately after ESPN feed is committed
         if: steps.gate.outputs.run == 'true'
+        continue-on-error: true  # History failure must never block the independent odds collector
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
