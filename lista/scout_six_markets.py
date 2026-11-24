@@ -45,6 +45,10 @@ def league_goal_reference(league_record):
     unique = {}
     for team in league_record.get("teams", {}).values():
         for item in team.get("matches", []):
+            # A club's mixed-competition form is useful, but domestic results
+            # must not silently redefine the Champions League goal average.
+            if league_record.get("league") and item.get("league") != league_record["league"]:
+                continue
             if item.get("event_id") and isinstance(item.get("home_goals"), (int, float)) and isinstance(item.get("away_goals"), (int, float)):
                 unique[str(item["event_id"])] = item
     count = len(unique)
@@ -227,21 +231,18 @@ def format_combo(combo, tid):
     }
 
 def detailed_ai_handoff(rows, now=None):
-    """Top 10 still eligible fixtures, with existing math evidence reusable as-is.
+    """Always send up to 10 highest-ranked, future, verified-odds fixtures.
 
-    These are the only matches for detailed AI investigation, not 10 new math
-    calculations. Independent analyst owns all remaining nonmathematical checks.
+    Research candidate ranking and betting eligibility are separate. Missing
+    past games triggers independent form research, not exclusion from TOP10.
+    Never pad with invented matches or odds if fewer than ten are available.
     """
-    selected = [r for r in rows if r["candidate_A"]][:DETAILED_SCOUT_LIMIT]
-    research_only = False
-    # If the statistical acceptance gate has no candidates because history is
-    # unavailable, still send future, quoted fixtures for independent review.
-    # This DOES NOT authorize publication or loosen ticket proposal rules.
-    if not selected and now is not None:
-        selected = [r for r in rows
-                    if r.get("recommended_market") and r.get("recommended_odds")
-                    and datetime.fromisoformat(r["datetime"].replace("Z","+00:00")) > now+timedelta(minutes=20)][:DETAILED_SCOUT_LIMIT]
-        research_only = True
+    selected = [r for r in rows
+                if r.get("recommended_market") and r.get("recommended_odds")
+                and (now is None or datetime.fromisoformat(
+                     r["datetime"].replace("Z","+00:00")) > now+timedelta(minutes=20))
+               ][:DETAILED_SCOUT_LIMIT]
+    research_only = any(not r["candidate_A"] for r in selected)
     items = []
     for rank, r in enumerate(selected, 1):
         items.append({
@@ -261,7 +262,7 @@ def detailed_ai_handoff(rows, now=None):
             "recommended_market_odds": r["recommended_odds"],
             "eligible_for_A": bool(r["candidate_A"]),
             "eligible_for_B": bool(r["candidate_B"]),
-            "research_only": bool(research_only and not r["candidate_A"]),
+            "research_only": bool(not r["candidate_A"]),
             "confidence": r.get("confidence","unknown"),
             "history_evidence_complete": bool(r.get("history_evidence_complete",False)),
             "all_six_probabilities_pct": r["probability_pct"],
@@ -285,7 +286,7 @@ def detailed_ai_handoff(rows, now=None):
         })
     return {
         "limit": DETAILED_SCOUT_LIMIT,
-        "selection_rule": "Research-only future quoted matches if zero statistically qualified; otherwise top statistically qualified matches",
+        "selection_rule": "Top ten future quoted fixtures by existing model rank; ticket A/B eligibility remains independent",
         "research_only": research_only,
         "count": len(items),
         "math_recalculation_prohibited": True,

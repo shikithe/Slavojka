@@ -55,6 +55,7 @@ jobs:
               marker=json.loads(marker_path.read_text(encoding="utf-8")) if marker_path.exists() else {}
               ids=[x.get("fixture_id") for x in feed.get("football_candidates",[])]
               history_ready=(history.get("date")==today
+                    and history.get("schema_version",0)>=3
                     and marker.get("date")==today
                     and marker.get("feedback")=="HISTORY_READY"
                     and marker.get("espn_generated_at_utc")==feed.get("generated_at_utc")

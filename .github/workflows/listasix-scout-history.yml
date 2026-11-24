@@ -57,6 +57,7 @@ jobs:
                  and fb.get("espn_total")==len(ids))
           previous={x.get("fixture_id") for x in hist.get("fixtures",[])}
           complete=(ready and hist.get("date")==today
+                    and hist.get("schema_version",0)>=3
                     and previous==set(ids) and bool(hist.get("leagues"))
                     and hist.get("history_status") not in ("unavailable_no_fabrication","incomplete_no_fabrication"))
           run=ready and not complete
