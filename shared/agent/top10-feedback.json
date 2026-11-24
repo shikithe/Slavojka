@@ -9,13 +9,13 @@
     "espn:football:uefa.champions:401915299",
     "espn:football:sco.1:401878345",
     "espn:football:uefa.champions:401915298",
-    "espn:football:sco.1:401878348",
     "espn:football:uefa.champions:401915294",
     "espn:football:uefa.champions:401915297",
     "espn:football:uefa.champions:401915379",
     "espn:football:uefa.champions:401915296",
     "espn:football:uefa.champions:401915295",
-    "espn:football:bra.1:401841335"
+    "espn:football:bra.1:401841335",
+    "espn:football:usa.1:401933738"
   ],
   "candidates": [
     {
@@ -221,73 +221,6 @@
     },
     {
       "rank": 4,
-      "fixture_id": "espn:football:sco.1:401878348",
-      "match": "Hibernian - Dundee",
-      "datetime": "2026-11-24T19:45:00Z",
-      "top_market": "GG",
-      "top_probability_pct": 68.4,
-      "recommended_market": "GG",
-      "recommended_probability_pct": 68.4,
-      "recommended_adjusted_probability_pct": 64.95,
-      "recommended_score": 38.725,
-      "recommended_ev_pct": 7.17,
-      "data_quality_index_pct": 55.8,
-      "second_market": "3+",
-      "second_probability_pct": 68.3,
-      "top_market_odds": 1.65,
-      "recommended_market_odds": 1.65,
-      "eligible_for_A": true,
-      "eligible_for_B": true,
-      "b_market": "3+",
-      "b_market_rank": 2,
-      "b_market_odds": 1.63,
-      "b_market_probability_pct": 68.3,
-      "b_market_ev_pct": 6.32,
-      "research_only": false,
-      "confidence": "normal",
-      "history_evidence_complete": true,
-      "all_six_probabilities_pct": {
-        "1": 42.3,
-        "X": 22.1,
-        "2": 35.6,
-        "3+": 68.3,
-        "GG": 68.4,
-        "NG": 31.6
-      },
-      "math_already_done": {
-        "last_five_matches_per_team": {
-          "home": 5,
-          "away": 5
-        },
-        "recent_goals_attack_defence": "Present",
-        "home_away_form": "Present",
-        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
-        "modeled_goals": {
-          "home": 1.84,
-          "away": 1.68
-        },
-        "poisson_probabilities": {
-          "1": 42.3,
-          "X": 22.1,
-          "2": 35.6,
-          "3+": 68.3,
-          "GG": 68.4,
-          "NG": 31.6
-        }
-      },
-      "ai_checks_still_required": [
-        "actual_xg_xga_if_available",
-        "injuries_and_suspensions",
-        "expected_lineups",
-        "recent_h2h_up_to_five",
-        "table_and_motivation",
-        "rest_days_and_schedule",
-        "odds_identity_and_source"
-      ],
-      "ai_review_status": "pending_independent_review"
-    },
-    {
-      "rank": 5,
       "fixture_id": "espn:football:uefa.champions:401915294",
       "match": "Feyenoord Rotterdam - FC Porto",
       "datetime": "2026-11-24T20:00:00Z",
@@ -354,7 +287,7 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 6,
+      "rank": 5,
       "fixture_id": "espn:football:uefa.champions:401915297",
       "match": "Slovan Bratislava - Real Betis",
       "datetime": "2026-11-24T20:00:00Z",
@@ -421,7 +354,7 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 7,
+      "rank": 6,
       "fixture_id": "espn:football:uefa.champions:401915379",
       "match": "Manchester City - Napoli",
       "datetime": "2026-11-24T20:00:00Z",
@@ -488,7 +421,7 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 8,
+      "rank": 7,
       "fixture_id": "espn:football:uefa.champions:401915296",
       "match": "Como - AEK Athens",
       "datetime": "2026-11-24T20:00:00Z",
@@ -555,7 +488,7 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 9,
+      "rank": 8,
       "fixture_id": "espn:football:uefa.champions:401915295",
       "match": "Arsenal - Borussia Dortmund",
       "datetime": "2026-11-24T20:00:00Z",
@@ -622,7 +555,7 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 10,
+      "rank": 9,
       "fixture_id": "espn:football:bra.1:401841335",
       "match": "Chapecoense - Palmeiras",
       "datetime": "2026-11-24T21:00:00Z",
@@ -675,6 +608,73 @@
           "3+": 48.6,
           "GG": 51.3,
           "NG": 48.7
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 10,
+      "fixture_id": "espn:football:usa.1:401933738",
+      "match": "San Jose Earthquakes - Houston Dynamo FC",
+      "datetime": "2026-11-25T03:00:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 53.6,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 53.6,
+      "recommended_adjusted_probability_pct": 58.52,
+      "recommended_score": 28.822,
+      "recommended_ev_pct": -9.3,
+      "data_quality_index_pct": 54.9,
+      "second_market": "3+",
+      "second_probability_pct": 49.2,
+      "top_market_odds": 1.55,
+      "recommended_market_odds": 1.55,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "b_market": null,
+      "b_market_rank": 3,
+      "b_market_odds": null,
+      "b_market_probability_pct": null,
+      "b_market_ev_pct": null,
+      "research_only": true,
+      "confidence": "normal",
+      "history_evidence_complete": true,
+      "all_six_probabilities_pct": {
+        "1": 40.5,
+        "X": 26.1,
+        "2": 33.4,
+        "3+": 49.2,
+        "GG": 53.6,
+        "NG": 46.4
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Present",
+        "home_away_form": "Present",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.4,
+          "away": 1.25
+        },
+        "poisson_probabilities": {
+          "1": 40.5,
+          "X": 26.1,
+          "2": 33.4,
+          "3+": 49.2,
+          "GG": 53.6,
+          "NG": 46.4
         }
       },
       "ai_checks_still_required": [
