@@ -116,7 +116,7 @@ COUNTRY_TAGS = frozenset((
 def secondary_key(name):
     """Canonical team identity for the independent second matching pass."""
     text = str(name).strip()
-    suffix = re.search(r"\\s+\\(([A-Za-z]{3})\\)\\s*$", text)
+    suffix = re.search(r"\s+\(([A-Za-z]{3})\)\s*$", text)
     if suffix and suffix.group(1).casefold() in COUNTRY_TAGS:
         text = text[:suffix.start()]
     return normalized(text)
