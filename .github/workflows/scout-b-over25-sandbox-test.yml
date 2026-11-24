@@ -1,0 +1,68 @@
+name: SAFE Scout B top-two 3plus verification
+on:
+  push:
+    branches: [test/scout-b-over25-top-two-20261124]
+    paths:
+      - 'lista/scout_value.py'
+      - 'lista/scout_six_markets.py'
+      - 'lista/scout_feedback.py'
+      - 'tests/test_scout_b_second_market.py'
+      - '.github/workflows/scout-b-over25-sandbox-test.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: safe-scout-b-over25-test
+  cancel-in-progress: false
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Offline math tests and B top-two regression
+        run: |
+          python -m compileall -q lista tests/test_scout_b_second_market.py
+          python -m unittest discover -s tests -p test_scout_b_second_market.py -v
+          python -m unittest discover -s tests -p test_scout_six_markets.py -v
+          python -m unittest discover -s tests -p test_scout_feedback.py -v
+          python -m unittest discover -s tests -p test_scout_history_fallback.py -v
+          python -m unittest discover -s tests -p test_top10_multicompetition.py -v
+      - name: Dry-run latest same-day ESPN quotes + History (no commits)
+        run: |
+          python -m lista.scout_six_markets
+          python -m lista.scout_feedback
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path("shared/agent/scout-six-markets.json").read_text())
+          feedback=json.loads(Path("shared/agent/top10-feedback.json").read_text())
+          candidates=[r for r in report["ranked_fixtures"] if r["candidate_B"]]
+          print("B_3PLUS_CANDIDATES",json.dumps([
+              {"match":r["match"],"rank":r["b_market_rank"],
+               "odds":r["b_odds"],"conservative_ev_pct":r["b_conservative_ev_pct"]}
+              for r in candidates],ensure_ascii=False))
+          print("SUGGESTION_B",json.dumps(report["ticket_proposals"]["B"],ensure_ascii=False))
+          print("TOP10",feedback["feedback"],feedback["count"])
+          assert feedback["count"]==10
+          assert all(r["b_market_rank"] in (1,2)
+                     and r["b_conservative_ev_pct"]>0
+                     and r["b_odds"]<3 for r in candidates)
+          b=report["ticket_proposals"]["B"]
+          if b:
+              assert all(x["pick"]=="3+" for x in b["matches"])
+              assert b["ready_for_publication"] is False
+              a=report["ticket_proposals"]["A"]
+              if a:
+                  assert not {x["fixture_id"] for x in a["matches"]} & {x["fixture_id"] for x in b["matches"]}
+          print("SAFE_B_TOP_TWO_REAL_DATA_VERIFIED")
+          PY
+      - name: Confirm branch and read-only execution
+        run: |
+          test "$GITHUB_REF_NAME" = "test/scout-b-over25-top-two-20261124"
+          echo "NO_MAIN_WRITE_NO_TICKET_PUBLICATION"
