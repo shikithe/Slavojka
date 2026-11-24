@@ -54,6 +54,28 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p 'test_tipster_feedback_cycle.py' -v
           python3 -m lista.tipster_feedback_cycle
+      - name: Commit collected odds AND visible daily list in the same workflow
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json shared/kvoter/coverage-feedback.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt 
+          if ! git diff --cached --quiet; then
+            git commit -m "ListaSix: TipsterArea HTML odds update [skip ci]"
+            # Another service may commit while this action is collecting; retry safe fast-forward pushes.
+            for attempt in 1 2 3 4 5; do
+              git -c rebase.autoStash=true pull --rebase origin main
+              if git push origin HEAD:main; then
+                echo "TIPSTER_PUBLIC_OFFER_COMMITTED"
+                break
+              fi
+              if [ "$attempt" = 5 ]; then echo "TIPSTER_PUSH_FAILED" >&2; exit 1; fi
+              sleep $((attempt * 2))
+            done
+          else
+            echo "TIPSTER_NO_NEW_PRICES"
+          fi
+
       - name: Sensor handoff - report unresolved quotes after the real second pass
         continue-on-error: true
         env:
@@ -96,28 +118,6 @@ jobs:
                              "--repo",os.environ["GH_REPO"],"--body",body],check=True)
           print("ODDS_SENSOR_PENDING",len(missing))
           PY
-      - name: Commit collected odds AND visible daily list in the same workflow
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- 'shared/kvoter/ai-verified-'*.json shared/kvoter/tipster-status.json shared/kvoter/coverage-feedback.json docs/active-list.json shared/active-list.json docs/kvoter-ponuda.txt shared/kvoter-ponuda.txt 
-          if ! git diff --cached --quiet; then
-            git commit -m "ListaSix: TipsterArea HTML odds update [skip ci]"
-            # Another service may commit while this action is collecting; retry safe fast-forward pushes.
-            for attempt in 1 2 3 4 5; do
-              git -c rebase.autoStash=true pull --rebase origin main
-              if git push origin HEAD:main; then
-                echo "TIPSTER_PUBLIC_OFFER_COMMITTED"
-                break
-              fi
-              if [ "$attempt" = 5 ]; then echo "TIPSTER_PUSH_FAILED" >&2; exit 1; fi
-              sleep $((attempt * 2))
-            done
-          else
-            echo "TIPSTER_NO_NEW_PRICES"
-          fi
-
       - name: ODDS_READY feedback - dispatch History only after committed quotes
         env:
           GH_TOKEN: ${{ github.token }}
