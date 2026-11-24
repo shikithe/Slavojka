@@ -33,15 +33,15 @@ PRICE/EV RANKING | match | pick | raw p% | conservative p% | evidence /100 | con
 
 DETAILED AI SCOUT: TOP 10 ONLY (mathematical form, goals, home/away, league averages ALREADY DONE)
 1. RB Leipzig - Lens | VALUE PICK 3+ 80.5% | conservative p 78.2% | EV +2.4% | evidence 43.7/100 | score 40.41 | odds 1.31 | Independent AI review pending
-2. Galatasaray - Aston Villa | VALUE PICK 1 59.0% | conservative p 46.7% | EV +40.6% | evidence 52.3/100 | score 40.35 | odds 3.01 | Independent AI review pending
-3. Rangers - Aberdeen | VALUE PICK GG 68.6% | conservative p 62.1% | EV +13.0% | evidence 52.2/100 | score 39.48 | odds 1.82 | Independent AI review pending
-4. Real Madrid - PSV Eindhoven | VALUE PICK GG 72.5% | conservative p 69.2% | EV +5.1% | evidence 50.4/100 | score 38.83 | odds 1.52 | Independent AI review pending
-5. Hibernian - Dundee | VALUE PICK GG 68.4% | conservative p 65.0% | EV +7.2% | evidence 55.8/100 | score 38.73 | odds 1.65 | Independent AI review pending
-6. Feyenoord Rotterdam - FC Porto | VALUE PICK 2 56.0% | conservative p 49.6% | EV +16.6% | evidence 52.5/100 | score 35.84 | odds 2.35 | Independent AI review pending
-7. Slovan Bratislava - Real Betis | VALUE PICK 3+ 66.3% | conservative p 69.5% | EV -5.5% | evidence 55.6/100 | score 35.18 | odds 1.36 | Independent AI review pending
-8. Manchester City - Napoli | VALUE PICK GG 61.5% | conservative p 61.4% | EV +0.1% | evidence 56.3/100 | score 34.31 | odds 1.63 | Independent AI review pending
-9. Bodo/Glimt - LASK Linz | VALUE PICK GG 64.8% | conservative p 68.8% | EV -5.7% | evidence 51.0/100 | score 34.09 | odds 1.37 | Independent AI review pending
-10. Como - AEK Athens | VALUE PICK GG 59.7% | conservative p 60.2% | EV -0.7% | evidence 45.7/100 | score 31.84 | odds 1.65 | Independent AI review pending
+2. Rangers - Aberdeen | VALUE PICK GG 68.6% | conservative p 62.1% | EV +13.0% | evidence 52.2/100 | score 39.48 | odds 1.82 | Independent AI review pending
+3. Real Madrid - PSV Eindhoven | VALUE PICK GG 72.5% | conservative p 69.2% | EV +5.1% | evidence 50.4/100 | score 38.83 | odds 1.52 | Independent AI review pending
+4. Hibernian - Dundee | VALUE PICK GG 68.4% | conservative p 65.0% | EV +7.2% | evidence 55.8/100 | score 38.73 | odds 1.65 | Independent AI review pending
+5. Feyenoord Rotterdam - FC Porto | VALUE PICK 2 56.0% | conservative p 49.6% | EV +16.6% | evidence 52.5/100 | score 35.84 | odds 2.35 | Independent AI review pending
+6. Slovan Bratislava - Real Betis | VALUE PICK 3+ 66.3% | conservative p 69.5% | EV -5.5% | evidence 55.6/100 | score 35.18 | odds 1.36 | Independent AI review pending
+7. Manchester City - Napoli | VALUE PICK GG 61.5% | conservative p 61.4% | EV +0.1% | evidence 56.3/100 | score 34.31 | odds 1.63 | Independent AI review pending
+8. Como - AEK Athens | VALUE PICK GG 59.7% | conservative p 60.2% | EV -0.7% | evidence 45.7/100 | score 31.84 | odds 1.65 | Independent AI review pending
+9. Arsenal - Borussia Dortmund | VALUE PICK GG 56.4% | conservative p 55.5% | EV +1.7% | evidence 51.8/100 | score 31.82 | odds 1.83 | Independent AI review pending
+10. Chapecoense - Palmeiras | VALUE PICK 2 49.6% | conservative p 46.4% | EV +8.5% | evidence 53.1/100 | score 31.12 | odds 2.34 | Independent AI review pending
 
 A PROPOSAL (UNAPPROVED) 2.77: Real Madrid - PSV Eindhoven [GG 1.52, p=72.5%]; Rangers - Aberdeen [GG 1.82, p=68.6%]
 B PROPOSAL (UNAPPROVED) 2.13: RB Leipzig - Lens [3+ 1.31, p=80.5%]; Hibernian - Dundee [3+ 1.63, p=68.3%]
