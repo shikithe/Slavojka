@@ -42,6 +42,11 @@ jobs:
                   from datetime import date
                   print("SCHEDULE_PARSED",league,[(e.get("id"),e.get("status"),bool(parsed_event(e,"all",date(2026,11,24)))) for e in events[:3]])
                   print("FIXTURE_SOURCE_TEAM_IDS",scoreboard_team_ids(target))
+                  print("SCHEDULE_SCORE_SNAPSHOT",league,[(e.get("id"),e.get("date"),
+                     e.get("competitions",[{}])[0].get("status"),
+                     [(x.get("homeAway"),x.get("score"),x.get("winner"))
+                      for x in e.get("competitions",[{}])[0].get("competitors",[])])
+                     for e in events[:3]])
 
               except Exception as ex:
                   print("SCHEDULE_ERROR",league,str(ex)[:300])
