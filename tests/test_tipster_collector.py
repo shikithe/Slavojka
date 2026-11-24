@@ -2,7 +2,7 @@ import unittest
 from datetime import date
 from bs4 import BeautifulSoup
 
-from kvoter.tipster_collector import parse_daily, assign_links, parse_markets, verified_match_page, recover_verified_page_links
+from kvoter.tipster_collector import parse_daily, assign_links, assign_links_secondary, secondary_key, parse_markets, verified_match_page, recover_verified_page_links
 
 DAY = date(2026, 11, 21)
 DAILY = """<html><body><h1>Matches for Saturday, 21 November, 2026</h1>
@@ -84,5 +84,54 @@ class TipsterCollectorTests(unittest.TestCase):
         self.assertTrue(verified_match_page(soup, daily, fixture, DAY))
         self.assertFalse(verified_match_page(soup, daily, dict(home="Fulham",away="Manchester City"), DAY))
         self.assertFalse(verified_match_page(soup, daily, fixture, date(2026, 11, 22)))
+    def test_secondary_recovers_nine_champions_league_fixtures(self):
+        day=date(2026,11,24)
+        fixtures=[
+          ("Bodo/Glimt","LASK Linz","Bodo Glimt (Nor)","LASK Linz (Aut)"),
+          ("Galatasaray","Aston Villa","Galatasaray (Tur)","Aston Villa (Eng)"),
+          ("Arsenal","Borussia Dortmund","Arsenal (Eng)","Borussia Dortmund (Ger)"),
+          ("Como","AEK Athens","Como (Ita)","AEK Athens (Gre)"),
+          ("Feyenoord Rotterdam","FC Porto","Feyenoord (Ned)","Porto (Por)"),
+          ("Manchester City","Napoli","Manchester City (Eng)","Napoli (Ita)"),
+          ("RB Leipzig","Lens","RB Leipzig (Ger)","Lens (Fra)"),
+          ("Real Madrid","PSV Eindhoven","Real Madrid (Esp)","PSV Eindhoven (Ned)"),
+          ("Slovan Bratislava","Real Betis","Slovan Bratislava (Svk)","Real Betis (Esp)")
+        ]
+        html='<h1>Matches for Tuesday, 24 November, 2026</h1>'
+        feed=[]
+        for i,(home,away,source_home,source_away) in enumerate(fixtures):
+            clock="17:45" if i<2 else "20:00"
+            html+=f'<a href="/match/ucl-{i}">{clock} {source_home} - {source_away} 2.10 3.20 3.60</a>'
+            feed.append({"fixture_id":f"espn:football:uefa.champions:{i}",
+                         "home":home,"away":away,"league":"uefa.champions"})
+        matches=parse_daily(BeautifulSoup(html,"html.parser"),day)
+        self.assertEqual(len(matches),9)
+        self.assertLess(len(assign_links(feed,matches)),9)
+        mapped=assign_links_secondary(feed,matches)
+        self.assertEqual(len(mapped),9)
+        for i in range(9):
+            self.assertTrue(mapped[feed[i]["fixture_id"]]["url"].endswith(f"/ucl-{i}"))
+        # Same-day URL must still validate the exact teams and competition.
+        first=feed[0];candidate=mapped[first["fixture_id"]]
+        page=BeautifulSoup(
+          "<title>Bodo Glimt - LASK Linz, 24 November 2026, Champions League Group | TipsterArea.com</title>",
+          "html.parser")
+        self.assertTrue(verified_match_page(page,candidate,first,day,secondary=True))
+        self.assertFalse(verified_match_page(page,candidate,first,date(2026,11,25),secondary=True))
+        self.assertFalse(verified_match_page(
+           BeautifulSoup("<title>Bodo Glimt - LASK Linz, 24 November 2026, Europa League | TipsterArea.com</title>","html.parser"),
+           candidate,first,day,secondary=True))
+
+    def test_secondary_rejects_swapped_unknown_and_ambiguous_names(self):
+        fixture={"fixture_id":"espn:fixture", "home":"Arsenal","away":"Borussia Dortmund"}
+        correct={"home":"Arsenal (Eng)","away":"Borussia Dortmund (Ger)","url":"https://tipsterarea.com/match/real"}
+        reversed_match=dict(correct,home=correct["away"],away=correct["home"])
+        self.assertEqual(assign_links_secondary([fixture],[reversed_match]),{})
+        self.assertEqual(len(assign_links_secondary([fixture],[correct])),1)
+        self.assertEqual(assign_links_secondary([fixture],[correct,dict(correct,url="https://tipsterarea.com/match/duplicate")]),{})
+        self.assertNotEqual(secondary_key("Arsenal (U19)"),secondary_key("Arsenal"))
+        self.assertEqual(secondary_key("FC Porto"),secondary_key("Porto (Por)"))
+        self.assertEqual(secondary_key("Bodo/Glimt"),secondary_key("Bodo Glimt (Nor)"))
+
 if __name__ == "__main__":
     unittest.main()

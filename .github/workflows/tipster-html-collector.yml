@@ -10,6 +10,7 @@ on:
       - 'tests/test_tipster_collector.py'
       - 'lista/tipster_feedback_cycle.py'
       - 'tests/test_tipster_feedback_cycle.py'
+      - 'shared/kvoter/ai-verified-*.json'  # sensor can supply verified missing quotes
       - '.github/workflows/tipster-html-collector.yml'
 permissions:
   contents: write
@@ -43,37 +44,10 @@ jobs:
         run: |
           python3 -m unittest discover -s tests -p 'test_odds_feedback.py' -v
           python3 -m lista.odds_feedback
-      - name: Feedback MISSING — request prompt-guided identity review
-        if: steps.feedback.outputs.ready == 'false'
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
-          GH_REPO: ${{ github.repository }}
-        run: |
-          python3 - <<'PY'
-          import json,os,subprocess
-          from pathlib import Path
-          fb=json.loads(Path("shared/kvoter/coverage-feedback.json").read_text())
-          if fb.get("feedback")!="ODDS_MISSING_AI_REVIEW": raise SystemExit("Missing preliminary feedback")
-          title=f"ListaSix AI odds matching — {fb['date']}"
-          body=("IDENTITY REVIEW: prompts/tipster-unmatched-ai-review.md\n"
-                "This issue is a prompt handoff; GitHub does not execute an AI model.\n"
-                "Before finalization, the collector makes one additional deterministic, "
-                "verified-only matching pass; unresolved games remain without quotes.\n\n"
-                + "\n".join(f"- {x['fixture_id']} | {x['league']} | {x['home']} - {x['away']} | {x['start_utc']}"
-                            for x in fb["missing_fixtures"]))
-          found=subprocess.run(["gh","issue","list","--repo",os.environ["GH_REPO"],
-                                "--state","all","--search",title,"--json","title"],
-                               check=True,capture_output=True,text=True)
-          if not any(x["title"]==title for x in json.loads(found.stdout)):
-              subprocess.run(["gh","issue","create","--repo",os.environ["GH_REPO"],
-                              "--title",title,"--body",body],check=True)
-          print("AI_NAME_REVIEW_FEEDBACK_SENT",fb["without_quote"])
-          PY
-      - name: One extra verified matching pass only when initial coverage is incomplete
+      - name: Independent second-pass identity matching for all still-missing quotes
         if: steps.feedback.outputs.ready == 'false'
         run: |
-          python3 -m kvoter.tipster_collector --force || echo "SECOND_MATCHING_ATTEMPT_FAILED: keep first-pass verified quotes"
+          python3 -m kvoter.tipster_collector --secondary --force || echo "SECONDARY_MATCHING_FAILED: preserve existing verified odds and notify sensor"
           python3 -m lista.publish_ai_offer
       - name: Final feedback — proceed with collected prices, even if some names stay unmatched
         id: final_feedback
@@ -102,6 +76,48 @@ jobs:
             echo "TIPSTER_NO_NEW_PRICES"
           fi
 
+      - name: Sensor handoff - report unresolved quotes after the real second pass
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json,os,subprocess
+          from pathlib import Path
+          fb=json.loads(Path("shared/kvoter/coverage-feedback.json").read_text(encoding="utf-8"))
+          title=f"ListaSix odds recovery — {fb['date']}"
+          found=subprocess.run(["gh","issue","list","--repo",os.environ["GH_REPO"],
+                "--state","all","--search",title,"--json","title,number,state"],
+                check=True,capture_output=True,text=True)
+          records=[x for x in json.loads(found.stdout) if x["title"]==title]
+          if fb.get("coverage_status")=="complete":
+              for issue in records:
+                  if issue["state"].upper()=="OPEN":
+                      subprocess.run(["gh","issue","close",str(issue["number"]),
+                          "--repo",os.environ["GH_REPO"],
+                          "--comment","ODDS_COMPLETE: all ESPN fixtures now have at least one verified quote."],check=True)
+              print("ODDS_COMPLETE_NO_SENSOR_WORK")
+              raise SystemExit(0)
+          if fb.get("coverage_status")!="partial" or not fb.get("sensor_action_required"):
+              raise SystemExit("Invalid final odds coverage for sensor")
+          missing=fb.get("sensor_missing_fixtures") or []
+          body=("ODDS_PARTIAL_READY: second independent identification pass completed.\n"
+                f"Quoted {fb['matched_with_quotes']}/{fb['espn_total']}; "
+                f"still missing {len(missing)}. Only use verified source prices.\n"
+                "Sensor may add confirmed missing markets to same-day "
+                "shared/kvoter/ai-verified-YYYY-MM-DD.json, then re-run TipsterArea. "
+                "Never invent or overwrite existing quotes.\n\n"
+                + "\n".join(f"- {x['fixture_id']} | {x['league']} | {x['home']} - {x['away']} | {x['start_utc']}"
+                            for x in missing))
+          if not records:
+              subprocess.run(["gh","issue","create","--repo",os.environ["GH_REPO"],
+                              "--title",title,"--body",body],check=True)
+          elif records[0]["state"].upper()=="OPEN":
+              subprocess.run(["gh","issue","edit",str(records[0]["number"]),
+                             "--repo",os.environ["GH_REPO"],"--body",body],check=True)
+          print("ODDS_SENSOR_PENDING",len(missing))
+          PY
       - name: ODDS_READY feedback - dispatch History only after committed quotes
         env:
           GH_TOKEN: ${{ github.token }}
