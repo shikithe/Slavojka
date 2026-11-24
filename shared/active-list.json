@@ -7,27 +7,45 @@
       "fixture_id": "espn:football:uefa.champions:401915380",
       "datetime": "2026-11-24T17:45:00Z",
       "match": "Bodo/Glimt - LASK Linz",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/bodo-glimt-lask-linz-champions-league-group-stage-956784"
+      ],
+      "home_odds": 1.53,
+      "draw_odds": 5.28,
+      "away_odds": 5.8,
+      "over25_odds": 1.29,
+      "btts_yes_odds": 1.37,
+      "btts_no_odds": 2.89
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915300",
       "datetime": "2026-11-24T17:45:00Z",
       "match": "Galatasaray - Aston Villa",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/galatasaray-aston-villa-champions-league-group-stage-956785"
+      ],
+      "home_odds": 3.01,
+      "draw_odds": 3.98,
+      "away_odds": 2.32,
+      "over25_odds": 1.37,
+      "btts_yes_odds": 1.31,
+      "btts_no_odds": 3.2
     },
     {
       "fixture_id": "espn:football:sco.1:401878348",
@@ -55,66 +73,111 @@
       "fixture_id": "espn:football:uefa.champions:401915295",
       "datetime": "2026-11-24T20:00:00Z",
       "match": "Arsenal - Borussia Dortmund",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/arsenal-borussia-dortmund-champions-league-group-stage-956786"
+      ],
+      "home_odds": 1.45,
+      "draw_odds": 5.07,
+      "away_odds": 7.7,
+      "over25_odds": 1.7,
+      "btts_yes_odds": 1.83,
+      "btts_no_odds": 1.89
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915296",
       "datetime": "2026-11-24T20:00:00Z",
       "match": "Como - AEK Athens",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/como-aek-athens-champions-league-group-stage-956787"
+      ],
+      "home_odds": 1.3,
+      "draw_odds": 6.43,
+      "away_odds": 11.2,
+      "over25_odds": 1.34,
+      "btts_yes_odds": 1.65,
+      "btts_no_odds": 2.13
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915294",
       "datetime": "2026-11-24T20:00:00Z",
       "match": "Feyenoord Rotterdam - FC Porto",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/feyenoord-porto-champions-league-group-stage-956788"
+      ],
+      "home_odds": 3.04,
+      "draw_odds": 3.82,
+      "away_odds": 2.35,
+      "over25_odds": 1.65,
+      "btts_yes_odds": 1.48,
+      "btts_no_odds": 2.5
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915379",
       "datetime": "2026-11-24T20:00:00Z",
       "match": "Manchester City - Napoli",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/manchester-city-napoli-champions-league-group-stage-956789"
+      ],
+      "home_odds": 1.31,
+      "draw_odds": 6.4,
+      "away_odds": 10.4,
+      "over25_odds": 1.34,
+      "btts_yes_odds": 1.63,
+      "btts_no_odds": 2.17
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915299",
       "datetime": "2026-11-24T20:00:00Z",
       "match": "RB Leipzig - Lens",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/rb-leipzig-lens-champions-league-group-stage-956790"
+      ],
+      "home_odds": 1.44,
+      "draw_odds": 5.75,
+      "away_odds": 6.83,
+      "over25_odds": 1.31,
+      "btts_yes_odds": 1.45,
+      "btts_no_odds": 2.59
     },
     {
       "fixture_id": "espn:football:sco.1:401878345",
@@ -142,27 +205,45 @@
       "fixture_id": "espn:football:uefa.champions:401915298",
       "datetime": "2026-11-24T20:00:00Z",
       "match": "Real Madrid - PSV Eindhoven",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/real-madrid-psv-eindhoven-champions-league-group-stage-956791"
+      ],
+      "home_odds": 1.19,
+      "draw_odds": 9.25,
+      "away_odds": 14.8,
+      "over25_odds": 1.16,
+      "btts_yes_odds": 1.52,
+      "btts_no_odds": 2.4
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915297",
       "datetime": "2026-11-24T20:00:00Z",
       "match": "Slovan Bratislava - Real Betis",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/slovan-bratislava-real-betis-champions-league-group-stage-956792"
+      ],
+      "home_odds": 11.6,
+      "draw_odds": 6.9,
+      "away_odds": 1.28,
+      "over25_odds": 1.36,
+      "btts_yes_odds": 1.7,
+      "btts_no_odds": 2.05
     },
     {
       "fixture_id": "espn:football:bra.1:401841335",

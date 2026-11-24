@@ -1,22 +1,13 @@
 {
   "date": "2026-11-24",
-  "generated_at_utc": "2026-11-24T08:45:57.189505+00:00",
+  "generated_at_utc": "2026-11-24T10:10:15.804612+00:00",
+  "matching_pass": "secondary_exact_canonical",
   "espn": 13,
   "daily_tipster_links": 202,
-  "paired": 4,
-  "pages_checked": 0,
-  "updated": 0,
-  "with_any_quotes": 4,
-  "unpaired": [
-    "Bodo/Glimt - LASK Linz",
-    "Galatasaray - Aston Villa",
-    "Arsenal - Borussia Dortmund",
-    "Como - AEK Athens",
-    "Feyenoord Rotterdam - FC Porto",
-    "Manchester City - Napoli",
-    "RB Leipzig - Lens",
-    "Real Madrid - PSV Eindhoven",
-    "Slovan Bratislava - Real Betis"
-  ],
+  "paired": 13,
+  "pages_checked": 9,
+  "updated": 9,
+  "with_any_quotes": 13,
+  "unpaired": [],
   "failures": []
 }

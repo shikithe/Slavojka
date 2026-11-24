@@ -3,79 +3,19 @@
   "status": "ready_for_scout",
   "feedback": "ODDS_READY",
   "espn_total": 13,
-  "with_at_least_one_quote": 4,
-  "without_quote": 9,
-  "missing_fixtures": [
-    {
-      "fixture_id": "espn:football:uefa.champions:401915380",
-      "league": "uefa.champions",
-      "home": "Bodo/Glimt",
-      "away": "LASK Linz",
-      "start_utc": "2026-11-24T17:45:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915300",
-      "league": "uefa.champions",
-      "home": "Galatasaray",
-      "away": "Aston Villa",
-      "start_utc": "2026-11-24T17:45:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915295",
-      "league": "uefa.champions",
-      "home": "Arsenal",
-      "away": "Borussia Dortmund",
-      "start_utc": "2026-11-24T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915296",
-      "league": "uefa.champions",
-      "home": "Como",
-      "away": "AEK Athens",
-      "start_utc": "2026-11-24T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915294",
-      "league": "uefa.champions",
-      "home": "Feyenoord Rotterdam",
-      "away": "FC Porto",
-      "start_utc": "2026-11-24T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915379",
-      "league": "uefa.champions",
-      "home": "Manchester City",
-      "away": "Napoli",
-      "start_utc": "2026-11-24T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915299",
-      "league": "uefa.champions",
-      "home": "RB Leipzig",
-      "away": "Lens",
-      "start_utc": "2026-11-24T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915298",
-      "league": "uefa.champions",
-      "home": "Real Madrid",
-      "away": "PSV Eindhoven",
-      "start_utc": "2026-11-24T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915297",
-      "league": "uefa.champions",
-      "home": "Slovan Bratislava",
-      "away": "Real Betis",
-      "start_utc": "2026-11-24T20:00:00Z"
-    }
-  ],
-  "ai_prompt": "prompts/tipster-unmatched-ai-review.md",
+  "with_at_least_one_quote": 13,
+  "without_quote": 0,
+  "missing_fixtures": [],
+  "ai_prompt": null,
   "next_action": "scout_6of6_if_history_ready",
+  "coverage_feedback": "ODDS_COMPLETE",
+  "coverage_status": "complete",
+  "sensor_action_required": false,
+  "sensor_missing_fixtures": [],
   "final": true,
   "retry_attempted": true,
-  "matched_with_quotes": 4,
-  "skipped_unmatched": 9,
+  "matched_with_quotes": 13,
+  "skipped_unmatched": 0,
   "incomplete_markets_allowed": true,
-  "finished_at_utc": "2026-11-24T08:45:57.319562+00:00"
+  "finished_at_utc": "2026-11-24T10:10:15.966960+00:00"
 }
