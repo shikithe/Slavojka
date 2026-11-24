@@ -6,8 +6,8 @@ RANK | FIXTURE | 1 | X | 2 | 3+ | GG | NG | TOP | RUNNER-UP | ODDS | STATUS
 2 | Galatasaray - Aston Villa | 59.0% | 19.9% | 21.1% | 68.0% | 64.3% | 35.7% | 3+ 68.0% | GG 64.3% | 1.37 | OUT
 3 | Rangers - Aberdeen | 47.6% | 21.6% | 30.8% | 69.3% | 68.6% | 31.4% | 3+ 69.3% | GG 68.6% | 1.36 | A
 4 | Real Madrid - PSV Eindhoven | 36.3% | 21.2% | 42.5% | 73.4% | 72.5% | 27.5% | 3+ 73.4% | GG 72.5% | 1.16 | A
-5 | Hibernian - Dundee | 42.3% | 22.1% | 35.6% | 68.3% | 68.4% | 31.6% | GG 68.4% | 3+ 68.3% | 1.65 | A
-6 | Feyenoord Rotterdam - FC Porto | 22.9% | 21.1% | 56.0% | 64.6% | 62.6% | 37.4% | 3+ 64.6% | GG 62.6% | 1.65 | OUT
+5 | Hibernian - Dundee | 42.3% | 22.1% | 35.6% | 68.3% | 68.4% | 31.6% | GG 68.4% | 3+ 68.3% | 1.65 | A/B
+6 | Feyenoord Rotterdam - FC Porto | 22.9% | 21.1% | 56.0% | 64.6% | 62.6% | 37.4% | 3+ 64.6% | GG 62.6% | 1.65 | A/B
 7 | Slovan Bratislava - Real Betis | 18.0% | 19.3% | 62.7% | 66.3% | 61.1% | 38.9% | 3+ 66.3% | 2 62.7% | 1.36 | OUT
 8 | Manchester City - Napoli | 39.1% | 24.0% | 36.9% | 59.1% | 61.5% | 38.5% | GG 61.5% | 3+ 59.1% | 1.63 | A
 9 | Bodo/Glimt - LASK Linz | 35.4% | 23.1% | 41.5% | 63.6% | 64.8% | 35.2% | GG 64.8% | 3+ 63.6% | 1.37 | OUT
@@ -43,6 +43,6 @@ DETAILED AI SCOUT: TOP 10 ONLY (mathematical form, goals, home/away, league aver
 9. Bodo/Glimt - LASK Linz | VALUE PICK GG 64.8% | conservative p 68.8% | EV -5.7% | evidence 51.0/100 | score 34.09 | odds 1.37 | Independent AI review pending
 10. Como - AEK Athens | VALUE PICK GG 59.7% | conservative p 60.2% | EV -0.7% | evidence 45.7/100 | score 31.84 | odds 1.65 | Independent AI review pending
 
-A PROPOSAL (UNAPPROVED) 2.38: RB Leipzig - Lens [3+ 1.31, p=80.5%]; Rangers - Aberdeen [GG 1.82, p=68.6%]
-B NO ELIGIBLE PROPOSAL
-No 2-3 leg B combination: only fixtures with 3+ as TOP market qualify
+A PROPOSAL (UNAPPROVED) 2.77: Real Madrid - PSV Eindhoven [GG 1.52, p=72.5%]; Rangers - Aberdeen [GG 1.82, p=68.6%]
+B PROPOSAL (UNAPPROVED) 2.13: RB Leipzig - Lens [3+ 1.31, p=80.5%]; Hibernian - Dundee [3+ 1.63, p=68.3%]
+Statistical proposals only. Independent Scout must verify and explicitly approve.

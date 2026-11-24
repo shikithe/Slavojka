@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "date": "2026-11-24",
-  "generated_at_utc": "2026-11-24T10:43:20.825520+00:00",
+  "generated_at_utc": "2026-11-24T11:00:57.490987+00:00",
   "source_feed_generated_at_utc": "2026-11-24T08:45:37.248469+00:00",
   "source_active_sha256": "06d5a5ce4ce296405919a3ed286a6926baab48bdf3c901e3e58022467492081b",
   "source_history_sha256": "f6e0966947162202e5761c47de12f531afd8fedf33aa20791f806e6bbb9a10d4",
@@ -27,7 +27,7 @@
   "all_fixtures_evaluated": 13,
   "all_six_odds_present": 13,
   "candidate_A_count": 6,
-  "candidate_B_count": 1,
+  "candidate_B_count": 3,
   "ranked_fixtures": [
     {
       "fixture_id": "espn:football:uefa.champions:401915299",
@@ -150,6 +150,13 @@
       "recommended_ev_pct": 2.39,
       "value_runner_up_market": "GG",
       "value_runner_up_score": 38.414,
+      "b_market_rank": 1,
+      "b_market": "3+",
+      "b_odds": 1.31,
+      "b_probability_pct": 80.5,
+      "b_adjusted_probability_pct": 78.16,
+      "b_conservative_ev_pct": 2.39,
+      "b_score": 40.41,
       "value_limitations": []
     },
     {
@@ -273,6 +280,13 @@
       "recommended_ev_pct": 40.56,
       "value_runner_up_market": "3+",
       "value_runner_up_score": 35.864,
+      "b_market_rank": 2,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
       "value_limitations": [
         "Chosen market odds 3+ prevents a 2–3 multi-leg ticket"
       ]
@@ -398,6 +412,13 @@
       "recommended_ev_pct": 12.97,
       "value_runner_up_market": "3+",
       "value_runner_up_score": 36.495,
+      "b_market_rank": 2,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
       "value_limitations": []
     },
     {
@@ -521,6 +542,13 @@
       "recommended_ev_pct": 5.14,
       "value_runner_up_market": "3+",
       "value_runner_up_score": 37.837,
+      "b_market_rank": 2,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
       "value_limitations": []
     },
     {
@@ -565,7 +593,7 @@
         "h2h_checked": false
       },
       "candidate_A": true,
-      "candidate_B": false,
+      "candidate_B": true,
       "history_evidence_complete": true,
       "confidence": "normal",
       "requires_independent_ai_review": true,
@@ -644,6 +672,13 @@
       "recommended_ev_pct": 7.17,
       "value_runner_up_market": "3+",
       "value_runner_up_score": 38.473,
+      "b_market_rank": 2,
+      "b_market": "3+",
+      "b_odds": 1.63,
+      "b_probability_pct": 68.3,
+      "b_adjusted_probability_pct": 65.22,
+      "b_conservative_ev_pct": 6.32,
+      "b_score": 38.473,
       "value_limitations": []
     },
     {
@@ -688,7 +723,7 @@
         "h2h_checked": false
       },
       "candidate_A": false,
-      "candidate_B": false,
+      "candidate_B": true,
       "history_evidence_complete": true,
       "confidence": "normal",
       "requires_independent_ai_review": true,
@@ -767,6 +802,13 @@
       "recommended_ev_pct": 16.58,
       "value_runner_up_market": "3+",
       "value_runner_up_score": 35.695,
+      "b_market_rank": 2,
+      "b_market": "3+",
+      "b_odds": 1.65,
+      "b_probability_pct": 64.6,
+      "b_adjusted_probability_pct": 62.7,
+      "b_conservative_ev_pct": 3.46,
+      "b_score": 35.695,
       "value_limitations": [
         "Risk-adjusted probability below 50% for chosen market"
       ]
@@ -892,6 +934,13 @@
       "recommended_ev_pct": -5.47,
       "value_runner_up_market": "GG",
       "value_runner_up_score": 34.503,
+      "b_market_rank": 1,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
       "value_limitations": [
         "No positive conservative EV for chosen market"
       ]
@@ -1017,6 +1066,13 @@
       "recommended_ev_pct": 0.14,
       "value_runner_up_market": "2",
       "value_runner_up_score": 31.836,
+      "b_market_rank": 3,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
       "value_limitations": []
     },
     {
@@ -1140,6 +1196,13 @@
       "recommended_ev_pct": -5.72,
       "value_runner_up_market": "3+",
       "value_runner_up_score": 33.289,
+      "b_market_rank": 2,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
       "value_limitations": [
         "No positive conservative EV for chosen market"
       ]
@@ -1265,6 +1328,13 @@
       "recommended_ev_pct": -0.68,
       "value_runner_up_market": "3+",
       "value_runner_up_score": 30.902,
+      "b_market_rank": 2,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
       "value_limitations": [
         "No positive conservative EV for chosen market"
       ]
@@ -1390,6 +1460,13 @@
       "recommended_ev_pct": 1.66,
       "value_runner_up_market": "2",
       "value_runner_up_score": 31.348,
+      "b_market_rank": 3,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
       "value_limitations": []
     },
     {
@@ -1513,6 +1590,13 @@
       "recommended_ev_pct": 8.53,
       "value_runner_up_market": "NG",
       "value_runner_up_score": 29.989,
+      "b_market_rank": 4,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
       "value_limitations": [
         "Risk-adjusted probability below 50% for chosen market"
       ]
@@ -1638,6 +1722,13 @@
       "recommended_ev_pct": -9.3,
       "value_runner_up_market": "NG",
       "value_runner_up_score": 28.763,
+      "b_market_rank": 3,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
       "value_limitations": [
         "No positive conservative EV for chosen market"
       ]
@@ -1670,6 +1761,11 @@
         "recommended_market_odds": 1.31,
         "eligible_for_A": true,
         "eligible_for_B": true,
+        "b_market": "3+",
+        "b_market_rank": 1,
+        "b_market_odds": 1.31,
+        "b_market_probability_pct": 80.5,
+        "b_market_ev_pct": 2.39,
         "research_only": false,
         "confidence": "normal",
         "history_evidence_complete": true,
@@ -1732,6 +1828,11 @@
         "recommended_market_odds": 3.01,
         "eligible_for_A": false,
         "eligible_for_B": false,
+        "b_market": null,
+        "b_market_rank": 2,
+        "b_market_odds": null,
+        "b_market_probability_pct": null,
+        "b_market_ev_pct": null,
         "research_only": true,
         "confidence": "normal",
         "history_evidence_complete": true,
@@ -1794,6 +1895,11 @@
         "recommended_market_odds": 1.82,
         "eligible_for_A": true,
         "eligible_for_B": false,
+        "b_market": null,
+        "b_market_rank": 2,
+        "b_market_odds": null,
+        "b_market_probability_pct": null,
+        "b_market_ev_pct": null,
         "research_only": false,
         "confidence": "normal",
         "history_evidence_complete": true,
@@ -1856,6 +1962,11 @@
         "recommended_market_odds": 1.52,
         "eligible_for_A": true,
         "eligible_for_B": false,
+        "b_market": null,
+        "b_market_rank": 2,
+        "b_market_odds": null,
+        "b_market_probability_pct": null,
+        "b_market_ev_pct": null,
         "research_only": false,
         "confidence": "normal",
         "history_evidence_complete": true,
@@ -1917,7 +2028,12 @@
         "top_market_odds": 1.65,
         "recommended_market_odds": 1.65,
         "eligible_for_A": true,
-        "eligible_for_B": false,
+        "eligible_for_B": true,
+        "b_market": "3+",
+        "b_market_rank": 2,
+        "b_market_odds": 1.63,
+        "b_market_probability_pct": 68.3,
+        "b_market_ev_pct": 6.32,
         "research_only": false,
         "confidence": "normal",
         "history_evidence_complete": true,
@@ -1979,8 +2095,13 @@
         "top_market_odds": 1.65,
         "recommended_market_odds": 2.35,
         "eligible_for_A": false,
-        "eligible_for_B": false,
-        "research_only": true,
+        "eligible_for_B": true,
+        "b_market": "3+",
+        "b_market_rank": 2,
+        "b_market_odds": 1.65,
+        "b_market_probability_pct": 64.6,
+        "b_market_ev_pct": 3.46,
+        "research_only": false,
         "confidence": "normal",
         "history_evidence_complete": true,
         "all_six_probabilities_pct": {
@@ -2042,6 +2163,11 @@
         "recommended_market_odds": 1.36,
         "eligible_for_A": false,
         "eligible_for_B": false,
+        "b_market": null,
+        "b_market_rank": 1,
+        "b_market_odds": null,
+        "b_market_probability_pct": null,
+        "b_market_ev_pct": null,
         "research_only": true,
         "confidence": "normal",
         "history_evidence_complete": true,
@@ -2104,6 +2230,11 @@
         "recommended_market_odds": 1.63,
         "eligible_for_A": true,
         "eligible_for_B": false,
+        "b_market": null,
+        "b_market_rank": 3,
+        "b_market_odds": null,
+        "b_market_probability_pct": null,
+        "b_market_ev_pct": null,
         "research_only": false,
         "confidence": "normal",
         "history_evidence_complete": true,
@@ -2166,6 +2297,11 @@
         "recommended_market_odds": 1.37,
         "eligible_for_A": false,
         "eligible_for_B": false,
+        "b_market": null,
+        "b_market_rank": 2,
+        "b_market_odds": null,
+        "b_market_probability_pct": null,
+        "b_market_ev_pct": null,
         "research_only": true,
         "confidence": "normal",
         "history_evidence_complete": true,
@@ -2228,6 +2364,11 @@
         "recommended_market_odds": 1.65,
         "eligible_for_A": false,
         "eligible_for_B": false,
+        "b_market": null,
+        "b_market_rank": 2,
+        "b_market_odds": null,
+        "b_market_probability_pct": null,
+        "b_market_ev_pct": null,
         "research_only": true,
         "confidence": "normal",
         "history_evidence_complete": true,
@@ -2288,7 +2429,40 @@
   "ticket_proposals": {
     "A": {
       "id": "A",
-      "combined_odds": 2.384,
+      "combined_odds": 2.766,
+      "selection_method": "highest conservative market EV/probability/evidence score; tie by model probability then runner-up",
+      "ready_for_publication": false,
+      "requires_independent_ai_approval": true,
+      "matches": [
+        {
+          "fixture_id": "espn:football:uefa.champions:401915298",
+          "match": "Real Madrid - PSV Eindhoven",
+          "datetime": "2026-11-24T20:00:00Z",
+          "pick": "GG",
+          "probability_pct": 72.5,
+          "rank_score": 38.83,
+          "conservative_ev_pct": 5.14,
+          "data_quality_index_pct": 50.4,
+          "second_best_pct": 72.5,
+          "odd": 1.52
+        },
+        {
+          "fixture_id": "espn:football:sco.1:401878345",
+          "match": "Rangers - Aberdeen",
+          "datetime": "2026-11-24T20:00:00Z",
+          "pick": "GG",
+          "probability_pct": 68.6,
+          "rank_score": 39.48,
+          "conservative_ev_pct": 12.97,
+          "data_quality_index_pct": 52.2,
+          "second_best_pct": 68.6,
+          "odd": 1.82
+        }
+      ]
+    },
+    "B": {
+      "id": "B",
+      "combined_odds": 2.135,
       "selection_method": "highest conservative market EV/probability/evidence score; tie by model probability then runner-up",
       "ready_for_publication": false,
       "requires_independent_ai_approval": true,
@@ -2306,21 +2480,20 @@
           "odd": 1.31
         },
         {
-          "fixture_id": "espn:football:sco.1:401878345",
-          "match": "Rangers - Aberdeen",
-          "datetime": "2026-11-24T20:00:00Z",
-          "pick": "GG",
-          "probability_pct": 68.6,
-          "rank_score": 39.48,
-          "conservative_ev_pct": 12.97,
-          "data_quality_index_pct": 52.2,
-          "second_best_pct": 68.6,
-          "odd": 1.82
+          "fixture_id": "espn:football:sco.1:401878348",
+          "match": "Hibernian - Dundee",
+          "datetime": "2026-11-24T19:45:00Z",
+          "pick": "3+",
+          "probability_pct": 68.3,
+          "rank_score": 38.473,
+          "conservative_ev_pct": 6.32,
+          "data_quality_index_pct": 55.8,
+          "second_best_pct": 68.3,
+          "odd": 1.63
         }
       ]
     },
-    "B": null,
-    "reason": "No 2-3 leg B combination: only fixtures with 3+ as TOP market qualify"
+    "reason": "Statistical proposals only. Independent Scout must verify and explicitly approve."
   },
   "publication_allowed": false
 }
