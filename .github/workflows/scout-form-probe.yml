@@ -1,0 +1,44 @@
+name: SAFE cross-competition ESPN form probe
+on:
+  push:
+    branches: [test/top10-multicompetition-form-20261124]
+    paths: ['.github/workflows/scout-form-probe.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Test all-competition ESPN schedule for a verified CL club
+        run: |
+          python3 - <<'PY'
+          import json
+          from urllib.request import urlopen,Request
+          from urllib.parse import urlencode
+          def get(path,params=None):
+              u="https://site.api.espn.com/apis/site/v2/sports/soccer/"+path
+              if params: u+="?"+urlencode(params)
+              with urlopen(Request(u,headers={"User-Agent":"Mozilla/5.0"}),timeout=24) as r:
+                  return json.load(r)
+          board=get("uefa.champions/scoreboard",{"dates":"202611","limit":500})
+          target=next((e for e in board.get("events",[]) if str(e.get("id"))=="401915295"),None)
+          print("BOARD",len(board.get("events",[])),"TARGET_EXISTS",bool(target))
+          if not target: raise SystemExit("Current fixture not in ESPN month scoreboard")
+          comp=target["competitions"][0]
+          teams=[(x["team"].get("displayName"),x["team"].get("id")) for x in comp["competitors"]]
+          print("TEAMS",teams)
+          name,tid=next(((n,i) for n,i in teams if "Arsenal" in str(n)),teams[0])
+          for league in ("all","uefa.champions","eng.1"):
+              try:
+                  doc=get(f"{league}/teams/{tid}/schedule",{"dates":"2026"})
+                  events=doc.get("events",[])
+                  print("SCHEDULE",league,"TEAM",name,"COUNT",len(events),"HEAD",json.dumps(events[:2])[:1500])
+              except Exception as ex:
+                  print("SCHEDULE_ERROR",league,str(ex)[:300])
+          print("PROBE_DONE_NO_GITHUB_WRITES")
+          PY
