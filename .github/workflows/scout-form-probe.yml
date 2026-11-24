@@ -9,7 +9,7 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 9
     steps:
       - uses: actions/checkout@v4
         with:
@@ -41,4 +41,36 @@ jobs:
               except Exception as ex:
                   print("SCHEDULE_ERROR",league,str(ex)[:300])
           print("PROBE_DONE_NO_GITHUB_WRITES")
+          PY
+      - name: Validate isolated TOP10, source identity, and existing Scout regressions
+        run: |
+          python3 -m compileall -q lista
+          python3 -m unittest discover -s tests -p test_top10_multicompetition.py -v
+          python3 -m unittest discover -s tests -p test_scout_six_markets.py -v
+          python3 -m unittest discover -s tests -p test_scout_feedback.py -v
+          python3 -m unittest discover -s tests -p test_scout_history_fallback.py -v
+      - name: Real ESPN cross-competition history and full TOP10 dry run (no push)
+        run: |
+          python3 -m lista.scout_history
+          python3 -m lista.scout_six_markets
+          python3 -m lista.scout_feedback
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path("shared/agent/scout-six-markets.json").read_text())
+          history=json.loads(Path("shared/agent/history-h2h.json").read_text())
+          feedback=json.loads(Path("shared/agent/top10-feedback.json").read_text())
+          ucl=history["leagues"]["uefa.champions"]["teams"]
+          form={k:v["found"] for k,v in ucl.items()}
+          print("REAL_ESPN_UCL_FORM",json.dumps(form,ensure_ascii=False,sort_keys=True))
+          print("REAL_HISTORY_AUGMENTED",history.get("cross_competition_teams_enriched"),
+                "COMPETITION_SOURCES",history.get("form_competitions_scanned"))
+          print("REAL_TOP10",feedback["feedback"],feedback["count"],"FROM",
+                report["all_fixtures_evaluated"],"A_ELIGIBLE",report["candidate_A_count"])
+          assert report["all_fixtures_evaluated"]>=10
+          assert report["all_six_odds_present"]>=10
+          assert feedback["count"]==10
+          assert any(n>=5 for n in form.values())
+          assert feedback["publication_allowed"] is False
+          print("READ_ONLY_TOP10_10_CONFIRMED")
           PY
