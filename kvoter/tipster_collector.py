@@ -104,6 +104,44 @@ def similarity(a, b):
     token = 2 * common / (len(aset) + len(bset))
     return max(ratio, 0.65 * token + 0.35 * ratio)
 
+# Secondary identity pass: only known *trailing* source country tags are removed.
+# It does not loosen primary thresholds or assume country == competition.
+COUNTRY_TAGS = frozenset((
+    "alb","arm","aut","aze","bel","bih","bul","cro","cyp","cze","den","eng",
+    "esp","est","fin","fra","geo","ger","gre","hun","ire","isl","ita","kaz",
+    "ltu","lva","mda","mne","ned","nir","nor","pol","por","rou","rus","sco",
+    "srb","sui","svk","swe","tur","ukr","wal","svn","mkd","lux","mlt"
+))
+
+def secondary_key(name):
+    """Canonical team identity for the independent second matching pass."""
+    text = str(name).strip()
+    suffix = re.search(r"\\s+\\(([A-Za-z]{3})\\)\\s*$", text)
+    if suffix and suffix.group(1).casefold() in COUNTRY_TAGS:
+        text = text[:suffix.start()]
+    return normalized(text)
+
+def assign_links_secondary(fixtures, matches):
+    """Exact canonical home+away pairs; reject ambiguous or reversed links."""
+    proposals = {}
+    for fixture in fixtures:
+        home, away = secondary_key(fixture["home"]), secondary_key(fixture["away"])
+        if not home or not away:
+            continue
+        candidates = [m for m in matches
+                      if secondary_key(m["home"]) == home and secondary_key(m["away"]) == away]
+        if len(candidates) != 1:
+            continue
+        proposal = candidates[0]
+        # Two ESPN fixtures must never claim the same source match page.
+        proposals[fixture["fixture_id"]] = proposal
+    claims = {}
+    for proposal in proposals.values():
+        url = proposal["url"]
+        claims[url] = claims.get(url, 0) + 1
+    return {fid: candidate for fid, candidate in proposals.items()
+            if claims[candidate["url"]] == 1}
+
 def acceptable_price(text):
     if not text:
         return None
@@ -236,14 +274,22 @@ def parse_markets(soup):
                     sources.setdefault(market, {})[key] = bookmaker
     return result, sources
 
-def verified_match_page(soup, daily, fixture, day):
+def verified_match_page(soup, daily, fixture, day, secondary=False):
     heading = soup.title.get_text(" ", strip=True) if soup.title else ""
     if f"{day.day} {MONTHS[day.month]} {day.year}".casefold() not in heading.casefold():
+        return False
+    if fixture.get("league") == "uefa.champions" and "champions league" not in heading.casefold():
         return False
     pair = heading.split(",", 1)[0]
     if " - " not in pair:
         return False
     home, away = pair.split(" - ", 1)
+    if secondary:
+        # Second pass is strict on team identity, rather than more permissive.
+        return (secondary_key(fixture["home"]) == secondary_key(home)
+                and secondary_key(fixture["away"]) == secondary_key(away)
+                and secondary_key(daily["home"]) == secondary_key(home)
+                and secondary_key(daily["away"]) == secondary_key(away))
     return (similarity(fixture["home"], home) >= 0.78
             and similarity(fixture["away"], away) >= 0.78
             and similarity(daily["home"], home) >= 0.78
@@ -320,7 +366,8 @@ def run(args):
         total_matches += len(matches)
         day_fixtures = [f for f in fixtures
                         if datetime.fromisoformat(f["start_utc"].replace("Z", "+00:00")).astimezone(TZ).date() == fixture_day]
-        mapped = assign_links(day_fixtures, matches)
+        mapped = (assign_links_secondary(day_fixtures, matches) if args.secondary
+                  else assign_links(day_fixtures, matches))
         links.update(mapped)
         linked_day.update({fid: fixture_day for fid in mapped})
     recover_verified_page_links(fixtures, links, linked_day)
@@ -354,7 +401,7 @@ def run(args):
         attempted += 1
         try:
             page = fetch_page(session, link["url"])
-            if not verified_match_page(page, link, fixture, linked_day[fid]):
+            if not verified_match_page(page, link, fixture, linked_day[fid], secondary=args.secondary):
                 failures.append(fid + ": mismatched page title/date/teams")
                 continue
             prices, bookmakers = parse_markets(page)
@@ -385,6 +432,7 @@ def run(args):
         time.sleep(max(0.8, args.delay))
     report = {
         "date": day.isoformat(), "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "matching_pass": "secondary_exact_canonical" if args.secondary else "primary_fuzzy",
         "espn": len(fixtures), "daily_tipster_links": total_matches,
         "paired": len(links), "pages_checked": attempted,
         "updated": updated, "with_any_quotes": len(existing),
@@ -400,6 +448,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--root", default=".")
     p.add_argument("--force", action="store_true", help="Manual diagnostics; skips 9-12 collection window only")
+    p.add_argument("--secondary", action="store_true", help="Independent exact canonical home/away matching, no threshold relaxation")
     p.add_argument("--max-pages", type=int, default=0, help="limit for test/debug; 0 means all")
     p.add_argument("--delay", type=float, default=1.0)
     run(p.parse_args())
