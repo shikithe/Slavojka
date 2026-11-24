@@ -108,8 +108,28 @@ def apply_value_model(rows, history, now):
                        and min(r["evidence"]["home_last_matches"],
                                r["evidence"]["away_last_matches"])>=4
                        and start>now+timedelta(minutes=20))
+        # Ticket B always plays 3+ goals. Accept 3+ when it is the
+        # best OR second-best VALUE-ranked market, not only the A pick.
+        # B must pass every safety rule using its OWN 3+ odds and EV.
+        over=markets["3+"]
+        over_rank=available.index("3+")+1 if "3+" in available else None
+        b_qualified=bool(over_rank in (1,2)
+                         and over["odds"] is not None
+                         and over["odds"]<3.00
+                         and over["conservative_ev_pct"]>0
+                         and over["adjusted_probability_pct"]>=50
+                         and min(r["evidence"]["home_last_matches"],
+                                 r["evidence"]["away_last_matches"])>=4
+                         and start>now+timedelta(minutes=20))
         r["candidate_A"]=qualified
-        r["candidate_B"]=bool(qualified and chosen=="3+")
+        r["candidate_B"]=b_qualified
+        r["b_market_rank"]=over_rank
+        r["b_market"]="3+" if b_qualified else None
+        r["b_odds"]=over["odds"] if b_qualified else None
+        r["b_probability_pct"]=r["probability_pct"]["3+"] if b_qualified else None
+        r["b_adjusted_probability_pct"]=over["adjusted_probability_pct"] if b_qualified else None
+        r["b_conservative_ev_pct"]=over["conservative_ev_pct"] if b_qualified else None
+        r["b_score"]=over["score"] if b_qualified else None
         reasons=[]
         if chosen is None:reasons.append("No verified odds for any of six markets")
         elif sel["odds"]>=3:reasons.append("Chosen market odds 3+ prevents a 2–3 multi-leg ticket")

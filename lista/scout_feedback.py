@@ -78,13 +78,17 @@ def inspect(feed, active, history, scout, today):
     for position, item in enumerate(selected, 1):
         original = available.get(item["fixture_id"])
         research_only = bool(item.get("research_only"))
-        eligible = bool(original and (original.get("candidate_A") or (
+        eligible = bool(original and (original.get("candidate_A")
+            or original.get("candidate_B") or (
             research_only and not original.get("candidate_A")
+            and not original.get("candidate_B")
             and original.get("recommended_market") and original.get("recommended_odds"))))
         if not eligible or item.get("rank") != position:
             raise ValueError("TOP10 candidate ineligible or incorrect rank")
-        if research_only and item.get("eligible_for_A"):
-            raise ValueError("Research-only candidate cannot be marked eligible for ticket A")
+        if research_only and (item.get("eligible_for_A") or item.get("eligible_for_B")):
+            raise ValueError("Research-only candidate cannot be marked eligible for ticket A/B")
+        if ("eligible_for_B" in item and bool(item["eligible_for_B"]) != bool(original.get("candidate_B"))):
+            raise ValueError("TOP10 ticket B qualification does not match Scout result")
         if item.get("recommended_market") != original.get("recommended_market"):
             raise ValueError("TOP10 recommended market mismatch")
     ready = bool(selected)

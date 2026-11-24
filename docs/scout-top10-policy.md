@@ -27,3 +27,11 @@
 - Po promjeni sheme Historyja mora se ponovo pokrenuti History,
   pa tek po `HISTORY_READY` Scout i `TOP10_READY`. Svi izvjestaji
   moraju odgovarati danasnjem ESPN feedu i kvotama.
+
+## Tiket B: 3+ među dva najbolje rangirana tržišta
+
+- Matematika Scout 6/6 i dalje obrađuje svih šest tržišta za A i B.
+- Za tiket B razmatra se **3+ golova ako je po postojećem value/EV skoru 1. ili 2. najbolje tržište** u utakmici, čak i kada je prvo mjesto GG ili neki drugi tip.
+- B se uvijek sastavlja na tržištu **3+**, s njegovom vlastitom stvarnom kvotom, prilagođenom vjerovatnoćom, konzervativnim EV-om i skautovskim skorom. Ne smije uzeti kvotu/pogodak prvog tržišta.
+- I dalje se za B traže pozitivan konzervativni EV za 3+, prilagođena vjerovatnoća najmanje 50%, kvota 3+ ispod 3,00, najmanje 4 potvrđene prethodne utakmice oba kluba i najmanje 20 minuta do početka.
+- B i A ne smiju koristiti istu utakmicu na oba tiketa; ukupna kvota tiketa ostaje 2,00–3,00. Izbor je samo preliminaran do zasebne detaljne AI provjere.

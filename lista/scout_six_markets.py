@@ -187,14 +187,28 @@ def ticket_combos(rows):
 
 def suggestions(ranked):
     a_pool = [f for f in ranked if f["candidate_A"]]
-    b_pool = [f for f in ranked if f["candidate_B"]]
+    b_pool = []
+    for f in ranked:
+        if not f["candidate_B"]:
+            continue
+        # The second-best market of a fixture can be 3+. Always use the
+        # separately validated 3+ price/probability/EV in ticket B.
+        b = dict(f)
+        b["strongest_market"] = "3+"
+        b["strongest_odds"] = f.get("b_odds") or f["strongest_odds"]
+        b["strongest_pct"] = f.get("b_probability_pct") or f["strongest_pct"]
+        b["scout_value_score"] = f.get("b_score") if f.get("b_score") is not None else f.get("scout_value_score")
+        b["recommended_ev_pct"] = (f.get("b_conservative_ev_pct")
+                                    if f.get("b_conservative_ev_pct") is not None
+                                    else f.get("recommended_ev_pct"))
+        b_pool.append(b)
     a_combos, b_combos = ticket_combos(a_pool), ticket_combos(b_pool)
     if not a_combos:
         return {"A": None,"B": None,"reason": "No 2-3 leg A combination totaling 2.00-3.00"}
     if not b_combos:
         best = a_combos[0]
         return {"A": format_combo(best, "A"), "B": None,
-                "reason": "No 2-3 leg B combination: only fixtures with 3+ as TOP market qualify"}
+                "reason": "No 2-3 leg B combination: 3+ must be the first or second value market with qualifying odds/EV"}
     chosen = None
     for a in a_combos:
         for b in b_combos:
@@ -242,7 +256,7 @@ def detailed_ai_handoff(rows, now=None):
                 and (now is None or datetime.fromisoformat(
                      r["datetime"].replace("Z","+00:00")) > now+timedelta(minutes=20))
                ][:DETAILED_SCOUT_LIMIT]
-    research_only = any(not r["candidate_A"] for r in selected)
+    research_only = any(not r["candidate_A"] and not r["candidate_B"] for r in selected)
     items = []
     for rank, r in enumerate(selected, 1):
         items.append({
@@ -262,7 +276,12 @@ def detailed_ai_handoff(rows, now=None):
             "recommended_market_odds": r["recommended_odds"],
             "eligible_for_A": bool(r["candidate_A"]),
             "eligible_for_B": bool(r["candidate_B"]),
-            "research_only": bool(not r["candidate_A"]),
+            "b_market": r.get("b_market"),
+            "b_market_rank": r.get("b_market_rank"),
+            "b_market_odds": r.get("b_odds"),
+            "b_market_probability_pct": r.get("b_probability_pct"),
+            "b_market_ev_pct": r.get("b_conservative_ev_pct"),
+            "research_only": bool(not r["candidate_A"] and not r["candidate_B"]),
             "confidence": r.get("confidence","unknown"),
             "history_evidence_complete": bool(r.get("history_evidence_complete",False)),
             "all_six_probabilities_pct": r["probability_pct"],
