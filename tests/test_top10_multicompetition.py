@@ -98,6 +98,15 @@ class TopTenAndRealForm(unittest.TestCase):
         self.assertEqual(n,1)
         self.assertLess(h,2.15)
 
+    def test_real_espn_team_schedule_completion_is_inside_competition(self):
+        e=event("401879232","Newcastle United","Arsenal",361,359,
+                "2026-11-21T17:30Z",2,2)
+        e["competitions"][0]["status"]=e.pop("status")
+        parsed=parsed_event(e,"all",NOW.date())
+        self.assertEqual(parsed["home_goals"],2)
+        self.assertEqual(parsed["away_goals"],2)
+        self.assertEqual(parsed["away_team_id"],"359")
+
     def test_future_and_unconfirmed_scores_excluded(self):
         completed=parsed_event(event("1","Arsenal","B",359,20,"2026-11-17T20:00Z"),"all",NOW.date())
         unplayed=parsed_event(event("2","Arsenal","C",359,30,"2026-11-24T20:00Z",completed=False),
