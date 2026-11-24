@@ -1,25 +1,30 @@
-LISTASIX SCOUT 6/6 | 2026-11-23
+LISTASIX SCOUT 6/6 | 2026-11-24
 PROBABILITY MODEL (NOT BACKTEST-CALIBRATED). No ticket is auto-published.
-Number of matches: 9; probability estimates: 54
+Number of matches: 13; probability estimates: 78
 RANK | FIXTURE | 1 | X | 2 | 3+ | GG | NG | TOP | RUNNER-UP | ODDS | STATUS
-1 | Levante - Elche | 30.8% | 30.7% | 38.5% | 32.3% | 39.7% | 60.3% | NG 60.3% | GG 39.7% | 2.32 | OUT
-2 | Monza - Fiorentina | 36.3% | 22.1% | 41.6% | 68.6% | 68.7% | 31.3% | GG 68.7% | 3+ 68.6% | 1.50 | OUT
-3 | Istanbul Basaksehir - Çorum FK | 46.8% | 22.9% | 30.3% | 62.6% | 63.4% | 36.6% | GG 63.4% | 3+ 62.6% | 1.51 | OUT
-4 | Gimnasia La Plata - Newell's Old Boys | 47.5% | 26.9% | 25.6% | 42.5% | 46.9% | 53.1% | NG 53.1% | 1 47.5% | 1.77 | OUT
-5 | Brentford - Everton | 40.4% | 26.7% | 32.9% | 46.4% | 51.4% | 48.6% | GG 51.4% | NG 48.6% | 1.63 | OUT
-6 | St. Louis CITY SC - LAFC | 36.8% | 24.6% | 38.6% | 56.3% | 59.3% | 40.7% | GG 59.3% | 3+ 56.3% | - | OUT
-7 | Internacional - Vitória | 50.3% | 26.7% | 23.0% | 41.5% | 45.1% | 54.9% | NG 54.9% | 1 50.3% | - | OUT
-8 | Botafogo - São Paulo | 36.5% | 28.8% | 34.7% | 38.7% | 45.3% | 54.7% | NG 54.7% | GG 45.3% | - | OUT
-9 | Santos - Grêmio | 43.4% | 29.0% | 27.6% | 36.6% | 42.8% | 57.2% | NG 57.2% | 1 43.4% | - | OUT
+1 | Rangers - Aberdeen | 47.6% | 21.6% | 30.8% | 69.3% | 68.6% | 31.4% | 3+ 69.3% | GG 68.6% | 1.36 | A
+2 | Hibernian - Dundee | 42.3% | 22.1% | 35.6% | 68.3% | 68.4% | 31.6% | GG 68.4% | 3+ 68.3% | 1.65 | A
+3 | Chapecoense - Palmeiras | 25.2% | 25.2% | 49.6% | 48.6% | 51.3% | 48.7% | GG 51.3% | 2 49.6% | 1.56 | OUT
+4 | San Jose Earthquakes - Houston Dynamo FC | 40.5% | 26.1% | 33.4% | 49.2% | 53.6% | 46.4% | GG 53.6% | 3+ 49.2% | 1.55 | OUT
+5 | Manchester City - Napoli | 57.2% | 17.7% | 25.1% | 83.6% | 78.7% | 21.3% | 3+ 83.6% | GG 78.7% | - | OUT
+6 | Como - AEK Athens | 71.9% | 13.8% | 14.3% | 86.1% | 75.5% | 24.5% | 3+ 86.1% | GG 75.5% | - | OUT
+7 | Galatasaray - Aston Villa | 37.6% | 21.0% | 41.4% | 74.7% | 73.5% | 26.5% | 3+ 74.7% | GG 73.5% | - | OUT
+8 | Bodo/Glimt - LASK Linz | 39.0% | 21.2% | 39.8% | 73.4% | 72.5% | 27.5% | 3+ 73.4% | GG 72.5% | - | OUT
+9 | RB Leipzig - Lens | 62.3% | 17.8% | 19.9% | 77.1% | 71.0% | 29.0% | 3+ 77.1% | GG 71.0% | - | OUT
+10 | Feyenoord Rotterdam - FC Porto | 34.3% | 22.0% | 43.7% | 68.5% | 68.5% | 31.5% | 3+ 68.5% | GG 68.5% | - | OUT
+11 | Real Madrid - PSV Eindhoven | 53.3% | 20.7% | 26.0% | 70.0% | 67.9% | 32.1% | 3+ 70.0% | GG 67.9% | - | OUT
+12 | Slovan Bratislava - Real Betis | 22.7% | 20.5% | 56.8% | 67.4% | 64.6% | 35.4% | 3+ 67.4% | GG 64.6% | - | OUT
+13 | Arsenal - Borussia Dortmund | 47.9% | 22.8% | 29.3% | 62.3% | 63.0% | 37.0% | GG 63.0% | 3+ 62.3% | - | OUT
 
 PRICE/EV RANKING | match | pick | raw p% | conservative p% | evidence /100 | conservative EV% | score | odds | eligible
-1 | Levante - Elche | NG | 60.3% | 52.2% | 53.1 | +21.2% | 39.03 | 2.32 | NO
-2 | Monza - Fiorentina | 3+ | 68.6% | 65.3% | 55.1 | +6.5% | 38.50 | 1.63 | NO
-3 | Istanbul Basaksehir - Çorum FK | 3+ | 62.6% | 62.0% | 52.6 | +1.1% | 34.39 | 1.63 | NO
-4 | Gimnasia La Plata - Newell's Old Boys | NG | 53.1% | 54.5% | 57.8 | -3.5% | 30.09 | 1.77 | NO
-5 | Brentford - Everton | NG | 48.6% | 47.5% | 56.0 | +3.1% | 29.66 | 2.17 | NO
+1 | Rangers - Aberdeen | GG | 68.6% | 62.1% | 52.2 | +13.0% | 39.48 | 1.82 | YES
+2 | Hibernian - Dundee | GG | 68.4% | 65.0% | 55.8 | +7.2% | 38.73 | 1.65 | YES
+3 | Chapecoense - Palmeiras | 2 | 49.6% | 46.4% | 53.1 | +8.5% | 31.12 | 2.34 | NO
+4 | San Jose Earthquakes - Houston Dynamo FC | GG | 53.6% | 58.5% | 54.9 | -9.3% | 28.82 | 1.55 | NO
 
-DETAILED AI SCOUT: TOP 0 ONLY (mathematical form, goals, home/away, league averages ALREADY DONE)
+DETAILED AI SCOUT: TOP 2 ONLY (mathematical form, goals, home/away, league averages ALREADY DONE)
+1. Rangers - Aberdeen | VALUE PICK GG 68.6% | conservative p 62.1% | EV +13.0% | evidence 52.2/100 | score 39.48 | odds 1.82 | Independent AI review pending
+2. Hibernian - Dundee | VALUE PICK GG 68.4% | conservative p 65.0% | EV +7.2% | evidence 55.8/100 | score 38.73 | odds 1.65 | Independent AI review pending
 
 A NO ELIGIBLE PROPOSAL
 B NO ELIGIBLE PROPOSAL
