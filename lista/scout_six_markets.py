@@ -45,6 +45,10 @@ def league_goal_reference(league_record):
     unique = {}
     for team in league_record.get("teams", {}).values():
         for item in team.get("matches", []):
+            # A club's mixed-competition form is useful, but domestic results
+            # must not silently redefine the Champions League goal average.
+            if league_record.get("league") and item.get("league") != league_record["league"]:
+                continue
             if item.get("event_id") and isinstance(item.get("home_goals"), (int, float)) and isinstance(item.get("away_goals"), (int, float)):
                 unique[str(item["event_id"])] = item
     count = len(unique)
