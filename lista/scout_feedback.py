@@ -6,7 +6,7 @@ but does not approve tips or invoke AI in GitHub Actions.
 """
 import hashlib
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
@@ -63,6 +63,18 @@ def inspect(feed, active, history, scout, today):
         selected_ids != scout.get("detailed_ai_top_ten_fixture_ids", [])):
         raise ValueError("TOP10 selection identity/count mismatch")
     available = {row["fixture_id"]: row for row in ranked}
+    # Require the FULL research shortlist when there are enough future games:
+    # a misleading TOP10_READY(2) from 13 viable matches must be rejected.
+    stamp = scout.get("generated_at_utc")
+    if stamp:
+        issued = datetime.fromisoformat(stamp.replace("Z", "+00:00"))
+        research_pool = [r for r in ranked
+                if r.get("recommended_market") and r.get("recommended_odds")
+                and datetime.fromisoformat(r["datetime"].replace("Z","+00:00"))
+                    > issued + timedelta(minutes=20)]
+        expected = [r["fixture_id"] for r in research_pool[:10]]
+        if selected_ids != expected:
+            raise ValueError("TOP10 must include exactly the first 10 ranked, future, verified-odds matches")
     for position, item in enumerate(selected, 1):
         original = available.get(item["fixture_id"])
         research_only = bool(item.get("research_only"))
