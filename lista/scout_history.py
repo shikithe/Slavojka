@@ -62,7 +62,7 @@ def get_scoreboard(league, season_month):
 
 def get_team_schedule(team_id, season_year):
     """ESPN all-competitions team feed, including domestic and UEFA results."""
-    if not re.fullmatch(r"\\d{1,9}", str(team_id)):
+    if not re.fullmatch(r"\d{1,9}", str(team_id)):
         raise ValueError("Unverified ESPN team id")
     url = BASE + "all/teams/" + str(team_id) + "/schedule?" + urlencode({"dates":str(season_year)})
     req = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
@@ -111,7 +111,7 @@ def parsed_event(event, league, today):
             return int(float(v))
         return {"event_id":str(event["id"]), "date":event["date"],
                 "league":league,
-                "source_competition": event.get("season",{}).get("displayName",league),
+                "source_competition": (event.get("season") or {}).get("displayName",league),
                 "home_team_id":str(home["team"].get("id", "")),
                 "away_team_id":str(away["team"].get("id", "")),
                 "home":home["team"].get("displayName", home["team"].get("name","")),
