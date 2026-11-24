@@ -22,8 +22,15 @@ def complete(feedback, retry_attempted):
     if feedback["with_at_least_one_quote"] + feedback["without_quote"] != feedback["espn_total"]:
         raise ValueError("ESPN odds coverage totals inconsistent")
     result = dict(feedback)
+    missing=feedback["without_quote"]
+    # ODDS_READY remains the existing Scout handoff; coverage_status is the
+    # separate, truthful sensor signal. A partial day is NEVER called complete.
     result.update(
         feedback="ODDS_READY",
+        coverage_feedback="ODDS_PARTIAL_READY" if missing else "ODDS_COMPLETE",
+        coverage_status="partial" if missing else "complete",
+        sensor_action_required=bool(missing),
+        sensor_missing_fixtures=feedback.get("missing_fixtures",[]) if missing else [],
         status="ready_for_scout",
         final=True,
         retry_attempted=bool(retry_attempted),
@@ -46,13 +53,13 @@ def main(root=Path(".")):
         raise ValueError("Feedback for different ESPN day/count")
     # Initial feedback is captured before retry; checking the status ensures
     # the fallback is not silently skipped.
-    retried = initial.get("feedback") == "ODDS_MISSING_AI_REVIEW"
+    retried = (initial.get("feedback") == "ODDS_MISSING_AI_REVIEW"\n               or (initial.get("feedback") == "ODDS_READY" and initial.get("retry_attempted") is True))
     if current["without_quote"] and not retried:
         raise ValueError("Missing odds without preliminary identity-review feedback")
     final = complete(current, retried)
     p = root / "shared/kvoter/coverage-feedback.json"
     p.write_text(json.dumps(final, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print("ODDS_READY", final["matched_with_quotes"], "/", final["espn_total"],
+    print(final["coverage_feedback"], final["matched_with_quotes"], "/", final["espn_total"],
           "unmatched_skipped=", final["skipped_unmatched"])
     return final
 
