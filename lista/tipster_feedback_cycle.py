@@ -53,7 +53,8 @@ def main(root=Path(".")):
         raise ValueError("Feedback for different ESPN day/count")
     # Initial feedback is captured before retry; checking the status ensures
     # the fallback is not silently skipped.
-    retried = (initial.get("feedback") == "ODDS_MISSING_AI_REVIEW"\n               or (initial.get("feedback") == "ODDS_READY" and initial.get("retry_attempted") is True))
+    retried = (initial.get("feedback") == "ODDS_MISSING_AI_REVIEW"
+               or (initial.get("feedback") == "ODDS_READY" and initial.get("retry_attempted") is True))
     if current["without_quote"] and not retried:
         raise ValueError("Missing odds without preliminary identity-review feedback")
     final = complete(current, retried)
