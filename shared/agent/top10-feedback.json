@@ -2,16 +2,148 @@
   "date": "2026-11-24",
   "feedback": "TOP10_READY",
   "status": "ready",
-  "source_fingerprint": "a830efa3898b3113f45762d41a135ac261482427064c5a5c2141905afbbf1dde",
+  "source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
   "scout_report": "shared/agent/scout-six-markets.json",
-  "count": 2,
+  "count": 10,
   "fixture_ids": [
+    "espn:football:uefa.champions:401915299",
+    "espn:football:uefa.champions:401915300",
     "espn:football:sco.1:401878345",
-    "espn:football:sco.1:401878348"
+    "espn:football:uefa.champions:401915298",
+    "espn:football:sco.1:401878348",
+    "espn:football:uefa.champions:401915294",
+    "espn:football:uefa.champions:401915297",
+    "espn:football:uefa.champions:401915379",
+    "espn:football:uefa.champions:401915380",
+    "espn:football:uefa.champions:401915296"
   ],
   "candidates": [
     {
       "rank": 1,
+      "fixture_id": "espn:football:uefa.champions:401915299",
+      "match": "RB Leipzig - Lens",
+      "datetime": "2026-11-24T20:00:00Z",
+      "top_market": "3+",
+      "top_probability_pct": 80.5,
+      "recommended_market": "3+",
+      "recommended_probability_pct": 80.5,
+      "recommended_adjusted_probability_pct": 78.16,
+      "recommended_score": 40.41,
+      "recommended_ev_pct": 2.39,
+      "data_quality_index_pct": 43.7,
+      "second_market": "GG",
+      "second_probability_pct": 75.3,
+      "top_market_odds": 1.31,
+      "recommended_market_odds": 1.31,
+      "eligible_for_A": true,
+      "eligible_for_B": true,
+      "research_only": false,
+      "confidence": "normal",
+      "history_evidence_complete": true,
+      "all_six_probabilities_pct": {
+        "1": 59.1,
+        "X": 17.9,
+        "2": 23.0,
+        "3+": 80.5,
+        "GG": 75.3,
+        "NG": 24.7
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Present",
+        "home_away_form": "Present",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 2.66,
+          "away": 1.66
+        },
+        "poisson_probabilities": {
+          "1": 59.1,
+          "X": 17.9,
+          "2": 23.0,
+          "3+": 80.5,
+          "GG": 75.3,
+          "NG": 24.7
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 2,
+      "fixture_id": "espn:football:uefa.champions:401915300",
+      "match": "Galatasaray - Aston Villa",
+      "datetime": "2026-11-24T17:45:00Z",
+      "top_market": "3+",
+      "top_probability_pct": 68.0,
+      "recommended_market": "1",
+      "recommended_probability_pct": 59.0,
+      "recommended_adjusted_probability_pct": 46.7,
+      "recommended_score": 40.354,
+      "recommended_ev_pct": 40.56,
+      "data_quality_index_pct": 52.3,
+      "second_market": "GG",
+      "second_probability_pct": 64.3,
+      "top_market_odds": 1.37,
+      "recommended_market_odds": 3.01,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "research_only": true,
+      "confidence": "normal",
+      "history_evidence_complete": true,
+      "all_six_probabilities_pct": {
+        "1": 59.0,
+        "X": 19.9,
+        "2": 21.1,
+        "3+": 68.0,
+        "GG": 64.3,
+        "NG": 35.7
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Present",
+        "home_away_form": "Present",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 2.23,
+          "away": 1.27
+        },
+        "poisson_probabilities": {
+          "1": 59.0,
+          "X": 19.9,
+          "2": 21.1,
+          "3+": 68.0,
+          "GG": 64.3,
+          "NG": 35.7
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 3,
       "fixture_id": "espn:football:sco.1:401878345",
       "match": "Rangers - Aberdeen",
       "datetime": "2026-11-24T20:00:00Z",
@@ -73,7 +205,69 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 2,
+      "rank": 4,
+      "fixture_id": "espn:football:uefa.champions:401915298",
+      "match": "Real Madrid - PSV Eindhoven",
+      "datetime": "2026-11-24T20:00:00Z",
+      "top_market": "3+",
+      "top_probability_pct": 73.4,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 72.5,
+      "recommended_adjusted_probability_pct": 69.17,
+      "recommended_score": 38.83,
+      "recommended_ev_pct": 5.14,
+      "data_quality_index_pct": 50.4,
+      "second_market": "GG",
+      "second_probability_pct": 72.5,
+      "top_market_odds": 1.16,
+      "recommended_market_odds": 1.52,
+      "eligible_for_A": true,
+      "eligible_for_B": false,
+      "research_only": false,
+      "confidence": "normal",
+      "history_evidence_complete": true,
+      "all_six_probabilities_pct": {
+        "1": 36.3,
+        "X": 21.2,
+        "2": 42.5,
+        "3+": 73.4,
+        "GG": 72.5,
+        "NG": 27.5
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Present",
+        "home_away_form": "Present",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.83,
+          "away": 1.99
+        },
+        "poisson_probabilities": {
+          "1": 36.3,
+          "X": 21.2,
+          "2": 42.5,
+          "3+": 73.4,
+          "GG": 72.5,
+          "NG": 27.5
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 5,
       "fixture_id": "espn:football:sco.1:401878348",
       "match": "Hibernian - Dundee",
       "datetime": "2026-11-24T19:45:00Z",
@@ -133,11 +327,321 @@
         "odds_identity_and_source"
       ],
       "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 6,
+      "fixture_id": "espn:football:uefa.champions:401915294",
+      "match": "Feyenoord Rotterdam - FC Porto",
+      "datetime": "2026-11-24T20:00:00Z",
+      "top_market": "3+",
+      "top_probability_pct": 64.6,
+      "recommended_market": "2",
+      "recommended_probability_pct": 56.0,
+      "recommended_adjusted_probability_pct": 49.61,
+      "recommended_score": 35.84,
+      "recommended_ev_pct": 16.58,
+      "data_quality_index_pct": 52.5,
+      "second_market": "GG",
+      "second_probability_pct": 62.6,
+      "top_market_odds": 1.65,
+      "recommended_market_odds": 2.35,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "research_only": true,
+      "confidence": "normal",
+      "history_evidence_complete": true,
+      "all_six_probabilities_pct": {
+        "1": 22.9,
+        "X": 21.1,
+        "2": 56.0,
+        "3+": 64.6,
+        "GG": 62.6,
+        "NG": 37.4
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Present",
+        "home_away_form": "Present",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.26,
+          "away": 2.07
+        },
+        "poisson_probabilities": {
+          "1": 22.9,
+          "X": 21.1,
+          "2": 56.0,
+          "3+": 64.6,
+          "GG": 62.6,
+          "NG": 37.4
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 7,
+      "fixture_id": "espn:football:uefa.champions:401915297",
+      "match": "Slovan Bratislava - Real Betis",
+      "datetime": "2026-11-24T20:00:00Z",
+      "top_market": "3+",
+      "top_probability_pct": 66.3,
+      "recommended_market": "3+",
+      "recommended_probability_pct": 66.3,
+      "recommended_adjusted_probability_pct": 69.51,
+      "recommended_score": 35.184,
+      "recommended_ev_pct": -5.47,
+      "data_quality_index_pct": 55.6,
+      "second_market": "2",
+      "second_probability_pct": 62.7,
+      "top_market_odds": 1.36,
+      "recommended_market_odds": 1.36,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "research_only": true,
+      "confidence": "normal",
+      "history_evidence_complete": true,
+      "all_six_probabilities_pct": {
+        "1": 18.0,
+        "X": 19.3,
+        "2": 62.7,
+        "3+": 66.3,
+        "GG": 61.1,
+        "NG": 38.9
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Present",
+        "home_away_form": "Present",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.14,
+          "away": 2.27
+        },
+        "poisson_probabilities": {
+          "1": 18.0,
+          "X": 19.3,
+          "2": 62.7,
+          "3+": 66.3,
+          "GG": 61.1,
+          "NG": 38.9
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 8,
+      "fixture_id": "espn:football:uefa.champions:401915379",
+      "match": "Manchester City - Napoli",
+      "datetime": "2026-11-24T20:00:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 61.5,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 61.5,
+      "recommended_adjusted_probability_pct": 61.43,
+      "recommended_score": 34.307,
+      "recommended_ev_pct": 0.14,
+      "data_quality_index_pct": 56.3,
+      "second_market": "3+",
+      "second_probability_pct": 59.1,
+      "top_market_odds": 1.63,
+      "recommended_market_odds": 1.63,
+      "eligible_for_A": true,
+      "eligible_for_B": false,
+      "research_only": false,
+      "confidence": "normal",
+      "history_evidence_complete": true,
+      "all_six_probabilities_pct": {
+        "1": 39.1,
+        "X": 24.0,
+        "2": 36.9,
+        "3+": 59.1,
+        "GG": 61.5,
+        "NG": 38.5
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Present",
+        "home_away_form": "Present",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.56,
+          "away": 1.51
+        },
+        "poisson_probabilities": {
+          "1": 39.1,
+          "X": 24.0,
+          "2": 36.9,
+          "3+": 59.1,
+          "GG": 61.5,
+          "NG": 38.5
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 9,
+      "fixture_id": "espn:football:uefa.champions:401915380",
+      "match": "Bodo/Glimt - LASK Linz",
+      "datetime": "2026-11-24T17:45:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 64.8,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 64.8,
+      "recommended_adjusted_probability_pct": 68.81,
+      "recommended_score": 34.091,
+      "recommended_ev_pct": -5.72,
+      "data_quality_index_pct": 51.0,
+      "second_market": "3+",
+      "second_probability_pct": 63.6,
+      "top_market_odds": 1.37,
+      "recommended_market_odds": 1.37,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "research_only": true,
+      "confidence": "normal",
+      "history_evidence_complete": true,
+      "all_six_probabilities_pct": {
+        "1": 35.4,
+        "X": 23.1,
+        "2": 41.5,
+        "3+": 63.6,
+        "GG": 64.8,
+        "NG": 35.2
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Present",
+        "home_away_form": "Present",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.57,
+          "away": 1.71
+        },
+        "poisson_probabilities": {
+          "1": 35.4,
+          "X": 23.1,
+          "2": 41.5,
+          "3+": 63.6,
+          "GG": 64.8,
+          "NG": 35.2
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 10,
+      "fixture_id": "espn:football:uefa.champions:401915296",
+      "match": "Como - AEK Athens",
+      "datetime": "2026-11-24T20:00:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 59.7,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 59.7,
+      "recommended_adjusted_probability_pct": 60.19,
+      "recommended_score": 31.838,
+      "recommended_ev_pct": -0.68,
+      "data_quality_index_pct": 45.7,
+      "second_market": "3+",
+      "second_probability_pct": 58.6,
+      "top_market_odds": 1.65,
+      "recommended_market_odds": 1.65,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "research_only": true,
+      "confidence": "normal",
+      "history_evidence_complete": true,
+      "all_six_probabilities_pct": {
+        "1": 49.4,
+        "X": 23.3,
+        "2": 27.3,
+        "3+": 58.6,
+        "GG": 59.7,
+        "NG": 40.3
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Present",
+        "home_away_form": "Present",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.78,
+          "away": 1.27
+        },
+        "poisson_probabilities": {
+          "1": 49.4,
+          "X": 23.3,
+          "2": 27.3,
+          "3+": 58.6,
+          "GG": 59.7,
+          "NG": 40.3
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
     }
   ],
   "next_action": "independent_ai_detailed_scout",
   "history_status": "available",
-  "research_only": false,
+  "research_only": true,
   "ai_approval_required": true,
   "publication_allowed": false
 }
