@@ -98,7 +98,8 @@ def parsed_event(event, league, today):
             return None
         home = next(x for x in comp["competitors"] if x["homeAway"] == "home")
         away = next(x for x in comp["competitors"] if x["homeAway"] == "away")
-        status = event.get("status", {}).get("type", {})
+        status = ((event.get("status") or {}).get("type")
+                  or (comp.get("status") or {}).get("type") or {})
         if not status.get("completed", False):
             return None
         event_at = datetime.fromisoformat(event["date"].replace("Z","+00:00"))
