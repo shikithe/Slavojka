@@ -1,5 +1,5 @@
 name: SAFE cross-competition ESPN form probe
-# Full read-only regression after schedule-status fix (2026-11-24)
+# Final read-only regression after schema-3 History refresh and strict TOP10 feedback gate
 on:
   push:
     branches: [test/top10-multicompetition-form-20261124]
