@@ -2,7 +2,7 @@
   "date": "2026-11-24",
   "feedback": "HISTORY_READY",
   "espn_generated_at_utc": "2026-11-24T08:45:37.248469+00:00",
-  "history_generated_at_utc": "2026-11-24T08:46:07.355534+00:00",
+  "history_generated_at_utc": "2026-11-24T10:43:09.069677+00:00",
   "fixture_ids": [
     "espn:football:uefa.champions:401915380",
     "espn:football:uefa.champions:401915300",
@@ -19,5 +19,5 @@
     "espn:football:usa.1:401933738"
   ],
   "count": 13,
-  "checked_at_utc": "2026-11-24T10:10:26.996348+00:00"
+  "checked_at_utc": "2026-11-24T10:43:10.676799+00:00"
 }
