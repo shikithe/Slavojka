@@ -13,12 +13,18 @@ class FeedbackCycleTests(unittest.TestCase):
         self.assertEqual(result["feedback"],"ODDS_READY")
         self.assertEqual(result["skipped_unmatched"],0)
         self.assertFalse(result["retry_attempted"])
+        self.assertEqual(result["coverage_status"],"complete")
+        self.assertFalse(result["sensor_action_required"])
 
     def test_partial_after_retry_still_ready(self):
         result=complete(self.basic(1), True)
         self.assertEqual(result["feedback"],"ODDS_READY")
         self.assertEqual(result["matched_with_quotes"],2)
         self.assertEqual(result["skipped_unmatched"],1)
+        self.assertEqual(result["coverage_status"],"partial")
+        self.assertEqual(result["coverage_feedback"],"ODDS_PARTIAL_READY")
+        self.assertTrue(result["sensor_action_required"])
+        self.assertEqual(len(result["sensor_missing_fixtures"]),1)
 
     def test_partial_without_retry_is_not_final(self):
         with self.assertRaises(ValueError):
