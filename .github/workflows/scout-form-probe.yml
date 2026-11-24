@@ -38,6 +38,11 @@ jobs:
                   doc=get(f"{league}/teams/{tid}/schedule",{"dates":"2026"})
                   events=doc.get("events",[])
                   print("SCHEDULE",league,"TEAM",name,"COUNT",len(events),"HEAD",json.dumps(events[:2])[:1500])
+                  from lista.scout_history import parsed_event,scoreboard_team_ids
+                  from datetime import date
+                  print("SCHEDULE_PARSED",league,[(e.get("id"),e.get("status"),bool(parsed_event(e,"all",date(2026,11,24)))) for e in events[:3]])
+                  print("FIXTURE_SOURCE_TEAM_IDS",scoreboard_team_ids(target))
+
               except Exception as ex:
                   print("SCHEDULE_ERROR",league,str(ex)[:300])
           print("PROBE_DONE_NO_GITHUB_WRITES")
