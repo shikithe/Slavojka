@@ -1,0 +1,1231 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-24",
+  "source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
+  "source_active_sha256": "06d5a5ce4ce296405919a3ed286a6926baab48bdf3c901e3e58022467492081b",
+  "source_history_sha256": "f6e0966947162202e5761c47de12f531afd8fedf33aa20791f806e6bbb9a10d4",
+  "reviewed_at_utc": "2026-11-24T12:48:09.697Z",
+  "ai_review_status": "completed_independent_evidence_review",
+  "candidates_reviewed": 10,
+  "candidates": [
+    {
+      "rank": 1,
+      "fixture_id": "espn:football:uefa.champions:401915299",
+      "match": "RB Leipzig - Lens",
+      "date_time_utc": "2026-11-24T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "approved",
+      "approved_ticket": "B",
+      "approved_market": "3+",
+      "review_summary": "Approved for ticket B, 3+ 1.31 from an independently checked source; FINAL model probability 78.75% / EV 3.16% (estimate, not calibrated). Real model vs FairXG checked, Leipzig without Lukeba/Ouedraogo; Lens without Edouard and three doubtful. Forecast xG and injuries can modify confidence; projected XI is not official starting XI.",
+      "math_source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "Forecast, not observed historical xG: FairXG projected goals 2.78–1.26 (4.04 total). No verified historic xGA; do not invent it.",
+          "source_url": "https://fairxg.com/sport/football/match/rb-leipzig-vs-lens"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Leipzig without Lukeba/Ouedraogo; Lens without Edouard and three doubtful.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "Pre-match *predicted* XI provided, not confirmed official starting XI; reassess if lineup changes.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "No reliably verified recent head-to-head sample for this exact fixture."
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Both sides chasing a win after three points from first four UCL games.",
+          "source_url": "https://rbleipzig.com/en/match-news/match-preview-champions-league-rb-leipzig-rc-lens-24-november-2026"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "ESPN verified final-event data, last completed home 2026-11-21T14:30Z (77.5h), away 2026-11-21T19:45Z (72.3h) before kickoff; note travel/rotation unverified.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Confirmed date, competition, home-away. Original active-list market odds: {\"1\":1.44,\"2\":6.83,\"X\":5.75,\"3+\":1.31,\"GG\":1.45,\"NG\":2.59}. When selected: 3+ 1.31, checked against visible bookmaker quote. Quote may change before publication.",
+          "source_url": "https://tipsterarea.com/match/rb-leipzig-lens-champions-league-group-stage-956790"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/rb-leipzig-vs-lens",
+        "model_or_market_basis": "Bookmaker-corrected FairXG 1/X/2, separate FairXG goal model, explicit 3+/GG/NG; FairXG and quoted bookmaker prices are correlated and not an independent calibration",
+        "notes": "Exact same 2026-11-24 league/home-away match; FairXG projected xG 2.78 + 1.26. No >=10pp gap on proposed market.",
+        "checked_at_utc": "2026-11-24T12:48:09.697Z"
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 59.1,
+          "fairxg_probability_pct": 74,
+          "final_probability_pct": 66.55,
+          "delta_pp": -14.9,
+          "real_quoted_odds": 1.44,
+          "final_ev_pct": -4.17,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 23,
+          "fairxg_probability_pct": 12,
+          "final_probability_pct": 17.5,
+          "delta_pp": 11,
+          "real_quoted_odds": 6.83,
+          "final_ev_pct": 19.52,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 17.9,
+          "fairxg_probability_pct": 15,
+          "final_probability_pct": 16.45,
+          "delta_pp": 2.9,
+          "real_quoted_odds": 5.75,
+          "final_ev_pct": -5.41,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 80.5,
+          "fairxg_probability_pct": 77,
+          "final_probability_pct": 78.75,
+          "delta_pp": 3.5,
+          "real_quoted_odds": 1.31,
+          "final_ev_pct": 3.16,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 75.3,
+          "fairxg_probability_pct": 68,
+          "final_probability_pct": 71.65,
+          "delta_pp": 7.3,
+          "real_quoted_odds": 1.45,
+          "final_ev_pct": 3.89,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 24.7,
+          "fairxg_probability_pct": 32,
+          "final_probability_pct": 28.35,
+          "delta_pp": -7.3,
+          "real_quoted_odds": 2.59,
+          "final_ev_pct": -26.57,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 80.5,
+        "fairxg_probability_pct": 77,
+        "final_probability_pct": 78.75,
+        "delta_pp": 3.5,
+        "real_quoted_odds": 1.31,
+        "final_ev_pct": 3.16,
+        "model_disagreement": false
+      }
+    },
+    {
+      "rank": 2,
+      "fixture_id": "espn:football:uefa.champions:401915300",
+      "match": "Galatasaray - Aston Villa",
+      "date_time_utc": "2026-11-24T17:45:00Z",
+      "league": "uefa.champions",
+      "decision": "rejected",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "Not authorized for today's final slip: MODEL DISAGREEMENT 26pp for 1; Fails strict ticket eligibility; research only Real model vs FairXG checked, Galatasaray Osimhen, Rafael Leao and Sallai out; Villa Cash out. Forecast xG and injuries can modify confidence; projected XI is not official starting XI.",
+      "math_source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "Forecast, not observed historical xG: FairXG projected goals 1.85–1.65 (3.50 total). No verified historic xGA; do not invent it.",
+          "source_url": "https://fairxg.com/sport/football/match/galatasaray-vs-aston-villa"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Galatasaray Osimhen, Rafael Leao and Sallai out; Villa Cash out.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "Pre-match *predicted* XI provided, not confirmed official starting XI; reassess if lineup changes.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "No reliably verified recent head-to-head sample for this exact fixture."
+        },
+        "motivation_table": {
+          "status": "unavailable",
+          "notes": "UCL matchday 5; exact points not independently checked."
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "ESPN verified final-event data, last completed home 2026-11-21T13:00Z (76.8h), away 2026-11-21T15:00Z (74.8h) before kickoff; note travel/rotation unverified.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Confirmed date, competition, home-away. Original active-list market odds: {\"1\":3.01,\"2\":2.32,\"X\":3.98,\"3+\":1.37,\"GG\":1.31,\"NG\":3.2}. When selected: 1 3.01, check live quote again if selecting later. Quote may change before publication.",
+          "source_url": "https://tipsterarea.com/match/galatasaray-aston-villa-champions-league-group-stage-956785"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/galatasaray-vs-aston-villa",
+        "model_or_market_basis": "Bookmaker-corrected FairXG 1/X/2, separate FairXG goal model, explicit 3+/GG/NG; FairXG and quoted bookmaker prices are correlated and not an independent calibration",
+        "notes": "Exact same 2026-11-24 league/home-away match; FairXG projected xG 1.85 + 1.65. MODEL DISAGREEMENT 26pp for 1; Fails strict ticket eligibility; research only",
+        "checked_at_utc": "2026-11-24T12:48:09.697Z"
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 59,
+          "fairxg_probability_pct": 33,
+          "final_probability_pct": 46,
+          "delta_pp": 26,
+          "real_quoted_odds": 3.01,
+          "final_ev_pct": 38.46,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 21.1,
+          "fairxg_probability_pct": 44,
+          "final_probability_pct": 32.55,
+          "delta_pp": -22.9,
+          "real_quoted_odds": 2.32,
+          "final_ev_pct": -24.48,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 19.9,
+          "fairxg_probability_pct": 23,
+          "final_probability_pct": 21.45,
+          "delta_pp": -3.1,
+          "real_quoted_odds": 3.98,
+          "final_ev_pct": -14.63,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 68,
+          "fairxg_probability_pct": 68,
+          "final_probability_pct": 68,
+          "delta_pp": 0,
+          "real_quoted_odds": 1.37,
+          "final_ev_pct": -6.84,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 64.3,
+          "fairxg_probability_pct": 69,
+          "final_probability_pct": 66.65,
+          "delta_pp": -4.7,
+          "real_quoted_odds": 1.31,
+          "final_ev_pct": -12.69,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 35.7,
+          "fairxg_probability_pct": 31,
+          "final_probability_pct": 33.35,
+          "delta_pp": 4.7,
+          "real_quoted_odds": 3.2,
+          "final_ev_pct": 6.72,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 59,
+        "fairxg_probability_pct": 33,
+        "final_probability_pct": 46,
+        "delta_pp": 26,
+        "real_quoted_odds": 3.01,
+        "final_ev_pct": 38.46,
+        "model_disagreement": true
+      }
+    },
+    {
+      "rank": 3,
+      "fixture_id": "espn:football:sco.1:401878345",
+      "match": "Rangers - Aberdeen",
+      "date_time_utc": "2026-11-24T20:00:00Z",
+      "league": "sco.1",
+      "decision": "uncertain",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "Not authorized for today's final slip: MODEL DISAGREEMENT 18.6pp for GG Real model vs FairXG checked, Rangers Devlin/Shankland unavailable; Aberdeen Ronan doubtful and Knoester absent. Forecast xG and injuries can modify confidence; projected XI is not official starting XI.",
+      "math_source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "Forecast, not observed historical xG: FairXG projected goals 2.79–0.76 (3.55 total). No verified historic xGA; do not invent it.",
+          "source_url": "https://fairxg.com/sport/football/match/rangers-vs-aberdeen"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Rangers Devlin/Shankland unavailable; Aberdeen Ronan doubtful and Knoester absent.",
+          "source_url": "https://www.sportsmole.co.uk/football/rangers/preview/rangers-vs-aberdeen-prediction-team-news-lineups_609699.html"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "Pre-match *predicted* XI provided, not confirmed official starting XI; reassess if lineup changes.",
+          "source_url": "https://www.sportsmole.co.uk/football/rangers/preview/rangers-vs-aberdeen-prediction-team-news-lineups_609699.html"
+        },
+        "h2h": {
+          "status": "verified",
+          "notes": "Rangers won the recent League Cup meeting; no verified last-five H2H sample.",
+          "source_url": "https://www.sportsmole.co.uk/football/rangers/preview/rangers-vs-aberdeen-prediction-team-news-lineups_609699.html"
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Rangers could close to one point off Celtic; Aberdeen changed head coach and won 4-2 at Kilmarnock.",
+          "source_url": "https://www.sportsmole.co.uk/football/rangers/preview/rangers-vs-aberdeen-prediction-team-news-lineups_609699.html"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "ESPN verified final-event data, last completed home 2026-11-21T20:00Z (72h), away 2026-11-21T15:00Z (77h) before kickoff; note travel/rotation unverified.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Confirmed date, competition, home-away. Original active-list market odds: {\"1\":1.23,\"2\":11,\"X\":6,\"3+\":1.36,\"GG\":1.82,\"NG\":1.88}. When selected: GG 1.82, check live quote again if selecting later. Quote may change before publication.",
+          "source_url": "https://tipsterarea.com/match/rangers-aberdeen-premiership-scotland-956862"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/rangers-vs-aberdeen",
+        "model_or_market_basis": "Bookmaker-corrected FairXG 1/X/2, separate FairXG goal model, explicit 3+/GG/NG; FairXG and quoted bookmaker prices are correlated and not an independent calibration",
+        "notes": "Exact same 2026-11-24 league/home-away match; FairXG projected xG 2.79 + 0.76. MODEL DISAGREEMENT 18.6pp for GG",
+        "checked_at_utc": "2026-11-24T12:48:09.697Z"
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 47.6,
+          "fairxg_probability_pct": 79,
+          "final_probability_pct": 63.3,
+          "delta_pp": -31.4,
+          "real_quoted_odds": 1.23,
+          "final_ev_pct": -22.14,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 30.8,
+          "fairxg_probability_pct": 8,
+          "final_probability_pct": 19.4,
+          "delta_pp": 22.8,
+          "real_quoted_odds": 11,
+          "final_ev_pct": 113.4,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 21.6,
+          "fairxg_probability_pct": 13,
+          "final_probability_pct": 17.3,
+          "delta_pp": 8.6,
+          "real_quoted_odds": 6,
+          "final_ev_pct": 3.8,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 69.3,
+          "fairxg_probability_pct": 69,
+          "final_probability_pct": 69.15,
+          "delta_pp": 0.3,
+          "real_quoted_odds": 1.36,
+          "final_ev_pct": -5.96,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 68.6,
+          "fairxg_probability_pct": 50,
+          "final_probability_pct": 59.3,
+          "delta_pp": 18.6,
+          "real_quoted_odds": 1.82,
+          "final_ev_pct": 7.93,
+          "model_disagreement": true
+        },
+        "NG": {
+          "math_probability_pct": 31.4,
+          "fairxg_probability_pct": 50,
+          "final_probability_pct": 40.7,
+          "delta_pp": -18.6,
+          "real_quoted_odds": 1.88,
+          "final_ev_pct": -23.48,
+          "model_disagreement": true
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 68.6,
+        "fairxg_probability_pct": 50,
+        "final_probability_pct": 59.3,
+        "delta_pp": 18.6,
+        "real_quoted_odds": 1.82,
+        "final_ev_pct": 7.93,
+        "model_disagreement": true
+      }
+    },
+    {
+      "rank": 4,
+      "fixture_id": "espn:football:uefa.champions:401915298",
+      "match": "Real Madrid - PSV Eindhoven",
+      "date_time_utc": "2026-11-24T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "approved",
+      "approved_ticket": "A",
+      "approved_market": "GG",
+      "review_summary": "Approved for ticket A, GG 1.52 from an independently checked source; FINAL model probability 71.75% / EV 9.06% (estimate, not calibrated). Real model vs FairXG checked, Real Madrid Endrick, Raúl Asencio, Rodrygo out; PSV Mauro Junior and Ouaissa out. Forecast xG and injuries can modify confidence; projected XI is not official starting XI.",
+      "math_source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "Forecast, not observed historical xG: FairXG projected goals 2.65–1.44 (4.09 total). No verified historic xGA; do not invent it.",
+          "source_url": "https://fairxg.com/sport/football/match/real-madrid-vs-psv-eindhoven"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Real Madrid Endrick, Raúl Asencio, Rodrygo out; PSV Mauro Junior and Ouaissa out.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "Pre-match *predicted* XI provided, not confirmed official starting XI; reassess if lineup changes.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "h2h": {
+          "status": "verified",
+          "notes": "UEFA says clubs meet first time in 37 years; do not fabricate more recent H2H.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-221d8198f3f5-d0e4938cae8c-1000--champions-league-matchday-5-real-madrid-vs-psv-eindhoven-/"
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Real Madrid pursuing fifth consecutive Champions League win; PSV entered with four points from four games.",
+          "source_url": "https://www.realmadrid.com/en-US/news/football/first-team/fixtures/real-madrid-psv-a-por-la-quinta-victoria-en-la-champions-24-11-2026"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "ESPN verified final-event data, last completed home 2026-11-21T20:00Z (72h), away 2026-11-21T15:30Z (76.5h) before kickoff; note travel/rotation unverified.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Confirmed date, competition, home-away. Original active-list market odds: {\"1\":1.19,\"2\":14.8,\"X\":9.25,\"3+\":1.16,\"GG\":1.52,\"NG\":2.4}. When selected: GG 1.52, checked against visible bookmaker quote. Quote may change before publication.",
+          "source_url": "https://www.betfair.es/betting/en/football/uefa-champions-league/real-madrid-v-psv/e-36288652"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/real-madrid-vs-psv-eindhoven",
+        "model_or_market_basis": "Bookmaker-corrected FairXG 1/X/2, separate FairXG goal model, explicit 3+/GG/NG; FairXG and quoted bookmaker prices are correlated and not an independent calibration",
+        "notes": "Exact same 2026-11-24 league/home-away match; FairXG projected xG 2.65 + 1.44. No >=10pp gap on proposed market.",
+        "checked_at_utc": "2026-11-24T12:48:09.697Z"
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 36.3,
+          "fairxg_probability_pct": 88,
+          "final_probability_pct": 62.15,
+          "delta_pp": -51.7,
+          "real_quoted_odds": 1.19,
+          "final_ev_pct": -26.04,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 42.5,
+          "fairxg_probability_pct": 5,
+          "final_probability_pct": 23.75,
+          "delta_pp": 37.5,
+          "real_quoted_odds": 14.8,
+          "final_ev_pct": 251.5,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 21.2,
+          "fairxg_probability_pct": 8,
+          "final_probability_pct": 14.6,
+          "delta_pp": 13.2,
+          "real_quoted_odds": 9.25,
+          "final_ev_pct": 35.05,
+          "model_disagreement": true
+        },
+        "3+": {
+          "math_probability_pct": 73.4,
+          "fairxg_probability_pct": 77,
+          "final_probability_pct": 75.2,
+          "delta_pp": -3.6,
+          "real_quoted_odds": 1.16,
+          "final_ev_pct": -12.77,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 72.5,
+          "fairxg_probability_pct": 71,
+          "final_probability_pct": 71.75,
+          "delta_pp": 1.5,
+          "real_quoted_odds": 1.52,
+          "final_ev_pct": 9.06,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 27.5,
+          "fairxg_probability_pct": 29,
+          "final_probability_pct": 28.25,
+          "delta_pp": -1.5,
+          "real_quoted_odds": 2.4,
+          "final_ev_pct": -32.2,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 72.5,
+        "fairxg_probability_pct": 71,
+        "final_probability_pct": 71.75,
+        "delta_pp": 1.5,
+        "real_quoted_odds": 1.52,
+        "final_ev_pct": 9.06,
+        "model_disagreement": false
+      }
+    },
+    {
+      "rank": 5,
+      "fixture_id": "espn:football:sco.1:401878348",
+      "match": "Hibernian - Dundee",
+      "date_time_utc": "2026-11-24T19:45:00Z",
+      "league": "sco.1",
+      "decision": "approved",
+      "approved_ticket": "A",
+      "approved_market": "GG",
+      "review_summary": "Approved for ticket A, GG 1.65 from an independently checked source; FINAL model probability 63.2% / EV 4.28% (estimate, not calibrated). Real model vs FairXG checked, Hibernian Passlack, Hanley, Mayor and others absent; Dundee Bevan suspended after red card, plus several ACL absentees. Forecast xG and injuries can modify confidence; projected XI is not official starting XI.",
+      "math_source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "Forecast, not observed historical xG: FairXG projected goals 1.91–1.13 (3.04 total). No verified historic xGA; do not invent it.",
+          "source_url": "https://fairxg.com/sport/football/match/hibernian-vs-dundee"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Hibernian Passlack, Hanley, Mayor and others absent; Dundee Bevan suspended after red card, plus several ACL absentees.",
+          "source_url": "https://www.sportsmole.co.uk/football/hibernian/preview/hibernian-vs-dundee-prediction-team-news-lineups_609710.html"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "Pre-match *predicted* XI provided, not confirmed official starting XI; reassess if lineup changes.",
+          "source_url": "https://www.sportsmole.co.uk/football/hibernian/preview/hibernian-vs-dundee-prediction-team-news-lineups_609710.html"
+        },
+        "h2h": {
+          "status": "verified",
+          "notes": "Prior Aug 30 league meeting: Dundee 1-2 Hibernian; no five-match H2H sample verified.",
+          "source_url": "https://www.sportsmole.co.uk/football/hibernian/preview/hibernian-vs-dundee-prediction-team-news-lineups_609710.html"
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Hibernian 11th with 11 points, Dundee 7th with 17 after an 0-8 defeat; defensive pressure.",
+          "source_url": "https://www.sportsmole.co.uk/football/hibernian/preview/hibernian-vs-dundee-prediction-team-news-lineups_609710.html"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "ESPN verified final-event data, last completed home 2026-11-21T15:00Z (76.8h), away 2026-11-21T17:45Z (74h) before kickoff; note travel/rotation unverified.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Confirmed date, competition, home-away. Original active-list market odds: {\"1\":1.62,\"2\":4.79,\"X\":4.1,\"3+\":1.63,\"GG\":1.65,\"NG\":2.11}. When selected: GG 1.65, checked against visible bookmaker quote. Quote may change before publication.",
+          "source_url": "https://tipsterarea.com/match/hibernian-dundee-fc-premiership-scotland-956824"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/hibernian-vs-dundee",
+        "model_or_market_basis": "Bookmaker-corrected FairXG 1/X/2, separate FairXG goal model, explicit 3+/GG/NG; FairXG and quoted bookmaker prices are correlated and not an independent calibration",
+        "notes": "Exact same 2026-11-24 league/home-away match; FairXG projected xG 1.91 + 1.13. MODEL DISAGREEMENT 10.4pp for GG",
+        "checked_at_utc": "2026-11-24T12:48:09.697Z"
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 42.3,
+          "fairxg_probability_pct": 60,
+          "final_probability_pct": 51.15,
+          "delta_pp": -17.7,
+          "real_quoted_odds": 1.62,
+          "final_ev_pct": -17.14,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 35.6,
+          "fairxg_probability_pct": 18,
+          "final_probability_pct": 26.8,
+          "delta_pp": 17.6,
+          "real_quoted_odds": 4.79,
+          "final_ev_pct": 28.37,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 22.1,
+          "fairxg_probability_pct": 22,
+          "final_probability_pct": 22.05,
+          "delta_pp": 0.1,
+          "real_quoted_odds": 4.1,
+          "final_ev_pct": -9.6,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 68.3,
+          "fairxg_probability_pct": 59,
+          "final_probability_pct": 63.65,
+          "delta_pp": 9.3,
+          "real_quoted_odds": 1.63,
+          "final_ev_pct": 3.75,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 68.4,
+          "fairxg_probability_pct": 58,
+          "final_probability_pct": 63.2,
+          "delta_pp": 10.4,
+          "real_quoted_odds": 1.65,
+          "final_ev_pct": 4.28,
+          "model_disagreement": true
+        },
+        "NG": {
+          "math_probability_pct": 31.6,
+          "fairxg_probability_pct": 42,
+          "final_probability_pct": 36.8,
+          "delta_pp": -10.4,
+          "real_quoted_odds": 2.11,
+          "final_ev_pct": -22.35,
+          "model_disagreement": true
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 68.4,
+        "fairxg_probability_pct": 58,
+        "final_probability_pct": 63.2,
+        "delta_pp": 10.4,
+        "real_quoted_odds": 1.65,
+        "final_ev_pct": 4.28,
+        "model_disagreement": true
+      }
+    },
+    {
+      "rank": 6,
+      "fixture_id": "espn:football:uefa.champions:401915294",
+      "match": "Feyenoord Rotterdam - FC Porto",
+      "date_time_utc": "2026-11-24T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "approved",
+      "approved_ticket": "B",
+      "approved_market": "3+",
+      "review_summary": "Approved for ticket B, 3+ 1.65 from an independently checked source; FINAL model probability 63.8% / EV 5.27% (estimate, not calibrated). Real model vs FairXG checked, Feyenoord Beelen, Bos, Moder, Nieuwkoop, St. Juste out; Porto Smalling out and William Gomes doubtful. Forecast xG and injuries can modify confidence; projected XI is not official starting XI.",
+      "math_source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "Forecast, not observed historical xG: FairXG projected goals 1.31–1.94 (3.25 total). No verified historic xGA; do not invent it.",
+          "source_url": "https://fairxg.com/sport/football/match/feyenoord-vs-porto"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Feyenoord Beelen, Bos, Moder, Nieuwkoop, St. Juste out; Porto Smalling out and William Gomes doubtful.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "Pre-match *predicted* XI provided, not confirmed official starting XI; reassess if lineup changes.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "No reliably verified recent head-to-head sample for this exact fixture."
+        },
+        "motivation_table": {
+          "status": "unavailable",
+          "notes": "Both chasing Champions League advancement; UEFA matchday 5."
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "ESPN verified final-event data, last completed home 2026-11-21T17:45Z (74.3h), away 2026-11-20T20:45Z (95.3h) before kickoff; note travel/rotation unverified.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Confirmed date, competition, home-away. Original active-list market odds: {\"1\":3.04,\"2\":2.35,\"X\":3.82,\"3+\":1.65,\"GG\":1.48,\"NG\":2.5}. When selected: 3+ 1.65, checked against visible bookmaker quote. Quote may change before publication.",
+          "source_url": "https://tipsterarea.com/match/feyenoord-porto-champions-league-group-stage-956788"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/feyenoord-vs-porto",
+        "model_or_market_basis": "Bookmaker-corrected FairXG 1/X/2, separate FairXG goal model, explicit 3+/GG/NG; FairXG and quoted bookmaker prices are correlated and not an independent calibration",
+        "notes": "Exact same 2026-11-24 league/home-away match; FairXG projected xG 1.31 + 1.94. No >=10pp gap on proposed market.",
+        "checked_at_utc": "2026-11-24T12:48:09.697Z"
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 22.9,
+          "fairxg_probability_pct": 30,
+          "final_probability_pct": 26.45,
+          "delta_pp": -7.1,
+          "real_quoted_odds": 3.04,
+          "final_ev_pct": -19.59,
+          "model_disagreement": false
+        },
+        "2": {
+          "math_probability_pct": 56,
+          "fairxg_probability_pct": 45,
+          "final_probability_pct": 50.5,
+          "delta_pp": 11,
+          "real_quoted_odds": 2.35,
+          "final_ev_pct": 18.67,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 21.1,
+          "fairxg_probability_pct": 25,
+          "final_probability_pct": 23.05,
+          "delta_pp": -3.9,
+          "real_quoted_odds": 3.82,
+          "final_ev_pct": -11.95,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 64.6,
+          "fairxg_probability_pct": 63,
+          "final_probability_pct": 63.8,
+          "delta_pp": 1.6,
+          "real_quoted_odds": 1.65,
+          "final_ev_pct": 5.27,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 62.6,
+          "fairxg_probability_pct": 63,
+          "final_probability_pct": 62.8,
+          "delta_pp": -0.4,
+          "real_quoted_odds": 1.48,
+          "final_ev_pct": -7.06,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 37.4,
+          "fairxg_probability_pct": 37,
+          "final_probability_pct": 37.2,
+          "delta_pp": 0.4,
+          "real_quoted_odds": 2.5,
+          "final_ev_pct": -7,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 64.6,
+        "fairxg_probability_pct": 63,
+        "final_probability_pct": 63.8,
+        "delta_pp": 1.6,
+        "real_quoted_odds": 1.65,
+        "final_ev_pct": 5.27,
+        "model_disagreement": false
+      }
+    },
+    {
+      "rank": 7,
+      "fixture_id": "espn:football:uefa.champions:401915297",
+      "match": "Slovan Bratislava - Real Betis",
+      "date_time_utc": "2026-11-24T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "rejected",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "Not authorized for today's final slip: No positive FINAL EV for Scout recommended market; Fails strict ticket eligibility; research only Real model vs FairXG checked, Slovan Suleiman Camara and Gajdos out; Betis Dani Ceballos, Lo Celso, Morante out and Cucho doubtful. Forecast xG and injuries can modify confidence; projected XI is not official starting XI.",
+      "math_source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "Forecast, not observed historical xG: FairXG projected goals 1.08–2.66 (3.74 total). No verified historic xGA; do not invent it.",
+          "source_url": "https://fairxg.com/sport/football/match/slovan-bratislava-vs-betis"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Slovan Suleiman Camara and Gajdos out; Betis Dani Ceballos, Lo Celso, Morante out and Cucho doubtful.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "Pre-match *predicted* XI provided, not confirmed official starting XI; reassess if lineup changes.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "No reliably verified recent head-to-head sample for this exact fixture."
+        },
+        "motivation_table": {
+          "status": "unavailable",
+          "notes": "UEFA matchday 5, exact table position not checked."
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "ESPN verified final-event data, last completed home 2026-11-03T20:00Z (504h), away 2026-11-21T17:30Z (74.5h) before kickoff; note travel/rotation unverified.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Confirmed date, competition, home-away. Original active-list market odds: {\"1\":11.6,\"2\":1.28,\"X\":6.9,\"3+\":1.36,\"GG\":1.7,\"NG\":2.05}. When selected: 3+ 1.36, check live quote again if selecting later. Quote may change before publication.",
+          "source_url": "https://tipsterarea.com/match/slovan-bratislava-real-betis-champions-league-group-stage-956792"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/slovan-bratislava-vs-betis",
+        "model_or_market_basis": "Bookmaker-corrected FairXG 1/X/2, separate FairXG goal model, explicit 3+/GG/NG; FairXG and quoted bookmaker prices are correlated and not an independent calibration",
+        "notes": "Exact same 2026-11-24 league/home-away match; FairXG projected xG 1.08 + 2.66. No positive FINAL EV for Scout recommended market; Fails strict ticket eligibility; research only",
+        "checked_at_utc": "2026-11-24T12:48:09.697Z"
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 18,
+          "fairxg_probability_pct": 7,
+          "final_probability_pct": 12.5,
+          "delta_pp": 11,
+          "real_quoted_odds": 11.6,
+          "final_ev_pct": 45,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 62.7,
+          "fairxg_probability_pct": 80,
+          "final_probability_pct": 71.35,
+          "delta_pp": -17.3,
+          "real_quoted_odds": 1.28,
+          "final_ev_pct": -8.67,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 19.3,
+          "fairxg_probability_pct": 13,
+          "final_probability_pct": 16.15,
+          "delta_pp": 6.3,
+          "real_quoted_odds": 6.9,
+          "final_ev_pct": 11.43,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 66.3,
+          "fairxg_probability_pct": 72,
+          "final_probability_pct": 69.15,
+          "delta_pp": -5.7,
+          "real_quoted_odds": 1.36,
+          "final_ev_pct": -5.96,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 61.1,
+          "fairxg_probability_pct": 62,
+          "final_probability_pct": 61.55,
+          "delta_pp": -0.9,
+          "real_quoted_odds": 1.7,
+          "final_ev_pct": 4.63,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 38.9,
+          "fairxg_probability_pct": 38,
+          "final_probability_pct": 38.45,
+          "delta_pp": 0.9,
+          "real_quoted_odds": 2.05,
+          "final_ev_pct": -21.18,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 66.3,
+        "fairxg_probability_pct": 72,
+        "final_probability_pct": 69.15,
+        "delta_pp": -5.7,
+        "real_quoted_odds": 1.36,
+        "final_ev_pct": -5.96,
+        "model_disagreement": false
+      }
+    },
+    {
+      "rank": 8,
+      "fixture_id": "espn:football:uefa.champions:401915379",
+      "match": "Manchester City - Napoli",
+      "date_time_utc": "2026-11-24T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "uncertain",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "Not authorized for today's final slip: No positive FINAL EV for Scout recommended market Real model vs FairXG checked, Manchester City Semenyo out; Napoli Di Lorenzo, Lobotka, Rafa Marin and other regulars out. Forecast xG and injuries can modify confidence; projected XI is not official starting XI.",
+      "math_source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "Forecast, not observed historical xG: FairXG projected goals 2.47–1.08 (3.55 total). No verified historic xGA; do not invent it.",
+          "source_url": "https://fairxg.com/sport/football/match/man-city-vs-napoli"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Manchester City Semenyo out; Napoli Di Lorenzo, Lobotka, Rafa Marin and other regulars out.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "Pre-match *predicted* XI provided, not confirmed official starting XI; reassess if lineup changes.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "No reliably verified recent head-to-head sample for this exact fixture."
+        },
+        "motivation_table": {
+          "status": "unavailable",
+          "notes": "UEFA matchday 5, exact club points not checked."
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "ESPN verified final-event data, last completed home 2026-11-21T12:30Z (79.5h), away 2026-11-21T19:45Z (72.3h) before kickoff; note travel/rotation unverified.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Confirmed date, competition, home-away. Original active-list market odds: {\"1\":1.31,\"2\":10.4,\"X\":6.4,\"3+\":1.34,\"GG\":1.63,\"NG\":2.17}. When selected: GG 1.63, check live quote again if selecting later. Quote may change before publication.",
+          "source_url": "https://tipsterarea.com/match/manchester-city-napoli-champions-league-group-stage-956789"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/man-city-vs-napoli",
+        "model_or_market_basis": "Bookmaker-corrected FairXG 1/X/2, separate FairXG goal model, explicit 3+/GG/NG; FairXG and quoted bookmaker prices are correlated and not an independent calibration",
+        "notes": "Exact same 2026-11-24 league/home-away match; FairXG projected xG 2.47 + 1.08. No positive FINAL EV for Scout recommended market",
+        "checked_at_utc": "2026-11-24T12:48:09.697Z"
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 39.1,
+          "fairxg_probability_pct": 78,
+          "final_probability_pct": 58.55,
+          "delta_pp": -38.9,
+          "real_quoted_odds": 1.31,
+          "final_ev_pct": -23.3,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 36.9,
+          "fairxg_probability_pct": 9,
+          "final_probability_pct": 22.95,
+          "delta_pp": 27.9,
+          "real_quoted_odds": 10.4,
+          "final_ev_pct": 138.68,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 24,
+          "fairxg_probability_pct": 13,
+          "final_probability_pct": 18.5,
+          "delta_pp": 11,
+          "real_quoted_odds": 6.4,
+          "final_ev_pct": 18.4,
+          "model_disagreement": true
+        },
+        "3+": {
+          "math_probability_pct": 59.1,
+          "fairxg_probability_pct": 69,
+          "final_probability_pct": 64.05,
+          "delta_pp": -9.9,
+          "real_quoted_odds": 1.34,
+          "final_ev_pct": -14.17,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 61.5,
+          "fairxg_probability_pct": 61,
+          "final_probability_pct": 61.25,
+          "delta_pp": 0.5,
+          "real_quoted_odds": 1.63,
+          "final_ev_pct": -0.16,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 38.5,
+          "fairxg_probability_pct": 39,
+          "final_probability_pct": 38.75,
+          "delta_pp": -0.5,
+          "real_quoted_odds": 2.17,
+          "final_ev_pct": -15.91,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 61.5,
+        "fairxg_probability_pct": 61,
+        "final_probability_pct": 61.25,
+        "delta_pp": 0.5,
+        "real_quoted_odds": 1.63,
+        "final_ev_pct": -0.16,
+        "model_disagreement": false
+      }
+    },
+    {
+      "rank": 9,
+      "fixture_id": "espn:football:uefa.champions:401915380",
+      "match": "Bodo/Glimt - LASK Linz",
+      "date_time_utc": "2026-11-24T17:45:00Z",
+      "league": "uefa.champions",
+      "decision": "rejected",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "Not authorized for today's final slip: No positive FINAL EV for Scout recommended market; Fails strict ticket eligibility; research only Real model vs FairXG checked, Bodo/Glimt Evjen and Mikkelsen out; LASK Andrade, Bello and Flecker out. Forecast xG and injuries can modify confidence; projected XI is not official starting XI.",
+      "math_source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "Forecast, not observed historical xG: FairXG projected goals 2.19–1.55 (3.74 total). No verified historic xGA; do not invent it.",
+          "source_url": "https://fairxg.com/sport/football/match/bodo-glimt-vs-lask"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Bodo/Glimt Evjen and Mikkelsen out; LASK Andrade, Bello and Flecker out.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "Pre-match *predicted* XI provided, not confirmed official starting XI; reassess if lineup changes.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "No reliably verified recent head-to-head sample for this exact fixture."
+        },
+        "motivation_table": {
+          "status": "unavailable",
+          "notes": "UEFA matchday 5; exact table position not checked."
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "ESPN verified final-event data, last completed home 2026-11-20T18:00Z (95.8h), away 2026-11-21T16:00Z (73.8h) before kickoff; note travel/rotation unverified.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Confirmed date, competition, home-away. Original active-list market odds: {\"1\":1.53,\"2\":5.8,\"X\":5.28,\"3+\":1.29,\"GG\":1.37,\"NG\":2.89}. When selected: GG 1.37, check live quote again if selecting later. Quote may change before publication.",
+          "source_url": "https://tipsterarea.com/match/bodo-glimt-lask-linz-champions-league-group-stage-956784"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/bodo-glimt-vs-lask",
+        "model_or_market_basis": "Bookmaker-corrected FairXG 1/X/2, separate FairXG goal model, explicit 3+/GG/NG; FairXG and quoted bookmaker prices are correlated and not an independent calibration",
+        "notes": "Exact same 2026-11-24 league/home-away match; FairXG projected xG 2.19 + 1.55. No positive FINAL EV for Scout recommended market; Fails strict ticket eligibility; research only",
+        "checked_at_utc": "2026-11-24T12:48:09.697Z"
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 35.4,
+          "fairxg_probability_pct": 67,
+          "final_probability_pct": 51.2,
+          "delta_pp": -31.6,
+          "real_quoted_odds": 1.53,
+          "final_ev_pct": -21.66,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 41.5,
+          "fairxg_probability_pct": 16,
+          "final_probability_pct": 28.75,
+          "delta_pp": 25.5,
+          "real_quoted_odds": 5.8,
+          "final_ev_pct": 66.75,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 23.1,
+          "fairxg_probability_pct": 17,
+          "final_probability_pct": 20.05,
+          "delta_pp": 6.1,
+          "real_quoted_odds": 5.28,
+          "final_ev_pct": 5.86,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 63.6,
+          "fairxg_probability_pct": 72,
+          "final_probability_pct": 67.8,
+          "delta_pp": -8.4,
+          "real_quoted_odds": 1.29,
+          "final_ev_pct": -12.54,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 64.8,
+          "fairxg_probability_pct": 70,
+          "final_probability_pct": 67.4,
+          "delta_pp": -5.2,
+          "real_quoted_odds": 1.37,
+          "final_ev_pct": -7.66,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 35.2,
+          "fairxg_probability_pct": 30,
+          "final_probability_pct": 32.6,
+          "delta_pp": 5.2,
+          "real_quoted_odds": 2.89,
+          "final_ev_pct": -5.79,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 64.8,
+        "fairxg_probability_pct": 70,
+        "final_probability_pct": 67.4,
+        "delta_pp": -5.2,
+        "real_quoted_odds": 1.37,
+        "final_ev_pct": -7.66,
+        "model_disagreement": false
+      }
+    },
+    {
+      "rank": 10,
+      "fixture_id": "espn:football:uefa.champions:401915296",
+      "match": "Como - AEK Athens",
+      "date_time_utc": "2026-11-24T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "rejected",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "Not authorized for today's final slip: No positive FINAL EV for Scout recommended market; Fails strict ticket eligibility; research only Real model vs FairXG checked, Como Kean and Diao out, Caqueret doubtful; AEK Arriaga out and Koita suspended. Forecast xG and injuries can modify confidence; projected XI is not official starting XI.",
+      "math_source_fingerprint": "84fda55aba8a13b0dca1d93d54aa72f7bb0f5ec1498ffab725f5220dc8c04d63",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "Forecast, not observed historical xG: FairXG projected goals 2.86–0.82 (3.68 total). No verified historic xGA; do not invent it.",
+          "source_url": "https://fairxg.com/sport/football/match/como-vs-aek"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Como Kean and Diao out, Caqueret doubtful; AEK Arriaga out and Koita suspended.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "Pre-match *predicted* XI provided, not confirmed official starting XI; reassess if lineup changes.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-predicted-line-ups-matchday-5-team-news-/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "No reliably verified recent head-to-head sample for this exact fixture."
+        },
+        "motivation_table": {
+          "status": "unavailable",
+          "notes": "UEFA matchday 5; precise standings not checked."
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "ESPN verified final-event data, last completed home 2026-11-21T14:00Z (78h), away 2026-11-21T17:30Z (74.5h) before kickoff; note travel/rotation unverified.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Confirmed date, competition, home-away. Original active-list market odds: {\"1\":1.3,\"2\":11.2,\"X\":6.43,\"3+\":1.34,\"GG\":1.65,\"NG\":2.13}. When selected: GG 1.65, check live quote again if selecting later. Quote may change before publication.",
+          "source_url": "https://tipsterarea.com/match/como-aek-athens-champions-league-group-stage-956787"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/como-vs-aek",
+        "model_or_market_basis": "Bookmaker-corrected FairXG 1/X/2, separate FairXG goal model, explicit 3+/GG/NG; FairXG and quoted bookmaker prices are correlated and not an independent calibration",
+        "notes": "Exact same 2026-11-24 league/home-away match; FairXG projected xG 2.86 + 0.82. No positive FINAL EV for Scout recommended market; Fails strict ticket eligibility; research only",
+        "checked_at_utc": "2026-11-24T12:48:09.697Z"
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 49.4,
+          "fairxg_probability_pct": 80,
+          "final_probability_pct": 64.7,
+          "delta_pp": -30.6,
+          "real_quoted_odds": 1.3,
+          "final_ev_pct": -15.89,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 27.3,
+          "fairxg_probability_pct": 8,
+          "final_probability_pct": 17.65,
+          "delta_pp": 19.3,
+          "real_quoted_odds": 11.2,
+          "final_ev_pct": 97.68,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 23.3,
+          "fairxg_probability_pct": 13,
+          "final_probability_pct": 18.15,
+          "delta_pp": 10.3,
+          "real_quoted_odds": 6.43,
+          "final_ev_pct": 16.7,
+          "model_disagreement": true
+        },
+        "3+": {
+          "math_probability_pct": 58.6,
+          "fairxg_probability_pct": 71,
+          "final_probability_pct": 64.8,
+          "delta_pp": -12.4,
+          "real_quoted_odds": 1.34,
+          "final_ev_pct": -13.17,
+          "model_disagreement": true
+        },
+        "GG": {
+          "math_probability_pct": 59.7,
+          "fairxg_probability_pct": 53,
+          "final_probability_pct": 56.35,
+          "delta_pp": 6.7,
+          "real_quoted_odds": 1.65,
+          "final_ev_pct": -7.02,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 40.3,
+          "fairxg_probability_pct": 47,
+          "final_probability_pct": 43.65,
+          "delta_pp": -6.7,
+          "real_quoted_odds": 2.13,
+          "final_ev_pct": -7.03,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 59.7,
+        "fairxg_probability_pct": 53,
+        "final_probability_pct": 56.35,
+        "delta_pp": 6.7,
+        "real_quoted_odds": 1.65,
+        "final_ev_pct": -7.02,
+        "model_disagreement": false
+      }
+    }
+  ],
+  "proposed_tickets": {
+    "A": [
+      "Real Madrid - PSV Eindhoven",
+      "Hibernian - Dundee"
+    ],
+    "B": [
+      "RB Leipzig - Lens",
+      "Feyenoord Rotterdam - FC Porto"
+    ]
+  },
+  "market_math_warning": "p_final=(p_math+p_fairxg)/2 as user's project rule. Does not establish model calibration or guarantee profits; recheck prices before publication.",
+  "publication_allowed": false
+}
