@@ -1,10 +1,14 @@
 Br. | Datum/sat | Utakmica | 1 | X | 2 | 3+ | GG | NG
-1 | 2026-11-23T17:00:00Z | Istanbul Basaksehir - Çorum FK | 1.94 | 3.96 | 3.81 | 1.63 | 1.51 | 2.39
-2 | 2026-11-23T19:45:00Z | Monza - Fiorentina | 3.7 | 4.07 | 2.0 | 1.63 | 1.5 | 2.45
-3 | 2026-11-23T20:00:00Z | Brentford - Everton | 2.32 | 3.72 | 3.18 | 1.88 | 1.63 | 2.17
-4 | 2026-11-23T20:00:00Z | Gimnasia La Plata - Newell's Old Boys | 2.06 | 3.21 | 3.9 | 2.29 | 1.94 | 1.77
-5 | 2026-11-23T20:00:00Z | Levante - Elche | 2.26 | 3.82 | 3.21 | 1.73 | 1.55 | 2.32
-6 | 2026-11-23T22:30:00Z | Internacional - Vitória | - | - | - | - | - | -
-7 | 2026-11-23T23:00:00Z | Botafogo - São Paulo | - | - | - | - | - | -
-8 | 2026-11-24T00:00:00Z | Santos - Grêmio | - | - | - | - | - | -
-9 | 2026-11-24T01:00:00Z | St. Louis CITY SC - LAFC | - | - | - | - | - | -
+1 | 2026-11-24T17:45:00Z | Bodo/Glimt - LASK Linz | - | - | - | - | - | -
+2 | 2026-11-24T17:45:00Z | Galatasaray - Aston Villa | - | - | - | - | - | -
+3 | 2026-11-24T19:45:00Z | Hibernian - Dundee | 1.62 | 4.1 | 4.79 | 1.63 | 1.65 | 2.11
+4 | 2026-11-24T20:00:00Z | Arsenal - Borussia Dortmund | - | - | - | - | - | -
+5 | 2026-11-24T20:00:00Z | Como - AEK Athens | - | - | - | - | - | -
+6 | 2026-11-24T20:00:00Z | Feyenoord Rotterdam - FC Porto | - | - | - | - | - | -
+7 | 2026-11-24T20:00:00Z | Manchester City - Napoli | - | - | - | - | - | -
+8 | 2026-11-24T20:00:00Z | RB Leipzig - Lens | - | - | - | - | - | -
+9 | 2026-11-24T20:00:00Z | Rangers - Aberdeen | 1.23 | 6.0 | 11.0 | 1.36 | 1.82 | 1.88
+10 | 2026-11-24T20:00:00Z | Real Madrid - PSV Eindhoven | - | - | - | - | - | -
+11 | 2026-11-24T20:00:00Z | Slovan Bratislava - Real Betis | - | - | - | - | - | -
+12 | 2026-11-24T21:00:00Z | Chapecoense - Palmeiras | 3.14 | 3.38 | 2.34 | 1.77 | 1.56 | 2.28
+13 | 2026-11-25T03:00:00Z | San Jose Earthquakes - Houston Dynamo FC | 2.2 | 3.69 | 3.27 | 1.72 | 1.55 | 2.3

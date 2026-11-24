@@ -1,12 +1,38 @@
 {
-  "date": "2026-11-23",
-  "expires_at": "2026-11-24T08:59:00+01:00",
+  "date": "2026-11-24",
+  "expires_at": "2026-11-25T08:59:00+01:00",
   "publication_allowed": true,
   "fixtures": [
     {
-      "fixture_id": "espn:football:tur.1:401888370",
-      "datetime": "2026-11-23T17:00:00Z",
-      "match": "Istanbul Basaksehir - Çorum FK",
+      "fixture_id": "espn:football:uefa.champions:401915380",
+      "datetime": "2026-11-24T17:45:00Z",
+      "match": "Bodo/Glimt - LASK Linz",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915300",
+      "datetime": "2026-11-24T17:45:00Z",
+      "match": "Galatasaray - Aston Villa",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878348",
+      "datetime": "2026-11-24T19:45:00Z",
+      "match": "Hibernian - Dundee",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -16,19 +42,84 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/istanbul-basaksehir-corum-super-lig-turkiye-956701"
+        "https://tipsterarea.com/match/hibernian-dundee-fc-premiership-scotland-956824"
       ],
-      "home_odds": 1.94,
-      "draw_odds": 3.96,
-      "away_odds": 3.81,
+      "home_odds": 1.62,
+      "draw_odds": 4.1,
+      "away_odds": 4.79,
       "over25_odds": 1.63,
-      "btts_yes_odds": 1.51,
-      "btts_no_odds": 2.39
+      "btts_yes_odds": 1.65,
+      "btts_no_odds": 2.11
     },
     {
-      "fixture_id": "espn:football:ita.1:401875009",
-      "datetime": "2026-11-23T19:45:00Z",
-      "match": "Monza - Fiorentina",
+      "fixture_id": "espn:football:uefa.champions:401915295",
+      "datetime": "2026-11-24T20:00:00Z",
+      "match": "Arsenal - Borussia Dortmund",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915296",
+      "datetime": "2026-11-24T20:00:00Z",
+      "match": "Como - AEK Athens",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915294",
+      "datetime": "2026-11-24T20:00:00Z",
+      "match": "Feyenoord Rotterdam - FC Porto",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915379",
+      "datetime": "2026-11-24T20:00:00Z",
+      "match": "Manchester City - Napoli",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915299",
+      "datetime": "2026-11-24T20:00:00Z",
+      "match": "RB Leipzig - Lens",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878345",
+      "datetime": "2026-11-24T20:00:00Z",
+      "match": "Rangers - Aberdeen",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -38,19 +129,45 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/monza-fiorentina-serie-a-italy-956695"
+        "https://tipsterarea.com/match/rangers-aberdeen-premiership-scotland-956862"
       ],
-      "home_odds": 3.7,
-      "draw_odds": 4.07,
-      "away_odds": 2.0,
-      "over25_odds": 1.63,
-      "btts_yes_odds": 1.5,
-      "btts_no_odds": 2.45
+      "home_odds": 1.23,
+      "draw_odds": 6.0,
+      "away_odds": 11.0,
+      "over25_odds": 1.36,
+      "btts_yes_odds": 1.82,
+      "btts_no_odds": 1.88
     },
     {
-      "fixture_id": "espn:football:eng.1:401879237",
-      "datetime": "2026-11-23T20:00:00Z",
-      "match": "Brentford - Everton",
+      "fixture_id": "espn:football:uefa.champions:401915298",
+      "datetime": "2026-11-24T20:00:00Z",
+      "match": "Real Madrid - PSV Eindhoven",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915297",
+      "datetime": "2026-11-24T20:00:00Z",
+      "match": "Slovan Bratislava - Real Betis",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841335",
+      "datetime": "2026-11-24T21:00:00Z",
+      "match": "Chapecoense - Palmeiras",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -60,19 +177,19 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/brentford-everton-premier-league-england-956693"
+        "https://tipsterarea.com/match/chapecoense-sc-palmeiras-sp-serie-a-brazil-956835"
       ],
-      "home_odds": 2.32,
-      "draw_odds": 3.72,
-      "away_odds": 3.18,
-      "over25_odds": 1.88,
-      "btts_yes_odds": 1.63,
-      "btts_no_odds": 2.17
+      "home_odds": 3.14,
+      "draw_odds": 3.38,
+      "away_odds": 2.34,
+      "over25_odds": 1.77,
+      "btts_yes_odds": 1.56,
+      "btts_no_odds": 2.28
     },
     {
-      "fixture_id": "espn:football:arg.1:401933756",
-      "datetime": "2026-11-23T20:00:00Z",
-      "match": "Gimnasia La Plata - Newell's Old Boys",
+      "fixture_id": "espn:football:usa.1:401933738",
+      "datetime": "2026-11-25T03:00:00Z",
+      "match": "San Jose Earthquakes - Houston Dynamo FC",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -82,88 +199,14 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/gimnasia-la-plata-newell-s-old-boys-playoff-argentina-956712"
+        "https://tipsterarea.com/match/san-jose-earthquakes-houston-dynamo-playoff-usa-956891"
       ],
-      "home_odds": 2.06,
-      "draw_odds": 3.21,
-      "away_odds": 3.9,
-      "over25_odds": 2.29,
-      "btts_yes_odds": 1.94,
-      "btts_no_odds": 1.77
-    },
-    {
-      "fixture_id": "espn:football:esp.1:401882802",
-      "datetime": "2026-11-23T20:00:00Z",
-      "match": "Levante - Elche",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea public bookmaker",
-        "draw_odds": "TipsterArea public bookmaker",
-        "away_odds": "TipsterArea public bookmaker",
-        "over25_odds": "TipsterArea public bookmaker",
-        "btts_yes_odds": "TipsterArea public bookmaker",
-        "btts_no_odds": "TipsterArea public bookmaker"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/levante-elche-primera-division-spain-956694"
-      ],
-      "home_odds": 2.26,
-      "draw_odds": 3.82,
-      "away_odds": 3.21,
-      "over25_odds": 1.73,
+      "home_odds": 2.2,
+      "draw_odds": 3.69,
+      "away_odds": 3.27,
+      "over25_odds": 1.72,
       "btts_yes_odds": 1.55,
-      "btts_no_odds": 2.32
-    },
-    {
-      "fixture_id": "espn:football:bra.1:401841323",
-      "datetime": "2026-11-23T22:30:00Z",
-      "match": "Internacional - Vitória",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:bra.1:401841326",
-      "datetime": "2026-11-23T23:00:00Z",
-      "match": "Botafogo - São Paulo",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:bra.1:401841320",
-      "datetime": "2026-11-24T00:00:00Z",
-      "match": "Santos - Grêmio",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
-    },
-    {
-      "fixture_id": "espn:football:usa.1:401933728",
-      "datetime": "2026-11-24T01:00:00Z",
-      "match": "St. Louis CITY SC - LAFC",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "btts_no_odds": 2.3
     }
   ]
 }

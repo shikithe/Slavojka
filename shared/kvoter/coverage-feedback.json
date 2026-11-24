@@ -1,46 +1,81 @@
 {
-  "date": "2026-11-23",
+  "date": "2026-11-24",
   "status": "ready_for_scout",
   "feedback": "ODDS_READY",
-  "espn_total": 9,
-  "with_at_least_one_quote": 5,
-  "without_quote": 4,
+  "espn_total": 13,
+  "with_at_least_one_quote": 4,
+  "without_quote": 9,
   "missing_fixtures": [
     {
-      "fixture_id": "espn:football:bra.1:401841323",
-      "league": "bra.1",
-      "home": "Internacional",
-      "away": "Vitória",
-      "start_utc": "2026-11-23T22:30:00Z"
+      "fixture_id": "espn:football:uefa.champions:401915380",
+      "league": "uefa.champions",
+      "home": "Bodo/Glimt",
+      "away": "LASK Linz",
+      "start_utc": "2026-11-24T17:45:00Z"
     },
     {
-      "fixture_id": "espn:football:bra.1:401841326",
-      "league": "bra.1",
-      "home": "Botafogo",
-      "away": "São Paulo",
-      "start_utc": "2026-11-23T23:00:00Z"
+      "fixture_id": "espn:football:uefa.champions:401915300",
+      "league": "uefa.champions",
+      "home": "Galatasaray",
+      "away": "Aston Villa",
+      "start_utc": "2026-11-24T17:45:00Z"
     },
     {
-      "fixture_id": "espn:football:bra.1:401841320",
-      "league": "bra.1",
-      "home": "Santos",
-      "away": "Grêmio",
-      "start_utc": "2026-11-24T00:00:00Z"
+      "fixture_id": "espn:football:uefa.champions:401915295",
+      "league": "uefa.champions",
+      "home": "Arsenal",
+      "away": "Borussia Dortmund",
+      "start_utc": "2026-11-24T20:00:00Z"
     },
     {
-      "fixture_id": "espn:football:usa.1:401933728",
-      "league": "usa.1",
-      "home": "St. Louis CITY SC",
-      "away": "LAFC",
-      "start_utc": "2026-11-24T01:00:00Z"
+      "fixture_id": "espn:football:uefa.champions:401915296",
+      "league": "uefa.champions",
+      "home": "Como",
+      "away": "AEK Athens",
+      "start_utc": "2026-11-24T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915294",
+      "league": "uefa.champions",
+      "home": "Feyenoord Rotterdam",
+      "away": "FC Porto",
+      "start_utc": "2026-11-24T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915379",
+      "league": "uefa.champions",
+      "home": "Manchester City",
+      "away": "Napoli",
+      "start_utc": "2026-11-24T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915299",
+      "league": "uefa.champions",
+      "home": "RB Leipzig",
+      "away": "Lens",
+      "start_utc": "2026-11-24T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915298",
+      "league": "uefa.champions",
+      "home": "Real Madrid",
+      "away": "PSV Eindhoven",
+      "start_utc": "2026-11-24T20:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915297",
+      "league": "uefa.champions",
+      "home": "Slovan Bratislava",
+      "away": "Real Betis",
+      "start_utc": "2026-11-24T20:00:00Z"
     }
   ],
   "ai_prompt": "prompts/tipster-unmatched-ai-review.md",
   "next_action": "scout_6of6_if_history_ready",
   "final": true,
   "retry_attempted": true,
-  "matched_with_quotes": 5,
-  "skipped_unmatched": 4,
+  "matched_with_quotes": 4,
+  "skipped_unmatched": 9,
   "incomplete_markets_allowed": true,
-  "finished_at_utc": "2026-11-23T15:01:20.964823+00:00"
+  "finished_at_utc": "2026-11-24T08:45:57.319562+00:00"
 }

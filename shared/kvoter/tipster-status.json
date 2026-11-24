@@ -1,17 +1,22 @@
 {
-  "date": "2026-11-23",
-  "generated_at_utc": "2026-11-23T15:01:20.803347+00:00",
-  "espn": 9,
-  "daily_tipster_links": 155,
-  "paired": 5,
+  "date": "2026-11-24",
+  "generated_at_utc": "2026-11-24T08:45:57.189505+00:00",
+  "espn": 13,
+  "daily_tipster_links": 202,
+  "paired": 4,
   "pages_checked": 0,
   "updated": 0,
-  "with_any_quotes": 5,
+  "with_any_quotes": 4,
   "unpaired": [
-    "Internacional - Vitória",
-    "Botafogo - São Paulo",
-    "Santos - Grêmio",
-    "St. Louis CITY SC - LAFC"
+    "Bodo/Glimt - LASK Linz",
+    "Galatasaray - Aston Villa",
+    "Arsenal - Borussia Dortmund",
+    "Como - AEK Athens",
+    "Feyenoord Rotterdam - FC Porto",
+    "Manchester City - Napoli",
+    "RB Leipzig - Lens",
+    "Real Madrid - PSV Eindhoven",
+    "Slovan Bratislava - Real Betis"
   ],
   "failures": []
 }

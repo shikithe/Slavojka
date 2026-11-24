@@ -1,0 +1,235 @@
+{
+  "date": "2026-11-24",
+  "feed_generated_at_utc": "2026-11-24T08:45:37.248469+00:00",
+  "source": "AI or TipsterArea verified public prices",
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:sco.1:401878348",
+      "league": "sco.1",
+      "home": "Hibernian",
+      "away": "Dundee",
+      "start_utc": "2026-11-24T19:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.62,
+          "draw": 4.1,
+          "away": 4.79
+        },
+        "3+": {
+          "over": 1.63
+        },
+        "BTTS": {
+          "yes": 1.65,
+          "no": 2.11
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/hibernian-dundee-fc-premiership-scotland-956824"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/hibernian-dundee-fc-premiership-scotland-956824",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/hibernian-dundee-fc-premiership-scotland-956824",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/hibernian-dundee-fc-premiership-scotland-956824",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/hibernian-dundee-fc-premiership-scotland-956824",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/hibernian-dundee-fc-premiership-scotland-956824",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/hibernian-dundee-fc-premiership-scotland-956824",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878345",
+      "league": "sco.1",
+      "home": "Rangers",
+      "away": "Aberdeen",
+      "start_utc": "2026-11-24T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.23,
+          "draw": 6.0,
+          "away": 11.0
+        },
+        "3+": {
+          "over": 1.36
+        },
+        "BTTS": {
+          "yes": 1.82,
+          "no": 1.88
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/rangers-aberdeen-premiership-scotland-956862"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/rangers-aberdeen-premiership-scotland-956862",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/rangers-aberdeen-premiership-scotland-956862",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/rangers-aberdeen-premiership-scotland-956862",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/rangers-aberdeen-premiership-scotland-956862",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/rangers-aberdeen-premiership-scotland-956862",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/rangers-aberdeen-premiership-scotland-956862",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841335",
+      "league": "bra.1",
+      "home": "Chapecoense",
+      "away": "Palmeiras",
+      "start_utc": "2026-11-24T21:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 3.14,
+          "draw": 3.38,
+          "away": 2.34
+        },
+        "3+": {
+          "over": 1.77
+        },
+        "BTTS": {
+          "yes": 1.56,
+          "no": 2.28
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/chapecoense-sc-palmeiras-sp-serie-a-brazil-956835"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-palmeiras-sp-serie-a-brazil-956835",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-palmeiras-sp-serie-a-brazil-956835",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-palmeiras-sp-serie-a-brazil-956835",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-palmeiras-sp-serie-a-brazil-956835",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-palmeiras-sp-serie-a-brazil-956835",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/chapecoense-sc-palmeiras-sp-serie-a-brazil-956835",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933738",
+      "league": "usa.1",
+      "home": "San Jose Earthquakes",
+      "away": "Houston Dynamo FC",
+      "start_utc": "2026-11-25T03:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.2,
+          "draw": 3.69,
+          "away": 3.27
+        },
+        "3+": {
+          "over": 1.72
+        },
+        "BTTS": {
+          "yes": 1.55,
+          "no": 2.3
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/san-jose-earthquakes-houston-dynamo-playoff-usa-956891"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/san-jose-earthquakes-houston-dynamo-playoff-usa-956891",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/san-jose-earthquakes-houston-dynamo-playoff-usa-956891",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/san-jose-earthquakes-houston-dynamo-playoff-usa-956891",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/san-jose-earthquakes-houston-dynamo-playoff-usa-956891",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/san-jose-earthquakes-houston-dynamo-playoff-usa-956891",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/san-jose-earthquakes-houston-dynamo-playoff-usa-956891",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    }
+  ]
+}
