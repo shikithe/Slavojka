@@ -35,6 +35,16 @@ class ScoutFeedbackTests(unittest.TestCase):
         f,a,h,s=source();s["detailed_ai_handoff"]["candidates"][0]["fixture_id"]="wrong"
         s["detailed_ai_top_ten_fixture_ids"]=["wrong"]
         with self.assertRaises(ValueError):inspect(f,a,h,s,TODAY)
+    def test_dated_scout_cannot_send_short_top10_when_games_are_available(self):
+        f,a,h,s=source()
+        s["generated_at_utc"]="2026-11-22T10:00:00+00:00"
+        s["ranked_fixtures"][0].update(recommended_odds=1.6,
+                                        datetime="2026-11-22T17:00:00Z")
+        s["detailed_ai_handoff"]={"count":0,"candidates":[]}
+        s["detailed_ai_top_ten_fixture_ids"]=[]
+        with self.assertRaisesRegex(ValueError,"TOP10 must include"):
+            inspect(f,a,h,s,TODAY)
+
     def test_zero_top10_not_falsely_ready(self):
         f,a,h,s=source()
         s["detailed_ai_handoff"]={"count":0,"candidates":[]}
