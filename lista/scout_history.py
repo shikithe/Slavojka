@@ -231,7 +231,7 @@ def main():
             results[league]=events
             source_ids[league]=ids
             errors.extend(problems)
-    data={"schema_version":2,"date":today.isoformat(),
+    data={"schema_version":3,"date":today.isoformat(),
           "generated_at_utc":now.isoformat(),"target_matches_per_team":5,
           "fixtures":fixtures,"leagues":{},"head_to_head":{},
           "errors":errors, "publication_allowed":False,"bank_modified":False,
