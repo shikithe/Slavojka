@@ -1,23 +1,21 @@
 {
-  "date": "2026-11-24",
+  "date": "2026-11-25",
   "feedback": "HISTORY_READY",
-  "espn_generated_at_utc": "2026-11-24T08:45:37.248469+00:00",
-  "history_generated_at_utc": "2026-11-24T10:43:09.069677+00:00",
+  "espn_generated_at_utc": "2026-11-25T08:35:03.665760+00:00",
+  "history_generated_at_utc": "2026-11-25T08:35:38.768597+00:00",
   "fixture_ids": [
-    "espn:football:uefa.champions:401915380",
-    "espn:football:uefa.champions:401915300",
-    "espn:football:sco.1:401878348",
-    "espn:football:sco.1:401878345",
-    "espn:football:uefa.champions:401915295",
-    "espn:football:uefa.champions:401915296",
-    "espn:football:uefa.champions:401915294",
-    "espn:football:uefa.champions:401915379",
-    "espn:football:uefa.champions:401915299",
-    "espn:football:uefa.champions:401915298",
-    "espn:football:uefa.champions:401915297",
-    "espn:football:bra.1:401841335",
-    "espn:football:usa.1:401933738"
+    "espn:football:uefa.champions:401915378",
+    "espn:football:uefa.champions:401915293",
+    "espn:football:uefa.champions:401915291",
+    "espn:football:uefa.champions:401915292",
+    "espn:football:uefa.champions:401915376",
+    "espn:football:uefa.champions:401915377",
+    "espn:football:uefa.champions:401915374",
+    "espn:football:uefa.champions:401915375",
+    "espn:football:uefa.champions:401915373",
+    "espn:football:bra.1:401841319",
+    "espn:football:arg.1:401933757"
   ],
-  "count": 13,
-  "checked_at_utc": "2026-11-24T19:28:04.844547+00:00"
+  "count": 11,
+  "checked_at_utc": "2026-11-25T08:35:40.862717+00:00"
 }
