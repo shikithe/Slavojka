@@ -401,6 +401,194 @@
           }
         }
       }
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915378",
+      "home": "Sabah FK",
+      "away": "Barcelona",
+      "league": "uefa.champions",
+      "start_utc": "2026-11-25T17:45:00Z",
+      "sport": "football",
+      "bookmaker": "1xbet",
+      "markets": {
+        "1X2": {
+          "home": 26,
+          "draw": 15.5,
+          "away": 1.1
+        },
+        "3+": {
+          "over": 1.09
+        },
+        "BTTS": {
+          "yes": 1.59,
+          "no": 2.24
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/sabah-baku-barcelona-champions-league-group-stage-956873"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/sabah-baku-barcelona-champions-league-group-stage-956873",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/sabah-baku-barcelona-champions-league-group-stage-956873",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/sabah-baku-barcelona-champions-league-group-stage-956873",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/sabah-baku-barcelona-champions-league-group-stage-956873",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/sabah-baku-barcelona-champions-league-group-stage-956873",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/sabah-baku-barcelona-champions-league-group-stage-956873",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915291",
+      "home": "Atlético Madrid",
+      "away": "Viking FK",
+      "league": "uefa.champions",
+      "start_utc": "2026-11-25T20:00:00Z",
+      "sport": "football",
+      "bookmaker": "1xbet",
+      "markets": {
+        "1X2": {
+          "home": 1.11,
+          "draw": 12.9,
+          "away": 25
+        },
+        "3+": {
+          "over": 1.25
+        },
+        "BTTS": {
+          "yes": 2,
+          "no": 1.74
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/atletico-madrid-viking-stavanger-champions-league-group-stage-956875"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/atletico-madrid-viking-stavanger-champions-league-group-stage-956875",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/atletico-madrid-viking-stavanger-champions-league-group-stage-956875",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/atletico-madrid-viking-stavanger-champions-league-group-stage-956875",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/atletico-madrid-viking-stavanger-champions-league-group-stage-956875",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/atletico-madrid-viking-stavanger-champions-league-group-stage-956875",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/atletico-madrid-viking-stavanger-champions-league-group-stage-956875",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915377",
+      "home": "Lille",
+      "away": "Bayern Munich",
+      "league": "uefa.champions",
+      "start_utc": "2026-11-25T20:00:00Z",
+      "sport": "football",
+      "bookmaker": "TipsterArea daily aggregate",
+      "markets": {
+        "1X2": {
+          "home": 5.05,
+          "draw": 4.16,
+          "away": 1.65
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/lille-bayern-munchen-champions-league-group-stage-956878",
+        "https://tipsterarea.com/matches/date-25-11-2026"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/matches/date-25-11-2026",
+            "bookmaker": "TipsterArea daily aggregate"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/matches/date-25-11-2026",
+            "bookmaker": "TipsterArea daily aggregate"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/matches/date-25-11-2026",
+            "bookmaker": "TipsterArea daily aggregate"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841319",
+      "home": "Atlético-MG",
+      "away": "Corinthians",
+      "league": "bra.1",
+      "start_utc": "2026-11-25T23:00:00Z",
+      "sport": "football",
+      "bookmaker": "TipsterArea daily aggregate",
+      "markets": {
+        "1X2": {
+          "home": 2.37,
+          "draw": 3.36,
+          "away": 2.96
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/atletico-mg-corinthians-sp-serie-a-brazil-957016",
+        "https://tipsterarea.com/matches/date-25-11-2026"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/matches/date-25-11-2026",
+            "bookmaker": "TipsterArea daily aggregate"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/matches/date-25-11-2026",
+            "bookmaker": "TipsterArea daily aggregate"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/matches/date-25-11-2026",
+            "bookmaker": "TipsterArea daily aggregate"
+          }
+        }
+      }
     }
   ]
 }
