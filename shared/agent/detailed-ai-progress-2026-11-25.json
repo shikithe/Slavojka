@@ -1,0 +1,1282 @@
+{
+  "schema_version": 3,
+  "date": "2026-11-25",
+  "source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+  "source_active_sha256": "ee18b1fbb33eabbd2a62da6da1238072952f0cb2a54cd4e841f197cda237892c",
+  "source_history_sha256": "00c51aaf4c5facbeb4bb13b2a63450938f10289e9063512af4663d504e493f61",
+  "reviewed_at_utc": "2026-11-25T13:55:33.711Z",
+  "ai_review_status": "ten_candidates_independently_researched",
+  "candidates_reviewed": 10,
+  "candidates": [
+    {
+      "rank": 1,
+      "fixture_id": "espn:football:uefa.champions:401915373",
+      "match": "Sporting CP - Manchester United",
+      "date_time_utc": "2026-11-25T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "uncertain",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "Pobjeda Sportinga: neslaganje modela 25,6 procentnih poena (matematika 63,6%, FairXG 38%); tržišni korelisani FairXG favorizuje znatno nižu šansu. Bez AI odobrenja za tiket.",
+      "math_source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "FairXG procijenjeni (budući) golovi 2.2 – 1.25; to NISU stvarni historijski xG/xGA. Potvrđen istorijski xGA nije dostupan.",
+          "source_url": "https://fairxg.com/sport/football/match/sp-lisbon-vs-man-united"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Sporting: Debast i Nuno Santos van tima. United: Baleba, Rashford, Ugarte i Šeško van tima, Matheus Cunha suspendovan; Shaw upitan.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "UEFA objavila očekivane postave. U vrijeme provjere to NISU potvrđeni početni sastavi.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "h2h": {
+          "status": "verified",
+          "notes": "Manchester United ima pobjede u ranijim duelima, ali stari mečevi nisu dovoljan aktuelni H2H uzorak.",
+          "source_url": "https://www.sportsmole.co.uk/football/sporting-lisbon/champions-league/preview/sporting-lisbon-vs-man-utd-prediction-team-news-lineups_609672.html"
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Peto kolo ligaške faze Lige šampiona; važni su bodovi za raspored plasmana. Tačno mjesto oba tima nije posebno potvrđeno.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fix/"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "Posljednji poznati završeni meč iz Historia: domaćin 2026-11-21T18:00, gost 2026-11-22T16:30 UTC; mogući dodatni nastupi/rotacije nisu potvrđeni.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Identitet meča provjeren po datumu/takmičenju/domaćinu/gostu. ListaSix snapshot tržišta 1: 2.56. Aktuelna konačna cijena kod kladionice nije nezavisno potvrđena; dostupna je agregatorska objava. Source timestamp TipsterArea 25.11 u 12:03, može kasniti.",
+          "source_url": "https://tipsterarea.com/match/sporting-cp-manchester-united-champions-league-group-stage-956881"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/sp-lisbon-vs-man-united",
+        "model_or_market_basis": "FairXG 1/X/2 korigovan prema kladioničarskom tržištu (nije potpuno nezavisan); 3+/GG tržišta iz FairXG prikaza",
+        "notes": "Pobjeda Sportinga: neslaganje modela 25,6 procentnih poena (matematika 63,6%, FairXG 38%); tržišni korelisani FairXG favorizuje znatno nižu šansu."
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 63.6,
+          "fairxg_probability_pct": 38,
+          "final_probability_pct": 50.8,
+          "delta_pp": 25.6,
+          "source_active_odds": 2.56,
+          "final_ev_pct": 30.05,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 16.6,
+          "fairxg_probability_pct": 37,
+          "final_probability_pct": 26.8,
+          "delta_pp": -20.4,
+          "source_active_odds": 2.78,
+          "final_ev_pct": -25.5,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 19.8,
+          "fairxg_probability_pct": 25,
+          "final_probability_pct": 22.4,
+          "delta_pp": -5.2,
+          "source_active_odds": 3.78,
+          "final_ev_pct": -15.33,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 61.1,
+          "fairxg_probability_pct": 67,
+          "final_probability_pct": 64.05,
+          "delta_pp": -5.9,
+          "source_active_odds": 1.56,
+          "final_ev_pct": -0.08,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 56,
+          "fairxg_probability_pct": 64,
+          "final_probability_pct": 60,
+          "delta_pp": -8,
+          "source_active_odds": 1.44,
+          "final_ev_pct": -13.6,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 44,
+          "fairxg_probability_pct": 36,
+          "final_probability_pct": 40,
+          "delta_pp": 8,
+          "source_active_odds": 2.62,
+          "final_ev_pct": 4.8,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 63.6,
+        "fairxg_probability_pct": 38,
+        "final_probability_pct": 50.8,
+        "delta_pp": 25.6,
+        "source_active_odds": 2.56,
+        "final_ev_pct": 30.05,
+        "model_disagreement": true,
+        "real_quoted_odds": 2.56
+      },
+      "ai_research_notes": "Pobjeda Sportinga: neslaganje modela 25,6 procentnih poena (matematika 63,6%, FairXG 38%); tržišni korelisani FairXG favorizuje znatno nižu šansu.",
+      "valid_for_ticket_A": true,
+      "valid_for_ticket_B": false
+    },
+    {
+      "rank": 2,
+      "fixture_id": "espn:football:uefa.champions:401915374",
+      "match": "Paris Saint-Germain - AS Roma",
+      "date_time_utc": "2026-11-25T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "approved",
+      "approved_ticket": "A",
+      "approved_market": "GG",
+      "review_summary": "PSG 17:3 golovi u poslednjih pet, Roma 19:8; FairXG prognoza 2,71–1,29 xG. U GG oba modela imaju relativno bliske procjene; prognoza ostaje rizična. Odobren je samo izbor A; objava se posebno potvrđuje.",
+      "math_source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "FairXG procijenjeni (budući) golovi 2.71 – 1.29; to NISU stvarni historijski xG/xGA. Potvrđen istorijski xGA nije dostupan.",
+          "source_url": "https://fairxg.com/sport/football/match/paris-sg-vs-roma"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "PSG bez Douéa i Kvaratskhelije; Roma bez Pellegrinija, Balerdi i Rensch upitni.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "UEFA objavila očekivane postave. U vrijeme provjere to NISU potvrđeni početni sastavi.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "Za ovaj konkretan par nije potvrđen reprezentativan uzorak do pet nedavnih međusobnih duela; ne izmišljati rezultate."
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "PSG želi zadržati stopostotan učinak u Ligi šampiona; Roma traži bodove u ligaškoj fazi.",
+          "source_url": "https://www.psg.fr/en/content/paris-saint-germain-as-roma-preview-uefa-champions-league-20262027"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "Posljednji poznati završeni meč iz Historia: domaćin 2026-11-21T16:15, gost 2026-11-21T17:00 UTC; mogući dodatni nastupi/rotacije nisu potvrđeni.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Identitet meča provjeren po datumu/takmičenju/domaćinu/gostu. ListaSix snapshot tržišta GG: 1.43. Na javnoj TipsterArea listi pronađena kvota 1.47 (1xBet); RAZLIKUJE SE od ListaSix snapshot-a: 1.43. Source timestamp TipsterArea 25.11 u 12:03, može kasniti.",
+          "source_url": "https://tipsterarea.com/match/paris-saint-germain-roma-champions-league-group-stage-956879"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/paris-sg-vs-roma",
+        "model_or_market_basis": "FairXG 1/X/2 korigovan prema kladioničarskom tržištu (nije potpuno nezavisan); 3+/GG tržišta iz FairXG prikaza",
+        "notes": "GG je blago pozitivan po prosjeku modela; 68% FairXG ispod prag-vjerovatnoće pri 1,43. Nedostaju potvrđene početne postave."
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 41.5,
+          "fairxg_probability_pct": 67,
+          "final_probability_pct": 54.25,
+          "delta_pp": -25.5,
+          "source_active_odds": 1.49,
+          "final_ev_pct": -19.17,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 37.5,
+          "fairxg_probability_pct": 15,
+          "final_probability_pct": 26.25,
+          "delta_pp": 22.5,
+          "source_active_odds": 6.34,
+          "final_ev_pct": 66.42,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 21,
+          "fairxg_probability_pct": 18,
+          "final_probability_pct": 19.5,
+          "delta_pp": 3,
+          "source_active_odds": 5.33,
+          "final_ev_pct": 3.93,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 74.7,
+          "fairxg_probability_pct": 76,
+          "final_probability_pct": 75.35,
+          "delta_pp": -1.3,
+          "source_active_odds": 1.33,
+          "final_ev_pct": 0.22,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 73.5,
+          "fairxg_probability_pct": 68,
+          "final_probability_pct": 70.75,
+          "delta_pp": 5.5,
+          "source_active_odds": 1.43,
+          "final_ev_pct": 1.17,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 26.5,
+          "fairxg_probability_pct": 32,
+          "final_probability_pct": 29.25,
+          "delta_pp": -5.5,
+          "source_active_odds": 2.66,
+          "final_ev_pct": -22.19,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 73.5,
+        "fairxg_probability_pct": 68,
+        "final_probability_pct": 70.75,
+        "delta_pp": 5.5,
+        "source_active_odds": 1.43,
+        "final_ev_pct": 4,
+        "model_disagreement": false,
+        "real_quoted_odds": 1.47,
+        "quote_changed_from_active_list": true
+      },
+      "ai_research_notes": "GG je blago pozitivan po prosjeku modela; 68% FairXG ispod prag-vjerovatnoće pri 1,43. Nedostaju potvrđene početne postave.",
+      "valid_for_ticket_A": true,
+      "valid_for_ticket_B": false
+    },
+    {
+      "rank": 3,
+      "fixture_id": "espn:football:uefa.champions:401915378",
+      "match": "Sabah FK - Barcelona",
+      "date_time_utc": "2026-11-25T17:45:00Z",
+      "league": "uefa.champions",
+      "decision": "approved",
+      "approved_ticket": "A",
+      "approved_market": "GG",
+      "review_summary": "FairXG očekuje 0,89–3,86 golova; Barca u 8/10 posljednjih utakmica ima GG, Sabah u 2/4. Na javnoj kvoti 1,77 čak FairXG-ovih 58% blago premašuje prag isplativosti 56,5%. Odobren je samo izbor A; objava se posebno potvrđuje.",
+      "math_source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "FairXG procijenjeni (budući) golovi 0.89 – 3.86; to NISU stvarni historijski xG/xGA. Potvrđen istorijski xGA nije dostupan.",
+          "source_url": "https://fairxg.com/sport/football/match/sabah-fk-vs-barcelona"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Sabah: McCarthy suspendovan, Khaibulaev upitan. Barcelona: Christensen, Espart, Rodri i Yamal van tima; moguća rotacija.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "UEFA objavila očekivane postave. U vrijeme provjere to NISU potvrđeni početni sastavi.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "Za ovaj konkretan par nije potvrđen reprezentativan uzorak do pet nedavnih međusobnih duela; ne izmišljati rezultate."
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Barcelona je veliki favorit; putuje u Azerbejdžan i moguća je rotacija.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "Posljednji poznati završeni meč iz Historia: domaćin 2026-11-04T20:00, gost 2026-11-22T13:00 UTC; mogući dodatni nastupi/rotacije nisu potvrđeni.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Identitet meča provjeren po datumu/takmičenju/domaćinu/gostu. ListaSix snapshot tržišta GG: 1.59. Na javnoj TipsterArea listi pronađena kvota 1.77 (1xBet); RAZLIKUJE SE od ListaSix snapshot-a: 1.59. Source timestamp TipsterArea 25.11 u 12:03, može kasniti.",
+          "source_url": "https://tipsterarea.com/match/sabah-baku-barcelona-champions-league-group-stage-956873"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/sabah-fk-vs-barcelona",
+        "model_or_market_basis": "FairXG 1/X/2 korigovan prema kladioničarskom tržištu (nije potpuno nezavisan); 3+/GG tržišta iz FairXG prikaza",
+        "notes": "GG je znatno nesigurniji od golova Barcelone: Sabah je zabio u samo dva od posljednja četiri evropska meča po FairXG. Novi javni 1xBet GG 1,77 se RAZLIKUJE od stare ListaSix 1,59; ne predstavljati kao isti izvorni snapshot."
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 27.9,
+          "fairxg_probability_pct": 3,
+          "final_probability_pct": 15.45,
+          "delta_pp": 24.9,
+          "source_active_odds": 26,
+          "final_ev_pct": 301.7,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 51.3,
+          "fairxg_probability_pct": 91,
+          "final_probability_pct": 71.15,
+          "delta_pp": -39.7,
+          "source_active_odds": 1.1,
+          "final_ev_pct": -21.73,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 20.8,
+          "fairxg_probability_pct": 6,
+          "final_probability_pct": 13.4,
+          "delta_pp": 14.8,
+          "source_active_odds": 15.5,
+          "final_ev_pct": 107.7,
+          "model_disagreement": true
+        },
+        "3+": {
+          "math_probability_pct": 71.1,
+          "fairxg_probability_pct": 85,
+          "final_probability_pct": 78.05,
+          "delta_pp": -13.9,
+          "source_active_odds": 1.09,
+          "final_ev_pct": -14.93,
+          "model_disagreement": true
+        },
+        "GG": {
+          "math_probability_pct": 69.3,
+          "fairxg_probability_pct": 58,
+          "final_probability_pct": 63.65,
+          "delta_pp": 11.3,
+          "source_active_odds": 1.59,
+          "final_ev_pct": 1.2,
+          "model_disagreement": true
+        },
+        "NG": {
+          "math_probability_pct": 30.7,
+          "fairxg_probability_pct": 42,
+          "final_probability_pct": 36.35,
+          "delta_pp": -11.3,
+          "source_active_odds": 2.24,
+          "final_ev_pct": -18.58,
+          "model_disagreement": true
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 69.3,
+        "fairxg_probability_pct": 58,
+        "final_probability_pct": 63.65,
+        "delta_pp": 11.3,
+        "source_active_odds": 1.59,
+        "final_ev_pct": 12.66,
+        "model_disagreement": true,
+        "real_quoted_odds": 1.77,
+        "quote_changed_from_active_list": true
+      },
+      "ai_research_notes": "GG je znatno nesigurniji od golova Barcelone: Sabah je zabio u samo dva od posljednja četiri evropska meča po FairXG. Novi javni 1xBet GG 1,77 se RAZLIKUJE od stare ListaSix 1,59; ne predstavljati kao isti izvorni snapshot.",
+      "valid_for_ticket_A": true,
+      "valid_for_ticket_B": false
+    },
+    {
+      "rank": 4,
+      "fixture_id": "espn:football:uefa.champions:401915291",
+      "match": "Atlético Madrid - Viking FK",
+      "date_time_utc": "2026-11-25T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "rejected",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "Viking ima samo tri potvrđene prethodne utakmice u Historyju; A/B osnovni minimum nije ispunjen. Model za 1 ima ekstremno neslaganje 39,7% naspram 89%. Bez AI odobrenja za tiket.",
+      "math_source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "FairXG procijenjeni (budući) golovi 2.43 – 1.32; to NISU stvarni historijski xG/xGA. Potvrđen istorijski xGA nije dostupan.",
+          "source_url": "https://fairxg.com/sport/football/match/ath-madrid-vs-viking"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Atlético: Lookman i Romero van tima. Viking: Baertelsen, Bjørshol, D'Agostino i Roseth van tima; Berisha i Haugen upitni.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "UEFA objavila očekivane postave. U vrijeme provjere to NISU potvrđeni početni sastavi.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "Za ovaj konkretan par nije potvrđen reprezentativan uzorak do pet nedavnih međusobnih duela; ne izmišljati rezultate."
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Peto kolo ligaške faze Lige šampiona; važni su bodovi za raspored plasmana. Tačno mjesto oba tima nije posebno potvrđeno.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fix/"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "Posljednji poznati završeni meč iz Historia: domaćin 2026-11-22T20:00, gost 2026-11-04T20:00 UTC; mogući dodatni nastupi/rotacije nisu potvrđeni.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Identitet meča provjeren po datumu/takmičenju/domaćinu/gostu. ListaSix snapshot tržišta GG: 2. Aktuelna konačna cijena kod kladionice nije nezavisno potvrđena; dostupna je agregatorska objava. Source timestamp TipsterArea 25.11 u 12:03, može kasniti.",
+          "source_url": "https://tipsterarea.com/match/atletico-madrid-viking-stavanger-champions-league-group-stage-956875"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/ath-madrid-vs-viking",
+        "model_or_market_basis": "FairXG 1/X/2 korigovan prema kladioničarskom tržištu (nije potpuno nezavisan); 3+/GG tržišta iz FairXG prikaza",
+        "notes": "Viking ima samo tri potvrđene prethodne utakmice u Historyju; A/B osnovni minimum nije ispunjen. Model za 1 ima ekstremno neslaganje 39,7% naspram 89%."
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 39.7,
+          "fairxg_probability_pct": 89,
+          "final_probability_pct": 64.35,
+          "delta_pp": -49.3,
+          "source_active_odds": 1.11,
+          "final_ev_pct": -28.57,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 37.2,
+          "fairxg_probability_pct": 4,
+          "final_probability_pct": 20.6,
+          "delta_pp": 33.2,
+          "source_active_odds": 25,
+          "final_ev_pct": 415,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 23.1,
+          "fairxg_probability_pct": 7,
+          "final_probability_pct": 15.05,
+          "delta_pp": 16.1,
+          "source_active_odds": 12.9,
+          "final_ev_pct": 94.14,
+          "model_disagreement": true
+        },
+        "3+": {
+          "math_probability_pct": 63.5,
+          "fairxg_probability_pct": 72,
+          "final_probability_pct": 67.75,
+          "delta_pp": -8.5,
+          "source_active_odds": 1.25,
+          "final_ev_pct": -15.31,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 64.8,
+          "fairxg_probability_pct": 67,
+          "final_probability_pct": 65.9,
+          "delta_pp": -2.2,
+          "source_active_odds": 2,
+          "final_ev_pct": 31.8,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 35.2,
+          "fairxg_probability_pct": 33,
+          "final_probability_pct": 34.1,
+          "delta_pp": 2.2,
+          "source_active_odds": 1.74,
+          "final_ev_pct": -40.67,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 64.8,
+        "fairxg_probability_pct": 67,
+        "final_probability_pct": 65.9,
+        "delta_pp": -2.2,
+        "source_active_odds": 2,
+        "final_ev_pct": 31.8,
+        "model_disagreement": false,
+        "real_quoted_odds": 2
+      },
+      "ai_research_notes": "Viking ima samo tri potvrđene prethodne utakmice u Historyju; A/B osnovni minimum nije ispunjen. Model za 1 ima ekstremno neslaganje 39,7% naspram 89%.",
+      "valid_for_ticket_A": false,
+      "valid_for_ticket_B": false
+    },
+    {
+      "rank": 5,
+      "fixture_id": "espn:football:uefa.champions:401915292",
+      "match": "Club Brugge - Liverpool",
+      "date_time_utc": "2026-11-25T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "rejected",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "GG na zbirnoj procjeni 69,5% i kvoti 1,34 ima negativan EV približno −6,87%. Bez AI odobrenja za tiket.",
+      "math_source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "FairXG procijenjeni (budući) golovi 2.16 – 1.62; to NISU stvarni historijski xG/xGA. Potvrđen istorijski xGA nije dostupan.",
+          "source_url": "https://fairxg.com/sport/football/match/club-brugge-vs-liverpool"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Brugge: Ordóñez i Virgili van tima. Liverpool: Bradley, Ekitiké, Gakpo, Jaroš i Leoni van tima; Gravenberch upitan.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "UEFA objavila očekivane postave. U vrijeme provjere to NISU potvrđeni početni sastavi.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "Za ovaj konkretan par nije potvrđen reprezentativan uzorak do pet nedavnih međusobnih duela; ne izmišljati rezultate."
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Peto kolo ligaške faze Lige šampiona; važni su bodovi za raspored plasmana. Tačno mjesto oba tima nije posebno potvrđeno.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fix/"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "Posljednji poznati završeni meč iz Historia: domaćin 2026-11-21T19:45, gost 2026-11-22T16:30 UTC; mogući dodatni nastupi/rotacije nisu potvrđeni.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Identitet meča provjeren po datumu/takmičenju/domaćinu/gostu. ListaSix snapshot tržišta GG: 1.34. Aktuelna konačna cijena kod kladionice nije nezavisno potvrđena; dostupna je agregatorska objava. Source timestamp TipsterArea 25.11 u 12:03, može kasniti.",
+          "source_url": "https://tipsterarea.com/match/club-brugge-liverpool-champions-league-group-stage-956876"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/club-brugge-vs-liverpool",
+        "model_or_market_basis": "FairXG 1/X/2 korigovan prema kladioničarskom tržištu (nije potpuno nezavisan); 3+/GG tržišta iz FairXG prikaza",
+        "notes": "GG na zbirnoj procjeni 69,5% i kvoti 1,34 ima negativan EV približno −6,87%."
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 43.5,
+          "fairxg_probability_pct": 20,
+          "final_probability_pct": 31.75,
+          "delta_pp": 23.5,
+          "source_active_odds": 4.73,
+          "final_ev_pct": 50.18,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 34.3,
+          "fairxg_probability_pct": 62,
+          "final_probability_pct": 48.15,
+          "delta_pp": -27.7,
+          "source_active_odds": 1.7,
+          "final_ev_pct": -18.14,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 22.2,
+          "fairxg_probability_pct": 19,
+          "final_probability_pct": 20.6,
+          "delta_pp": 3.2,
+          "source_active_odds": 4.68,
+          "final_ev_pct": -3.59,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 67.8,
+          "fairxg_probability_pct": 73,
+          "final_probability_pct": 70.4,
+          "delta_pp": -5.2,
+          "source_active_odds": 1.32,
+          "final_ev_pct": -7.07,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 68,
+          "fairxg_probability_pct": 71,
+          "final_probability_pct": 69.5,
+          "delta_pp": -3,
+          "source_active_odds": 1.34,
+          "final_ev_pct": -6.87,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 32,
+          "fairxg_probability_pct": 29,
+          "final_probability_pct": 30.5,
+          "delta_pp": 3,
+          "source_active_odds": 3.04,
+          "final_ev_pct": -7.28,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 68,
+        "fairxg_probability_pct": 71,
+        "final_probability_pct": 69.5,
+        "delta_pp": -3,
+        "source_active_odds": 1.34,
+        "final_ev_pct": -6.87,
+        "model_disagreement": false,
+        "real_quoted_odds": 1.34
+      },
+      "ai_research_notes": "GG na zbirnoj procjeni 69,5% i kvoti 1,34 ima negativan EV približno −6,87%.",
+      "valid_for_ticket_A": false,
+      "valid_for_ticket_B": false
+    },
+    {
+      "rank": 6,
+      "fixture_id": "espn:football:uefa.champions:401915293",
+      "match": "Slavia Prague - Villarreal",
+      "date_time_utc": "2026-11-25T17:45:00Z",
+      "league": "uefa.champions",
+      "decision": "rejected",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "3+ na konačnih 66,55% i kvoti 1,47 daje EV oko −2,17%. Iako je prvi rang za B, ne prolazi pozitivan konzervativni EV; ne izmišljati drugi B tip. Bez AI odobrenja za tiket.",
+      "math_source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "FairXG procijenjeni (budući) golovi 1.58 – 1.82; to NISU stvarni historijski xG/xGA. Potvrđen istorijski xGA nije dostupan.",
+          "source_url": "https://fairxg.com/sport/football/match/slavia-prague-vs-villarreal"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Slavia: Chaloupek, Moses, Ouanda, Piták, Provod i Šturm nedostupni prema UEFA; Villarreal: Akhomach, Alassane, Foyth, Gerard Moreno i Saliba van tima.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "UEFA objavila očekivane postave. U vrijeme provjere to NISU potvrđeni početni sastavi.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "Za ovaj konkretan par nije potvrđen reprezentativan uzorak do pet nedavnih međusobnih duela; ne izmišljati rezultate."
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Peto kolo ligaške faze Lige šampiona; važni su bodovi za raspored plasmana. Tačno mjesto oba tima nije posebno potvrđeno.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fix/"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "Posljednji poznati završeni meč iz Historia: domaćin 2026-11-04T20:00, gost 2026-11-22T13:00 UTC; mogući dodatni nastupi/rotacije nisu potvrđeni.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Identitet meča provjeren po datumu/takmičenju/domaćinu/gostu. ListaSix snapshot tržišta 3+: 1.47. Aktuelna konačna cijena kod kladionice nije nezavisno potvrđena; dostupna je agregatorska objava. Source timestamp TipsterArea 25.11 u 12:03, može kasniti.",
+          "source_url": "https://tipsterarea.com/match/slavia-prague-villarreal-champions-league-group-stage-956874"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/slavia-prague-vs-villarreal",
+        "model_or_market_basis": "FairXG 1/X/2 korigovan prema kladioničarskom tržištu (nije potpuno nezavisan); 3+/GG tržišta iz FairXG prikaza",
+        "notes": "3+ na konačnih 66,55% i kvoti 1,47 daje EV oko −2,17%. Iako je prvi rang za B, ne prolazi pozitivan konzervativni EV; ne izmišljati drugi B tip."
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 34.8,
+          "fairxg_probability_pct": 29,
+          "final_probability_pct": 31.9,
+          "delta_pp": 5.8,
+          "source_active_odds": 3.1,
+          "final_ev_pct": -1.11,
+          "model_disagreement": false
+        },
+        "2": {
+          "math_probability_pct": 42.9,
+          "fairxg_probability_pct": 47,
+          "final_probability_pct": 44.95,
+          "delta_pp": -4.1,
+          "source_active_odds": 2.23,
+          "final_ev_pct": 0.24,
+          "model_disagreement": false
+        },
+        "X": {
+          "math_probability_pct": 22.3,
+          "fairxg_probability_pct": 24,
+          "final_probability_pct": 23.15,
+          "delta_pp": -1.7,
+          "source_active_odds": 4.09,
+          "final_ev_pct": -5.32,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 67.1,
+          "fairxg_probability_pct": 66,
+          "final_probability_pct": 66.55,
+          "delta_pp": 1.1,
+          "source_active_odds": 1.47,
+          "final_ev_pct": -2.17,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 67.5,
+          "fairxg_probability_pct": 67,
+          "final_probability_pct": 67.25,
+          "delta_pp": 0.5,
+          "source_active_odds": 1.41,
+          "final_ev_pct": -5.18,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 32.5,
+          "fairxg_probability_pct": 33,
+          "final_probability_pct": 32.75,
+          "delta_pp": -0.5,
+          "source_active_odds": 2.73,
+          "final_ev_pct": -10.59,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 67.1,
+        "fairxg_probability_pct": 66,
+        "final_probability_pct": 66.55,
+        "delta_pp": 1.1,
+        "source_active_odds": 1.47,
+        "final_ev_pct": -2.17,
+        "model_disagreement": false,
+        "real_quoted_odds": 1.47
+      },
+      "ai_research_notes": "3+ na konačnih 66,55% i kvoti 1,47 daje EV oko −2,17%. Iako je prvi rang za B, ne prolazi pozitivan konzervativni EV; ne izmišljati drugi B tip.",
+      "valid_for_ticket_A": false,
+      "valid_for_ticket_B": false
+    },
+    {
+      "rank": 7,
+      "fixture_id": "espn:football:uefa.champions:401915375",
+      "match": "Shakhtar Donetsk - Fenerbahce",
+      "date_time_utc": "2026-11-25T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "uncertain",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "3+ ima zadovoljavajući EV, ali B nema drugi matematički kvalifikovani 3+ par; 1,81 iz active-list nije identičan javnom TipsterArea snapshotu 1,80/1,86. Bez AI odobrenja za tiket.",
+      "math_source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "FairXG procijenjeni (budući) golovi 1.73 – 1.67; to NISU stvarni historijski xG/xGA. Potvrđen istorijski xGA nije dostupan.",
+          "source_url": "https://fairxg.com/sport/football/match/shakhtar-donetsk-vs-fenerbahce"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Shakhtar: Kauã Elias, Marlon Santos i Mendoza van tima; Fenerbahçe: Aké i Asensio van tima.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "UEFA objavila očekivane postave. U vrijeme provjere to NISU potvrđeni početni sastavi.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "Za ovaj konkretan par nije potvrđen reprezentativan uzorak do pet nedavnih međusobnih duela; ne izmišljati rezultate."
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Shakhtar je 21. s četiri boda, Fenerbahçe 19. s pet; oba igraju za prolaz dalje.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-221de2f40a14-17fb2b43aec9-1000--champions-league-matchday-5-shakhtar-donetsk-vs-fenerbahce-/"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "Posljednji poznati završeni meč iz Historia: domaćin 2026-11-03T17:45, gost 2026-11-21T16:00 UTC; mogući dodatni nastupi/rotacije nisu potvrđeni.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Identitet meča provjeren po datumu/takmičenju/domaćinu/gostu. ListaSix snapshot tržišta 3+: 1.81. Aktuelna konačna cijena kod kladionice nije nezavisno potvrđena; dostupna je agregatorska objava. Source timestamp TipsterArea 25.11 u 12:03, može kasniti.",
+          "source_url": "https://tipsterarea.com/match/shakhtar-donetsk-fenerbahce-champions-league-group-stage-956880"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/shakhtar-donetsk-vs-fenerbahce",
+        "model_or_market_basis": "FairXG 1/X/2 korigovan prema kladioničarskom tržištu (nije potpuno nezavisan); 3+/GG tržišta iz FairXG prikaza",
+        "notes": "3+ ima zadovoljavajući EV, ali B nema drugi matematički kvalifikovani 3+ par; 1,81 iz active-list nije identičan javnom TipsterArea snapshotu 1,80/1,86."
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 36.6,
+          "fairxg_probability_pct": 33,
+          "final_probability_pct": 34.8,
+          "delta_pp": 3.6,
+          "source_active_odds": 2.96,
+          "final_ev_pct": 3.01,
+          "model_disagreement": false
+        },
+        "2": {
+          "math_probability_pct": 39.5,
+          "fairxg_probability_pct": 40,
+          "final_probability_pct": 39.75,
+          "delta_pp": -0.5,
+          "source_active_odds": 2.5,
+          "final_ev_pct": -0.62,
+          "model_disagreement": false
+        },
+        "X": {
+          "math_probability_pct": 23.9,
+          "fairxg_probability_pct": 26,
+          "final_probability_pct": 24.95,
+          "delta_pp": -2.1,
+          "source_active_odds": 3.62,
+          "final_ev_pct": -9.68,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 59.5,
+          "fairxg_probability_pct": 66,
+          "final_probability_pct": 62.75,
+          "delta_pp": -6.5,
+          "source_active_odds": 1.81,
+          "final_ev_pct": 13.58,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 61.8,
+          "fairxg_probability_pct": 67,
+          "final_probability_pct": 64.4,
+          "delta_pp": -5.2,
+          "source_active_odds": 1.57,
+          "final_ev_pct": 1.11,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 38.2,
+          "fairxg_probability_pct": 33,
+          "final_probability_pct": 35.6,
+          "delta_pp": 5.2,
+          "source_active_odds": 2.28,
+          "final_ev_pct": -18.83,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 59.5,
+        "fairxg_probability_pct": 66,
+        "final_probability_pct": 62.75,
+        "delta_pp": -6.5,
+        "source_active_odds": 1.81,
+        "final_ev_pct": 13.58,
+        "model_disagreement": false,
+        "real_quoted_odds": 1.81
+      },
+      "ai_research_notes": "3+ ima zadovoljavajući EV, ali B nema drugi matematički kvalifikovani 3+ par; 1,81 iz active-list nije identičan javnom TipsterArea snapshotu 1,80/1,86.",
+      "valid_for_ticket_A": true,
+      "valid_for_ticket_B": true
+    },
+    {
+      "rank": 8,
+      "fixture_id": "espn:football:uefa.champions:401915376",
+      "match": "Internazionale - VfB Stuttgart",
+      "date_time_utc": "2026-11-25T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "rejected",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "GG na konačnih 61,6% i kvoti 1,36 ima približno −16,22% EV; nizak kvalitet tog tržišta za ponuđenu cijenu. Bez AI odobrenja za tiket.",
+      "math_source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "FairXG procijenjeni (budući) golovi 2.59 – 1.16; to NISU stvarni historijski xG/xGA. Potvrđen istorijski xGA nije dostupan.",
+          "source_url": "https://fairxg.com/sport/football/match/inter-vs-stuttgart"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Inter: Bonny i Çalhanoğlu van tima; Stuttgart: Jaquez, Sauer i Stiller upitni.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "UEFA objavila očekivane postave. U vrijeme provjere to NISU potvrđeni početni sastavi.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "Za ovaj konkretan par nije potvrđen reprezentativan uzorak do pet nedavnih međusobnih duela; ne izmišljati rezultate."
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Peto kolo ligaške faze Lige šampiona; važni su bodovi za raspored plasmana. Tačno mjesto oba tima nije posebno potvrđeno.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fix/"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "Posljednji poznati završeni meč iz Historia: domaćin 2026-11-22T19:45, gost 2026-11-21T17:30 UTC; mogući dodatni nastupi/rotacije nisu potvrđeni.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Identitet meča provjeren po datumu/takmičenju/domaćinu/gostu. ListaSix snapshot tržišta GG: 1.36. Aktuelna konačna cijena kod kladionice nije nezavisno potvrđena; dostupna je agregatorska objava. Source timestamp TipsterArea 25.11 u 12:03, može kasniti.",
+          "source_url": "https://tipsterarea.com/match/inter-stuttgart-champions-league-group-stage-956877"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/inter-vs-stuttgart",
+        "model_or_market_basis": "FairXG 1/X/2 korigovan prema kladioničarskom tržištu (nije potpuno nezavisan); 3+/GG tržišta iz FairXG prikaza",
+        "notes": "GG na konačnih 61,6% i kvoti 1,36 ima približno −16,22% EV; nizak kvalitet tog tržišta za ponuđenu cijenu."
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 44.3,
+          "fairxg_probability_pct": 71,
+          "final_probability_pct": 57.65,
+          "delta_pp": -26.7,
+          "source_active_odds": 1.44,
+          "final_ev_pct": -16.98,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 31.5,
+          "fairxg_probability_pct": 14,
+          "final_probability_pct": 22.75,
+          "delta_pp": 17.5,
+          "source_active_odds": 6.75,
+          "final_ev_pct": 53.56,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 24.2,
+          "fairxg_probability_pct": 15,
+          "final_probability_pct": 19.6,
+          "delta_pp": 9.2,
+          "source_active_odds": 5.74,
+          "final_ev_pct": 12.5,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 56.8,
+          "fairxg_probability_pct": 72,
+          "final_probability_pct": 64.4,
+          "delta_pp": -15.2,
+          "source_active_odds": 1.23,
+          "final_ev_pct": -20.79,
+          "model_disagreement": true
+        },
+        "GG": {
+          "math_probability_pct": 59.2,
+          "fairxg_probability_pct": 64,
+          "final_probability_pct": 61.6,
+          "delta_pp": -4.8,
+          "source_active_odds": 1.36,
+          "final_ev_pct": -16.22,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 40.8,
+          "fairxg_probability_pct": 36,
+          "final_probability_pct": 38.4,
+          "delta_pp": 4.8,
+          "source_active_odds": 2.94,
+          "final_ev_pct": 12.9,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 59.2,
+        "fairxg_probability_pct": 64,
+        "final_probability_pct": 61.6,
+        "delta_pp": -4.8,
+        "source_active_odds": 1.36,
+        "final_ev_pct": -16.22,
+        "model_disagreement": false,
+        "real_quoted_odds": 1.36
+      },
+      "ai_research_notes": "GG na konačnih 61,6% i kvoti 1,36 ima približno −16,22% EV; nizak kvalitet tog tržišta za ponuđenu cijenu.",
+      "valid_for_ticket_A": false,
+      "valid_for_ticket_B": false
+    },
+    {
+      "rank": 9,
+      "fixture_id": "espn:football:uefa.champions:401915377",
+      "match": "Lille - Bayern Munich",
+      "date_time_utc": "2026-11-25T20:00:00Z",
+      "league": "uefa.champions",
+      "decision": "rejected",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "Bayern ima samo tri potvrđena meča u Historyju; 1 (Lille) se snažno razlikuje: matematika 34,8%, FairXG 16%. Nije kvalifikovan za A. Bez AI odobrenja za tiket.",
+      "math_source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+      "new_factors": {
+        "xg_xga": {
+          "status": "verified",
+          "notes": "FairXG procijenjeni (budući) golovi 1.18 – 2.18; to NISU stvarni historijski xG/xGA. Potvrđen istorijski xGA nije dostupan.",
+          "source_url": "https://fairxg.com/sport/football/match/lille-vs-bayern-munich"
+        },
+        "injuries_suspensions": {
+          "status": "verified",
+          "notes": "Lille: Tiago Santos i Nianzou van tima. Bayern: Davies, Gnabry, Kane, Neuer i Saibari van tima; Díaz i Olise upitni.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "expected_lineups": {
+          "status": "verified",
+          "notes": "UEFA objavila očekivane postave. U vrijeme provjere to NISU potvrđeni početni sastavi.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000/"
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "Za ovaj konkretan par nije potvrđen reprezentativan uzorak do pet nedavnih međusobnih duela; ne izmišljati rezultate."
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Peto kolo ligaške faze Lige šampiona; važni su bodovi za raspored plasmana. Tačno mjesto oba tima nije posebno potvrđeno.",
+          "source_url": "https://www.uefa.com/uefachampionsleague/news/02a8-2174c9e9019d-f909a77bd77a-1000--2026-27-uefa-champions-league-all-the-league-phase-fix/"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "Posljednji poznati završeni meč iz Historia: domaćin 2026-11-21T19:45, gost 2026-11-03T20:00 UTC; mogući dodatni nastupi/rotacije nisu potvrđeni.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "verified",
+          "notes": "Identitet meča provjeren po datumu/takmičenju/domaćinu/gostu. ListaSix snapshot tržišta 1: 5.05. Aktuelna konačna cijena kod kladionice nije nezavisno potvrđena; dostupna je agregatorska objava. Source timestamp TipsterArea 25.11 u 12:03, može kasniti.",
+          "source_url": "https://tipsterarea.com/match/lille-bayern-munchen-champions-league-group-stage-956878"
+        }
+      },
+      "independent_model_check": {
+        "status": "verified",
+        "provider": "FairXG",
+        "source_url": "https://fairxg.com/sport/football/match/lille-vs-bayern-munich",
+        "model_or_market_basis": "FairXG 1/X/2 korigovan prema kladioničarskom tržištu (nije potpuno nezavisan); 3+/GG tržišta iz FairXG prikaza",
+        "notes": "Bayern ima samo tri potvrđena meča u Historyju; 1 (Lille) se snažno razlikuje: matematika 34,8%, FairXG 16%. Nije kvalifikovan za A."
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 34.8,
+          "fairxg_probability_pct": 16,
+          "final_probability_pct": 25.4,
+          "delta_pp": 18.8,
+          "source_active_odds": 5.05,
+          "final_ev_pct": 28.27,
+          "model_disagreement": true
+        },
+        "2": {
+          "math_probability_pct": 39.5,
+          "fairxg_probability_pct": 62,
+          "final_probability_pct": 50.75,
+          "delta_pp": -22.5,
+          "source_active_odds": 1.65,
+          "final_ev_pct": -16.26,
+          "model_disagreement": true
+        },
+        "X": {
+          "math_probability_pct": 25.7,
+          "fairxg_probability_pct": 22,
+          "final_probability_pct": 23.85,
+          "delta_pp": 3.7,
+          "source_active_odds": 4.16,
+          "final_ev_pct": -0.78,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 50.9,
+          "fairxg_probability_pct": 65,
+          "final_probability_pct": 57.95,
+          "delta_pp": -14.1,
+          "source_active_odds": null,
+          "final_ev_pct": null,
+          "model_disagreement": true
+        },
+        "GG": {
+          "math_probability_pct": 55,
+          "fairxg_probability_pct": 62,
+          "final_probability_pct": 58.5,
+          "delta_pp": -7,
+          "source_active_odds": null,
+          "final_ev_pct": null,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 45,
+          "fairxg_probability_pct": 38,
+          "final_probability_pct": 41.5,
+          "delta_pp": 7,
+          "source_active_odds": null,
+          "final_ev_pct": null,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 34.8,
+        "fairxg_probability_pct": 16,
+        "final_probability_pct": 25.4,
+        "delta_pp": 18.8,
+        "source_active_odds": 5.05,
+        "final_ev_pct": 28.27,
+        "model_disagreement": true,
+        "real_quoted_odds": 5.05
+      },
+      "ai_research_notes": "Bayern ima samo tri potvrđena meča u Historyju; 1 (Lille) se snažno razlikuje: matematika 34,8%, FairXG 16%. Nije kvalifikovan za A.",
+      "valid_for_ticket_A": false,
+      "valid_for_ticket_B": false
+    },
+    {
+      "rank": 10,
+      "fixture_id": "espn:football:arg.1:401933757",
+      "match": "Boca Juniors - Independiente Rivadavia",
+      "date_time_utc": "2026-11-26T00:00:00Z",
+      "league": "arg.1",
+      "decision": "rejected",
+      "approved_ticket": null,
+      "approved_market": null,
+      "review_summary": "Za 1 (Boca) izvorna matematika 54,8% pri kvoti 1,62 daje negativan EV −11,22%. FairXG isti meč nije pouzdano pronađen. Bez AI odobrenja za tiket.",
+      "math_source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+      "new_factors": {
+        "xg_xga": {
+          "status": "unavailable",
+          "notes": "Ne postoji potvrđena FairXG prognoza niti nezavisno potvrđena istorijska xG/xGA serija."
+        },
+        "injuries_suspensions": {
+          "status": "unavailable",
+          "notes": "Aktuelni sastavi i pojedinačne povrede nisu potvrđeni službenim izvorom; Boca i Independiente Rivadavia igraju osminu finala Clausure."
+        },
+        "expected_lineups": {
+          "status": "unavailable",
+          "notes": "Postoje medijske prognoze sastava, ali službena početna postava nije potvrđena."
+        },
+        "h2h": {
+          "status": "unavailable",
+          "notes": "Za ovaj konkretan par nije potvrđen reprezentativan uzorak do pet nedavnih međusobnih duela; ne izmišljati rezultate."
+        },
+        "motivation_table": {
+          "status": "verified",
+          "notes": "Eliminaciona faza argentinskog Torneo Clausura; domaćin Boca na La Bomboneri.",
+          "source_url": "https://www.tycsports.com/liga-profesional-de-futbol/argentina-torneo-clausura-2026-boca-juniors-vs-independiente-riv-m-llave-8-id772707.html"
+        },
+        "rest_schedule": {
+          "status": "verified",
+          "notes": "Posljednji poznati završeni meč iz Historia: domaćin 2026-11-07T20:30, gost 2026-11-07T18:00 UTC; mogući dodatni nastupi/rotacije nisu potvrđeni.",
+          "source_url": "https://github.com/shikithe/Slavojka/blob/main/shared/agent/history-h2h.json"
+        },
+        "quote_source": {
+          "status": "unavailable",
+          "notes": "Identitet meča provjeren po datumu/takmičenju/domaćinu/gostu. ListaSix snapshot tržišta 1: 1.62. Aktuelna konačna cijena kod kladionice nije nezavisno potvrđena; dostupna je agregatorska objava. Source timestamp TipsterArea 25.11 u 12:03, može kasniti.",
+          "source_url": "https://tipsterarea.com/match/boca-juniors-independiente-rivadavia-playoff-argentina-957017"
+        }
+      },
+      "independent_model_check": {
+        "status": "unavailable",
+        "provider": null,
+        "source_url": null,
+        "model_or_market_basis": "Nedostupno",
+        "notes": "Za 1 (Boca) izvorna matematika 54,8% pri kvoti 1,62 daje negativan EV −11,22%. FairXG isti meč nije pouzdano pronađen."
+      },
+      "market_comparison": {
+        "1": {
+          "math_probability_pct": 54.8,
+          "fairxg_probability_pct": null,
+          "final_probability_pct": 54.8,
+          "delta_pp": null,
+          "source_active_odds": 1.62,
+          "final_ev_pct": -11.22,
+          "model_disagreement": false
+        },
+        "2": {
+          "math_probability_pct": 20.1,
+          "fairxg_probability_pct": null,
+          "final_probability_pct": 20.1,
+          "delta_pp": null,
+          "source_active_odds": 5.92,
+          "final_ev_pct": 18.99,
+          "model_disagreement": false
+        },
+        "X": {
+          "math_probability_pct": 25.1,
+          "fairxg_probability_pct": null,
+          "final_probability_pct": 25.1,
+          "delta_pp": null,
+          "source_active_odds": 3.73,
+          "final_ev_pct": -6.38,
+          "model_disagreement": false
+        },
+        "3+": {
+          "math_probability_pct": 44.2,
+          "fairxg_probability_pct": null,
+          "final_probability_pct": 44.2,
+          "delta_pp": null,
+          "source_active_odds": 2.23,
+          "final_ev_pct": -1.43,
+          "model_disagreement": false
+        },
+        "GG": {
+          "math_probability_pct": 45.7,
+          "fairxg_probability_pct": null,
+          "final_probability_pct": 45.7,
+          "delta_pp": null,
+          "source_active_odds": 2.15,
+          "final_ev_pct": -1.74,
+          "model_disagreement": false
+        },
+        "NG": {
+          "math_probability_pct": 54.3,
+          "fairxg_probability_pct": null,
+          "final_probability_pct": 54.3,
+          "delta_pp": null,
+          "source_active_odds": 1.63,
+          "final_ev_pct": -11.49,
+          "model_disagreement": false
+        }
+      },
+      "selected_market_final": {
+        "math_probability_pct": 54.8,
+        "fairxg_probability_pct": null,
+        "final_probability_pct": 54.8,
+        "delta_pp": null,
+        "source_active_odds": 1.62,
+        "final_ev_pct": -11.22,
+        "model_disagreement": false,
+        "real_quoted_odds": 1.62
+      },
+      "ai_research_notes": "Za 1 (Boca) izvorna matematika 54,8% pri kvoti 1,62 daje negativan EV −11,22%. FairXG isti meč nije pouzdano pronađen.",
+      "valid_for_ticket_A": false,
+      "valid_for_ticket_B": false
+    }
+  ],
+  "proposed_tickets": {
+    "A": {
+      "id": "A",
+      "combined_odds": 2.6019,
+      "matches": [
+        {
+          "fixture_id": "espn:football:uefa.champions:401915374",
+          "match": "Paris Saint-Germain - AS Roma",
+          "pick": "GG",
+          "odd": 1.47,
+          "source_url": "https://tipsterarea.com/match/paris-saint-germain-roma-champions-league-group-stage-956879",
+          "bookmaker": "1xBet"
+        },
+        {
+          "fixture_id": "espn:football:uefa.champions:401915378",
+          "match": "Sabah FK - Barcelona",
+          "pick": "GG",
+          "odd": 1.77,
+          "source_url": "https://tipsterarea.com/match/sabah-baku-barcelona-champions-league-group-stage-956873",
+          "bookmaker": "1xBet"
+        }
+      ],
+      "publication_allowed": true
+    },
+    "B": null
+  },
+  "b_blocker": "Samo Shakhtar–Fenerbahçe 3+ zadovoljava A/B matematički minimum za tiket B; nema drugog 3+ među najbolje rangiranim tržištima s pozitivnim konzervativnim EV; jedna kvota 1,81 ne daje ciljanih ukupno 2–3. Ne mijenjati ni spuštati uslove na silu.",
+  "market_math_warning": "p_final=(p_math+p_fairxg)/2 po tržištu; FairXG djelimično preuzima tržišne kvote, oba modela nisu dokazano kalibrisana. Procijenjeni EV nije garancija. Stvarne ponude su javne agregatorske kvote uz posljednju objavljenu satnicu, ne garantovana cijena u kladioničarskom računu.",
+  "publication_allowed": false,
+  "ai_approval_requires_separate_publisher_contract": true
+}
