@@ -1,0 +1,406 @@
+{
+  "date": "2026-11-25",
+  "feed_generated_at_utc": "2026-11-25T08:35:03.665760+00:00",
+  "source": "AI or TipsterArea verified public prices",
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:uefa.champions:401915373",
+      "league": "uefa.champions",
+      "home": "Sporting CP",
+      "away": "Manchester United",
+      "start_utc": "2026-11-25T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.56,
+          "draw": 3.78,
+          "away": 2.78
+        },
+        "3+": {
+          "over": 1.56
+        },
+        "BTTS": {
+          "yes": 1.44,
+          "no": 2.62
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/sporting-cp-manchester-united-champions-league-group-stage-956881"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/sporting-cp-manchester-united-champions-league-group-stage-956881",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/sporting-cp-manchester-united-champions-league-group-stage-956881",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/sporting-cp-manchester-united-champions-league-group-stage-956881",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/sporting-cp-manchester-united-champions-league-group-stage-956881",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/sporting-cp-manchester-united-champions-league-group-stage-956881",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/sporting-cp-manchester-united-champions-league-group-stage-956881",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401933757",
+      "league": "arg.1",
+      "home": "Boca Juniors",
+      "away": "Independiente Rivadavia",
+      "start_utc": "2026-11-26T00:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.62,
+          "draw": 3.73,
+          "away": 5.92
+        },
+        "3+": {
+          "over": 2.23
+        },
+        "BTTS": {
+          "yes": 2.15,
+          "no": 1.63
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/boca-juniors-independiente-rivadavia-playoff-argentina-957017"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/boca-juniors-independiente-rivadavia-playoff-argentina-957017",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/boca-juniors-independiente-rivadavia-playoff-argentina-957017",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/boca-juniors-independiente-rivadavia-playoff-argentina-957017",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/boca-juniors-independiente-rivadavia-playoff-argentina-957017",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/boca-juniors-independiente-rivadavia-playoff-argentina-957017",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/boca-juniors-independiente-rivadavia-playoff-argentina-957017",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915293",
+      "league": "uefa.champions",
+      "home": "Slavia Prague",
+      "away": "Villarreal",
+      "start_utc": "2026-11-25T17:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 3.1,
+          "draw": 4.09,
+          "away": 2.23
+        },
+        "3+": {
+          "over": 1.47
+        },
+        "BTTS": {
+          "yes": 1.41,
+          "no": 2.73
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/slavia-prague-villarreal-champions-league-group-stage-956874"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/slavia-prague-villarreal-champions-league-group-stage-956874",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/slavia-prague-villarreal-champions-league-group-stage-956874",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/slavia-prague-villarreal-champions-league-group-stage-956874",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/slavia-prague-villarreal-champions-league-group-stage-956874",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/slavia-prague-villarreal-champions-league-group-stage-956874",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/slavia-prague-villarreal-champions-league-group-stage-956874",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915292",
+      "league": "uefa.champions",
+      "home": "Club Brugge",
+      "away": "Liverpool",
+      "start_utc": "2026-11-25T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 4.73,
+          "draw": 4.68,
+          "away": 1.7
+        },
+        "3+": {
+          "over": 1.32
+        },
+        "BTTS": {
+          "yes": 1.34,
+          "no": 3.04
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/club-brugge-liverpool-champions-league-group-stage-956876"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/club-brugge-liverpool-champions-league-group-stage-956876",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/club-brugge-liverpool-champions-league-group-stage-956876",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/club-brugge-liverpool-champions-league-group-stage-956876",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/club-brugge-liverpool-champions-league-group-stage-956876",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/club-brugge-liverpool-champions-league-group-stage-956876",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/club-brugge-liverpool-champions-league-group-stage-956876",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915376",
+      "league": "uefa.champions",
+      "home": "Internazionale",
+      "away": "VfB Stuttgart",
+      "start_utc": "2026-11-25T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.44,
+          "draw": 5.74,
+          "away": 6.75
+        },
+        "3+": {
+          "over": 1.23
+        },
+        "BTTS": {
+          "yes": 1.36,
+          "no": 2.94
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/inter-stuttgart-champions-league-group-stage-956877"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/inter-stuttgart-champions-league-group-stage-956877",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/inter-stuttgart-champions-league-group-stage-956877",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/inter-stuttgart-champions-league-group-stage-956877",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/inter-stuttgart-champions-league-group-stage-956877",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/inter-stuttgart-champions-league-group-stage-956877",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/inter-stuttgart-champions-league-group-stage-956877",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915374",
+      "league": "uefa.champions",
+      "home": "Paris Saint-Germain",
+      "away": "AS Roma",
+      "start_utc": "2026-11-25T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.49,
+          "draw": 5.33,
+          "away": 6.34
+        },
+        "3+": {
+          "over": 1.33
+        },
+        "BTTS": {
+          "yes": 1.43,
+          "no": 2.66
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/paris-saint-germain-roma-champions-league-group-stage-956879"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/paris-saint-germain-roma-champions-league-group-stage-956879",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/paris-saint-germain-roma-champions-league-group-stage-956879",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/paris-saint-germain-roma-champions-league-group-stage-956879",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/paris-saint-germain-roma-champions-league-group-stage-956879",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/paris-saint-germain-roma-champions-league-group-stage-956879",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/paris-saint-germain-roma-champions-league-group-stage-956879",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915375",
+      "league": "uefa.champions",
+      "home": "Shakhtar Donetsk",
+      "away": "Fenerbahce",
+      "start_utc": "2026-11-25T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.96,
+          "draw": 3.62,
+          "away": 2.5
+        },
+        "3+": {
+          "over": 1.81
+        },
+        "BTTS": {
+          "yes": 1.57,
+          "no": 2.28
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/shakhtar-donetsk-fenerbahce-champions-league-group-stage-956880"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/shakhtar-donetsk-fenerbahce-champions-league-group-stage-956880",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/shakhtar-donetsk-fenerbahce-champions-league-group-stage-956880",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/shakhtar-donetsk-fenerbahce-champions-league-group-stage-956880",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/shakhtar-donetsk-fenerbahce-champions-league-group-stage-956880",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/shakhtar-donetsk-fenerbahce-champions-league-group-stage-956880",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/shakhtar-donetsk-fenerbahce-champions-league-group-stage-956880",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    }
+  ]
+}

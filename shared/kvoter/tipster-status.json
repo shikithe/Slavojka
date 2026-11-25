@@ -1,13 +1,18 @@
 {
-  "date": "2026-11-24",
-  "generated_at_utc": "2026-11-24T10:10:15.804612+00:00",
+  "date": "2026-11-25",
+  "generated_at_utc": "2026-11-25T08:35:25.576398+00:00",
   "matching_pass": "secondary_exact_canonical",
-  "espn": 13,
-  "daily_tipster_links": 202,
-  "paired": 13,
-  "pages_checked": 9,
-  "updated": 9,
-  "with_any_quotes": 13,
-  "unpaired": [],
+  "espn": 11,
+  "daily_tipster_links": 165,
+  "paired": 7,
+  "pages_checked": 5,
+  "updated": 5,
+  "with_any_quotes": 7,
+  "unpaired": [
+    "Sabah FK - Barcelona",
+    "Atlético Madrid - Viking FK",
+    "Lille - Bayern Munich",
+    "Atlético-MG - Corinthians"
+  ],
   "failures": []
 }
