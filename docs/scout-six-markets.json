@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
-  "date": "2026-11-24",
-  "generated_at_utc": "2026-11-24T19:28:14.532942+00:00",
-  "source_feed_generated_at_utc": "2026-11-24T08:45:37.248469+00:00",
-  "source_active_sha256": "06d5a5ce4ce296405919a3ed286a6926baab48bdf3c901e3e58022467492081b",
-  "source_history_sha256": "f6e0966947162202e5761c47de12f531afd8fedf33aa20791f806e6bbb9a10d4",
+  "date": "2026-11-25",
+  "generated_at_utc": "2026-11-25T08:35:51.434063+00:00",
+  "source_feed_generated_at_utc": "2026-11-25T08:35:03.665760+00:00",
+  "source_active_sha256": "20bc052760ca879b7ccc4872076405f153ae5939488ba6841b37e557523a3d4d",
+  "source_history_sha256": "00c51aaf4c5facbeb4bb13b2a63450938f10289e9063512af4663d504e493f61",
   "model": "Poisson 6/6 + market-anchored adjusted probabilities + conservative EV + sample-quality index across six markets",
   "history_status": "available",
   "history_missing": false,
@@ -22,56 +22,56 @@
     "GG",
     "NG"
   ],
-  "total_espn_fixtures": 13,
-  "total_market_probabilities": 78,
-  "all_fixtures_evaluated": 13,
-  "all_six_odds_present": 13,
-  "candidate_A_count": 5,
-  "candidate_B_count": 2,
+  "total_espn_fixtures": 11,
+  "total_market_probabilities": 66,
+  "all_fixtures_evaluated": 11,
+  "all_six_odds_present": 7,
+  "candidate_A_count": 3,
+  "candidate_B_count": 1,
   "ranked_fixtures": [
     {
-      "fixture_id": "espn:football:uefa.champions:401915299",
+      "fixture_id": "espn:football:uefa.champions:401915373",
       "league": "uefa.champions",
-      "match": "RB Leipzig - Lens",
-      "datetime": "2026-11-24T20:00:00Z",
+      "match": "Sporting CP - Manchester United",
+      "datetime": "2026-11-25T20:00:00Z",
       "probability_pct": {
-        "1": 59.1,
-        "X": 17.9,
-        "2": 23.0,
-        "3+": 80.5,
-        "GG": 75.3,
-        "NG": 24.7
+        "1": 63.6,
+        "X": 19.8,
+        "2": 16.6,
+        "3+": 61.1,
+        "GG": 56.0,
+        "NG": 44.0
       },
       "odds": {
-        "1": 1.44,
-        "X": 5.75,
-        "2": 6.83,
-        "3+": 1.31,
-        "GG": 1.45,
-        "NG": 2.59
+        "1": 2.56,
+        "X": 3.78,
+        "2": 2.78,
+        "3+": 1.56,
+        "GG": 1.44,
+        "NG": 2.62
       },
-      "strongest_market": "3+",
-      "strongest_pct": 80.5,
-      "second_market": "GG",
-      "second_pct": 75.3,
-      "third_pct": 59.1,
-      "strongest_odds": 1.31,
-      "strongest_implied_pct": 76.3,
+      "strongest_market": "1",
+      "strongest_pct": 63.6,
+      "second_market": "3+",
+      "second_pct": 61.1,
+      "third_pct": 56.0,
+      "strongest_odds": 2.56,
+      "strongest_implied_pct": 39.1,
       "estimated_goals": {
-        "home": 2.66,
-        "away": 1.66
+        "home": 2.15,
+        "away": 1.0
       },
       "evidence": {
         "home_last_matches": 5,
         "away_last_matches": 5,
-        "league_unique_result_matches": 14,
+        "league_unique_result_matches": 20,
         "used_xg": false,
         "lineups_checked": false,
         "injuries_checked": false,
         "h2h_checked": false
       },
       "candidate_A": true,
-      "candidate_B": true,
+      "candidate_B": false,
       "history_evidence_complete": true,
       "confidence": "normal",
       "requires_independent_ai_review": true,
@@ -79,209 +79,77 @@
       "limitations": [],
       "market_value": {
         "1": {
-          "raw_probability_pct": 59.1,
+          "raw_probability_pct": 63.6,
+          "odds": 2.56,
+          "implied_probability_pct": 39.06,
+          "adjusted_probability_pct": 52.5,
+          "raw_ev_pct": 62.82,
+          "conservative_ev_pct": 34.41,
+          "score": 43.17
+        },
+        "X": {
+          "raw_probability_pct": 19.8,
+          "odds": 3.78,
+          "implied_probability_pct": 26.46,
+          "adjusted_probability_pct": 22.81,
+          "raw_ev_pct": -25.16,
+          "conservative_ev_pct": -13.78,
+          "score": 11.871
+        },
+        "2": {
+          "raw_probability_pct": 16.6,
+          "odds": 2.78,
+          "implied_probability_pct": 35.97,
+          "adjusted_probability_pct": 25.36,
+          "raw_ev_pct": -53.85,
+          "conservative_ev_pct": -29.5,
+          "score": 8.118
+        },
+        "3+": {
+          "raw_probability_pct": 61.1,
+          "odds": 1.56,
+          "implied_probability_pct": 64.1,
+          "adjusted_probability_pct": 62.46,
+          "raw_ev_pct": -4.68,
+          "conservative_ev_pct": -2.57,
+          "score": 33.346
+        },
+        "GG": {
+          "raw_probability_pct": 56.0,
           "odds": 1.44,
           "implied_probability_pct": 69.44,
-          "adjusted_probability_pct": 64.92,
-          "raw_ev_pct": -14.9,
-          "conservative_ev_pct": -6.51,
-          "score": 31.025
-        },
-        "X": {
-          "raw_probability_pct": 17.9,
-          "odds": 5.75,
-          "implied_probability_pct": 17.39,
-          "adjusted_probability_pct": 17.61,
-          "raw_ev_pct": 2.92,
-          "conservative_ev_pct": 1.28,
-          "score": 14.506
-        },
-        "2": {
-          "raw_probability_pct": 23.0,
-          "odds": 6.83,
-          "implied_probability_pct": 14.64,
-          "adjusted_probability_pct": 18.3,
-          "raw_ev_pct": 57.09,
-          "conservative_ev_pct": 24.96,
-          "score": 24.976
-        },
-        "3+": {
-          "raw_probability_pct": 80.5,
-          "odds": 1.31,
-          "implied_probability_pct": 76.34,
-          "adjusted_probability_pct": 78.16,
-          "raw_ev_pct": 5.45,
-          "conservative_ev_pct": 2.39,
-          "score": 40.41
-        },
-        "GG": {
-          "raw_probability_pct": 75.3,
-          "odds": 1.45,
-          "implied_probability_pct": 68.97,
-          "adjusted_probability_pct": 71.74,
-          "raw_ev_pct": 9.18,
-          "conservative_ev_pct": 4.02,
-          "score": 38.414
+          "adjusted_probability_pct": 62.08,
+          "raw_ev_pct": -19.36,
+          "conservative_ev_pct": -10.61,
+          "score": 29.73
         },
         "NG": {
-          "raw_probability_pct": 24.7,
-          "odds": 2.59,
-          "implied_probability_pct": 38.61,
-          "adjusted_probability_pct": 32.53,
-          "raw_ev_pct": -36.03,
-          "conservative_ev_pct": -15.75,
-          "score": 13.447
+          "raw_probability_pct": 44.0,
+          "odds": 2.62,
+          "implied_probability_pct": 38.17,
+          "adjusted_probability_pct": 41.36,
+          "raw_ev_pct": 15.28,
+          "conservative_ev_pct": 8.37,
+          "score": 29.189
         }
       },
-      "data_quality_index_pct": 43.7,
+      "data_quality_index_pct": 54.8,
       "data_quality_factors": {
         "home_last_matches": 5,
         "away_last_matches": 5,
         "home_home_games": 3,
-        "away_away_games": 1,
-        "league_games": 14,
-        "goal_variance": 7.76
-      },
-      "recommended_market": "3+",
-      "recommended_pct": 80.5,
-      "recommended_odds": 1.31,
-      "recommended_score": 40.41,
-      "recommended_adjusted_pct": 78.16,
-      "recommended_ev_pct": 2.39,
-      "value_runner_up_market": "GG",
-      "value_runner_up_score": 38.414,
-      "b_market_rank": 1,
-      "b_market": "3+",
-      "b_odds": 1.31,
-      "b_probability_pct": 80.5,
-      "b_adjusted_probability_pct": 78.16,
-      "b_conservative_ev_pct": 2.39,
-      "b_score": 40.41,
-      "value_limitations": []
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915300",
-      "league": "uefa.champions",
-      "match": "Galatasaray - Aston Villa",
-      "datetime": "2026-11-24T17:45:00Z",
-      "probability_pct": {
-        "1": 59.0,
-        "X": 19.9,
-        "2": 21.1,
-        "3+": 68.0,
-        "GG": 64.3,
-        "NG": 35.7
-      },
-      "odds": {
-        "1": 3.01,
-        "X": 3.98,
-        "2": 2.32,
-        "3+": 1.37,
-        "GG": 1.31,
-        "NG": 3.2
-      },
-      "strongest_market": "3+",
-      "strongest_pct": 68.0,
-      "second_market": "GG",
-      "second_pct": 64.3,
-      "third_pct": 59.0,
-      "strongest_odds": 1.37,
-      "strongest_implied_pct": 73.0,
-      "estimated_goals": {
-        "home": 2.23,
-        "away": 1.27
-      },
-      "evidence": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "league_unique_result_matches": 14,
-        "used_xg": false,
-        "lineups_checked": false,
-        "injuries_checked": false,
-        "h2h_checked": false
-      },
-      "candidate_A": false,
-      "candidate_B": false,
-      "history_evidence_complete": true,
-      "confidence": "normal",
-      "requires_independent_ai_review": true,
-      "needs_independent_ai_review": true,
-      "limitations": [
-        "Started or less than 20 minutes to kickoff; exclude from new tickets"
-      ],
-      "market_value": {
-        "1": {
-          "raw_probability_pct": 59.0,
-          "odds": 3.01,
-          "implied_probability_pct": 33.22,
-          "adjusted_probability_pct": 46.7,
-          "raw_ev_pct": 77.59,
-          "conservative_ev_pct": 40.56,
-          "score": 40.354
-        },
-        "X": {
-          "raw_probability_pct": 19.9,
-          "odds": 3.98,
-          "implied_probability_pct": 25.13,
-          "adjusted_probability_pct": 22.39,
-          "raw_ev_pct": -20.8,
-          "conservative_ev_pct": -10.87,
-          "score": 12.572
-        },
-        "2": {
-          "raw_probability_pct": 21.1,
-          "odds": 2.32,
-          "implied_probability_pct": 43.1,
-          "adjusted_probability_pct": 31.6,
-          "raw_ev_pct": -51.05,
-          "conservative_ev_pct": -26.68,
-          "score": 10.364
-        },
-        "3+": {
-          "raw_probability_pct": 68.0,
-          "odds": 1.37,
-          "implied_probability_pct": 72.99,
-          "adjusted_probability_pct": 70.38,
-          "raw_ev_pct": -6.84,
-          "conservative_ev_pct": -3.58,
-          "score": 35.864
-        },
-        "GG": {
-          "raw_probability_pct": 64.3,
-          "odds": 1.31,
-          "implied_probability_pct": 76.34,
-          "adjusted_probability_pct": 70.04,
-          "raw_ev_pct": -15.77,
-          "conservative_ev_pct": -8.24,
-          "score": 33.716
-        },
-        "NG": {
-          "raw_probability_pct": 35.7,
-          "odds": 3.2,
-          "implied_probability_pct": 31.25,
-          "adjusted_probability_pct": 33.58,
-          "raw_ev_pct": 14.24,
-          "conservative_ev_pct": 7.44,
-          "score": 25.144
-        }
-      },
-      "data_quality_index_pct": 52.3,
-      "data_quality_factors": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "home_home_games": 4,
-        "away_away_games": 3,
-        "league_games": 14,
-        "goal_variance": 4.96
+        "away_away_games": 2,
+        "league_games": 20,
+        "goal_variance": 2.8
       },
       "recommended_market": "1",
-      "recommended_pct": 59.0,
-      "recommended_odds": 3.01,
-      "recommended_score": 40.354,
-      "recommended_adjusted_pct": 46.7,
-      "recommended_ev_pct": 40.56,
+      "recommended_pct": 63.6,
+      "recommended_odds": 2.56,
+      "recommended_score": 43.17,
+      "recommended_adjusted_pct": 52.5,
+      "recommended_ev_pct": 34.41,
       "value_runner_up_market": "3+",
-      "value_runner_up_score": 35.864,
+      "value_runner_up_score": 33.346,
       "b_market_rank": 2,
       "b_market": null,
       "b_odds": null,
@@ -289,47 +157,44 @@
       "b_adjusted_probability_pct": null,
       "b_conservative_ev_pct": null,
       "b_score": null,
-      "value_limitations": [
-        "Chosen market odds 3+ prevents a 2–3 multi-leg ticket",
-        "Kickoff already started or within twenty minutes"
-      ]
+      "value_limitations": []
     },
     {
-      "fixture_id": "espn:football:sco.1:401878345",
-      "league": "sco.1",
-      "match": "Rangers - Aberdeen",
-      "datetime": "2026-11-24T20:00:00Z",
+      "fixture_id": "espn:football:uefa.champions:401915374",
+      "league": "uefa.champions",
+      "match": "Paris Saint-Germain - AS Roma",
+      "datetime": "2026-11-25T20:00:00Z",
       "probability_pct": {
-        "1": 47.6,
-        "X": 21.6,
-        "2": 30.8,
-        "3+": 69.3,
-        "GG": 68.6,
-        "NG": 31.4
+        "1": 41.5,
+        "X": 21.0,
+        "2": 37.5,
+        "3+": 74.7,
+        "GG": 73.5,
+        "NG": 26.5
       },
       "odds": {
-        "1": 1.23,
-        "X": 6.0,
-        "2": 11.0,
-        "3+": 1.36,
-        "GG": 1.82,
-        "NG": 1.88
+        "1": 1.49,
+        "X": 5.33,
+        "2": 6.34,
+        "3+": 1.33,
+        "GG": 1.43,
+        "NG": 2.66
       },
       "strongest_market": "3+",
-      "strongest_pct": 69.3,
+      "strongest_pct": 74.7,
       "second_market": "GG",
-      "second_pct": 68.6,
-      "third_pct": 47.6,
-      "strongest_odds": 1.36,
-      "strongest_implied_pct": 73.5,
+      "second_pct": 73.5,
+      "third_pct": 41.5,
+      "strongest_odds": 1.33,
+      "strongest_implied_pct": 75.2,
       "estimated_goals": {
         "home": 2.0,
-        "away": 1.58
+        "away": 1.9
       },
       "evidence": {
         "home_last_matches": 5,
         "away_last_matches": 5,
-        "league_unique_result_matches": 18,
+        "league_unique_result_matches": 20,
         "used_xg": false,
         "lineups_checked": false,
         "injuries_checked": false,
@@ -344,77 +209,77 @@
       "limitations": [],
       "market_value": {
         "1": {
-          "raw_probability_pct": 47.6,
-          "odds": 1.23,
-          "implied_probability_pct": 81.3,
-          "adjusted_probability_pct": 63.71,
-          "raw_ev_pct": -41.45,
-          "conservative_ev_pct": -21.64,
-          "score": 25.283
+          "raw_probability_pct": 41.5,
+          "odds": 1.49,
+          "implied_probability_pct": 67.11,
+          "adjusted_probability_pct": 53.22,
+          "raw_ev_pct": -38.16,
+          "conservative_ev_pct": -20.71,
+          "score": 21.585
         },
         "X": {
-          "raw_probability_pct": 21.6,
-          "odds": 6.0,
-          "implied_probability_pct": 16.67,
-          "adjusted_probability_pct": 19.24,
-          "raw_ev_pct": 29.6,
-          "conservative_ev_pct": 15.45,
-          "score": 22.557
+          "raw_probability_pct": 21.0,
+          "odds": 5.33,
+          "implied_probability_pct": 18.76,
+          "adjusted_probability_pct": 19.98,
+          "raw_ev_pct": 11.93,
+          "conservative_ev_pct": 6.47,
+          "score": 19.313
         },
         "2": {
-          "raw_probability_pct": 30.8,
-          "odds": 11.0,
-          "implied_probability_pct": 9.09,
-          "adjusted_probability_pct": 20.42,
-          "raw_ev_pct": 238.8,
-          "conservative_ev_pct": 124.67,
-          "score": 29.309
+          "raw_probability_pct": 37.5,
+          "odds": 6.34,
+          "implied_probability_pct": 15.77,
+          "adjusted_probability_pct": 27.56,
+          "raw_ev_pct": 137.75,
+          "conservative_ev_pct": 74.75,
+          "score": 32.616
         },
         "3+": {
-          "raw_probability_pct": 69.3,
-          "odds": 1.36,
-          "implied_probability_pct": 73.53,
-          "adjusted_probability_pct": 71.32,
-          "raw_ev_pct": -5.75,
-          "conservative_ev_pct": -3.0,
-          "score": 36.495
+          "raw_probability_pct": 74.7,
+          "odds": 1.33,
+          "implied_probability_pct": 75.19,
+          "adjusted_probability_pct": 74.92,
+          "raw_ev_pct": -0.65,
+          "conservative_ev_pct": -0.35,
+          "score": 39.456
         },
         "GG": {
-          "raw_probability_pct": 68.6,
-          "odds": 1.82,
-          "implied_probability_pct": 54.95,
-          "adjusted_probability_pct": 62.07,
-          "raw_ev_pct": 24.85,
-          "conservative_ev_pct": 12.97,
-          "score": 39.48
+          "raw_probability_pct": 73.5,
+          "odds": 1.43,
+          "implied_probability_pct": 69.93,
+          "adjusted_probability_pct": 71.87,
+          "raw_ev_pct": 5.1,
+          "conservative_ev_pct": 2.77,
+          "score": 39.515
         },
         "NG": {
-          "raw_probability_pct": 31.4,
-          "odds": 1.88,
-          "implied_probability_pct": 53.19,
-          "adjusted_probability_pct": 41.82,
-          "raw_ev_pct": -40.97,
-          "conservative_ev_pct": -21.39,
-          "score": 16.197
+          "raw_probability_pct": 26.5,
+          "odds": 2.66,
+          "implied_probability_pct": 37.59,
+          "adjusted_probability_pct": 31.57,
+          "raw_ev_pct": -29.51,
+          "conservative_ev_pct": -16.01,
+          "score": 14.515
         }
       },
-      "data_quality_index_pct": 52.2,
+      "data_quality_index_pct": 54.3,
       "data_quality_factors": {
         "home_last_matches": 5,
         "away_last_matches": 5,
-        "home_home_games": 1,
-        "away_away_games": 2,
-        "league_games": 18,
-        "goal_variance": 1.72
+        "home_home_games": 2,
+        "away_away_games": 3,
+        "league_games": 20,
+        "goal_variance": 3.12
       },
       "recommended_market": "GG",
-      "recommended_pct": 68.6,
-      "recommended_odds": 1.82,
-      "recommended_score": 39.48,
-      "recommended_adjusted_pct": 62.07,
-      "recommended_ev_pct": 12.97,
+      "recommended_pct": 73.5,
+      "recommended_odds": 1.43,
+      "recommended_score": 39.515,
+      "recommended_adjusted_pct": 71.87,
+      "recommended_ev_pct": 2.77,
       "value_runner_up_market": "3+",
-      "value_runner_up_score": 36.495,
+      "value_runner_up_score": 39.456,
       "b_market_rank": 2,
       "b_market": null,
       "b_odds": null,
@@ -425,437 +290,41 @@
       "value_limitations": []
     },
     {
-      "fixture_id": "espn:football:uefa.champions:401915298",
+      "fixture_id": "espn:football:uefa.champions:401915292",
       "league": "uefa.champions",
-      "match": "Real Madrid - PSV Eindhoven",
-      "datetime": "2026-11-24T20:00:00Z",
+      "match": "Club Brugge - Liverpool",
+      "datetime": "2026-11-25T20:00:00Z",
       "probability_pct": {
-        "1": 36.3,
-        "X": 21.2,
-        "2": 42.5,
-        "3+": 73.4,
-        "GG": 72.5,
-        "NG": 27.5
+        "1": 43.5,
+        "X": 22.2,
+        "2": 34.3,
+        "3+": 67.8,
+        "GG": 68.0,
+        "NG": 32.0
       },
       "odds": {
-        "1": 1.19,
-        "X": 9.25,
-        "2": 14.8,
-        "3+": 1.16,
-        "GG": 1.52,
-        "NG": 2.4
-      },
-      "strongest_market": "3+",
-      "strongest_pct": 73.4,
-      "second_market": "GG",
-      "second_pct": 72.5,
-      "third_pct": 42.5,
-      "strongest_odds": 1.16,
-      "strongest_implied_pct": 86.2,
-      "estimated_goals": {
-        "home": 1.83,
-        "away": 1.99
-      },
-      "evidence": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "league_unique_result_matches": 14,
-        "used_xg": false,
-        "lineups_checked": false,
-        "injuries_checked": false,
-        "h2h_checked": false
-      },
-      "candidate_A": true,
-      "candidate_B": false,
-      "history_evidence_complete": true,
-      "confidence": "normal",
-      "requires_independent_ai_review": true,
-      "needs_independent_ai_review": true,
-      "limitations": [],
-      "market_value": {
-        "1": {
-          "raw_probability_pct": 36.3,
-          "odds": 1.19,
-          "implied_probability_pct": 84.03,
-          "adjusted_probability_pct": 59.96,
-          "raw_ev_pct": -56.8,
-          "conservative_ev_pct": -28.65,
-          "score": 21.998
-        },
-        "X": {
-          "raw_probability_pct": 21.2,
-          "odds": 9.25,
-          "implied_probability_pct": 10.81,
-          "adjusted_probability_pct": 16.05,
-          "raw_ev_pct": 96.1,
-          "conservative_ev_pct": 48.47,
-          "score": 27.206
-        },
-        "2": {
-          "raw_probability_pct": 42.5,
-          "odds": 14.8,
-          "implied_probability_pct": 6.76,
-          "adjusted_probability_pct": 24.78,
-          "raw_ev_pct": 529.0,
-          "conservative_ev_pct": 266.79,
-          "score": 30.874
-        },
-        "3+": {
-          "raw_probability_pct": 73.4,
-          "odds": 1.16,
-          "implied_probability_pct": 86.21,
-          "adjusted_probability_pct": 79.75,
-          "raw_ev_pct": -14.86,
-          "conservative_ev_pct": -7.49,
-          "score": 37.837
-        },
-        "GG": {
-          "raw_probability_pct": 72.5,
-          "odds": 1.52,
-          "implied_probability_pct": 65.79,
-          "adjusted_probability_pct": 69.17,
-          "raw_ev_pct": 10.2,
-          "conservative_ev_pct": 5.14,
-          "score": 38.83
-        },
-        "NG": {
-          "raw_probability_pct": 27.5,
-          "odds": 2.4,
-          "implied_probability_pct": 41.67,
-          "adjusted_probability_pct": 34.52,
-          "raw_ev_pct": -34.0,
-          "conservative_ev_pct": -17.15,
-          "score": 14.691
-        }
-      },
-      "data_quality_index_pct": 50.4,
-      "data_quality_factors": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "home_home_games": 1,
-        "away_away_games": 2,
-        "league_games": 14,
-        "goal_variance": 2.4
-      },
-      "recommended_market": "GG",
-      "recommended_pct": 72.5,
-      "recommended_odds": 1.52,
-      "recommended_score": 38.83,
-      "recommended_adjusted_pct": 69.17,
-      "recommended_ev_pct": 5.14,
-      "value_runner_up_market": "3+",
-      "value_runner_up_score": 37.837,
-      "b_market_rank": 2,
-      "b_market": null,
-      "b_odds": null,
-      "b_probability_pct": null,
-      "b_adjusted_probability_pct": null,
-      "b_conservative_ev_pct": null,
-      "b_score": null,
-      "value_limitations": []
-    },
-    {
-      "fixture_id": "espn:football:sco.1:401878348",
-      "league": "sco.1",
-      "match": "Hibernian - Dundee",
-      "datetime": "2026-11-24T19:45:00Z",
-      "probability_pct": {
-        "1": 42.3,
-        "X": 22.1,
-        "2": 35.6,
-        "3+": 68.3,
-        "GG": 68.4,
-        "NG": 31.6
-      },
-      "odds": {
-        "1": 1.62,
-        "X": 4.1,
-        "2": 4.79,
-        "3+": 1.63,
-        "GG": 1.65,
-        "NG": 2.11
+        "1": 4.73,
+        "X": 4.68,
+        "2": 1.7,
+        "3+": 1.32,
+        "GG": 1.34,
+        "NG": 3.04
       },
       "strongest_market": "GG",
-      "strongest_pct": 68.4,
+      "strongest_pct": 68.0,
       "second_market": "3+",
-      "second_pct": 68.3,
-      "third_pct": 42.3,
-      "strongest_odds": 1.65,
-      "strongest_implied_pct": 60.6,
+      "second_pct": 67.8,
+      "third_pct": 43.5,
+      "strongest_odds": 1.34,
+      "strongest_implied_pct": 74.6,
       "estimated_goals": {
-        "home": 1.84,
-        "away": 1.68
+        "home": 1.86,
+        "away": 1.64
       },
       "evidence": {
         "home_last_matches": 5,
         "away_last_matches": 5,
-        "league_unique_result_matches": 18,
-        "used_xg": false,
-        "lineups_checked": false,
-        "injuries_checked": false,
-        "h2h_checked": false
-      },
-      "candidate_A": false,
-      "candidate_B": false,
-      "history_evidence_complete": true,
-      "confidence": "normal",
-      "requires_independent_ai_review": true,
-      "needs_independent_ai_review": true,
-      "limitations": [
-        "Started or less than 20 minutes to kickoff; exclude from new tickets"
-      ],
-      "market_value": {
-        "1": {
-          "raw_probability_pct": 42.3,
-          "odds": 1.62,
-          "implied_probability_pct": 61.73,
-          "adjusted_probability_pct": 50.9,
-          "raw_ev_pct": -31.47,
-          "conservative_ev_pct": -17.55,
-          "score": 22.194
-        },
-        "X": {
-          "raw_probability_pct": 22.1,
-          "odds": 4.1,
-          "implied_probability_pct": 24.39,
-          "adjusted_probability_pct": 23.11,
-          "raw_ev_pct": -9.39,
-          "conservative_ev_pct": -5.23,
-          "score": 15.819
-        },
-        "2": {
-          "raw_probability_pct": 35.6,
-          "odds": 4.79,
-          "implied_probability_pct": 20.88,
-          "adjusted_probability_pct": 29.08,
-          "raw_ev_pct": 70.52,
-          "conservative_ev_pct": 39.32,
-          "score": 33.478
-        },
-        "3+": {
-          "raw_probability_pct": 68.3,
-          "odds": 1.63,
-          "implied_probability_pct": 61.35,
-          "adjusted_probability_pct": 65.22,
-          "raw_ev_pct": 11.33,
-          "conservative_ev_pct": 6.32,
-          "score": 38.473
-        },
-        "GG": {
-          "raw_probability_pct": 68.4,
-          "odds": 1.65,
-          "implied_probability_pct": 60.61,
-          "adjusted_probability_pct": 64.95,
-          "raw_ev_pct": 12.86,
-          "conservative_ev_pct": 7.17,
-          "score": 38.725
-        },
-        "NG": {
-          "raw_probability_pct": 31.6,
-          "odds": 2.11,
-          "implied_probability_pct": 47.39,
-          "adjusted_probability_pct": 38.59,
-          "raw_ev_pct": -33.32,
-          "conservative_ev_pct": -18.58,
-          "score": 16.581
-        }
-      },
-      "data_quality_index_pct": 55.8,
-      "data_quality_factors": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "home_home_games": 3,
-        "away_away_games": 2,
-        "league_games": 18,
-        "goal_variance": 2.0
-      },
-      "recommended_market": "GG",
-      "recommended_pct": 68.4,
-      "recommended_odds": 1.65,
-      "recommended_score": 38.725,
-      "recommended_adjusted_pct": 64.95,
-      "recommended_ev_pct": 7.17,
-      "value_runner_up_market": "3+",
-      "value_runner_up_score": 38.473,
-      "b_market_rank": 2,
-      "b_market": null,
-      "b_odds": null,
-      "b_probability_pct": null,
-      "b_adjusted_probability_pct": null,
-      "b_conservative_ev_pct": null,
-      "b_score": null,
-      "value_limitations": [
-        "Kickoff already started or within twenty minutes"
-      ]
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915294",
-      "league": "uefa.champions",
-      "match": "Feyenoord Rotterdam - FC Porto",
-      "datetime": "2026-11-24T20:00:00Z",
-      "probability_pct": {
-        "1": 22.9,
-        "X": 21.1,
-        "2": 56.0,
-        "3+": 64.6,
-        "GG": 62.6,
-        "NG": 37.4
-      },
-      "odds": {
-        "1": 3.04,
-        "X": 3.82,
-        "2": 2.35,
-        "3+": 1.65,
-        "GG": 1.48,
-        "NG": 2.5
-      },
-      "strongest_market": "3+",
-      "strongest_pct": 64.6,
-      "second_market": "GG",
-      "second_pct": 62.6,
-      "third_pct": 56.0,
-      "strongest_odds": 1.65,
-      "strongest_implied_pct": 60.6,
-      "estimated_goals": {
-        "home": 1.26,
-        "away": 2.07
-      },
-      "evidence": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "league_unique_result_matches": 14,
-        "used_xg": false,
-        "lineups_checked": false,
-        "injuries_checked": false,
-        "h2h_checked": false
-      },
-      "candidate_A": false,
-      "candidate_B": true,
-      "history_evidence_complete": true,
-      "confidence": "normal",
-      "requires_independent_ai_review": true,
-      "needs_independent_ai_review": true,
-      "limitations": [],
-      "market_value": {
-        "1": {
-          "raw_probability_pct": 22.9,
-          "odds": 3.04,
-          "implied_probability_pct": 32.89,
-          "adjusted_probability_pct": 27.65,
-          "raw_ev_pct": -30.38,
-          "conservative_ev_pct": -15.95,
-          "score": 12.628
-        },
-        "X": {
-          "raw_probability_pct": 21.1,
-          "odds": 3.82,
-          "implied_probability_pct": 26.18,
-          "adjusted_probability_pct": 23.51,
-          "raw_ev_pct": -19.4,
-          "conservative_ev_pct": -10.18,
-          "score": 13.37
-        },
-        "2": {
-          "raw_probability_pct": 56.0,
-          "odds": 2.35,
-          "implied_probability_pct": 42.55,
-          "adjusted_probability_pct": 49.61,
-          "raw_ev_pct": 31.6,
-          "conservative_ev_pct": 16.58,
-          "score": 35.84
-        },
-        "3+": {
-          "raw_probability_pct": 64.6,
-          "odds": 1.65,
-          "implied_probability_pct": 60.61,
-          "adjusted_probability_pct": 62.7,
-          "raw_ev_pct": 6.59,
-          "conservative_ev_pct": 3.46,
-          "score": 35.695
-        },
-        "GG": {
-          "raw_probability_pct": 62.6,
-          "odds": 1.48,
-          "implied_probability_pct": 67.57,
-          "adjusted_probability_pct": 64.96,
-          "raw_ev_pct": -7.35,
-          "conservative_ev_pct": -3.86,
-          "score": 33.497
-        },
-        "NG": {
-          "raw_probability_pct": 37.4,
-          "odds": 2.5,
-          "implied_probability_pct": 40.0,
-          "adjusted_probability_pct": 38.64,
-          "raw_ev_pct": -6.5,
-          "conservative_ev_pct": -3.41,
-          "score": 22.632
-        }
-      },
-      "data_quality_index_pct": 52.5,
-      "data_quality_factors": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "home_home_games": 3,
-        "away_away_games": 2,
-        "league_games": 14,
-        "goal_variance": 3.6
-      },
-      "recommended_market": "2",
-      "recommended_pct": 56.0,
-      "recommended_odds": 2.35,
-      "recommended_score": 35.84,
-      "recommended_adjusted_pct": 49.61,
-      "recommended_ev_pct": 16.58,
-      "value_runner_up_market": "3+",
-      "value_runner_up_score": 35.695,
-      "b_market_rank": 2,
-      "b_market": "3+",
-      "b_odds": 1.65,
-      "b_probability_pct": 64.6,
-      "b_adjusted_probability_pct": 62.7,
-      "b_conservative_ev_pct": 3.46,
-      "b_score": 35.695,
-      "value_limitations": [
-        "Risk-adjusted probability below 50% for chosen market"
-      ]
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915297",
-      "league": "uefa.champions",
-      "match": "Slovan Bratislava - Real Betis",
-      "datetime": "2026-11-24T20:00:00Z",
-      "probability_pct": {
-        "1": 18.0,
-        "X": 19.3,
-        "2": 62.7,
-        "3+": 66.3,
-        "GG": 61.1,
-        "NG": 38.9
-      },
-      "odds": {
-        "1": 11.6,
-        "X": 6.9,
-        "2": 1.28,
-        "3+": 1.36,
-        "GG": 1.7,
-        "NG": 2.05
-      },
-      "strongest_market": "3+",
-      "strongest_pct": 66.3,
-      "second_market": "2",
-      "second_pct": 62.7,
-      "third_pct": 61.1,
-      "strongest_odds": 1.36,
-      "strongest_implied_pct": 73.5,
-      "estimated_goals": {
-        "home": 1.14,
-        "away": 2.27
-      },
-      "evidence": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "league_unique_result_matches": 14,
+        "league_unique_result_matches": 20,
         "used_xg": false,
         "lineups_checked": false,
         "injuries_checked": false,
@@ -870,474 +339,77 @@
       "limitations": [],
       "market_value": {
         "1": {
-          "raw_probability_pct": 18.0,
-          "odds": 11.6,
-          "implied_probability_pct": 8.62,
-          "adjusted_probability_pct": 13.84,
-          "raw_ev_pct": 108.8,
-          "conservative_ev_pct": 60.5,
-          "score": 27.052
+          "raw_probability_pct": 43.5,
+          "odds": 4.73,
+          "implied_probability_pct": 21.14,
+          "adjusted_probability_pct": 33.09,
+          "raw_ev_pct": 105.76,
+          "conservative_ev_pct": 56.51,
+          "score": 34.812
         },
         "X": {
-          "raw_probability_pct": 19.3,
-          "odds": 6.9,
-          "implied_probability_pct": 14.49,
-          "adjusted_probability_pct": 17.17,
-          "raw_ev_pct": 33.17,
-          "conservative_ev_pct": 18.44,
-          "score": 23.481
+          "raw_probability_pct": 22.2,
+          "odds": 4.68,
+          "implied_probability_pct": 21.37,
+          "adjusted_probability_pct": 21.81,
+          "raw_ev_pct": 3.9,
+          "conservative_ev_pct": 2.08,
+          "score": 18.071
         },
         "2": {
-          "raw_probability_pct": 62.7,
-          "odds": 1.28,
-          "implied_probability_pct": 78.12,
-          "adjusted_probability_pct": 69.55,
-          "raw_ev_pct": -19.74,
-          "conservative_ev_pct": -10.98,
-          "score": 32.83
-        },
-        "3+": {
-          "raw_probability_pct": 66.3,
-          "odds": 1.36,
-          "implied_probability_pct": 73.53,
-          "adjusted_probability_pct": 69.51,
-          "raw_ev_pct": -9.83,
-          "conservative_ev_pct": -5.47,
-          "score": 35.184
-        },
-        "GG": {
-          "raw_probability_pct": 61.1,
+          "raw_probability_pct": 34.3,
           "odds": 1.7,
           "implied_probability_pct": 58.82,
-          "adjusted_probability_pct": 60.09,
-          "raw_ev_pct": 3.87,
-          "conservative_ev_pct": 2.15,
-          "score": 34.503
-        },
-        "NG": {
-          "raw_probability_pct": 38.9,
-          "odds": 2.05,
-          "implied_probability_pct": 48.78,
-          "adjusted_probability_pct": 43.29,
-          "raw_ev_pct": -20.26,
-          "conservative_ev_pct": -11.26,
-          "score": 21.678
-        }
-      },
-      "data_quality_index_pct": 55.6,
-      "data_quality_factors": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "home_home_games": 1,
-        "away_away_games": 4,
-        "league_games": 14,
-        "goal_variance": 1.68
-      },
-      "recommended_market": "3+",
-      "recommended_pct": 66.3,
-      "recommended_odds": 1.36,
-      "recommended_score": 35.184,
-      "recommended_adjusted_pct": 69.51,
-      "recommended_ev_pct": -5.47,
-      "value_runner_up_market": "GG",
-      "value_runner_up_score": 34.503,
-      "b_market_rank": 1,
-      "b_market": null,
-      "b_odds": null,
-      "b_probability_pct": null,
-      "b_adjusted_probability_pct": null,
-      "b_conservative_ev_pct": null,
-      "b_score": null,
-      "value_limitations": [
-        "No positive conservative EV for chosen market"
-      ]
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915379",
-      "league": "uefa.champions",
-      "match": "Manchester City - Napoli",
-      "datetime": "2026-11-24T20:00:00Z",
-      "probability_pct": {
-        "1": 39.1,
-        "X": 24.0,
-        "2": 36.9,
-        "3+": 59.1,
-        "GG": 61.5,
-        "NG": 38.5
-      },
-      "odds": {
-        "1": 1.31,
-        "X": 6.4,
-        "2": 10.4,
-        "3+": 1.34,
-        "GG": 1.63,
-        "NG": 2.17
-      },
-      "strongest_market": "GG",
-      "strongest_pct": 61.5,
-      "second_market": "3+",
-      "second_pct": 59.1,
-      "third_pct": 39.1,
-      "strongest_odds": 1.63,
-      "strongest_implied_pct": 61.3,
-      "estimated_goals": {
-        "home": 1.56,
-        "away": 1.51
-      },
-      "evidence": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "league_unique_result_matches": 14,
-        "used_xg": false,
-        "lineups_checked": false,
-        "injuries_checked": false,
-        "h2h_checked": false
-      },
-      "candidate_A": true,
-      "candidate_B": false,
-      "history_evidence_complete": true,
-      "confidence": "normal",
-      "requires_independent_ai_review": true,
-      "needs_independent_ai_review": true,
-      "limitations": [],
-      "market_value": {
-        "1": {
-          "raw_probability_pct": 39.1,
-          "odds": 1.31,
-          "implied_probability_pct": 76.34,
-          "adjusted_probability_pct": 55.37,
-          "raw_ev_pct": -48.78,
-          "conservative_ev_pct": -27.46,
-          "score": 20.951
-        },
-        "X": {
-          "raw_probability_pct": 24.0,
-          "odds": 6.4,
-          "implied_probability_pct": 15.62,
-          "adjusted_probability_pct": 20.34,
-          "raw_ev_pct": 53.6,
-          "conservative_ev_pct": 30.18,
-          "score": 29.888
-        },
-        "2": {
-          "raw_probability_pct": 36.9,
-          "odds": 10.4,
-          "implied_probability_pct": 9.62,
-          "adjusted_probability_pct": 24.98,
-          "raw_ev_pct": 283.76,
-          "conservative_ev_pct": 159.77,
-          "score": 31.836
+          "adjusted_probability_pct": 45.72,
+          "raw_ev_pct": -41.69,
+          "conservative_ev_pct": -22.28,
+          "score": 17.638
         },
         "3+": {
-          "raw_probability_pct": 59.1,
+          "raw_probability_pct": 67.8,
+          "odds": 1.32,
+          "implied_probability_pct": 75.76,
+          "adjusted_probability_pct": 71.51,
+          "raw_ev_pct": -10.5,
+          "conservative_ev_pct": -5.61,
+          "score": 35.634
+        },
+        "GG": {
+          "raw_probability_pct": 68.0,
           "odds": 1.34,
           "implied_probability_pct": 74.63,
-          "adjusted_probability_pct": 65.88,
-          "raw_ev_pct": -20.81,
-          "conservative_ev_pct": -11.71,
-          "score": 31.08
-        },
-        "GG": {
-          "raw_probability_pct": 61.5,
-          "odds": 1.63,
-          "implied_probability_pct": 61.35,
-          "adjusted_probability_pct": 61.43,
-          "raw_ev_pct": 0.24,
-          "conservative_ev_pct": 0.14,
-          "score": 34.307
+          "adjusted_probability_pct": 71.09,
+          "raw_ev_pct": -8.88,
+          "conservative_ev_pct": -4.74,
+          "score": 35.831
         },
         "NG": {
-          "raw_probability_pct": 38.5,
-          "odds": 2.17,
-          "implied_probability_pct": 46.08,
-          "adjusted_probability_pct": 41.81,
-          "raw_ev_pct": -16.45,
-          "conservative_ev_pct": -9.26,
-          "score": 22.023
+          "raw_probability_pct": 32.0,
+          "odds": 3.04,
+          "implied_probability_pct": 32.89,
+          "adjusted_probability_pct": 32.42,
+          "raw_ev_pct": -2.72,
+          "conservative_ev_pct": -1.45,
+          "score": 21.005
         }
       },
-      "data_quality_index_pct": 56.3,
-      "data_quality_factors": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "home_home_games": 3,
-        "away_away_games": 3,
-        "league_games": 14,
-        "goal_variance": 2.48
-      },
-      "recommended_market": "GG",
-      "recommended_pct": 61.5,
-      "recommended_odds": 1.63,
-      "recommended_score": 34.307,
-      "recommended_adjusted_pct": 61.43,
-      "recommended_ev_pct": 0.14,
-      "value_runner_up_market": "2",
-      "value_runner_up_score": 31.836,
-      "b_market_rank": 3,
-      "b_market": null,
-      "b_odds": null,
-      "b_probability_pct": null,
-      "b_adjusted_probability_pct": null,
-      "b_conservative_ev_pct": null,
-      "b_score": null,
-      "value_limitations": []
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915380",
-      "league": "uefa.champions",
-      "match": "Bodo/Glimt - LASK Linz",
-      "datetime": "2026-11-24T17:45:00Z",
-      "probability_pct": {
-        "1": 35.4,
-        "X": 23.1,
-        "2": 41.5,
-        "3+": 63.6,
-        "GG": 64.8,
-        "NG": 35.2
-      },
-      "odds": {
-        "1": 1.53,
-        "X": 5.28,
-        "2": 5.8,
-        "3+": 1.29,
-        "GG": 1.37,
-        "NG": 2.89
-      },
-      "strongest_market": "GG",
-      "strongest_pct": 64.8,
-      "second_market": "3+",
-      "second_pct": 63.6,
-      "third_pct": 41.5,
-      "strongest_odds": 1.37,
-      "strongest_implied_pct": 73.0,
-      "estimated_goals": {
-        "home": 1.57,
-        "away": 1.71
-      },
-      "evidence": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "league_unique_result_matches": 14,
-        "used_xg": false,
-        "lineups_checked": false,
-        "injuries_checked": false,
-        "h2h_checked": false
-      },
-      "candidate_A": false,
-      "candidate_B": false,
-      "history_evidence_complete": true,
-      "confidence": "normal",
-      "requires_independent_ai_review": true,
-      "needs_independent_ai_review": true,
-      "limitations": [
-        "Started or less than 20 minutes to kickoff; exclude from new tickets"
-      ],
-      "market_value": {
-        "1": {
-          "raw_probability_pct": 35.4,
-          "odds": 1.53,
-          "implied_probability_pct": 65.36,
-          "adjusted_probability_pct": 50.08,
-          "raw_ev_pct": -45.84,
-          "conservative_ev_pct": -23.38,
-          "score": 18.631
-        },
-        "X": {
-          "raw_probability_pct": 23.1,
-          "odds": 5.28,
-          "implied_probability_pct": 18.94,
-          "adjusted_probability_pct": 21.06,
-          "raw_ev_pct": 21.97,
-          "conservative_ev_pct": 11.2,
-          "score": 21.314
-        },
-        "2": {
-          "raw_probability_pct": 41.5,
-          "odds": 5.8,
-          "implied_probability_pct": 17.24,
-          "adjusted_probability_pct": 29.61,
-          "raw_ev_pct": 140.7,
-          "conservative_ev_pct": 71.76,
-          "score": 32.988
-        },
-        "3+": {
-          "raw_probability_pct": 63.6,
-          "odds": 1.29,
-          "implied_probability_pct": 77.52,
-          "adjusted_probability_pct": 70.42,
-          "raw_ev_pct": -17.96,
-          "conservative_ev_pct": -9.16,
-          "score": 33.289
-        },
-        "GG": {
-          "raw_probability_pct": 64.8,
-          "odds": 1.37,
-          "implied_probability_pct": 72.99,
-          "adjusted_probability_pct": 68.81,
-          "raw_ev_pct": -11.22,
-          "conservative_ev_pct": -5.72,
-          "score": 34.091
-        },
-        "NG": {
-          "raw_probability_pct": 35.2,
-          "odds": 2.89,
-          "implied_probability_pct": 34.6,
-          "adjusted_probability_pct": 34.91,
-          "raw_ev_pct": 1.73,
-          "conservative_ev_pct": 0.88,
-          "score": 22.69
-        }
-      },
-      "data_quality_index_pct": 51.0,
-      "data_quality_factors": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "home_home_games": 3,
-        "away_away_games": 1,
-        "league_games": 14,
-        "goal_variance": 3.28
-      },
-      "recommended_market": "GG",
-      "recommended_pct": 64.8,
-      "recommended_odds": 1.37,
-      "recommended_score": 34.091,
-      "recommended_adjusted_pct": 68.81,
-      "recommended_ev_pct": -5.72,
-      "value_runner_up_market": "3+",
-      "value_runner_up_score": 33.289,
-      "b_market_rank": 2,
-      "b_market": null,
-      "b_odds": null,
-      "b_probability_pct": null,
-      "b_adjusted_probability_pct": null,
-      "b_conservative_ev_pct": null,
-      "b_score": null,
-      "value_limitations": [
-        "No positive conservative EV for chosen market",
-        "Kickoff already started or within twenty minutes"
-      ]
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915296",
-      "league": "uefa.champions",
-      "match": "Como - AEK Athens",
-      "datetime": "2026-11-24T20:00:00Z",
-      "probability_pct": {
-        "1": 49.4,
-        "X": 23.3,
-        "2": 27.3,
-        "3+": 58.6,
-        "GG": 59.7,
-        "NG": 40.3
-      },
-      "odds": {
-        "1": 1.3,
-        "X": 6.43,
-        "2": 11.2,
-        "3+": 1.34,
-        "GG": 1.65,
-        "NG": 2.13
-      },
-      "strongest_market": "GG",
-      "strongest_pct": 59.7,
-      "second_market": "3+",
-      "second_pct": 58.6,
-      "third_pct": 49.4,
-      "strongest_odds": 1.65,
-      "strongest_implied_pct": 60.6,
-      "estimated_goals": {
-        "home": 1.78,
-        "away": 1.27
-      },
-      "evidence": {
-        "home_last_matches": 5,
-        "away_last_matches": 5,
-        "league_unique_result_matches": 14,
-        "used_xg": false,
-        "lineups_checked": false,
-        "injuries_checked": false,
-        "h2h_checked": false
-      },
-      "candidate_A": false,
-      "candidate_B": false,
-      "history_evidence_complete": true,
-      "confidence": "normal",
-      "requires_independent_ai_review": true,
-      "needs_independent_ai_review": true,
-      "limitations": [],
-      "market_value": {
-        "1": {
-          "raw_probability_pct": 49.4,
-          "odds": 1.3,
-          "implied_probability_pct": 76.92,
-          "adjusted_probability_pct": 64.35,
-          "raw_ev_pct": -35.78,
-          "conservative_ev_pct": -16.34,
-          "score": 26.852
-        },
-        "X": {
-          "raw_probability_pct": 23.3,
-          "odds": 6.43,
-          "implied_probability_pct": 15.55,
-          "adjusted_probability_pct": 19.09,
-          "raw_ev_pct": 49.82,
-          "conservative_ev_pct": 22.75,
-          "score": 24.653
-        },
-        "2": {
-          "raw_probability_pct": 27.3,
-          "odds": 11.2,
-          "implied_probability_pct": 8.93,
-          "adjusted_probability_pct": 17.32,
-          "raw_ev_pct": 205.76,
-          "conservative_ev_pct": 93.98,
-          "score": 27.025
-        },
-        "3+": {
-          "raw_probability_pct": 58.6,
-          "odds": 1.34,
-          "implied_probability_pct": 74.63,
-          "adjusted_probability_pct": 67.31,
-          "raw_ev_pct": -21.48,
-          "conservative_ev_pct": -9.81,
-          "score": 30.902
-        },
-        "GG": {
-          "raw_probability_pct": 59.7,
-          "odds": 1.65,
-          "implied_probability_pct": 60.61,
-          "adjusted_probability_pct": 60.19,
-          "raw_ev_pct": -1.5,
-          "conservative_ev_pct": -0.68,
-          "score": 31.838
-        },
-        "NG": {
-          "raw_probability_pct": 40.3,
-          "odds": 2.13,
-          "implied_probability_pct": 46.95,
-          "adjusted_probability_pct": 43.91,
-          "raw_ev_pct": -14.16,
-          "conservative_ev_pct": -6.47,
-          "score": 22.513
-        }
-      },
-      "data_quality_index_pct": 45.7,
+      "data_quality_index_pct": 53.4,
       "data_quality_factors": {
         "home_last_matches": 5,
         "away_last_matches": 5,
         "home_home_games": 2,
         "away_away_games": 2,
-        "league_games": 14,
-        "goal_variance": 6.56
+        "league_games": 20,
+        "goal_variance": 2.4
       },
       "recommended_market": "GG",
-      "recommended_pct": 59.7,
-      "recommended_odds": 1.65,
-      "recommended_score": 31.838,
-      "recommended_adjusted_pct": 60.19,
-      "recommended_ev_pct": -0.68,
+      "recommended_pct": 68.0,
+      "recommended_odds": 1.34,
+      "recommended_score": 35.831,
+      "recommended_adjusted_pct": 71.09,
+      "recommended_ev_pct": -4.74,
       "value_runner_up_market": "3+",
-      "value_runner_up_score": 30.902,
+      "value_runner_up_score": 35.634,
       "b_market_rank": 2,
       "b_market": null,
       "b_odds": null,
@@ -1350,47 +422,47 @@
       ]
     },
     {
-      "fixture_id": "espn:football:uefa.champions:401915295",
+      "fixture_id": "espn:football:uefa.champions:401915293",
       "league": "uefa.champions",
-      "match": "Arsenal - Borussia Dortmund",
-      "datetime": "2026-11-24T20:00:00Z",
+      "match": "Slavia Prague - Villarreal",
+      "datetime": "2026-11-25T17:45:00Z",
       "probability_pct": {
-        "1": 37.6,
-        "X": 25.4,
-        "2": 37.0,
-        "3+": 52.6,
-        "GG": 56.4,
-        "NG": 43.6
+        "1": 34.8,
+        "X": 22.3,
+        "2": 42.9,
+        "3+": 67.1,
+        "GG": 67.5,
+        "NG": 32.5
       },
       "odds": {
-        "1": 1.45,
-        "X": 5.07,
-        "2": 7.7,
-        "3+": 1.7,
-        "GG": 1.83,
-        "NG": 1.89
+        "1": 3.1,
+        "X": 4.09,
+        "2": 2.23,
+        "3+": 1.47,
+        "GG": 1.41,
+        "NG": 2.73
       },
       "strongest_market": "GG",
-      "strongest_pct": 56.4,
+      "strongest_pct": 67.5,
       "second_market": "3+",
-      "second_pct": 52.6,
-      "third_pct": 43.6,
-      "strongest_odds": 1.83,
-      "strongest_implied_pct": 54.6,
+      "second_pct": 67.1,
+      "third_pct": 42.9,
+      "strongest_odds": 1.41,
+      "strongest_implied_pct": 70.9,
       "estimated_goals": {
-        "home": 1.4,
-        "away": 1.38
+        "home": 1.63,
+        "away": 1.83
       },
       "evidence": {
-        "home_last_matches": 5,
+        "home_last_matches": 4,
         "away_last_matches": 5,
-        "league_unique_result_matches": 14,
+        "league_unique_result_matches": 20,
         "used_xg": false,
         "lineups_checked": false,
         "injuries_checked": false,
         "h2h_checked": false
       },
-      "candidate_A": true,
+      "candidate_A": false,
       "candidate_B": false,
       "history_evidence_complete": true,
       "confidence": "normal",
@@ -1399,77 +471,339 @@
       "limitations": [],
       "market_value": {
         "1": {
-          "raw_probability_pct": 37.6,
-          "odds": 1.45,
-          "implied_probability_pct": 68.97,
-          "adjusted_probability_pct": 52.72,
-          "raw_ev_pct": -45.48,
-          "conservative_ev_pct": -23.56,
-          "score": 19.782
+          "raw_probability_pct": 34.8,
+          "odds": 3.1,
+          "implied_probability_pct": 32.26,
+          "adjusted_probability_pct": 33.48,
+          "raw_ev_pct": 7.88,
+          "conservative_ev_pct": 3.79,
+          "score": 22.899
         },
         "X": {
-          "raw_probability_pct": 25.4,
-          "odds": 5.07,
-          "implied_probability_pct": 19.72,
-          "adjusted_probability_pct": 22.66,
-          "raw_ev_pct": 28.78,
-          "conservative_ev_pct": 14.91,
-          "score": 23.698
+          "raw_probability_pct": 22.3,
+          "odds": 4.09,
+          "implied_probability_pct": 24.45,
+          "adjusted_probability_pct": 23.42,
+          "raw_ev_pct": -8.79,
+          "conservative_ev_pct": -4.23,
+          "score": 15.227
         },
         "2": {
-          "raw_probability_pct": 37.0,
-          "odds": 7.7,
-          "implied_probability_pct": 12.99,
-          "adjusted_probability_pct": 25.43,
-          "raw_ev_pct": 184.9,
-          "conservative_ev_pct": 95.78,
-          "score": 31.348
+          "raw_probability_pct": 42.9,
+          "odds": 2.23,
+          "implied_probability_pct": 44.84,
+          "adjusted_probability_pct": 43.91,
+          "raw_ev_pct": -4.33,
+          "conservative_ev_pct": -2.08,
+          "score": 24.756
         },
         "3+": {
-          "raw_probability_pct": 52.6,
-          "odds": 1.7,
-          "implied_probability_pct": 58.82,
-          "adjusted_probability_pct": 55.6,
-          "raw_ev_pct": -10.58,
-          "conservative_ev_pct": -5.48,
-          "score": 28.765
+          "raw_probability_pct": 67.1,
+          "odds": 1.47,
+          "implied_probability_pct": 68.03,
+          "adjusted_probability_pct": 67.58,
+          "raw_ev_pct": -1.36,
+          "conservative_ev_pct": -0.66,
+          "score": 35.312
         },
         "GG": {
-          "raw_probability_pct": 56.4,
-          "odds": 1.83,
-          "implied_probability_pct": 54.64,
-          "adjusted_probability_pct": 55.55,
-          "raw_ev_pct": 3.21,
-          "conservative_ev_pct": 1.66,
-          "score": 31.818
+          "raw_probability_pct": 67.5,
+          "odds": 1.41,
+          "implied_probability_pct": 70.92,
+          "adjusted_probability_pct": 69.28,
+          "raw_ev_pct": -4.83,
+          "conservative_ev_pct": -2.32,
+          "score": 35.309
         },
         "NG": {
-          "raw_probability_pct": 43.6,
-          "odds": 1.89,
-          "implied_probability_pct": 52.91,
-          "adjusted_probability_pct": 48.09,
-          "raw_ev_pct": -17.6,
-          "conservative_ev_pct": -9.11,
-          "score": 24.047
+          "raw_probability_pct": 32.5,
+          "odds": 2.73,
+          "implied_probability_pct": 36.63,
+          "adjusted_probability_pct": 34.65,
+          "raw_ev_pct": -11.28,
+          "conservative_ev_pct": -5.42,
+          "score": 19.43
         }
       },
-      "data_quality_index_pct": 51.8,
+      "data_quality_index_pct": 48.1,
+      "data_quality_factors": {
+        "home_last_matches": 4,
+        "away_last_matches": 5,
+        "home_home_games": 2,
+        "away_away_games": 2,
+        "league_games": 20,
+        "goal_variance": 2.505
+      },
+      "recommended_market": "3+",
+      "recommended_pct": 67.1,
+      "recommended_odds": 1.47,
+      "recommended_score": 35.312,
+      "recommended_adjusted_pct": 67.58,
+      "recommended_ev_pct": -0.66,
+      "value_runner_up_market": "GG",
+      "value_runner_up_score": 35.309,
+      "b_market_rank": 1,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
+      "value_limitations": [
+        "No positive conservative EV for chosen market"
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915375",
+      "league": "uefa.champions",
+      "match": "Shakhtar Donetsk - Fenerbahce",
+      "datetime": "2026-11-25T20:00:00Z",
+      "probability_pct": {
+        "1": 36.6,
+        "X": 23.9,
+        "2": 39.5,
+        "3+": 59.5,
+        "GG": 61.8,
+        "NG": 38.2
+      },
+      "odds": {
+        "1": 2.96,
+        "X": 3.62,
+        "2": 2.5,
+        "3+": 1.81,
+        "GG": 1.57,
+        "NG": 2.28
+      },
+      "strongest_market": "GG",
+      "strongest_pct": 61.8,
+      "second_market": "3+",
+      "second_pct": 59.5,
+      "third_pct": 39.5,
+      "strongest_odds": 1.57,
+      "strongest_implied_pct": 63.7,
+      "estimated_goals": {
+        "home": 1.51,
+        "away": 1.58
+      },
+      "evidence": {
+        "home_last_matches": 5,
+        "away_last_matches": 5,
+        "league_unique_result_matches": 20,
+        "used_xg": false,
+        "lineups_checked": false,
+        "injuries_checked": false,
+        "h2h_checked": false
+      },
+      "candidate_A": true,
+      "candidate_B": true,
+      "history_evidence_complete": true,
+      "confidence": "normal",
+      "requires_independent_ai_review": true,
+      "needs_independent_ai_review": true,
+      "limitations": [],
+      "market_value": {
+        "1": {
+          "raw_probability_pct": 36.6,
+          "odds": 2.96,
+          "implied_probability_pct": 33.78,
+          "adjusted_probability_pct": 35.46,
+          "raw_ev_pct": 8.34,
+          "conservative_ev_pct": 4.97,
+          "score": 25.966
+        },
+        "X": {
+          "raw_probability_pct": 23.9,
+          "odds": 3.62,
+          "implied_probability_pct": 27.62,
+          "adjusted_probability_pct": 25.41,
+          "raw_ev_pct": -13.48,
+          "conservative_ev_pct": -8.03,
+          "score": 16.153
+        },
+        "2": {
+          "raw_probability_pct": 39.5,
+          "odds": 2.5,
+          "implied_probability_pct": 40.0,
+          "adjusted_probability_pct": 39.7,
+          "raw_ev_pct": -1.25,
+          "conservative_ev_pct": -0.74,
+          "score": 25.291
+        },
+        "3+": {
+          "raw_probability_pct": 59.5,
+          "odds": 1.81,
+          "implied_probability_pct": 55.25,
+          "adjusted_probability_pct": 57.78,
+          "raw_ev_pct": 7.7,
+          "conservative_ev_pct": 4.58,
+          "score": 35.176
+        },
+        "GG": {
+          "raw_probability_pct": 61.8,
+          "odds": 1.57,
+          "implied_probability_pct": 63.69,
+          "adjusted_probability_pct": 62.57,
+          "raw_ev_pct": -2.97,
+          "conservative_ev_pct": -1.77,
+          "score": 34.452
+        },
+        "NG": {
+          "raw_probability_pct": 38.2,
+          "odds": 2.28,
+          "implied_probability_pct": 43.86,
+          "adjusted_probability_pct": 40.49,
+          "raw_ev_pct": -12.9,
+          "conservative_ev_pct": -7.69,
+          "score": 22.636
+        }
+      },
+      "data_quality_index_pct": 59.6,
+      "data_quality_factors": {
+        "home_last_matches": 5,
+        "away_last_matches": 5,
+        "home_home_games": 3,
+        "away_away_games": 3,
+        "league_games": 20,
+        "goal_variance": 1.08
+      },
+      "recommended_market": "3+",
+      "recommended_pct": 59.5,
+      "recommended_odds": 1.81,
+      "recommended_score": 35.176,
+      "recommended_adjusted_pct": 57.78,
+      "recommended_ev_pct": 4.58,
+      "value_runner_up_market": "GG",
+      "value_runner_up_score": 34.452,
+      "b_market_rank": 1,
+      "b_market": "3+",
+      "b_odds": 1.81,
+      "b_probability_pct": 59.5,
+      "b_adjusted_probability_pct": 57.78,
+      "b_conservative_ev_pct": 4.58,
+      "b_score": 35.176,
+      "value_limitations": []
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915376",
+      "league": "uefa.champions",
+      "match": "Internazionale - VfB Stuttgart",
+      "datetime": "2026-11-25T20:00:00Z",
+      "probability_pct": {
+        "1": 44.3,
+        "X": 24.2,
+        "2": 31.5,
+        "3+": 56.8,
+        "GG": 59.2,
+        "NG": 40.8
+      },
+      "odds": {
+        "1": 1.44,
+        "X": 5.74,
+        "2": 6.75,
+        "3+": 1.23,
+        "GG": 1.36,
+        "NG": 2.94
+      },
+      "strongest_market": "GG",
+      "strongest_pct": 59.2,
+      "second_market": "3+",
+      "second_pct": 56.8,
+      "third_pct": 44.3,
+      "strongest_odds": 1.36,
+      "strongest_implied_pct": 73.5,
+      "estimated_goals": {
+        "home": 1.63,
+        "away": 1.33
+      },
+      "evidence": {
+        "home_last_matches": 5,
+        "away_last_matches": 5,
+        "league_unique_result_matches": 20,
+        "used_xg": false,
+        "lineups_checked": false,
+        "injuries_checked": false,
+        "h2h_checked": false
+      },
+      "candidate_A": false,
+      "candidate_B": false,
+      "history_evidence_complete": true,
+      "confidence": "normal",
+      "requires_independent_ai_review": true,
+      "needs_independent_ai_review": true,
+      "limitations": [],
+      "market_value": {
+        "1": {
+          "raw_probability_pct": 44.3,
+          "odds": 1.44,
+          "implied_probability_pct": 69.44,
+          "adjusted_probability_pct": 56.44,
+          "raw_ev_pct": -36.21,
+          "conservative_ev_pct": -18.73,
+          "score": 23.409
+        },
+        "X": {
+          "raw_probability_pct": 24.2,
+          "odds": 5.74,
+          "implied_probability_pct": 17.42,
+          "adjusted_probability_pct": 20.93,
+          "raw_ev_pct": 38.91,
+          "conservative_ev_pct": 20.13,
+          "score": 25.203
+        },
+        "2": {
+          "raw_probability_pct": 31.5,
+          "odds": 6.75,
+          "implied_probability_pct": 14.81,
+          "adjusted_probability_pct": 23.45,
+          "raw_ev_pct": 112.62,
+          "conservative_ev_pct": 58.26,
+          "score": 30.506
+        },
+        "3+": {
+          "raw_probability_pct": 56.8,
+          "odds": 1.23,
+          "implied_probability_pct": 81.3,
+          "adjusted_probability_pct": 68.63,
+          "raw_ev_pct": -30.14,
+          "conservative_ev_pct": -15.59,
+          "score": 29.879
+        },
+        "GG": {
+          "raw_probability_pct": 59.2,
+          "odds": 1.36,
+          "implied_probability_pct": 73.53,
+          "adjusted_probability_pct": 66.12,
+          "raw_ev_pct": -19.49,
+          "conservative_ev_pct": -10.08,
+          "score": 31.194
+        },
+        "NG": {
+          "raw_probability_pct": 40.8,
+          "odds": 2.94,
+          "implied_probability_pct": 34.01,
+          "adjusted_probability_pct": 37.52,
+          "raw_ev_pct": 19.95,
+          "conservative_ev_pct": 10.32,
+          "score": 27.957
+        }
+      },
+      "data_quality_index_pct": 51.7,
       "data_quality_factors": {
         "home_last_matches": 5,
         "away_last_matches": 5,
         "home_home_games": 1,
-        "away_away_games": 2,
-        "league_games": 14,
-        "goal_variance": 1.56
+        "away_away_games": 4,
+        "league_games": 20,
+        "goal_variance": 4.68
       },
       "recommended_market": "GG",
-      "recommended_pct": 56.4,
-      "recommended_odds": 1.83,
-      "recommended_score": 31.818,
-      "recommended_adjusted_pct": 55.55,
-      "recommended_ev_pct": 1.66,
+      "recommended_pct": 59.2,
+      "recommended_odds": 1.36,
+      "recommended_score": 31.194,
+      "recommended_adjusted_pct": 66.12,
+      "recommended_ev_pct": -10.08,
       "value_runner_up_market": "2",
-      "value_runner_up_score": 31.348,
+      "value_runner_up_score": 30.506,
       "b_market_rank": 3,
       "b_market": null,
       "b_odds": null,
@@ -1477,39 +811,41 @@
       "b_adjusted_probability_pct": null,
       "b_conservative_ev_pct": null,
       "b_score": null,
-      "value_limitations": []
+      "value_limitations": [
+        "No positive conservative EV for chosen market"
+      ]
     },
     {
-      "fixture_id": "espn:football:bra.1:401841335",
-      "league": "bra.1",
-      "match": "Chapecoense - Palmeiras",
-      "datetime": "2026-11-24T21:00:00Z",
+      "fixture_id": "espn:football:arg.1:401933757",
+      "league": "arg.1",
+      "match": "Boca Juniors - Independiente Rivadavia",
+      "datetime": "2026-11-26T00:00:00Z",
       "probability_pct": {
-        "1": 25.2,
-        "X": 25.2,
-        "2": 49.6,
-        "3+": 48.6,
-        "GG": 51.3,
-        "NG": 48.7
+        "1": 54.8,
+        "X": 25.1,
+        "2": 20.1,
+        "3+": 44.2,
+        "GG": 45.7,
+        "NG": 54.3
       },
       "odds": {
-        "1": 3.14,
-        "X": 3.38,
-        "2": 2.34,
-        "3+": 1.77,
-        "GG": 1.56,
-        "NG": 2.28
+        "1": 1.62,
+        "X": 3.73,
+        "2": 5.92,
+        "3+": 2.23,
+        "GG": 2.15,
+        "NG": 1.63
       },
-      "strongest_market": "GG",
-      "strongest_pct": 51.3,
-      "second_market": "2",
-      "second_pct": 49.6,
-      "third_pct": 48.7,
-      "strongest_odds": 1.56,
-      "strongest_implied_pct": 64.1,
+      "strongest_market": "1",
+      "strongest_pct": 54.8,
+      "second_market": "NG",
+      "second_pct": 54.3,
+      "third_pct": 45.7,
+      "strongest_odds": 1.62,
+      "strongest_implied_pct": 61.7,
       "estimated_goals": {
-        "home": 1.04,
-        "away": 1.57
+        "home": 1.59,
+        "away": 0.85
       },
       "evidence": {
         "home_last_matches": 5,
@@ -1529,77 +865,77 @@
       "limitations": [],
       "market_value": {
         "1": {
-          "raw_probability_pct": 25.2,
-          "odds": 3.14,
-          "implied_probability_pct": 31.85,
-          "adjusted_probability_pct": 28.32,
-          "raw_ev_pct": -20.87,
-          "conservative_ev_pct": -11.09,
-          "score": 15.093
+          "raw_probability_pct": 54.8,
+          "odds": 1.62,
+          "implied_probability_pct": 61.73,
+          "adjusted_probability_pct": 57.81,
+          "raw_ev_pct": -11.22,
+          "conservative_ev_pct": -6.35,
+          "score": 30.038
         },
         "X": {
-          "raw_probability_pct": 25.2,
-          "odds": 3.38,
-          "implied_probability_pct": 29.59,
-          "adjusted_probability_pct": 27.26,
-          "raw_ev_pct": -14.82,
-          "conservative_ev_pct": -7.87,
-          "score": 16.029
+          "raw_probability_pct": 25.1,
+          "odds": 3.73,
+          "implied_probability_pct": 26.81,
+          "adjusted_probability_pct": 25.84,
+          "raw_ev_pct": -6.38,
+          "conservative_ev_pct": -3.61,
+          "score": 17.793
         },
         "2": {
-          "raw_probability_pct": 49.6,
-          "odds": 2.34,
-          "implied_probability_pct": 42.74,
-          "adjusted_probability_pct": 46.38,
-          "raw_ev_pct": 16.06,
-          "conservative_ev_pct": 8.53,
-          "score": 31.117
+          "raw_probability_pct": 20.1,
+          "odds": 5.92,
+          "implied_probability_pct": 16.89,
+          "adjusted_probability_pct": 18.71,
+          "raw_ev_pct": 18.99,
+          "conservative_ev_pct": 10.75,
+          "score": 20.972
         },
         "3+": {
-          "raw_probability_pct": 48.6,
-          "odds": 1.77,
-          "implied_probability_pct": 56.5,
-          "adjusted_probability_pct": 52.3,
-          "raw_ev_pct": -13.98,
-          "conservative_ev_pct": -7.42,
-          "score": 26.742
+          "raw_probability_pct": 44.2,
+          "odds": 2.23,
+          "implied_probability_pct": 44.84,
+          "adjusted_probability_pct": 44.48,
+          "raw_ev_pct": -1.43,
+          "conservative_ev_pct": -0.81,
+          "score": 26.824
         },
         "GG": {
-          "raw_probability_pct": 51.3,
-          "odds": 1.56,
-          "implied_probability_pct": 64.1,
-          "adjusted_probability_pct": 57.3,
-          "raw_ev_pct": -19.97,
-          "conservative_ev_pct": -10.61,
-          "score": 27.473
+          "raw_probability_pct": 45.7,
+          "odds": 2.15,
+          "implied_probability_pct": 46.51,
+          "adjusted_probability_pct": 46.05,
+          "raw_ev_pct": -1.75,
+          "conservative_ev_pct": -0.99,
+          "score": 27.409
         },
         "NG": {
-          "raw_probability_pct": 48.7,
-          "odds": 2.28,
-          "implied_probability_pct": 43.86,
-          "adjusted_probability_pct": 46.43,
-          "raw_ev_pct": 11.04,
-          "conservative_ev_pct": 5.86,
-          "score": 29.989
+          "raw_probability_pct": 54.3,
+          "odds": 1.63,
+          "implied_probability_pct": 61.35,
+          "adjusted_probability_pct": 57.36,
+          "raw_ev_pct": -11.49,
+          "conservative_ev_pct": -6.51,
+          "score": 29.785
         }
       },
-      "data_quality_index_pct": 53.1,
+      "data_quality_index_pct": 56.6,
       "data_quality_factors": {
         "home_last_matches": 5,
         "away_last_matches": 5,
         "home_home_games": 3,
-        "away_away_games": 2,
+        "away_away_games": 3,
         "league_games": 10,
-        "goal_variance": 2.8
+        "goal_variance": 1.88
       },
-      "recommended_market": "2",
-      "recommended_pct": 49.6,
-      "recommended_odds": 2.34,
-      "recommended_score": 31.117,
-      "recommended_adjusted_pct": 46.38,
-      "recommended_ev_pct": 8.53,
+      "recommended_market": "1",
+      "recommended_pct": 54.8,
+      "recommended_odds": 1.62,
+      "recommended_score": 30.038,
+      "recommended_adjusted_pct": 57.81,
+      "recommended_ev_pct": -6.35,
       "value_runner_up_market": "NG",
-      "value_runner_up_score": 29.989,
+      "value_runner_up_score": 29.785,
       "b_market_rank": 4,
       "b_market": null,
       "b_odds": null,
@@ -1608,40 +944,444 @@
       "b_conservative_ev_pct": null,
       "b_score": null,
       "value_limitations": [
-        "Risk-adjusted probability below 50% for chosen market"
+        "No positive conservative EV for chosen market"
       ]
     },
     {
-      "fixture_id": "espn:football:usa.1:401933738",
-      "league": "usa.1",
-      "match": "San Jose Earthquakes - Houston Dynamo FC",
-      "datetime": "2026-11-25T03:00:00Z",
+      "fixture_id": "espn:football:uefa.champions:401915378",
+      "league": "uefa.champions",
+      "match": "Sabah FK - Barcelona",
+      "datetime": "2026-11-25T17:45:00Z",
       "probability_pct": {
-        "1": 40.5,
-        "X": 26.1,
-        "2": 33.4,
-        "3+": 49.2,
-        "GG": 53.6,
-        "NG": 46.4
+        "1": 27.9,
+        "X": 20.8,
+        "2": 51.3,
+        "3+": 71.1,
+        "GG": 69.3,
+        "NG": 30.7
       },
       "odds": {
-        "1": 2.2,
-        "X": 3.69,
-        "2": 3.27,
-        "3+": 1.72,
-        "GG": 1.55,
-        "NG": 2.3
+        "1": null,
+        "X": null,
+        "2": null,
+        "3+": null,
+        "GG": null,
+        "NG": null
+      },
+      "strongest_market": "3+",
+      "strongest_pct": 71.1,
+      "second_market": "GG",
+      "second_pct": 69.3,
+      "third_pct": 51.3,
+      "strongest_odds": null,
+      "strongest_implied_pct": null,
+      "estimated_goals": {
+        "home": 1.54,
+        "away": 2.13
+      },
+      "evidence": {
+        "home_last_matches": 5,
+        "away_last_matches": 5,
+        "league_unique_result_matches": 20,
+        "used_xg": false,
+        "lineups_checked": false,
+        "injuries_checked": false,
+        "h2h_checked": false
+      },
+      "candidate_A": false,
+      "candidate_B": false,
+      "history_evidence_complete": true,
+      "confidence": "normal",
+      "requires_independent_ai_review": true,
+      "needs_independent_ai_review": true,
+      "limitations": [
+        "The strongest market has no verified price: do not substitute the second market"
+      ],
+      "market_value": {
+        "1": {
+          "raw_probability_pct": 27.9,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "X": {
+          "raw_probability_pct": 20.8,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "2": {
+          "raw_probability_pct": 51.3,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "3+": {
+          "raw_probability_pct": 71.1,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "GG": {
+          "raw_probability_pct": 69.3,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "NG": {
+          "raw_probability_pct": 30.7,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        }
+      },
+      "data_quality_index_pct": 52.8,
+      "data_quality_factors": {
+        "home_last_matches": 5,
+        "away_last_matches": 5,
+        "home_home_games": 3,
+        "away_away_games": 1,
+        "league_games": 20,
+        "goal_variance": 2.76
+      },
+      "recommended_market": null,
+      "recommended_pct": null,
+      "recommended_odds": null,
+      "recommended_score": null,
+      "recommended_adjusted_pct": null,
+      "recommended_ev_pct": null,
+      "value_runner_up_market": null,
+      "value_runner_up_score": null,
+      "b_market_rank": null,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
+      "value_limitations": [
+        "No verified odds for any of six markets"
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915291",
+      "league": "uefa.champions",
+      "match": "Atlético Madrid - Viking FK",
+      "datetime": "2026-11-25T20:00:00Z",
+      "probability_pct": {
+        "1": 39.7,
+        "X": 23.1,
+        "2": 37.2,
+        "3+": 63.5,
+        "GG": 64.8,
+        "NG": 35.2
+      },
+      "odds": {
+        "1": null,
+        "X": null,
+        "2": null,
+        "3+": null,
+        "GG": null,
+        "NG": null
       },
       "strongest_market": "GG",
-      "strongest_pct": 53.6,
+      "strongest_pct": 64.8,
       "second_market": "3+",
-      "second_pct": 49.2,
-      "third_pct": 46.4,
-      "strongest_odds": 1.55,
-      "strongest_implied_pct": 64.5,
+      "second_pct": 63.5,
+      "third_pct": 39.7,
+      "strongest_odds": null,
+      "strongest_implied_pct": null,
       "estimated_goals": {
-        "home": 1.4,
-        "away": 1.25
+        "home": 1.67,
+        "away": 1.61
+      },
+      "evidence": {
+        "home_last_matches": 5,
+        "away_last_matches": 3,
+        "league_unique_result_matches": 20,
+        "used_xg": false,
+        "lineups_checked": false,
+        "injuries_checked": false,
+        "h2h_checked": false
+      },
+      "candidate_A": false,
+      "candidate_B": false,
+      "history_evidence_complete": false,
+      "confidence": "low_data",
+      "requires_independent_ai_review": true,
+      "needs_independent_ai_review": true,
+      "limitations": [
+        "Incomplete ESPN last-five form: independent model confidence low",
+        "The strongest market has no verified price: do not substitute the second market"
+      ],
+      "market_value": {
+        "1": {
+          "raw_probability_pct": 39.7,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "X": {
+          "raw_probability_pct": 23.1,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "2": {
+          "raw_probability_pct": 37.2,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "3+": {
+          "raw_probability_pct": 63.5,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "GG": {
+          "raw_probability_pct": 64.8,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "NG": {
+          "raw_probability_pct": 35.2,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        }
+      },
+      "data_quality_index_pct": 45.9,
+      "data_quality_factors": {
+        "home_last_matches": 5,
+        "away_last_matches": 3,
+        "home_home_games": 3,
+        "away_away_games": 1,
+        "league_games": 20,
+        "goal_variance": 0.613
+      },
+      "recommended_market": null,
+      "recommended_pct": null,
+      "recommended_odds": null,
+      "recommended_score": null,
+      "recommended_adjusted_pct": null,
+      "recommended_ev_pct": null,
+      "value_runner_up_market": null,
+      "value_runner_up_score": null,
+      "b_market_rank": null,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
+      "value_limitations": [
+        "No verified odds for any of six markets"
+      ]
+    },
+    {
+      "fixture_id": "espn:football:uefa.champions:401915377",
+      "league": "uefa.champions",
+      "match": "Lille - Bayern Munich",
+      "datetime": "2026-11-25T20:00:00Z",
+      "probability_pct": {
+        "1": 34.8,
+        "X": 25.7,
+        "2": 39.5,
+        "3+": 50.9,
+        "GG": 55.0,
+        "NG": 45.0
+      },
+      "odds": {
+        "1": null,
+        "X": null,
+        "2": null,
+        "3+": null,
+        "GG": null,
+        "NG": null
+      },
+      "strongest_market": "GG",
+      "strongest_pct": 55.0,
+      "second_market": "3+",
+      "second_pct": 50.9,
+      "third_pct": 45.0,
+      "strongest_odds": null,
+      "strongest_implied_pct": null,
+      "estimated_goals": {
+        "home": 1.3,
+        "away": 1.4
+      },
+      "evidence": {
+        "home_last_matches": 5,
+        "away_last_matches": 3,
+        "league_unique_result_matches": 20,
+        "used_xg": false,
+        "lineups_checked": false,
+        "injuries_checked": false,
+        "h2h_checked": false
+      },
+      "candidate_A": false,
+      "candidate_B": false,
+      "history_evidence_complete": false,
+      "confidence": "low_data",
+      "requires_independent_ai_review": true,
+      "needs_independent_ai_review": true,
+      "limitations": [
+        "Incomplete ESPN last-five form: independent model confidence low",
+        "The strongest market has no verified price: do not substitute the second market"
+      ],
+      "market_value": {
+        "1": {
+          "raw_probability_pct": 34.8,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "X": {
+          "raw_probability_pct": 25.7,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "2": {
+          "raw_probability_pct": 39.5,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "3+": {
+          "raw_probability_pct": 50.9,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "GG": {
+          "raw_probability_pct": 55.0,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        },
+        "NG": {
+          "raw_probability_pct": 45.0,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
+        }
+      },
+      "data_quality_index_pct": 43.9,
+      "data_quality_factors": {
+        "home_last_matches": 5,
+        "away_last_matches": 3,
+        "home_home_games": 2,
+        "away_away_games": 2,
+        "league_games": 20,
+        "goal_variance": 1.853
+      },
+      "recommended_market": null,
+      "recommended_pct": null,
+      "recommended_odds": null,
+      "recommended_score": null,
+      "recommended_adjusted_pct": null,
+      "recommended_ev_pct": null,
+      "value_runner_up_market": null,
+      "value_runner_up_score": null,
+      "b_market_rank": null,
+      "b_market": null,
+      "b_odds": null,
+      "b_probability_pct": null,
+      "b_adjusted_probability_pct": null,
+      "b_conservative_ev_pct": null,
+      "b_score": null,
+      "value_limitations": [
+        "No verified odds for any of six markets"
+      ]
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841319",
+      "league": "bra.1",
+      "match": "Atlético-MG - Corinthians",
+      "datetime": "2026-11-25T23:00:00Z",
+      "probability_pct": {
+        "1": 31.5,
+        "X": 29.5,
+        "2": 39.0,
+        "3+": 36.2,
+        "GG": 43.0,
+        "NG": 57.0
+      },
+      "odds": {
+        "1": null,
+        "X": null,
+        "2": null,
+        "3+": null,
+        "GG": null,
+        "NG": null
+      },
+      "strongest_market": "NG",
+      "strongest_pct": 57.0,
+      "second_market": "GG",
+      "second_pct": 43.0,
+      "third_pct": 39.0,
+      "strongest_odds": null,
+      "strongest_implied_pct": null,
+      "estimated_goals": {
+        "home": 1.0,
+        "away": 1.15
       },
       "evidence": {
         "home_last_matches": 5,
@@ -1658,81 +1398,83 @@
       "confidence": "normal",
       "requires_independent_ai_review": true,
       "needs_independent_ai_review": true,
-      "limitations": [],
+      "limitations": [
+        "The strongest market has no verified price: do not substitute the second market"
+      ],
       "market_value": {
         "1": {
-          "raw_probability_pct": 40.5,
-          "odds": 2.2,
-          "implied_probability_pct": 45.45,
-          "adjusted_probability_pct": 42.73,
-          "raw_ev_pct": -10.9,
-          "conservative_ev_pct": -5.99,
-          "score": 23.613
+          "raw_probability_pct": 31.5,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
         },
         "X": {
-          "raw_probability_pct": 26.1,
-          "odds": 3.69,
-          "implied_probability_pct": 27.1,
-          "adjusted_probability_pct": 26.55,
-          "raw_ev_pct": -3.69,
-          "conservative_ev_pct": -2.03,
-          "score": 18.52
+          "raw_probability_pct": 29.5,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
         },
         "2": {
-          "raw_probability_pct": 33.4,
-          "odds": 3.27,
-          "implied_probability_pct": 30.58,
-          "adjusted_probability_pct": 32.13,
-          "raw_ev_pct": 9.22,
-          "conservative_ev_pct": 5.06,
-          "score": 23.913
+          "raw_probability_pct": 39.0,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
         },
         "3+": {
-          "raw_probability_pct": 49.2,
-          "odds": 1.72,
-          "implied_probability_pct": 58.14,
-          "adjusted_probability_pct": 53.23,
-          "raw_ev_pct": -15.38,
-          "conservative_ev_pct": -8.45,
-          "score": 26.964
+          "raw_probability_pct": 36.2,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
         },
         "GG": {
-          "raw_probability_pct": 53.6,
-          "odds": 1.55,
-          "implied_probability_pct": 64.52,
-          "adjusted_probability_pct": 58.52,
-          "raw_ev_pct": -16.92,
-          "conservative_ev_pct": -9.3,
-          "score": 28.822
+          "raw_probability_pct": 43.0,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
         },
         "NG": {
-          "raw_probability_pct": 46.4,
-          "odds": 2.3,
-          "implied_probability_pct": 43.48,
-          "adjusted_probability_pct": 45.08,
-          "raw_ev_pct": 6.72,
-          "conservative_ev_pct": 3.69,
-          "score": 28.763
+          "raw_probability_pct": 57.0,
+          "odds": null,
+          "implied_probability_pct": null,
+          "adjusted_probability_pct": null,
+          "raw_ev_pct": null,
+          "conservative_ev_pct": null,
+          "score": null
         }
       },
-      "data_quality_index_pct": 54.9,
+      "data_quality_index_pct": 50.7,
       "data_quality_factors": {
         "home_last_matches": 5,
         "away_last_matches": 5,
-        "home_home_games": 3,
+        "home_home_games": 2,
         "away_away_games": 2,
         "league_games": 10,
-        "goal_variance": 1.68
+        "goal_variance": 3.04
       },
-      "recommended_market": "GG",
-      "recommended_pct": 53.6,
-      "recommended_odds": 1.55,
-      "recommended_score": 28.822,
-      "recommended_adjusted_pct": 58.52,
-      "recommended_ev_pct": -9.3,
-      "value_runner_up_market": "NG",
-      "value_runner_up_score": 28.763,
-      "b_market_rank": 3,
+      "recommended_market": null,
+      "recommended_pct": null,
+      "recommended_odds": null,
+      "recommended_score": null,
+      "recommended_adjusted_pct": null,
+      "recommended_ev_pct": null,
+      "value_runner_up_market": null,
+      "value_runner_up_score": null,
+      "b_market_rank": null,
       "b_market": null,
       "b_odds": null,
       "b_probability_pct": null,
@@ -1740,7 +1482,7 @@
       "b_conservative_ev_pct": null,
       "b_score": null,
       "value_limitations": [
-        "No positive conservative EV for chosen market"
+        "No verified odds for any of six markets"
       ]
     }
   ],
@@ -1748,44 +1490,44 @@
     "limit": 10,
     "selection_rule": "Top ten future quoted fixtures by existing model rank; ticket A/B eligibility remains independent",
     "research_only": true,
-    "count": 10,
+    "count": 7,
     "math_recalculation_prohibited": true,
     "independent_ai_review_required": true,
     "candidates": [
       {
         "rank": 1,
-        "fixture_id": "espn:football:uefa.champions:401915299",
-        "match": "RB Leipzig - Lens",
-        "datetime": "2026-11-24T20:00:00Z",
-        "top_market": "3+",
-        "top_probability_pct": 80.5,
-        "recommended_market": "3+",
-        "recommended_probability_pct": 80.5,
-        "recommended_adjusted_probability_pct": 78.16,
-        "recommended_score": 40.41,
-        "recommended_ev_pct": 2.39,
-        "data_quality_index_pct": 43.7,
-        "second_market": "GG",
-        "second_probability_pct": 75.3,
-        "top_market_odds": 1.31,
-        "recommended_market_odds": 1.31,
+        "fixture_id": "espn:football:uefa.champions:401915373",
+        "match": "Sporting CP - Manchester United",
+        "datetime": "2026-11-25T20:00:00Z",
+        "top_market": "1",
+        "top_probability_pct": 63.6,
+        "recommended_market": "1",
+        "recommended_probability_pct": 63.6,
+        "recommended_adjusted_probability_pct": 52.5,
+        "recommended_score": 43.17,
+        "recommended_ev_pct": 34.41,
+        "data_quality_index_pct": 54.8,
+        "second_market": "3+",
+        "second_probability_pct": 61.1,
+        "top_market_odds": 2.56,
+        "recommended_market_odds": 2.56,
         "eligible_for_A": true,
-        "eligible_for_B": true,
-        "b_market": "3+",
-        "b_market_rank": 1,
-        "b_market_odds": 1.31,
-        "b_market_probability_pct": 80.5,
-        "b_market_ev_pct": 2.39,
+        "eligible_for_B": false,
+        "b_market": null,
+        "b_market_rank": 2,
+        "b_market_odds": null,
+        "b_market_probability_pct": null,
+        "b_market_ev_pct": null,
         "research_only": false,
         "confidence": "normal",
         "history_evidence_complete": true,
         "all_six_probabilities_pct": {
-          "1": 59.1,
-          "X": 17.9,
-          "2": 23.0,
-          "3+": 80.5,
-          "GG": 75.3,
-          "NG": 24.7
+          "1": 63.6,
+          "X": 19.8,
+          "2": 16.6,
+          "3+": 61.1,
+          "GG": 56.0,
+          "NG": 44.0
         },
         "math_already_done": {
           "last_five_matches_per_team": {
@@ -1796,16 +1538,16 @@
           "home_away_form": "Present",
           "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
           "modeled_goals": {
-            "home": 2.66,
-            "away": 1.66
+            "home": 2.15,
+            "away": 1.0
           },
           "poisson_probabilities": {
-            "1": 59.1,
-            "X": 17.9,
-            "2": 23.0,
-            "3+": 80.5,
-            "GG": 75.3,
-            "NG": 24.7
+            "1": 63.6,
+            "X": 19.8,
+            "2": 16.6,
+            "3+": 61.1,
+            "GG": 56.0,
+            "NG": 44.0
           }
         },
         "ai_checks_still_required": [
@@ -1821,21 +1563,21 @@
       },
       {
         "rank": 2,
-        "fixture_id": "espn:football:sco.1:401878345",
-        "match": "Rangers - Aberdeen",
-        "datetime": "2026-11-24T20:00:00Z",
+        "fixture_id": "espn:football:uefa.champions:401915374",
+        "match": "Paris Saint-Germain - AS Roma",
+        "datetime": "2026-11-25T20:00:00Z",
         "top_market": "3+",
-        "top_probability_pct": 69.3,
+        "top_probability_pct": 74.7,
         "recommended_market": "GG",
-        "recommended_probability_pct": 68.6,
-        "recommended_adjusted_probability_pct": 62.07,
-        "recommended_score": 39.48,
-        "recommended_ev_pct": 12.97,
-        "data_quality_index_pct": 52.2,
+        "recommended_probability_pct": 73.5,
+        "recommended_adjusted_probability_pct": 71.87,
+        "recommended_score": 39.515,
+        "recommended_ev_pct": 2.77,
+        "data_quality_index_pct": 54.3,
         "second_market": "GG",
-        "second_probability_pct": 68.6,
-        "top_market_odds": 1.36,
-        "recommended_market_odds": 1.82,
+        "second_probability_pct": 73.5,
+        "top_market_odds": 1.33,
+        "recommended_market_odds": 1.43,
         "eligible_for_A": true,
         "eligible_for_B": false,
         "b_market": null,
@@ -1847,12 +1589,12 @@
         "confidence": "normal",
         "history_evidence_complete": true,
         "all_six_probabilities_pct": {
-          "1": 47.6,
-          "X": 21.6,
-          "2": 30.8,
-          "3+": 69.3,
-          "GG": 68.6,
-          "NG": 31.4
+          "1": 41.5,
+          "X": 21.0,
+          "2": 37.5,
+          "3+": 74.7,
+          "GG": 73.5,
+          "NG": 26.5
         },
         "math_already_done": {
           "last_five_matches_per_team": {
@@ -1864,15 +1606,15 @@
           "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
           "modeled_goals": {
             "home": 2.0,
-            "away": 1.58
+            "away": 1.9
           },
           "poisson_probabilities": {
-            "1": 47.6,
-            "X": 21.6,
-            "2": 30.8,
-            "3+": 69.3,
-            "GG": 68.6,
-            "NG": 31.4
+            "1": 41.5,
+            "X": 21.0,
+            "2": 37.5,
+            "3+": 74.7,
+            "GG": 73.5,
+            "NG": 26.5
           }
         },
         "ai_checks_still_required": [
@@ -1888,38 +1630,38 @@
       },
       {
         "rank": 3,
-        "fixture_id": "espn:football:uefa.champions:401915298",
-        "match": "Real Madrid - PSV Eindhoven",
-        "datetime": "2026-11-24T20:00:00Z",
-        "top_market": "3+",
-        "top_probability_pct": 73.4,
+        "fixture_id": "espn:football:uefa.champions:401915292",
+        "match": "Club Brugge - Liverpool",
+        "datetime": "2026-11-25T20:00:00Z",
+        "top_market": "GG",
+        "top_probability_pct": 68.0,
         "recommended_market": "GG",
-        "recommended_probability_pct": 72.5,
-        "recommended_adjusted_probability_pct": 69.17,
-        "recommended_score": 38.83,
-        "recommended_ev_pct": 5.14,
-        "data_quality_index_pct": 50.4,
-        "second_market": "GG",
-        "second_probability_pct": 72.5,
-        "top_market_odds": 1.16,
-        "recommended_market_odds": 1.52,
-        "eligible_for_A": true,
+        "recommended_probability_pct": 68.0,
+        "recommended_adjusted_probability_pct": 71.09,
+        "recommended_score": 35.831,
+        "recommended_ev_pct": -4.74,
+        "data_quality_index_pct": 53.4,
+        "second_market": "3+",
+        "second_probability_pct": 67.8,
+        "top_market_odds": 1.34,
+        "recommended_market_odds": 1.34,
+        "eligible_for_A": false,
         "eligible_for_B": false,
         "b_market": null,
         "b_market_rank": 2,
         "b_market_odds": null,
         "b_market_probability_pct": null,
         "b_market_ev_pct": null,
-        "research_only": false,
+        "research_only": true,
         "confidence": "normal",
         "history_evidence_complete": true,
         "all_six_probabilities_pct": {
-          "1": 36.3,
-          "X": 21.2,
-          "2": 42.5,
-          "3+": 73.4,
-          "GG": 72.5,
-          "NG": 27.5
+          "1": 43.5,
+          "X": 22.2,
+          "2": 34.3,
+          "3+": 67.8,
+          "GG": 68.0,
+          "NG": 32.0
         },
         "math_already_done": {
           "last_five_matches_per_team": {
@@ -1930,16 +1672,16 @@
           "home_away_form": "Present",
           "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
           "modeled_goals": {
-            "home": 1.83,
-            "away": 1.99
+            "home": 1.86,
+            "away": 1.64
           },
           "poisson_probabilities": {
-            "1": 36.3,
-            "X": 21.2,
-            "2": 42.5,
-            "3+": 73.4,
-            "GG": 72.5,
-            "NG": 27.5
+            "1": 43.5,
+            "X": 22.2,
+            "2": 34.3,
+            "3+": 67.8,
+            "GG": 68.0,
+            "NG": 32.0
           }
         },
         "ai_checks_still_required": [
@@ -1955,58 +1697,58 @@
       },
       {
         "rank": 4,
-        "fixture_id": "espn:football:uefa.champions:401915294",
-        "match": "Feyenoord Rotterdam - FC Porto",
-        "datetime": "2026-11-24T20:00:00Z",
-        "top_market": "3+",
-        "top_probability_pct": 64.6,
-        "recommended_market": "2",
-        "recommended_probability_pct": 56.0,
-        "recommended_adjusted_probability_pct": 49.61,
-        "recommended_score": 35.84,
-        "recommended_ev_pct": 16.58,
-        "data_quality_index_pct": 52.5,
-        "second_market": "GG",
-        "second_probability_pct": 62.6,
-        "top_market_odds": 1.65,
-        "recommended_market_odds": 2.35,
+        "fixture_id": "espn:football:uefa.champions:401915293",
+        "match": "Slavia Prague - Villarreal",
+        "datetime": "2026-11-25T17:45:00Z",
+        "top_market": "GG",
+        "top_probability_pct": 67.5,
+        "recommended_market": "3+",
+        "recommended_probability_pct": 67.1,
+        "recommended_adjusted_probability_pct": 67.58,
+        "recommended_score": 35.312,
+        "recommended_ev_pct": -0.66,
+        "data_quality_index_pct": 48.1,
+        "second_market": "3+",
+        "second_probability_pct": 67.1,
+        "top_market_odds": 1.41,
+        "recommended_market_odds": 1.47,
         "eligible_for_A": false,
-        "eligible_for_B": true,
-        "b_market": "3+",
-        "b_market_rank": 2,
-        "b_market_odds": 1.65,
-        "b_market_probability_pct": 64.6,
-        "b_market_ev_pct": 3.46,
-        "research_only": false,
+        "eligible_for_B": false,
+        "b_market": null,
+        "b_market_rank": 1,
+        "b_market_odds": null,
+        "b_market_probability_pct": null,
+        "b_market_ev_pct": null,
+        "research_only": true,
         "confidence": "normal",
         "history_evidence_complete": true,
         "all_six_probabilities_pct": {
-          "1": 22.9,
-          "X": 21.1,
-          "2": 56.0,
-          "3+": 64.6,
-          "GG": 62.6,
-          "NG": 37.4
+          "1": 34.8,
+          "X": 22.3,
+          "2": 42.9,
+          "3+": 67.1,
+          "GG": 67.5,
+          "NG": 32.5
         },
         "math_already_done": {
           "last_five_matches_per_team": {
-            "home": 5,
+            "home": 4,
             "away": 5
           },
           "recent_goals_attack_defence": "Present",
           "home_away_form": "Present",
           "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
           "modeled_goals": {
-            "home": 1.26,
-            "away": 2.07
+            "home": 1.63,
+            "away": 1.83
           },
           "poisson_probabilities": {
-            "1": 22.9,
-            "X": 21.1,
-            "2": 56.0,
-            "3+": 64.6,
-            "GG": 62.6,
-            "NG": 37.4
+            "1": 34.8,
+            "X": 22.3,
+            "2": 42.9,
+            "3+": 67.1,
+            "GG": 67.5,
+            "NG": 32.5
           }
         },
         "ai_checks_still_required": [
@@ -2022,38 +1764,38 @@
       },
       {
         "rank": 5,
-        "fixture_id": "espn:football:uefa.champions:401915297",
-        "match": "Slovan Bratislava - Real Betis",
-        "datetime": "2026-11-24T20:00:00Z",
-        "top_market": "3+",
-        "top_probability_pct": 66.3,
+        "fixture_id": "espn:football:uefa.champions:401915375",
+        "match": "Shakhtar Donetsk - Fenerbahce",
+        "datetime": "2026-11-25T20:00:00Z",
+        "top_market": "GG",
+        "top_probability_pct": 61.8,
         "recommended_market": "3+",
-        "recommended_probability_pct": 66.3,
-        "recommended_adjusted_probability_pct": 69.51,
-        "recommended_score": 35.184,
-        "recommended_ev_pct": -5.47,
-        "data_quality_index_pct": 55.6,
-        "second_market": "2",
-        "second_probability_pct": 62.7,
-        "top_market_odds": 1.36,
-        "recommended_market_odds": 1.36,
-        "eligible_for_A": false,
-        "eligible_for_B": false,
-        "b_market": null,
+        "recommended_probability_pct": 59.5,
+        "recommended_adjusted_probability_pct": 57.78,
+        "recommended_score": 35.176,
+        "recommended_ev_pct": 4.58,
+        "data_quality_index_pct": 59.6,
+        "second_market": "3+",
+        "second_probability_pct": 59.5,
+        "top_market_odds": 1.57,
+        "recommended_market_odds": 1.81,
+        "eligible_for_A": true,
+        "eligible_for_B": true,
+        "b_market": "3+",
         "b_market_rank": 1,
-        "b_market_odds": null,
-        "b_market_probability_pct": null,
-        "b_market_ev_pct": null,
-        "research_only": true,
+        "b_market_odds": 1.81,
+        "b_market_probability_pct": 59.5,
+        "b_market_ev_pct": 4.58,
+        "research_only": false,
         "confidence": "normal",
         "history_evidence_complete": true,
         "all_six_probabilities_pct": {
-          "1": 18.0,
-          "X": 19.3,
-          "2": 62.7,
-          "3+": 66.3,
-          "GG": 61.1,
-          "NG": 38.9
+          "1": 36.6,
+          "X": 23.9,
+          "2": 39.5,
+          "3+": 59.5,
+          "GG": 61.8,
+          "NG": 38.2
         },
         "math_already_done": {
           "last_five_matches_per_team": {
@@ -2064,16 +1806,16 @@
           "home_away_form": "Present",
           "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
           "modeled_goals": {
-            "home": 1.14,
-            "away": 2.27
+            "home": 1.51,
+            "away": 1.58
           },
           "poisson_probabilities": {
-            "1": 18.0,
-            "X": 19.3,
-            "2": 62.7,
-            "3+": 66.3,
-            "GG": 61.1,
-            "NG": 38.9
+            "1": 36.6,
+            "X": 23.9,
+            "2": 39.5,
+            "3+": 59.5,
+            "GG": 61.8,
+            "NG": 38.2
           }
         },
         "ai_checks_still_required": [
@@ -2089,38 +1831,38 @@
       },
       {
         "rank": 6,
-        "fixture_id": "espn:football:uefa.champions:401915379",
-        "match": "Manchester City - Napoli",
-        "datetime": "2026-11-24T20:00:00Z",
+        "fixture_id": "espn:football:uefa.champions:401915376",
+        "match": "Internazionale - VfB Stuttgart",
+        "datetime": "2026-11-25T20:00:00Z",
         "top_market": "GG",
-        "top_probability_pct": 61.5,
+        "top_probability_pct": 59.2,
         "recommended_market": "GG",
-        "recommended_probability_pct": 61.5,
-        "recommended_adjusted_probability_pct": 61.43,
-        "recommended_score": 34.307,
-        "recommended_ev_pct": 0.14,
-        "data_quality_index_pct": 56.3,
+        "recommended_probability_pct": 59.2,
+        "recommended_adjusted_probability_pct": 66.12,
+        "recommended_score": 31.194,
+        "recommended_ev_pct": -10.08,
+        "data_quality_index_pct": 51.7,
         "second_market": "3+",
-        "second_probability_pct": 59.1,
-        "top_market_odds": 1.63,
-        "recommended_market_odds": 1.63,
-        "eligible_for_A": true,
+        "second_probability_pct": 56.8,
+        "top_market_odds": 1.36,
+        "recommended_market_odds": 1.36,
+        "eligible_for_A": false,
         "eligible_for_B": false,
         "b_market": null,
         "b_market_rank": 3,
         "b_market_odds": null,
         "b_market_probability_pct": null,
         "b_market_ev_pct": null,
-        "research_only": false,
+        "research_only": true,
         "confidence": "normal",
         "history_evidence_complete": true,
         "all_six_probabilities_pct": {
-          "1": 39.1,
-          "X": 24.0,
-          "2": 36.9,
-          "3+": 59.1,
-          "GG": 61.5,
-          "NG": 38.5
+          "1": 44.3,
+          "X": 24.2,
+          "2": 31.5,
+          "3+": 56.8,
+          "GG": 59.2,
+          "NG": 40.8
         },
         "math_already_done": {
           "last_five_matches_per_team": {
@@ -2131,16 +1873,16 @@
           "home_away_form": "Present",
           "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
           "modeled_goals": {
-            "home": 1.56,
-            "away": 1.51
+            "home": 1.63,
+            "away": 1.33
           },
           "poisson_probabilities": {
-            "1": 39.1,
-            "X": 24.0,
-            "2": 36.9,
-            "3+": 59.1,
-            "GG": 61.5,
-            "NG": 38.5
+            "1": 44.3,
+            "X": 24.2,
+            "2": 31.5,
+            "3+": 56.8,
+            "GG": 59.2,
+            "NG": 40.8
           }
         },
         "ai_checks_still_required": [
@@ -2156,155 +1898,21 @@
       },
       {
         "rank": 7,
-        "fixture_id": "espn:football:uefa.champions:401915296",
-        "match": "Como - AEK Athens",
-        "datetime": "2026-11-24T20:00:00Z",
-        "top_market": "GG",
-        "top_probability_pct": 59.7,
-        "recommended_market": "GG",
-        "recommended_probability_pct": 59.7,
-        "recommended_adjusted_probability_pct": 60.19,
-        "recommended_score": 31.838,
-        "recommended_ev_pct": -0.68,
-        "data_quality_index_pct": 45.7,
-        "second_market": "3+",
-        "second_probability_pct": 58.6,
-        "top_market_odds": 1.65,
-        "recommended_market_odds": 1.65,
-        "eligible_for_A": false,
-        "eligible_for_B": false,
-        "b_market": null,
-        "b_market_rank": 2,
-        "b_market_odds": null,
-        "b_market_probability_pct": null,
-        "b_market_ev_pct": null,
-        "research_only": true,
-        "confidence": "normal",
-        "history_evidence_complete": true,
-        "all_six_probabilities_pct": {
-          "1": 49.4,
-          "X": 23.3,
-          "2": 27.3,
-          "3+": 58.6,
-          "GG": 59.7,
-          "NG": 40.3
-        },
-        "math_already_done": {
-          "last_five_matches_per_team": {
-            "home": 5,
-            "away": 5
-          },
-          "recent_goals_attack_defence": "Present",
-          "home_away_form": "Present",
-          "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
-          "modeled_goals": {
-            "home": 1.78,
-            "away": 1.27
-          },
-          "poisson_probabilities": {
-            "1": 49.4,
-            "X": 23.3,
-            "2": 27.3,
-            "3+": 58.6,
-            "GG": 59.7,
-            "NG": 40.3
-          }
-        },
-        "ai_checks_still_required": [
-          "actual_xg_xga_if_available",
-          "injuries_and_suspensions",
-          "expected_lineups",
-          "recent_h2h_up_to_five",
-          "table_and_motivation",
-          "rest_days_and_schedule",
-          "odds_identity_and_source"
-        ],
-        "ai_review_status": "pending_independent_review"
-      },
-      {
-        "rank": 8,
-        "fixture_id": "espn:football:uefa.champions:401915295",
-        "match": "Arsenal - Borussia Dortmund",
-        "datetime": "2026-11-24T20:00:00Z",
-        "top_market": "GG",
-        "top_probability_pct": 56.4,
-        "recommended_market": "GG",
-        "recommended_probability_pct": 56.4,
-        "recommended_adjusted_probability_pct": 55.55,
-        "recommended_score": 31.818,
-        "recommended_ev_pct": 1.66,
-        "data_quality_index_pct": 51.8,
-        "second_market": "3+",
-        "second_probability_pct": 52.6,
-        "top_market_odds": 1.83,
-        "recommended_market_odds": 1.83,
-        "eligible_for_A": true,
-        "eligible_for_B": false,
-        "b_market": null,
-        "b_market_rank": 3,
-        "b_market_odds": null,
-        "b_market_probability_pct": null,
-        "b_market_ev_pct": null,
-        "research_only": false,
-        "confidence": "normal",
-        "history_evidence_complete": true,
-        "all_six_probabilities_pct": {
-          "1": 37.6,
-          "X": 25.4,
-          "2": 37.0,
-          "3+": 52.6,
-          "GG": 56.4,
-          "NG": 43.6
-        },
-        "math_already_done": {
-          "last_five_matches_per_team": {
-            "home": 5,
-            "away": 5
-          },
-          "recent_goals_attack_defence": "Present",
-          "home_away_form": "Present",
-          "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
-          "modeled_goals": {
-            "home": 1.4,
-            "away": 1.38
-          },
-          "poisson_probabilities": {
-            "1": 37.6,
-            "X": 25.4,
-            "2": 37.0,
-            "3+": 52.6,
-            "GG": 56.4,
-            "NG": 43.6
-          }
-        },
-        "ai_checks_still_required": [
-          "actual_xg_xga_if_available",
-          "injuries_and_suspensions",
-          "expected_lineups",
-          "recent_h2h_up_to_five",
-          "table_and_motivation",
-          "rest_days_and_schedule",
-          "odds_identity_and_source"
-        ],
-        "ai_review_status": "pending_independent_review"
-      },
-      {
-        "rank": 9,
-        "fixture_id": "espn:football:bra.1:401841335",
-        "match": "Chapecoense - Palmeiras",
-        "datetime": "2026-11-24T21:00:00Z",
-        "top_market": "GG",
-        "top_probability_pct": 51.3,
-        "recommended_market": "2",
-        "recommended_probability_pct": 49.6,
-        "recommended_adjusted_probability_pct": 46.38,
-        "recommended_score": 31.117,
-        "recommended_ev_pct": 8.53,
-        "data_quality_index_pct": 53.1,
-        "second_market": "2",
-        "second_probability_pct": 49.6,
-        "top_market_odds": 1.56,
-        "recommended_market_odds": 2.34,
+        "fixture_id": "espn:football:arg.1:401933757",
+        "match": "Boca Juniors - Independiente Rivadavia",
+        "datetime": "2026-11-26T00:00:00Z",
+        "top_market": "1",
+        "top_probability_pct": 54.8,
+        "recommended_market": "1",
+        "recommended_probability_pct": 54.8,
+        "recommended_adjusted_probability_pct": 57.81,
+        "recommended_score": 30.038,
+        "recommended_ev_pct": -6.35,
+        "data_quality_index_pct": 56.6,
+        "second_market": "NG",
+        "second_probability_pct": 54.3,
+        "top_market_odds": 1.62,
+        "recommended_market_odds": 1.62,
         "eligible_for_A": false,
         "eligible_for_B": false,
         "b_market": null,
@@ -2316,12 +1924,12 @@
         "confidence": "normal",
         "history_evidence_complete": true,
         "all_six_probabilities_pct": {
-          "1": 25.2,
-          "X": 25.2,
-          "2": 49.6,
-          "3+": 48.6,
-          "GG": 51.3,
-          "NG": 48.7
+          "1": 54.8,
+          "X": 25.1,
+          "2": 20.1,
+          "3+": 44.2,
+          "GG": 45.7,
+          "NG": 54.3
         },
         "math_already_done": {
           "last_five_matches_per_team": {
@@ -2332,83 +1940,16 @@
           "home_away_form": "Present",
           "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
           "modeled_goals": {
-            "home": 1.04,
-            "away": 1.57
+            "home": 1.59,
+            "away": 0.85
           },
           "poisson_probabilities": {
-            "1": 25.2,
-            "X": 25.2,
-            "2": 49.6,
-            "3+": 48.6,
-            "GG": 51.3,
-            "NG": 48.7
-          }
-        },
-        "ai_checks_still_required": [
-          "actual_xg_xga_if_available",
-          "injuries_and_suspensions",
-          "expected_lineups",
-          "recent_h2h_up_to_five",
-          "table_and_motivation",
-          "rest_days_and_schedule",
-          "odds_identity_and_source"
-        ],
-        "ai_review_status": "pending_independent_review"
-      },
-      {
-        "rank": 10,
-        "fixture_id": "espn:football:usa.1:401933738",
-        "match": "San Jose Earthquakes - Houston Dynamo FC",
-        "datetime": "2026-11-25T03:00:00Z",
-        "top_market": "GG",
-        "top_probability_pct": 53.6,
-        "recommended_market": "GG",
-        "recommended_probability_pct": 53.6,
-        "recommended_adjusted_probability_pct": 58.52,
-        "recommended_score": 28.822,
-        "recommended_ev_pct": -9.3,
-        "data_quality_index_pct": 54.9,
-        "second_market": "3+",
-        "second_probability_pct": 49.2,
-        "top_market_odds": 1.55,
-        "recommended_market_odds": 1.55,
-        "eligible_for_A": false,
-        "eligible_for_B": false,
-        "b_market": null,
-        "b_market_rank": 3,
-        "b_market_odds": null,
-        "b_market_probability_pct": null,
-        "b_market_ev_pct": null,
-        "research_only": true,
-        "confidence": "normal",
-        "history_evidence_complete": true,
-        "all_six_probabilities_pct": {
-          "1": 40.5,
-          "X": 26.1,
-          "2": 33.4,
-          "3+": 49.2,
-          "GG": 53.6,
-          "NG": 46.4
-        },
-        "math_already_done": {
-          "last_five_matches_per_team": {
-            "home": 5,
-            "away": 5
-          },
-          "recent_goals_attack_defence": "Present",
-          "home_away_form": "Present",
-          "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
-          "modeled_goals": {
-            "home": 1.4,
-            "away": 1.25
-          },
-          "poisson_probabilities": {
-            "1": 40.5,
-            "X": 26.1,
-            "2": 33.4,
-            "3+": 49.2,
-            "GG": 53.6,
-            "NG": 46.4
+            "1": 54.8,
+            "X": 25.1,
+            "2": 20.1,
+            "3+": 44.2,
+            "GG": 45.7,
+            "NG": 54.3
           }
         },
         "ai_checks_still_required": [
@@ -2425,85 +1966,50 @@
     ]
   },
   "detailed_ai_top_ten_fixture_ids": [
-    "espn:football:uefa.champions:401915299",
-    "espn:football:sco.1:401878345",
-    "espn:football:uefa.champions:401915298",
-    "espn:football:uefa.champions:401915294",
-    "espn:football:uefa.champions:401915297",
-    "espn:football:uefa.champions:401915379",
-    "espn:football:uefa.champions:401915296",
-    "espn:football:uefa.champions:401915295",
-    "espn:football:bra.1:401841335",
-    "espn:football:usa.1:401933738"
+    "espn:football:uefa.champions:401915373",
+    "espn:football:uefa.champions:401915374",
+    "espn:football:uefa.champions:401915292",
+    "espn:football:uefa.champions:401915293",
+    "espn:football:uefa.champions:401915375",
+    "espn:football:uefa.champions:401915376",
+    "espn:football:arg.1:401933757"
   ],
   "ticket_proposals": {
     "A": {
       "id": "A",
-      "combined_odds": 2.766,
+      "combined_odds": 2.588,
       "selection_method": "highest conservative market EV/probability/evidence score; tie by model probability then runner-up",
       "ready_for_publication": false,
       "requires_independent_ai_approval": true,
       "matches": [
         {
-          "fixture_id": "espn:football:uefa.champions:401915298",
-          "match": "Real Madrid - PSV Eindhoven",
-          "datetime": "2026-11-24T20:00:00Z",
+          "fixture_id": "espn:football:uefa.champions:401915374",
+          "match": "Paris Saint-Germain - AS Roma",
+          "datetime": "2026-11-25T20:00:00Z",
           "pick": "GG",
-          "probability_pct": 72.5,
-          "rank_score": 38.83,
-          "conservative_ev_pct": 5.14,
-          "data_quality_index_pct": 50.4,
-          "second_best_pct": 72.5,
-          "odd": 1.52
+          "probability_pct": 73.5,
+          "rank_score": 39.515,
+          "conservative_ev_pct": 2.77,
+          "data_quality_index_pct": 54.3,
+          "second_best_pct": 73.5,
+          "odd": 1.43
         },
         {
-          "fixture_id": "espn:football:sco.1:401878345",
-          "match": "Rangers - Aberdeen",
-          "datetime": "2026-11-24T20:00:00Z",
-          "pick": "GG",
-          "probability_pct": 68.6,
-          "rank_score": 39.48,
-          "conservative_ev_pct": 12.97,
-          "data_quality_index_pct": 52.2,
-          "second_best_pct": 68.6,
-          "odd": 1.82
+          "fixture_id": "espn:football:uefa.champions:401915375",
+          "match": "Shakhtar Donetsk - Fenerbahce",
+          "datetime": "2026-11-25T20:00:00Z",
+          "pick": "3+",
+          "probability_pct": 59.5,
+          "rank_score": 35.176,
+          "conservative_ev_pct": 4.58,
+          "data_quality_index_pct": 59.6,
+          "second_best_pct": 59.5,
+          "odd": 1.81
         }
       ]
     },
-    "B": {
-      "id": "B",
-      "combined_odds": 2.161,
-      "selection_method": "highest conservative market EV/probability/evidence score; tie by model probability then runner-up",
-      "ready_for_publication": false,
-      "requires_independent_ai_approval": true,
-      "matches": [
-        {
-          "fixture_id": "espn:football:uefa.champions:401915299",
-          "match": "RB Leipzig - Lens",
-          "datetime": "2026-11-24T20:00:00Z",
-          "pick": "3+",
-          "probability_pct": 80.5,
-          "rank_score": 40.41,
-          "conservative_ev_pct": 2.39,
-          "data_quality_index_pct": 43.7,
-          "second_best_pct": 75.3,
-          "odd": 1.31
-        },
-        {
-          "fixture_id": "espn:football:uefa.champions:401915294",
-          "match": "Feyenoord Rotterdam - FC Porto",
-          "datetime": "2026-11-24T20:00:00Z",
-          "pick": "3+",
-          "probability_pct": 64.6,
-          "rank_score": 35.695,
-          "conservative_ev_pct": 3.46,
-          "data_quality_index_pct": 52.5,
-          "second_best_pct": 62.6,
-          "odd": 1.65
-        }
-      ]
-    },
-    "reason": "Statistical proposals only. Independent Scout must verify and explicitly approve."
+    "B": null,
+    "reason": "No 2-3 leg B combination: 3+ must be the first or second value market with qualifying odds/EV"
   },
   "publication_allowed": false
 }
