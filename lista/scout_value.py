@@ -108,18 +108,14 @@ def apply_value_model(rows, history, now):
                        and min(r["evidence"]["home_last_matches"],
                                r["evidence"]["away_last_matches"])>=4
                        and start>now+timedelta(minutes=20))
-        # Ticket B always plays 3+ goals. Accept 3+ when it is the
-        # best OR second-best VALUE-ranked market, not only the A pick.
-        # B must pass every safety rule using its OWN 3+ odds and EV.
+        # Ticket B is a SEPARATE raw-probability ranking of 3+ goals,
+        # within the TOP10 research shortlist only. Value rank and EV are
+        # informational diagnostics, never reasons to drop a 3+ candidate.
+        # Final AI review still checks quote identity, lineup and risks.
         over=markets["3+"]
         over_rank=available.index("3+")+1 if "3+" in available else None
-        b_qualified=bool(over_rank in (1,2)
-                         and over["odds"] is not None
+        b_qualified=bool(over["odds"] is not None
                          and over["odds"]<3.00
-                         and over["conservative_ev_pct"]>0
-                         and over["adjusted_probability_pct"]>=50
-                         and min(r["evidence"]["home_last_matches"],
-                                 r["evidence"]["away_last_matches"])>=4
                          and start>now+timedelta(minutes=20))
         r["candidate_A"]=qualified
         r["candidate_B"]=b_qualified
@@ -129,7 +125,11 @@ def apply_value_model(rows, history, now):
         r["b_probability_pct"]=r["probability_pct"]["3+"] if b_qualified else None
         r["b_adjusted_probability_pct"]=over["adjusted_probability_pct"] if b_qualified else None
         r["b_conservative_ev_pct"]=over["conservative_ev_pct"] if b_qualified else None
-        r["b_score"]=over["score"] if b_qualified else None
+        r["b_score"]=r["probability_pct"]["3+"] if b_qualified else None
+        r["b_value_warning"]=(
+            "Negative conservative EV: rank eligible, independent AI review required"
+            if b_qualified and over["conservative_ev_pct"] is not None
+               and over["conservative_ev_pct"]<=0 else None)
         reasons=[]
         if chosen is None:reasons.append("No verified odds for any of six markets")
         elif sel["odds"]>=3:reasons.append("Chosen market odds 3+ prevents a 2–3 multi-leg ticket")
