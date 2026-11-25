@@ -4,7 +4,7 @@
 This is a transparent statistical PRE-SCOUT, not calibrated certainty.
 Every fixture is modeled, even if its odds are missing or kickoff has passed.
 One strongest market per fixture; a second-highest probability breaks ties
-between fixtures. B can only use fixtures with 3+ as the top market.
+between fixtures. B ranks independent 3+ chances within TOP10, subject to odds and AI review.
 Ticket proposals are NEVER approved or published by this module:
 the independent analyst must review injuries, suspensions, lineup, H2H, xG
 when available, and source odds before publishing.
@@ -185,54 +185,69 @@ def ticket_combos(rows):
     combos.sort(key=lambda c: c["grade"], reverse=True)
     return combos[:MAX_COMBOS_PER_POOL]
 
-def suggestions(ranked):
-    a_pool = [f for f in ranked if f["candidate_A"]]
-    b_pool = []
-    for f in ranked:
-        if not f["candidate_B"]:
+def ranked_b_pairs(rows):
+    """Two highest-probability 3+ legs with a valid 2–3 total quote.
+
+    Called ONLY on the TOP10 handed to the independent AI. Percentage of
+    Poisson 3+ probability determines priority; EV is diagnostic, not a
+    hard reject. Never fill a price gap with a made-up odd.
+    """
+    pool=[]
+    for f in rows:
+        if not f.get("candidate_B"):
             continue
-        # The second-best market of a fixture can be 3+. Always use the
-        # separately validated 3+ price/probability/EV in ticket B.
-        b = dict(f)
-        b["strongest_market"] = "3+"
-        b["strongest_odds"] = f.get("b_odds") or f["strongest_odds"]
-        b["strongest_pct"] = f.get("b_probability_pct") or f["strongest_pct"]
-        b["scout_value_score"] = f.get("b_score") if f.get("b_score") is not None else f.get("scout_value_score")
-        b["recommended_ev_pct"] = (f.get("b_conservative_ev_pct")
-                                    if f.get("b_conservative_ev_pct") is not None
-                                    else f.get("recommended_ev_pct"))
-        b_pool.append(b)
-    a_combos, b_combos = ticket_combos(a_pool), ticket_combos(b_pool)
+        odd=f.get("b_odds")
+        pct=f.get("b_probability_pct")
+        if odd is None or pct is None or not (1.01<float(odd)<3):
+            continue
+        b=dict(f)
+        b["strongest_market"]="3+"
+        b["strongest_odds"]=float(odd)
+        b["strongest_pct"]=float(pct)
+        b["scout_value_score"]=float(pct)
+        b["recommended_ev_pct"]=f.get("b_conservative_ev_pct")
+        pool.append(b)
+    pool.sort(key=lambda r:(-r["strongest_pct"],r["fixture_id"]))
+    pairs=[]
+    for pair in itertools.combinations(pool,2):
+        product=math.prod(x["strongest_odds"] for x in pair)
+        if not 2.0<=product<=3.0:
+            continue
+        # Compare percent 3+ DESC, not value score and not combined odds.
+        scores=tuple(sorted((x["strongest_pct"] for x in pair),reverse=True))
+        pairs.append({"rows":pair,"odds":round(product,3),
+                      "grade":scores,"ids":frozenset(x["fixture_id"] for x in pair)})
+    pairs.sort(key=lambda x:(x["grade"][0],x["grade"][1],
+                  -abs(x["odds"]-2.5)),reverse=True)
+    return pairs
+
+
+def suggestions(ranked):
+    """Give each ticket its own decision logic without publishing anything."""
+    a_pool=[f for f in ranked if f["candidate_A"]]
+    a_combos=ticket_combos(a_pool)
+    b_combos=ranked_b_pairs(ranked)
+    # B can be ranked even on a day when A has no qualified combination.
     if not a_combos:
-        return {"A": None,"B": None,"reason": "No 2-3 leg A combination totaling 2.00-3.00"}
+        return {"A":None,
+                "B":format_combo(b_combos[0],"B") if b_combos else None,
+                "reason":"No qualified A combination; B raw 3+ ranking is independent"}
     if not b_combos:
-        best = a_combos[0]
-        return {"A": format_combo(best, "A"), "B": None,
-                "reason": "No 2-3 leg B combination: 3+ must be the first or second value market with qualifying odds/EV"}
-    chosen = None
+        return {"A":format_combo(a_combos[0],"A"),"B":None,
+                "reason":"No two non-started, quoted TOP10 3+ legs total odds 2.00-3.00"}
     for a in a_combos:
-        for b in b_combos:
-            if a["ids"] & b["ids"]:
-                continue
-            leg_list = list(a["rows"]) + list(b["rows"])
-            all_scores = [r.get("scout_value_score") if r.get("scout_value_score") is not None else r["strongest_pct"] for r in leg_list]
-            next_scores = [r["second_pct"] for r in leg_list]
-            score = (round(sum(all_scores)/len(all_scores),5), min(all_scores),
-                     round(sum(next_scores)/len(next_scores),5),
-                     -len(leg_list), a["grade"], b["grade"])
-            if chosen is None or score > chosen[0]:
-                chosen = (score,a,b)
-    if chosen is None:
-        best=a_combos[0]
-        return {"A":format_combo(best,"A"),"B":None,
-                "reason":"No eligible pair of NON-overlapping A and B combinations totaling 2.00-3.00 each"}
-    return {"A":format_combo(chosen[1],"A"),"B":format_combo(chosen[2],"B"),
-            "reason":"Statistical proposals only. Independent Scout must verify and explicitly approve."}
+        b=next((c for c in b_combos if not (a["ids"]&c["ids"])),None)
+        if b:
+            return {"A":format_combo(a,"A"),"B":format_combo(b,"B"),
+                "reason":"B: highest Poisson 3+ probabilities among TOP10, quote total 2-3; AI must review EV/risk separately"}
+    return {"A":format_combo(a_combos[0],"A"),"B":None,
+            "reason":"No non-overlapping A + two-leg B combination with odds 2.00-3.00"}
+
 
 def format_combo(combo, tid):
     return {
         "id":tid,"combined_odds":combo["odds"],
-        "selection_method":"highest conservative market EV/probability/evidence score; tie by model probability then runner-up",
+        "selection_method":("Two highest available mathematical 3+ probabilities from TOP10, odds 2-3, independent AI review" if tid=="B" else "highest conservative market EV/probability/evidence score; tie by model probability then runner-up"),
         "ready_for_publication":False,"requires_independent_ai_approval":True,
         "matches":[{
             "fixture_id":r["fixture_id"],"match":r["match"],"datetime":r["datetime"],
@@ -281,6 +296,7 @@ def detailed_ai_handoff(rows, now=None):
             "b_market_odds": r.get("b_odds"),
             "b_market_probability_pct": r.get("b_probability_pct"),
             "b_market_ev_pct": r.get("b_conservative_ev_pct"),
+            "b_value_warning": r.get("b_value_warning"),
             "research_only": bool(not r["candidate_A"] and not r["candidate_B"]),
             "confidence": r.get("confidence","unknown"),
             "history_evidence_complete": bool(r.get("history_evidence_complete",False)),
