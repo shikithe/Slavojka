@@ -2,16 +2,19 @@
   "date": "2026-11-25",
   "feedback": "TOP10_READY",
   "status": "ready",
-  "source_fingerprint": "d4d74a64852df51774e18bce7efc36800567c4d7bb46c5e697f2f3280227f271",
+  "source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
   "scout_report": "shared/agent/scout-six-markets.json",
-  "count": 7,
+  "count": 10,
   "fixture_ids": [
     "espn:football:uefa.champions:401915373",
     "espn:football:uefa.champions:401915374",
+    "espn:football:uefa.champions:401915378",
+    "espn:football:uefa.champions:401915291",
     "espn:football:uefa.champions:401915292",
     "espn:football:uefa.champions:401915293",
     "espn:football:uefa.champions:401915375",
     "espn:football:uefa.champions:401915376",
+    "espn:football:uefa.champions:401915377",
     "espn:football:arg.1:401933757"
   ],
   "candidates": [
@@ -151,6 +154,140 @@
     },
     {
       "rank": 3,
+      "fixture_id": "espn:football:uefa.champions:401915378",
+      "match": "Sabah FK - Barcelona",
+      "datetime": "2026-11-25T17:45:00Z",
+      "top_market": "3+",
+      "top_probability_pct": 71.1,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 69.3,
+      "recommended_adjusted_probability_pct": 66.28,
+      "recommended_score": 38.079,
+      "recommended_ev_pct": 5.38,
+      "data_quality_index_pct": 52.8,
+      "second_market": "GG",
+      "second_probability_pct": 69.3,
+      "top_market_odds": 1.09,
+      "recommended_market_odds": 1.59,
+      "eligible_for_A": true,
+      "eligible_for_B": false,
+      "b_market": null,
+      "b_market_rank": 2,
+      "b_market_odds": null,
+      "b_market_probability_pct": null,
+      "b_market_ev_pct": null,
+      "research_only": false,
+      "confidence": "normal",
+      "history_evidence_complete": true,
+      "all_six_probabilities_pct": {
+        "1": 27.9,
+        "X": 20.8,
+        "2": 51.3,
+        "3+": 71.1,
+        "GG": 69.3,
+        "NG": 30.7
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 5
+        },
+        "recent_goals_attack_defence": "Present",
+        "home_away_form": "Present",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.54,
+          "away": 2.13
+        },
+        "poisson_probabilities": {
+          "1": 27.9,
+          "X": 20.8,
+          "2": 51.3,
+          "3+": 71.1,
+          "GG": 69.3,
+          "NG": 30.7
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 4,
+      "fixture_id": "espn:football:uefa.champions:401915291",
+      "match": "Atlético Madrid - Viking FK",
+      "datetime": "2026-11-25T20:00:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 64.8,
+      "recommended_market": "GG",
+      "recommended_probability_pct": 64.8,
+      "recommended_adjusted_probability_pct": 56.8,
+      "recommended_score": 36.593,
+      "recommended_ev_pct": 13.6,
+      "data_quality_index_pct": 45.9,
+      "second_market": "3+",
+      "second_probability_pct": 63.5,
+      "top_market_odds": 2.0,
+      "recommended_market_odds": 2.0,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "b_market": null,
+      "b_market_rank": 2,
+      "b_market_odds": null,
+      "b_market_probability_pct": null,
+      "b_market_ev_pct": null,
+      "research_only": true,
+      "confidence": "low_data",
+      "history_evidence_complete": false,
+      "all_six_probabilities_pct": {
+        "1": 39.7,
+        "X": 23.1,
+        "2": 37.2,
+        "3+": 63.5,
+        "GG": 64.8,
+        "NG": 35.2
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 3
+        },
+        "recent_goals_attack_defence": "Missing; modeled using broad priors, not actual recent form",
+        "home_away_form": "Missing; independent research required",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.67,
+          "away": 1.61
+        },
+        "poisson_probabilities": {
+          "1": 39.7,
+          "X": 23.1,
+          "2": 37.2,
+          "3+": 63.5,
+          "GG": 64.8,
+          "NG": 35.2
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 5,
       "fixture_id": "espn:football:uefa.champions:401915292",
       "match": "Club Brugge - Liverpool",
       "datetime": "2026-11-25T20:00:00Z",
@@ -217,7 +354,7 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 4,
+      "rank": 6,
       "fixture_id": "espn:football:uefa.champions:401915293",
       "match": "Slavia Prague - Villarreal",
       "datetime": "2026-11-25T17:45:00Z",
@@ -284,7 +421,7 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 5,
+      "rank": 7,
       "fixture_id": "espn:football:uefa.champions:401915375",
       "match": "Shakhtar Donetsk - Fenerbahce",
       "datetime": "2026-11-25T20:00:00Z",
@@ -351,7 +488,7 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 6,
+      "rank": 8,
       "fixture_id": "espn:football:uefa.champions:401915376",
       "match": "Internazionale - VfB Stuttgart",
       "datetime": "2026-11-25T20:00:00Z",
@@ -418,7 +555,74 @@
       "ai_review_status": "pending_independent_review"
     },
     {
-      "rank": 7,
+      "rank": 9,
+      "fixture_id": "espn:football:uefa.champions:401915377",
+      "match": "Lille - Bayern Munich",
+      "datetime": "2026-11-25T20:00:00Z",
+      "top_market": "GG",
+      "top_probability_pct": 55.0,
+      "recommended_market": "1",
+      "recommended_probability_pct": 34.8,
+      "recommended_adjusted_probability_pct": 26.39,
+      "recommended_score": 30.572,
+      "recommended_ev_pct": 33.27,
+      "data_quality_index_pct": 43.9,
+      "second_market": "3+",
+      "second_probability_pct": 50.9,
+      "top_market_odds": null,
+      "recommended_market_odds": 5.05,
+      "eligible_for_A": false,
+      "eligible_for_B": false,
+      "b_market": null,
+      "b_market_rank": null,
+      "b_market_odds": null,
+      "b_market_probability_pct": null,
+      "b_market_ev_pct": null,
+      "research_only": true,
+      "confidence": "low_data",
+      "history_evidence_complete": false,
+      "all_six_probabilities_pct": {
+        "1": 34.8,
+        "X": 25.7,
+        "2": 39.5,
+        "3+": 50.9,
+        "GG": 55.0,
+        "NG": 45.0
+      },
+      "math_already_done": {
+        "last_five_matches_per_team": {
+          "home": 5,
+          "away": 3
+        },
+        "recent_goals_attack_defence": "Missing; modeled using broad priors, not actual recent form",
+        "home_away_form": "Missing; independent research required",
+        "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
+        "modeled_goals": {
+          "home": 1.3,
+          "away": 1.4
+        },
+        "poisson_probabilities": {
+          "1": 34.8,
+          "X": 25.7,
+          "2": 39.5,
+          "3+": 50.9,
+          "GG": 55.0,
+          "NG": 45.0
+        }
+      },
+      "ai_checks_still_required": [
+        "actual_xg_xga_if_available",
+        "injuries_and_suspensions",
+        "expected_lineups",
+        "recent_h2h_up_to_five",
+        "table_and_motivation",
+        "rest_days_and_schedule",
+        "odds_identity_and_source"
+      ],
+      "ai_review_status": "pending_independent_review"
+    },
+    {
+      "rank": 10,
       "fixture_id": "espn:football:arg.1:401933757",
       "match": "Boca Juniors - Independiente Rivadavia",
       "datetime": "2026-11-26T00:00:00Z",

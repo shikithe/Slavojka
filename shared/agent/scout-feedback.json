@@ -4,8 +4,8 @@
   "status": "complete",
   "all_fixtures_evaluated": 11,
   "market_probabilities": 66,
-  "source_fingerprint": "d4d74a64852df51774e18bce7efc36800567c4d7bb46c5e697f2f3280227f271",
-  "generated_at_utc": "2026-11-25T08:35:51.434063+00:00",
+  "source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+  "generated_at_utc": "2026-11-25T11:12:16.710024+00:00",
   "history_status": "available",
   "next_action": "validate_top10"
 }
