@@ -140,7 +140,10 @@ class ScoutSixTests(unittest.TestCase):
                         "datetime":"2026-11-21T20:00:00Z",
                         "strongest_market":p,"strongest_pct":prob,
                         "second_pct":second,"third_pct":30.0,
-                        "strongest_odds":odd,"candidate_A":True,"candidate_B":p=="3+"})
+                        "strongest_odds":odd,"candidate_A":True,"candidate_B":p=="3+",
+                        "b_odds":odd if p=="3+" else None,
+                        "b_probability_pct":prob if p=="3+" else None,
+                        "b_conservative_ev_pct":-1.5 if p=="3+" else None})
         ans=suggestions(sorted(arr,key=ranking))
         self.assertTrue(ans["A"],ans["reason"])
         self.assertTrue(ans["B"],ans["reason"])

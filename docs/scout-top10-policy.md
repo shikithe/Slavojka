@@ -28,10 +28,22 @@
   pa tek po `HISTORY_READY` Scout i `TOP10_READY`. Svi izvjestaji
   moraju odgovarati danasnjem ESPN feedu i kvotama.
 
-## Tiket B: 3+ među dva najbolje rangirana tržišta
+## Tiket B: matematička gradacija 3+ unutar TOP10 (od 25.11.2026)
 
-- Matematika Scout 6/6 i dalje obrađuje svih šest tržišta za A i B.
-- Za tiket B razmatra se **3+ golova ako je po postojećem value/EV skoru 1. ili 2. najbolje tržište** u utakmici, čak i kada je prvo mjesto GG ili neki drugi tip.
-- B se uvijek sastavlja na tržištu **3+**, s njegovom vlastitom stvarnom kvotom, prilagođenom vjerovatnoćom, konzervativnim EV-om i skautovskim skorom. Ne smije uzeti kvotu/pogodak prvog tržišta.
-- I dalje se za B traže pozitivan konzervativni EV za 3+, prilagođena vjerovatnoća najmanje 50%, kvota 3+ ispod 3,00, najmanje 4 potvrđene prethodne utakmice oba kluba i najmanje 20 minuta do početka.
-- B i A ne smiju koristiti istu utakmicu na oba tiketa; ukupna kvota tiketa ostaje 2,00–3,00. Izbor je samo preliminaran do zasebne detaljne AI provjere.
+1. Za **svih deset utakmica iz TOP10** uzmi postojeći matematički procenat
+   `probability_pct["3+"]` bez preračunavanja ili miješanja s drugim tržištima.
+2. Filtriraj samo utakmice koje još nisu počele, imaju stvarnu kvotu za 3+
+   i nisu već izabrane za tiket A. **Ne filtriraj B po EV-u ni po tome da li
+   je 3+ najbolje, drugo ili treće tržište.**
+3. Rangiraj po matematičkoj vjerovatnoći 3+ opadajuće.
+   B mora imati **tačno dva** različita para, ukupna kvota **2,00–3,00**.
+   Ako najjača dva para imaju npr. ukupno 1,94, traži sljedeću najjaču
+   kombinaciju od dva uz zadržavanje što većih procenata, a ne proglasiti
+   automatski da B nema kandidata.
+4. EV ostaje odvojena, transparentno izračunata procjena i upozorenje
+   (naročito kada je negativan); konačni AI pregled provjerava FairXG,
+   povrede, izostanke, stvarne kvote, identitet i rizik prije odobrenja.
+   Matematička vjerovatnoća nije kalibrisani dokaz preciznosti modela.
+5. GitHub izdvaja **prijedlog**, ne izvršava analitičko odobrenje i ne
+   objavljuje nijedan tiket bez eksplicitnog AI approved dokumenta.
+   Postojeće objave i banka se ne mijenjaju naknadno zbog novog rangiranja.
