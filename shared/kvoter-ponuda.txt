@@ -1,12 +1,12 @@
 Br. | Datum/sat | Utakmica | 1 | X | 2 | 3+ | GG | NG
-1 | 2026-11-25T17:45:00Z | Sabah FK - Barcelona | - | - | - | - | - | -
+1 | 2026-11-25T17:45:00Z | Sabah FK - Barcelona | 26 | 15.5 | 1.1 | 1.09 | 1.59 | 2.24
 2 | 2026-11-25T17:45:00Z | Slavia Prague - Villarreal | 3.1 | 4.09 | 2.23 | 1.47 | 1.41 | 2.73
-3 | 2026-11-25T20:00:00Z | Atlético Madrid - Viking FK | - | - | - | - | - | -
+3 | 2026-11-25T20:00:00Z | Atlético Madrid - Viking FK | 1.11 | 12.9 | 25 | 1.25 | 2 | 1.74
 4 | 2026-11-25T20:00:00Z | Club Brugge - Liverpool | 4.73 | 4.68 | 1.7 | 1.32 | 1.34 | 3.04
 5 | 2026-11-25T20:00:00Z | Internazionale - VfB Stuttgart | 1.44 | 5.74 | 6.75 | 1.23 | 1.36 | 2.94
-6 | 2026-11-25T20:00:00Z | Lille - Bayern Munich | - | - | - | - | - | -
+6 | 2026-11-25T20:00:00Z | Lille - Bayern Munich | 5.05 | 4.16 | 1.65 | - | - | -
 7 | 2026-11-25T20:00:00Z | Paris Saint-Germain - AS Roma | 1.49 | 5.33 | 6.34 | 1.33 | 1.43 | 2.66
 8 | 2026-11-25T20:00:00Z | Shakhtar Donetsk - Fenerbahce | 2.96 | 3.62 | 2.5 | 1.81 | 1.57 | 2.28
 9 | 2026-11-25T20:00:00Z | Sporting CP - Manchester United | 2.56 | 3.78 | 2.78 | 1.56 | 1.44 | 2.62
-10 | 2026-11-25T23:00:00Z | Atlético-MG - Corinthians | - | - | - | - | - | -
+10 | 2026-11-25T23:00:00Z | Atlético-MG - Corinthians | 2.37 | 3.36 | 2.96 | - | - | -
 11 | 2026-11-26T00:00:00Z | Boca Juniors - Independiente Rivadavia | 1.62 | 3.73 | 5.92 | 2.23 | 2.15 | 1.63

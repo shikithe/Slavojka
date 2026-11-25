@@ -7,14 +7,23 @@
       "fixture_id": "espn:football:uefa.champions:401915378",
       "datetime": "2026-11-25T17:45:00Z",
       "match": "Sabah FK - Barcelona",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "1xbet",
+        "draw_odds": "1xbet",
+        "away_odds": "1xbet",
+        "over25_odds": "1xbet",
+        "btts_yes_odds": "1xbet",
+        "btts_no_odds": "1xbet"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/sabah-baku-barcelona-champions-league-group-stage-956873"
+      ],
+      "home_odds": 26,
+      "draw_odds": 15.5,
+      "away_odds": 1.1,
+      "over25_odds": 1.09,
+      "btts_yes_odds": 1.59,
+      "btts_no_odds": 2.24
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915293",
@@ -42,14 +51,23 @@
       "fixture_id": "espn:football:uefa.champions:401915291",
       "datetime": "2026-11-25T20:00:00Z",
       "match": "Atlético Madrid - Viking FK",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
-      "over25_odds": null,
-      "btts_yes_odds": null,
-      "btts_no_odds": null
+      "bookmakers_by_field": {
+        "home_odds": "1xbet",
+        "draw_odds": "1xbet",
+        "away_odds": "1xbet",
+        "over25_odds": "1xbet",
+        "btts_yes_odds": "1xbet",
+        "btts_no_odds": "1xbet"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/atletico-madrid-viking-stavanger-champions-league-group-stage-956875"
+      ],
+      "home_odds": 1.11,
+      "draw_odds": 12.9,
+      "away_odds": 25,
+      "over25_odds": 1.25,
+      "btts_yes_odds": 2,
+      "btts_no_odds": 1.74
     },
     {
       "fixture_id": "espn:football:uefa.champions:401915292",
@@ -99,11 +117,18 @@
       "fixture_id": "espn:football:uefa.champions:401915377",
       "datetime": "2026-11-25T20:00:00Z",
       "match": "Lille - Bayern Munich",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea daily aggregate",
+        "draw_odds": "TipsterArea daily aggregate",
+        "away_odds": "TipsterArea daily aggregate"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/lille-bayern-munchen-champions-league-group-stage-956878",
+        "https://tipsterarea.com/matches/date-25-11-2026"
+      ],
+      "home_odds": 5.05,
+      "draw_odds": 4.16,
+      "away_odds": 1.65,
       "over25_odds": null,
       "btts_yes_odds": null,
       "btts_no_odds": null
@@ -178,11 +203,18 @@
       "fixture_id": "espn:football:bra.1:401841319",
       "datetime": "2026-11-25T23:00:00Z",
       "match": "Atlético-MG - Corinthians",
-      "bookmakers_by_field": {},
-      "source_urls": [],
-      "home_odds": null,
-      "draw_odds": null,
-      "away_odds": null,
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea daily aggregate",
+        "draw_odds": "TipsterArea daily aggregate",
+        "away_odds": "TipsterArea daily aggregate"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/atletico-mg-corinthians-sp-serie-a-brazil-957016",
+        "https://tipsterarea.com/matches/date-25-11-2026"
+      ],
+      "home_odds": 2.37,
+      "draw_odds": 3.36,
+      "away_odds": 2.96,
       "over25_odds": null,
       "btts_yes_odds": null,
       "btts_no_odds": null
