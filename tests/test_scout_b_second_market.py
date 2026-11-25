@@ -1,4 +1,4 @@
-"""Ticket B can select verified 3+ goals as 1st or 2nd value market.
+"""Ticket B ranks quoted 3+ goals by mathematical probability, not EV.
 
 No real bets, tickets, payouts, or repo publication in this test.
 """
@@ -69,18 +69,19 @@ class SecondaryThreePlusTests(unittest.TestCase):
         self.assertTrue(r["candidate_B"])
         self.assertEqual(r["b_market_rank"],1)
 
-    def test_second_market_with_negative_ev_must_not_be_accepted(self):
+    def test_negative_ev_remains_visible_but_does_not_remove_rank_candidate(self):
         r=self.score(fixture("c"), markets(over_ev=-3))
         self.assertTrue(r["candidate_A"])
-        self.assertFalse(r["candidate_B"])
+        self.assertTrue(r["candidate_B"])
+        self.assertIn("Negative conservative EV",r["b_value_warning"])
 
-    def test_3plus_third_market_is_ineligible_even_with_positive_ev(self):
+    def test_3plus_third_market_still_eligible_if_quoted(self):
         price=markets(over_score=30)
         price["2"]=dict(score=41,odds=2.5,adjusted_probability_pct=55,
                         conservative_ev_pct=4)
         r=self.score(fixture("d"),price)
         self.assertEqual(r["b_market_rank"],3)
-        self.assertFalse(r["candidate_B"])
+        self.assertTrue(r["candidate_B"])
 
     def test_b_only_market_can_qualify_without_approval_for_a(self):
         r=self.score(fixture("e"), markets(top_odds=3.10))
@@ -98,7 +99,47 @@ class SecondaryThreePlusTests(unittest.TestCase):
         sparse=fixture("g")
         sparse["evidence"]["home_last_matches"]=3
         weak=self.score(sparse,markets())
-        self.assertFalse(weak["candidate_B"])
+        self.assertTrue(weak["candidate_B"])
+
+    def test_best_two_probabilities_only_after_A_exclusion_and_odds_window(self):
+        vals=[
+            ("A0",75.0,1.30,True),("A1",71.0,1.30,True),
+            ("Brugge",67.8,1.32,False),("Slavia",67.1,1.47,False),
+            ("Atletico",63.5,1.25,False),("Sporting",61.1,1.56,False),
+            ("Shakhtar",59.5,1.81,False),
+        ]
+        rows=[]
+        for i,(name,p,odd,approved_for_A) in enumerate(vals):
+            rows.append({"fixture_id":name,"match":name+" - visitor",
+                "datetime":(NOW+timedelta(hours=5)).isoformat(),
+                "strongest_market":"GG","strongest_odds":1.55,
+                "strongest_pct":72,"second_pct":60,"third_pct":51,
+                "candidate_A":approved_for_A,"candidate_B":True,
+                "b_probability_pct":p,"b_odds":odd,"b_market_rank":3,
+                "b_conservative_ev_pct":-10.5,"recommended_ev_pct":5,
+                "scout_value_score":44-i,"data_quality_index_pct":65})
+        result=suggestions(rows)
+        a_ids={x["fixture_id"] for x in result["A"]["matches"]}
+        b_ids={x["fixture_id"] for x in result["B"]["matches"]}
+        self.assertEqual(a_ids,{"A0","A1"})
+        self.assertEqual(b_ids,{"Brugge","Sporting"})
+        self.assertAlmostEqual(result["B"]["combined_odds"],2.059,places=3)
+        self.assertTrue(all(x["conservative_ev_pct"]<0
+                            for x in result["B"]["matches"]))
+        self.assertTrue(all(x["pick"]=="3+" for x in result["B"]["matches"]))
+        self.assertFalse(result["B"]["ready_for_publication"])
+
+    def test_missing_threeplus_price_cannot_be_filled_by_other_market(self):
+        r=self.score(fixture("missing"),markets())
+        r["odds"]["3+"]=None
+        vals=markets()
+        vals["3+"]["odds"]=None
+        vals["3+"]["score"]=None
+        from lista.scout_value import apply_value_model
+        with patch("lista.scout_value.market_evaluation",return_value=vals):
+            r=apply_value_model([fixture("missing")],{"leagues":{}},NOW)[0]
+        self.assertFalse(r["candidate_B"])
+        self.assertIsNone(r["b_odds"])
 
     def test_ticket_b_uses_3plus_not_first_market_quotes_and_no_a_overlap(self):
         rows=[]
