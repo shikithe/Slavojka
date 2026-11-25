@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-25",
+  "reviewed_at_utc": "2026-11-25T16:14:16.324Z",
+  "kind": "supplemental_user_requested_ticket_B_approval",
+  "source_fingerprint": "b5b3adef0240fcbfb37af9cad7b1e31cb99bf70edad7b24df33ed8229122ab15",
+  "source_active_sha256": "ee18b1fbb33eabbd2a62da6da1238072952f0cb2a54cd4e841f197cda237892c",
+  "source_history_sha256": "00c51aaf4c5facbeb4bb13b2a63450938f10289e9063512af4663d504e493f61",
+  "reviewed_top10_count": 10,
+  "original_detailed_review_path": "shared/agent/detailed-ai-progress-2026-11-25.json",
+  "method": "B is two 3+ legs from the 10 TOP10 fixtures, descending mathematical 3+ chance, excluding already published A. If strongest pair has total odds below 2, go to highest feasible percentage-ranked pair, never invent price.",
+  "eligible_start_time": "2026-11-25T20:00:00Z",
+  "bookmaker_display": "1xBet on public TipsterArea",
+  "quoted_prices_verified_on_public_pages": true,
+  "quotes_not_verified_in_betting_account": true,
+  "raw_best_two_rejected_for_odds": {
+    "pair": [
+      "Club Brugge - Liverpool",
+      "Slavia Prague - Villarreal"
+    ],
+    "combined_odds": 1.9404,
+    "reason": "below 2.0"
+  },
+  "selected": [
+    {
+      "match": "Club Brugge - Liverpool",
+      "fixture_id": "espn:football:uefa.champions:401915292",
+      "p_math": 67.8,
+      "p_fairxg": 73,
+      "p_final": 70.4,
+      "odd": 1.32,
+      "source_quote": "https://tipsterarea.com/match/club-brugge-liverpool-champions-league-group-stage-956876",
+      "source_fairxg": "https://fairxg.com/sport/football/match/club-brugge-vs-liverpool",
+      "ev": -7.07,
+      "note": "Club Brugge je prema FairXG imao 9/10 posljednjih mečeva s najmanje tri gola, Liverpool 7/10. U posljednjih pet potvrđenih utakmica iz Histora Brugge je postigao 15, primio sedam, Liverpool postigao deset, primio šest. UEFA najavljuje odsustvo Ordóñeza i Virgilija (Brugge) te Bradleyja, Ekitikéa, Gakpa, Jaroša i Leonija (Liverpool); početne postave nisu konačne. Samo procjena 70,4% ne opravdava kvotu 1,32 (prag 75,76%), pa je EV negativan.",
+      "market": "3+",
+      "start_utc": "2026-11-25T20:00:00Z",
+      "negative_ev_warning": true,
+      "source_lineups": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-starting-and-predicted-line-ups-matchday-5-/"
+    },
+    {
+      "match": "Sporting CP - Manchester United",
+      "fixture_id": "espn:football:uefa.champions:401915373",
+      "p_math": 61.1,
+      "p_fairxg": 67,
+      "p_final": 64.05,
+      "odd": 1.52,
+      "source_quote": "https://tipsterarea.com/match/sporting-cp-manchester-united-champions-league-group-stage-956881",
+      "source_fairxg": "https://fairxg.com/sport/football/match/sp-lisbon-vs-man-united",
+      "ev": -2.64,
+      "note": "Sporting CP i Manchester United u posljednjih pet potvrđenih nastupa iz Histora imaju 9:2 i 7:15 golova. FairXG prikazuje 3+ na 67%, model ListaSix 61,1%. UEFA navodi izostanke Debasta i Nuna Santosa kod Sportinga te Balebe, Cunhe (suspenzija), Rashforda, Ugartea i Šeška kod Uniteda; Shaw je upitan. FairXG predviđa oko 3,5 ukupnih golova. Sadašnja javna 1xBet kvota 1,52 na TipsterArea niža je od jutarnjih 1,56; procijenjeni EV je negativan.",
+      "market": "3+",
+      "start_utc": "2026-11-25T20:00:00Z",
+      "negative_ev_warning": true,
+      "source_lineups": "https://www.uefa.com/uefachampionsleague/news/02ab-2223c67db015-c4f7874e074e-1000--champions-league-starting-and-predicted-line-ups-matchday-5-/"
+    }
+  ],
+  "total_odds": 2.0064,
+  "publication_allowed": true,
+  "approved_by": "manual_chatgpt_ai_user_requested_B",
+  "caveats": [
+    "Oba tipa su negativnog procijenjenog EV-a; izbor odgovara izričito traženom rangiranju po vjerovatnoći, ne maksimalnom očekivanom povratu.",
+    "FairXG je dijelom oslonjen na tržišne kvote; aritmetički prosjek nije kalibrisan dokaz.",
+    "Javne kvote mogu se promijeniti prije početka; publisher ne provjerava kladioničarski račun.",
+    "Virtuelni MemaraSix tiket, ne stvarna opklada."
+  ]
+}
