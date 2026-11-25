@@ -3,77 +3,19 @@
   "status": "ready_for_scout",
   "feedback": "ODDS_READY",
   "espn_total": 11,
-  "with_at_least_one_quote": 7,
-  "without_quote": 4,
-  "missing_fixtures": [
-    {
-      "fixture_id": "espn:football:uefa.champions:401915378",
-      "league": "uefa.champions",
-      "home": "Sabah FK",
-      "away": "Barcelona",
-      "start_utc": "2026-11-25T17:45:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915291",
-      "league": "uefa.champions",
-      "home": "Atlético Madrid",
-      "away": "Viking FK",
-      "start_utc": "2026-11-25T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915377",
-      "league": "uefa.champions",
-      "home": "Lille",
-      "away": "Bayern Munich",
-      "start_utc": "2026-11-25T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:bra.1:401841319",
-      "league": "bra.1",
-      "home": "Atlético-MG",
-      "away": "Corinthians",
-      "start_utc": "2026-11-25T23:00:00Z"
-    }
-  ],
-  "ai_prompt": "prompts/tipster-unmatched-ai-review.md",
+  "with_at_least_one_quote": 11,
+  "without_quote": 0,
+  "missing_fixtures": [],
+  "ai_prompt": null,
   "next_action": "scout_6of6_if_history_ready",
-  "coverage_feedback": "ODDS_PARTIAL_READY",
-  "coverage_status": "partial",
-  "sensor_action_required": true,
-  "sensor_missing_fixtures": [
-    {
-      "fixture_id": "espn:football:uefa.champions:401915378",
-      "league": "uefa.champions",
-      "home": "Sabah FK",
-      "away": "Barcelona",
-      "start_utc": "2026-11-25T17:45:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915291",
-      "league": "uefa.champions",
-      "home": "Atlético Madrid",
-      "away": "Viking FK",
-      "start_utc": "2026-11-25T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915377",
-      "league": "uefa.champions",
-      "home": "Lille",
-      "away": "Bayern Munich",
-      "start_utc": "2026-11-25T20:00:00Z"
-    },
-    {
-      "fixture_id": "espn:football:bra.1:401841319",
-      "league": "bra.1",
-      "home": "Atlético-MG",
-      "away": "Corinthians",
-      "start_utc": "2026-11-25T23:00:00Z"
-    }
-  ],
+  "coverage_feedback": "ODDS_COMPLETE",
+  "coverage_status": "complete",
+  "sensor_action_required": false,
+  "sensor_missing_fixtures": [],
   "final": true,
-  "retry_attempted": true,
-  "matched_with_quotes": 7,
-  "skipped_unmatched": 4,
+  "retry_attempted": false,
+  "matched_with_quotes": 11,
+  "skipped_unmatched": 0,
   "incomplete_markets_allowed": true,
-  "finished_at_utc": "2026-11-25T08:35:25.747195+00:00"
+  "finished_at_utc": "2026-11-25T11:11:49.320579+00:00"
 }
