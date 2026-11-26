@@ -1,34 +1,25 @@
 {
-  "date": "2026-11-25",
-  "expires_at": "2026-11-26T08:59:00+01:00",
+  "date": "2026-11-26",
+  "expires_at": "2026-11-27T08:59:00+01:00",
   "publication_allowed": true,
   "fixtures": [
     {
-      "fixture_id": "espn:football:uefa.champions:401915378",
-      "datetime": "2026-11-25T17:45:00Z",
-      "match": "Sabah FK - Barcelona",
-      "bookmakers_by_field": {
-        "home_odds": "1xbet",
-        "draw_odds": "1xbet",
-        "away_odds": "1xbet",
-        "over25_odds": "1xbet",
-        "btts_yes_odds": "1xbet",
-        "btts_no_odds": "1xbet"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/sabah-baku-barcelona-champions-league-group-stage-956873"
-      ],
-      "home_odds": 26,
-      "draw_odds": 15.5,
-      "away_odds": 1.1,
-      "over25_odds": 1.09,
-      "btts_yes_odds": 1.59,
-      "btts_no_odds": 2.24
+      "fixture_id": "espn:football:uefa.europa.conf:401915816",
+      "datetime": "2026-11-26T15:30:00Z",
+      "match": "Kairat Almaty - Mjällby AIF",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
     },
     {
-      "fixture_id": "espn:football:uefa.champions:401915293",
-      "datetime": "2026-11-25T17:45:00Z",
-      "match": "Slavia Prague - Villarreal",
+      "fixture_id": "espn:football:uefa.europa.conf:401915815",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Ajax Amsterdam - FC Thun",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -38,105 +29,102 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/slavia-prague-villarreal-champions-league-group-stage-956874"
+        "https://tipsterarea.com/match/ajax-amsterdam-thun-europa-conference-league-group-stage-956995"
       ],
-      "home_odds": 3.1,
-      "draw_odds": 4.09,
-      "away_odds": 2.23,
+      "home_odds": 1.16,
+      "draw_odds": 8.8,
+      "away_odds": 16.5,
+      "over25_odds": 1.24,
+      "btts_yes_odds": 1.68,
+      "btts_no_odds": 2.06
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915506",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Besiktas - Hapoel Be'er",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915814",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Brighton & Hove Albion - CSU Craiova",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915519",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Celta Vigo - AFC Bournemouth",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/celta-vigo-bournemouth-europa-league-group-stage-956977"
+      ],
+      "home_odds": 3.72,
+      "draw_odds": 3.6,
+      "away_odds": 2.06,
+      "over25_odds": 1.94,
+      "btts_yes_odds": 1.72,
+      "btts_no_odds": 2.03
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915517",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Dinamo Zagreb - Bayer Leverkusen",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/dinamo-zagreb-bayer-leverkusen-europa-league-group-stage-956978"
+      ],
+      "home_odds": 4.76,
+      "draw_odds": 4.41,
+      "away_odds": 1.68,
       "over25_odds": 1.47,
-      "btts_yes_odds": 1.41,
-      "btts_no_odds": 2.73
+      "btts_yes_odds": 1.49,
+      "btts_no_odds": 2.48
     },
     {
-      "fixture_id": "espn:football:uefa.champions:401915291",
-      "datetime": "2026-11-25T20:00:00Z",
-      "match": "Atlético Madrid - Viking FK",
-      "bookmakers_by_field": {
-        "home_odds": "1xbet",
-        "draw_odds": "1xbet",
-        "away_odds": "1xbet",
-        "over25_odds": "1xbet",
-        "btts_yes_odds": "1xbet",
-        "btts_no_odds": "1xbet"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/atletico-madrid-viking-stavanger-champions-league-group-stage-956875"
-      ],
-      "home_odds": 1.11,
-      "draw_odds": 12.9,
-      "away_odds": 25,
-      "over25_odds": 1.25,
-      "btts_yes_odds": 2,
-      "btts_no_odds": 1.74
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915292",
-      "datetime": "2026-11-25T20:00:00Z",
-      "match": "Club Brugge - Liverpool",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea public bookmaker",
-        "draw_odds": "TipsterArea public bookmaker",
-        "away_odds": "TipsterArea public bookmaker",
-        "over25_odds": "TipsterArea public bookmaker",
-        "btts_yes_odds": "TipsterArea public bookmaker",
-        "btts_no_odds": "TipsterArea public bookmaker"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/club-brugge-liverpool-champions-league-group-stage-956876"
-      ],
-      "home_odds": 4.73,
-      "draw_odds": 4.68,
-      "away_odds": 1.7,
-      "over25_odds": 1.32,
-      "btts_yes_odds": 1.34,
-      "btts_no_odds": 3.04
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915376",
-      "datetime": "2026-11-25T20:00:00Z",
-      "match": "Internazionale - VfB Stuttgart",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea public bookmaker",
-        "draw_odds": "TipsterArea public bookmaker",
-        "away_odds": "TipsterArea public bookmaker",
-        "over25_odds": "TipsterArea public bookmaker",
-        "btts_yes_odds": "TipsterArea public bookmaker",
-        "btts_no_odds": "TipsterArea public bookmaker"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/inter-stuttgart-champions-league-group-stage-956877"
-      ],
-      "home_odds": 1.44,
-      "draw_odds": 5.74,
-      "away_odds": 6.75,
-      "over25_odds": 1.23,
-      "btts_yes_odds": 1.36,
-      "btts_no_odds": 2.94
-    },
-    {
-      "fixture_id": "espn:football:uefa.champions:401915377",
-      "datetime": "2026-11-25T20:00:00Z",
-      "match": "Lille - Bayern Munich",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea daily aggregate",
-        "draw_odds": "TipsterArea daily aggregate",
-        "away_odds": "TipsterArea daily aggregate"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/lille-bayern-munchen-champions-league-group-stage-956878",
-        "https://tipsterarea.com/matches/date-25-11-2026"
-      ],
-      "home_odds": 5.05,
-      "draw_odds": 4.16,
-      "away_odds": 1.65,
+      "fixture_id": "espn:football:uefa.europa.conf:401915810",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Egnatia - Lincoln Red Imps",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
       "over25_odds": null,
       "btts_yes_odds": null,
       "btts_no_odds": null
     },
     {
-      "fixture_id": "espn:football:uefa.champions:401915374",
-      "datetime": "2026-11-25T20:00:00Z",
-      "match": "Paris Saint-Germain - AS Roma",
+      "fixture_id": "espn:football:uefa.europa.conf:401915811",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Heart of Midlothian - AS Monaco",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -146,41 +134,32 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/paris-saint-germain-roma-champions-league-group-stage-956879"
+        "https://tipsterarea.com/match/hearts-monaco-europa-conference-league-group-stage-957000"
       ],
-      "home_odds": 1.49,
-      "draw_odds": 5.33,
-      "away_odds": 6.34,
-      "over25_odds": 1.33,
-      "btts_yes_odds": 1.43,
-      "btts_no_odds": 2.66
+      "home_odds": 5.62,
+      "draw_odds": 4.58,
+      "away_odds": 1.56,
+      "over25_odds": 1.53,
+      "btts_yes_odds": 1.6,
+      "btts_no_odds": 2.22
     },
     {
-      "fixture_id": "espn:football:uefa.champions:401915375",
-      "datetime": "2026-11-25T20:00:00Z",
-      "match": "Shakhtar Donetsk - Fenerbahce",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea public bookmaker",
-        "draw_odds": "TipsterArea public bookmaker",
-        "away_odds": "TipsterArea public bookmaker",
-        "over25_odds": "TipsterArea public bookmaker",
-        "btts_yes_odds": "TipsterArea public bookmaker",
-        "btts_no_odds": "TipsterArea public bookmaker"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/shakhtar-donetsk-fenerbahce-champions-league-group-stage-956880"
-      ],
-      "home_odds": 2.96,
-      "draw_odds": 3.62,
-      "away_odds": 2.5,
-      "over25_odds": 1.81,
-      "btts_yes_odds": 1.57,
-      "btts_no_odds": 2.28
+      "fixture_id": "espn:football:uefa.europa.conf:401915813",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Iberia 1999 - Getafe",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
     },
     {
-      "fixture_id": "espn:football:uefa.champions:401915373",
-      "datetime": "2026-11-25T20:00:00Z",
-      "match": "Sporting CP - Manchester United",
+      "fixture_id": "espn:football:uefa.europa.conf:401915812",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Jablonec - FC Lugano",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -190,39 +169,488 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/sporting-cp-manchester-united-champions-league-group-stage-956881"
+        "https://tipsterarea.com/match/jablonec-lugano-europa-conference-league-group-stage-957001"
       ],
-      "home_odds": 2.56,
-      "draw_odds": 3.78,
-      "away_odds": 2.78,
+      "home_odds": 3.3,
+      "draw_odds": 3.65,
+      "away_odds": 2.18,
+      "over25_odds": 1.8,
+      "btts_yes_odds": 1.6,
+      "btts_no_odds": 2.19
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915739",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Kauno Zalgiris - Riga FC",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/kauno-zalgiris-riga-fc-europa-conference-league-group-stage-956999"
+      ],
+      "home_odds": 3.45,
+      "draw_odds": 3.4,
+      "away_odds": 2.21,
+      "over25_odds": 1.95,
+      "btts_yes_odds": 1.71,
+      "btts_no_odds": 2.02
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915507",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Marseille - Levski Sofia",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/marseille-levski-sofia-europa-league-group-stage-956980"
+      ],
+      "home_odds": 1.35,
+      "draw_odds": 5.53,
+      "away_odds": 9.1,
+      "over25_odds": 1.63,
+      "btts_yes_odds": 1.88,
+      "btts_no_odds": 1.84
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915521",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Olympiacos - AC Milan",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915809",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Pafos - FC Midtjylland",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/pafos-fc-fc-midtjylland-europa-conference-league-group-stage-957003"
+      ],
+      "home_odds": 3.09,
+      "draw_odds": 3.63,
+      "away_odds": 2.28,
+      "over25_odds": 1.62,
+      "btts_yes_odds": 1.47,
+      "btts_no_odds": 2.5
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915520",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "RB Salzburg - Ararat-Armenia",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915808",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "SK Brann - AGF",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915508",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Union St.-Gilloise - Lech Poznan",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915518",
+      "datetime": "2026-11-26T17:45:00Z",
+      "match": "Viktoria Plzen - Benfica",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/viktoria-plzen-benfica-europa-league-group-stage-956983"
+      ],
+      "home_odds": 6.19,
+      "draw_odds": 5.02,
+      "away_odds": 1.49,
+      "over25_odds": 1.44,
+      "btts_yes_odds": 1.56,
+      "btts_no_odds": 2.3
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915806",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "Borac Banja Luka - Atalanta",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/borac-banja-luka-atalanta-europa-conference-league-group-stage-957004"
+      ],
+      "home_odds": 6.48,
+      "draw_odds": 4.93,
+      "away_odds": 1.47,
+      "over25_odds": 1.5,
+      "btts_yes_odds": 1.62,
+      "btts_no_odds": 2.16
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915802",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "Braga - KuPS Kuopio",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/sc-braga-kups-kuopio-europa-conference-league-group-stage-957011"
+      ],
+      "home_odds": 1.12,
+      "draw_odds": 9.75,
+      "away_odds": 24.0,
+      "over25_odds": 1.4,
+      "btts_yes_odds": 2.24,
+      "btts_no_odds": 1.58
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915803",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "CSKA Sofia - Trabzonspor",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/cska-sofia-trabzonspor-europa-conference-league-group-stage-957010"
+      ],
+      "home_odds": 4.36,
+      "draw_odds": 4.07,
+      "away_odds": 1.78,
+      "over25_odds": 1.6,
+      "btts_yes_odds": 1.53,
+      "btts_no_odds": 2.35
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915504",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "Crystal Palace - Real Sociedad",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/crystal-palace-real-sociedad-europa-league-group-stage-956984"
+      ],
+      "home_odds": 2.09,
+      "draw_odds": 3.94,
+      "away_odds": 3.35,
+      "over25_odds": 1.61,
+      "btts_yes_odds": 1.5,
+      "btts_no_odds": 2.45
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915807",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "FC Nordsjælland - Panathinaikos",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915516",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "Ferencvaros - NK Celje",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915805",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "Hajduk Split - Sint-Truidense",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/hajduk-split-saint-truiden-europa-conference-league-group-stage-957008"
+      ],
+      "home_odds": 2.22,
+      "draw_odds": 3.61,
+      "away_odds": 3.24,
+      "over25_odds": 1.78,
+      "btts_yes_odds": 1.59,
+      "btts_no_odds": 2.21
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915738",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "Inter D'Escaldes - F.C. København",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915502",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "Juventus - Omonia Nicosia",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/juventus-omonia-nicosia-europa-league-group-stage-956987"
+      ],
+      "home_odds": 1.19,
+      "draw_odds": 7.6,
+      "away_odds": 16.0,
+      "over25_odds": 1.39,
+      "btts_yes_odds": 1.98,
+      "btts_no_odds": 1.75
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915804",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "KAA Gent - Red Star Belgrade",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915501",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "Lyon - Lillestrom",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/lyonnais-lillestrom-europa-league-group-stage-956988"
+      ],
+      "home_odds": 1.22,
+      "draw_odds": 7.3,
+      "away_odds": 13.7,
+      "over25_odds": 1.38,
+      "btts_yes_odds": 1.86,
+      "btts_no_odds": 1.86
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915505",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "NEC Nijmegen - Stade Rennais",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/nec-nijmegen-rennais-europa-league-group-stage-956989"
+      ],
+      "home_odds": 3.13,
+      "draw_odds": 3.96,
+      "away_odds": 2.18,
+      "over25_odds": 1.52,
+      "btts_yes_odds": 1.45,
+      "btts_no_odds": 2.59
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915503",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "OFI Crete - Anderlecht",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/ofi-crete-anderlecht-europa-league-group-stage-956990"
+      ],
+      "home_odds": 4.52,
+      "draw_odds": 3.91,
+      "away_odds": 1.81,
+      "over25_odds": 1.73,
+      "btts_yes_odds": 1.63,
+      "btts_no_odds": 2.17
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915801",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "SC Freiburg - FC Twente",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/freiburg-twente-europa-conference-league-group-stage-957006"
+      ],
+      "home_odds": 2.11,
+      "draw_odds": 3.92,
+      "away_odds": 3.26,
+      "over25_odds": 1.6,
+      "btts_yes_odds": 1.47,
+      "btts_no_odds": 2.5
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915514",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "Sparta Prague - AZ Alkmaar",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/sparta-prague-az-alkmaar-europa-league-group-stage-956991"
+      ],
+      "home_odds": 3.07,
+      "draw_odds": 3.7,
+      "away_odds": 2.3,
+      "over25_odds": 1.69,
+      "btts_yes_odds": 1.53,
+      "btts_no_odds": 2.37
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915513",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "Sunderland - Jagiellonia Bialystok",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/sunderland-jagiellonia-bialystok-europa-league-group-stage-956992"
+      ],
+      "home_odds": 1.27,
+      "draw_odds": 6.13,
+      "away_odds": 12.6,
       "over25_odds": 1.56,
-      "btts_yes_odds": 1.44,
-      "btts_no_odds": 2.62
+      "btts_yes_odds": 2.08,
+      "btts_no_odds": 1.68
     },
     {
-      "fixture_id": "espn:football:bra.1:401841319",
-      "datetime": "2026-11-25T23:00:00Z",
-      "match": "Atlético-MG - Corinthians",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea daily aggregate",
-        "draw_odds": "TipsterArea daily aggregate",
-        "away_odds": "TipsterArea daily aggregate"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/atletico-mg-corinthians-sp-serie-a-brazil-957016",
-        "https://tipsterarea.com/matches/date-25-11-2026"
-      ],
-      "home_odds": 2.37,
-      "draw_odds": 3.36,
-      "away_odds": 2.96,
+      "fixture_id": "espn:football:uefa.europa:401915515",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "TSG Hoffenheim - SK Sturm Graz",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
       "over25_odds": null,
       "btts_yes_odds": null,
       "btts_no_odds": null
     },
     {
-      "fixture_id": "espn:football:arg.1:401933757",
-      "datetime": "2026-11-26T00:00:00Z",
-      "match": "Boca Juniors - Independiente Rivadavia",
+      "fixture_id": "espn:football:uefa.europa:401915512",
+      "datetime": "2026-11-26T20:00:00Z",
+      "match": "Torreense - Celtic",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -232,14 +660,27 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/boca-juniors-independiente-rivadavia-playoff-argentina-957017"
+        "https://tipsterarea.com/match/torreense-celtic-europa-league-group-stage-956993"
       ],
-      "home_odds": 1.62,
-      "draw_odds": 3.73,
-      "away_odds": 5.92,
-      "over25_odds": 2.23,
-      "btts_yes_odds": 2.15,
-      "btts_no_odds": 1.63
+      "home_odds": 4.71,
+      "draw_odds": 4.26,
+      "away_odds": 1.71,
+      "over25_odds": 1.55,
+      "btts_yes_odds": 1.55,
+      "btts_no_odds": 2.32
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841329",
+      "datetime": "2026-11-26T23:00:00Z",
+      "match": "São Paulo - Remo",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
     }
   ]
 }
