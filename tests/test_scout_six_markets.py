@@ -63,5 +63,23 @@ class FairXGTests(unittest.TestCase):
         self.assertEqual(report["model"],"FairXG")
         self.assertEqual(report["unmatched"][0]["fixture_id"],f["football_candidates"][1]["fixture_id"])
 
+
+    def test_four_verified_fairxg_aliases(self):
+        cases=[
+            ("Kairat Almaty","Mjällby AIF","Kairat Almaty","Mjallby","kairat-almaty-vs-mjallby","Conference League"),
+            ("Crystal Palace","Real Sociedad","Crystal Palace","Sociedad","crystal-palace-vs-sociedad","Europa League"),
+            ("Sunderland","Jagiellonia Bialystok","Sunderland","Jagiellonia","sunderland-vs-jagiellonia","Europa League"),
+            ("FC Nordsjælland","Panathinaikos","Nordsjaelland","Panathinaikos","nordsjaelland-vs-panathinaikos","Conference League"),
+        ]
+        for home,away,shown_h,shown_a,slug,league in cases:
+            with self.subTest(home=home,away=away):
+                html=f'<a href="/sport/football/match/{slug}">11-26 {shown_h} {shown_a} {league} 40% 2.50 25% 4.00 35% 2.86 54%xG 2.8 58%1.72</a>'
+                rows=parse_list(html,league)
+                f={"home":home,"away":away,"start_utc":"2026-11-26T20:00:00Z"}
+                match,reason=select_match(f,rows)
+                self.assertIsNone(reason)
+                self.assertEqual(match["probability_pct"]["3+"],54)
+                self.assertIsNone(select_match(dict(f,home=away,away=home),rows)[0])
+
 if __name__=="__main__":
     unittest.main()

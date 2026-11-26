@@ -34,6 +34,10 @@ LEAGUES = {
 }
 # Explicit aliases, never fuzzy matching or reversed home/away.
 ALIASES = (
+    ("Mjällby AIF", "Mjallby", "Mjallby AIF"),
+    ("Real Sociedad", "Sociedad"),
+    ("Jagiellonia Bialystok", "Jagiellonia", "Jagiellonia Białystok"),
+    ("FC Nordsjælland", "Nordsjaelland", "FC Nordsjaelland"),
     ("Olympiacos", "Olympiakos"), ("AC Milan", "Milan"),
     ("Ajax Amsterdam", "Ajax"), ("Brighton & Hove Albion", "Brighton"),
     ("CSU Craiova", "Univ. Craiova", "Universitatea Craiova"),
@@ -320,6 +324,7 @@ def main():
     if (existing.get("model")=="FairXG" and existing.get("date")==day
             and existing.get("source_feed_sha256")==canonical_hash(feed)
             and existing.get("source_active_sha256")==canonical_hash(active)
+            and existing.get("coverage",{}).get("full") is True
             and existing.get("detailed_ai_handoff",{}).get("count")==10):
         result=existing
         print("FAIRXG_DAILY_LIST_ALREADY_READY")
