@@ -2,32 +2,12 @@
 import unittest
 from datetime import datetime, timezone
 
-from lista.scout_six_markets import detailed_ai_handoff, league_goal_reference
 from lista.scout_history import (
     parsed_event, scoreboard_team_ids, team_form, get_team_schedule,
     verified_cross_competition_form,
 )
 
 NOW=datetime(2026,11,24,12,0,tzinfo=timezone.utc)
-
-def example(i, eligible=False):
-    return {
-        "fixture_id": f"espn:football:uefa.champions:{i}",
-        "match": f"Home{i} - Away{i}", "datetime": "2026-11-24T20:00:00Z",
-        "strongest_market": "3+", "strongest_pct": 75.0,
-        "second_market": "GG", "second_pct": 69.0, "third_pct": 55.0,
-        "recommended_market": "3+", "recommended_pct":75.0,
-        "recommended_adjusted_pct":67.0,"recommended_score":40-i/20,
-        "recommended_ev_pct":4.5,"data_quality_index_pct":42,
-        "strongest_odds":1.65,"recommended_odds":1.65,
-        "candidate_A":eligible,"candidate_B":False,
-        "history_evidence_complete":eligible,
-        "confidence":"normal" if eligible else "low_data",
-        "probability_pct":{"1":43,"X":25,"2":32,"3+":75,"GG":69,"NG":31},
-        "estimated_goals":{"home":2.1,"away":1.1},
-        "evidence":{"home_last_matches":5 if eligible else 3,
-                    "away_last_matches":5 if eligible else 3},
-    }
 
 def event(event_id, home, away, home_id,away_id,date,gs1=1,gs2=0,completed=True):
     return {"id":str(event_id),"date":date,
@@ -39,31 +19,6 @@ def event(event_id, home, away, home_id,away_id,date,gs1=1,gs2=0,completed=True)
             ]}]}
 
 class TopTenAndRealForm(unittest.TestCase):
-    def test_ten_comes_from_13_even_if_only_two_are_ticket_eligible(self):
-        rows=[example(i,i in (2,3)) for i in range(13)]
-        d=detailed_ai_handoff(rows,NOW)
-        self.assertEqual(d["count"],10)
-        self.assertEqual([x["fixture_id"] for x in d["candidates"]],
-                         [x["fixture_id"] for x in rows[:10]])
-        self.assertEqual(sum(x["eligible_for_A"] for x in d["candidates"]),2)
-        self.assertEqual(sum(x["research_only"] for x in d["candidates"]),8)
-        self.assertFalse(d["candidates"][0]["eligible_for_A"])
-        self.assertTrue(d["candidates"][0]["research_only"])
-
-    def test_not_padded_when_only_three_games_have_genuine_odds(self):
-        rows=[example(i) for i in range(4)]
-        rows[2]["recommended_odds"]=None
-        d=detailed_ai_handoff(rows,NOW)
-        self.assertEqual(d["count"],3)
-        self.assertNotIn(rows[2]["fixture_id"],[r["fixture_id"] for r in d["candidates"]])
-
-    def test_no_game_after_kickoff_is_added_to_research(self):
-        rows=[example(i) for i in range(13)]
-        rows[0]["datetime"]="2026-11-24T10:00:00Z"
-        d=detailed_ai_handoff(rows,NOW)
-        self.assertEqual(d["count"],10)
-        self.assertNotIn(rows[0]["fixture_id"],[x["fixture_id"] for x in d["candidates"]])
-
     def test_espen_event_team_ids_reject_reversed_and_reserve(self):
         fixture=event("401915295","Arsenal","Borussia Dortmund",359,124,
                       "2026-11-24T20:00Z",completed=False)
@@ -89,14 +44,6 @@ class TopTenAndRealForm(unittest.TestCase):
         self.assertTrue(all(x["home_team_id"]=="359" for x in result["matches"]))
         self.assertEqual(result["goals_for"],10)
         self.assertTrue(result["complete"])
-
-    def test_league_average_excludes_cross_competition_form(self):
-        league=parsed_event(event("1","A","B",10,11,"2026-11-15T12:00Z"),"uefa.champions",NOW.date())
-        domestic=parsed_event(event("2","A","C",10,12,"2026-11-18T12:00Z",7,0),"all",NOW.date())
-        record=team_form("A",[domestic,league],"10")
-        h,a,n=league_goal_reference({"league":"uefa.champions","teams":{"A":record}})
-        self.assertEqual(n,1)
-        self.assertLess(h,2.15)
 
     def test_real_espn_team_schedule_completion_is_inside_competition(self):
         e=event("401879232","Newcastle United","Arsenal",361,359,

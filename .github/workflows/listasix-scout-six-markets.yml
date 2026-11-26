@@ -1,16 +1,13 @@
-name: ListaSix SCOUT 6/6 every game six markets and candidate A/B
+name: ListaSix FairXG daily probabilities and TOP10
 on:
   workflow_dispatch:
   push:
     branches: [main]
     paths:
       - 'lista/scout_six_markets.py'
-      - 'lista/scout_value.py'
       - 'tests/test_scout_six_markets.py'
       - '.github/workflows/listasix-scout-six-markets.yml'
   schedule:
-    # UTC: every 15m across the European morning/early afternoon.
-    # Local-date, source-date, and kickoff checks are enforced in Python.
     - cron: '0,15,30,45 7-12 * * *'
 permissions:
   contents: write
@@ -22,7 +19,7 @@ concurrency:
 jobs:
   rank-all-markets:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,7 +28,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Require today's quote feedback before independent Scout
+      - name: FairXG parsing and source-identity regression tests
+        run: python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
+      - name: Require only today's ESPN and confirmed TipsterArea offer
         id: coverage
         run: |
           python3 - <<'PY'
@@ -41,84 +40,54 @@ jobs:
           from zoneinfo import ZoneInfo
           from lista.odds_feedback import evaluate
           today=datetime.now(ZoneInfo("Europe/Sarajevo")).date().isoformat()
-          feedback_path=Path("shared/kvoter/coverage-feedback.json")
-          if not feedback_path.exists():
-              print("SCOUT_WAIT_ODDS_FEEDBACK_MISSING")
-              ready=False
-          else:
-              status=json.loads(feedback_path.read_text(encoding="utf-8"))
-              feed=json.loads(Path("shared/collector-feed.json").read_text(encoding="utf-8"))
-              active=json.loads(Path("shared/active-list.json").read_text(encoding="utf-8"))
-              computed=evaluate(feed, active, today)
-              history_path=Path("shared/agent/history-h2h.json")
-              marker_path=Path("shared/agent/history-feedback.json")
-              history=json.loads(history_path.read_text(encoding="utf-8")) if history_path.exists() else {}
-              marker=json.loads(marker_path.read_text(encoding="utf-8")) if marker_path.exists() else {}
-              ids=[x.get("fixture_id") for x in feed.get("football_candidates",[])]
-              history_ready=(history.get("date")==today
-                    and history.get("schema_version",0)>=3
-                    and marker.get("date")==today
-                    and marker.get("feedback")=="HISTORY_READY"
-                    and marker.get("espn_generated_at_utc")==feed.get("generated_at_utc")
-                    and marker.get("history_generated_at_utc")==history.get("generated_at_utc")
-                    and marker.get("fixture_ids")==ids
-                    and set(ids)=={x.get("fixture_id") for x in history.get("fixtures",[])}
-                    and bool(history.get("leagues")))
-              ready=(history_ready
-                     and computed["with_at_least_one_quote"]>0
-                     and status.get("date")==today
-                     and status.get("feedback")=="ODDS_READY"
-                     and status.get("final") is True
-                     and status.get("status")=="ready_for_scout"
-                     and status.get("matched_with_quotes")==computed["with_at_least_one_quote"]
-                     and status.get("skipped_unmatched")==computed["without_quote"]
-                     and status.get("espn_total")==computed["espn_total"])
-              print("SCOUT_COVERAGE_AND_HISTORY_READY",ready)
+          def read(p):
+              try: return json.loads(Path(p).read_text(encoding="utf-8"))
+              except (ValueError,OSError): return {}
+          feed=read("shared/collector-feed.json")
+          active=read("shared/active-list.json")
+          fb=read("shared/kvoter/coverage-feedback.json")
+          ready=False
+          if feed.get("date")==active.get("date")==fb.get("date")==today and feed.get("football_candidates"):
+              computed=evaluate(feed,active,today)
+              ready=(computed["with_at_least_one_quote"]>0
+                     and fb.get("feedback")=="ODDS_READY"
+                     and fb.get("final") is True
+                     and fb.get("status")=="ready_for_scout"
+                     and fb.get("matched_with_quotes")==computed["with_at_least_one_quote"]
+                     and fb.get("skipped_unmatched")==computed["without_quote"]
+                     and fb.get("espn_total")==computed["espn_total"])
           with open(os.environ["GITHUB_OUTPUT"],"a") as out:
-              out.write("ready="+("true" if ready else "false")+"\n")
+              out.write("ready="+str(ready).lower()+"\n")
+          print("FAIRXG_INPUTS_READY",ready)
           PY
-      - name: Check fresh ESPN/odds; stale history is downgraded
+      - name: Import published FairXG percentages and rank TOP10
         if: steps.coverage.outputs.ready == 'true'
-        id: sources
-        run: python3 -m lista.scout_source_gate
-      - name: Regression tests 100 matches times 6 markets, unique A/B, odds 2-3
-        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
-        run: |
-          python3 -m unittest discover -s tests -p 'test_scout_six_markets.py' -v
-          python3 -m unittest discover -s tests -p 'test_scout_history_fallback.py' -v
-      - name: Evaluate ALL same-day ESPN fixtures on 6 markets
-        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
         run: python3 -m lista.scout_six_markets
-      - name: Feedback 1 complete Scout 6/6; Feedback 2 verify TOP10 readiness
-        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
-        run: |
-          python3 -m unittest discover -s tests -p 'test_scout_feedback.py' -v
-          python3 -m lista.scout_feedback
 
-      - name: Commit complete ranked matrix and unapproved A/B suggestions
-        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
+      - name: Commit FairXG daily list and TOP10 (not AI approved)
+        if: steps.coverage.outputs.ready == 'true'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- shared/agent/history-h2h.json shared/agent/scout-six-markets*.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json docs/scout-six-markets.json docs/scout-six-markets.txt 2>/dev/null || true
+          git add -f -- shared/agent/fairxg-scout-*.json shared/agent/fairxg-top10-*.json shared/agent/scout-six-markets.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json docs/scout-six-markets.json docs/scout-six-markets.txt 2>/dev/null || true
           if ! git diff --cached --quiet; then
-            git commit -m "ListaSix Scout 6/6 all fixtures ranked, not auto-approved [skip ci]"
+            git commit -m "ListaSix FairXG daily probabilities and TOP10, not auto-approved [skip ci]"
             for attempt in 1 2 3 4 5; do
               git pull --rebase origin main
               if git push origin HEAD:main; then
-                echo "SCOUT_6OF6_REPORT_PUBLISHED"
+                echo "FAIRXG_REPORT_PUBLISHED"
                 break
               fi
               if [ "$attempt" = 5 ]; then exit 1; fi
               sleep $((attempt * 2))
             done
           else
-            echo "SCOUT_6OF6_NO_NEW_DATA"
+            echo "FAIRXG_NO_NEW_DATA"
           fi
 
       - name: Emit deduplicated TOP10_READY feedback to independent AI analyst
-        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
+        if: steps.coverage.outputs.ready == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
@@ -137,10 +106,10 @@ jobs:
           if any(x["title"]==title for x in json.loads(existing.stdout)):
               print("TOP10_READY_ALREADY_SIGNALLED")
               raise SystemExit(0)
-          body=("TOP10_READY: mathematical Scout 6/6 is fully verified, same-day source signatures checked.\\n"
+          body=("TOP10_READY: FairXG published probability list is ready; unmatched ESPN fixtures are explicitly excluded.\\n"
                 "Existing ChatGPT MEMARA A/B AI Scout automation: pick up this signal at the next run, "
-                "research each candidate using the seven detailed factors; no Poisson recalculation.\\n"
-                "Read shared/agent/top10-feedback.json and shared/agent/scout-six-markets.json.\\n"
+                "research each FairXG candidate using the seven detailed factors; do not use the removed local model.\\n"
+                "Read shared/agent/top10-feedback.json and the FairXG dated report.\\n"
                 "Only independently verified, non-overlapping, approved A/B selections may be committed "
                 "to shikithe/Memara-tip/memarasix-football-ai-approved.json. GitHub is publisher only.\\n"
                 f"Fingerprint: {report['source_fingerprint']}\\n"
@@ -152,7 +121,7 @@ jobs:
           PY
 
       - name: Emit TOP10_READY draft PR and ready_for_review webhook
-        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
+        if: steps.coverage.outputs.ready == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
@@ -196,7 +165,7 @@ jobs:
                   raise ValueError("TOP10 feedback changed on main; refuse stale signal")
               marker={"date":today,"feedback":"TOP10_READY","feedback_id":feedback_id,
                       "source_fingerprint":fp,"fixture_ids":ids,"count":len(ids),
-                      "source_commit":snapshot,"test":False,"publication_allowed":False,
+                      "source_commit":snapshot,"model":"FairXG","test":False,"publication_allowed":False,
                       "report":"shared/agent/top10-feedback.json","scout_report":"shared/agent/scout-six-markets.json"}
               remote=run("git","ls-remote","--heads","origin",branch)
               if not remote:

@@ -2,7 +2,6 @@ import unittest
 from datetime import datetime, timezone
 
 from lista.scout_source_gate import is_ready
-from lista.scout_six_markets import analyze
 
 DAY = "2026-11-24"
 NOW = datetime(2026, 11, 24, 12, 0, tzinfo=timezone.utc)
@@ -26,33 +25,6 @@ class FallbackTests(unittest.TestCase):
         ready,reason=is_ready(feed,active,{"date":"2026-11-23","fixtures":[]},DAY)
         self.assertTrue(ready)
         self.assertIn("DEGRADED",reason)
-
-    def test_old_history_never_used_as_team_form(self):
-        feed,active=sample()
-        old={"date":"2026-11-23","fixtures":[feed["football_candidates"][0]],
-             "leagues":{"eng.1":{"teams":{}}}}
-        result=analyze(feed,active,old,NOW)
-        self.assertEqual(result["date"],DAY)
-        self.assertTrue(result["history_missing"])
-        self.assertEqual(len(result["ranked_fixtures"]),1)
-        record=result["ranked_fixtures"][0]
-        self.assertEqual(record["evidence"]["home_last_matches"],0)
-        self.assertEqual(record["evidence"]["away_last_matches"],0)
-        self.assertEqual(record["confidence"],"low_data")
-        self.assertTrue(record["needs_independent_ai_review"])
-        self.assertFalse(result["publication_allowed"])
-        self.assertEqual(result["detailed_ai_handoff"]["count"],1)
-        handoff = result["detailed_ai_handoff"]
-        item = handoff["candidates"][0]
-        # B ranking eligibility is separate from form evidence and publication.
-        self.assertFalse(item["eligible_for_A"])
-        self.assertTrue(item["eligible_for_B"])
-        self.assertFalse(handoff["research_only"])
-        self.assertFalse(item["research_only"])
-        self.assertEqual(item["form_sample_status"], "no_form")
-        self.assertTrue(item["requires_form_research"])
-        self.assertFalse(item["history_evidence_available"])
-        self.assertTrue(handoff["independent_ai_review_required"])
 
     def test_stale_offer_is_still_blocked(self):
         feed,active=sample()
