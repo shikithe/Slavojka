@@ -15,6 +15,7 @@ on:
 permissions:
   contents: write
   issues: write
+  pull-requests: write
 concurrency:
   group: listasix-scout-six-markets
   cancel-in-progress: false
@@ -148,4 +149,77 @@ jobs:
           subprocess.run(["gh","issue","create","--repo",os.environ["GH_REPO"],
                           "--title",title,"--body",body],check=True)
           print("TOP10_READY_AI_HANDOFF_CREATED")
+          PY
+
+      - name: Emit TOP10_READY draft PR and ready_for_review webhook
+        if: steps.coverage.outputs.ready == 'true' && steps.sources.outputs.ready == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, subprocess
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          def run(*args):
+              return subprocess.run(args, check=True, text=True, stdout=subprocess.PIPE).stdout.strip()
+          report=json.loads(Path("shared/agent/top10-feedback.json").read_text(encoding="utf-8"))
+          today=datetime.now(ZoneInfo("Europe/Sarajevo")).date().isoformat()
+          if report.get("feedback")!="TOP10_READY" or report.get("status")!="ready" or report.get("date")!=today:
+              print("TOP10_PR_NO_CURRENT_READY_FEEDBACK")
+              raise SystemExit(0)
+          fp=report["source_fingerprint"]
+          ids=report["fixture_ids"]
+          if not re.fullmatch(r"[0-9a-f]{64}",fp) or not 1<=len(ids)<=10 or len(set(ids))!=len(ids) or report["count"]!=len(ids) or report.get("publication_allowed") is not False:
+              raise ValueError("Invalid TOP10 feedback")
+          repo=os.environ["GH_REPO"]
+          branch=f"feedback/top10-{today}-{fp[:16]}"
+          feedback_id=f"TOP10-{today}-{fp}"
+          title=f"LISTASIX TOP10_READY — {today} — {fp[:12]}"
+          # Recover an interrupted draft; a previously sent PR is never re-emitted.
+          existing=json.loads(run("gh","pr","list","--repo",repo,"--state","all","--head",branch,"--json","number,isDraft,state,url"))
+          if len(existing)>1:
+              raise ValueError("Ambiguous TOP10 handoff PR")
+          if existing:
+              pr=existing[0]
+              if pr["state"]!="OPEN" or not pr["isDraft"]:
+                  print("TOP10_PR_ALREADY_SIGNALLED",pr["url"])
+                  raise SystemExit(0)
+              number=str(pr["number"])
+          else:
+              # Snapshot the already committed main reports; signal branch only, never merge.
+              run("git","fetch","origin","main")
+              snapshot=run("git","rev-parse","origin/main")
+              main_report=json.loads(run("git","show",snapshot+":shared/agent/top10-feedback.json"))
+              if main_report!=report:
+                  raise ValueError("TOP10 feedback changed on main; refuse stale signal")
+              marker={"date":today,"feedback":"TOP10_READY","feedback_id":feedback_id,
+                      "source_fingerprint":fp,"fixture_ids":ids,"count":len(ids),
+                      "source_commit":snapshot,"test":False,"publication_allowed":False,
+                      "report":"shared/agent/top10-feedback.json","scout_report":"shared/agent/scout-six-markets.json"}
+              remote=run("git","ls-remote","--heads","origin",branch)
+              if not remote:
+                  run("git","checkout","-b",branch,snapshot)
+                  p=Path("shared/agent/handoff")/(feedback_id+".json")
+                  p.parent.mkdir(parents=True,exist_ok=True)
+                  p.write_text(json.dumps(marker,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+                  run("git","add","-f",str(p))
+                  run("git","commit","-m","TOP10_READY handoff "+today+" [skip ci]")
+                  run("git","push","origin","HEAD:refs/heads/"+branch)
+              else:
+                  run("git","fetch","origin",branch)
+                  old=json.loads(run("git","show","FETCH_HEAD:shared/agent/handoff/"+feedback_id+".json"))
+                  if old.get("source_fingerprint")!=fp or old.get("fixture_ids")!=ids or old.get("date")!=today:
+                      raise ValueError("Existing handoff branch mismatch")
+              body=(f"Production TOP10_READY feedback.\n\nFeedback ID: `{feedback_id}`\n"
+                    f"Datum feedbacka: `{today}`\nFingerprint: `{fp}`\n"
+                    f"Source commit: `{snapshot}`\n"
+                    "Read the pinned TOP10 and Scout reports. This is a signal only, not approval or publication. Do not merge.")
+              url=run("gh","pr","create","--repo",repo,"--base","main","--head",branch,"--draft","--title",title,"--body",body)
+              number=url.rsplit("/",1)[-1]
+          # Label before ready_for_review: the receiver can verify the label on that event.
+          run("gh","pr","edit",number,"--repo",repo,"--add-label","TOP10_READY")
+          run("gh","pr","ready",number,"--repo",repo)
+          print("TOP10_PR_READY_FOR_REVIEW",number,feedback_id)
           PY
