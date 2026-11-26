@@ -1,5 +1,5 @@
 FAIRXG DAILY LIST | 2026-11-26
-Covered ESPN matches: 33/37
+Covered ESPN matches: 37/37
 FIXTURE | 1 | X | 2 | 3+ | GG | NG | RANKED MARKET | EV %
 RB Salzburg - Ararat-Armenia | 87.0 | 9.0 | 5.0 | 69.0 | 57.0 | 43.0 | 1 | 3.53
 Ajax Amsterdam - FC Thun | 84.0 | 9.0 | 6.0 | 84.0 | 55.0 | 45.0 | 3+ | 4.16
@@ -9,6 +9,7 @@ Brighton & Hove Albion - CSU Craiova | 88.0 | 8.0 | 4.0 | 49.0 | 52.0 | 48.0 | 1
 Lyon - Lillestrom | 83.0 | 11.0 | 6.0 | 62.0 | 50.0 | 50.0 | 1 | 1.26
 Braga - KuPS Kuopio | 86.0 | 10.0 | 5.0 | 47.0 | 42.0 | 58.0 | 1 | -3.68
 Besiktas - Hapoel Be'er | 80.0 | 13.0 | 8.0 | 70.0 | 52.0 | 48.0 | 1 | 1.6
+Sunderland - Jagiellonia Bialystok | 80.0 | 14.0 | 6.0 | 53.0 | 47.0 | 53.0 | 1 | 1.6
 TSG Hoffenheim - SK Sturm Graz | 76.0 | 14.0 | 10.0 | 61.0 | 54.0 | 46.0 | 1 | 1.84
 Pafos - FC Midtjylland | 47.0 | 25.0 | 28.0 | 56.0 | 58.0 | 42.0 | 1 | 45.23
 Marseille - Levski Sofia | 75.0 | 15.0 | 9.0 | 60.0 | 57.0 | 43.0 | 1 | 1.25
@@ -31,6 +32,9 @@ Olympiacos - AC Milan | 35.0 | 27.0 | 38.0 | 44.0 | 50.0 | 50.0 | NG | 8.5
 KAA Gent - Red Star Belgrade | 44.0 | 26.0 | 30.0 | 49.0 | 50.0 | 50.0 | NG | 7.0
 Celta Vigo - AFC Bournemouth | 24.0 | 25.0 | 51.0 | 53.0 | 52.0 | 48.0 | 2 | 5.06
 SK Brann - AGF | 47.0 | 23.0 | 30.0 | 55.0 | 58.0 | 42.0 | NG | 11.72
+Crystal Palace - Real Sociedad | 48.0 | 23.0 | 28.0 | 59.0 | 61.0 | 39.0 | 3+ | -5.01
 Sparta Prague - AZ Alkmaar | 32.0 | 25.0 | 42.0 | 57.0 | 59.0 | 41.0 | 3+ | -3.67
+Kairat Almaty - Mjällby AIF | 44.0 | 27.0 | 28.0 | 46.0 | 50.0 | 50.0 | NG | 2.0
 Hajduk Split - Sint-Truidense | 47.0 | 25.0 | 28.0 | 53.0 | 55.0 | 45.0 | 1 | 4.34
 Jablonec - FC Lugano | 32.0 | 26.0 | 42.0 | 53.0 | 58.0 | 42.0 | GG | -7.2
+FC Nordsjælland - Panathinaikos | 40.0 | 26.0 | 34.0 | 54.0 | 58.0 | 42.0 | 1 | 7.6
