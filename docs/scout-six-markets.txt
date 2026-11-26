@@ -1,44 +1,96 @@
-LISTASIX SCOUT 6/6 | 2026-11-25
+LISTASIX SCOUT 6/6 | 2026-11-26
 PROBABILITY MODEL (NOT BACKTEST-CALIBRATED). No ticket is auto-published.
-Number of matches: 11; probability estimates: 66
+Number of matches: 37; probability estimates: 222
 RANK | FIXTURE | 1 | X | 2 | 3+ | GG | NG | TOP | RUNNER-UP | ODDS | STATUS
-1 | Sporting CP - Manchester United | 63.6% | 19.8% | 16.6% | 61.1% | 56.0% | 44.0% | 1 63.6% | 3+ 61.1% | 2.56 | A
-2 | Paris Saint-Germain - AS Roma | 41.5% | 21.0% | 37.5% | 74.7% | 73.5% | 26.5% | 3+ 74.7% | GG 73.5% | 1.33 | A
-3 | Sabah FK - Barcelona | 27.9% | 20.8% | 51.3% | 71.1% | 69.3% | 30.7% | 3+ 71.1% | GG 69.3% | 1.09 | A
-4 | Atlético Madrid - Viking FK | 39.7% | 23.1% | 37.2% | 63.5% | 64.8% | 35.2% | GG 64.8% | 3+ 63.5% | 2.00 | OUT
-5 | Club Brugge - Liverpool | 43.5% | 22.2% | 34.3% | 67.8% | 68.0% | 32.0% | GG 68.0% | 3+ 67.8% | 1.34 | OUT
-6 | Slavia Prague - Villarreal | 34.8% | 22.3% | 42.9% | 67.1% | 67.5% | 32.5% | GG 67.5% | 3+ 67.1% | 1.41 | OUT
-7 | Shakhtar Donetsk - Fenerbahce | 36.6% | 23.9% | 39.5% | 59.5% | 61.8% | 38.2% | GG 61.8% | 3+ 59.5% | 1.57 | A/B
-8 | Internazionale - VfB Stuttgart | 44.3% | 24.2% | 31.5% | 56.8% | 59.2% | 40.8% | GG 59.2% | 3+ 56.8% | 1.36 | OUT
-9 | Lille - Bayern Munich | 34.8% | 25.7% | 39.5% | 50.9% | 55.0% | 45.0% | GG 55.0% | 3+ 50.9% | - | OUT
-10 | Boca Juniors - Independiente Rivadavia | 54.8% | 25.1% | 20.1% | 44.2% | 45.7% | 54.3% | 1 54.8% | NG 54.3% | 1.62 | OUT
-11 | Atlético-MG - Corinthians | 31.5% | 29.5% | 39.0% | 36.2% | 43.0% | 57.0% | NG 57.0% | GG 43.0% | - | OUT
+1 | Olympiacos - AC Milan | 46.7% | 21.2% | 32.1% | 71.8% | 70.8% | 29.2% | 3+ 71.8% | GG 70.8% | 1.88 | A/B
+2 | RB Salzburg - Ararat-Armenia | 48.1% | 21.3% | 30.6% | 70.7% | 69.7% | 30.3% | 3+ 70.7% | GG 69.7% | 1.31 | A/B
+3 | Kairat Almaty - Mjällby AIF | 21.3% | 24.5% | 54.2% | 47.8% | 49.0% | 51.0% | 2 54.2% | NG 51.0% | 3.38 | A/B
+4 | Heart of Midlothian - AS Monaco | 42.9% | 22.3% | 34.8% | 67.4% | 67.7% | 32.3% | GG 67.7% | 3+ 67.4% | 1.60 | A/B
+5 | Sparta Prague - AZ Alkmaar | 33.8% | 21.9% | 44.3% | 69.0% | 68.8% | 31.2% | 3+ 69.0% | GG 68.8% | 1.69 | A/B
+6 | Juventus - Omonia Nicosia | 47.6% | 22.9% | 29.5% | 62.0% | 62.8% | 37.2% | GG 62.8% | 3+ 62.0% | 1.98 | A/B
+7 | Pafos - FC Midtjylland | 38.4% | 22.4% | 39.2% | 67.3% | 67.8% | 32.2% | GG 67.8% | 3+ 67.3% | 1.47 | A/B
+8 | SC Freiburg - FC Twente | 29.2% | 22.8% | 48.0% | 62.4% | 63.0% | 37.0% | GG 63.0% | 3+ 62.4% | 1.47 | A/B
+9 | Iberia 1999 - Getafe | 36.8% | 25.2% | 38.0% | 53.3% | 56.9% | 43.1% | GG 56.9% | 3+ 53.3% | 2.18 | A/B
+10 | Torreense - Celtic | 27.9% | 21.8% | 50.3% | 66.2% | 65.6% | 34.4% | 3+ 66.2% | GG 65.6% | 1.55 | A/B
+11 | Ferencvaros - NK Celje | 58.4% | 20.6% | 21.0% | 64.3% | 61.4% | 38.6% | 3+ 64.3% | GG 61.4% | 1.53 | A/B
+12 | Marseille - Levski Sofia | 44.4% | 24.1% | 31.5% | 57.2% | 59.5% | 40.5% | GG 59.5% | 3+ 57.2% | 1.88 | A/B
+13 | Crystal Palace - Real Sociedad | 32.4% | 24.2% | 43.4% | 57.2% | 59.6% | 40.4% | GG 59.6% | 3+ 57.2% | 1.50 | A/B
+14 | NEC Nijmegen - Stade Rennais | 38.4% | 23.0% | 38.6% | 64.2% | 65.4% | 34.6% | GG 65.4% | 3+ 64.2% | 1.45 | A/B
+15 | Viktoria Plzen - Benfica | 27.7% | 22.6% | 49.7% | 62.2% | 62.5% | 37.5% | GG 62.5% | 3+ 62.2% | 1.56 | A/B
+16 | FC Nordsjælland - Panathinaikos | 44.0% | 23.5% | 32.5% | 60.7% | 62.3% | 37.7% | GG 62.3% | 3+ 60.7% | 1.53 | A/B
+17 | Inter D'Escaldes - F.C. København | 35.3% | 25.8% | 38.9% | 50.7% | 54.9% | 45.1% | GG 54.9% | 3+ 50.7% | 2.11 | A/B
+18 | Kauno Zalgiris - Riga FC | 23.4% | 23.7% | 52.9% | 53.2% | 54.2% | 45.8% | GG 54.2% | 3+ 53.2% | 1.71 | A/B
+19 | OFI Crete - Anderlecht | 36.5% | 27.7% | 35.8% | 42.8% | 48.7% | 51.3% | NG 51.3% | GG 48.7% | 2.17 | A/B
+20 | Egnatia - Lincoln Red Imps | 36.2% | 27.1% | 36.7% | 45.4% | 50.7% | 49.3% | GG 50.7% | NG 49.3% | 1.64 | A/B
+21 | Besiktas - Hapoel Be'er | 61.9% | 19.8% | 18.3% | 64.3% | 59.7% | 40.3% | 3+ 64.3% | 1 61.9% | 1.36 | A/B
+22 | Sunderland - Jagiellonia Bialystok | 33.2% | 25.6% | 41.2% | 51.0% | 54.9% | 45.1% | GG 54.9% | 3+ 51.0% | 2.08 | A/B
+23 | Dinamo Zagreb - Bayer Leverkusen | 29.2% | 22.8% | 48.0% | 62.3% | 63.0% | 37.0% | GG 63.0% | 3+ 62.3% | 1.49 | A/B
+24 | Borac Banja Luka - Atalanta | 36.7% | 25.1% | 38.2% | 54.0% | 57.5% | 42.5% | GG 57.5% | 3+ 54.0% | 1.62 | A/B
+25 | Brighton & Hove Albion - CSU Craiova | 30.2% | 26.6% | 43.2% | 46.1% | 50.7% | 49.3% | GG 50.7% | NG 49.3% | 2.28 | A/B
+26 | SK Brann - AGF | 38.7% | 23.7% | 37.6% | 60.5% | 62.6% | 37.4% | GG 62.6% | 3+ 60.5% | 1.42 | A/B
+27 | Lyon - Lillestrom | 27.0% | 26.9% | 46.1% | 43.2% | 47.8% | 52.2% | NG 52.2% | GG 47.8% | 1.86 | A/B
+28 | KAA Gent - Red Star Belgrade | 49.0% | 23.8% | 27.2% | 56.2% | 57.8% | 42.2% | GG 57.8% | 3+ 56.2% | 1.63 | A/B
+29 | Braga - KuPS Kuopio | 52.1% | 27.6% | 20.3% | 36.4% | 39.9% | 60.1% | NG 60.1% | 1 52.1% | 1.58 | A/B
+30 | Hajduk Split - Sint-Truidense | 41.1% | 24.4% | 34.5% | 56.7% | 59.5% | 40.5% | GG 59.5% | 3+ 56.7% | 1.59 | A/B
+31 | Union St.-Gilloise - Lech Poznan | 60.4% | 20.9% | 18.7% | 59.9% | 56.7% | 43.3% | 1 60.4% | 3+ 59.9% | 1.36 | A/B
+32 | Jablonec - FC Lugano | 31.0% | 24.5% | 44.5% | 55.4% | 58.1% | 41.9% | GG 58.1% | 3+ 55.4% | 1.60 | A/B
+33 | São Paulo - Remo | 50.2% | 24.0% | 25.8% | 54.3% | 55.9% | 44.1% | GG 55.9% | 3+ 54.3% | 1.92 | A/B
+34 | CSKA Sofia - Trabzonspor | 30.5% | 26.2% | 43.3% | 47.8% | 52.1% | 47.9% | GG 52.1% | NG 47.9% | 1.53 | A/B
+35 | TSG Hoffenheim - SK Sturm Graz | 37.7% | 25.8% | 36.5% | 50.8% | 55.0% | 45.0% | GG 55.0% | 3+ 50.8% | 1.63 | A/B
+36 | Celta Vigo - AFC Bournemouth | 24.9% | 24.2% | 50.9% | 52.7% | 54.4% | 45.6% | GG 54.4% | 3+ 52.7% | 1.72 | A/B
+37 | Ajax Amsterdam - FC Thun | 50.2% | 23.3% | 26.5% | 58.0% | 58.9% | 41.1% | GG 58.9% | 3+ 58.0% | 1.68 | A/B
 
 PRICE/EV RANKING | match | pick | raw p% | conservative p% | evidence /100 | conservative EV% | score | odds | eligible
-1 | Sporting CP - Manchester United | 1 | 63.6% | 52.5% | 54.8 | +34.4% | 43.17 | 2.56 | YES
-2 | Paris Saint-Germain - AS Roma | GG | 73.5% | 71.9% | 54.3 | +2.8% | 39.52 | 1.43 | YES
-3 | Sabah FK - Barcelona | GG | 69.3% | 66.3% | 52.8 | +5.4% | 38.08 | 1.59 | YES
-4 | Atlético Madrid - Viking FK | GG | 64.8% | 56.8% | 45.9 | +13.6% | 36.59 | 2.00 | NO
-5 | Club Brugge - Liverpool | GG | 68.0% | 71.1% | 53.4 | -4.7% | 35.83 | 1.34 | NO
-6 | Slavia Prague - Villarreal | 3+ | 67.1% | 67.6% | 48.1 | -0.7% | 35.31 | 1.47 | NO
-7 | Shakhtar Donetsk - Fenerbahce | 3+ | 59.5% | 57.8% | 59.6 | +4.6% | 35.18 | 1.81 | YES
-8 | Internazionale - VfB Stuttgart | GG | 59.2% | 66.1% | 51.7 | -10.1% | 31.19 | 1.36 | NO
-9 | Lille - Bayern Munich | 1 | 34.8% | 26.4% | 43.9 | +33.3% | 30.57 | 5.05 | NO
-10 | Boca Juniors - Independiente Rivadavia | 1 | 54.8% | 57.8% | 56.6 | -6.3% | 30.04 | 1.62 | NO
-11 | Atlético-MG - Corinthians | 2 | 39.0% | 36.4% | 50.7 | +7.8% | 26.28 | 2.96 | NO
+1 | Olympiacos - AC Milan | 3+ | 71.8% | 62.9% | 51.9 | +18.2% | 41.99 | 1.88 | YES
+2 | RB Salzburg - Ararat-Armenia | GG | 69.7% | 62.9% | 55.7 | +15.8% | 41.55 | 1.84 | YES
+3 | Kairat Almaty - Mjällby AIF | 2 | 54.2% | 44.1% | 58.9 | +49.0% | 40.25 | 3.38 | NO
+4 | Heart of Midlothian - AS Monaco | GG | 67.7% | 65.6% | 60.3 | +5.0% | 38.76 | 1.60 | YES
+5 | Sparta Prague - AZ Alkmaar | 3+ | 69.0% | 64.4% | 52.9 | +8.8% | 38.76 | 1.69 | YES
+6 | Juventus - Omonia Nicosia | GG | 62.8% | 57.5% | 57.1 | +13.9% | 38.71 | 1.98 | YES
+7 | Pafos - FC Midtjylland | 3+ | 67.3% | 65.0% | 57.9 | +5.2% | 38.21 | 1.62 | YES
+8 | SC Freiburg - FC Twente | 2 | 48.0% | 40.2% | 55.3 | +31.2% | 38.09 | 3.26 | NO
+9 | Iberia 1999 - Getafe | GG | 56.9% | 52.5% | 59.8 | +14.4% | 37.17 | 2.18 | YES
+10 | Torreense - Celtic | 3+ | 66.2% | 65.5% | 57.4 | +1.5% | 36.75 | 1.55 | YES
+11 | Ferencvaros - NK Celje | GG | 61.4% | 59.5% | 60.5 | +5.2% | 36.30 | 1.77 | YES
+12 | Marseille - Levski Sofia | GG | 59.5% | 56.9% | 59.3 | +7.0% | 35.83 | 1.88 | YES
+13 | Crystal Palace - Real Sociedad | 2 | 43.4% | 37.6% | 57.0 | +25.9% | 35.45 | 3.35 | NO
+14 | NEC Nijmegen - Stade Rennais | GG | 65.4% | 67.0% | 56.2 | -2.9% | 35.30 | 1.45 | NO
+15 | Viktoria Plzen - Benfica | GG | 62.5% | 63.1% | 60.6 | -1.5% | 34.95 | 1.56 | NO
+16 | FC Nordsjælland - Panathinaikos | 3+ | 60.7% | 59.8% | 58.3 | +2.2% | 34.81 | 1.71 | YES
+17 | Inter D'Escaldes - F.C. København | GG | 54.9% | 51.8% | 58.9 | +9.3% | 34.61 | 2.11 | YES
+18 | Kauno Zalgiris - Riga FC | 2 | 52.9% | 49.9% | 60.2 | +10.2% | 34.35 | 2.21 | NO
+19 | OFI Crete - Anderlecht | 1 | 36.5% | 30.4% | 57.6 | +37.4% | 34.30 | 4.52 | NO
+20 | Egnatia - Lincoln Red Imps | 2 | 36.7% | 29.5% | 59.6 | +56.1% | 34.24 | 5.29 | NO
+21 | Besiktas - Hapoel Be'er | 3+ | 64.3% | 68.3% | 56.2 | -7.0% | 34.10 | 1.36 | NO
+22 | Sunderland - Jagiellonia Bialystok | GG | 54.9% | 51.9% | 55.9 | +7.9% | 33.60 | 2.08 | YES
+23 | Dinamo Zagreb - Bayer Leverkusen | GG | 63.0% | 65.0% | 50.7 | -3.1% | 33.58 | 1.49 | NO
+24 | Borac Banja Luka - Atalanta | 1 | 36.7% | 28.0% | 58.9 | +81.2% | 33.48 | 6.48 | NO
+25 | Brighton & Hove Albion - CSU Craiova | 2 | 43.2% | 27.5% | 59.7 | +533.4% | 33.42 | 23.00 | NO
+26 | SK Brann - AGF | GG | 62.6% | 66.1% | 54.7 | -6.1% | 33.37 | 1.42 | NO
+27 | Lyon - Lillestrom | 2 | 46.1% | 28.8% | 55.3 | +294.0% | 33.27 | 13.70 | NO
+28 | KAA Gent - Red Star Belgrade | 3+ | 56.2% | 55.4% | 59.2 | +2.0% | 33.04 | 1.84 | YES
+29 | Braga - KuPS Kuopio | NG | 60.1% | 61.5% | 55.6 | -2.8% | 32.97 | 1.58 | NO
+30 | Hajduk Split - Sint-Truidense | GG | 59.5% | 61.0% | 56.9 | -3.1% | 32.82 | 1.59 | NO
+31 | Union St.-Gilloise - Lech Poznan | 3+ | 59.9% | 63.9% | 55.7 | -7.3% | 32.05 | 1.45 | NO
+32 | Jablonec - FC Lugano | GG | 58.1% | 60.0% | 57.0 | -4.0% | 32.02 | 1.60 | NO
+33 | São Paulo - Remo | GG | 55.9% | 54.0% | 51.0 | +3.7% | 31.96 | 1.92 | YES
+34 | CSKA Sofia - Trabzonspor | NG | 47.9% | 45.8% | 61.1 | +7.7% | 31.70 | 2.35 | NO
+35 | TSG Hoffenheim - SK Sturm Graz | 2 | 36.5% | 24.9% | 54.1 | +123.7% | 31.46 | 9.00 | NO
+36 | Celta Vigo - AFC Bournemouth | 3+ | 52.7% | 52.2% | 57.6 | +1.3% | 31.13 | 1.94 | YES
+37 | Ajax Amsterdam - FC Thun | 3+ | 58.0% | 71.1% | 42.1 | -11.8% | 31.09 | 1.24 | NO
 
 DETAILED AI SCOUT: TOP 10 ONLY (mathematical form, goals, home/away, league averages ALREADY DONE)
-1. Sporting CP - Manchester United | VALUE PICK 1 63.6% | conservative p 52.5% | EV +34.4% | evidence 54.8/100 | score 43.17 | odds 2.56 | Independent AI review pending
-2. Paris Saint-Germain - AS Roma | VALUE PICK GG 73.5% | conservative p 71.9% | EV +2.8% | evidence 54.3/100 | score 39.52 | odds 1.43 | Independent AI review pending
-3. Sabah FK - Barcelona | VALUE PICK GG 69.3% | conservative p 66.3% | EV +5.4% | evidence 52.8/100 | score 38.08 | odds 1.59 | Independent AI review pending
-4. Atlético Madrid - Viking FK | VALUE PICK GG 64.8% | conservative p 56.8% | EV +13.6% | evidence 45.9/100 | score 36.59 | odds 2.00 | Independent AI review pending
-5. Club Brugge - Liverpool | VALUE PICK GG 68.0% | conservative p 71.1% | EV -4.7% | evidence 53.4/100 | score 35.83 | odds 1.34 | Independent AI review pending
-6. Slavia Prague - Villarreal | VALUE PICK 3+ 67.1% | conservative p 67.6% | EV -0.7% | evidence 48.1/100 | score 35.31 | odds 1.47 | Independent AI review pending
-7. Shakhtar Donetsk - Fenerbahce | VALUE PICK 3+ 59.5% | conservative p 57.8% | EV +4.6% | evidence 59.6/100 | score 35.18 | odds 1.81 | Independent AI review pending
-8. Internazionale - VfB Stuttgart | VALUE PICK GG 59.2% | conservative p 66.1% | EV -10.1% | evidence 51.7/100 | score 31.19 | odds 1.36 | Independent AI review pending
-9. Lille - Bayern Munich | VALUE PICK 1 34.8% | conservative p 26.4% | EV +33.3% | evidence 43.9/100 | score 30.57 | odds 5.05 | Independent AI review pending
-10. Boca Juniors - Independiente Rivadavia | VALUE PICK 1 54.8% | conservative p 57.8% | EV -6.3% | evidence 56.6/100 | score 30.04 | odds 1.62 | Independent AI review pending
+1. Olympiacos - AC Milan | VALUE PICK 3+ 71.8% | conservative p 62.9% | EV +18.2% | evidence 51.9/100 | score 41.99 | odds 1.88 | Independent AI review pending
+2. RB Salzburg - Ararat-Armenia | VALUE PICK GG 69.7% | conservative p 62.9% | EV +15.8% | evidence 55.7/100 | score 41.55 | odds 1.84 | Independent AI review pending
+3. Kairat Almaty - Mjällby AIF | VALUE PICK 2 54.2% | conservative p 44.1% | EV +49.0% | evidence 58.9/100 | score 40.25 | odds 3.38 | Independent AI review pending
+4. Heart of Midlothian - AS Monaco | VALUE PICK GG 67.7% | conservative p 65.6% | EV +5.0% | evidence 60.3/100 | score 38.76 | odds 1.60 | Independent AI review pending
+5. Sparta Prague - AZ Alkmaar | VALUE PICK 3+ 69.0% | conservative p 64.4% | EV +8.8% | evidence 52.9/100 | score 38.76 | odds 1.69 | Independent AI review pending
+6. Juventus - Omonia Nicosia | VALUE PICK GG 62.8% | conservative p 57.5% | EV +13.9% | evidence 57.1/100 | score 38.71 | odds 1.98 | Independent AI review pending
+7. Pafos - FC Midtjylland | VALUE PICK 3+ 67.3% | conservative p 65.0% | EV +5.2% | evidence 57.9/100 | score 38.21 | odds 1.62 | Independent AI review pending
+8. SC Freiburg - FC Twente | VALUE PICK 2 48.0% | conservative p 40.2% | EV +31.2% | evidence 55.3/100 | score 38.09 | odds 3.26 | Independent AI review pending
+9. Iberia 1999 - Getafe | VALUE PICK GG 56.9% | conservative p 52.5% | EV +14.4% | evidence 59.8/100 | score 37.17 | odds 2.18 | Independent AI review pending
+10. Torreense - Celtic | VALUE PICK 3+ 66.2% | conservative p 65.5% | EV +1.5% | evidence 57.4/100 | score 36.75 | odds 1.55 | Independent AI review pending
 
-A PROPOSAL (UNAPPROVED) 2.27: Paris Saint-Germain - AS Roma [GG 1.43, p=73.5%]; Sabah FK - Barcelona [GG 1.59, p=69.3%]
-B NO ELIGIBLE PROPOSAL
-No 2-3 leg B combination: 3+ must be the first or second value market with qualifying odds/EV
+A PROPOSAL (UNAPPROVED) 2.94: RB Salzburg - Ararat-Armenia [GG 1.84, p=69.7%]; Heart of Midlothian - AS Monaco [GG 1.60, p=67.7%]
+B PROPOSAL (UNAPPROVED) 2.91: Olympiacos - AC Milan [3+ 1.88, p=71.8%]; Torreense - Celtic [3+ 1.55, p=66.2%]
+B: highest Poisson 3+ probabilities among TOP10, quote total 2-3; AI must review EV/risk separately
