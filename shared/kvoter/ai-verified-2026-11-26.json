@@ -1256,6 +1256,861 @@
           }
         }
       }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915816",
+      "league": "uefa.europa.conf",
+      "home": "Kairat Almaty",
+      "away": "Mjällby AIF",
+      "start_utc": "2026-11-26T15:30:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.21,
+          "draw": 3.47,
+          "away": 3.38
+        },
+        "3+": {
+          "over": 1.94
+        },
+        "BTTS": {
+          "yes": 1.7,
+          "no": 2.04
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/kairat-almaty-mjallby-europa-conference-league-group-stage-956994"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/kairat-almaty-mjallby-europa-conference-league-group-stage-956994",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/kairat-almaty-mjallby-europa-conference-league-group-stage-956994",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/kairat-almaty-mjallby-europa-conference-league-group-stage-956994",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/kairat-almaty-mjallby-europa-conference-league-group-stage-956994",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/kairat-almaty-mjallby-europa-conference-league-group-stage-956994",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/kairat-almaty-mjallby-europa-conference-league-group-stage-956994",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915506",
+      "league": "uefa.europa",
+      "home": "Besiktas",
+      "away": "Hapoel Be'er",
+      "start_utc": "2026-11-26T17:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.27,
+          "draw": 6.74,
+          "away": 10.6
+        },
+        "3+": {
+          "over": 1.36
+        },
+        "BTTS": {
+          "yes": 1.71,
+          "no": 2.04
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/besiktas-hapoel-beer-sheva-europa-league-group-stage-956976"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/besiktas-hapoel-beer-sheva-europa-league-group-stage-956976",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/besiktas-hapoel-beer-sheva-europa-league-group-stage-956976",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/besiktas-hapoel-beer-sheva-europa-league-group-stage-956976",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/besiktas-hapoel-beer-sheva-europa-league-group-stage-956976",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/besiktas-hapoel-beer-sheva-europa-league-group-stage-956976",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/besiktas-hapoel-beer-sheva-europa-league-group-stage-956976",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915521",
+      "league": "uefa.europa",
+      "home": "Olympiacos",
+      "away": "AC Milan",
+      "start_utc": "2026-11-26T17:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.88,
+          "draw": 3.46,
+          "away": 2.53
+        },
+        "3+": {
+          "over": 1.88
+        },
+        "BTTS": {
+          "yes": 1.63,
+          "no": 2.17
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/olympiacos-piraeus-milan-europa-league-group-stage-956981"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/olympiacos-piraeus-milan-europa-league-group-stage-956981",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/olympiacos-piraeus-milan-europa-league-group-stage-956981",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/olympiacos-piraeus-milan-europa-league-group-stage-956981",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/olympiacos-piraeus-milan-europa-league-group-stage-956981",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/olympiacos-piraeus-milan-europa-league-group-stage-956981",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/olympiacos-piraeus-milan-europa-league-group-stage-956981",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915520",
+      "league": "uefa.europa",
+      "home": "RB Salzburg",
+      "away": "Ararat-Armenia",
+      "start_utc": "2026-11-26T17:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.19,
+          "draw": 7.9,
+          "away": 16.0
+        },
+        "3+": {
+          "over": 1.31
+        },
+        "BTTS": {
+          "yes": 1.84,
+          "no": 1.88
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/red-bull-salzburg-ararat-armenia-europa-league-group-stage-956979"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/red-bull-salzburg-ararat-armenia-europa-league-group-stage-956979",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/red-bull-salzburg-ararat-armenia-europa-league-group-stage-956979",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/red-bull-salzburg-ararat-armenia-europa-league-group-stage-956979",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/red-bull-salzburg-ararat-armenia-europa-league-group-stage-956979",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/red-bull-salzburg-ararat-armenia-europa-league-group-stage-956979",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/red-bull-salzburg-ararat-armenia-europa-league-group-stage-956979",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915508",
+      "league": "uefa.europa",
+      "home": "Union St.-Gilloise",
+      "away": "Lech Poznan",
+      "start_utc": "2026-11-26T17:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.36,
+          "draw": 5.67,
+          "away": 8.4
+        },
+        "3+": {
+          "over": 1.45
+        },
+        "BTTS": {
+          "yes": 1.7,
+          "no": 2.05
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/union-saint-gilloise-lech-poznan-europa-league-group-stage-956982"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/union-saint-gilloise-lech-poznan-europa-league-group-stage-956982",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/union-saint-gilloise-lech-poznan-europa-league-group-stage-956982",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/union-saint-gilloise-lech-poznan-europa-league-group-stage-956982",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/union-saint-gilloise-lech-poznan-europa-league-group-stage-956982",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/union-saint-gilloise-lech-poznan-europa-league-group-stage-956982",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/union-saint-gilloise-lech-poznan-europa-league-group-stage-956982",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915814",
+      "league": "uefa.europa.conf",
+      "home": "Brighton & Hove Albion",
+      "away": "CSU Craiova",
+      "start_utc": "2026-11-26T17:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.11,
+          "draw": 10.5,
+          "away": 23.0
+        },
+        "3+": {
+          "over": 1.39
+        },
+        "BTTS": {
+          "yes": 2.28,
+          "no": 1.56
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/brighton-universitatea-craiova-europa-conference-league-group-stage-956997"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/brighton-universitatea-craiova-europa-conference-league-group-stage-956997",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/brighton-universitatea-craiova-europa-conference-league-group-stage-956997",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/brighton-universitatea-craiova-europa-conference-league-group-stage-956997",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/brighton-universitatea-craiova-europa-conference-league-group-stage-956997",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/brighton-universitatea-craiova-europa-conference-league-group-stage-956997",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/brighton-universitatea-craiova-europa-conference-league-group-stage-956997",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915810",
+      "league": "uefa.europa.conf",
+      "home": "Egnatia",
+      "away": "Lincoln Red Imps",
+      "start_utc": "2026-11-26T17:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.62,
+          "draw": 4.36,
+          "away": 5.29
+        },
+        "3+": {
+          "over": 1.65
+        },
+        "BTTS": {
+          "yes": 1.64,
+          "no": 2.13
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/egnatia-rrogozhine-lincoln-red-imps-europa-conference-league-group-stage-957002"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/egnatia-rrogozhine-lincoln-red-imps-europa-conference-league-group-stage-957002",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/egnatia-rrogozhine-lincoln-red-imps-europa-conference-league-group-stage-957002",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/egnatia-rrogozhine-lincoln-red-imps-europa-conference-league-group-stage-957002",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/egnatia-rrogozhine-lincoln-red-imps-europa-conference-league-group-stage-957002",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/egnatia-rrogozhine-lincoln-red-imps-europa-conference-league-group-stage-957002",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/egnatia-rrogozhine-lincoln-red-imps-europa-conference-league-group-stage-957002",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915813",
+      "league": "uefa.europa.conf",
+      "home": "Iberia 1999",
+      "away": "Getafe",
+      "start_utc": "2026-11-26T17:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 7.47,
+          "draw": 4.46,
+          "away": 1.47
+        },
+        "3+": {
+          "over": 2.06
+        },
+        "BTTS": {
+          "yes": 2.18,
+          "no": 1.61
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/iberia-1999-tbilisi-getafe-europa-conference-league-group-stage-956998"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/iberia-1999-tbilisi-getafe-europa-conference-league-group-stage-956998",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/iberia-1999-tbilisi-getafe-europa-conference-league-group-stage-956998",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/iberia-1999-tbilisi-getafe-europa-conference-league-group-stage-956998",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/iberia-1999-tbilisi-getafe-europa-conference-league-group-stage-956998",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/iberia-1999-tbilisi-getafe-europa-conference-league-group-stage-956998",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/iberia-1999-tbilisi-getafe-europa-conference-league-group-stage-956998",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915808",
+      "league": "uefa.europa.conf",
+      "home": "SK Brann",
+      "away": "AGF",
+      "start_utc": "2026-11-26T17:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.19,
+          "draw": 3.84,
+          "away": 3.13
+        },
+        "3+": {
+          "over": 1.49
+        },
+        "BTTS": {
+          "yes": 1.42,
+          "no": 2.66
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/brann-bergen-agf-aarhus-europa-conference-league-group-stage-956996"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/brann-bergen-agf-aarhus-europa-conference-league-group-stage-956996",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/brann-bergen-agf-aarhus-europa-conference-league-group-stage-956996",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/brann-bergen-agf-aarhus-europa-conference-league-group-stage-956996",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/brann-bergen-agf-aarhus-europa-conference-league-group-stage-956996",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/brann-bergen-agf-aarhus-europa-conference-league-group-stage-956996",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/brann-bergen-agf-aarhus-europa-conference-league-group-stage-956996",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915516",
+      "league": "uefa.europa",
+      "home": "Ferencvaros",
+      "away": "NK Celje",
+      "start_utc": "2026-11-26T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.38,
+          "draw": 5.37,
+          "away": 8.3
+        },
+        "3+": {
+          "over": 1.53
+        },
+        "BTTS": {
+          "yes": 1.77,
+          "no": 1.96
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/ferencvarosi-nk-celje-europa-league-group-stage-956985"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/ferencvarosi-nk-celje-europa-league-group-stage-956985",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/ferencvarosi-nk-celje-europa-league-group-stage-956985",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/ferencvarosi-nk-celje-europa-league-group-stage-956985",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/ferencvarosi-nk-celje-europa-league-group-stage-956985",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/ferencvarosi-nk-celje-europa-league-group-stage-956985",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/ferencvarosi-nk-celje-europa-league-group-stage-956985",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa:401915515",
+      "league": "uefa.europa",
+      "home": "TSG Hoffenheim",
+      "away": "SK Sturm Graz",
+      "start_utc": "2026-11-26T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.34,
+          "draw": 5.78,
+          "away": 9.0
+        },
+        "3+": {
+          "over": 1.38
+        },
+        "BTTS": {
+          "yes": 1.63,
+          "no": 2.17
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/hoffenheim-sturm-graz-europa-league-group-stage-956986"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/hoffenheim-sturm-graz-europa-league-group-stage-956986",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/hoffenheim-sturm-graz-europa-league-group-stage-956986",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/hoffenheim-sturm-graz-europa-league-group-stage-956986",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/hoffenheim-sturm-graz-europa-league-group-stage-956986",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/hoffenheim-sturm-graz-europa-league-group-stage-956986",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/hoffenheim-sturm-graz-europa-league-group-stage-956986",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915807",
+      "league": "uefa.europa.conf",
+      "home": "FC Nordsjælland",
+      "away": "Panathinaikos",
+      "start_utc": "2026-11-26T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.69,
+          "draw": 3.55,
+          "away": 2.62
+        },
+        "3+": {
+          "over": 1.71
+        },
+        "BTTS": {
+          "yes": 1.53,
+          "no": 2.35
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/fc-nordsjaelland-panathinaikos-europa-conference-league-group-stage-957005"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/fc-nordsjaelland-panathinaikos-europa-conference-league-group-stage-957005",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/fc-nordsjaelland-panathinaikos-europa-conference-league-group-stage-957005",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/fc-nordsjaelland-panathinaikos-europa-conference-league-group-stage-957005",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/fc-nordsjaelland-panathinaikos-europa-conference-league-group-stage-957005",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/fc-nordsjaelland-panathinaikos-europa-conference-league-group-stage-957005",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/fc-nordsjaelland-panathinaikos-europa-conference-league-group-stage-957005",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915738",
+      "league": "uefa.europa.conf",
+      "home": "Inter D'Escaldes",
+      "away": "F.C. København",
+      "start_utc": "2026-11-26T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 14.1,
+          "draw": 6.53,
+          "away": 1.23
+        },
+        "3+": {
+          "over": 1.55
+        },
+        "BTTS": {
+          "yes": 2.11,
+          "no": 1.65
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/inter-club-d-escaldes-fc-copenhagen-europa-conference-league-group-stage-957009"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/inter-club-d-escaldes-fc-copenhagen-europa-conference-league-group-stage-957009",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/inter-club-d-escaldes-fc-copenhagen-europa-conference-league-group-stage-957009",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/inter-club-d-escaldes-fc-copenhagen-europa-conference-league-group-stage-957009",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/inter-club-d-escaldes-fc-copenhagen-europa-conference-league-group-stage-957009",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/inter-club-d-escaldes-fc-copenhagen-europa-conference-league-group-stage-957009",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/inter-club-d-escaldes-fc-copenhagen-europa-conference-league-group-stage-957009",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:uefa.europa.conf:401915804",
+      "league": "uefa.europa.conf",
+      "home": "KAA Gent",
+      "away": "Red Star Belgrade",
+      "start_utc": "2026-11-26T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.17,
+          "draw": 3.53,
+          "away": 3.43
+        },
+        "3+": {
+          "over": 1.84
+        },
+        "BTTS": {
+          "yes": 1.63,
+          "no": 2.14
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/kaa-gent-crvena-zvezda-belgrade-europa-conference-league-group-stage-957007"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/kaa-gent-crvena-zvezda-belgrade-europa-conference-league-group-stage-957007",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/kaa-gent-crvena-zvezda-belgrade-europa-conference-league-group-stage-957007",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/kaa-gent-crvena-zvezda-belgrade-europa-conference-league-group-stage-957007",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/kaa-gent-crvena-zvezda-belgrade-europa-conference-league-group-stage-957007",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/kaa-gent-crvena-zvezda-belgrade-europa-conference-league-group-stage-957007",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/kaa-gent-crvena-zvezda-belgrade-europa-conference-league-group-stage-957007",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841329",
+      "league": "bra.1",
+      "home": "São Paulo",
+      "away": "Remo",
+      "start_utc": "2026-11-26T23:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.37,
+          "draw": 5.13,
+          "away": 8.35
+        },
+        "3+": {
+          "over": 1.71
+        },
+        "BTTS": {
+          "yes": 1.92,
+          "no": 1.79
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/sao-paulo-sp-remo-pa-serie-a-brazil-957072"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/sao-paulo-sp-remo-pa-serie-a-brazil-957072",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/sao-paulo-sp-remo-pa-serie-a-brazil-957072",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/sao-paulo-sp-remo-pa-serie-a-brazil-957072",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/sao-paulo-sp-remo-pa-serie-a-brazil-957072",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/sao-paulo-sp-remo-pa-serie-a-brazil-957072",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/sao-paulo-sp-remo-pa-serie-a-brazil-957072",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
     }
   ]
 }
