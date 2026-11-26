@@ -42,9 +42,17 @@ class FallbackTests(unittest.TestCase):
         self.assertTrue(record["needs_independent_ai_review"])
         self.assertFalse(result["publication_allowed"])
         self.assertEqual(result["detailed_ai_handoff"]["count"],1)
-        self.assertTrue(result["detailed_ai_handoff"]["research_only"])
-        self.assertFalse(result["detailed_ai_handoff"]["candidates"][0]["eligible_for_A"])
-        self.assertTrue(result["detailed_ai_handoff"]["candidates"][0]["research_only"])
+        handoff = result["detailed_ai_handoff"]
+        item = handoff["candidates"][0]
+        # B ranking eligibility is separate from form evidence and publication.
+        self.assertFalse(item["eligible_for_A"])
+        self.assertTrue(item["eligible_for_B"])
+        self.assertFalse(handoff["research_only"])
+        self.assertFalse(item["research_only"])
+        self.assertEqual(item["form_sample_status"], "no_form")
+        self.assertTrue(item["requires_form_research"])
+        self.assertFalse(item["history_evidence_available"])
+        self.assertTrue(handoff["independent_ai_review_required"])
 
     def test_stale_offer_is_still_blocked(self):
         feed,active=sample()

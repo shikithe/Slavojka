@@ -133,8 +133,10 @@ def evaluate_fixture(fixture, history, now):
     odds = {k: available_odd(fixture, k) for k in MARKETS}
     start = datetime.fromisoformat(fixture["datetime"].replace("Z","+00:00")).astimezone(timezone.utc)
     notes = []
-    if min(hn, an) < 4:
-        notes.append("Incomplete ESPN last-five form: independent model confidence low")
+    sample_min = min(hn, an)
+    sample_status = "complete" if sample_min == 5 else "partial" if sample_min >= 1 else "missing_side" if max(hn, an) else "no_form"
+    if sample_min < 5:
+        notes.append(f"Actual recent form: home {hn}/5, away {an}/5; smaller samples use stronger baseline shrinkage and require independent review")
     if odds[top] is None:
         notes.append("The strongest market has no verified price: do not substitute the second market")
     if start <= now + timedelta(minutes=20):
@@ -155,7 +157,10 @@ def evaluate_fixture(fixture, history, now):
         "candidate_A": bool(odds[top] and start > now + timedelta(minutes=20)),
         "candidate_B": bool(top == "3+" and odds[top]
                             and start > now + timedelta(minutes=20)),
-        "history_evidence_complete": bool(min(hn, an) >= 4),
+        "history_evidence_complete": sample_min == 5,
+        "history_evidence_available": sample_min >= 1,
+        "form_sample_status": sample_status,
+        "requires_form_research": sample_min < 5,
         "confidence": "normal" if min(hn, an) >= 4 else "low_data",
         "requires_independent_ai_review": True,
         "needs_independent_ai_review": True, "limitations": notes
@@ -300,13 +305,16 @@ def detailed_ai_handoff(rows, now=None):
             "research_only": bool(not r["candidate_A"] and not r["candidate_B"]),
             "confidence": r.get("confidence","unknown"),
             "history_evidence_complete": bool(r.get("history_evidence_complete",False)),
+            "history_evidence_available": bool(r.get("history_evidence_available",False)),
+            "form_sample_status": r.get("form_sample_status", "unknown"),
+            "requires_form_research": bool(r.get("requires_form_research",True)),
             "all_six_probabilities_pct": r["probability_pct"],
             "math_already_done": {
                 "last_five_matches_per_team": {
                     "home": r["evidence"]["home_last_matches"],
                     "away": r["evidence"]["away_last_matches"]},
-                "recent_goals_attack_defence": "Present" if r.get("history_evidence_complete") else "Missing; modeled using broad priors, not actual recent form",
-                "home_away_form": "Present" if r.get("history_evidence_complete") else "Missing; independent research required",
+                "recent_goals_attack_defence": ("Actual recent form used for available 1-5 results per team; broad priors supplement small or missing samples" if max(r["evidence"]["home_last_matches"], r["evidence"]["away_last_matches"]) else "Missing; broad priors only, not actual form"),
+                "home_away_form": "Venue-specific form used where supported; verify missing or limited evidence independently",
                 "league_goal_average": "Historical rates where present; otherwise unverified broad priors",
                 "modeled_goals": r["estimated_goals"],
                 "poisson_probabilities": r["probability_pct"]

@@ -72,6 +72,36 @@ class ScoutSixTests(unittest.TestCase):
         self.assertTrue(all(r["strongest_pct"]==max(r["probability_pct"].values()) for r in result["ranked_fixtures"]))
         self.assertFalse(result["publication_allowed"])
 
+    def test_actual_recent_form_one_to_five_matches(self):
+        fixtures = [fixture(0)]
+        feed = {"date":"2026-11-21","football_candidates":fixtures}
+        active = {"date":"2026-11-21","fixtures":[row(0)]}
+        for hn, an in ((1,1),(1,5),(2,3),(4,4),(5,5),(0,3),(0,0)):
+            with self.subTest(home=hn, away=an):
+                h, a = form("Home0","home"), form("Away0","away")
+                h["matches"] = h["matches"][:hn]
+                a["matches"] = a["matches"][:an]
+                hist = {"date":"2026-11-21","fixtures":fixtures,
+                        "leagues":{"eng.1":{"teams":{"Home0":h,"Away0":a}}}}
+                result = analyze(feed, active, hist, NOW)
+                record = result["ranked_fixtures"][0]
+                self.assertEqual(record["evidence"]["home_last_matches"], hn)
+                self.assertEqual(record["evidence"]["away_last_matches"], an)
+                self.assertEqual(len(record["probability_pct"]), 6)
+                self.assertEqual(record["history_evidence_available"], min(hn,an)>=1)
+                self.assertEqual(record["history_evidence_complete"], min(hn,an)==5)
+                self.assertEqual(record["requires_form_research"], min(hn,an)<5)
+                self.assertEqual(result["detailed_ai_handoff"]["count"],1)
+                self.assertFalse(result["publication_allowed"])
+                if not min(hn,an):
+                    self.assertFalse(record["candidate_A"])
+        from lista.scout_six_markets import rates
+        for n in range(1,6):
+            attack, defence, count = rates({"matches":[{"goals_for":4,"goals_against":0,"side":"home"}]*n},1.4,1.1,"home")
+            self.assertEqual(count,n)
+            self.assertGreater(attack,1.4)
+            self.assertLess(defence,1.1)
+
     def test_best_market_only_no_fallback(self):
         history={"leagues":{"eng.1":{"teams":{
                  "Home0":form("Home0","home"),"Away0":form("Away0","away")}}}}

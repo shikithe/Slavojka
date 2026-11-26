@@ -106,7 +106,7 @@ def apply_value_model(rows, history, now):
                        and sel["conservative_ev_pct"]>0
                        and sel["adjusted_probability_pct"]>=50
                        and min(r["evidence"]["home_last_matches"],
-                               r["evidence"]["away_last_matches"])>=4
+                               r["evidence"]["away_last_matches"])>=1
                        and start>now+timedelta(minutes=20))
         # Ticket B is a SEPARATE raw-probability ranking of 3+ goals,
         # within the TOP10 research shortlist only. Value rank and EV are
