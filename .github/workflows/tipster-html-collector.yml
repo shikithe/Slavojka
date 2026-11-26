@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - 'kvoter/tipster_collector.py'
+      - 'kvoter/team_matcher.py'
       - 'tests/test_tipster_collector.py'
       - 'lista/tipster_feedback_cycle.py'
       - 'tests/test_tipster_feedback_cycle.py'
@@ -49,6 +50,11 @@ jobs:
         run: |
           python3 -m kvoter.tipster_collector --secondary --force || echo "SECONDARY_MATCHING_FAILED: preserve existing verified odds and notify sensor"
           python3 -m lista.publish_ai_offer
+      - name: Third-pass canonical team identity, competition and UTC kickoff
+        if: steps.feedback.outputs.ready == 'false'
+        run: |
+          python3 -m kvoter.tipster_collector --tertiary --force || echo "TERTIARY_MATCHING_FAILED: preserve verified data and notify sensor"
+          python3 -m lista.publish_ai_offer
       - name: Final feedback — proceed with collected prices, even if some names stay unmatched
         id: final_feedback
         run: |
@@ -76,7 +82,7 @@ jobs:
             echo "TIPSTER_NO_NEW_PRICES"
           fi
 
-      - name: Sensor handoff - report unresolved quotes after the real second pass
+      - name: Sensor handoff - report unresolved quotes after the third pass
         continue-on-error: true
         env:
           GH_TOKEN: ${{ github.token }}
@@ -102,7 +108,7 @@ jobs:
           if fb.get("coverage_status")!="partial" or not fb.get("sensor_action_required"):
               raise SystemExit("Invalid final odds coverage for sensor")
           missing=fb.get("sensor_missing_fixtures") or []
-          body=("ODDS_PARTIAL_READY: second independent identification pass completed.\n"
+          body=("ODDS_PARTIAL_READY: three identification passes attempted.\n"
                 f"Quoted {fb['matched_with_quotes']}/{fb['espn_total']}; "
                 f"still missing {len(missing)}. Only use verified source prices.\n"
                 "Sensor may add confirmed missing markets to same-day "

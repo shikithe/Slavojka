@@ -133,5 +133,44 @@ class TipsterCollectorTests(unittest.TestCase):
         self.assertEqual(secondary_key("FC Porto"),secondary_key("Porto (Por)"))
         self.assertEqual(secondary_key("Bodo/Glimt"),secondary_key("Bodo Glimt (Nor)"))
 
+    def test_tertiary_aliases_and_strict_identity(self):
+        from kvoter.tipster_collector import assign_links_tertiary, verified_tertiary_page
+        from kvoter.team_matcher import same_team
+        day = date(2026, 11, 26)
+        pairs = [
+            ("Kairat Almaty", "Mjällby AIF", "Kairat Almaty (Kaz)", "Mjallby (Swe)"),
+            ("Besiktas", "Hapoel Be'er", "Besiktas (Tur)", "Hapoel Beer Sheva (Isr)"),
+            ("Olympiacos", "AC Milan", "Olympiacos Piraeus (Gre)", "Milan (Ita)"),
+            ("RB Salzburg", "Ararat-Armenia", "Red Bull Salzburg (Aut)", "Ararat-Armenia (Arm)"),
+            ("Union St.-Gilloise", "Lech Poznan", "Union Saint-Gilloise (Bel)", "Lech Poznan (Pol)"),
+            ("Brighton & Hove Albion", "CSU Craiova", "Brighton (Eng)", "Universitatea Craiova (Rou)"),
+            ("Egnatia", "Lincoln Red Imps", "Egnatia Rrogozhine (Alb)", "Lincoln Red Imps (Gib)"),
+            ("Iberia 1999", "Getafe", "Iberia 1999 Tbilisi (Geo)", "Getafe (Esp)"),
+            ("SK Brann", "AGF", "Brann Bergen (Nor)", "AGF Aarhus (Den)"),
+            ("Ferencvaros", "NK Celje", "Ferencvarosi (Hun)", "NK Celje (Svn)"),
+            ("TSG Hoffenheim", "SK Sturm Graz", "Hoffenheim (Ger)", "Sturm Graz (Aut)"),
+            ("FC Nordsjælland", "Panathinaikos", "FC Nordsjaelland (Den)", "Panathinaikos (Gre)"),
+            ("Inter D'Escaldes", "F.C. København", "Inter Club d'Escaldes (And)", "FC Copenhagen (Den)"),
+            ("KAA Gent", "Red Star Belgrade", "KAA Gent (Bel)", "Crvena zvezda Belgrade (Srb)"),
+            ("São Paulo", "Remo", "Sao Paulo SP", "Remo PA"),
+        ]
+        for i, (home, away, sh, sa) in enumerate(pairs):
+            with self.subTest(home=home):
+                league, slug, title = ("bra.1", "serie-a-brazil", "Serie A, Brazil") if i == 14 else ("uefa.europa", "europa-league-group-stage", "Europa League Group") if i in (1,2,3,4,9,10) else ("uefa.europa.conf", "europa-conference-league-group-stage", "Europa Conference League Group")
+                clock = "23:00" if i == 14 else "15:30" if i == 0 else "17:45" if i < 9 else "20:00"
+                f = dict(fixture_id=str(i), home=home, away=away, league=league, start_utc=f"2026-11-26T{clock}:00Z")
+                m = dict(home=sh, away=sa, url=f"https://tipsterarea.com/match/test-{slug}-{i}", clock=clock)
+                self.assertIn(str(i), assign_links_tertiary([f], [m], day))
+                self.assertFalse(assign_links_tertiary([f], [dict(m, clock="12:00")], day))
+                self.assertFalse(assign_links_tertiary([f], [dict(m, home=sa, away=sh)], day))
+                self.assertFalse(assign_links_tertiary([f], [dict(m, url=m["url"]+"-duplicate"), m], day))
+                page = BeautifulSoup(f"<title>{sh} - {sa}, 26 November 2026, {title} | TipsterArea.com</title>", "html.parser")
+                self.assertTrue(verified_tertiary_page(page, m, f, day))
+                self.assertFalse(verified_tertiary_page(page, m, f, date(2026, 11, 27)))
+                self.assertFalse(verified_tertiary_page(page, m, dict(f, league="eng.1"), day))
+        self.assertFalse(same_team("Arsenal", "Arsenal U19"))
+        self.assertFalse(same_team("AC Milan", "Inter Milan"))
+        self.assertFalse(same_team("CSU Craiova", "FC U Craiova 1948"))
+
 if __name__ == "__main__":
     unittest.main()

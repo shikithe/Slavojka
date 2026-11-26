@@ -16,6 +16,7 @@ from difflib import SequenceMatcher
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
 from zoneinfo import ZoneInfo
+from kvoter.team_matcher import match_fixtures, same_team
 
 import requests
 from bs4 import BeautifulSoup
@@ -187,6 +188,8 @@ def parse_daily(soup, day):
             tr = a.find_parent("tr")
             if tr is not None:
                 candidate = tr.get_text(" ", strip=True)
+        clock_match = re.match(r"^\s*(\d{1,2}:\d{2})\s+", candidate)
+        clock = clock_match.group(1).zfill(5) if clock_match else None
         candidate = re.sub(r"^\s*\d{1,2}:\d{2}\s+", "", candidate)
         # Strip only trailing three decimal prices, never team digits.
         candidate = re.sub(r"(?:\s+\d{1,2}[.,]\d{1,3}){3}\s*$", "", candidate).strip()
@@ -196,7 +199,7 @@ def parse_daily(soup, day):
         if not home or not away or len(home) > 100 or len(away) > 100:
             continue
         seen.add(url)
-        matches.append({"home": home, "away": away, "url": url})
+        matches.append({"home": home, "away": away, "url": url, "clock": clock})
     return matches
 
 def assign_links(fixtures, matches):
@@ -224,6 +227,63 @@ def assign_links(fixtures, matches):
         used.add(best["url"])
         results[fixture["fixture_id"]] = best
     return results
+
+
+# Third pass uses explicit aliases, UTC kickoff and a known competition.
+# Unknown competition labels deliberately fail closed.
+THIRD_LEAGUES = {
+    "uefa.europa.conf": ("europa-conference-league", "europa conference league"),
+    "uefa.europa": ("europa-league", "europa league"),
+    "uefa.champions": ("champions-league", "champions league"),
+    "bra.1": ("serie-a-brazil", "serie a, brazil"),
+    "eng.1": ("premier-league-england", "premier league, england"),
+    "ger.1": ("bundesliga-germany", "bundesliga, germany"),
+    "esp.1": ("primera-division-spain", "primera division, spain"),
+    "ita.1": ("serie-a-italy", "serie a, italy"),
+    "fra.1": ("ligue-1-france", "ligue 1, france"),
+}
+
+def third_league(url):
+    path = urlparse(url).path.casefold()
+    for league, (slug, _) in THIRD_LEAGUES.items():
+        if re.search(r"-" + re.escape(slug) + r"(?:-|$)", path):
+            return league
+    return None
+
+
+def assign_links_tertiary(fixtures, matches, day):
+    candidates = []
+    for m in matches:
+        league = third_league(m["url"])
+        clock = m.get("clock")
+        if not league or not clock:
+            continue
+        try:
+            start = datetime.fromisoformat(day.isoformat() + "T" + clock + ":00+00:00")
+        except ValueError:
+            continue
+        candidates.append(dict(m, id=m["url"], league=league, start_utc=start.isoformat()))
+    mapped, _ = match_fixtures(
+        [dict(f, id=f["fixture_id"]) for f in fixtures], candidates
+    )
+    return mapped
+
+
+def verified_tertiary_page(soup, daily, fixture, day):
+    heading = soup.title.get_text(" ", strip=True) if soup.title else ""
+    parts = heading.split(",", 2)
+    if len(parts) != 3 or parts[1].strip().casefold() != f"{day.day} {MONTHS[day.month]} {day.year}".casefold():
+        return False
+    league = THIRD_LEAGUES.get(fixture.get("league"))
+    if not league or league[1] not in parts[2].casefold():
+        return False
+    pair = parts[0].split(" - ", 1)
+    if len(pair) != 2:
+        return False
+    # Date and kickoff are also independently checked in the daily index.
+    return (same_team(fixture["home"], pair[0]) and same_team(fixture["away"], pair[1])
+            and same_team(daily["home"], pair[0]) and same_team(daily["away"], pair[1]))
+
 
 def parse_markets(soup):
     """Read bookmaker odds tables only, not historical results or predictions."""
@@ -355,7 +415,8 @@ def run(args):
     linked_day = {}
     total_matches = 0
     # ESPN can include late fixtures after local midnight, e.g. Brazil 00:00 UTC.
-    local_days = {datetime.fromisoformat(f["start_utc"].replace("Z", "+00:00")).astimezone(TZ).date()
+    date_zone = timezone.utc if args.tertiary else TZ
+    local_days = {datetime.fromisoformat(f["start_utc"].replace("Z", "+00:00")).astimezone(date_zone).date()
                   for f in fixtures}
     for fixture_day in sorted(local_days):
         if fixture_day < day or fixture_day > day + timedelta(days=1):
@@ -365,12 +426,14 @@ def run(args):
         matches = parse_daily(daily, fixture_day)
         total_matches += len(matches)
         day_fixtures = [f for f in fixtures
-                        if datetime.fromisoformat(f["start_utc"].replace("Z", "+00:00")).astimezone(TZ).date() == fixture_day]
-        mapped = (assign_links_secondary(day_fixtures, matches) if args.secondary
+                        if datetime.fromisoformat(f["start_utc"].replace("Z", "+00:00")).astimezone(date_zone).date() == fixture_day]
+        mapped = (assign_links_tertiary(day_fixtures, matches, fixture_day) if args.tertiary
+                  else assign_links_secondary(day_fixtures, matches) if args.secondary
                   else assign_links(day_fixtures, matches))
         links.update(mapped)
         linked_day.update({fid: fixture_day for fid in mapped})
-    recover_verified_page_links(fixtures, links, linked_day)
+    if not args.tertiary:
+        recover_verified_page_links(fixtures, links, linked_day)
     if not total_matches:
         raise RuntimeError("TipsterArea returned no match links; possible block or site change")
     updated = 0
@@ -401,7 +464,9 @@ def run(args):
         attempted += 1
         try:
             page = fetch_page(session, link["url"])
-            if not verified_match_page(page, link, fixture, linked_day[fid], secondary=args.secondary):
+            valid_page = (verified_tertiary_page(page, link, fixture, linked_day[fid]) if args.tertiary
+                          else verified_match_page(page, link, fixture, linked_day[fid], secondary=args.secondary))
+            if not valid_page:
                 failures.append(fid + ": mismatched page title/date/teams")
                 continue
             prices, bookmakers = parse_markets(page)
@@ -432,7 +497,7 @@ def run(args):
         time.sleep(max(0.8, args.delay))
     report = {
         "date": day.isoformat(), "generated_at_utc": datetime.now(timezone.utc).isoformat(),
-        "matching_pass": "secondary_exact_canonical" if args.secondary else "primary_fuzzy",
+        "matching_pass": "tertiary_alias_kickoff_league" if args.tertiary else "secondary_exact_canonical" if args.secondary else "primary_fuzzy",
         "espn": len(fixtures), "daily_tipster_links": total_matches,
         "paired": len(links), "pages_checked": attempted,
         "updated": updated, "with_any_quotes": len(existing),
@@ -448,6 +513,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--root", default=".")
     p.add_argument("--force", action="store_true", help="Manual diagnostics; skips 9-12 collection window only")
+    p.add_argument("--tertiary", action="store_true", help="Explicit aliases plus UTC kickoff and known competition")
     p.add_argument("--secondary", action="store_true", help="Independent exact canonical home/away matching, no threshold relaxation")
     p.add_argument("--max-pages", type=int, default=0, help="limit for test/debug; 0 means all")
     p.add_argument("--delay", type=float, default=1.0)
