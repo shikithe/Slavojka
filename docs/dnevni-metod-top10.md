@@ -1,0 +1,8 @@
+# Dnevni metod MemaraSix za TOP10
+
+1. Provjeri datum, fingerprint, redoslijed deset fixture ID i početke mečeva prema važećem TOP10 i Scout 6/6 izvještaju. Preuzmi postojeću analizu istog datuma i fingerprinta.
+2. Za svaki meč sačuvaj procente i kvote matematičkog Scouta. Istraži formu i xG/xGA, izostanke, sastave, H2H, tabelu i motivaciju, odmor i izvor kvote. Navedi URL, vrijeme provjere i status izvora. Razlikuj zvanični sastav od prognoze.
+3. Procijeni motivaciju po sportskom cilju, najavi trenera, narednom prvenstvenom meču i razlikama u odnosu na uobičajeni sastav. Odvoji odmor od suspenzije ili povrede. Za GG pitaj može li slabiji napad dati gol; za 3+ procijeni i mogućnost da jedna ekipa sama postigne tri. Bez potvrde ne pripisuj nezainteresovanost i ne izmišljaj procentualnu korekciju.
+4. Za ista tržišta precizno uparenog FairXG meča primijeni postojeći prosjek Scout/FairXG; gdje podatka nema koristi Scout. Izračunaj EV kao p × kvota − 1, s p između 0 i 1. Za svaki meč zapiši argument za tip, najjači kontraargument, odluku i izvore. Sačuvaj napredak i odmah nastavi na naredni meč.
+5. A biraj po važećoj procjeni, EV i detaljnom pregledu. B rangiraj po izvornom Scout procentu za 3+ i biraj najjaču dozvoljenu kombinaciju. Svaki tiket ima dva para, ukupnu kvotu 2,00–3,00 i zasebne mečeve. Provjeri cijene i početke prije odobrenja. Zabilježi negativan EV i razloge za preskakanje višerangiranih kandidata.
+6. Odobri svaki valjan tiket zasebno kroz postojeći izdavač i važeći budžet. Potvrdi datum, oznaku A/B, oba meča i tipove čitanjem Memara-tip/data.json. Zaključi punu objavu tek kada su oba tiketa potvrđena. Za nedovršen tiket sačuvaj konkretan razlog i stanje za nastavak.
