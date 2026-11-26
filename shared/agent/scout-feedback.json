@@ -1,11 +1,17 @@
 {
   "date": "2026-11-26",
-  "feedback": "SCOUT_6OF6_COMPLETE",
-  "status": "complete",
-  "all_fixtures_evaluated": 37,
-  "market_probabilities": 222,
-  "source_fingerprint": "763034a2ec0d15985fbbc616ff2fc783b80fff6d00bdd0bbf966d43860bd9f94",
-  "generated_at_utc": "2026-11-26T10:39:51.923280+00:00",
-  "history_status": "available",
-  "next_action": "validate_top10"
+  "model": "FairXG",
+  "source_fingerprint": "503b49d2b38f8d716d3bf1feb3a2909c144b42337884aac62519455b38411097",
+  "generated_at_utc": "2026-11-26T14:11:16.405984+00:00",
+  "coverage": {
+    "espn_total": 37,
+    "matched": 33,
+    "unmatched": 4,
+    "competition_errors": {},
+    "full": false
+  },
+  "feedback": "FAIRXG_LIST_READY",
+  "status": "partial",
+  "all_fixtures_evaluated": 33,
+  "market_probabilities": 198
 }
