@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-26",
+  "feedback": "TOP10_READY",
+  "feedback_id": "TOP10-2026-11-26-763034a2ec0d15985fbbc616ff2fc783b80fff6d00bdd0bbf966d43860bd9f94",
+  "source_fingerprint": "763034a2ec0d15985fbbc616ff2fc783b80fff6d00bdd0bbf966d43860bd9f94",
+  "fixture_ids": [
+    "espn:football:uefa.europa:401915521",
+    "espn:football:uefa.europa:401915520",
+    "espn:football:uefa.europa.conf:401915816",
+    "espn:football:uefa.europa.conf:401915811",
+    "espn:football:uefa.europa:401915514",
+    "espn:football:uefa.europa:401915502",
+    "espn:football:uefa.europa.conf:401915809",
+    "espn:football:uefa.europa.conf:401915801",
+    "espn:football:uefa.europa.conf:401915813",
+    "espn:football:uefa.europa:401915512"
+  ],
+  "count": 10,
+  "source_commit": "2bd2965ed1c3f789da9f7dfa3e05f0e4c3ce35f7",
+  "test": false,
+  "publication_allowed": false,
+  "report": "shared/agent/top10-feedback.json",
+  "scout_report": "shared/agent/scout-six-markets.json"
+}
