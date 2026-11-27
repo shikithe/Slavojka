@@ -1,0 +1,691 @@
+{
+  "date": "2026-11-27",
+  "feed_generated_at_utc": "2026-11-27T08:45:34.902786+00:00",
+  "source": "AI or TipsterArea verified public prices",
+  "fixtures": [
+    {
+      "fixture_id": "espn:football:tur.1:401888241",
+      "league": "tur.1",
+      "home": "Alanyaspor",
+      "away": "Konyaspor",
+      "start_utc": "2026-11-27T17:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.83,
+          "draw": 3.15,
+          "away": 2.78
+        },
+        "3+": {
+          "over": 2.29
+        },
+        "BTTS": {
+          "yes": 1.86,
+          "no": 1.84
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/alanyaspor-konyaspor-super-lig-turkiye-957055"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/alanyaspor-konyaspor-super-lig-turkiye-957055",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/alanyaspor-konyaspor-super-lig-turkiye-957055",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/alanyaspor-konyaspor-super-lig-turkiye-957055",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/alanyaspor-konyaspor-super-lig-turkiye-957055",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/alanyaspor-konyaspor-super-lig-turkiye-957055",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/alanyaspor-konyaspor-super-lig-turkiye-957055",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888240",
+      "league": "tur.1",
+      "home": "Caykur Rizespor",
+      "away": "Kasimpasa",
+      "start_utc": "2026-11-27T17:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.97,
+          "draw": 3.86,
+          "away": 3.78
+        },
+        "3+": {
+          "over": 1.74
+        },
+        "BTTS": {
+          "yes": 1.59,
+          "no": 2.21
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/caykur-rizespor-kasimpasa-super-lig-turkiye-957056"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/caykur-rizespor-kasimpasa-super-lig-turkiye-957056",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/caykur-rizespor-kasimpasa-super-lig-turkiye-957056",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/caykur-rizespor-kasimpasa-super-lig-turkiye-957056",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/caykur-rizespor-kasimpasa-super-lig-turkiye-957056",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/caykur-rizespor-kasimpasa-super-lig-turkiye-957056",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/caykur-rizespor-kasimpasa-super-lig-turkiye-957056",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875536",
+      "league": "ned.1",
+      "home": "FC Groningen",
+      "away": "Willem II",
+      "start_utc": "2026-11-27T19:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.43,
+          "draw": 5.12,
+          "away": 6.72
+        },
+        "3+": {
+          "over": 1.45
+        },
+        "BTTS": {
+          "yes": 1.61,
+          "no": 2.18
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/fc-groningen-willem-ii-tilburg-eredivisie-netherlands-957052"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/fc-groningen-willem-ii-tilburg-eredivisie-netherlands-957052",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/fc-groningen-willem-ii-tilburg-eredivisie-netherlands-957052",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/fc-groningen-willem-ii-tilburg-eredivisie-netherlands-957052",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/fc-groningen-willem-ii-tilburg-eredivisie-netherlands-957052",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/fc-groningen-willem-ii-tilburg-eredivisie-netherlands-957052",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/fc-groningen-willem-ii-tilburg-eredivisie-netherlands-957052",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884720",
+      "league": "ger.1",
+      "home": "Werder Bremen",
+      "away": "Borussia Mönchengladbach",
+      "start_utc": "2026-11-27T19:30:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.76,
+          "draw": 4.49,
+          "away": 4.49
+        },
+        "3+": {
+          "over": 1.48
+        },
+        "BTTS": {
+          "yes": 1.48,
+          "no": 2.5
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/werder-bremen-borussia-m-gladbach-bundesliga-germany-957048"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/werder-bremen-borussia-m-gladbach-bundesliga-germany-957048",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/werder-bremen-borussia-m-gladbach-bundesliga-germany-957048",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/werder-bremen-borussia-m-gladbach-bundesliga-germany-957048",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/werder-bremen-borussia-m-gladbach-bundesliga-germany-957048",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/werder-bremen-borussia-m-gladbach-bundesliga-germany-957048",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/werder-bremen-borussia-m-gladbach-bundesliga-germany-957048",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401875004",
+      "league": "ita.1",
+      "home": "Venezia",
+      "away": "Bologna",
+      "start_utc": "2026-11-27T19:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 3.41,
+          "draw": 3.52,
+          "away": 2.29
+        },
+        "3+": {
+          "over": 2.17
+        },
+        "BTTS": {
+          "yes": 1.82,
+          "no": 1.9
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/venezia-bologna-serie-a-italy-957049"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/venezia-bologna-serie-a-italy-957049",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/venezia-bologna-serie-a-italy-957049",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/venezia-bologna-serie-a-italy-957049",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/venezia-bologna-serie-a-italy-957049",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/venezia-bologna-serie-a-italy-957049",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/venezia-bologna-serie-a-italy-957049",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876392",
+      "league": "fra.1",
+      "home": "Brest",
+      "away": "Paris FC",
+      "start_utc": "2026-11-27T19:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 3.4,
+          "draw": 3.68,
+          "away": 2.23
+        },
+        "3+": {
+          "over": 1.96
+        },
+        "BTTS": {
+          "yes": 1.69,
+          "no": 2.07
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/brest-paris-fc-ligue-1-france-957050"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/brest-paris-fc-ligue-1-france-957050",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/brest-paris-fc-ligue-1-france-957050",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/brest-paris-fc-ligue-1-france-957050",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/brest-paris-fc-ligue-1-france-957050",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/brest-paris-fc-ligue-1-france-957050",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/brest-paris-fc-ligue-1-france-957050",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878930",
+      "league": "bel.1",
+      "home": "OH Leuven",
+      "away": "KV Kortrijk",
+      "start_utc": "2026-11-27T19:45:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 1.95,
+          "draw": 3.78,
+          "away": 3.7
+        },
+        "3+": {
+          "over": 1.67
+        },
+        "BTTS": {
+          "yes": 1.56,
+          "no": 2.28
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/oud-heverlee-leuven-kortrijk-pro-league-belgium-957061"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/oud-heverlee-leuven-kortrijk-pro-league-belgium-957061",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/oud-heverlee-leuven-kortrijk-pro-league-belgium-957061",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/oud-heverlee-leuven-kortrijk-pro-league-belgium-957061",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/oud-heverlee-leuven-kortrijk-pro-league-belgium-957061",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/oud-heverlee-leuven-kortrijk-pro-league-belgium-957061",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/oud-heverlee-leuven-kortrijk-pro-league-belgium-957061",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879225",
+      "league": "eng.1",
+      "home": "Nottingham Forest",
+      "away": "Chelsea",
+      "start_utc": "2026-11-27T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.55,
+          "draw": 3.67,
+          "away": 2.85
+        },
+        "3+": {
+          "over": 1.91
+        },
+        "BTTS": {
+          "yes": 1.65,
+          "no": 2.13
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/nottingham-chelsea-premier-league-england-957046"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/nottingham-chelsea-premier-league-england-957046",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/nottingham-chelsea-premier-league-england-957046",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/nottingham-chelsea-premier-league-england-957046",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/nottingham-chelsea-premier-league-england-957046",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/nottingham-chelsea-premier-league-england-957046",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/nottingham-chelsea-premier-league-england-957046",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882791",
+      "league": "esp.1",
+      "home": "Levante",
+      "away": "Racing Santander",
+      "start_utc": "2026-11-27T20:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.07,
+          "draw": 4.11,
+          "away": 3.47
+        },
+        "3+": {
+          "over": 1.42
+        },
+        "BTTS": {
+          "yes": 1.37,
+          "no": 2.89
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/levante-racing-santander-primera-division-spain-957047"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/levante-racing-santander-primera-division-spain-957047",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/levante-racing-santander-primera-division-spain-957047",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/levante-racing-santander-primera-division-spain-957047",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/levante-racing-santander-primera-division-spain-957047",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/levante-racing-santander-primera-division-spain-957047",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/levante-racing-santander-primera-division-spain-957047",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885389",
+      "league": "por.1",
+      "home": "Maritimo",
+      "away": "C.D. Nacional",
+      "start_utc": "2026-11-27T20:15:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.17,
+          "draw": 3.42,
+          "away": 3.6
+        },
+        "3+": {
+          "over": 2.14
+        },
+        "BTTS": {
+          "yes": 1.83,
+          "no": 1.87
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/maritimo-nacional-primeira-liga-portugal-957057"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/maritimo-nacional-primeira-liga-portugal-957057",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/maritimo-nacional-primeira-liga-portugal-957057",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/maritimo-nacional-primeira-liga-portugal-957057",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/maritimo-nacional-primeira-liga-portugal-957057",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/maritimo-nacional-primeira-liga-portugal-957057",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/maritimo-nacional-primeira-liga-portugal-957057",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933727",
+      "league": "usa.1",
+      "home": "Columbus Crew",
+      "away": "Inter Miami CF",
+      "start_utc": "2026-11-28T01:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.64,
+          "draw": 4.07,
+          "away": 2.46
+        },
+        "3+": {
+          "over": 1.31
+        },
+        "BTTS": {
+          "yes": 1.29,
+          "no": 3.27
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/columbus-crew-inter-miami-playoff-usa-957270"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/columbus-crew-inter-miami-playoff-usa-957270",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/columbus-crew-inter-miami-playoff-usa-957270",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/columbus-crew-inter-miami-playoff-usa-957270",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/columbus-crew-inter-miami-playoff-usa-957270",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/columbus-crew-inter-miami-playoff-usa-957270",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/columbus-crew-inter-miami-playoff-usa-957270",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933725",
+      "league": "usa.1",
+      "home": "Real Salt Lake",
+      "away": "Vancouver Whitecaps",
+      "start_utc": "2026-11-28T03:00:00Z",
+      "bookmaker": "TipsterArea public bookmaker",
+      "markets": {
+        "1X2": {
+          "home": 2.85,
+          "draw": 3.84,
+          "away": 2.39
+        },
+        "3+": {
+          "over": 1.45
+        },
+        "BTTS": {
+          "yes": 1.39,
+          "no": 2.77
+        }
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/real-salt-lake-vancouver-whitecaps-playoff-usa-957271"
+      ],
+      "market_sources": {
+        "1X2": {
+          "home": {
+            "url": "https://tipsterarea.com/match/real-salt-lake-vancouver-whitecaps-playoff-usa-957271",
+            "bookmaker": "1xbet"
+          },
+          "draw": {
+            "url": "https://tipsterarea.com/match/real-salt-lake-vancouver-whitecaps-playoff-usa-957271",
+            "bookmaker": "1xbet"
+          },
+          "away": {
+            "url": "https://tipsterarea.com/match/real-salt-lake-vancouver-whitecaps-playoff-usa-957271",
+            "bookmaker": "1xbet"
+          }
+        },
+        "3+": {
+          "over": {
+            "url": "https://tipsterarea.com/match/real-salt-lake-vancouver-whitecaps-playoff-usa-957271",
+            "bookmaker": "1xbet"
+          }
+        },
+        "BTTS": {
+          "yes": {
+            "url": "https://tipsterarea.com/match/real-salt-lake-vancouver-whitecaps-playoff-usa-957271",
+            "bookmaker": "1xbet"
+          },
+          "no": {
+            "url": "https://tipsterarea.com/match/real-salt-lake-vancouver-whitecaps-playoff-usa-957271",
+            "bookmaker": "1xbet"
+          }
+        }
+      }
+    }
+  ]
+}

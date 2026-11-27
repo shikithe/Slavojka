@@ -1,21 +1,37 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "status": "ready_for_scout",
   "feedback": "ODDS_READY",
-  "espn_total": 37,
-  "with_at_least_one_quote": 37,
-  "without_quote": 0,
-  "missing_fixtures": [],
-  "ai_prompt": null,
+  "espn_total": 13,
+  "with_at_least_one_quote": 12,
+  "without_quote": 1,
+  "missing_fixtures": [
+    {
+      "fixture_id": "espn:football:bra.1:401841337",
+      "league": "bra.1",
+      "home": "Fluminense",
+      "away": "Cruzeiro",
+      "start_utc": "2026-11-27T23:00:00Z"
+    }
+  ],
+  "ai_prompt": "prompts/tipster-unmatched-ai-review.md",
   "next_action": "scout_6of6_if_history_ready",
-  "coverage_feedback": "ODDS_COMPLETE",
-  "coverage_status": "complete",
-  "sensor_action_required": false,
-  "sensor_missing_fixtures": [],
+  "coverage_feedback": "ODDS_PARTIAL_READY",
+  "coverage_status": "partial",
+  "sensor_action_required": true,
+  "sensor_missing_fixtures": [
+    {
+      "fixture_id": "espn:football:bra.1:401841337",
+      "league": "bra.1",
+      "home": "Fluminense",
+      "away": "Cruzeiro",
+      "start_utc": "2026-11-27T23:00:00Z"
+    }
+  ],
   "final": true,
   "retry_attempted": true,
-  "matched_with_quotes": 37,
-  "skipped_unmatched": 0,
+  "matched_with_quotes": 12,
+  "skipped_unmatched": 1,
   "incomplete_markets_allowed": true,
-  "finished_at_utc": "2026-11-26T09:39:19.578058+00:00"
+  "finished_at_utc": "2026-11-27T08:46:06.856608+00:00"
 }
