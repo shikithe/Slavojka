@@ -64,8 +64,58 @@ jobs:
         if: steps.coverage.outputs.ready == 'true'
         run: python3 -m lista.scout_six_markets
 
-      - name: Commit FairXG daily list and TOP10 (not AI approved)
+      - name: Verify second FairXG name-matching pass before any READY signal
         if: steps.coverage.outputs.ready == 'true'
+        id: identity
+        run: |
+          python3 - <<'PY'
+          import json, os
+          from datetime import datetime
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          from lista.scout_six_markets import canonical_hash
+          root=Path("shared/agent")
+          report=json.loads((root/"scout-six-markets.json").read_text())
+          top=json.loads((root/"top10-feedback.json").read_text())
+          feed=json.loads(Path("shared/collector-feed.json").read_text())
+          active=json.loads(Path("shared/active-list.json").read_text())
+          audit=report.get("identity_checks",{})
+          today=datetime.now(ZoneInfo("Europe/Sarajevo")).date().isoformat()
+          n=len(feed.get("football_candidates",[]))
+          rows=report.get("ranked_fixtures",[])
+          pending=report.get("unmatched",[])
+          assert today==feed["date"]==active["date"]==report["date"]==top["date"]
+          assert report["source_feed_sha256"]==canonical_hash(feed)
+          assert report["source_active_sha256"]==canonical_hash(active)
+          assert report["source_fingerprint"]==top["source_fingerprint"]
+          assert audit.get("status")=="SECOND_PASS_COMPLETE" and audit.get("validation_complete") is True
+          assert audit["first_pass_checked"]==n
+          assert audit["first_pass_matched"]+audit["second_pass_matched"]==len(rows)
+          assert 0<=audit["second_pass_matched"]<=audit["second_pass_attempted"]<=n
+          assert audit["unmatched_after_second_pass"]==len(pending)
+          assert n==len(rows)+len(pending)==report["coverage"]["espn_total"]
+          assert 0<=top["count"]<=10 and len(top["candidates"])==top["count"]
+          assert top["fixture_ids"]==[x["fixture_id"] for x in top["candidates"]]
+          assert len({x["fixture_id"] for x in rows})==len(rows)
+          assert len({x["source_url"] for x in rows})==len(rows)
+          assert all(x["source_url"].startswith("https://fairxg.com/sport/football/match/")
+                     and x["matching_pass"] in ("primary_exact","secondary_verified_alias")
+                     for x in rows)
+          assert top["identity_checks"]==audit
+          if top["count"]:
+              assert top["feedback"]=="TOP10_READY" and top["status"]=="ready"
+          else:
+              assert top["feedback"]=="TOP10_UNAVAILABLE"
+          with open(os.environ["GITHUB_OUTPUT"],"a") as out:
+              out.write("verified=true\n")
+          print("FAIRXG_SECOND_PASS_VERIFIED",json.dumps({
+              "total":n,"primary":audit["first_pass_matched"],
+              "secondary":audit["second_pass_matched"],
+              "remaining":len(pending),"top":top["count"]
+          }))
+          PY
+      - name: Commit FairXG daily list and TOP10 (not AI approved)
+        if: steps.identity.outputs.verified == 'true'
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -87,7 +137,7 @@ jobs:
           fi
 
       - name: Emit deduplicated TOP10_READY feedback to independent AI analyst
-        if: steps.coverage.outputs.ready == 'true'
+        if: steps.identity.outputs.verified == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
@@ -96,7 +146,7 @@ jobs:
           import json, os, subprocess
           from pathlib import Path
           report=json.loads(Path("shared/agent/top10-feedback.json").read_text(encoding="utf-8"))
-          if report.get("feedback") != "TOP10_READY":
+          if report.get("feedback") != "TOP10_READY" or report.get("identity_checks",{}).get("status")!="SECOND_PASS_COMPLETE":
               print("NO_ELIGIBLE_TOP10_AI_NOT_TRIGGERED")
               raise SystemExit(0)
           title="LISTASIX TOP10_READY — "+report["date"]+" — "+report["source_fingerprint"][:12]
@@ -121,7 +171,7 @@ jobs:
           PY
 
       - name: Emit TOP10_READY draft PR and ready_for_review webhook
-        if: steps.coverage.outputs.ready == 'true'
+        if: steps.identity.outputs.verified == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
@@ -135,7 +185,7 @@ jobs:
               return subprocess.run(args, check=True, text=True, stdout=subprocess.PIPE).stdout.strip()
           report=json.loads(Path("shared/agent/top10-feedback.json").read_text(encoding="utf-8"))
           today=datetime.now(ZoneInfo("Europe/Sarajevo")).date().isoformat()
-          if report.get("feedback")!="TOP10_READY" or report.get("status")!="ready" or report.get("date")!=today:
+          if report.get("feedback")!="TOP10_READY" or report.get("status")!="ready" or report.get("date")!=today or report.get("identity_checks",{}).get("status")!="SECOND_PASS_COMPLETE":
               print("TOP10_PR_NO_CURRENT_READY_FEEDBACK")
               raise SystemExit(0)
           fp=report["source_fingerprint"]
@@ -163,7 +213,7 @@ jobs:
               main_report=json.loads(run("git","show",snapshot+":shared/agent/top10-feedback.json"))
               if main_report!=report:
                   raise ValueError("TOP10 feedback changed on main; refuse stale signal")
-              marker={"date":today,"feedback":"TOP10_READY","feedback_id":feedback_id,
+              marker={"date":today,"feedback":"TOP10_READY","feedback_id":feedback_id,\n                      "identity_matching":"SECOND_PASS_COMPLETE",
                       "source_fingerprint":fp,"fixture_ids":ids,"count":len(ids),
                       "source_commit":snapshot,"model":"FairXG","test":False,"publication_allowed":False,
                       "report":"shared/agent/top10-feedback.json","scout_report":"shared/agent/scout-six-markets.json"}
