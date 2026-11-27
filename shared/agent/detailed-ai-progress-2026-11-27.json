@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-27",
+  "timezone": "Europe/Berlin",
+  "model": "FairXG",
+  "source_fingerprint": "e1dfb26db5f01cc764d391b118bb9205a6ded979f7748aadba4a1348c347c629",
+  "status": "analysis_in_progress",
+  "validation": {
+    "event": "pull_request.ready_for_review",
+    "delivery_id": "1738bc72-ea3f-11f1-9d78-b811487d38c7",
+    "sender": "github-actions[bot]",
+    "pr_url": "https://github.com/shikithe/Slavojka/pull/40",
+    "pr_number": 40,
+    "author": "github-actions[bot]",
+    "repository": "shikithe/Slavojka",
+    "head_repository": "shikithe/Slavojka",
+    "head_sha": "64375f41d1543a0ddd82fec5d734c0fa51b7ebe9",
+    "repository_id": 1441568624,
+    "labels": [
+      "TOP10_READY"
+    ],
+    "feedback_id": "TOP10-2026-11-27-e1dfb26db5f01cc764d391b118bb9205a6ded979f7748aadba4a1348c347c629",
+    "identity": "shikithe/Slavojka#40@64375f41d1543a0ddd82fec5d734c0fa51b7ebe9",
+    "feedback_date": "2026-11-27",
+    "production": true,
+    "event_at_utc": "2026-11-27T08:46:51Z",
+    "received_at_utc": null,
+    "queued_for_utc": "2026-11-27T08:46:55.124833Z",
+    "run_started_at_utc": "2026-11-27T08:46:58.384223Z",
+    "run_id": "06116d8f-dd9c-832c-aade-3bcc5ba5eb41",
+    "source_commit": "c83b320163c247242d6b4ed1055f35e12f8f1f60",
+    "source_commit_equals_pr_head": false,
+    "sha_note": "Izvorni commit je baza PR-a. Commit na vrhu PR-a dodaje samo datoteku signala. Dnevni TOP10 ima isti Git blob.",
+    "source_feed_sha256": "25ad3b33f4c76dab3af14ccdf59d2045d1fe411500bc6d3c63c376266ae56da4",
+    "source_active_sha256": "bb0ebda0c254b8a9764ca9445b8003551f4c248cb43394eb2f3ed63986642c5c",
+    "recomputed_source_fingerprint": "e1dfb26db5f01cc764d391b118bb9205a6ded979f7748aadba4a1348c347c629",
+    "identity_checks": "ESPN fixture_id, liga, domaćin, gost i vrijeme povezani s ponudom. Provjereni svi raspoloživi tipovi, izračuni EV i bodovi rangiranja.",
+    "input_blobs": {
+      "shared/collector-feed.json": "7bc037cf56e6070a7d1afce9929fe3c5ceb699ee",
+      "shared/active-list.json": "f3712ccb12f1d79fa8e4d15db8797e5febe41916",
+      "shared/agent/fairxg-scout-2026-11-27.json": "28f6914bc7ba4aff220500ee610e3411a8e6fb23",
+      "shared/agent/fairxg-top10-2026-11-27.json": "73ee235674bb87448688b4c6319e153552bd4f40",
+      "shared/agent/top10-feedback.json": "e40b4b91b5d1c26bff55909d274c409093251ef6",
+      "shared/agent/scout-six-markets.json": "28f6914bc7ba4aff220500ee610e3411a8e6fb23"
+    },
+    "source_inputs": {
+      "feed": "https://github.com/shikithe/Slavojka/blob/c83b320163c247242d6b4ed1055f35e12f8f1f60/shared/collector-feed.json",
+      "odds": "https://github.com/shikithe/Slavojka/blob/c83b320163c247242d6b4ed1055f35e12f8f1f60/shared/active-list.json",
+      "report": "https://github.com/shikithe/Slavojka/blob/c83b320163c247242d6b4ed1055f35e12f8f1f60/shared/agent/fairxg-scout-2026-11-27.json",
+      "top": "https://github.com/shikithe/Slavojka/blob/c83b320163c247242d6b4ed1055f35e12f8f1f60/shared/agent/fairxg-top10-2026-11-27.json",
+      "signal": "https://github.com/shikithe/Slavojka/blob/c83b320163c247242d6b4ed1055f35e12f8f1f60/shared/agent/top10-feedback.json",
+      "alias": "https://github.com/shikithe/Slavojka/blob/c83b320163c247242d6b4ed1055f35e12f8f1f60/shared/agent/scout-six-markets.json"
+    },
+    "snapshot_blobs_equal_on_main_and_source": true,
+    "all_six_top10_prices_matched_public_odds": true
+  },
+  "coverage": {
+    "espn_total": 13,
+    "matched": 7,
+    "unmatched": 6,
+    "competition_errors": {
+      "usa.1": "competition_not_mapped"
+    },
+    "full": false
+  },
+  "matched_without_offered_odds": [
+    {
+      "fixture_id": "espn:football:bra.1:401841337",
+      "match": "Fluminense - Cruzeiro"
+    }
+  ],
+  "unmatched": [
+    {
+      "fixture_id": "espn:football:tur.1:401888240",
+      "match": "Caykur Rizespor - Kasimpasa",
+      "league": "tur.1",
+      "status": "unavailable",
+      "reason": "not_covered_or_unverified_alias"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878930",
+      "match": "OH Leuven - KV Kortrijk",
+      "league": "bel.1",
+      "status": "unavailable",
+      "reason": "not_covered_or_unverified_alias"
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882791",
+      "match": "Levante - Racing Santander",
+      "league": "esp.1",
+      "status": "unavailable",
+      "reason": "not_covered_or_unverified_alias"
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885389",
+      "match": "Maritimo - C.D. Nacional",
+      "league": "por.1",
+      "status": "unavailable",
+      "reason": "not_covered_or_unverified_alias"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933727",
+      "match": "Columbus Crew - Inter Miami CF",
+      "league": "usa.1",
+      "status": "unavailable",
+      "reason": "competition_not_mapped"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933725",
+      "match": "Real Salt Lake - Vancouver Whitecaps",
+      "league": "usa.1",
+      "status": "unavailable",
+      "reason": "competition_not_mapped"
+    }
+  ],
+  "candidate_count": 6,
+  "candidate_fixture_ids": [
+    "espn:football:ned.1:401875536",
+    "espn:football:ger.1:401884720",
+    "espn:football:ita.1:401875004",
+    "espn:football:eng.1:401879225",
+    "espn:football:tur.1:401888241",
+    "espn:football:fra.1:401876392"
+  ],
+  "completed_count": 1,
+  "matches": [
+    {
+      "fixture_id": "espn:football:ned.1:401875536",
+      "rank": 1,
+      "home": "FC Groningen",
+      "away": "Willem II",
+      "match": "FC Groningen - Willem II",
+      "league": "ned.1",
+      "start_utc": "2026-11-27T19:00:00Z",
+      "source_fingerprint": "e1dfb26db5f01cc764d391b118bb9205a6ded979f7748aadba4a1348c347c629",
+      "probability_pct": {
+        "1": 73,
+        "2": 12,
+        "X": 15,
+        "3+": 69,
+        "GG": 56,
+        "NG": 44
+      },
+      "projected_goals_fairxg": {
+        "home": 2.69,
+        "away": 0.9
+      },
+      "model_basis": {
+        "1X2": "FairXG 1/X/2, prosjek javnih kvota uz korekciju favorita",
+        "3+/GG": "FairXG model golova",
+        "NG": "100 − GG"
+      },
+      "recommended_market": "1",
+      "market_odds": {
+        "1": 1.43,
+        "2": 6.72,
+        "X": 5.12,
+        "3+": 1.45,
+        "GG": 1.61,
+        "NG": 2.18
+      },
+      "market_ev_pct": {
+        "1": 4.39,
+        "2": -19.36,
+        "X": -23.2,
+        "3+": 0.05,
+        "GG": -9.84,
+        "NG": -4.08
+      },
+      "odds_status": {
+        "status": "verified",
+        "bookmaker": "1xBet",
+        "source": "TipsterArea",
+        "direct_bookmaker": false,
+        "displayed_update": "27.11.2026 04:04",
+        "checked_at_utc": "2026-11-27T08:53:29Z",
+        "agrees_with_active_list": true
+      },
+      "sources": {
+        "fairxg": "https://fairxg.com/sport/football/match/groningen-vs-willem-ii",
+        "odds": "https://tipsterarea.com/match/fc-groningen-willem-ii-tilburg-eredivisie-netherlands-957052",
+        "match_preview": "https://www.sportsmole.co.uk/football/groningen/preview/groningen-vs-willem-ii-prediction-team-news-lineups_609843.html",
+        "observed_xg": "https://behindthetable.co.uk/match/2026-11-27-eredivisie-groningen-v-willem-ii/"
+      },
+      "fairxg_collected_at_utc": "2026-11-27T08:46:31.936558+00:00",
+      "expected_lineups": {
+        "status": "verified",
+        "type": "prognoza Sports Mole",
+        "home": [
+          "Vaessen",
+          "Hateboer",
+          "Blokzijl",
+          "Csinger",
+          "Prins",
+          "De Jonge",
+          "Clement",
+          "Schreuders",
+          "Van Bergen",
+          "Ondrejka",
+          "Willumsson"
+        ],
+        "away": [
+          "Delanghe",
+          "Stam",
+          "Dekker",
+          "Lemmens",
+          "Ter Avest",
+          "Boogaard",
+          "Twigt",
+          "Van Crooy",
+          "Van Aalst",
+          "Vilhena",
+          "Haen"
+        ]
+      },
+      "official_lineups": {
+        "status": "unavailable",
+        "home": null,
+        "away": null,
+        "note": "Zvanične početne postave nisu potvrđene u trenutku provjere."
+      },
+      "independent_xg": {
+        "status": "verified",
+        "scope": "Sezonski prosjeci na odgovarajućem terenu",
+        "home": {
+          "xg_for": 1.76,
+          "xg_against": 1.84
+        },
+        "away": {
+          "xg_for": 1.11,
+          "xg_against": 2.73
+        },
+        "source": "https://behindthetable.co.uk/match/2026-11-27-eredivisie-groningen-v-willem-ii/"
+      },
+      "injuries_and_suspensions": {
+        "status": "verified",
+        "note": "Sports Mole navodi izostanke Jenga i Hernesa kod Groningena. Vaessen i Hateboer se vraćaju poslije suspenzije. Willem II je bez Hoogme i Lachkara, a Tjoe-A-On je dobio crveni karton u prethodnom kolu.",
+        "sources": [
+          "https://www.sportsmole.co.uk/football/groningen/preview/groningen-vs-willem-ii-prediction-team-news-lineups_609843.html"
+        ]
+      },
+      "head_to_head": {
+        "status": "verified",
+        "note": "Groningen je u februaru 2025. pobijedio u Tilburgu 3:1. Prethodni susret u Groningenu završio je 2:0. Oba ishoda pokazuju da treći gol zavisi i od realizacije domaćina.",
+        "source": "https://tipsterarea.com/match/fc-groningen-willem-ii-tilburg-eredivisie-netherlands-957052"
+      },
+      "rest": {
+        "status": "verified",
+        "basis": "Razmak između datuma posljednje evidentirane utakmice prvog tima i današnjeg termina. Minutaža pojedinaca nije potvrđena.",
+        "home_last_match": "2026-11-21",
+        "away_last_match": "2026-11-22",
+        "home_calendar_days": 6,
+        "away_calendar_days": 5,
+        "source": "https://tipsterarea.com/match/fc-groningen-willem-ii-tilburg-eredivisie-netherlands-957052"
+      },
+      "motivation": {
+        "status": "verified",
+        "basis": "Takmičenje, tabela i rezultati prije meča. Procjena pristupa ekipe je analitički zaključak.",
+        "note": "Groningen pokušava da prekine niz od šest ligaških utakmica bez pobjede. Willem II je posljednji i traži prvu pobjedu poslije 13 kola. Motiv imaju oba tima, dok otvorenu igru gosta to samo po sebi ne dokazuje.",
+        "source": "https://www.sportsmole.co.uk/football/groningen/preview/groningen-vs-willem-ii-prediction-team-news-lineups_609843.html"
+      },
+      "argument": "FairXG projektuje 2,69 gola domaćinu i 0,90 gostu. Willem II je na sedam gostovanja već primio 25 golova. U posljednjih deset mečeva iz FairXG uzorka Groningen je devet puta prešao 2,5 gola, a Willem II sedam puta.",
+      "counterargument": "Gost je u 13 kola dao samo 12 golova. Groningen je izgubio četiri ligaška meča zaredom, pa bi domaćin mogao sam morati dati sva tri gola. Prednost u cijeni od 0,05% gotovo nestaje pri svakoj promjeni kvote.",
+      "decision": "Tiket B, 3+. Prvi po izvornom FairXG procentu za 3+ (69%). Kvota 1,45, EV +0,05%. Pobjeda Groningena (73%, 1,43, EV +4,39%) izostavljena je s A zbog pravila o različitim mečevima.",
+      "limitations": "Očekivane postave podliježu promjeni. Model golova ne uključuje naknadne vijesti o postavi. Cijenu prikazuje javni agregator, direktna provjera kod kladionice nije dostupna."
+    }
+  ],
+  "publication": null,
+  "updated_at_utc": "2026-11-27T08:54:27Z"
+}
