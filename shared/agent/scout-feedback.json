@@ -1,19 +1,28 @@
 {
   "date": "2026-11-27",
   "model": "FairXG",
-  "source_fingerprint": "e1dfb26db5f01cc764d391b118bb9205a6ded979f7748aadba4a1348c347c629",
-  "generated_at_utc": "2026-11-27T08:46:31.936558+00:00",
+  "source_fingerprint": "5bfe79d6e3e112ff8019932c0bdacdc55f39eec3a129b12537ed91e49392586c",
+  "generated_at_utc": "2026-11-27T09:11:38.592673+00:00",
   "coverage": {
     "espn_total": 13,
-    "matched": 7,
-    "unmatched": 6,
-    "competition_errors": {
-      "usa.1": "competition_not_mapped"
-    },
-    "full": false
+    "matched": 13,
+    "unmatched": 0,
+    "competition_errors": {},
+    "full": true
+  },
+  "identity_checks": {
+    "status": "SECOND_PASS_COMPLETE",
+    "first_pass_checked": 13,
+    "first_pass_matched": 8,
+    "second_pass_attempted": 5,
+    "second_pass_matched": 5,
+    "unmatched_after_second_pass": 0,
+    "checked_unique_source_urls": true,
+    "verification_basis": "league + UTC/local date + ordered home/away + full name/verified alias",
+    "validation_complete": true
   },
   "feedback": "FAIRXG_LIST_READY",
-  "status": "partial",
-  "all_fixtures_evaluated": 7,
-  "market_probabilities": 42
+  "status": "complete",
+  "all_fixtures_evaluated": 13,
+  "market_probabilities": 78
 }
