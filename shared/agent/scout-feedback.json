@@ -1,17 +1,19 @@
 {
-  "date": "2026-11-26",
+  "date": "2026-11-27",
   "model": "FairXG",
-  "source_fingerprint": "f26f90a9db201b66801fe391b2a7f43f24ffc29bdd9697800a91471d5ff045f4",
-  "generated_at_utc": "2026-11-26T14:54:00.115158+00:00",
+  "source_fingerprint": "e1dfb26db5f01cc764d391b118bb9205a6ded979f7748aadba4a1348c347c629",
+  "generated_at_utc": "2026-11-27T08:46:31.936558+00:00",
   "coverage": {
-    "espn_total": 37,
-    "matched": 37,
-    "unmatched": 0,
-    "competition_errors": {},
-    "full": true
+    "espn_total": 13,
+    "matched": 7,
+    "unmatched": 6,
+    "competition_errors": {
+      "usa.1": "competition_not_mapped"
+    },
+    "full": false
   },
   "feedback": "FAIRXG_LIST_READY",
-  "status": "complete",
-  "all_fixtures_evaluated": 37,
-  "market_probabilities": 222
+  "status": "partial",
+  "all_fixtures_evaluated": 7,
+  "market_probabilities": 42
 }

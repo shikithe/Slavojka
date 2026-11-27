@@ -1,40 +1,10 @@
-FAIRXG DAILY LIST | 2026-11-26
-Covered ESPN matches: 37/37
+FAIRXG DAILY LIST | 2026-11-27
+Covered ESPN matches: 7/13
 FIXTURE | 1 | X | 2 | 3+ | GG | NG | RANKED MARKET | EV %
-RB Salzburg - Ararat-Armenia | 87.0 | 9.0 | 5.0 | 69.0 | 57.0 | 43.0 | 1 | 3.53
-Ajax Amsterdam - FC Thun | 84.0 | 9.0 | 6.0 | 84.0 | 55.0 | 45.0 | 3+ | 4.16
-Inter D'Escaldes - F.C. København | 6.0 | 14.0 | 80.0 | 58.0 | 60.0 | 40.0 | GG | 26.6
-Juventus - Omonia Nicosia | 85.0 | 10.0 | 5.0 | 60.0 | 49.0 | 51.0 | 1 | 1.15
-Brighton & Hove Albion - CSU Craiova | 88.0 | 8.0 | 4.0 | 49.0 | 52.0 | 48.0 | 1 | -2.32
-Lyon - Lillestrom | 83.0 | 11.0 | 6.0 | 62.0 | 50.0 | 50.0 | 1 | 1.26
-Braga - KuPS Kuopio | 86.0 | 10.0 | 5.0 | 47.0 | 42.0 | 58.0 | 1 | -3.68
-Besiktas - Hapoel Be'er | 80.0 | 13.0 | 8.0 | 70.0 | 52.0 | 48.0 | 1 | 1.6
-Sunderland - Jagiellonia Bialystok | 80.0 | 14.0 | 6.0 | 53.0 | 47.0 | 53.0 | 1 | 1.6
-TSG Hoffenheim - SK Sturm Graz | 76.0 | 14.0 | 10.0 | 61.0 | 54.0 | 46.0 | 1 | 1.84
-Pafos - FC Midtjylland | 47.0 | 25.0 | 28.0 | 56.0 | 58.0 | 42.0 | 1 | 45.23
-Marseille - Levski Sofia | 75.0 | 15.0 | 9.0 | 60.0 | 57.0 | 43.0 | 1 | 1.25
-Borac Banja Luka - Atalanta | 12.0 | 17.0 | 71.0 | 55.0 | 58.0 | 42.0 | 2 | 4.37
-Union St.-Gilloise - Lech Poznan | 74.0 | 16.0 | 11.0 | 62.0 | 51.0 | 49.0 | 1 | 0.64
-Ferencvaros - NK Celje | 73.0 | 16.0 | 11.0 | 67.0 | 58.0 | 42.0 | 1 | 0.74
-Viktoria Plzen - Benfica | 14.0 | 17.0 | 69.0 | 56.0 | 53.0 | 47.0 | 2 | 2.81
-SC Freiburg - FC Twente | 55.0 | 22.0 | 22.0 | 51.0 | 55.0 | 45.0 | 1 | 16.05
-Torreense - Celtic | 19.0 | 20.0 | 61.0 | 67.0 | 63.0 | 37.0 | 3+ | 3.85
-Heart of Midlothian - AS Monaco | 15.0 | 19.0 | 66.0 | 53.0 | 57.0 | 43.0 | 2 | 2.96
-São Paulo - Remo | 71.0 | 18.0 | 10.0 | 46.0 | 49.0 | 51.0 | 1 | -2.73
-Iberia 1999 - Getafe | 12.0 | 20.0 | 68.0 | 43.0 | 49.0 | 51.0 | 2 | -0.04
-Egnatia - Lincoln Red Imps | 63.0 | 20.0 | 18.0 | 58.0 | 57.0 | 43.0 | 1 | 2.06
-Dinamo Zagreb - Bayer Leverkusen | 19.0 | 20.0 | 61.0 | 59.0 | 61.0 | 39.0 | 2 | 2.48
-NEC Nijmegen - Stade Rennais | 29.0 | 23.0 | 47.0 | 64.0 | 66.0 | 34.0 | GG | -4.3
-CSKA Sofia - Trabzonspor | 20.0 | 22.0 | 58.0 | 62.0 | 56.0 | 44.0 | 2 | 3.24
-OFI Crete - Anderlecht | 20.0 | 23.0 | 57.0 | 54.0 | 54.0 | 46.0 | 2 | 3.17
-Kauno Zalgiris - Riga FC | 25.0 | 27.0 | 48.0 | 54.0 | 58.0 | 42.0 | 3+ | 5.3
-Olympiacos - AC Milan | 35.0 | 27.0 | 38.0 | 44.0 | 50.0 | 50.0 | NG | 8.5
-KAA Gent - Red Star Belgrade | 44.0 | 26.0 | 30.0 | 49.0 | 50.0 | 50.0 | NG | 7.0
-Celta Vigo - AFC Bournemouth | 24.0 | 25.0 | 51.0 | 53.0 | 52.0 | 48.0 | 2 | 5.06
-SK Brann - AGF | 47.0 | 23.0 | 30.0 | 55.0 | 58.0 | 42.0 | NG | 11.72
-Crystal Palace - Real Sociedad | 48.0 | 23.0 | 28.0 | 59.0 | 61.0 | 39.0 | 3+ | -5.01
-Sparta Prague - AZ Alkmaar | 32.0 | 25.0 | 42.0 | 57.0 | 59.0 | 41.0 | 3+ | -3.67
-Kairat Almaty - Mjällby AIF | 44.0 | 27.0 | 28.0 | 46.0 | 50.0 | 50.0 | NG | 2.0
-Hajduk Split - Sint-Truidense | 47.0 | 25.0 | 28.0 | 53.0 | 55.0 | 45.0 | 1 | 4.34
-Jablonec - FC Lugano | 32.0 | 26.0 | 42.0 | 53.0 | 58.0 | 42.0 | GG | -7.2
-FC Nordsjælland - Panathinaikos | 40.0 | 26.0 | 34.0 | 54.0 | 58.0 | 42.0 | 1 | 7.6
+FC Groningen - Willem II | 73.0 | 15.0 | 12.0 | 69.0 | 56.0 | 44.0 | 1 | 4.39
+Werder Bremen - Borussia Mönchengladbach | 58.0 | 21.0 | 21.0 | 67.0 | 60.0 | 40.0 | 3+ | -0.84
+Venezia - Bologna | 31.0 | 30.0 | 39.0 | 51.0 | 55.0 | 45.0 | 3+ | 10.67
+Nottingham Forest - Chelsea | 37.0 | 28.0 | 35.0 | 54.0 | 56.0 | 44.0 | 3+ | 3.14
+Alanyaspor - Konyaspor | 35.0 | 30.0 | 35.0 | 46.0 | 51.0 | 49.0 | 3+ | 5.34
+Brest - Paris FC | 28.0 | 27.0 | 45.0 | 50.0 | 55.0 | 45.0 | 3+ | -2.0
+Fluminense - Cruzeiro | 48.0 | 25.0 | 27.0 | 46.0 | 52.0 | 48.0 | None | None
