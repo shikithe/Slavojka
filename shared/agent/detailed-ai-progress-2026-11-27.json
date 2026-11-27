@@ -122,7 +122,7 @@
     "espn:football:tur.1:401888241",
     "espn:football:fra.1:401876392"
   ],
-  "completed_count": 1,
+  "completed_count": 2,
   "matches": [
     {
       "fixture_id": "espn:football:ned.1:401875536",
@@ -263,8 +263,150 @@
       "counterargument": "Gost je u 13 kola dao samo 12 golova. Groningen je izgubio četiri ligaška meča zaredom, pa bi domaćin mogao sam morati dati sva tri gola. Prednost u cijeni od 0,05% gotovo nestaje pri svakoj promjeni kvote.",
       "decision": "Tiket B, 3+. Prvi po izvornom FairXG procentu za 3+ (69%). Kvota 1,45, EV +0,05%. Pobjeda Groningena (73%, 1,43, EV +4,39%) izostavljena je s A zbog pravila o različitim mečevima.",
       "limitations": "Očekivane postave podliježu promjeni. Model golova ne uključuje naknadne vijesti o postavi. Cijenu prikazuje javni agregator, direktna provjera kod kladionice nije dostupna."
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884720",
+      "rank": 2,
+      "home": "Werder Bremen",
+      "away": "Borussia Mönchengladbach",
+      "match": "Werder Bremen - Borussia Mönchengladbach",
+      "league": "ger.1",
+      "start_utc": "2026-11-27T19:30:00Z",
+      "source_fingerprint": "e1dfb26db5f01cc764d391b118bb9205a6ded979f7748aadba4a1348c347c629",
+      "probability_pct": {
+        "1": 58,
+        "2": 21,
+        "X": 21,
+        "3+": 67,
+        "GG": 60,
+        "NG": 40
+      },
+      "projected_goals_fairxg": {
+        "home": 2.38,
+        "away": 1.07
+      },
+      "model_basis": {
+        "1X2": "FairXG 1/X/2, prosjek javnih kvota uz korekciju favorita",
+        "3+/GG": "FairXG model golova",
+        "NG": "100 − GG"
+      },
+      "recommended_market": "3+",
+      "market_odds": {
+        "1": 1.76,
+        "2": 4.49,
+        "X": 4.49,
+        "3+": 1.48,
+        "GG": 1.48,
+        "NG": 2.5
+      },
+      "market_ev_pct": {
+        "1": 2.08,
+        "2": -5.71,
+        "X": -5.71,
+        "3+": -0.84,
+        "GG": -11.2,
+        "NG": 0
+      },
+      "odds_status": {
+        "status": "verified",
+        "bookmaker": "1xBet",
+        "source": "TipsterArea",
+        "direct_bookmaker": false,
+        "displayed_update": "27.11.2026 04:04",
+        "checked_at_utc": "2026-11-27T08:53:29Z",
+        "agrees_with_active_list": true
+      },
+      "sources": {
+        "fairxg": "https://fairxg.com/sport/football/match/werder-bremen-vs-m-gladbach",
+        "odds": "https://tipsterarea.com/match/werder-bremen-borussia-m-gladbach-bundesliga-germany-957048",
+        "match_preview": "https://www.sportsmole.co.uk/football/werder-bremen/preview/werder-bremen-vs-borussia-mbach-prediction-team-news-lineups_609818.html",
+        "observed_xg": "https://behindthetable.co.uk/match/2026-11-27-bundesliga-werder-bremen-v-mgladbach/",
+        "official_team_news": "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
+      },
+      "fairxg_collected_at_utc": "2026-11-27T08:46:31.936558+00:00",
+      "expected_lineups": {
+        "status": "verified",
+        "type": "prognoza Sports Mole",
+        "home": [
+          "Hein",
+          "Arthur",
+          "Pieper",
+          "Friedl",
+          "Deman",
+          "Regeer",
+          "Reis",
+          "Dinkci",
+          "Chuki",
+          "Njinmah",
+          "Fullkrug"
+        ],
+        "away": [
+          "Batz",
+          "Diks",
+          "Sander",
+          "Chiarodia",
+          "Scally",
+          "Uno",
+          "Neuhaus",
+          "Castrop",
+          "Hack",
+          "Mohya",
+          "Machino"
+        ]
+      },
+      "official_lineups": {
+        "status": "unavailable",
+        "home": null,
+        "away": null,
+        "note": "Zvanične početne postave nisu potvrđene u trenutku provjere."
+      },
+      "independent_xg": {
+        "status": "verified",
+        "scope": "Sezonski prosjeci na odgovarajućem terenu",
+        "home": {
+          "xg_for": 1.93,
+          "xg_against": 1.29
+        },
+        "away": {
+          "xg_for": 1.47,
+          "xg_against": 2.35
+        },
+        "source": "https://behindthetable.co.uk/match/2026-11-27-bundesliga-werder-bremen-v-mgladbach/"
+      },
+      "injuries_and_suspensions": {
+        "status": "verified",
+        "note": "Bundesliga među odsutnima navodi Stagea, Toppa i Musaha kod Werdera te Kleindiensta i Leopolda kod Gladbacha. Nastupi Njinmaha i Hacka označeni su kao upitni.",
+        "sources": [
+          "https://www.sportsmole.co.uk/football/werder-bremen/preview/werder-bremen-vs-borussia-mbach-prediction-team-news-lineups_609818.html",
+          "https://www.bundesliga.com/en/bundesliga/news/team-news-line-ups-2026-27-bayern-dortmund-fantasy-20707"
+        ]
+      },
+      "head_to_head": {
+        "status": "verified",
+        "note": "Posljednji međusobni susret u Bremenu završio je 1:1 u januaru 2026. Werder je prethodno slavio 4:0 u gostima, a Gladbach još ranije 4:2 u Bremenu. Uzorak obuhvata oba ishoda tipa 3+.",
+        "source": "https://tipsterarea.com/match/werder-bremen-borussia-m-gladbach-bundesliga-germany-957048"
+      },
+      "rest": {
+        "status": "verified",
+        "basis": "Razmak između datuma posljednje evidentirane utakmice prvog tima i današnjeg termina. Minutaža pojedinaca nije potvrđena.",
+        "home_last_match": "2026-11-22",
+        "away_last_match": "2026-11-21",
+        "home_calendar_days": 5,
+        "away_calendar_days": 6,
+        "source": "https://tipsterarea.com/match/werder-bremen-borussia-m-gladbach-bundesliga-germany-957048"
+      },
+      "motivation": {
+        "status": "verified",
+        "basis": "Takmičenje, tabela i rezultati prije meča. Procjena pristupa ekipe je analitički zaključak.",
+        "note": "Šesti Werder je na tri boda od četvrtog mjesta. Gladbach je posljednji sa četiri boda. Za gosta i bod ima težinu, zbog čega se može duže braniti.",
+        "source": "https://www.sportsmole.co.uk/football/werder-bremen/preview/werder-bremen-vs-borussia-mbach-prediction-team-news-lineups_609818.html"
+      },
+      "argument": "FairXG projektuje 2,38 i 1,07 golova. Gladbach na gostovanjima dopušta 2,35 xGA po utakmici. Werder je savladao Hamburg 4:0, a Füllkrug je bio strijelac u osam od prethodnih devet bundesligaških nastupa prema Sports Moleu.",
+      "counterargument": "Gladbach je primio samo četiri gola u prethodne četiri utakmice prema najavi i dvije je završio bez postignutog gola. Izostanak Kleindiensta dodatno smanjuje broj pouzdanih opcija u napadu. Za EV nula potrebno je približno 1,493, više od ponuđenih 1,48.",
+      "decision": "Tiket B, 3+. Drugi po FairXG vjerovatnoći za 3+ (67%). Kvota 1,48, EV −0,84%. Oba najviše rangirana para zajedno su u dozvoljenom rasponu.",
+      "limitations": "Očekivane postave podliježu promjeni. Model golova ne uključuje naknadne vijesti o postavi. Cijenu prikazuje javni agregator, direktna provjera kod kladionice nije dostupna."
     }
   ],
   "publication": null,
-  "updated_at_utc": "2026-11-27T08:54:27Z"
+  "updated_at_utc": "2026-11-27T08:54:29Z"
 }
