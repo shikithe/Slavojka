@@ -213,7 +213,8 @@ jobs:
               main_report=json.loads(run("git","show",snapshot+":shared/agent/top10-feedback.json"))
               if main_report!=report:
                   raise ValueError("TOP10 feedback changed on main; refuse stale signal")
-              marker={"date":today,"feedback":"TOP10_READY","feedback_id":feedback_id,\n                      "identity_matching":"SECOND_PASS_COMPLETE",
+              marker={"date":today,"feedback":"TOP10_READY","feedback_id":feedback_id,
+                      "identity_matching":"SECOND_PASS_COMPLETE",
                       "source_fingerprint":fp,"fixture_ids":ids,"count":len(ids),
                       "source_commit":snapshot,"model":"FairXG","test":False,"publication_allowed":False,
                       "report":"shared/agent/top10-feedback.json","scout_report":"shared/agent/scout-six-markets.json"}
