@@ -31,6 +31,7 @@ LEAGUES = {
     "bel.1": ("B1", "Belgian Pro League"), "tur.1": ("T1", "Süper Lig"),
     "aut.1": ("AUT", "Austrian Bundesliga"), "bra.1": ("BRA", "Brasileirão"),
     "nor.1": ("NOR", "Eliteserien"),
+    "usa.1": ("USA", "MLS"),  # Verified FairXG competition=USA public listing.
 }
 # Explicit aliases, never fuzzy matching or reversed home/away.
 ALIASES = (
@@ -68,6 +69,45 @@ ALIASES = (
     ("Benfica", "SL Benfica"), ("Atlético Madrid", "Atletico Madrid", "Ath Madrid"),
     ("Athletic Club", "Athletic Bilbao", "Ath Bilbao"),
 )
+# Controlled second matching stage: only verified provider display-name aliases.
+# Unlike the first pass, these are used ONLY when strict matching found no row.
+SECOND_PASS_ALIASES = (
+    ("Caykur Rizespor", "Rizespor", "Çaykur Rizespor"),
+    ("OH Leuven", "Oud-Heverlee Leuven", "Oud Heverlee Leuven"),
+    ("KV Kortrijk", "Kortrijk"),
+    ("Racing Santander", "SA Santander", "Santander"),
+    ("C.D. Nacional", "Nacional", "CD Nacional"),
+    ("Inter Miami CF", "Inter Miami", "IM Inter Miami"),
+)
+
+
+def second_pass_variants(name):
+    opts = variants(name)
+    for group in SECOND_PASS_ALIASES:
+        forms = {norm(value) for value in group}
+        if opts & forms:
+            opts.update(forms)
+    return opts
+
+def select_match_second_pass(fixture, rows):
+    """Match only verified aliases, within the already parsed league page.
+
+    Both ordered clubs, the original source row text, and UTC/local calendar
+    date must agree. Never use substrings or infer source probabilities.
+    """
+    start = datetime.fromisoformat(fixture["start_utc"].replace("Z", "+00:00"))
+    dates = {start.strftime("%m-%d"), start.astimezone(TZ).strftime("%m-%d")}
+    home, away = second_pass_variants(fixture["home"]), second_pass_variants(fixture["away"])
+    names = {h+a for h in home for a in away}
+    found = [row for row in rows
+             if row["display_date"] in dates
+             and row["home_slug"] in home and row["away_slug"] in away
+             and row["team_text"] in names]
+    unique = {json.dumps(row, sort_keys=True): row for row in found}
+    if len(unique) == 1:
+        return next(iter(unique.values())), None
+    return None, "ambiguous_second_pass" if unique else "not_covered_or_unverified_alias"
+
 
 def norm(s):
     return "".join(c for c in unicodedata.normalize("NFKD", str(s).casefold())
@@ -240,17 +280,51 @@ def analyze(feed, active, now, fetch=download):
                 errors[league]="no_valid_public_prediction_rows"
         except (OSError, ValueError, UnicodeError) as e:
             errors[league]=type(e).__name__+": "+str(e)
-    rows, unmatched = [], []
+    # Primary exact identity pass. It must complete for ALL ESPN fixtures first.
+    selected, missing = {}, []
+    first_pass_count = 0
+    second_pass_attempts = 0
+    second_pass_count = 0
     for f in fixtures:
-        q=quotes[f["fixture_id"]]
-        if q.get("match")!=f["home"]+" - "+f["away"] or q.get("datetime")!=f["start_utc"]:
+        q = quotes[f["fixture_id"]]
+        if q.get("match") != f["home"]+" - "+f["away"] or q.get("datetime") != f["start_utc"]:
             raise ValueError("ESPN quote identity discrepancy: "+f["fixture_id"])
-        m, why=select_match(f,pages.get(f["league"], []))
-        if not m:
-            unmatched.append({"fixture_id":f["fixture_id"], "match":q["match"], "league":f["league"],
-                              "status":"unavailable", "reason":errors.get(f["league"],why)})
+        match, why = select_match(f, pages.get(f["league"], []))
+        if match:
+            first_pass_count += 1
+            selected[f["fixture_id"]] = (match, "primary_exact")
+        else:
+            missing.append((f, why))
+
+    # Additional identity check BEFORE writing TOP10_READY. Only known aliases;
+    # competition page, kick-off date and ordered teams must all match.
+    unresolved = []
+    for f, first_reason in missing:
+        match, second_reason = None, first_reason
+        if first_reason != "ambiguous_match" and f["league"] in pages:
+            second_pass_attempts += 1
+            match, second_reason = select_match_second_pass(f, pages[f["league"]])
+        if match:
+            selected[f["fixture_id"]] = (match, "secondary_verified_alias")
+            second_pass_count += 1
+        else:
+            unresolved.append((f, second_reason or first_reason))
+
+    rows, unmatched = [], []
+    for f, reason in unresolved:
+        unmatched.append({"fixture_id":f["fixture_id"],
+                          "match":quotes[f["fixture_id"]]["match"], "league":f["league"],
+                          "status":"ambiguous" if "ambiguous" in reason else "unavailable",
+                          "reason":errors.get(f["league"], reason),
+                          "matching_pass":"second_checked" if f["league"] in pages else "competition_unavailable"})
+    for f in fixtures:
+        selection = selected.get(f["fixture_id"])
+        if selection is None:
             continue
-        rows.append(rank_fixture(f,q,m,now))
+        match, pass_name = selection
+        ranked = rank_fixture(f, quotes[f["fixture_id"]], match, now)
+        ranked["matching_pass"] = pass_name
+        rows.append(ranked)
     # A provider link can never be assigned to multiple ESPN fixture identities.
     from collections import Counter
     duplicates=Counter(r["source_url"] for r in rows)
@@ -272,7 +346,24 @@ def analyze(feed, active, now, fetch=download):
                        "top10":ids})
     coverage={"espn_total":len(official),"matched":len(rows),"unmatched":len(unmatched),
               "competition_errors":errors,"full":len(rows)==len(official)}
+    identity_checks={
+        "status":"SECOND_PASS_COMPLETE",
+        "first_pass_checked":len(fixtures),
+        "first_pass_matched":first_pass_count,
+        "second_pass_attempted":second_pass_attempts,
+        "second_pass_matched":second_pass_count,
+        "unmatched_after_second_pass":len(unmatched),
+        "checked_unique_source_urls":True,
+        "verification_basis":"league + UTC/local date + ordered home/away + full name/verified alias",
+        "validation_complete": (
+            len(rows)+len(unmatched)==len(fixtures)
+            and all(row["matching_pass"] in ("primary_exact","secondary_verified_alias") for row in rows)
+            and len({row["source_url"] for row in rows})==len(rows)),
+    }
+    if not identity_checks["validation_complete"]:
+        raise ValueError("FairXG identity verification incomplete; block TOP10_READY")
     return {"schema_version":3,"date":day,"model":"FairXG","generated_at_utc":now.isoformat(),
+            "identity_checks":identity_checks,
             "checked_at_utc":now.isoformat(),"source_feed_generated_at_utc":feed.get("generated_at_utc"),
             "source_feed_sha256":canonical_hash(feed),"source_active_sha256":active_sha,
             "source_fingerprint":fp,"coverage":coverage,"all_six_markets":list(MARKETS),
@@ -287,9 +378,13 @@ def analyze(feed, active, now, fetch=download):
 
 def feedback(doc):
     handoff=doc["detailed_ai_handoff"]
+    audit=doc.get("identity_checks",{})
+    if audit.get("status")!="SECOND_PASS_COMPLETE" or not audit.get("validation_complete"):
+        raise ValueError("FairXG second identity pass not complete: no READY signal")
     ready=bool(handoff["count"])
     common={"date":doc["date"],"model":"FairXG","source_fingerprint":doc["source_fingerprint"],
-            "generated_at_utc":doc["generated_at_utc"],"coverage":doc["coverage"]}
+            "generated_at_utc":doc["generated_at_utc"],"coverage":doc["coverage"],
+            "identity_checks":audit}
     scout=dict(common, feedback="FAIRXG_LIST_READY" if doc["ranked_fixtures"] else "FAIRXG_LIST_UNAVAILABLE",
                status="complete" if doc["coverage"]["full"] else "partial",
                all_fixtures_evaluated=doc["all_fixtures_evaluated"],
@@ -324,6 +419,7 @@ def main():
     if (existing.get("model")=="FairXG" and existing.get("date")==day
             and existing.get("source_feed_sha256")==canonical_hash(feed)
             and existing.get("source_active_sha256")==canonical_hash(active)
+            and existing.get("identity_checks",{}).get("validation_complete") is True
             and existing.get("coverage",{}).get("full") is True
             and existing.get("detailed_ai_handoff",{}).get("count")==10):
         result=existing
@@ -334,12 +430,13 @@ def main():
         if (existing.get("model")=="FairXG" and existing.get("date")==day
                 and existing.get("source_feed_sha256")==result["source_feed_sha256"]
                 and existing.get("source_active_sha256")==result["source_active_sha256"]
+                and existing.get("identity_checks",{}).get("validation_complete") is True
                 and existing.get("coverage",{}).get("matched",0)>result["coverage"]["matched"]):
             result=existing
             print("FAIRXG_RETAINED_CURRENT_VERIFIED_SNAPSHOT")
     scout,top=feedback(result)
     save(root/"shared/agent"/("fairxg-scout-"+day+".json"),result)
-    save(root/"shared/agent"/("fairxg-top10-"+day+".json"),dict(top,feedback="FAIRXG_TOP10_READY" if top["count"] else "FAIRXG_TOP10_UNAVAILABLE"))
+    save(root/"shared/agent"/("fairxg-top10-"+day+".json"),dict(top,feedback="FAIRXG_TOP10_READY" if top["feedback"]=="TOP10_READY" else "FAIRXG_TOP10_UNAVAILABLE"))
     for name in ("shared/agent/scout-six-markets.json","docs/scout-six-markets.json"):
         save(root/name,result)
     save(root/"shared/agent/scout-feedback.json",scout)

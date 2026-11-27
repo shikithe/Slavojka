@@ -1,6 +1,6 @@
 import unittest
 from datetime import datetime, timezone
-from lista.scout_six_markets import analyze, parse_list, select_match, feedback
+from lista.scout_six_markets import analyze, parse_list, select_match, select_match_second_pass, feedback
 
 NOW=datetime(2026,11,26,10,0,tzinfo=timezone.utc)
 DAY="2026-11-26"
@@ -80,6 +80,90 @@ class FairXGTests(unittest.TestCase):
                 self.assertIsNone(reason)
                 self.assertEqual(match["probability_pct"]["3+"],54)
                 self.assertIsNone(select_match(dict(f,home=away,away=home),rows)[0])
+
+
+    def test_second_pass_recovers_six_verified_nov27_aliases_and_mls(self):
+        # These are genuine source display names and league codes, not guesses.
+        from datetime import timezone
+        matches = [
+            ("tur.1","T1","Süper Lig","Caykur Rizespor","Kasimpasa",
+             "rizespor-vs-kasimpasa","Rizespor","Kasimpasa","11-27","2026-11-27T17:00:00Z","50% 24% 26% 53% 56%"),
+            ("bel.1","B1","Belgian Pro League","OH Leuven","KV Kortrijk",
+             "oud-heverlee-leuven-vs-kortrijk","Oud-Heverlee Leuven","Kortrijk","11-27","2026-11-27T19:45:00Z","52% 24% 24% 49% 51%"),
+            ("esp.1","SP1","La Liga","Levante","Racing Santander",
+             "levante-vs-santander","Levante","SA Santander","11-27","2026-11-27T20:00:00Z","48% 23% 29% 63% 63%"),
+            ("por.1","P1","Primeira Liga","Maritimo","C.D. Nacional",
+             "maritimo-vs-nacional","Maritimo","Nacional","11-27","2026-11-27T20:15:00Z","47% 28% 25% 53% 57%"),
+            ("usa.1","USA","MLS","Columbus Crew","Inter Miami CF",
+             "columbus-crew-vs-inter-miami","Columbus Crew","IM Inter Miami","11-28","2026-11-28T01:00:00Z","37% 23% 40% 79% 70%"),
+            ("usa.1","USA","MLS","Real Salt Lake","Vancouver Whitecaps",
+             "real-salt-lake-vs-vancouver-whitecaps","Real Salt Lake","Vancouver Whitecaps",
+             "11-28","2026-11-28T03:00:00Z","34% 25% 41% 55% 57%"),
+        ]
+        pages={}
+        fixtures=[]
+        quotes=[]
+        for i,(league,code,label,home,away,slug,show_home,show_away,date,kickoff,pcts) in enumerate(matches):
+            # Realistic standalone provider link: 5 percentages + fair odds.
+            p=pcts.split()
+            html=(f'<a href="/sport/football/match/{slug}">'
+                  f'{date} {show_home} {show_away} {label} '
+                  f'{p[0]} 2.01 {p[1]} 3.50 {p[2]} 4.00 '
+                  f'{p[3]}xG 2.8 {p[4]}1.76</a>')
+            pages.setdefault(code,[]).append(html)
+            fid=f"espn:football:{league}:{i}"
+            fixtures.append({"fixture_id":fid,"league":league,"home":home,"away":away,
+                             "start_utc":kickoff})
+            quotes.append({"fixture_id":fid,"match":home+" - "+away,"datetime":kickoff,
+                           "home_odds":2.04,"draw_odds":3.33,"away_odds":4.05,
+                           "over25_odds":1.66,"btts_yes_odds":1.74,"btts_no_odds":2.07})
+        feed={"date":"2026-11-27","generated_at_utc":"2026-11-27T08:45:00Z",
+              "football_candidates":fixtures}
+        active={"date":"2026-11-27","fixtures":quotes}
+        def fetch(url):
+            from urllib.parse import parse_qs, urlsplit
+            code=parse_qs(urlsplit(url).query)["competition"][0]
+            return "".join(pages.get(code,[]))
+        report=analyze(feed,active,datetime(2026,11,27,9,0,tzinfo=timezone.utc),fetch)
+        audit=report["identity_checks"]
+        self.assertEqual(report["coverage"]["matched"],6)
+        self.assertEqual(report["coverage"]["unmatched"],0)
+        self.assertEqual(audit["status"],"SECOND_PASS_COMPLETE")
+        self.assertTrue(audit["validation_complete"])
+        self.assertEqual(audit["first_pass_checked"],6)
+        self.assertEqual(audit["first_pass_matched"],1)
+        self.assertEqual(audit["second_pass_attempted"],5)
+        self.assertEqual(audit["second_pass_matched"],5)
+        self.assertEqual(report["detailed_ai_handoff"]["count"],6)
+        self.assertEqual(feedback(report)[1]["feedback"],"TOP10_READY")
+        self.assertEqual({r["match"] for r in report["ranked_fixtures"]},
+                         {m[3]+" - "+m[4] for m in matches})
+        self.assertEqual(len({r["source_url"] for r in report["ranked_fixtures"]}),6)
+        self.assertTrue(all(r["model"]=="FairXG" for r in report["ranked_fixtures"]))
+        self.assertTrue(all(r["matching_pass"] in ("primary_exact","secondary_verified_alias")
+                            for r in report["ranked_fixtures"]))
+
+    def test_second_pass_rejects_reversed_ambiguous_wrong_date_and_unverified(self):
+        row='<a href="/sport/football/match/rizespor-vs-kasimpasa">11-27 Rizespor Kasimpasa Süper Lig 50% 2.0 24% 4.0 26% 4.0 53%xG 2.8 56%1.8</a>'
+        parsed=parse_list(row,"Süper Lig")
+        f={"home":"Caykur Rizespor","away":"Kasimpasa","start_utc":"2026-11-27T17:00:00Z"}
+        self.assertIsNotNone(select_match_second_pass(f,parsed)[0])
+        self.assertIsNone(select_match_second_pass(dict(f,home="Kasimpasa",away="Caykur Rizespor"),parsed)[0])
+        self.assertIsNone(select_match_second_pass(dict(f,start_utc="2026-11-29T17:00:00Z"),parsed)[0])
+        self.assertIsNone(select_match_second_pass(f,parse_list(row,"MLS"))[0])
+        self.assertIsNone(select_match_second_pass(dict(f,home="Unknown"),parsed)[0])
+        self.assertEqual(select_match_second_pass(f,parsed*2)[1],None)  # identical duplicates
+        alternate=parsed[0].copy()
+        alternate["probability_pct"]=dict(alternate["probability_pct"],GG=65)
+        self.assertEqual(select_match_second_pass(f,parsed+[alternate])[1],"ambiguous_second_pass")
+
+    def test_no_top10_ready_without_fairxg_second_pass_audit(self):
+        f,a=inputs()
+        doc=analyze(f,a,NOW,lambda url:HTML)
+        del doc["identity_checks"]
+        with self.assertRaisesRegex(ValueError,"second identity pass"):
+            feedback(doc)
+
 
 if __name__=="__main__":
     unittest.main()
