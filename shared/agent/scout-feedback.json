@@ -1,28 +1,30 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "model": "FairXG",
-  "source_fingerprint": "5bfe79d6e3e112ff8019932c0bdacdc55f39eec3a129b12537ed91e49392586c",
-  "generated_at_utc": "2026-11-27T09:11:38.592673+00:00",
+  "source_fingerprint": "ce22a3e7c578e5fb1c760da97788521168ac0597924ae3d87d875240eef051cd",
+  "generated_at_utc": "2026-11-28T08:47:10.982195+00:00",
   "coverage": {
-    "espn_total": 13,
-    "matched": 13,
-    "unmatched": 0,
-    "competition_errors": {},
-    "full": true
+    "espn_total": 47,
+    "matched": 32,
+    "unmatched": 15,
+    "competition_errors": {
+      "arg.1": "competition_not_mapped"
+    },
+    "full": false
   },
   "identity_checks": {
     "status": "SECOND_PASS_COMPLETE",
-    "first_pass_checked": 13,
-    "first_pass_matched": 8,
-    "second_pass_attempted": 5,
-    "second_pass_matched": 5,
-    "unmatched_after_second_pass": 0,
+    "first_pass_checked": 47,
+    "first_pass_matched": 32,
+    "second_pass_attempted": 13,
+    "second_pass_matched": 0,
+    "unmatched_after_second_pass": 15,
     "checked_unique_source_urls": true,
     "verification_basis": "league + UTC/local date + ordered home/away + full name/verified alias",
     "validation_complete": true
   },
   "feedback": "FAIRXG_LIST_READY",
-  "status": "complete",
-  "all_fixtures_evaluated": 13,
-  "market_probabilities": 78
+  "status": "partial",
+  "all_fixtures_evaluated": 32,
+  "market_probabilities": 192
 }

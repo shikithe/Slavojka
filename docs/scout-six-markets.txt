@@ -1,16 +1,35 @@
-FAIRXG DAILY LIST | 2026-11-27
-Covered ESPN matches: 13/13
+FAIRXG DAILY LIST | 2026-11-28
+Covered ESPN matches: 32/47
 FIXTURE | 1 | X | 2 | 3+ | GG | NG | RANKED MARKET | EV %
-Columbus Crew - Inter Miami CF | 40.0 | 23.0 | 37.0 | 79.0 | 70.0 | 30.0 | 3+ | 3.49
-FC Groningen - Willem II | 73.0 | 15.0 | 12.0 | 69.0 | 56.0 | 44.0 | 1 | 4.39
-Maritimo - C.D. Nacional | 44.0 | 30.0 | 26.0 | 53.0 | 57.0 | 43.0 | 3+ | 13.42
-Werder Bremen - Borussia Mönchengladbach | 58.0 | 21.0 | 21.0 | 67.0 | 60.0 | 40.0 | 3+ | -0.84
-Real Salt Lake - Vancouver Whitecaps | 35.0 | 25.0 | 40.0 | 55.0 | 57.0 | 43.0 | NG | 19.11
-Venezia - Bologna | 31.0 | 30.0 | 39.0 | 51.0 | 55.0 | 45.0 | 3+ | 10.67
-OH Leuven - KV Kortrijk | 53.0 | 23.0 | 24.0 | 49.0 | 51.0 | 49.0 | NG | 11.72
-Nottingham Forest - Chelsea | 37.0 | 28.0 | 35.0 | 54.0 | 56.0 | 44.0 | 3+ | 3.14
-Caykur Rizespor - Kasimpasa | 52.0 | 24.0 | 25.0 | 53.0 | 56.0 | 44.0 | 1 | 2.44
-Levante - Racing Santander | 49.0 | 23.0 | 28.0 | 63.0 | 63.0 | 37.0 | 3+ | -10.54
-Alanyaspor - Konyaspor | 35.0 | 30.0 | 35.0 | 46.0 | 51.0 | 49.0 | 3+ | 5.34
-Brest - Paris FC | 28.0 | 27.0 | 45.0 | 50.0 | 55.0 | 45.0 | 3+ | -2.0
-Fluminense - Cruzeiro | 48.0 | 25.0 | 27.0 | 46.0 | 52.0 | 48.0 | None | None
+Real Madrid - Alavés | 88.0 | 8.0 | 4.0 | 69.0 | 52.0 | 48.0 | 1 | 1.2
+Paris Saint-Germain - Lorient | 82.0 | 12.0 | 6.0 | 71.0 | 49.0 | 51.0 | 1 | 1.68
+Hamburg SV - Bayern Munich | 8.0 | 13.0 | 79.0 | 74.0 | 62.0 | 38.0 | 2 | 4.28
+PSV Eindhoven - Go Ahead Eagles | 80.0 | 11.0 | 8.0 | 76.0 | 66.0 | 34.0 | 1 | -0.8
+Internazionale - Genoa | 76.0 | 15.0 | 9.0 | 62.0 | 49.0 | 51.0 | 1 | 2.6
+Rangers - Falkirk | 80.0 | 13.0 | 8.0 | 63.0 | 57.0 | 43.0 | 1 | -1.6
+Leeds United - Coventry City | 68.0 | 19.0 | 13.0 | 55.0 | 51.0 | 49.0 | 1 | 4.04
+Elche - Atlético Madrid | 13.0 | 18.0 | 68.0 | 51.0 | 53.0 | 47.0 | 2 | 3.36
+Frosinone - Parma | 67.0 | 17.0 | 15.0 | 57.0 | 56.0 | 44.0 | 1 | 2.51
+Charlotte FC - Chicago Fire FC | 36.0 | 23.0 | 40.0 | 71.0 | 67.0 | 33.0 | 3+ | -4.15
+Philadelphia Union - New England Revolution | 64.0 | 19.0 | 17.0 | 59.0 | 60.0 | 40.0 | 1 | -0.16
+Excelsior - Telstar | 49.0 | 25.0 | 26.0 | 60.0 | 63.0 | 37.0 | 3+ | 3.2
+Arouca - Rio Ave | 59.0 | 24.0 | 18.0 | 53.0 | 51.0 | 49.0 | 1 | 3.25
+Angers - Lens | 19.0 | 22.0 | 59.0 | 55.0 | 58.0 | 42.0 | 2 | 2.66
+SC Cambuur - Sparta Rotterdam | 45.0 | 23.0 | 32.0 | 66.0 | 65.0 | 35.0 | 3+ | -6.28
+VfB Stuttgart - Eintracht Frankfurt | 54.0 | 20.0 | 26.0 | 66.0 | 64.0 | 36.0 | NG | 22.4
+Nice - Troyes | 59.0 | 22.0 | 19.0 | 50.0 | 54.0 | 46.0 | 1 | -0.29
+Málaga - Athletic Club | 19.0 | 24.0 | 57.0 | 49.0 | 53.0 | 47.0 | 2 | 0.89
+Portland Timbers - FC Dallas | 45.0 | 23.0 | 31.0 | 66.0 | 67.0 | 33.0 | GG | -9.55
+Dundee United - St Johnstone | 59.0 | 21.0 | 20.0 | 56.0 | 55.0 | 45.0 | 1 | -2.65
+Motherwell - Hibernian | 36.0 | 26.0 | 38.0 | 52.0 | 55.0 | 45.0 | NG | 7.55
+Manchester United - Brentford | 46.0 | 24.0 | 29.0 | 59.0 | 62.0 | 38.0 | GG | -9.48
+St Mirren - Kilmarnock | 44.0 | 26.0 | 30.0 | 52.0 | 56.0 | 44.0 | NG | 7.36
+Samsunspor - Genclerbirligi | 52.0 | 25.0 | 23.0 | 52.0 | 55.0 | 45.0 | 1 | -0.68
+Aberdeen - Dundee | 52.0 | 24.0 | 24.0 | 55.0 | 58.0 | 42.0 | GG | -7.78
+Moreirense - Santa Clara | 30.0 | 30.0 | 40.0 | 38.0 | 45.0 | 55.0 | NG | -5.4
+Houston Dynamo FC - San Jose Earthquakes | 49.0 | 25.0 | 27.0 | 52.0 | 56.0 | 44.0 | 1 | -0.53
+Torino - Lazio | 27.0 | 27.0 | 46.0 | 50.0 | 54.0 | 46.0 | 2 | 2.12
+Le Mans - Lille | 25.0 | 27.0 | 48.0 | 45.0 | 51.0 | 49.0 | 2 | -0.64
+Le Havre AC - Strasbourg | 30.0 | 26.0 | 44.0 | 53.0 | 57.0 | 43.0 | 3+ | -6.19
+Ipswich Town - Aston Villa | 26.0 | 24.0 | 50.0 | 56.0 | 56.0 | 44.0 | None | None
+FC Cincinnati - Nashville SC | 29.0 | 24.0 | 47.0 | 58.0 | 60.0 | 40.0 | None | None
