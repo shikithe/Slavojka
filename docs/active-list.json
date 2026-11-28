@@ -1,12 +1,12 @@
 {
-  "date": "2026-11-27",
-  "expires_at": "2026-11-28T08:59:00+01:00",
+  "date": "2026-11-28",
+  "expires_at": "2026-11-29T08:59:00+01:00",
   "publication_allowed": true,
   "fixtures": [
     {
-      "fixture_id": "espn:football:tur.1:401888241",
-      "datetime": "2026-11-27T17:00:00Z",
-      "match": "Alanyaspor - Konyaspor",
+      "fixture_id": "espn:football:esp.1:401882796",
+      "datetime": "2026-11-28T13:00:00Z",
+      "match": "Real Betis - Rayo Vallecano",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -16,19 +16,19 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/alanyaspor-konyaspor-super-lig-turkiye-957055"
+        "https://tipsterarea.com/match/real-betis-rayo-vallecano-primera-division-spain-957181"
       ],
-      "home_odds": 2.83,
-      "draw_odds": 3.15,
-      "away_odds": 2.78,
-      "over25_odds": 2.29,
-      "btts_yes_odds": 1.86,
-      "btts_no_odds": 1.84
+      "home_odds": 1.63,
+      "draw_odds": 4.57,
+      "away_odds": 5.44,
+      "over25_odds": 1.55,
+      "btts_yes_odds": 1.58,
+      "btts_no_odds": 2.26
     },
     {
-      "fixture_id": "espn:football:tur.1:401888240",
-      "datetime": "2026-11-27T17:00:00Z",
-      "match": "Caykur Rizespor - Kasimpasa",
+      "fixture_id": "espn:football:tur.1:401888236",
+      "datetime": "2026-11-28T13:00:00Z",
+      "match": "Samsunspor - Genclerbirligi",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -38,107 +38,19 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/caykur-rizespor-kasimpasa-super-lig-turkiye-957056"
+        "https://tipsterarea.com/match/samsunspor-genclerbirligi-super-lig-turkiye-957251"
       ],
-      "home_odds": 1.97,
-      "draw_odds": 3.86,
-      "away_odds": 3.78,
-      "over25_odds": 1.74,
-      "btts_yes_odds": 1.59,
-      "btts_no_odds": 2.21
-    },
-    {
-      "fixture_id": "espn:football:ned.1:401875536",
-      "datetime": "2026-11-27T19:00:00Z",
-      "match": "FC Groningen - Willem II",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea public bookmaker",
-        "draw_odds": "TipsterArea public bookmaker",
-        "away_odds": "TipsterArea public bookmaker",
-        "over25_odds": "TipsterArea public bookmaker",
-        "btts_yes_odds": "TipsterArea public bookmaker",
-        "btts_no_odds": "TipsterArea public bookmaker"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/fc-groningen-willem-ii-tilburg-eredivisie-netherlands-957052"
-      ],
-      "home_odds": 1.43,
-      "draw_odds": 5.12,
-      "away_odds": 6.72,
-      "over25_odds": 1.45,
-      "btts_yes_odds": 1.61,
-      "btts_no_odds": 2.18
-    },
-    {
-      "fixture_id": "espn:football:ger.1:401884720",
-      "datetime": "2026-11-27T19:30:00Z",
-      "match": "Werder Bremen - Borussia Mönchengladbach",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea public bookmaker",
-        "draw_odds": "TipsterArea public bookmaker",
-        "away_odds": "TipsterArea public bookmaker",
-        "over25_odds": "TipsterArea public bookmaker",
-        "btts_yes_odds": "TipsterArea public bookmaker",
-        "btts_no_odds": "TipsterArea public bookmaker"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/werder-bremen-borussia-m-gladbach-bundesliga-germany-957048"
-      ],
-      "home_odds": 1.76,
-      "draw_odds": 4.49,
-      "away_odds": 4.49,
-      "over25_odds": 1.48,
-      "btts_yes_odds": 1.48,
-      "btts_no_odds": 2.5
-    },
-    {
-      "fixture_id": "espn:football:fra.1:401876392",
-      "datetime": "2026-11-27T19:45:00Z",
-      "match": "Brest - Paris FC",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea public bookmaker",
-        "draw_odds": "TipsterArea public bookmaker",
-        "away_odds": "TipsterArea public bookmaker",
-        "over25_odds": "TipsterArea public bookmaker",
-        "btts_yes_odds": "TipsterArea public bookmaker",
-        "btts_no_odds": "TipsterArea public bookmaker"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/brest-paris-fc-ligue-1-france-957050"
-      ],
-      "home_odds": 3.4,
-      "draw_odds": 3.68,
-      "away_odds": 2.23,
-      "over25_odds": 1.96,
-      "btts_yes_odds": 1.69,
-      "btts_no_odds": 2.07
-    },
-    {
-      "fixture_id": "espn:football:bel.1:401878930",
-      "datetime": "2026-11-27T19:45:00Z",
-      "match": "OH Leuven - KV Kortrijk",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea public bookmaker",
-        "draw_odds": "TipsterArea public bookmaker",
-        "away_odds": "TipsterArea public bookmaker",
-        "over25_odds": "TipsterArea public bookmaker",
-        "btts_yes_odds": "TipsterArea public bookmaker",
-        "btts_no_odds": "TipsterArea public bookmaker"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/oud-heverlee-leuven-kortrijk-pro-league-belgium-957061"
-      ],
-      "home_odds": 1.95,
+      "home_odds": 1.91,
       "draw_odds": 3.78,
-      "away_odds": 3.7,
-      "over25_odds": 1.67,
-      "btts_yes_odds": 1.56,
-      "btts_no_odds": 2.28
+      "away_odds": 4.13,
+      "over25_odds": 1.89,
+      "btts_yes_odds": 1.71,
+      "btts_no_odds": 2.02
     },
     {
-      "fixture_id": "espn:football:ita.1:401875004",
-      "datetime": "2026-11-27T19:45:00Z",
-      "match": "Venezia - Bologna",
+      "fixture_id": "espn:football:ita.1:401875081",
+      "datetime": "2026-11-28T14:00:00Z",
+      "match": "Frosinone - Parma",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -148,85 +60,19 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/venezia-bologna-serie-a-italy-957049"
+        "https://tipsterarea.com/match/frosinone-parma-serie-a-italy-957190"
       ],
-      "home_odds": 3.41,
-      "draw_odds": 3.52,
-      "away_odds": 2.29,
-      "over25_odds": 2.17,
-      "btts_yes_odds": 1.82,
-      "btts_no_odds": 1.9
+      "home_odds": 1.53,
+      "draw_odds": 5.09,
+      "away_odds": 5.97,
+      "over25_odds": 1.4,
+      "btts_yes_odds": 1.49,
+      "btts_no_odds": 2.48
     },
     {
-      "fixture_id": "espn:football:esp.1:401882791",
-      "datetime": "2026-11-27T20:00:00Z",
-      "match": "Levante - Racing Santander",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea public bookmaker",
-        "draw_odds": "TipsterArea public bookmaker",
-        "away_odds": "TipsterArea public bookmaker",
-        "over25_odds": "TipsterArea public bookmaker",
-        "btts_yes_odds": "TipsterArea public bookmaker",
-        "btts_no_odds": "TipsterArea public bookmaker"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/levante-racing-santander-primera-division-spain-957047"
-      ],
-      "home_odds": 2.07,
-      "draw_odds": 4.11,
-      "away_odds": 3.47,
-      "over25_odds": 1.42,
-      "btts_yes_odds": 1.37,
-      "btts_no_odds": 2.89
-    },
-    {
-      "fixture_id": "espn:football:eng.1:401879225",
-      "datetime": "2026-11-27T20:00:00Z",
-      "match": "Nottingham Forest - Chelsea",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea public bookmaker",
-        "draw_odds": "TipsterArea public bookmaker",
-        "away_odds": "TipsterArea public bookmaker",
-        "over25_odds": "TipsterArea public bookmaker",
-        "btts_yes_odds": "TipsterArea public bookmaker",
-        "btts_no_odds": "TipsterArea public bookmaker"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/nottingham-chelsea-premier-league-england-957046"
-      ],
-      "home_odds": 2.55,
-      "draw_odds": 3.67,
-      "away_odds": 2.85,
-      "over25_odds": 1.91,
-      "btts_yes_odds": 1.65,
-      "btts_no_odds": 2.13
-    },
-    {
-      "fixture_id": "espn:football:por.1:401885389",
-      "datetime": "2026-11-27T20:15:00Z",
-      "match": "Maritimo - C.D. Nacional",
-      "bookmakers_by_field": {
-        "home_odds": "TipsterArea public bookmaker",
-        "draw_odds": "TipsterArea public bookmaker",
-        "away_odds": "TipsterArea public bookmaker",
-        "over25_odds": "TipsterArea public bookmaker",
-        "btts_yes_odds": "TipsterArea public bookmaker",
-        "btts_no_odds": "TipsterArea public bookmaker"
-      },
-      "source_urls": [
-        "https://tipsterarea.com/match/maritimo-nacional-primeira-liga-portugal-957057"
-      ],
-      "home_odds": 2.17,
-      "draw_odds": 3.42,
-      "away_odds": 3.6,
-      "over25_odds": 2.14,
-      "btts_yes_odds": 1.83,
-      "btts_no_odds": 1.87
-    },
-    {
-      "fixture_id": "espn:football:bra.1:401841337",
-      "datetime": "2026-11-27T23:00:00Z",
-      "match": "Fluminense - Cruzeiro",
+      "fixture_id": "espn:football:ger.1:401884721",
+      "datetime": "2026-11-28T14:30:00Z",
+      "match": "FC Cologne - SV Elversberg",
       "bookmakers_by_field": {},
       "source_urls": [],
       "home_odds": null,
@@ -237,9 +83,9 @@
       "btts_no_odds": null
     },
     {
-      "fixture_id": "espn:football:usa.1:401933727",
-      "datetime": "2026-11-28T01:00:00Z",
-      "match": "Columbus Crew - Inter Miami CF",
+      "fixture_id": "espn:football:ger.1:401884722",
+      "datetime": "2026-11-28T14:30:00Z",
+      "match": "Hamburg SV - Bayern Munich",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -249,19 +95,19 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/columbus-crew-inter-miami-playoff-usa-957270"
+        "https://tipsterarea.com/match/hamburger-bayern-munchen-bundesliga-germany-957186"
       ],
-      "home_odds": 2.64,
-      "draw_odds": 4.07,
-      "away_odds": 2.46,
-      "over25_odds": 1.31,
-      "btts_yes_odds": 1.29,
-      "btts_no_odds": 3.27
+      "home_odds": 9.65,
+      "draw_odds": 6.45,
+      "away_odds": 1.32,
+      "over25_odds": 1.36,
+      "btts_yes_odds": 1.62,
+      "btts_no_odds": 2.19
     },
     {
-      "fixture_id": "espn:football:usa.1:401933725",
-      "datetime": "2026-11-28T03:00:00Z",
-      "match": "Real Salt Lake - Vancouver Whitecaps",
+      "fixture_id": "espn:football:ger.1:401884723",
+      "datetime": "2026-11-28T14:30:00Z",
+      "match": "Mainz - 1. FC Union Berlin",
       "bookmakers_by_field": {
         "home_odds": "TipsterArea public bookmaker",
         "draw_odds": "TipsterArea public bookmaker",
@@ -271,14 +117,871 @@
         "btts_no_odds": "TipsterArea public bookmaker"
       },
       "source_urls": [
-        "https://tipsterarea.com/match/real-salt-lake-vancouver-whitecaps-playoff-usa-957271"
+        "https://tipsterarea.com/match/mainz-union-berlin-bundesliga-germany-957187"
       ],
-      "home_odds": 2.85,
+      "home_odds": 1.51,
+      "draw_odds": 4.98,
+      "away_odds": 6.57,
+      "over25_odds": 1.53,
+      "btts_yes_odds": 1.64,
+      "btts_no_odds": 2.15
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884719",
+      "datetime": "2026-11-28T14:30:00Z",
+      "match": "SC Paderborn 07 - Schalke 04",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/paderborn-schalke-04-bundesliga-germany-957188"
+      ],
+      "home_odds": 2.59,
+      "draw_odds": 3.7,
+      "away_odds": 2.79,
+      "over25_odds": 1.85,
+      "btts_yes_odds": 1.6,
+      "btts_no_odds": 2.22
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878332",
+      "datetime": "2026-11-28T15:00:00Z",
+      "match": "Aberdeen - Dundee",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/aberdeen-dundee-fc-premiership-scotland-957265"
+      ],
+      "home_odds": 1.83,
+      "draw_odds": 3.78,
+      "away_odds": 3.87,
+      "over25_odds": 1.65,
+      "btts_yes_odds": 1.59,
+      "btts_no_odds": 2.21
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878331",
+      "datetime": "2026-11-28T15:00:00Z",
+      "match": "Dundee United - St Johnstone",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/dundee-united-saint-johnstone-premiership-scotland-957266"
+      ],
+      "home_odds": 1.65,
+      "draw_odds": 4.2,
+      "away_odds": 4.45,
+      "over25_odds": 1.43,
+      "btts_yes_odds": 1.49,
+      "btts_no_odds": 2.44
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878929",
+      "datetime": "2026-11-28T15:00:00Z",
+      "match": "KVC Westerlo - RAAL La Louvière",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/westerlo-raal-la-louviere-pro-league-belgium-957261"
+      ],
+      "home_odds": 1.95,
+      "draw_odds": 3.76,
+      "away_odds": 3.72,
+      "over25_odds": 1.69,
+      "btts_yes_odds": 1.57,
+      "btts_no_odds": 2.26
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879227",
+      "datetime": "2026-11-28T15:00:00Z",
+      "match": "Leeds United - Coventry City",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/leeds-coventry-premier-league-england-957178"
+      ],
+      "home_odds": 1.53,
+      "draw_odds": 4.73,
+      "away_odds": 6.63,
+      "over25_odds": 1.75,
+      "btts_yes_odds": 1.8,
+      "btts_no_odds": 1.92
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401879226",
+      "datetime": "2026-11-28T15:00:00Z",
+      "match": "Manchester United - Brentford",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/manchester-united-brentford-premier-league-england-957179"
+      ],
+      "home_odds": 2.27,
+      "draw_odds": 3.99,
+      "away_odds": 3.09,
+      "over25_odds": 1.55,
+      "btts_yes_odds": 1.46,
+      "btts_no_odds": 2.56
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878328",
+      "datetime": "2026-11-28T15:00:00Z",
+      "match": "Rangers - Falkirk",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/rangers-falkirk-premiership-scotland-957267"
+      ],
+      "home_odds": 1.23,
+      "draw_odds": 6.25,
+      "away_odds": 10.5,
+      "over25_odds": 1.33,
+      "btts_yes_odds": 1.76,
+      "btts_no_odds": 1.96
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878327",
+      "datetime": "2026-11-28T15:00:00Z",
+      "match": "St Mirren - Kilmarnock",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/saint-mirren-kilmarnock-premiership-scotland-957268"
+      ],
+      "home_odds": 2.15,
+      "draw_odds": 3.6,
+      "away_odds": 3.06,
+      "over25_odds": 1.57,
+      "btts_yes_odds": 1.49,
+      "btts_no_odds": 2.44
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882790",
+      "datetime": "2026-11-28T15:15:00Z",
+      "match": "Málaga - Athletic Club",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/malaga-athletic-bilbao-primera-division-spain-957182"
+      ],
+      "home_odds": 5.03,
+      "draw_odds": 3.96,
+      "away_odds": 1.77,
+      "over25_odds": 1.92,
+      "btts_yes_odds": 1.77,
+      "btts_no_odds": 1.96
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885392",
+      "datetime": "2026-11-28T15:30:00Z",
+      "match": "Arouca - Rio Ave",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/arouca-rio-ave-primeira-liga-portugal-957253"
+      ],
+      "home_odds": 1.75,
+      "draw_odds": 3.85,
+      "away_odds": 5.0,
+      "over25_odds": 1.97,
+      "btts_yes_odds": 1.84,
+      "btts_no_odds": 1.86
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875537",
+      "datetime": "2026-11-28T15:30:00Z",
+      "match": "Excelsior - Telstar",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/excelsior-telstar-velsen-eredivisie-netherlands-957204"
+      ],
+      "home_odds": 2.06,
+      "draw_odds": 3.61,
+      "away_odds": 3.59,
+      "over25_odds": 1.72,
+      "btts_yes_odds": 1.57,
+      "btts_no_odds": 2.26
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885388",
+      "datetime": "2026-11-28T15:30:00Z",
+      "match": "Moreirense - Santa Clara",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/moreirense-santa-clara-primeira-liga-portugal-957254"
+      ],
+      "home_odds": 3.28,
+      "draw_odds": 3.13,
+      "away_odds": 2.46,
+      "over25_odds": 2.49,
+      "btts_yes_odds": 2.01,
+      "btts_no_odds": 1.72
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888368",
+      "datetime": "2026-11-28T16:00:00Z",
+      "match": "Gaziantep FK - Amed SFK",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/gaziantep-fk-amed-sfk-super-lig-turkiye-957252"
+      ],
+      "home_odds": 3.44,
       "draw_odds": 3.84,
+      "away_odds": 2.09,
+      "over25_odds": 1.72,
+      "btts_yes_odds": 1.56,
+      "btts_no_odds": 2.28
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876394",
+      "datetime": "2026-11-28T16:15:00Z",
+      "match": "Angers - Lens",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/angers-lens-ligue-1-france-957193"
+      ],
+      "home_odds": 4.88,
+      "draw_odds": 4.26,
+      "away_odds": 1.74,
+      "over25_odds": 1.77,
+      "btts_yes_odds": 1.67,
+      "btts_no_odds": 2.1
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401874826",
+      "datetime": "2026-11-28T17:00:00Z",
+      "match": "Torino - Lazio",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/torino-lazio-serie-a-italy-957191"
+      ],
+      "home_odds": 3.4,
+      "draw_odds": 3.69,
+      "away_odds": 2.22,
+      "over25_odds": 1.94,
+      "btts_yes_odds": 1.68,
+      "btts_no_odds": 2.08
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878932",
+      "datetime": "2026-11-28T17:15:00Z",
+      "match": "Cercle Brugge KSV - KV Mechelen",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/cercle-brugge-mechelen-pro-league-belgium-957262"
+      ],
+      "home_odds": 1.97,
+      "draw_odds": 3.72,
+      "away_odds": 3.7,
+      "over25_odds": 1.7,
+      "btts_yes_odds": 1.57,
+      "btts_no_odds": 2.26
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933737",
+      "datetime": "2026-11-28T17:30:00Z",
+      "match": "Charlotte FC - Chicago Fire FC",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/charlotte-fc-chicago-fire-playoff-usa-957272"
+      ],
+      "home_odds": 2.8,
+      "draw_odds": 3.92,
       "away_odds": 2.39,
+      "over25_odds": 1.35,
+      "btts_yes_odds": 1.31,
+      "btts_no_odds": 3.15
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882793",
+      "datetime": "2026-11-28T17:30:00Z",
+      "match": "Elche - Atlético Madrid",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/elche-atletico-madrid-primera-division-spain-957183"
+      ],
+      "home_odds": 6.52,
+      "draw_odds": 4.88,
+      "away_odds": 1.52,
+      "over25_odds": 1.63,
+      "btts_yes_odds": 1.68,
+      "btts_no_odds": 2.08
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401878752",
+      "datetime": "2026-11-28T17:30:00Z",
+      "match": "Ipswich Town - Aston Villa",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884726",
+      "datetime": "2026-11-28T17:30:00Z",
+      "match": "VfB Stuttgart - Eintracht Frankfurt",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/stuttgart-eintracht-frankfurt-bundesliga-germany-957189"
+      ],
+      "home_odds": 1.89,
+      "draw_odds": 4.63,
+      "away_odds": 3.7,
+      "over25_odds": 1.27,
+      "btts_yes_odds": 1.28,
+      "btts_no_odds": 3.4
+    },
+    {
+      "fixture_id": "espn:football:sco.1:401878329",
+      "datetime": "2026-11-28T17:45:00Z",
+      "match": "Motherwell - Hibernian",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/motherwell-hibernian-premiership-scotland-957269"
+      ],
+      "home_odds": 2.58,
+      "draw_odds": 3.46,
+      "away_odds": 2.51,
+      "over25_odds": 1.64,
+      "btts_yes_odds": 1.51,
+      "btts_no_odds": 2.39
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875531",
+      "datetime": "2026-11-28T17:45:00Z",
+      "match": "PSV Eindhoven - Go Ahead Eagles",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/psv-eindhoven-go-ahead-eagles-eredivisie-netherlands-957205"
+      ],
+      "home_odds": 1.24,
+      "draw_odds": 7.24,
+      "away_odds": 10.1,
+      "over25_odds": 1.19,
+      "btts_yes_odds": 1.45,
+      "btts_no_odds": 2.56
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885393",
+      "datetime": "2026-11-28T18:00:00Z",
+      "match": "Académico de Viseu - Alverca",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/academico-de-viseu-alverca-primeira-liga-portugal-957255"
+      ],
+      "home_odds": 2.76,
+      "draw_odds": 3.13,
+      "away_odds": 2.87,
+      "over25_odds": 2.04,
+      "btts_yes_odds": 1.72,
+      "btts_no_odds": 2.01
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933724",
+      "datetime": "2026-11-28T19:30:00Z",
+      "match": "Houston Dynamo FC - San Jose Earthquakes",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/houston-dynamo-san-jose-earthquakes-playoff-usa-957273"
+      ],
+      "home_odds": 2.03,
+      "draw_odds": 3.84,
+      "away_odds": 3.59,
+      "over25_odds": 1.63,
+      "btts_yes_odds": 1.53,
+      "btts_no_odds": 2.35
+    },
+    {
+      "fixture_id": "espn:football:ita.1:401874977",
+      "datetime": "2026-11-28T19:45:00Z",
+      "match": "Internazionale - Genoa",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/inter-genoa-serie-a-italy-957192"
+      ],
+      "home_odds": 1.35,
+      "draw_odds": 5.79,
+      "away_odds": 9.75,
+      "over25_odds": 1.43,
+      "btts_yes_odds": 1.85,
+      "btts_no_odds": 1.87
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876391",
+      "datetime": "2026-11-28T19:45:00Z",
+      "match": "Le Havre AC - Strasbourg",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/le-havre-strasbourg-ligue-1-france-957194"
+      ],
+      "home_odds": 3.24,
+      "draw_odds": 3.84,
+      "away_odds": 2.24,
+      "over25_odds": 1.77,
+      "btts_yes_odds": 1.56,
+      "btts_no_odds": 2.3
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876390",
+      "datetime": "2026-11-28T19:45:00Z",
+      "match": "Le Mans - Lille",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/le-mans-lille-ligue-1-france-957195"
+      ],
+      "home_odds": 3.89,
+      "draw_odds": 3.65,
+      "away_odds": 2.07,
+      "over25_odds": 2.13,
+      "btts_yes_odds": 1.83,
+      "btts_no_odds": 1.89
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878931",
+      "datetime": "2026-11-28T19:45:00Z",
+      "match": "Lommel SK - Zulte-Waregem",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/lommel-zulte-waregem-pro-league-belgium-957263"
+      ],
+      "home_odds": 2.69,
+      "draw_odds": 3.72,
+      "away_odds": 2.46,
+      "over25_odds": 1.54,
+      "btts_yes_odds": 1.45,
+      "btts_no_odds": 2.56
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876388",
+      "datetime": "2026-11-28T19:45:00Z",
+      "match": "Nice - Troyes",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/nice-troyes-ligue-1-france-957196"
+      ],
+      "home_odds": 1.69,
+      "draw_odds": 4.31,
+      "away_odds": 5.18,
+      "over25_odds": 1.75,
+      "btts_yes_odds": 1.68,
+      "btts_no_odds": 2.08
+    },
+    {
+      "fixture_id": "espn:football:fra.1:401876387",
+      "datetime": "2026-11-28T19:45:00Z",
+      "match": "Paris Saint-Germain - Lorient",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/paris-saint-germain-lorient-ligue-1-france-957197"
+      ],
+      "home_odds": 1.24,
+      "draw_odds": 7.31,
+      "away_odds": 13.9,
       "over25_odds": 1.45,
-      "btts_yes_odds": 1.39,
-      "btts_no_odds": 2.77
+      "btts_yes_odds": 1.95,
+      "btts_no_odds": 1.78
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878933",
+      "datetime": "2026-11-28T19:45:00Z",
+      "match": "Royal Charleroi SC - Waasland-Beveren",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/charleroi-sk-beveren-pro-league-belgium-957264"
+      ],
+      "home_odds": 1.56,
+      "draw_odds": 4.42,
+      "away_odds": 5.54,
+      "over25_odds": 1.64,
+      "btts_yes_odds": 1.69,
+      "btts_no_odds": 2.05
+    },
+    {
+      "fixture_id": "espn:football:esp.1:401882789",
+      "datetime": "2026-11-28T20:00:00Z",
+      "match": "Real Madrid - Alavés",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/real-madrid-deportivo-alaves-primera-division-spain-957184"
+      ],
+      "home_odds": 1.15,
+      "draw_odds": 9.9,
+      "away_odds": 21.0,
+      "over25_odds": 1.3,
+      "btts_yes_odds": 2.0,
+      "btts_no_odds": 1.74
+    },
+    {
+      "fixture_id": "espn:football:ned.1:401875530",
+      "datetime": "2026-11-28T20:00:00Z",
+      "match": "SC Cambuur - Sparta Rotterdam",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/sc-cambuur-sparta-rotterdam-eredivisie-netherlands-957206"
+      ],
+      "home_odds": 2.23,
+      "draw_odds": 3.82,
+      "away_odds": 3.02,
+      "over25_odds": 1.42,
+      "btts_yes_odds": 1.36,
+      "btts_no_odds": 2.9
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885385",
+      "datetime": "2026-11-28T20:30:00Z",
+      "match": "Vitória de Guimaraes - Estrela",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933723",
+      "datetime": "2026-11-28T21:30:00Z",
+      "match": "Philadelphia Union - New England Revolution",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/philadelphia-union-new-england-revolution-playoff-usa-957274"
+      ],
+      "home_odds": 1.56,
+      "draw_odds": 4.75,
+      "away_odds": 5.52,
+      "over25_odds": 1.42,
+      "btts_yes_odds": 1.52,
+      "btts_no_odds": 2.37
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401936353",
+      "datetime": "2026-11-28T23:00:00Z",
+      "match": "Vélez Sarsfield - Independiente",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933722",
+      "datetime": "2026-11-28T23:30:00Z",
+      "match": "FC Cincinnati - Nashville SC",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841336",
+      "datetime": "2026-11-29T00:00:00Z",
+      "match": "Botafogo - Bahia",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/botafogo-rj-bahia-ba-serie-a-brazil-957642"
+      ],
+      "home_odds": 2.04,
+      "draw_odds": 3.76,
+      "away_odds": 3.49,
+      "over25_odds": 1.6,
+      "btts_yes_odds": 1.48,
+      "btts_no_odds": 2.47
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401936413",
+      "datetime": "2026-11-29T01:00:00Z",
+      "match": "Instituto (Córdoba) - River Plate",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/instituto-ac-cordoba-river-plate-playoff-argentina-957648"
+      ],
+      "home_odds": 3.62,
+      "draw_odds": 3.04,
+      "away_odds": 2.24,
+      "over25_odds": 2.58,
+      "btts_yes_odds": 2.16,
+      "btts_no_odds": 1.62
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933726",
+      "datetime": "2026-11-29T01:30:00Z",
+      "match": "LAFC - St. Louis CITY SC",
+      "bookmakers_by_field": {},
+      "source_urls": [],
+      "home_odds": null,
+      "draw_odds": null,
+      "away_odds": null,
+      "over25_odds": null,
+      "btts_yes_odds": null,
+      "btts_no_odds": null
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933721",
+      "datetime": "2026-11-29T03:30:00Z",
+      "match": "Portland Timbers - FC Dallas",
+      "bookmakers_by_field": {
+        "home_odds": "TipsterArea public bookmaker",
+        "draw_odds": "TipsterArea public bookmaker",
+        "away_odds": "TipsterArea public bookmaker",
+        "over25_odds": "TipsterArea public bookmaker",
+        "btts_yes_odds": "TipsterArea public bookmaker",
+        "btts_no_odds": "TipsterArea public bookmaker"
+      },
+      "source_urls": [
+        "https://tipsterarea.com/match/portland-timbers-fc-dallas-playoff-usa-957628"
+      ],
+      "home_odds": 2.19,
+      "draw_odds": 4.05,
+      "away_odds": 3.06,
+      "over25_odds": 1.38,
+      "btts_yes_odds": 1.35,
+      "btts_no_odds": 2.94
     }
   ]
 }

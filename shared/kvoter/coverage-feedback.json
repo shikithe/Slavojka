@@ -1,17 +1,52 @@
 {
-  "date": "2026-11-27",
+  "date": "2026-11-28",
   "status": "ready_for_scout",
   "feedback": "ODDS_READY",
-  "espn_total": 13,
-  "with_at_least_one_quote": 12,
-  "without_quote": 1,
+  "espn_total": 47,
+  "with_at_least_one_quote": 41,
+  "without_quote": 6,
   "missing_fixtures": [
     {
-      "fixture_id": "espn:football:bra.1:401841337",
-      "league": "bra.1",
-      "home": "Fluminense",
-      "away": "Cruzeiro",
-      "start_utc": "2026-11-27T23:00:00Z"
+      "fixture_id": "espn:football:ger.1:401884721",
+      "league": "ger.1",
+      "home": "FC Cologne",
+      "away": "SV Elversberg",
+      "start_utc": "2026-11-28T14:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401878752",
+      "league": "eng.1",
+      "home": "Ipswich Town",
+      "away": "Aston Villa",
+      "start_utc": "2026-11-28T17:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885385",
+      "league": "por.1",
+      "home": "Vitória de Guimaraes",
+      "away": "Estrela",
+      "start_utc": "2026-11-28T20:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401936353",
+      "league": "arg.1",
+      "home": "Vélez Sarsfield",
+      "away": "Independiente",
+      "start_utc": "2026-11-28T23:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933722",
+      "league": "usa.1",
+      "home": "FC Cincinnati",
+      "away": "Nashville SC",
+      "start_utc": "2026-11-28T23:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933726",
+      "league": "usa.1",
+      "home": "LAFC",
+      "away": "St. Louis CITY SC",
+      "start_utc": "2026-11-29T01:30:00Z"
     }
   ],
   "ai_prompt": "prompts/tipster-unmatched-ai-review.md",
@@ -21,17 +56,52 @@
   "sensor_action_required": true,
   "sensor_missing_fixtures": [
     {
-      "fixture_id": "espn:football:bra.1:401841337",
-      "league": "bra.1",
-      "home": "Fluminense",
-      "away": "Cruzeiro",
-      "start_utc": "2026-11-27T23:00:00Z"
+      "fixture_id": "espn:football:ger.1:401884721",
+      "league": "ger.1",
+      "home": "FC Cologne",
+      "away": "SV Elversberg",
+      "start_utc": "2026-11-28T14:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:eng.1:401878752",
+      "league": "eng.1",
+      "home": "Ipswich Town",
+      "away": "Aston Villa",
+      "start_utc": "2026-11-28T17:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885385",
+      "league": "por.1",
+      "home": "Vitória de Guimaraes",
+      "away": "Estrela",
+      "start_utc": "2026-11-28T20:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401936353",
+      "league": "arg.1",
+      "home": "Vélez Sarsfield",
+      "away": "Independiente",
+      "start_utc": "2026-11-28T23:00:00Z"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933722",
+      "league": "usa.1",
+      "home": "FC Cincinnati",
+      "away": "Nashville SC",
+      "start_utc": "2026-11-28T23:30:00Z"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933726",
+      "league": "usa.1",
+      "home": "LAFC",
+      "away": "St. Louis CITY SC",
+      "start_utc": "2026-11-29T01:30:00Z"
     }
   ],
   "final": true,
   "retry_attempted": true,
-  "matched_with_quotes": 12,
-  "skipped_unmatched": 1,
+  "matched_with_quotes": 41,
+  "skipped_unmatched": 6,
   "incomplete_markets_allowed": true,
-  "finished_at_utc": "2026-11-27T08:46:06.856608+00:00"
+  "finished_at_utc": "2026-11-28T08:46:38.391148+00:00"
 }
