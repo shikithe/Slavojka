@@ -1,0 +1,709 @@
+{
+  "date": "2026-11-28",
+  "timezone": "Europe/Sarajevo",
+  "model": "FairXG",
+  "source_fingerprint": "ce22a3e7c578e5fb1c760da97788521168ac0597924ae3d87d875240eef051cd",
+  "status": "B_approved_waiting_for_prior_day_settlement",
+  "delivery_id": "58e50de6-eb08-11f1-9611-e50957b018ff",
+  "webhook": {
+    "pr_url": "https://github.com/shikithe/Slavojka/pull/46",
+    "action": "ready_for_review",
+    "repository": "shikithe/Slavojka",
+    "repository_id": 1441568624,
+    "head_repository": "shikithe/Slavojka",
+    "pr_number": 46,
+    "pr_head_sha": "4d0792881e97d475d5d67ea78c7cfbdc3542aabd",
+    "source_commit": "d496bcfec25db918545917f21f8161f8a87ec6d9",
+    "author": "github-actions[bot]",
+    "sender": "github-actions[bot]",
+    "production": true,
+    "label": "TOP10_READY",
+    "feedback_id": "TOP10-2026-11-28-ce22a3e7c578e5fb1c760da97788521168ac0597924ae3d87d875240eef051cd",
+    "event_at_utc": "2026-11-28T08:47:30Z"
+  },
+  "validation": {
+    "checked_at_utc": "2026-11-28T08:50:07+00:00",
+    "identity_checks": {
+      "status": "SECOND_PASS_COMPLETE",
+      "first_pass_checked": 47,
+      "first_pass_matched": 32,
+      "second_pass_attempted": 13,
+      "second_pass_matched": 0,
+      "unmatched_after_second_pass": 15,
+      "checked_unique_source_urls": true,
+      "verification_basis": "league + UTC/local date + ordered home/away + full name/verified alias",
+      "validation_complete": true
+    },
+    "source_feed_sha256": "831abcf7a8446aba00e17a33aae56a8b3cad6324c7b352a94486a9b1637209e1",
+    "source_active_sha256": "174070a26d216702721ad7c292bc6400edc5867bfed2522bfcd3b346deeacb2f",
+    "recomputed_fingerprint": "ce22a3e7c578e5fb1c760da97788521168ac0597924ae3d87d875240eef051cd",
+    "coverage": {
+      "espn_total": 47,
+      "matched": 32,
+      "unmatched": 15,
+      "competition_errors": {
+        "arg.1": "competition_not_mapped"
+      },
+      "full": false
+    },
+    "blob_sha": {
+      "shared/agent/fairxg-top10-2026-11-28.json": "21dd134a3aa72c686fbc6b5d3392fc882945d88d",
+      "shared/agent/fairxg-scout-2026-11-28.json": "ea27f500c683ebaf88b27de87ff4a80b49a01f7b",
+      "shared/agent/top10-feedback.json": "45bbc936bec5fd8ca369dd5d27abecc3224e8dd3",
+      "shared/active-list.json": "bd9fe14af5fdca567c6e00808eccc324be0df19e",
+      "shared/collector-feed.json": "240e6b1e5842a8a84ea6b197a4834d8c9c55f9c0"
+    },
+    "pinned_source_matches_main": true,
+    "pr_head_top10_matches_main": true,
+    "markets_verified_from": "shared/active-list.json",
+    "every_candidate_has_matching_home_away_start_and_fixture_id": true
+  },
+  "selection": {
+    "eligible_top10": [
+      {
+        "fixture_id": "espn:football:esp.1:401882789",
+        "match": "Real Madrid - Alavés",
+        "league": "esp.1",
+        "start_utc": "2026-11-28T20:00:00Z",
+        "source": "https://tipsterarea.com/match/real-madrid-deportivo-alaves-primera-division-spain-957184",
+        "fairxg_source": "https://fairxg.com/sport/football/match/real-madrid-vs-alaves",
+        "over25": {
+          "p": 69,
+          "odd": 1.3,
+          "ev": -10.3
+        }
+      },
+      {
+        "fixture_id": "espn:football:fra.1:401876387",
+        "match": "Paris Saint-Germain - Lorient",
+        "league": "fra.1",
+        "start_utc": "2026-11-28T19:45:00Z",
+        "source": "https://tipsterarea.com/match/paris-saint-germain-lorient-ligue-1-france-957197",
+        "fairxg_source": "https://fairxg.com/sport/football/match/paris-sg-vs-lorient",
+        "over25": {
+          "p": 71,
+          "odd": 1.45,
+          "ev": 2.95
+        }
+      },
+      {
+        "fixture_id": "espn:football:ger.1:401884722",
+        "match": "Hamburg SV - Bayern Munich",
+        "league": "ger.1",
+        "start_utc": "2026-11-28T14:30:00Z",
+        "source": "https://tipsterarea.com/match/hamburger-bayern-munchen-bundesliga-germany-957186",
+        "fairxg_source": "https://fairxg.com/sport/football/match/hamburg-vs-bayern-munich",
+        "over25": {
+          "p": 74,
+          "odd": 1.36,
+          "ev": 0.64
+        }
+      },
+      {
+        "fixture_id": "espn:football:ned.1:401875531",
+        "match": "PSV Eindhoven - Go Ahead Eagles",
+        "league": "ned.1",
+        "start_utc": "2026-11-28T17:45:00Z",
+        "source": "https://tipsterarea.com/match/psv-eindhoven-go-ahead-eagles-eredivisie-netherlands-957205",
+        "fairxg_source": "https://fairxg.com/sport/football/match/psv-eindhoven-vs-go-ahead-eagles",
+        "over25": {
+          "p": 76,
+          "odd": 1.19,
+          "ev": -9.56
+        }
+      },
+      {
+        "fixture_id": "espn:football:ita.1:401874977",
+        "match": "Internazionale - Genoa",
+        "league": "ita.1",
+        "start_utc": "2026-11-28T19:45:00Z",
+        "source": "https://tipsterarea.com/match/inter-genoa-serie-a-italy-957192",
+        "fairxg_source": "https://fairxg.com/sport/football/match/inter-vs-genoa",
+        "over25": {
+          "p": 62,
+          "odd": 1.43,
+          "ev": -11.34
+        }
+      },
+      {
+        "fixture_id": "espn:football:sco.1:401878328",
+        "match": "Rangers - Falkirk",
+        "league": "sco.1",
+        "start_utc": "2026-11-28T15:00:00Z",
+        "source": "https://tipsterarea.com/match/rangers-falkirk-premiership-scotland-957267",
+        "fairxg_source": "https://fairxg.com/sport/football/match/rangers-vs-falkirk",
+        "over25": {
+          "p": 63,
+          "odd": 1.33,
+          "ev": -16.21
+        }
+      },
+      {
+        "fixture_id": "espn:football:eng.1:401879227",
+        "match": "Leeds United - Coventry City",
+        "league": "eng.1",
+        "start_utc": "2026-11-28T15:00:00Z",
+        "source": "https://tipsterarea.com/match/leeds-coventry-premier-league-england-957178",
+        "fairxg_source": "https://fairxg.com/sport/football/match/leeds-vs-coventry",
+        "over25": {
+          "p": 55,
+          "odd": 1.75,
+          "ev": -3.75
+        }
+      },
+      {
+        "fixture_id": "espn:football:esp.1:401882793",
+        "match": "Elche - Atlético Madrid",
+        "league": "esp.1",
+        "start_utc": "2026-11-28T17:30:00Z",
+        "source": "https://tipsterarea.com/match/elche-atletico-madrid-primera-division-spain-957183",
+        "fairxg_source": "https://fairxg.com/sport/football/match/elche-vs-ath-madrid",
+        "over25": {
+          "p": 51,
+          "odd": 1.63,
+          "ev": -16.87
+        }
+      },
+      {
+        "fixture_id": "espn:football:ita.1:401875081",
+        "match": "Frosinone - Parma",
+        "league": "ita.1",
+        "start_utc": "2026-11-28T14:00:00Z",
+        "source": "https://tipsterarea.com/match/frosinone-parma-serie-a-italy-957190",
+        "fairxg_source": "https://fairxg.com/sport/football/match/frosinone-vs-parma",
+        "over25": {
+          "p": 57,
+          "odd": 1.4,
+          "ev": -20.2
+        }
+      },
+      {
+        "fixture_id": "espn:football:usa.1:401933737",
+        "match": "Charlotte FC - Chicago Fire FC",
+        "league": "usa.1",
+        "start_utc": "2026-11-28T17:30:00Z",
+        "source": "https://tipsterarea.com/match/charlotte-fc-chicago-fire-playoff-usa-957272",
+        "fairxg_source": "https://fairxg.com/sport/football/match/charlotte-vs-chicago-fire",
+        "over25": {
+          "p": 71,
+          "odd": 1.35,
+          "ev": -4.15
+        }
+      }
+    ],
+    "excluded_within_20_minutes": [],
+    "B": {
+      "rule": "Najveći proizvod dva FairXG procenta 3+ među svim kombinacijama s kvotom 2–3. Kod jednakog proizvoda, pa većeg minimalnog procenta, odlučuje stabilan redoslijed fixture_id.",
+      "combinations": 45,
+      "eligible_count": 19,
+      "winner": {
+        "legs": [
+          {
+            "id": "espn:football:fra.1:401876387",
+            "market": "3+",
+            "p": 71,
+            "odd": 1.45,
+            "ev": 2.95
+          },
+          {
+            "id": "espn:football:ita.1:401874977",
+            "market": "3+",
+            "p": 62,
+            "odd": 1.43,
+            "ev": -11.34
+          }
+        ],
+        "combined_odds": 2.0735,
+        "score_B": 4402,
+        "valid": true
+      },
+      "all_combinations": [
+        {
+          "fixture_ids": [
+            "espn:football:esp.1:401882789",
+            "espn:football:fra.1:401876387"
+          ],
+          "combined_odds": 1.885,
+          "score_B": 4899,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:esp.1:401882789",
+            "espn:football:ger.1:401884722"
+          ],
+          "combined_odds": 1.768,
+          "score_B": 5106,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:esp.1:401882789",
+            "espn:football:ned.1:401875531"
+          ],
+          "combined_odds": 1.547,
+          "score_B": 5244,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:esp.1:401882789",
+            "espn:football:ita.1:401874977"
+          ],
+          "combined_odds": 1.859,
+          "score_B": 4278,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:esp.1:401882789",
+            "espn:football:sco.1:401878328"
+          ],
+          "combined_odds": 1.729,
+          "score_B": 4347,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:esp.1:401882789",
+            "espn:football:eng.1:401879227"
+          ],
+          "combined_odds": 2.275,
+          "score_B": 3795,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:esp.1:401882789",
+            "espn:football:esp.1:401882793"
+          ],
+          "combined_odds": 2.119,
+          "score_B": 3519,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:esp.1:401882789",
+            "espn:football:ita.1:401875081"
+          ],
+          "combined_odds": 1.82,
+          "score_B": 3933,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:esp.1:401882789",
+            "espn:football:usa.1:401933737"
+          ],
+          "combined_odds": 1.755,
+          "score_B": 4899,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:fra.1:401876387",
+            "espn:football:ger.1:401884722"
+          ],
+          "combined_odds": 1.972,
+          "score_B": 5254,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:fra.1:401876387",
+            "espn:football:ned.1:401875531"
+          ],
+          "combined_odds": 1.7255,
+          "score_B": 5396,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:fra.1:401876387",
+            "espn:football:ita.1:401874977"
+          ],
+          "combined_odds": 2.0735,
+          "score_B": 4402,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:fra.1:401876387",
+            "espn:football:sco.1:401878328"
+          ],
+          "combined_odds": 1.9285,
+          "score_B": 4473,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:fra.1:401876387",
+            "espn:football:eng.1:401879227"
+          ],
+          "combined_odds": 2.5375,
+          "score_B": 3905,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:fra.1:401876387",
+            "espn:football:esp.1:401882793"
+          ],
+          "combined_odds": 2.3635,
+          "score_B": 3621,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:fra.1:401876387",
+            "espn:football:ita.1:401875081"
+          ],
+          "combined_odds": 2.03,
+          "score_B": 4047,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:fra.1:401876387",
+            "espn:football:usa.1:401933737"
+          ],
+          "combined_odds": 1.9575,
+          "score_B": 5041,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ger.1:401884722",
+            "espn:football:ned.1:401875531"
+          ],
+          "combined_odds": 1.6184,
+          "score_B": 5624,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ger.1:401884722",
+            "espn:football:ita.1:401874977"
+          ],
+          "combined_odds": 1.9448,
+          "score_B": 4588,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ger.1:401884722",
+            "espn:football:sco.1:401878328"
+          ],
+          "combined_odds": 1.8088,
+          "score_B": 4662,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ger.1:401884722",
+            "espn:football:eng.1:401879227"
+          ],
+          "combined_odds": 2.38,
+          "score_B": 4070,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ger.1:401884722",
+            "espn:football:esp.1:401882793"
+          ],
+          "combined_odds": 2.2168,
+          "score_B": 3774,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ger.1:401884722",
+            "espn:football:ita.1:401875081"
+          ],
+          "combined_odds": 1.904,
+          "score_B": 4218,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ger.1:401884722",
+            "espn:football:usa.1:401933737"
+          ],
+          "combined_odds": 1.836,
+          "score_B": 5254,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ned.1:401875531",
+            "espn:football:ita.1:401874977"
+          ],
+          "combined_odds": 1.7017,
+          "score_B": 4712,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ned.1:401875531",
+            "espn:football:sco.1:401878328"
+          ],
+          "combined_odds": 1.5827,
+          "score_B": 4788,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ned.1:401875531",
+            "espn:football:eng.1:401879227"
+          ],
+          "combined_odds": 2.0825,
+          "score_B": 4180,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ned.1:401875531",
+            "espn:football:esp.1:401882793"
+          ],
+          "combined_odds": 1.9397,
+          "score_B": 3876,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ned.1:401875531",
+            "espn:football:ita.1:401875081"
+          ],
+          "combined_odds": 1.666,
+          "score_B": 4332,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ned.1:401875531",
+            "espn:football:usa.1:401933737"
+          ],
+          "combined_odds": 1.6065,
+          "score_B": 5396,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ita.1:401874977",
+            "espn:football:sco.1:401878328"
+          ],
+          "combined_odds": 1.9019,
+          "score_B": 3906,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ita.1:401874977",
+            "espn:football:eng.1:401879227"
+          ],
+          "combined_odds": 2.5025,
+          "score_B": 3410,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ita.1:401874977",
+            "espn:football:esp.1:401882793"
+          ],
+          "combined_odds": 2.3309,
+          "score_B": 3162,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ita.1:401874977",
+            "espn:football:ita.1:401875081"
+          ],
+          "combined_odds": 2.002,
+          "score_B": 3534,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ita.1:401874977",
+            "espn:football:usa.1:401933737"
+          ],
+          "combined_odds": 1.9305,
+          "score_B": 4402,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:sco.1:401878328",
+            "espn:football:eng.1:401879227"
+          ],
+          "combined_odds": 2.3275,
+          "score_B": 3465,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:sco.1:401878328",
+            "espn:football:esp.1:401882793"
+          ],
+          "combined_odds": 2.1679,
+          "score_B": 3213,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:sco.1:401878328",
+            "espn:football:ita.1:401875081"
+          ],
+          "combined_odds": 1.862,
+          "score_B": 3591,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:sco.1:401878328",
+            "espn:football:usa.1:401933737"
+          ],
+          "combined_odds": 1.7955,
+          "score_B": 4473,
+          "eligible": false
+        },
+        {
+          "fixture_ids": [
+            "espn:football:eng.1:401879227",
+            "espn:football:esp.1:401882793"
+          ],
+          "combined_odds": 2.8525,
+          "score_B": 2805,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:eng.1:401879227",
+            "espn:football:ita.1:401875081"
+          ],
+          "combined_odds": 2.45,
+          "score_B": 3135,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:eng.1:401879227",
+            "espn:football:usa.1:401933737"
+          ],
+          "combined_odds": 2.3625,
+          "score_B": 3905,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:esp.1:401882793",
+            "espn:football:ita.1:401875081"
+          ],
+          "combined_odds": 2.282,
+          "score_B": 2907,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:esp.1:401882793",
+            "espn:football:usa.1:401933737"
+          ],
+          "combined_odds": 2.2005,
+          "score_B": 3621,
+          "eligible": true
+        },
+        {
+          "fixture_ids": [
+            "espn:football:ita.1:401875081",
+            "espn:football:usa.1:401933737"
+          ],
+          "combined_odds": 1.89,
+          "score_B": 4047,
+          "eligible": false
+        }
+      ]
+    },
+    "A": {
+      "rule": "Poslije isključenja dva B susreta, najveći uređeni par procenata na dva različita preostala susreta uz proizvod kvota 2–3.",
+      "market_combinations": 1008,
+      "eligible_count": 202,
+      "winner": {
+        "legs": [
+          {
+            "id": "espn:football:esp.1:401882789",
+            "market": "1",
+            "p": 88,
+            "odd": 1.15,
+            "ev": 1.2
+          },
+          {
+            "id": "espn:football:sco.1:401878328",
+            "market": "GG",
+            "p": 57,
+            "odd": 1.76,
+            "ev": 0.32
+          }
+        ],
+        "combined_odds": 2.024
+      },
+      "next_two": [
+        {
+          "legs": [
+            {
+              "id": "espn:football:esp.1:401882789",
+              "market": "1",
+              "p": 88,
+              "odd": 1.15,
+              "ev": 1.2
+            },
+            {
+              "id": "espn:football:eng.1:401879227",
+              "market": "3+",
+              "p": 55,
+              "odd": 1.75,
+              "ev": -3.75
+            }
+          ],
+          "combined_odds": 2.0125
+        },
+        {
+          "legs": [
+            {
+              "id": "espn:football:esp.1:401882789",
+              "market": "1",
+              "p": 88,
+              "odd": 1.15,
+              "ev": 1.2
+            },
+            {
+              "id": "espn:football:eng.1:401879227",
+              "market": "GG",
+              "p": 51,
+              "odd": 1.8,
+              "ev": -8.2
+            }
+          ],
+          "combined_odds": 2.07
+        }
+      ]
+    }
+  },
+  "attempts": [
+    {
+      "ticket": "B",
+      "at_utc": "2026-11-28T08:50:40Z",
+      "approval_commit": "d1a5a8453755742307b7d2eb4c01764db01291b2",
+      "approval_blob": "fb5a9881ebf79b52df05b39ab65aa6f30303bba3",
+      "data_blob_at_readback": "e5b0fee3ea46e781eb811f5c05a8eadf17521f5b",
+      "data_date_at_readback": "2026-11-27",
+      "publisher_run": "https://github.com/shikithe/Memara-tip/actions/runs/46127692224",
+      "result": "blocked",
+      "reason": "prior bank not settled or future-dated",
+      "source_timestamp_utc": "2026-11-28T08:50:48.390762+00:00",
+      "unsettled_previous_fixture": "espn:football:usa.1:401933727",
+      "next_step": "Redovna provjera rezultata je pokrenuta. Ponovo provjeriti stanje banke i, nakon redovnog obračuna, obnoviti samo B odobrenje prije A."
+    }
+  ]
+}
