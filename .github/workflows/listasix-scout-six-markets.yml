@@ -6,6 +6,7 @@ on:
     paths:
       - 'lista/scout_six_markets.py'
       - 'tests/test_scout_six_markets.py'
+      - 'shared/agent/verified-aliases.json'
       - '.github/workflows/listasix-scout-six-markets.yml'
   schedule:
     - cron: '0,15,30,45 7-12 * * *'
@@ -92,16 +93,16 @@ jobs:
           assert 0<=audit.get("third_pass_matched",0)<=audit.get("third_pass_attempted",0)<=n
           assert audit["first_pass_checked"]==n
           assert (audit["first_pass_matched"]+audit["second_pass_matched"]
-                  +audit.get("third_pass_matched",0))==len(rows)
+                  +audit.get("third_pass_matched",0)+audit.get("registry_matched",0))==len(rows)
           assert 0<=audit["second_pass_matched"]<=audit["second_pass_attempted"]<=n
-          assert audit.get("unmatched_after_third_pass",audit["unmatched_after_second_pass"])==len(pending)
+          assert audit.get("unmatched_after_registry",audit["unmatched_after_second_pass"])==len(pending)
           assert n==len(rows)+len(pending)==report["coverage"]["espn_total"]
           assert 0<=top["count"]<=10 and len(top["candidates"])==top["count"]
           assert top["fixture_ids"]==[x["fixture_id"] for x in top["candidates"]]
           assert len({x["fixture_id"] for x in rows})==len(rows)
           assert len({x["source_url"] for x in rows})==len(rows)
           assert all(x["source_url"].startswith("https://fairxg.com/sport/football/match/")
-                     and x["matching_pass"] in ("primary_exact","secondary_verified_alias","third_provider_discovery")
+                     and x["matching_pass"] in ("primary_exact","secondary_verified_alias","third_provider_discovery","verified_registry")
                      for x in rows)
           assert top["identity_checks"]==audit
           if top["count"]:
@@ -114,6 +115,7 @@ jobs:
               "total":n,"primary":audit["first_pass_matched"],
               "secondary":audit["second_pass_matched"],
               "third":audit.get("third_pass_matched",0),
+              "registry":audit.get("registry_matched",0),
               "remaining":len(pending),"top":top["count"]
           }))
           PY
@@ -123,7 +125,7 @@ jobs:
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -f -- shared/agent/fairxg-scout-*.json shared/agent/fairxg-top10-*.json shared/agent/scout-six-markets.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json docs/scout-six-markets.json docs/scout-six-markets.txt 2>/dev/null || true
+          git add -f -- shared/agent/fairxg-scout-*.json shared/agent/fairxg-top10-*.json shared/agent/scout-six-markets.json shared/agent/scout-feedback.json shared/agent/top10-feedback.json shared/agent/unmatched-feedback.json docs/scout-six-markets.json docs/scout-six-markets.txt 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "ListaSix FairXG daily probabilities and TOP10, not auto-approved [skip ci]"
             for attempt in 1 2 3 4 5; do
@@ -138,6 +140,35 @@ jobs:
           else
             echo "FAIRXG_NO_NEW_DATA"
           fi
+
+      - name: Emit dedicated alias research feedback for unresolved fixtures
+        if: steps.identity.outputs.verified == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+          p=Path("shared/agent/unmatched-feedback.json")
+          report=json.loads(p.read_text(encoding="utf-8"))
+          if report["feedback"]!="ALIASES_RESEARCH_REQUIRED" or not report["count"]:
+              print("NO_ALIAS_RESEARCH_NEEDED")
+              raise SystemExit(0)
+          title="LISTASIX ALIAS_RESEARCH_REQUIRED — "+report["date"]+" — "+report["source_fingerprint"][:12]
+          response=subprocess.run(["gh","issue","list","--repo",os.environ["GH_REPO"],"--state","all","--search",title,"--json","title,number"],check=True,capture_output=True,text=True)
+          if any(x["title"]==title for x in json.loads(response.stdout)):
+              print("ALIAS_RESEARCH_ALREADY_SIGNALLED")
+              raise SystemExit(0)
+          rows="\\n".join(f"- {r['match']} ({r['league']}; {r['fixture_id']}; {r['reason']})" for r in report["unmatched"])
+          body=("UNMATCHED_ALIAS_FEEDBACK. AI researcher: investigate these fixtures on FairXG and independent club or reputable football sources. "
+                "For EACH accepted alias, record ESPN home/away, FairXG home/away, league, exact FairXG match URL, and evidence URLs in "
+                "shared/agent/verified-aliases.json. Verify date, competition and home/away. Never assume a match exists. "
+                "An unverifiable fixture stays unmatched. Commit verified records to main; that push re-runs the scout. "
+                "Do not touch betting selections or data.json.\\n\\n"+rows)
+          subprocess.run(["gh","issue","create","--repo",os.environ["GH_REPO"],"--title",title,"--body",body],check=True)
+          print("ALIAS_RESEARCH_FEEDBACK_CREATED",report["count"])
+          PY
 
       - name: Emit deduplicated TOP10_READY feedback to independent AI analyst
         if: steps.identity.outputs.verified == 'true'
