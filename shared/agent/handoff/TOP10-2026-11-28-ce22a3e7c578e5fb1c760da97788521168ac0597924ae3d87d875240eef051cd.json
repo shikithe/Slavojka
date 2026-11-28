@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-28",
+  "feedback": "TOP10_READY",
+  "feedback_id": "TOP10-2026-11-28-ce22a3e7c578e5fb1c760da97788521168ac0597924ae3d87d875240eef051cd",
+  "identity_matching": "SECOND_PASS_COMPLETE",
+  "source_fingerprint": "ce22a3e7c578e5fb1c760da97788521168ac0597924ae3d87d875240eef051cd",
+  "fixture_ids": [
+    "espn:football:esp.1:401882789",
+    "espn:football:fra.1:401876387",
+    "espn:football:ger.1:401884722",
+    "espn:football:ned.1:401875531",
+    "espn:football:ita.1:401874977",
+    "espn:football:sco.1:401878328",
+    "espn:football:eng.1:401879227",
+    "espn:football:esp.1:401882793",
+    "espn:football:ita.1:401875081",
+    "espn:football:usa.1:401933737"
+  ],
+  "count": 10,
+  "source_commit": "d496bcfec25db918545917f21f8161f8a87ec6d9",
+  "model": "FairXG",
+  "test": false,
+  "publication_allowed": false,
+  "report": "shared/agent/top10-feedback.json",
+  "scout_report": "shared/agent/scout-six-markets.json"
+}
