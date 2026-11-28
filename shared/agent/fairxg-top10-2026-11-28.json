@@ -1,12 +1,12 @@
 {
   "date": "2026-11-28",
   "model": "FairXG",
-  "source_fingerprint": "ce22a3e7c578e5fb1c760da97788521168ac0597924ae3d87d875240eef051cd",
-  "generated_at_utc": "2026-11-28T08:47:10.982195+00:00",
+  "source_fingerprint": "13589de5ef8701286012e7a0fc7e0e386c59cec40c8ff7b5171301438bdafd58",
+  "generated_at_utc": "2026-11-28T09:41:24.289914+00:00",
   "coverage": {
     "espn_total": 47,
-    "matched": 32,
-    "unmatched": 15,
+    "matched": 35,
+    "unmatched": 12,
     "competition_errors": {
       "arg.1": "competition_not_mapped"
     },
@@ -18,9 +18,12 @@
     "first_pass_matched": 32,
     "second_pass_attempted": 13,
     "second_pass_matched": 0,
-    "unmatched_after_second_pass": 15,
+    "unmatched_after_second_pass": 12,
+    "third_pass_attempted": 13,
+    "third_pass_matched": 3,
+    "unmatched_after_third_pass": 12,
     "checked_unique_source_urls": true,
-    "verification_basis": "league + UTC/local date + ordered home/away + full name/verified alias",
+    "verification_basis": "league + UTC/local date + ordered teams + explicit or validated provider aliases",
     "validation_complete": true
   },
   "feedback": "FAIRXG_TOP10_READY",
@@ -46,7 +49,7 @@
       "league": "esp.1",
       "model": "FairXG",
       "source_url": "https://fairxg.com/sport/football/match/real-madrid-vs-alaves",
-      "checked_at_utc": "2026-11-28T08:47:10.982195+00:00",
+      "checked_at_utc": "2026-11-28T09:41:24.289914+00:00",
       "model_basis": {
         "1X2": "FairXG published headline, may be bookmaker-based",
         "3+": "FairXG published goals model",
@@ -173,7 +176,7 @@
       "league": "fra.1",
       "model": "FairXG",
       "source_url": "https://fairxg.com/sport/football/match/paris-sg-vs-lorient",
-      "checked_at_utc": "2026-11-28T08:47:10.982195+00:00",
+      "checked_at_utc": "2026-11-28T09:41:24.289914+00:00",
       "model_basis": {
         "1X2": "FairXG published headline, may be bookmaker-based",
         "3+": "FairXG published goals model",
@@ -300,7 +303,7 @@
       "league": "ger.1",
       "model": "FairXG",
       "source_url": "https://fairxg.com/sport/football/match/hamburg-vs-bayern-munich",
-      "checked_at_utc": "2026-11-28T08:47:10.982195+00:00",
+      "checked_at_utc": "2026-11-28T09:41:24.289914+00:00",
       "model_basis": {
         "1X2": "FairXG published headline, may be bookmaker-based",
         "3+": "FairXG published goals model",
@@ -427,7 +430,7 @@
       "league": "ned.1",
       "model": "FairXG",
       "source_url": "https://fairxg.com/sport/football/match/psv-eindhoven-vs-go-ahead-eagles",
-      "checked_at_utc": "2026-11-28T08:47:10.982195+00:00",
+      "checked_at_utc": "2026-11-28T09:41:24.289914+00:00",
       "model_basis": {
         "1X2": "FairXG published headline, may be bookmaker-based",
         "3+": "FairXG published goals model",
@@ -554,7 +557,7 @@
       "league": "ita.1",
       "model": "FairXG",
       "source_url": "https://fairxg.com/sport/football/match/inter-vs-genoa",
-      "checked_at_utc": "2026-11-28T08:47:10.982195+00:00",
+      "checked_at_utc": "2026-11-28T09:41:24.289914+00:00",
       "model_basis": {
         "1X2": "FairXG published headline, may be bookmaker-based",
         "3+": "FairXG published goals model",
@@ -681,7 +684,7 @@
       "league": "sco.1",
       "model": "FairXG",
       "source_url": "https://fairxg.com/sport/football/match/rangers-vs-falkirk",
-      "checked_at_utc": "2026-11-28T08:47:10.982195+00:00",
+      "checked_at_utc": "2026-11-28T09:41:24.289914+00:00",
       "model_basis": {
         "1X2": "FairXG published headline, may be bookmaker-based",
         "3+": "FairXG published goals model",
@@ -808,7 +811,7 @@
       "league": "eng.1",
       "model": "FairXG",
       "source_url": "https://fairxg.com/sport/football/match/leeds-vs-coventry",
-      "checked_at_utc": "2026-11-28T08:47:10.982195+00:00",
+      "checked_at_utc": "2026-11-28T09:41:24.289914+00:00",
       "model_basis": {
         "1X2": "FairXG published headline, may be bookmaker-based",
         "3+": "FairXG published goals model",
@@ -935,7 +938,7 @@
       "league": "esp.1",
       "model": "FairXG",
       "source_url": "https://fairxg.com/sport/football/match/elche-vs-ath-madrid",
-      "checked_at_utc": "2026-11-28T08:47:10.982195+00:00",
+      "checked_at_utc": "2026-11-28T09:41:24.289914+00:00",
       "model_basis": {
         "1X2": "FairXG published headline, may be bookmaker-based",
         "3+": "FairXG published goals model",
@@ -1062,7 +1065,7 @@
       "league": "ita.1",
       "model": "FairXG",
       "source_url": "https://fairxg.com/sport/football/match/frosinone-vs-parma",
-      "checked_at_utc": "2026-11-28T08:47:10.982195+00:00",
+      "checked_at_utc": "2026-11-28T09:41:24.289914+00:00",
       "model_basis": {
         "1X2": "FairXG published headline, may be bookmaker-based",
         "3+": "FairXG published goals model",
@@ -1189,7 +1192,7 @@
       "league": "usa.1",
       "model": "FairXG",
       "source_url": "https://fairxg.com/sport/football/match/charlotte-vs-chicago-fire",
-      "checked_at_utc": "2026-11-28T08:47:10.982195+00:00",
+      "checked_at_utc": "2026-11-28T09:41:24.289914+00:00",
       "model_basis": {
         "1X2": "FairXG published headline, may be bookmaker-based",
         "3+": "FairXG published goals model",

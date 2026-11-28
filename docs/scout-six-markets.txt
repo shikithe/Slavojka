@@ -1,5 +1,5 @@
 FAIRXG DAILY LIST | 2026-11-28
-Covered ESPN matches: 32/47
+Covered ESPN matches: 35/47
 FIXTURE | 1 | X | 2 | 3+ | GG | NG | RANKED MARKET | EV %
 Real Madrid - Alavés | 88.0 | 8.0 | 4.0 | 69.0 | 52.0 | 48.0 | 1 | 1.2
 Paris Saint-Germain - Lorient | 82.0 | 12.0 | 6.0 | 71.0 | 49.0 | 51.0 | 1 | 1.68
@@ -11,6 +11,7 @@ Leeds United - Coventry City | 68.0 | 19.0 | 13.0 | 55.0 | 51.0 | 49.0 | 1 | 4.0
 Elche - Atlético Madrid | 13.0 | 18.0 | 68.0 | 51.0 | 53.0 | 47.0 | 2 | 3.36
 Frosinone - Parma | 67.0 | 17.0 | 15.0 | 57.0 | 56.0 | 44.0 | 1 | 2.51
 Charlotte FC - Chicago Fire FC | 36.0 | 23.0 | 40.0 | 71.0 | 67.0 | 33.0 | 3+ | -4.15
+Mainz - 1. FC Union Berlin | 66.0 | 19.0 | 15.0 | 56.0 | 55.0 | 45.0 | 1 | -0.34
 Philadelphia Union - New England Revolution | 64.0 | 19.0 | 17.0 | 59.0 | 60.0 | 40.0 | 1 | -0.16
 Excelsior - Telstar | 49.0 | 25.0 | 26.0 | 60.0 | 63.0 | 37.0 | 3+ | 3.2
 Arouca - Rio Ave | 59.0 | 24.0 | 18.0 | 53.0 | 51.0 | 49.0 | 1 | 3.25
@@ -28,8 +29,10 @@ Samsunspor - Genclerbirligi | 52.0 | 25.0 | 23.0 | 52.0 | 55.0 | 45.0 | 1 | -0.6
 Aberdeen - Dundee | 52.0 | 24.0 | 24.0 | 55.0 | 58.0 | 42.0 | GG | -7.78
 Moreirense - Santa Clara | 30.0 | 30.0 | 40.0 | 38.0 | 45.0 | 55.0 | NG | -5.4
 Houston Dynamo FC - San Jose Earthquakes | 49.0 | 25.0 | 27.0 | 52.0 | 56.0 | 44.0 | 1 | -0.53
+SC Paderborn 07 - Schalke 04 | 38.0 | 27.0 | 35.0 | 49.0 | 54.0 | 46.0 | NG | 2.12
 Torino - Lazio | 27.0 | 27.0 | 46.0 | 50.0 | 54.0 | 46.0 | 2 | 2.12
 Le Mans - Lille | 25.0 | 27.0 | 48.0 | 45.0 | 51.0 | 49.0 | 2 | -0.64
 Le Havre AC - Strasbourg | 30.0 | 26.0 | 44.0 | 53.0 | 57.0 | 43.0 | 3+ | -6.19
+Académico de Viseu - Alverca | 37.0 | 29.0 | 34.0 | 47.0 | 52.0 | 48.0 | NG | -3.52
 Ipswich Town - Aston Villa | 26.0 | 24.0 | 50.0 | 56.0 | 56.0 | 44.0 | None | None
 FC Cincinnati - Nashville SC | 29.0 | 24.0 | 47.0 | 58.0 | 60.0 | 40.0 | None | None
