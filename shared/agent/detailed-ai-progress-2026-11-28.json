@@ -3,7 +3,7 @@
   "timezone": "Europe/Sarajevo",
   "model": "FairXG",
   "source_fingerprint": "13589de5ef8701286012e7a0fc7e0e386c59cec40c8ff7b5171301438bdafd58",
-  "status": "B_approval_written",
+  "status": "B_published_A_approved",
   "delivery_id": "ea73efdc-eb0f-11f1-9366-79ab38266add",
   "webhook": {
     "pr": 48,
@@ -1075,6 +1075,14 @@
       "at_utc": "2026-11-28T09:44:10Z",
       "previous_approval_blob": "fb5a9881ebf79b52df05b39ab65aa6f30303bba3",
       "data_blob_before": "f400cabd9e4b86c1b2fdb90bcace3aacaa7af8f6"
+    },
+    {
+      "commit": "ab5960a96c46726f3b1db15ad896fa08aaa54961",
+      "approval_blob": "3f574b6d008711835b5234b39550fc896d83a5e8",
+      "stage": "A_approved",
+      "at_utc": "2026-11-28T09:44:26Z",
+      "previous_approval_blob": "ace2e1f25d08e58677431eede71334091fb09c01",
+      "data_blob_before": "c77e1c8ad84427bf4f7435dcf02b2975bd3b8dd5"
     }
   ],
   "previous_fingerprints": {
@@ -1788,5 +1796,64 @@
       ]
     }
   },
-  "updated_at_utc": "2026-11-28T09:44:18Z"
+  "updated_at_utc": "2026-11-28T09:44:27Z",
+  "confirmed_B": {
+    "data_blob": "c77e1c8ad84427bf4f7435dcf02b2975bd3b8dd5",
+    "ticket": {
+      "id": "B",
+      "model": "FairXG",
+      "source_fingerprint": "13589de5ef8701286012e7a0fc7e0e386c59cec40c8ff7b5171301438bdafd58",
+      "combined_odds": 2.0735,
+      "score": 4402,
+      "joint_probability_pct_if_independent": 44.02,
+      "odds_verified": false,
+      "analysis": "Od 45 dvojki za 3+ njih 19 ima ukupnu kvotu od 2 do 3. PSG – Lorient (71%, 1,45, EV +2,95%) i Inter – Genoa (62%, 1,43, EV −11,34%) daju najveći proizvod 71 × 62 = 4.402 i kvotu 2,0735. Zajednička procjena je 44,02% uz pretpostavku nezavisnosti. Inter ima slabiju cijenu od modelskog praga rentabilnosti. FairXG i javna ponuda TipsterArea za 28.11.2026. Ulozi su virtuelni.",
+      "matches": [
+        {
+          "fixture_id": "espn:football:fra.1:401876387",
+          "match": "Paris Saint-Germain - Lorient",
+          "home": "Paris Saint-Germain",
+          "away": "Lorient",
+          "league": "fra.1",
+          "datetime": "2026-11-28T19:45:00Z",
+          "start_utc": "2026-11-28T19:45:00Z",
+          "pick": "3+",
+          "odd": 1.45,
+          "source": "https://tipsterarea.com/match/paris-saint-germain-lorient-ligue-1-france-957197",
+          "bookmaker": "TipsterArea (javna ponuda)",
+          "quote_checked_at_utc": "2026-11-28T09:44:10Z",
+          "fairxg_source": "https://fairxg.com/sport/football/match/paris-sg-vs-lorient",
+          "fairxg_probability_pct": 71,
+          "final_probability_pct": 71,
+          "final_ev_pct": 2.95,
+          "odds_verified": false,
+          "analysis": "PSG – Lorient traži najmanje tri gola. Rizik dva ili manje golova po modelu je 29%. FairXG 71% na kvoti 1,45. EV +2,95%."
+        },
+        {
+          "fixture_id": "espn:football:ita.1:401874977",
+          "match": "Internazionale - Genoa",
+          "home": "Internazionale",
+          "away": "Genoa",
+          "league": "ita.1",
+          "datetime": "2026-11-28T19:45:00Z",
+          "start_utc": "2026-11-28T19:45:00Z",
+          "pick": "3+",
+          "odd": 1.43,
+          "source": "https://tipsterarea.com/match/inter-genoa-serie-a-italy-957192",
+          "bookmaker": "TipsterArea (javna ponuda)",
+          "quote_checked_at_utc": "2026-11-28T09:44:10Z",
+          "fairxg_source": "https://fairxg.com/sport/football/match/inter-vs-genoa",
+          "fairxg_probability_pct": 62,
+          "final_probability_pct": 62,
+          "final_ev_pct": -11.34,
+          "odds_verified": false,
+          "analysis": "Inter – Genoa traži najmanje tri gola. Model daje 38% za dva ili manje, a cijena 1,43 nosi negativan EV. FairXG 62% na kvoti 1,43. EV -11,34%."
+        }
+      ],
+      "stake": 8.27,
+      "status": "objavljen",
+      "payout": 0
+    },
+    "publisher_timestamp": "2026-11-28T09:44:17.831350+00:00"
+  }
 }
