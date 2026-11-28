@@ -179,6 +179,34 @@ class FairXGTests(unittest.TestCase):
         self.assertEqual(select_match_discovered(fixture, parsed + [alternate])[1],
                          "ambiguous_discovered_alias")
 
+    def test_research_feedback_lists_all_unmatched_and_registry_requires_evidence(self):
+        from lista.scout_six_markets import make_unmatched_feedback, select_match_from_verified_registry
+        report={"date":"2026-11-28","source_fingerprint":"fingerprint",
+                "unmatched":[{"fixture_id":"espn:x", "match":"Cercle Brugge KSV - KV Mechelen",
+                              "league":"bel.1", "reason":"provider_alias_not_verified"}]}
+        fb=make_unmatched_feedback(report)
+        self.assertEqual(fb["count"], 1)
+        self.assertEqual(fb["feedback"], "ALIASES_RESEARCH_REQUIRED")
+        self.assertEqual(fb["unmatched"][0]["match"], report["unmatched"][0]["match"])
+        html=('<a href="/sport/football/match/cercle-brugge-vs-mechelen">'
+              '11-28 Cercle Brugge Mechelen Belgian Pro League '
+              '50% 2.0 25% 4.0 25% 4.0 65%xG 2.8 54%1.8</a>')
+        rows=parse_list(html,"Belgian Pro League")
+        fixture={"league":"bel.1","home":"Cercle Brugge KSV","away":"KV Mechelen",
+                 "start_utc":"2026-11-28T15:00:00Z"}
+        entry={"league":"bel.1","espn_home":"Cercle Brugge KSV","espn_away":"KV Mechelen",
+               "fairxg_home":"Cercle Brugge","fairxg_away":"Mechelen",
+               "provider_url":rows[0]["url"],"verified":True,
+               "evidence_urls":["https://example.org/verified-club-identity"]}
+        self.assertIsNotNone(select_match_from_verified_registry(
+            fixture,rows,{"records":[entry]})[0])
+        self.assertIsNone(select_match_from_verified_registry(
+            fixture,rows,{"records":[dict(entry,evidence_urls=[])]})[0])
+        self.assertIsNone(select_match_from_verified_registry(
+            dict(fixture,away="Other"),rows,{"records":[entry]})[0])
+        self.assertIsNone(select_match_from_verified_registry(
+            dict(fixture,start_utc="2026-11-30T15:00:00Z"),rows,{"records":[entry]})[0])
+
     def test_no_top10_ready_without_fairxg_second_pass_audit(self):
         f,a=inputs()
         doc=analyze(f,a,NOW,lambda url:HTML)
