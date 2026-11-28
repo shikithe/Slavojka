@@ -89,17 +89,19 @@ jobs:
           assert report["source_active_sha256"]==canonical_hash(active)
           assert report["source_fingerprint"]==top["source_fingerprint"]
           assert audit.get("status")=="SECOND_PASS_COMPLETE" and audit.get("validation_complete") is True
+          assert 0<=audit.get("third_pass_matched",0)<=audit.get("third_pass_attempted",0)<=n
           assert audit["first_pass_checked"]==n
-          assert audit["first_pass_matched"]+audit["second_pass_matched"]==len(rows)
+          assert (audit["first_pass_matched"]+audit["second_pass_matched"]
+                  +audit.get("third_pass_matched",0))==len(rows)
           assert 0<=audit["second_pass_matched"]<=audit["second_pass_attempted"]<=n
-          assert audit["unmatched_after_second_pass"]==len(pending)
+          assert audit.get("unmatched_after_third_pass",audit["unmatched_after_second_pass"])==len(pending)
           assert n==len(rows)+len(pending)==report["coverage"]["espn_total"]
           assert 0<=top["count"]<=10 and len(top["candidates"])==top["count"]
           assert top["fixture_ids"]==[x["fixture_id"] for x in top["candidates"]]
           assert len({x["fixture_id"] for x in rows})==len(rows)
           assert len({x["source_url"] for x in rows})==len(rows)
           assert all(x["source_url"].startswith("https://fairxg.com/sport/football/match/")
-                     and x["matching_pass"] in ("primary_exact","secondary_verified_alias")
+                     and x["matching_pass"] in ("primary_exact","secondary_verified_alias","third_provider_discovery")
                      for x in rows)
           assert top["identity_checks"]==audit
           if top["count"]:
@@ -111,6 +113,7 @@ jobs:
           print("FAIRXG_SECOND_PASS_VERIFIED",json.dumps({
               "total":n,"primary":audit["first_pass_matched"],
               "secondary":audit["second_pass_matched"],
+              "third":audit.get("third_pass_matched",0),
               "remaining":len(pending),"top":top["count"]
           }))
           PY
