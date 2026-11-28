@@ -3,7 +3,7 @@
   "timezone": "Europe/Sarajevo",
   "model": "FairXG",
   "source_fingerprint": "13589de5ef8701286012e7a0fc7e0e386c59cec40c8ff7b5171301438bdafd58",
-  "status": "validated_and_ranked",
+  "status": "B_approval_written",
   "delivery_id": "ea73efdc-eb0f-11f1-9366-79ab38266add",
   "webhook": {
     "pr": 48,
@@ -1067,7 +1067,16 @@
     "nba_c_reserve": 5.26,
     "cap_rounding_commit": "d74f3d0cc0ad1a760304944cde03810d750b8a5e"
   },
-  "attempts": [],
+  "attempts": [
+    {
+      "commit": "1894ff379ef7e0560c5a67c677a993481c3e9797",
+      "approval_blob": "ace2e1f25d08e58677431eede71334091fb09c01",
+      "stage": "B_approved",
+      "at_utc": "2026-11-28T09:44:10Z",
+      "previous_approval_blob": "fb5a9881ebf79b52df05b39ab65aa6f30303bba3",
+      "data_blob_before": "f400cabd9e4b86c1b2fdb90bcace3aacaa7af8f6"
+    }
+  ],
   "previous_fingerprints": {
     "ce22a3e7c578e5fb1c760da97788521168ac0597924ae3d87d875240eef051cd": {
       "date": "2026-11-28",
@@ -1779,5 +1788,5 @@
       ]
     }
   },
-  "updated_at_utc": "2026-11-28T09:43:46Z"
+  "updated_at_utc": "2026-11-28T09:44:18Z"
 }
