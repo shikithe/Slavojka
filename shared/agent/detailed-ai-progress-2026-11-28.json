@@ -3,7 +3,7 @@
   "timezone": "Europe/Sarajevo",
   "model": "FairXG",
   "source_fingerprint": "13589de5ef8701286012e7a0fc7e0e386c59cec40c8ff7b5171301438bdafd58",
-  "status": "B_published_A_approved",
+  "status": "A_retried_after_write_conflict",
   "delivery_id": "ea73efdc-eb0f-11f1-9366-79ab38266add",
   "webhook": {
     "pr": 48,
@@ -1083,6 +1083,16 @@
       "at_utc": "2026-11-28T09:44:26Z",
       "previous_approval_blob": "ace2e1f25d08e58677431eede71334091fb09c01",
       "data_blob_before": "c77e1c8ad84427bf4f7435dcf02b2975bd3b8dd5"
+    },
+    {
+      "commit": "ab5960a96c46726f3b1db15ad896fa08aaa54961",
+      "approval_blob": "3f574b6d008711835b5234b39550fc896d83a5e8",
+      "stage": "A_workflow_failed",
+      "at_utc": "2026-11-28T09:44:26Z",
+      "previous_approval_blob": "ace2e1f25d08e58677431eede71334091fb09c01",
+      "data_blob_before": "c77e1c8ad84427bf4f7435dcf02b2975bd3b8dd5",
+      "run": 46131872204,
+      "error": "2026-11-28T09:44:35.9007535Z CONFLICT (content): Merge conflict in data.json 2026-11-28T09:44:35.9033754Z error: could not apply 6da9a84... MemaraSix: ESPN-only A/B approval result [skip ci]"
     }
   ],
   "previous_fingerprints": {
@@ -1796,7 +1806,7 @@
       ]
     }
   },
-  "updated_at_utc": "2026-11-28T09:44:27Z",
+  "updated_at_utc": "2026-11-28T09:44:55Z",
   "confirmed_B": {
     "data_blob": "c77e1c8ad84427bf4f7435dcf02b2975bd3b8dd5",
     "ticket": {
@@ -1855,5 +1865,13 @@
       "payout": 0
     },
     "publisher_timestamp": "2026-11-28T09:44:17.831350+00:00"
+  },
+  "A_retry": {
+    "commit": "5e07eda01d792a574811fce14394cbec1e53cdf0",
+    "approval_blob": "e7b18e860309a53af3b20c487f48e5b81d65287d",
+    "stage": "A_approved",
+    "at_utc": "2026-11-28T09:44:53Z",
+    "previous_approval_blob": "3f574b6d008711835b5234b39550fc896d83a5e8",
+    "data_blob_before": "45814d9976bb5d3c9a83daeed59e9e46db42d2fe"
   }
 }
