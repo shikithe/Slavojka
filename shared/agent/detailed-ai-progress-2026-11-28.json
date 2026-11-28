@@ -3,7 +3,7 @@
   "timezone": "Europe/Sarajevo",
   "model": "FairXG",
   "source_fingerprint": "13589de5ef8701286012e7a0fc7e0e386c59cec40c8ff7b5171301438bdafd58",
-  "status": "A_retried_after_write_conflict",
+  "status": "published_and_verified",
   "delivery_id": "ea73efdc-eb0f-11f1-9366-79ab38266add",
   "webhook": {
     "pr": 48,
@@ -1093,6 +1093,12 @@
       "data_blob_before": "c77e1c8ad84427bf4f7435dcf02b2975bd3b8dd5",
       "run": 46131872204,
       "error": "2026-11-28T09:44:35.9007535Z CONFLICT (content): Merge conflict in data.json 2026-11-28T09:44:35.9033754Z error: could not apply 6da9a84... MemaraSix: ESPN-only A/B approval result [skip ci]"
+    },
+    {
+      "stage": "A_and_B_readback",
+      "read_blob": "6bc15a68d6c829c92711fa6d133fc51c501b7bf9",
+      "commit": "355dbe8e2fd180e84afe256513219f6616c3cd13",
+      "at_utc": "2026-11-28T09:45:29Z"
     }
   ],
   "previous_fingerprints": {
@@ -1806,7 +1812,7 @@
       ]
     }
   },
-  "updated_at_utc": "2026-11-28T09:44:55Z",
+  "updated_at_utc": "2026-11-28T09:45:30Z",
   "confirmed_B": {
     "data_blob": "c77e1c8ad84427bf4f7435dcf02b2975bd3b8dd5",
     "ticket": {
@@ -1873,5 +1879,73 @@
     "at_utc": "2026-11-28T09:44:53Z",
     "previous_approval_blob": "3f574b6d008711835b5234b39550fc896d83a5e8",
     "data_blob_before": "45814d9976bb5d3c9a83daeed59e9e46db42d2fe"
+  },
+  "publication": {
+    "verified_at_utc": "2026-11-28T09:45:29Z",
+    "date": "2026-11-28",
+    "data_blob_read_on_main": "6bc15a68d6c829c92711fa6d133fc51c501b7bf9",
+    "published_data_commit": "355dbe8e2fd180e84afe256513219f6616c3cd13",
+    "url": "https://github.com/shikithe/Memara-tip/blob/355dbe8e2fd180e84afe256513219f6616c3cd13/data.json",
+    "latest_approval_sha": "e7b18e860309a53af3b20c487f48e5b81d65287d",
+    "unchanged_B": true,
+    "unique_matches": 4,
+    "bank_before": 350.31,
+    "bank_after_stakes": 320.54,
+    "daily_stake": 29.77,
+    "reserved_nba_c_budget": 5.26,
+    "actual": [
+      {
+        "id": "B",
+        "stake": 8.27,
+        "odds": 2.0735,
+        "status": "objavljen",
+        "score": 4402,
+        "matches": [
+          [
+            "espn:football:fra.1:401876387",
+            "Paris Saint-Germain - Lorient",
+            "3+",
+            1.45,
+            71,
+            2.95
+          ],
+          [
+            "espn:football:ita.1:401874977",
+            "Internazionale - Genoa",
+            "3+",
+            1.43,
+            62,
+            -11.34
+          ]
+        ]
+      },
+      {
+        "id": "A",
+        "stake": 21.5,
+        "odds": 2.0196,
+        "status": "objavljen",
+        "score": 5372,
+        "matches": [
+          [
+            "espn:football:eng.1:401879227",
+            "Leeds United - Coventry City",
+            "1",
+            1.53,
+            68,
+            4.04
+          ],
+          [
+            "espn:football:ger.1:401884722",
+            "Hamburg SV - Bayern Munich",
+            "2",
+            1.32,
+            79,
+            4.28
+          ]
+        ]
+      }
+    ],
+    "B_publisher_run": 46131852753,
+    "A_publisher_run": 46131904113
   }
 }
