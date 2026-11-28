@@ -133,6 +133,38 @@ def club_similarity(name, provider):
         return 0.0
     return SequenceMatcher(None, a, b).ratio()
 
+def select_match_from_verified_registry(fixture, rows, registry):
+    """Use only previously researched aliases with independent evidence."""
+    records = registry.get("records", [])
+    results = []
+    start = datetime.fromisoformat(fixture["start_utc"].replace("Z", "+00:00"))
+    dates = {start.strftime("%m-%d"), start.astimezone(TZ).strftime("%m-%d")}
+    for item in records:
+        if not (item.get("verified") is True
+                and item.get("league") == fixture["league"]
+                and norm(item.get("espn_home", "")) == norm(fixture["home"])
+                and norm(item.get("espn_away", "")) == norm(fixture["away"])):
+            continue
+        evidence = item.get("evidence_urls", [])
+        if not (isinstance(evidence, list) and len(evidence) >= 1
+                and all(isinstance(u, str) and u.startswith("https://") for u in evidence)):
+            continue
+        url = item.get("provider_url", "")
+        if not url.startswith(BASE + "/sport/football/match/"):
+            continue
+        for row in rows:
+            if (row["url"] == url and row["display_date"] in dates
+                    and row["home_slug"] == norm(item.get("fairxg_home", ""))
+                    and row["away_slug"] == norm(item.get("fairxg_away", ""))
+                    and row["team_text"] == (norm(item.get("fairxg_home", ""))
+                                               + norm(item.get("fairxg_away", "")))):
+                results.append(row)
+    unique = {json.dumps(r, sort_keys=True): r for r in results}
+    if len(unique) == 1:
+        return next(iter(unique.values())), None
+    return None, "ambiguous_registry" if unique else "not_in_verified_registry"
+
+
 def select_match_discovered(fixture, rows):
     """Discover likely display aliases from the live provider competition page.
 
@@ -312,7 +344,8 @@ def detailed_ai_handoff(rows, now):
     return {"count":len(candidates), "limit":10, "candidates":candidates,
             "independent_ai_review_required":True, "selection_rule":"FairXG p and TipsterArea EV; no local probability model"}
 
-def analyze(feed, active, now, fetch=download):
+def analyze(feed, active, now, fetch=download, alias_registry=None):
+    alias_registry = alias_registry or {"records": []}
     day=now.astimezone(TZ).date().isoformat()
     if feed.get("date") != day or active.get("date") != day:
         raise ValueError("ESPN and odds must be current")
@@ -380,6 +413,23 @@ def analyze(feed, active, now, fetch=download):
             pending.append((f, last_reason))
     unresolved = pending
 
+    # Fourth pass: independently researched and persistent alias registry.
+    # Never trust a saved alias without a live, same-date provider row.
+    registry_attempted = registry_matched = 0
+    pending = []
+    for f, reason in unresolved:
+        match, last_reason = None, reason
+        if f["league"] in pages and "ambiguous" not in reason:
+            registry_attempted += 1
+            match, last_reason = select_match_from_verified_registry(
+                f, pages[f["league"]], alias_registry)
+        if match:
+            selected[f["fixture_id"]] = (match, "verified_registry")
+            registry_matched += 1
+        else:
+            pending.append((f, reason if reason == "competition_not_mapped" else last_reason))
+    unresolved = pending
+
     rows, unmatched = [], []
     for f, reason in unresolved:
         unmatched.append({"fixture_id":f["fixture_id"],
@@ -425,12 +475,15 @@ def analyze(feed, active, now, fetch=download):
         "unmatched_after_second_pass":len(unresolved),
         "third_pass_attempted":third_pass_attempts,
         "third_pass_matched":third_pass_count,
-        "unmatched_after_third_pass":len(unmatched),
+        "unmatched_after_third_pass":len(unmatched) + registry_matched,
+        "registry_attempted":registry_attempted,
+        "registry_matched":registry_matched,
+        "unmatched_after_registry":len(unmatched),
         "checked_unique_source_urls":True,
         "verification_basis":"league + UTC/local date + ordered teams + explicit or validated provider aliases",
         "validation_complete": (
             len(rows)+len(unmatched)==len(fixtures)
-            and all(row["matching_pass"] in ("primary_exact","secondary_verified_alias","third_provider_discovery") for row in rows)
+            and all(row["matching_pass"] in ("primary_exact","secondary_verified_alias","third_provider_discovery","verified_registry") for row in rows)
             and len({row["source_url"] for row in rows})==len(rows)),
     }
     if not identity_checks["validation_complete"]:
@@ -475,6 +528,12 @@ def save(path,data):
     temp.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     temp.replace(path)
 
+def make_unmatched_feedback(report):
+    return {"date": report["date"], "feedback": "ALIASES_RESEARCH_REQUIRED" if report["unmatched"] else "ALIASES_COMPLETE",
+            "source_fingerprint": report["source_fingerprint"],
+            "count": len(report["unmatched"]), "unmatched": report["unmatched"],
+            "instructions": "Research provider presence and team aliases independently; require source URLs and ordered home/away, same league and date. Never invent probabilities."}
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--root",default=".")
@@ -498,7 +557,11 @@ def main():
         result=existing
         print("FAIRXG_DAILY_LIST_ALREADY_READY")
     else:
-        result=analyze(feed,active,now)
+        try:
+            registry=read("shared/agent/verified-aliases.json")
+        except (OSError,ValueError):
+            registry={"records":[]}
+        result=analyze(feed,active,now,alias_registry=registry)
         # A temporary provider outage cannot erase a better snapshot of identical inputs.
         if (existing.get("model")=="FairXG" and existing.get("date")==day
                 and existing.get("source_feed_sha256")==result["source_feed_sha256"]
@@ -514,6 +577,7 @@ def main():
         save(root/name,result)
     save(root/"shared/agent/scout-feedback.json",scout)
     save(root/"shared/agent/top10-feedback.json",top)
+    save(root/"shared/agent/unmatched-feedback.json",make_unmatched_feedback(result))
     lines=["FAIRXG DAILY LIST | "+day,
            "Covered ESPN matches: "+str(result["coverage"]["matched"])+"/"+str(result["coverage"]["espn_total"]),
            "FIXTURE | 1 | X | 2 | 3+ | GG | NG | RANKED MARKET | EV %"]
