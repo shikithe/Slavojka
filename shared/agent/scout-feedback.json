@@ -2,7 +2,7 @@
   "date": "2026-11-28",
   "model": "FairXG",
   "source_fingerprint": "13589de5ef8701286012e7a0fc7e0e386c59cec40c8ff7b5171301438bdafd58",
-  "generated_at_utc": "2026-11-28T09:41:24.289914+00:00",
+  "generated_at_utc": "2026-11-28T09:53:33.398238+00:00",
   "coverage": {
     "espn_total": 47,
     "matched": 35,
@@ -22,6 +22,9 @@
     "third_pass_attempted": 13,
     "third_pass_matched": 3,
     "unmatched_after_third_pass": 12,
+    "registry_attempted": 10,
+    "registry_matched": 0,
+    "unmatched_after_registry": 12,
     "checked_unique_source_urls": true,
     "verification_basis": "league + UTC/local date + ordered teams + explicit or validated provider aliases",
     "validation_complete": true
