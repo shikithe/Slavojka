@@ -157,6 +157,28 @@ class FairXGTests(unittest.TestCase):
         alternate["probability_pct"]=dict(alternate["probability_pct"],GG=65)
         self.assertEqual(select_match_second_pass(f,parsed+[alternate])[1],"ambiguous_second_pass")
 
+    def test_third_pass_live_provider_alias_discovery(self):
+        from lista.scout_six_markets import select_match_discovered
+        row = ('<a href="/sport/football/match/real-betis-vs-rayo-vallecano">'
+               '11-28 Real Betis Rayo Vallecano La Liga '
+               '50% 2.0 25% 4.0 25% 4.0 65%xG 2.8 54%1.8</a>')
+        parsed = parse_list(row, "La Liga")
+        fixture = {"home": "Real Betis Balompie", "away": "Rayo Vallecano",
+                   "start_utc": "2026-11-28T19:00:00Z"}
+        found, reason = select_match_discovered(fixture, parsed)
+        self.assertIsNone(reason)
+        self.assertEqual(found["url"].rsplit("/", 1)[-1],
+                         "real-betis-vs-rayo-vallecano")
+        self.assertIsNone(select_match_discovered(
+            dict(fixture, home="Rayo Vallecano", away="Real Betis Balompie"), parsed)[0])
+        self.assertIsNone(select_match_discovered(
+            dict(fixture, start_utc="2026-11-30T19:00:00Z"), parsed)[0])
+        self.assertIsNone(select_match_discovered(
+            dict(fixture, home="Tottenham Hotspur"), parsed)[0])
+        alternate = dict(parsed[0], url="https://fairxg.com/sport/football/match/real-betis-vs-rayo-vallecano-2")
+        self.assertEqual(select_match_discovered(fixture, parsed + [alternate])[1],
+                         "ambiguous_discovered_alias")
+
     def test_no_top10_ready_without_fairxg_second_pass_audit(self):
         f,a=inputs()
         doc=analyze(f,a,NOW,lambda url:HTML)
