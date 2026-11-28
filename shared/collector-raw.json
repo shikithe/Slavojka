@@ -1,266 +1,634 @@
 {
   "schema_version": "listasix-fixed-window-v1",
-  "date": "2026-11-27",
-  "window_start_utc": "2026-11-27T09:00:00+00:00",
-  "window_end_utc": "2026-11-28T08:00:00+00:00",
-  "fixture_count": 13,
+  "date": "2026-11-28",
+  "window_start_utc": "2026-11-28T09:00:00+00:00",
+  "window_end_utc": "2026-11-29T08:00:00+00:00",
+  "fixture_count": 47,
   "fixtures": [
     {
-      "id": "espn:football:tur.1:401888241",
-      "provider": "espn-public-unofficial",
-      "sport": "football",
-      "league": "tur.1",
-      "home": "Alanyaspor",
-      "away": "Konyaspor",
-      "start_utc": "2026-11-27T17:00:00Z",
-      "start_sarajevo": "2026-11-27T18:00:00+01:00",
-      "status": "pre"
-    },
-    {
-      "id": "espn:football:tur.1:401888240",
-      "provider": "espn-public-unofficial",
-      "sport": "football",
-      "league": "tur.1",
-      "home": "Caykur Rizespor",
-      "away": "Kasimpasa",
-      "start_utc": "2026-11-27T17:00:00Z",
-      "start_sarajevo": "2026-11-27T18:00:00+01:00",
-      "status": "pre"
-    },
-    {
-      "id": "espn:football:ned.1:401875536",
-      "provider": "espn-public-unofficial",
-      "sport": "football",
-      "league": "ned.1",
-      "home": "FC Groningen",
-      "away": "Willem II",
-      "start_utc": "2026-11-27T19:00:00Z",
-      "start_sarajevo": "2026-11-27T20:00:00+01:00",
-      "status": "pre"
-    },
-    {
-      "id": "espn:football:ger.1:401884720",
-      "provider": "espn-public-unofficial",
-      "sport": "football",
-      "league": "ger.1",
-      "home": "Werder Bremen",
-      "away": "Borussia Mönchengladbach",
-      "start_utc": "2026-11-27T19:30:00Z",
-      "start_sarajevo": "2026-11-27T20:30:00+01:00",
-      "status": "pre"
-    },
-    {
-      "id": "espn:football:ita.1:401875004",
-      "provider": "espn-public-unofficial",
-      "sport": "football",
-      "league": "ita.1",
-      "home": "Venezia",
-      "away": "Bologna",
-      "start_utc": "2026-11-27T19:45:00Z",
-      "start_sarajevo": "2026-11-27T20:45:00+01:00",
-      "status": "pre"
-    },
-    {
-      "id": "espn:football:fra.1:401876392",
-      "provider": "espn-public-unofficial",
-      "sport": "football",
-      "league": "fra.1",
-      "home": "Brest",
-      "away": "Paris FC",
-      "start_utc": "2026-11-27T19:45:00Z",
-      "start_sarajevo": "2026-11-27T20:45:00+01:00",
-      "status": "pre"
-    },
-    {
-      "id": "espn:football:bel.1:401878930",
-      "provider": "espn-public-unofficial",
-      "sport": "football",
-      "league": "bel.1",
-      "home": "OH Leuven",
-      "away": "KV Kortrijk",
-      "start_utc": "2026-11-27T19:45:00Z",
-      "start_sarajevo": "2026-11-27T20:45:00+01:00",
-      "status": "pre"
-    },
-    {
-      "id": "espn:football:eng.1:401879225",
-      "provider": "espn-public-unofficial",
-      "sport": "football",
-      "league": "eng.1",
-      "home": "Nottingham Forest",
-      "away": "Chelsea",
-      "start_utc": "2026-11-27T20:00:00Z",
-      "start_sarajevo": "2026-11-27T21:00:00+01:00",
-      "status": "pre"
-    },
-    {
-      "id": "espn:football:esp.1:401882791",
+      "id": "espn:football:esp.1:401882796",
       "provider": "espn-public-unofficial",
       "sport": "football",
       "league": "esp.1",
-      "home": "Levante",
-      "away": "Racing Santander",
-      "start_utc": "2026-11-27T20:00:00Z",
-      "start_sarajevo": "2026-11-27T21:00:00+01:00",
+      "home": "Real Betis",
+      "away": "Rayo Vallecano",
+      "start_utc": "2026-11-28T13:00:00Z",
+      "start_sarajevo": "2026-11-28T14:00:00+01:00",
       "status": "pre"
     },
     {
-      "id": "espn:football:por.1:401885389",
+      "id": "espn:football:tur.1:401888236",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "tur.1",
+      "home": "Samsunspor",
+      "away": "Genclerbirligi",
+      "start_utc": "2026-11-28T13:00:00Z",
+      "start_sarajevo": "2026-11-28T14:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:ita.1:401875081",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "ita.1",
+      "home": "Frosinone",
+      "away": "Parma",
+      "start_utc": "2026-11-28T14:00:00Z",
+      "start_sarajevo": "2026-11-28T15:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:ger.1:401884721",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "ger.1",
+      "home": "FC Cologne",
+      "away": "SV Elversberg",
+      "start_utc": "2026-11-28T14:30:00Z",
+      "start_sarajevo": "2026-11-28T15:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:ger.1:401884722",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "ger.1",
+      "home": "Hamburg SV",
+      "away": "Bayern Munich",
+      "start_utc": "2026-11-28T14:30:00Z",
+      "start_sarajevo": "2026-11-28T15:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:ger.1:401884723",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "ger.1",
+      "home": "Mainz",
+      "away": "1. FC Union Berlin",
+      "start_utc": "2026-11-28T14:30:00Z",
+      "start_sarajevo": "2026-11-28T15:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:ger.1:401884719",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "ger.1",
+      "home": "SC Paderborn 07",
+      "away": "Schalke 04",
+      "start_utc": "2026-11-28T14:30:00Z",
+      "start_sarajevo": "2026-11-28T15:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:eng.1:401879227",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "eng.1",
+      "home": "Leeds United",
+      "away": "Coventry City",
+      "start_utc": "2026-11-28T15:00:00Z",
+      "start_sarajevo": "2026-11-28T16:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:eng.1:401879226",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "eng.1",
+      "home": "Manchester United",
+      "away": "Brentford",
+      "start_utc": "2026-11-28T15:00:00Z",
+      "start_sarajevo": "2026-11-28T16:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:bel.1:401878929",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "bel.1",
+      "home": "KVC Westerlo",
+      "away": "RAAL La Louvière",
+      "start_utc": "2026-11-28T15:00:00Z",
+      "start_sarajevo": "2026-11-28T16:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:sco.1:401878332",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "sco.1",
+      "home": "Aberdeen",
+      "away": "Dundee",
+      "start_utc": "2026-11-28T15:00:00Z",
+      "start_sarajevo": "2026-11-28T16:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:sco.1:401878331",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "sco.1",
+      "home": "Dundee United",
+      "away": "St Johnstone",
+      "start_utc": "2026-11-28T15:00:00Z",
+      "start_sarajevo": "2026-11-28T16:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:sco.1:401878328",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "sco.1",
+      "home": "Rangers",
+      "away": "Falkirk",
+      "start_utc": "2026-11-28T15:00:00Z",
+      "start_sarajevo": "2026-11-28T16:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:sco.1:401878327",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "sco.1",
+      "home": "St Mirren",
+      "away": "Kilmarnock",
+      "start_utc": "2026-11-28T15:00:00Z",
+      "start_sarajevo": "2026-11-28T16:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:esp.1:401882790",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "esp.1",
+      "home": "Málaga",
+      "away": "Athletic Club",
+      "start_utc": "2026-11-28T15:15:00Z",
+      "start_sarajevo": "2026-11-28T16:15:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:ned.1:401875537",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "ned.1",
+      "home": "Excelsior",
+      "away": "Telstar",
+      "start_utc": "2026-11-28T15:30:00Z",
+      "start_sarajevo": "2026-11-28T16:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:por.1:401885392",
       "provider": "espn-public-unofficial",
       "sport": "football",
       "league": "por.1",
-      "home": "Maritimo",
-      "away": "C.D. Nacional",
-      "start_utc": "2026-11-27T20:15:00Z",
-      "start_sarajevo": "2026-11-27T21:15:00+01:00",
+      "home": "Arouca",
+      "away": "Rio Ave",
+      "start_utc": "2026-11-28T15:30:00Z",
+      "start_sarajevo": "2026-11-28T16:30:00+01:00",
       "status": "pre"
     },
     {
-      "id": "espn:football:bra.1:401841337",
+      "id": "espn:football:por.1:401885388",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "por.1",
+      "home": "Moreirense",
+      "away": "Santa Clara",
+      "start_utc": "2026-11-28T15:30:00Z",
+      "start_sarajevo": "2026-11-28T16:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:tur.1:401888368",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "tur.1",
+      "home": "Gaziantep FK",
+      "away": "Amed SFK",
+      "start_utc": "2026-11-28T16:00:00Z",
+      "start_sarajevo": "2026-11-28T17:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:fra.1:401876394",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "fra.1",
+      "home": "Angers",
+      "away": "Lens",
+      "start_utc": "2026-11-28T16:15:00Z",
+      "start_sarajevo": "2026-11-28T17:15:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:ita.1:401874826",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "ita.1",
+      "home": "Torino",
+      "away": "Lazio",
+      "start_utc": "2026-11-28T17:00:00Z",
+      "start_sarajevo": "2026-11-28T18:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:bel.1:401878932",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "bel.1",
+      "home": "Cercle Brugge KSV",
+      "away": "KV Mechelen",
+      "start_utc": "2026-11-28T17:15:00Z",
+      "start_sarajevo": "2026-11-28T18:15:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:eng.1:401878752",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "eng.1",
+      "home": "Ipswich Town",
+      "away": "Aston Villa",
+      "start_utc": "2026-11-28T17:30:00Z",
+      "start_sarajevo": "2026-11-28T18:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:esp.1:401882793",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "esp.1",
+      "home": "Elche",
+      "away": "Atlético Madrid",
+      "start_utc": "2026-11-28T17:30:00Z",
+      "start_sarajevo": "2026-11-28T18:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:ger.1:401884726",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "ger.1",
+      "home": "VfB Stuttgart",
+      "away": "Eintracht Frankfurt",
+      "start_utc": "2026-11-28T17:30:00Z",
+      "start_sarajevo": "2026-11-28T18:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:usa.1:401933737",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "usa.1",
+      "home": "Charlotte FC",
+      "away": "Chicago Fire FC",
+      "start_utc": "2026-11-28T17:30:00Z",
+      "start_sarajevo": "2026-11-28T18:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:ned.1:401875531",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "ned.1",
+      "home": "PSV Eindhoven",
+      "away": "Go Ahead Eagles",
+      "start_utc": "2026-11-28T17:45:00Z",
+      "start_sarajevo": "2026-11-28T18:45:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:sco.1:401878329",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "sco.1",
+      "home": "Motherwell",
+      "away": "Hibernian",
+      "start_utc": "2026-11-28T17:45:00Z",
+      "start_sarajevo": "2026-11-28T18:45:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:por.1:401885393",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "por.1",
+      "home": "Académico de Viseu",
+      "away": "Alverca",
+      "start_utc": "2026-11-28T18:00:00Z",
+      "start_sarajevo": "2026-11-28T19:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:usa.1:401933724",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "usa.1",
+      "home": "Houston Dynamo FC",
+      "away": "San Jose Earthquakes",
+      "start_utc": "2026-11-28T19:30:00Z",
+      "start_sarajevo": "2026-11-28T20:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:ita.1:401874977",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "ita.1",
+      "home": "Internazionale",
+      "away": "Genoa",
+      "start_utc": "2026-11-28T19:45:00Z",
+      "start_sarajevo": "2026-11-28T20:45:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:fra.1:401876391",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "fra.1",
+      "home": "Le Havre AC",
+      "away": "Strasbourg",
+      "start_utc": "2026-11-28T19:45:00Z",
+      "start_sarajevo": "2026-11-28T20:45:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:fra.1:401876390",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "fra.1",
+      "home": "Le Mans",
+      "away": "Lille",
+      "start_utc": "2026-11-28T19:45:00Z",
+      "start_sarajevo": "2026-11-28T20:45:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:fra.1:401876388",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "fra.1",
+      "home": "Nice",
+      "away": "Troyes",
+      "start_utc": "2026-11-28T19:45:00Z",
+      "start_sarajevo": "2026-11-28T20:45:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:fra.1:401876387",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "fra.1",
+      "home": "Paris Saint-Germain",
+      "away": "Lorient",
+      "start_utc": "2026-11-28T19:45:00Z",
+      "start_sarajevo": "2026-11-28T20:45:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:bel.1:401878931",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "bel.1",
+      "home": "Lommel SK",
+      "away": "Zulte-Waregem",
+      "start_utc": "2026-11-28T19:45:00Z",
+      "start_sarajevo": "2026-11-28T20:45:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:bel.1:401878933",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "bel.1",
+      "home": "Royal Charleroi SC",
+      "away": "Waasland-Beveren",
+      "start_utc": "2026-11-28T19:45:00Z",
+      "start_sarajevo": "2026-11-28T20:45:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:esp.1:401882789",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "esp.1",
+      "home": "Real Madrid",
+      "away": "Alavés",
+      "start_utc": "2026-11-28T20:00:00Z",
+      "start_sarajevo": "2026-11-28T21:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:ned.1:401875530",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "ned.1",
+      "home": "SC Cambuur",
+      "away": "Sparta Rotterdam",
+      "start_utc": "2026-11-28T20:00:00Z",
+      "start_sarajevo": "2026-11-28T21:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:por.1:401885385",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "por.1",
+      "home": "Vitória de Guimaraes",
+      "away": "Estrela",
+      "start_utc": "2026-11-28T20:30:00Z",
+      "start_sarajevo": "2026-11-28T21:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:usa.1:401933723",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "usa.1",
+      "home": "Philadelphia Union",
+      "away": "New England Revolution",
+      "start_utc": "2026-11-28T21:30:00Z",
+      "start_sarajevo": "2026-11-28T22:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:arg.1:401936353",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "arg.1",
+      "home": "Vélez Sarsfield",
+      "away": "Independiente",
+      "start_utc": "2026-11-28T23:00:00Z",
+      "start_sarajevo": "2026-11-29T00:00:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:usa.1:401933722",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "usa.1",
+      "home": "FC Cincinnati",
+      "away": "Nashville SC",
+      "start_utc": "2026-11-28T23:30:00Z",
+      "start_sarajevo": "2026-11-29T00:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:bra.1:401841336",
       "provider": "espn-public-unofficial",
       "sport": "football",
       "league": "bra.1",
-      "home": "Fluminense",
-      "away": "Cruzeiro",
-      "start_utc": "2026-11-27T23:00:00Z",
-      "start_sarajevo": "2026-11-28T00:00:00+01:00",
+      "home": "Botafogo",
+      "away": "Bahia",
+      "start_utc": "2026-11-29T00:00:00Z",
+      "start_sarajevo": "2026-11-29T01:00:00+01:00",
       "status": "pre"
     },
     {
-      "id": "espn:football:usa.1:401933727",
+      "id": "espn:football:arg.1:401936413",
       "provider": "espn-public-unofficial",
       "sport": "football",
-      "league": "usa.1",
-      "home": "Columbus Crew",
-      "away": "Inter Miami CF",
-      "start_utc": "2026-11-28T01:00:00Z",
-      "start_sarajevo": "2026-11-28T02:00:00+01:00",
+      "league": "arg.1",
+      "home": "Instituto (Córdoba)",
+      "away": "River Plate",
+      "start_utc": "2026-11-29T01:00:00Z",
+      "start_sarajevo": "2026-11-29T02:00:00+01:00",
       "status": "pre"
     },
     {
-      "id": "espn:football:usa.1:401933725",
+      "id": "espn:football:usa.1:401933726",
       "provider": "espn-public-unofficial",
       "sport": "football",
       "league": "usa.1",
-      "home": "Real Salt Lake",
-      "away": "Vancouver Whitecaps",
-      "start_utc": "2026-11-28T03:00:00Z",
-      "start_sarajevo": "2026-11-28T04:00:00+01:00",
+      "home": "LAFC",
+      "away": "St. Louis CITY SC",
+      "start_utc": "2026-11-29T01:30:00Z",
+      "start_sarajevo": "2026-11-29T02:30:00+01:00",
+      "status": "pre"
+    },
+    {
+      "id": "espn:football:usa.1:401933721",
+      "provider": "espn-public-unofficial",
+      "sport": "football",
+      "league": "usa.1",
+      "home": "Portland Timbers",
+      "away": "FC Dallas",
+      "start_utc": "2026-11-29T03:30:00Z",
+      "start_sarajevo": "2026-11-29T04:30:00+01:00",
       "status": "pre"
     }
   ],
   "sources": [
     {
       "league": "eng.1",
-      "date": "20261127",
+      "date": "20261128",
       "status": "ok",
-      "count": 1
+      "count": 3
     },
     {
       "league": "eng.1",
-      "date": "20261128",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
     {
       "league": "esp.1",
-      "date": "20261127",
+      "date": "20261128",
       "status": "ok",
-      "count": 1
+      "count": 4
     },
     {
       "league": "esp.1",
-      "date": "20261128",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
     {
       "league": "ger.1",
-      "date": "20261127",
+      "date": "20261128",
       "status": "ok",
-      "count": 1
+      "count": 5
     },
     {
       "league": "ger.1",
-      "date": "20261128",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
     {
       "league": "ita.1",
-      "date": "20261127",
+      "date": "20261128",
       "status": "ok",
-      "count": 1
+      "count": 3
     },
     {
       "league": "ita.1",
-      "date": "20261128",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
     {
       "league": "fra.1",
-      "date": "20261127",
+      "date": "20261128",
       "status": "ok",
-      "count": 1
+      "count": 5
     },
     {
       "league": "fra.1",
-      "date": "20261128",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
     {
       "league": "ned.1",
-      "date": "20261127",
+      "date": "20261128",
       "status": "ok",
-      "count": 1
+      "count": 3
     },
     {
       "league": "ned.1",
-      "date": "20261128",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
     {
       "league": "por.1",
-      "date": "20261127",
+      "date": "20261128",
       "status": "ok",
-      "count": 1
+      "count": 4
     },
     {
       "league": "por.1",
-      "date": "20261128",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
     {
       "league": "bel.1",
-      "date": "20261127",
+      "date": "20261128",
       "status": "ok",
-      "count": 1
+      "count": 4
     },
     {
       "league": "bel.1",
-      "date": "20261128",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
     {
       "league": "tur.1",
-      "date": "20261127",
+      "date": "20261128",
       "status": "ok",
       "count": 2
     },
     {
       "league": "tur.1",
-      "date": "20261128",
-      "status": "ok",
-      "count": 0
-    },
-    {
-      "league": "sco.1",
-      "date": "20261127",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
@@ -268,11 +636,11 @@
       "league": "sco.1",
       "date": "20261128",
       "status": "ok",
-      "count": 0
+      "count": 5
     },
     {
-      "league": "uefa.champions",
-      "date": "20261127",
+      "league": "sco.1",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
@@ -283,8 +651,8 @@
       "count": 0
     },
     {
-      "league": "uefa.europa",
-      "date": "20261127",
+      "league": "uefa.champions",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
@@ -295,8 +663,8 @@
       "count": 0
     },
     {
-      "league": "uefa.europa.conf",
-      "date": "20261127",
+      "league": "uefa.europa",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
@@ -307,38 +675,44 @@
       "count": 0
     },
     {
-      "league": "usa.1",
-      "date": "20261127",
+      "league": "uefa.europa.conf",
+      "date": "20261129",
       "status": "ok",
-      "count": 2
+      "count": 0
     },
     {
       "league": "usa.1",
       "date": "20261128",
+      "status": "ok",
+      "count": 6
+    },
+    {
+      "league": "usa.1",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
     {
       "league": "bra.1",
-      "date": "20261127",
+      "date": "20261128",
       "status": "ok",
       "count": 1
     },
     {
       "league": "bra.1",
-      "date": "20261128",
-      "status": "ok",
-      "count": 0
-    },
-    {
-      "league": "arg.1",
-      "date": "20261127",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     },
     {
       "league": "arg.1",
       "date": "20261128",
+      "status": "ok",
+      "count": 2
+    },
+    {
+      "league": "arg.1",
+      "date": "20261129",
       "status": "ok",
       "count": 0
     }
@@ -346,7 +720,7 @@
   "errors": [],
   "status": "ok",
   "publication_allowed": false,
-  "window_start_local": "2026-11-27T10:00:00+01:00",
-  "window_end_local": "2026-11-28T09:00:00+01:00",
-  "data_expires_at_utc": "2026-11-28T08:00:00+00:00"
+  "window_start_local": "2026-11-28T10:00:00+01:00",
+  "window_end_local": "2026-11-29T09:00:00+01:00",
+  "data_expires_at_utc": "2026-11-29T08:00:00+00:00"
 }
