@@ -1,0 +1,105 @@
+{
+  "date": "2026-11-28",
+  "feedback": "ALIASES_RESEARCH_REQUIRED",
+  "source_fingerprint": "13589de5ef8701286012e7a0fc7e0e386c59cec40c8ff7b5171301438bdafd58",
+  "count": 12,
+  "unmatched": [
+    {
+      "fixture_id": "espn:football:esp.1:401882796",
+      "match": "Real Betis - Rayo Vallecano",
+      "league": "esp.1",
+      "status": "unavailable",
+      "reason": "not_in_verified_registry",
+      "matching_pass": "third_checked"
+    },
+    {
+      "fixture_id": "espn:football:ger.1:401884721",
+      "match": "FC Cologne - SV Elversberg",
+      "league": "ger.1",
+      "status": "unavailable",
+      "reason": "not_in_verified_registry",
+      "matching_pass": "third_checked"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878929",
+      "match": "KVC Westerlo - RAAL La Louvière",
+      "league": "bel.1",
+      "status": "unavailable",
+      "reason": "not_in_verified_registry",
+      "matching_pass": "third_checked"
+    },
+    {
+      "fixture_id": "espn:football:tur.1:401888368",
+      "match": "Gaziantep FK - Amed SFK",
+      "league": "tur.1",
+      "status": "unavailable",
+      "reason": "not_in_verified_registry",
+      "matching_pass": "third_checked"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878932",
+      "match": "Cercle Brugge KSV - KV Mechelen",
+      "league": "bel.1",
+      "status": "unavailable",
+      "reason": "not_in_verified_registry",
+      "matching_pass": "third_checked"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878931",
+      "match": "Lommel SK - Zulte-Waregem",
+      "league": "bel.1",
+      "status": "unavailable",
+      "reason": "not_in_verified_registry",
+      "matching_pass": "third_checked"
+    },
+    {
+      "fixture_id": "espn:football:bel.1:401878933",
+      "match": "Royal Charleroi SC - Waasland-Beveren",
+      "league": "bel.1",
+      "status": "unavailable",
+      "reason": "not_in_verified_registry",
+      "matching_pass": "third_checked"
+    },
+    {
+      "fixture_id": "espn:football:por.1:401885385",
+      "match": "Vitória de Guimaraes - Estrela",
+      "league": "por.1",
+      "status": "unavailable",
+      "reason": "not_in_verified_registry",
+      "matching_pass": "third_checked"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401936353",
+      "match": "Vélez Sarsfield - Independiente",
+      "league": "arg.1",
+      "status": "unavailable",
+      "reason": "competition_not_mapped",
+      "matching_pass": "competition_unavailable"
+    },
+    {
+      "fixture_id": "espn:football:bra.1:401841336",
+      "match": "Botafogo - Bahia",
+      "league": "bra.1",
+      "status": "unavailable",
+      "reason": "not_in_verified_registry",
+      "matching_pass": "third_checked"
+    },
+    {
+      "fixture_id": "espn:football:arg.1:401936413",
+      "match": "Instituto (Córdoba) - River Plate",
+      "league": "arg.1",
+      "status": "unavailable",
+      "reason": "competition_not_mapped",
+      "matching_pass": "competition_unavailable"
+    },
+    {
+      "fixture_id": "espn:football:usa.1:401933726",
+      "match": "LAFC - St. Louis CITY SC",
+      "league": "usa.1",
+      "status": "unavailable",
+      "reason": "not_in_verified_registry",
+      "matching_pass": "third_checked"
+    }
+  ],
+  "instructions": "Research provider presence and team aliases independently; require source URLs and ordered home/away, same league and date. Never invent probabilities."
+}
