@@ -109,6 +109,60 @@ def select_match_second_pass(fixture, rows):
     return None, "ambiguous_second_pass" if unique else "not_covered_or_unverified_alias"
 
 
+# Internet-derived third pass: compare the CURRENT FairXG league listing with
+# today's ESPN fixture, not an unrestricted web result or an unverified alias.
+# No team may be inferred solely from its opponent.
+from difflib import SequenceMatcher
+
+CLUB_WORDS = {"fc", "cf", "sc", "sk", "sv", "fk", "afc", "ac", "club", "football",
+              "futbol", "sporting", "de", "the", "city"}
+def club_key(value):
+    """Conservative comparison key; retain distinctive team words."""
+    words = re.findall(r"[a-z0-9]+", unicodedata.normalize("NFKD", str(value).casefold())
+                       .encode("ascii", "ignore").decode("ascii"))
+    return "".join(w for w in words if w not in CLUB_WORDS)
+
+def club_similarity(name, provider):
+    a, b = club_key(name), club_key(provider)
+    if not a or not b:
+        return 0.0
+    if a == b:
+        return 1.0
+    # Short names and acronyms need an explicit alias, not fuzzy acceptance.
+    if min(len(a), len(b)) < 6:
+        return 0.0
+    return SequenceMatcher(None, a, b).ratio()
+
+def select_match_discovered(fixture, rows):
+    """Discover likely display aliases from the live provider competition page.
+
+    Require same date, ordered teams, high similarity for EACH club, unique row,
+    and no near competing candidate. Uncertain matches remain unresolved.
+    """
+    start = datetime.fromisoformat(fixture["start_utc"].replace("Z", "+00:00"))
+    dates = {start.strftime("%m-%d"), start.astimezone(TZ).strftime("%m-%d")}
+    candidates = []
+    for row in rows:
+        if row["display_date"] not in dates:
+            continue
+        home = max(club_similarity(fixture["home"], row["home_slug"]),
+                   float(row["home_slug"] in variants(fixture["home"])))
+        away = max(club_similarity(fixture["away"], row["away_slug"]),
+                   float(row["away_slug"] in variants(fixture["away"])))
+        if min(home, away) >= 0.89:
+            candidates.append((min(home, away), (home + away) / 2, row))
+    candidates.sort(key=lambda item: (-item[0], -item[1], item[2]["url"]))
+    if not candidates:
+        return None, "provider_alias_not_verified"
+    best = candidates[0]
+    # Similar alternative fixtures mean the identity is NOT safe to publish.
+    if len(candidates) > 1 and best[0] - candidates[1][0] < 0.12:
+        return None, "ambiguous_discovered_alias"
+    duplicates = {json.dumps(item[2], sort_keys=True) for item in candidates if item[2]["url"] == best[2]["url"]}
+    if len(duplicates) != 1:
+        return None, "ambiguous_discovered_alias"
+    return best[2], None
+
 def norm(s):
     return "".join(c for c in unicodedata.normalize("NFKD", str(s).casefold())
                    if c.isascii() and c.isalnum())
@@ -310,13 +364,29 @@ def analyze(feed, active, now, fetch=download):
         else:
             unresolved.append((f, second_reason or first_reason))
 
+    # Third pass derives candidate aliases from the live FairXG competition page.
+    # Each accepted source URL still must map to exactly one ESPN fixture.
+    third_pass_attempts, third_pass_count = 0, 0
+    pending = []
+    for f, reason in unresolved:
+        match, last_reason = None, reason
+        if f["league"] in pages and "ambiguous" not in reason:
+            third_pass_attempts += 1
+            match, last_reason = select_match_discovered(f, pages[f["league"]])
+        if match:
+            selected[f["fixture_id"]] = (match, "third_provider_discovery")
+            third_pass_count += 1
+        else:
+            pending.append((f, last_reason))
+    unresolved = pending
+
     rows, unmatched = [], []
     for f, reason in unresolved:
         unmatched.append({"fixture_id":f["fixture_id"],
                           "match":quotes[f["fixture_id"]]["match"], "league":f["league"],
                           "status":"ambiguous" if "ambiguous" in reason else "unavailable",
                           "reason":errors.get(f["league"], reason),
-                          "matching_pass":"second_checked" if f["league"] in pages else "competition_unavailable"})
+                          "matching_pass":"third_checked" if f["league"] in pages else "competition_unavailable"})
     for f in fixtures:
         selection = selected.get(f["fixture_id"])
         if selection is None:
@@ -352,12 +422,15 @@ def analyze(feed, active, now, fetch=download):
         "first_pass_matched":first_pass_count,
         "second_pass_attempted":second_pass_attempts,
         "second_pass_matched":second_pass_count,
-        "unmatched_after_second_pass":len(unmatched),
+        "unmatched_after_second_pass":len(unresolved),
+        "third_pass_attempted":third_pass_attempts,
+        "third_pass_matched":third_pass_count,
+        "unmatched_after_third_pass":len(unmatched),
         "checked_unique_source_urls":True,
-        "verification_basis":"league + UTC/local date + ordered home/away + full name/verified alias",
+        "verification_basis":"league + UTC/local date + ordered teams + explicit or validated provider aliases",
         "validation_complete": (
             len(rows)+len(unmatched)==len(fixtures)
-            and all(row["matching_pass"] in ("primary_exact","secondary_verified_alias") for row in rows)
+            and all(row["matching_pass"] in ("primary_exact","secondary_verified_alias","third_provider_discovery") for row in rows)
             and len({row["source_url"] for row in rows})==len(rows)),
     }
     if not identity_checks["validation_complete"]:
