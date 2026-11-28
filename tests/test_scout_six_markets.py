@@ -163,14 +163,14 @@ class FairXGTests(unittest.TestCase):
                '11-28 Real Betis Rayo Vallecano La Liga '
                '50% 2.0 25% 4.0 25% 4.0 65%xG 2.8 54%1.8</a>')
         parsed = parse_list(row, "La Liga")
-        fixture = {"home": "Real Betis Balompie", "away": "Rayo Vallecano",
+        fixture = {"home": "Real Betis FC", "away": "Rayo Vallecano",
                    "start_utc": "2026-11-28T19:00:00Z"}
         found, reason = select_match_discovered(fixture, parsed)
         self.assertIsNone(reason)
         self.assertEqual(found["url"].rsplit("/", 1)[-1],
                          "real-betis-vs-rayo-vallecano")
         self.assertIsNone(select_match_discovered(
-            dict(fixture, home="Rayo Vallecano", away="Real Betis Balompie"), parsed)[0])
+            dict(fixture, home="Rayo Vallecano", away="Real Betis FC"), parsed)[0])
         self.assertIsNone(select_match_discovered(
             dict(fixture, start_utc="2026-11-30T19:00:00Z"), parsed)[0])
         self.assertIsNone(select_match_discovered(
